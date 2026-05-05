@@ -1,0 +1,10 @@
+{
+  "method": "2x2 BB-fixed separate inversions",
+  "BB_source": "CarbonTracker GFED4 prior mean",
+  "BB_global_Tg": 29.0,
+  "negative_solutions_d13C_pct": 6.25,
+  "negative_solutions_dD_pct": 33.72,
+  "dD_hemispheric_offset": 6.0,
+  "tau_ex_mean": 1.0,
+  "tau_ex_std": 0.1
+}
