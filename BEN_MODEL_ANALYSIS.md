@@ -183,6 +183,65 @@ This eliminates all ill-conditioning issues and the need for bounded least squar
 
 ---
 
+## Key Numerical Values from the Paper (PNAS 2025, Vol. 122, No. 50)
+
+### Source Signatures (Table 1 — for MC uncertainty propagation)
+
+| Parameter | Mean | Mean 1σ | Trend (1999→2022) | Trend 1σ |
+|-----------|------|---------|-------------------|----------|
+| **δ¹³C atmosphere** | −47.3‰ | ±0.01‰ | −0.66‰ | ±0.02‰ |
+| **δ¹³C Fossil** | −44.0‰ | ±0.2‰ | +0.60‰ | ±0.14‰ |
+| **δ¹³C Microbial** | −62.0‰ | ±1.3‰ | −0.37‰ | ±0.09‰ |
+| **δ¹³C Pyrogenic** | −23.1‰ | ±2.5‰ | 0‰ | 0‰ |
+| **δ¹³C Net sink KIE** | 1.0082 | 0 | 0 | 0 |
+| **δD atmosphere** | −78.4‰ | ±0.5‰ | −6.0‰ | ±0.77‰ |
+| **δD Fossil** | −193.4‰ | ±0.6‰ | +1.3‰ | ±0.7‰ |
+| **δD Microbial** | −304.7‰ | ±8.2‰ | +1.8‰ | ±0.5‰ |
+| **δD Pyrogenic** | −228.0‰ | ±7.6‰ | 0‰ | 0‰ |
+| **δD Net sink KIE** | 1.281 | 0 | 0 | 0 |
+
+### Sink Fractionation (SI Table S3)
+
+| Sink | Proportion | ¹³C KIE | D KIE |
+|------|-----------|---------|-------|
+| OH | 0.835 | 1.0054 (Cantrell) | 1.294 (Saueressig) |
+| Cl | 0.035 | 1.066 | 1.520 |
+| Stratosphere | 0.06 | 1.003 | 1.179 (Dyonisius 2020) |
+| Soil | 0.07 | 1.020 | 1.083 |
+| **Net** | 1.00 | 1.0082 | 1.281 |
+
+### Microbial Subcategory Signatures (SI Table S4, year 2022)
+
+| Subcategory | δ¹³C | 1σ | δD | 1σ |
+|-------------|------|----|----|-----|
+| Wetlands | −62.1‰ | ±0.7‰ | −313.2‰ | ±7.4‰ |
+| Ruminants | −65.0‰ | ±1.5‰ | −309.4‰ | ±7.2‰ |
+| Waste | −55.1‰ | ±4.4‰ | −279.4‰ | ±27.4‰ |
+| Rice | −60.2‰ | ±4.5‰ | −311.8‰ | ±7.3‰ |
+| Wild Animals | −65.5‰ | ±3.1‰ | −301.4‰ | ±6.8‰ |
+| Termites | −64.8‰ | ±7.6‰ | −323.1‰ | ±8.0‰ |
+| **Net Microbial** | **−62.1‰** | **±1.3‰** | **−304.8‰** | **±8.0‰** |
+
+### Key Results
+
+- **Post-2006 CH₄ rise (140 ppb)** overwhelmingly driven by microbial emissions
+- δ¹³C mass balance: Mic increase = **73 ± 5 Tg/yr**; FF stable
+- δD mass balance: Mic increase = **73 ± 12 Tg/yr**; FF stable
+- FF long-term means: **160 ± 29 Tg/yr** (δ¹³C), **133 ± 33 Tg/yr** (δD)
+- 2013→2022: FF **declined** by 14±4 (δ¹³C) and 15±11 (δD) Tg/yr
+- NH δD–CH₄ is **~12‰ lower** than SH δD–CH₄ (our ±1.5‰ approx was too conservative!)
+- Global δD decreased **6.0 ± 0.8‰** between 2005 and 2023
+- Global δ¹³C decreased **0.7 ± 0.02‰** between 2005 and 2023
+- Geologic emissions: <5 Tg/yr, signature assumed = fossil fuel
+
+### Critical Insight for Our Two-Hemisphere Model
+
+The paper reports: "NH δD–CH₄ is ~12‰ lower than SH δD–CH₄" with seasonal range 8–15‰.
+
+Our v3.0 uses ±1.5‰ hemispheric offset for δD — **this is far too small!** Should be ~6‰ per hemisphere from the global mean (i.e., NH ≈ global − 6‰, SH ≈ global + 6‰). This is a significant correction to implement.
+
+---
+
 ## File Locations
 
 ```
