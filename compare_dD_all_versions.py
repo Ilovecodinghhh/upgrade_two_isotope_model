@@ -163,8 +163,14 @@ def run_3x3(dD_dict, label, n_mc=N_MC):
             except: pass
     return pd.DataFrame(rows)
 
-def run_bb_fixed(n_mc=N_MC, bb_frac=0.05):
-    """v3.2: Fix BB fraction, δ13C only → FF + Mic"""
+# Load annual GFED4 BB from CarbonTracker (column 9 = "Pyro Prior")
+_ct_df = pd.read_excel(BASE_DIR / 'rel' / 'data' / 'CarbonTracker_CH4.xlsx')
+BB_GFED = {int(_ct_df.iloc[i, 0]): float(_ct_df.iloc[i, 9]) for i in range(len(_ct_df))}
+print(f"  GFED4 BB loaded: {min(BB_GFED.keys())}–{max(BB_GFED.keys())}, "
+      f"mean={np.mean(list(BB_GFED.values())):.1f} Tg/yr")
+
+def run_bb_fixed(n_mc=N_MC):
+    """v3.2: BB fixed from GFED4 (annual), δ13C only → FF + Mic"""
     rows = []
     for k in range(n_mc):
         tau = np.random.normal(9.1, 0.9)
@@ -175,11 +181,16 @@ def run_bb_fixed(n_mc=N_MC, bb_frac=0.05):
         bb13 = np.random.normal(*src_13c['BB'])
         mic13 = np.random.normal(*src_13c['Mic'])
         
+        # Add uncertainty to BB: ±20% (CarbonTracker prior uncertainty)
+        bb_scale = np.random.normal(1.0, 0.2)
+        
         r13 = derive_source_isotope(ch4_ppb, d13c_atm, tau, kie_13c, PPB_TO_TG)
         for yr in sorted(r13.keys()):
             S = r13[yr]['S_tot']
             d13_s = r13[yr]['d_src']
-            BB = bb_frac * S
+            # Use annual GFED BB, fall back to mean if year not available
+            BB = BB_GFED.get(yr, np.mean(list(BB_GFED.values()))) * bb_scale
+            if BB < 0: BB = 0
             rem = S - BB
             if rem <= 0: continue
             d13_rem = (d13_s * S - BB * bb13) / rem

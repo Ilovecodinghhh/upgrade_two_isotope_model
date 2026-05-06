@@ -44,7 +44,7 @@ For v2.0 (two-hemisphere), used actual NH/SH δD from both sources.
 | v2.0 (2-hemi) | **Ours** | **62.9** | 84.1 | 434.9 | 59.3% |
 | v3.1 (3×3 opt) | Ben | 68.6 | 82.6 | 435.8 | 59.3% |
 | v3.1 (3×3 opt) | **Ours** | **62.5** | 83.8 | 435.3 | 60.4% |
-| v3.2 (BB fix) | — | 189.0 | 29.3 | 367.4 | 100.0% |
+| v3.2 (BB fix) | — | 189.9 | 28.6 | 367.2 | 100.0% |
 | v3.3 (dD≥2010) | Ben | 68.4 | 83.6 | 437.3 | 60.2% |
 | v3.3 (dD≥2010) | **Ours** | **63.0** | 84.9 | 436.9 | 60.0% |
 | v4.0 (Mic/NM) | Ben | 71.9 | 79.2 | 433.2 | 45.7% |
@@ -59,7 +59,7 @@ For v2.0 (two-hemisphere), used actual NH/SH δD from both sources.
 - **FF emissions consistently ~5–7 Tg/yr lower** with our improved δD (across all models that use δD)
 - **Microbial emissions barely change** (±1–2 Tg/yr) — robust to δD input choice
 - **BB emissions change by <2 Tg/yr** — also robust
-- v3.2 (BB-fixed, δ13C only) is **identical** for both inputs, as expected
+- v3.2 (BB-fixed, δ13C only) is **identical** for both δD inputs, as expected — but BB now varies annually using GFED4 data (23–36 Tg/yr) rather than a flat fraction
 
 #### The impact is concentrated in specific years
 
