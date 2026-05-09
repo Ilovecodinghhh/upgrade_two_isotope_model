@@ -1,0 +1,7 @@
+{
+  "kie_mode": "sampled",
+  "lifetime_mode": "varying",
+  "n_iterations": 1000,
+  "neg_d13C_pct": 0.0,
+  "neg_dD_pct": 5.85
+}
