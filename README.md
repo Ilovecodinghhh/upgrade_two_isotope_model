@@ -1,56 +1,89 @@
-# Upgraded Two-Isotope Box Model
+# Methane Isotope Box Models — Clean Taxonomy
 
-Dual-isotope (δ¹³C + δD) Monte Carlo mass-balance model for global methane source partitioning (BB/FF/Mic).
+## Model Infra (2 × 2 = 4 models)
 
-Upgraded from [TwoIsotopeBoxModel](https://github.com/Ilovecodinghhh/TwoIsotopeBoxModel) by Yufan Bao (2026).
+|  | **One Box (Global)** | **Two Boxes (NH + SH)** |
+|---|---|---|
+| **2×2** (BB fixed; δ¹³C and δD solved separately) | `22_one.py` | `22_two.py` |
+| **3×3** (δ¹³C and δD used simultaneously) | `33_one.py` | `33_two.py` |
 
-## Upgrades
+### What "2×2" means
+Fix biomass-burning from CarbonTracker (GFED4 prior). Solve for FF and Mic using δ¹³C alone, then independently using δD alone. Cross-validate the two estimates.
 
-| # | Feature | Original | Upgraded |
-|---|---------|----------|----------|
-| 1 | **KIE sampling** | Fixed per scenario | Sampled from literature distributions per MC iteration |
-| 2 | **Quality monitoring** | None | Condition number tracking, non-physical solution rates |
-| 3 | **Lifetime** | Fixed τ = 9 yr | Time-varying τ(t) ≈ 9.0 − 0.017·(t − 2010) |
+### What "3×3" means
+Solve a 3-equation system (mass + δ¹³C + δD) simultaneously for all three sources (BB, FF, Mic). No external BB constraint needed. Uses bounded least-squares for non-negativity.
 
-See [CHANGELOG.md](CHANGELOG.md) for detailed scientific justification and improvement suggestions.
+### What "one" vs "two" means
+- **one**: Single global well-mixed box. τ = global lifetime.
+- **two**: Two hemispheric boxes (NH/SH) connected by interhemispheric exchange (τ_ex ~ 1.0 ± 0.1 yr). Hemisphere-specific lifetimes, sink fractions, and δD offset (±6‰).
 
-## Quick Start
+---
+
+## Shared Infrastructure (`models/`)
+
+| File | Contents |
+|------|----------|
+| `models/__init__.py` | Package exports |
+| `models/inputs.py` | **Input choice catalog** — every configurable parameter with literature references and sensitivity presets |
+| `models/core.py` | Data loading, KIE sampling, isotope math, lifetime, quality monitoring, smoothing |
+
+---
+
+## Input Choices (for sensitivity tests)
+
+All documented with references in `models/inputs.py`. Run any model with a preset:
 
 ```bash
-# Run the model
-python upgraded_box_model.py
-
-# Run with debug output (stops at first non-physical solution)
-python upgraded_box_model.py --debug
+python 22_one.py default           # Default config
+python 22_one.py cantrell_only     # OH KIE fixed to Cantrell (1990)
+python 33_two.py fixed_lifetime    # τ = 9 yr constant
+python 22_two.py CTCH4_FF          # CT-CH₄ fossil fuel signatures
 ```
 
-## Output Files
+### Available presets:
 
-| File | Description |
-|------|-------------|
-| `upgraded_base_results.csv` | Per-year statistics (mean ± std for BB/FF/Mic) |
-| `quality_report.json` | Solution quality summary (rejection rates, condition numbers) |
-| `quality_per_year.csv` | Per-year quality diagnostics |
-| `KIE_samples.csv` | All 1000 KIE draws (for posterior analysis) |
-| `BB/FF/Mic_upgraded_MC.csv` | Full 1000-iteration results per source |
-| `upgraded_model_results.png` | Spaghetti + quality diagnostic plots |
-| `lifetime_trajectory.png` | Time-varying lifetime visualization |
+| Preset | What changes | Reference |
+|--------|-------------|-----------|
+| `default` | Full stochastic (sampled KIE + time-varying τ + EDGAR FF) | This work |
+| `cantrell_only` | OH KIE = 1.0054 (¹³C), 1.327 (D) | Cantrell et al. (1990) |
+| `saueressig_only` | OH KIE = 1.0039 (¹³C), 1.294 (D) | Saueressig et al. (2001) |
+| `KIE_strat_soil_fixed` | Only OH and Cl sampled; Strat/Soil fixed | — |
+| `fixed_lifetime` | τ = 9.0 yr for all years | IPCC AR5/AR6 |
+| `CTCH4_FF` | CarbonTracker-CH₄ posterior FF signatures | Bruhwiler et al. (2014) |
+| `mic_dD_7` | Microbial δD uncertainty = 7‰ (original) | Bao et al. |
+| `BB_annual` | Time-varying BB from CT (not fixed mean) | GFED4 |
+| `BB_declining` | Declining BB scenario | Worden et al. (2017) |
+| `thanwerdas_sinks` | Thanwerdas sink fractions (low Cl) | Thanwerdas et al. (2024) |
+| `tau_ex_fixed` | τ_ex = 1.0 yr (no sampling) | Patra et al. (2011) |
+| `dD_offset_old` | δD NH/SH offset = ±1.5‰ (old estimate) | — |
 
-## Data Requirements
+---
 
-Input data in `rel/data/` and `rel/output/` — copied from the original repository.
+## Not included here (set aside)
 
-### Simulated Data (needs replacement)
+| Model | Reason |
+|-------|--------|
+| `v4.0_mic_vs_nonmic.py` | Different source taxonomy (2-source: Mic vs NonMic) |
+| Bayesian MCMC/NUTS | Different statistical framework (PyMC) — separate branch |
+| Frequentist scenarios (RedCl, IncOH, BBdrop) | Will be re-implemented as sensitivity presets |
 
-- **Time-varying lifetime**: Currently a linear parameterization. Needs actual values from He et al. (2026, Science) and Montzka et al. (2011) MCF-derived OH.
-- **Microbial δD uncertainty**: Hardcoded at 7‰. Should be derived from EMID database (Menoud 2022).
-- **δD 1999–2004**: Padded by repeating 2005 value. Needs real observations.
+---
 
-## References
+## Data Lineage
 
-- Cantrell et al. (1990) — OH KIE for ¹³C = 1.0054
-- Saueressig et al. (2001) — OH KIE for ¹³C = 1.0039, D = 1.294
-- Chandra et al. (2024, Comm. Earth Environ.) — KIE sensitivity analysis
-- He et al. (2026, Science) — Time-varying methane lifetime
-- Nguyen et al. (2020, GRL) — CH₄-OH feedback and perturbation lifetime
-- Naus et al. (2019, ACP) — Two-box model framework
+All input data files in `TwoIsotopeBoxModel/rel/`:
+- `data/` — atmospheric observations (CH₄, δ¹³C, δD, CarbonTracker)
+- `output/` — pre-computed MC source signatures (1000 iterations × years)
+
+See `models/inputs.py` → `ATM_OBS_CATALOG` and `FF_SIGNATURE_OPTIONS` for full documentation.
+
+---
+
+## Version History
+
+| Date | Change |
+|------|--------|
+| 2026-05-09 | Clean taxonomy: 4 models + shared `models/` infra + `inputs.py` catalog |
+| 2026-05-05 | v3.1/v3.2 with Ben-model optimisations |
+| 2026-05-04 | v2.0 upgrades (KIE sampling, time-varying τ, quality monitor) |
+| 2026-05-04 | v1.0 original Bao code |
