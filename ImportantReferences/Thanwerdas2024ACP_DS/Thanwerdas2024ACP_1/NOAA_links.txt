@@ -1,0 +1,3 @@
+observational data can be downloaded directly from the NOAA-GML website
+https://gml.noaa.gov/aftp/data/trace_gases/ch4c13/
+https://gml.noaa.gov/aftp/data/trace_gases/ch4/

@@ -1,0 +1,3996 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        54,
+                        189,
+                        431,
+                        221
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                187,
+                                425,
+                                207
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        187,
+                                        425,
+                                        207
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Reconciling the bottom-up and top-down estimates of",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                203,
+                                432,
+                                223
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        203,
+                                        432,
+                                        223
+                                    ],
+                                    "score": 1.0,
+                                    "content": "the methane chemical sink using multiple observations",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 0.5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        234,
+                        146,
+                        246
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                234,
+                                147,
+                                247
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        234,
+                                        147,
+                                        247
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Yuanhong Zhao et al.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        258,
+                        320,
+                        270
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                258,
+                                320,
+                                272
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        258,
+                                        263,
+                                        272
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Correspondence to: Yuanhong Zhao (zhaoyuanhong",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        263,
+                                        259,
+                                        272,
+                                        268
+                                    ],
+                                    "score": 0.25,
+                                    "content": "@",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        272,
+                                        258,
+                                        320,
+                                        272
+                                    ],
+                                    "score": 1.0,
+                                    "content": "ouc.edu.cn)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        296,
+                        407,
+                        308
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                296,
+                                409,
+                                309
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        296,
+                                        409,
+                                        309
+                                    ],
+                                    "score": 1.0,
+                                    "content": "The copyright of individual parts of the supplement might differ from the article licence.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4
+                }
+            ],
+            "page_idx": 0,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        396,
+                        48,
+                        558,
+                        100
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                395,
+                                46,
+                                484,
+                                65
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        395,
+                                        46,
+                                        484,
+                                        65
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Atmospheric",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                411,
+                                63,
+                                484,
+                                84
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        411,
+                                        63,
+                                        484,
+                                        84
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Chemistry",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                398,
+                                82,
+                                483,
+                                101
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        398,
+                                        82,
+                                        483,
+                                        101
+                                    ],
+                                    "score": 0.999,
+                                    "content": "and Physics",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        54,
+                        84,
+                        97,
+                        100
+                    ],
+                    "lines": []
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        53,
+                        46,
+                        278,
+                        81
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                46,
+                                278,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        46,
+                                        278,
+                                        58
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of Atmos. Chem. Phys., 23, 789–807, 2023",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                53,
+                                58,
+                                268,
+                                70
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        58,
+                                        268,
+                                        70
+                                    ],
+                                    "score": 1.0,
+                                    "content": "https://doi.org/10.5194/acp-23-789-2023-supplement",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                69,
+                                213,
+                                83
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        70,
+                                        63,
+                                        80
+                                    ],
+                                    "score": 0.61,
+                                    "content": "©",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        63,
+                                        69,
+                                        213,
+                                        83
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Author(s) 2023. CC BY 4.0 License.",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        55,
+                        159,
+                        150,
+                        176
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                157,
+                                151,
+                                179
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        157,
+                                        151,
+                                        179
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        54,
+                        189,
+                        431,
+                        221
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                187,
+                                425,
+                                207
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        187,
+                                        425,
+                                        207
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Reconciling the bottom-up and top-down estimates of",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                203,
+                                432,
+                                223
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        203,
+                                        432,
+                                        223
+                                    ],
+                                    "score": 1.0,
+                                    "content": "the methane chemical sink using multiple observations",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 0.5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        234,
+                        146,
+                        246
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                234,
+                                147,
+                                247
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        234,
+                                        147,
+                                        247
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Yuanhong Zhao et al.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2,
+                    "bbox_fs": [
+                        54,
+                        234,
+                        147,
+                        247
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        258,
+                        320,
+                        270
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                258,
+                                320,
+                                272
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        258,
+                                        263,
+                                        272
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Correspondence to: Yuanhong Zhao (zhaoyuanhong",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        263,
+                                        259,
+                                        272,
+                                        268
+                                    ],
+                                    "score": 0.25,
+                                    "content": "@",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        272,
+                                        258,
+                                        320,
+                                        272
+                                    ],
+                                    "score": 1.0,
+                                    "content": "ouc.edu.cn)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3,
+                    "bbox_fs": [
+                        53,
+                        258,
+                        320,
+                        272
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        296,
+                        407,
+                        308
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                296,
+                                409,
+                                309
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        296,
+                                        409,
+                                        309
+                                    ],
+                                    "score": 1.0,
+                                    "content": "The copyright of individual parts of the supplement might differ from the article licence.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4,
+                    "bbox_fs": [
+                        53,
+                        296,
+                        409,
+                        309
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        51,
+                        529,
+                        328
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                51,
+                                529,
+                                328
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        529,
+                                        328
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                51,
+                                                529,
+                                                328
+                                            ],
+                                            "score": 0.973,
+                                            "type": "image",
+                                            "image_path": "e8019c374a61434d874823959746d5f4e41d59d5f7668dde0d54fbfcf0bcceda.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        529,
+                                        143.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        143.33333333333331,
+                                        529,
+                                        235.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        235.66666666666663,
+                                        529,
+                                        327.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                34,
+                                333,
+                                562,
+                                385
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        333,
+                                        561,
+                                        349
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                333,
+                                                561,
+                                                349
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S1. Spatial distribution of the tropospheric mean OH precursors from observations (top) and the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        348,
+                                        562,
+                                        365
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                348,
+                                                562,
+                                                365
+                                            ],
+                                            "score": 1.0,
+                                            "content": "difference in the OH precursors between CESM1-CAM4chem (middle) and GEOSCCM (bottom) simulations",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        370,
+                                        247,
+                                        388
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                370,
+                                                247,
+                                                388
+                                            ],
+                                            "score": 1.0,
+                                            "content": "and the observations (model－observation).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        35,
+                        399,
+                        302,
+                        605
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                35,
+                                399,
+                                302,
+                                605
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        399,
+                                        302,
+                                        605
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                35,
+                                                399,
+                                                302,
+                                                605
+                                            ],
+                                            "score": 0.96,
+                                            "type": "image",
+                                            "image_path": "0dd86f3547a86c40ed86b0dd7086d04c5939124a8c1fc85f59ed4f2ac199c529.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        399,
+                                        302,
+                                        467.6666666666667
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        467.6666666666667,
+                                        302,
+                                        536.3333333333334
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        536.3333333333334,
+                                        302,
+                                        605.0
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                33,
+                                614,
+                                561,
+                                683
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        613,
+                                        561,
+                                        630
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                613,
+                                                561,
+                                                630
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S2. Left: The latitude means of total ozone column from TOMS/SBUV observations (black), and",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 9
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        630,
+                                        561,
+                                        645
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                630,
+                                                561,
+                                                645
+                                            ],
+                                            "score": 1.0,
+                                            "content": "CESM1-CAM4chem (yellow) and GEOSCCM (blue) simulations. Right: the difference in observed total",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        645,
+                                        561,
+                                        660
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                645,
+                                                561,
+                                                660
+                                            ],
+                                            "score": 1.0,
+                                            "content": "ozone column between CESM1-CAM4chem (yellow) and GEOSCCM (blue) simulations and the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        667,
+                                        211,
+                                        684
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                667,
+                                                211,
+                                                684
+                                            ],
+                                            "score": 1.0,
+                                            "content": "observations (Model－observation).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 12
+                                }
+                            ],
+                            "index": 10.5
+                        }
+                    ],
+                    "index": 8.75
+                }
+            ],
+            "page_idx": 1,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        51,
+                        529,
+                        328
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                51,
+                                529,
+                                328
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        529,
+                                        328
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                51,
+                                                529,
+                                                328
+                                            ],
+                                            "score": 0.973,
+                                            "type": "image",
+                                            "image_path": "e8019c374a61434d874823959746d5f4e41d59d5f7668dde0d54fbfcf0bcceda.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        529,
+                                        143.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        143.33333333333331,
+                                        529,
+                                        235.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        235.66666666666663,
+                                        529,
+                                        327.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                34,
+                                333,
+                                562,
+                                385
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        333,
+                                        561,
+                                        349
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                333,
+                                                561,
+                                                349
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S1. Spatial distribution of the tropospheric mean OH precursors from observations (top) and the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        348,
+                                        562,
+                                        365
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                348,
+                                                562,
+                                                365
+                                            ],
+                                            "score": 1.0,
+                                            "content": "difference in the OH precursors between CESM1-CAM4chem (middle) and GEOSCCM (bottom) simulations",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        370,
+                                        247,
+                                        388
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                370,
+                                                247,
+                                                388
+                                            ],
+                                            "score": 1.0,
+                                            "content": "and the observations (model－observation).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        35,
+                        399,
+                        302,
+                        605
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                35,
+                                399,
+                                302,
+                                605
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        399,
+                                        302,
+                                        605
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                35,
+                                                399,
+                                                302,
+                                                605
+                                            ],
+                                            "score": 0.96,
+                                            "type": "image",
+                                            "image_path": "0dd86f3547a86c40ed86b0dd7086d04c5939124a8c1fc85f59ed4f2ac199c529.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        399,
+                                        302,
+                                        467.6666666666667
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        467.6666666666667,
+                                        302,
+                                        536.3333333333334
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        536.3333333333334,
+                                        302,
+                                        605.0
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                33,
+                                614,
+                                561,
+                                683
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        613,
+                                        561,
+                                        630
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                613,
+                                                561,
+                                                630
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S2. Left: The latitude means of total ozone column from TOMS/SBUV observations (black), and",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 9
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        630,
+                                        561,
+                                        645
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                630,
+                                                561,
+                                                645
+                                            ],
+                                            "score": 1.0,
+                                            "content": "CESM1-CAM4chem (yellow) and GEOSCCM (blue) simulations. Right: the difference in observed total",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        645,
+                                        561,
+                                        660
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                645,
+                                                561,
+                                                660
+                                            ],
+                                            "score": 1.0,
+                                            "content": "ozone column between CESM1-CAM4chem (yellow) and GEOSCCM (blue) simulations and the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        667,
+                                        211,
+                                        684
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                667,
+                                                211,
+                                                684
+                                            ],
+                                            "score": 1.0,
+                                            "content": "observations (Model－observation).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 12
+                                }
+                            ],
+                            "index": 10.5
+                        }
+                    ],
+                    "index": 8.75
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        34,
+                        490,
+                        329
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                34,
+                                490,
+                                329
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        34,
+                                        490,
+                                        329
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                34,
+                                                490,
+                                                329
+                                            ],
+                                            "score": 0.976,
+                                            "type": "image",
+                                            "image_path": "8bfda3bd82cbebc7bd603e53e731aa518a334f3c5915b3ee02bd59af8f13c415.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        34,
+                                        490,
+                                        132.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        132.33333333333331,
+                                        490,
+                                        230.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        230.66666666666663,
+                                        490,
+                                        328.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                35,
+                                333,
+                                560,
+                                364
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        332,
+                                        560,
+                                        349
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                332,
+                                                560,
+                                                349
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S3. Latitude-height cross sections of specific humidity (top) and air temperature (bottom) from",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        347,
+                                        561,
+                                        366
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                347,
+                                                561,
+                                                366
+                                            ],
+                                            "score": 1.0,
+                                            "content": "MERRA-2 reanalysis data (left) and the differences of CESM1-CAM4chem (middle) and GEOSCCM (right)",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                }
+                            ],
+                            "index": 3.5
+                        }
+                    ],
+                    "index": 2.25
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        34,
+                        371,
+                        315,
+                        385
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                33,
+                                370,
+                                317,
+                                387
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        370,
+                                        317,
+                                        387
+                                    ],
+                                    "score": 1.0,
+                                    "content": "simulations with the reanalysis data (model－MERRA-2).",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        417,
+                        270,
+                        618
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                417,
+                                270,
+                                618
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        417,
+                                        270,
+                                        618
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                417,
+                                                270,
+                                                618
+                                            ],
+                                            "score": 0.965,
+                                            "type": "image",
+                                            "image_path": "737b41d643312c593a3bd21c0dba3b40dc87c66bf9d6781e0f74b7ced5f447c6.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        417,
+                                        270,
+                                        435.27272727272725
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        435.27272727272725,
+                                        270,
+                                        453.5454545454545
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        453.5454545454545,
+                                        270,
+                                        471.81818181818176
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        471.81818181818176,
+                                        270,
+                                        490.090909090909
+                                    ],
+                                    "spans": [],
+                                    "index": 9
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        490.090909090909,
+                                        270,
+                                        508.36363636363626
+                                    ],
+                                    "spans": [],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        508.36363636363626,
+                                        270,
+                                        526.6363636363635
+                                    ],
+                                    "spans": [],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        526.6363636363635,
+                                        270,
+                                        544.9090909090908
+                                    ],
+                                    "spans": [],
+                                    "index": 12
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        544.9090909090908,
+                                        270,
+                                        563.181818181818
+                                    ],
+                                    "spans": [],
+                                    "index": 13
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        563.181818181818,
+                                        270,
+                                        581.4545454545453
+                                    ],
+                                    "spans": [],
+                                    "index": 14
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        581.4545454545453,
+                                        270,
+                                        599.7272727272725
+                                    ],
+                                    "spans": [],
+                                    "index": 15
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        599.7272727272725,
+                                        270,
+                                        617.9999999999998
+                                    ],
+                                    "spans": [],
+                                    "index": 16
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                34,
+                                629,
+                                561,
+                                676
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        630,
+                                        561,
+                                        646
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                630,
+                                                417,
+                                                646
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S4. Spatial distributions of air mass-weighted tropospheric mean [OH]",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                418,
+                                                630,
+                                                474,
+                                                645
+                                            ],
+                                            "score": 0.56,
+                                            "content": "\\left( [ \\mathrm { O H } ] _ { \\mathrm { t r o p - M } } \\right)",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                475,
+                                                630,
+                                                561,
+                                                646
+                                            ],
+                                            "score": 1.0,
+                                            "content": "in 2010 from 3D",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 17
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        644,
+                                        561,
+                                        662
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                644,
+                                                561,
+                                                662
+                                            ],
+                                            "score": 1.0,
+                                            "content": "model simulations (left) and chemical box model (DSMACC) simulations driven by the corresponding 3D",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 18
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        660,
+                                        410,
+                                        676
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                661,
+                                                381,
+                                                676
+                                            ],
+                                            "score": 1.0,
+                                            "content": "model outputs (right). The global mean values are shown inset in molec",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                381,
+                                                660,
+                                                405,
+                                                674
+                                            ],
+                                            "score": 0.48,
+                                            "content": "\\mathrm { c m } ^ { - 3 }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                405,
+                                                661,
+                                                410,
+                                                676
+                                            ],
+                                            "score": 1.0,
+                                            "content": ".",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 19
+                                }
+                            ],
+                            "index": 18
+                        }
+                    ],
+                    "index": 14.5
+                }
+            ],
+            "page_idx": 2,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        34,
+                        490,
+                        329
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                34,
+                                490,
+                                329
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        34,
+                                        490,
+                                        329
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                34,
+                                                490,
+                                                329
+                                            ],
+                                            "score": 0.976,
+                                            "type": "image",
+                                            "image_path": "8bfda3bd82cbebc7bd603e53e731aa518a334f3c5915b3ee02bd59af8f13c415.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        34,
+                                        490,
+                                        132.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        132.33333333333331,
+                                        490,
+                                        230.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        230.66666666666663,
+                                        490,
+                                        328.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                35,
+                                333,
+                                560,
+                                364
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        332,
+                                        560,
+                                        349
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                332,
+                                                560,
+                                                349
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S3. Latitude-height cross sections of specific humidity (top) and air temperature (bottom) from",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        347,
+                                        561,
+                                        366
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                347,
+                                                561,
+                                                366
+                                            ],
+                                            "score": 1.0,
+                                            "content": "MERRA-2 reanalysis data (left) and the differences of CESM1-CAM4chem (middle) and GEOSCCM (right)",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                }
+                            ],
+                            "index": 3.5
+                        }
+                    ],
+                    "index": 2.25
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        34,
+                        371,
+                        315,
+                        385
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                33,
+                                370,
+                                317,
+                                387
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        370,
+                                        317,
+                                        387
+                                    ],
+                                    "score": 1.0,
+                                    "content": "simulations with the reanalysis data (model－MERRA-2).",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5,
+                    "bbox_fs": [
+                        33,
+                        370,
+                        317,
+                        387
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        417,
+                        270,
+                        618
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                417,
+                                270,
+                                618
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        417,
+                                        270,
+                                        618
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                417,
+                                                270,
+                                                618
+                                            ],
+                                            "score": 0.965,
+                                            "type": "image",
+                                            "image_path": "737b41d643312c593a3bd21c0dba3b40dc87c66bf9d6781e0f74b7ced5f447c6.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        417,
+                                        270,
+                                        435.27272727272725
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        435.27272727272725,
+                                        270,
+                                        453.5454545454545
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        453.5454545454545,
+                                        270,
+                                        471.81818181818176
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        471.81818181818176,
+                                        270,
+                                        490.090909090909
+                                    ],
+                                    "spans": [],
+                                    "index": 9
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        490.090909090909,
+                                        270,
+                                        508.36363636363626
+                                    ],
+                                    "spans": [],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        508.36363636363626,
+                                        270,
+                                        526.6363636363635
+                                    ],
+                                    "spans": [],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        526.6363636363635,
+                                        270,
+                                        544.9090909090908
+                                    ],
+                                    "spans": [],
+                                    "index": 12
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        544.9090909090908,
+                                        270,
+                                        563.181818181818
+                                    ],
+                                    "spans": [],
+                                    "index": 13
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        563.181818181818,
+                                        270,
+                                        581.4545454545453
+                                    ],
+                                    "spans": [],
+                                    "index": 14
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        581.4545454545453,
+                                        270,
+                                        599.7272727272725
+                                    ],
+                                    "spans": [],
+                                    "index": 15
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        599.7272727272725,
+                                        270,
+                                        617.9999999999998
+                                    ],
+                                    "spans": [],
+                                    "index": 16
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                34,
+                                629,
+                                561,
+                                676
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        630,
+                                        561,
+                                        646
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                630,
+                                                417,
+                                                646
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S4. Spatial distributions of air mass-weighted tropospheric mean [OH]",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                418,
+                                                630,
+                                                474,
+                                                645
+                                            ],
+                                            "score": 0.56,
+                                            "content": "\\left( [ \\mathrm { O H } ] _ { \\mathrm { t r o p - M } } \\right)",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                475,
+                                                630,
+                                                561,
+                                                646
+                                            ],
+                                            "score": 1.0,
+                                            "content": "in 2010 from 3D",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 17
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        644,
+                                        561,
+                                        662
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                644,
+                                                561,
+                                                662
+                                            ],
+                                            "score": 1.0,
+                                            "content": "model simulations (left) and chemical box model (DSMACC) simulations driven by the corresponding 3D",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 18
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        660,
+                                        410,
+                                        676
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                661,
+                                                381,
+                                                676
+                                            ],
+                                            "score": 1.0,
+                                            "content": "model outputs (right). The global mean values are shown inset in molec",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                381,
+                                                660,
+                                                405,
+                                                674
+                                            ],
+                                            "score": 0.48,
+                                            "content": "\\mathrm { c m } ^ { - 3 }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                405,
+                                                661,
+                                                410,
+                                                676
+                                            ],
+                                            "score": 1.0,
+                                            "content": ".",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 19
+                                }
+                            ],
+                            "index": 18
+                        }
+                    ],
+                    "index": 14.5
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        51,
+                        232,
+                        218
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                51,
+                                232,
+                                218
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        232,
+                                        218
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                51,
+                                                232,
+                                                218
+                                            ],
+                                            "score": 0.957,
+                                            "type": "image",
+                                            "image_path": "6f841a5ef2ca56191b317d28b4ed8e2f43a5e3b1f7155072fa4876a30cc2a6b7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        232,
+                                        69.55555555555556
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        69.55555555555556,
+                                        232,
+                                        88.11111111111111
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        88.11111111111111,
+                                        232,
+                                        106.66666666666667
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        106.66666666666667,
+                                        232,
+                                        125.22222222222223
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        125.22222222222223,
+                                        232,
+                                        143.77777777777777
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        143.77777777777777,
+                                        232,
+                                        162.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        162.33333333333331,
+                                        232,
+                                        180.88888888888886
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        180.88888888888886,
+                                        232,
+                                        199.4444444444444
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        199.4444444444444,
+                                        232,
+                                        217.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                33,
+                                224,
+                                509,
+                                239
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        222,
+                                        511,
+                                        241
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                222,
+                                                511,
+                                                241
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S5. Spatial distribution of tropospheric mean [OH] estimated by Spiavkovsky et al. (2000).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 9
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 6.5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        254,
+                        396,
+                        533
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                254,
+                                396,
+                                533
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        254,
+                                        396,
+                                        533
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                254,
+                                                396,
+                                                533
+                                            ],
+                                            "score": 0.972,
+                                            "type": "image",
+                                            "image_path": "29cdcd83701bbe3517542ad94725dfb51df27726581a78f58acce05549d3d6b8.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        254,
+                                        396,
+                                        347.0
+                                    ],
+                                    "spans": [],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        347.0,
+                                        396,
+                                        440.0
+                                    ],
+                                    "spans": [],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        440.0,
+                                        396,
+                                        533.0
+                                    ],
+                                    "spans": [],
+                                    "index": 12
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                35,
+                                536,
+                                560,
+                                567
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        536,
+                                        561,
+                                        552
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                536,
+                                                196,
+                                                552
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S6. Spatial distribution of",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                197,
+                                                537,
+                                                220,
+                                                550
+                                            ],
+                                            "score": 0.69,
+                                            "content": "\\mathrm { N O _ { y } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                221,
+                                                536,
+                                                561,
+                                                552
+                                            ],
+                                            "score": 1.0,
+                                            "content": "given by Spiavkovsky et al. (2000) averaged over November to March",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 13
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        551,
+                                        377,
+                                        568
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                551,
+                                                204,
+                                                568
+                                            ],
+                                            "score": 1.0,
+                                            "content": "(left) and July to October (right) at",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                204,
+                                                552,
+                                                242,
+                                                565
+                                            ],
+                                            "score": 0.76,
+                                            "content": "9 0 0 \\mathrm { { h P a } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                243,
+                                                551,
+                                                289,
+                                                568
+                                            ],
+                                            "score": 1.0,
+                                            "content": "(top) and",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                290,
+                                                552,
+                                                328,
+                                                565
+                                            ],
+                                            "score": 0.78,
+                                            "content": "5 0 0 \\mathrm { h P a }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                328,
+                                                551,
+                                                377,
+                                                568
+                                            ],
+                                            "score": 1.0,
+                                            "content": "(bottom).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 14
+                                }
+                            ],
+                            "index": 13.5
+                        }
+                    ],
+                    "index": 12.25
+                }
+            ],
+            "page_idx": 3,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        51,
+                        232,
+                        218
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                51,
+                                232,
+                                218
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        232,
+                                        218
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                51,
+                                                232,
+                                                218
+                                            ],
+                                            "score": 0.957,
+                                            "type": "image",
+                                            "image_path": "6f841a5ef2ca56191b317d28b4ed8e2f43a5e3b1f7155072fa4876a30cc2a6b7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        51,
+                                        232,
+                                        69.55555555555556
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        69.55555555555556,
+                                        232,
+                                        88.11111111111111
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        88.11111111111111,
+                                        232,
+                                        106.66666666666667
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        106.66666666666667,
+                                        232,
+                                        125.22222222222223
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        125.22222222222223,
+                                        232,
+                                        143.77777777777777
+                                    ],
+                                    "spans": [],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        143.77777777777777,
+                                        232,
+                                        162.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        162.33333333333331,
+                                        232,
+                                        180.88888888888886
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        180.88888888888886,
+                                        232,
+                                        199.4444444444444
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        199.4444444444444,
+                                        232,
+                                        217.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                33,
+                                224,
+                                509,
+                                239
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        222,
+                                        511,
+                                        241
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                222,
+                                                511,
+                                                241
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S5. Spatial distribution of tropospheric mean [OH] estimated by Spiavkovsky et al. (2000).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 9
+                                }
+                            ],
+                            "index": 9
+                        }
+                    ],
+                    "index": 6.5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        34,
+                        254,
+                        396,
+                        533
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                34,
+                                254,
+                                396,
+                                533
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        254,
+                                        396,
+                                        533
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                254,
+                                                396,
+                                                533
+                                            ],
+                                            "score": 0.972,
+                                            "type": "image",
+                                            "image_path": "29cdcd83701bbe3517542ad94725dfb51df27726581a78f58acce05549d3d6b8.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        34,
+                                        254,
+                                        396,
+                                        347.0
+                                    ],
+                                    "spans": [],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        347.0,
+                                        396,
+                                        440.0
+                                    ],
+                                    "spans": [],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        440.0,
+                                        396,
+                                        533.0
+                                    ],
+                                    "spans": [],
+                                    "index": 12
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                35,
+                                536,
+                                560,
+                                567
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        536,
+                                        561,
+                                        552
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                536,
+                                                196,
+                                                552
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S6. Spatial distribution of",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                197,
+                                                537,
+                                                220,
+                                                550
+                                            ],
+                                            "score": 0.69,
+                                            "content": "\\mathrm { N O _ { y } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                221,
+                                                536,
+                                                561,
+                                                552
+                                            ],
+                                            "score": 1.0,
+                                            "content": "given by Spiavkovsky et al. (2000) averaged over November to March",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 13
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        551,
+                                        377,
+                                        568
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                551,
+                                                204,
+                                                568
+                                            ],
+                                            "score": 1.0,
+                                            "content": "(left) and July to October (right) at",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                204,
+                                                552,
+                                                242,
+                                                565
+                                            ],
+                                            "score": 0.76,
+                                            "content": "9 0 0 \\mathrm { { h P a } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                243,
+                                                551,
+                                                289,
+                                                568
+                                            ],
+                                            "score": 1.0,
+                                            "content": "(top) and",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                290,
+                                                552,
+                                                328,
+                                                565
+                                            ],
+                                            "score": 0.78,
+                                            "content": "5 0 0 \\mathrm { h P a }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                328,
+                                                551,
+                                                377,
+                                                568
+                                            ],
+                                            "score": 1.0,
+                                            "content": "(bottom).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 14
+                                }
+                            ],
+                            "index": 13.5
+                        }
+                    ],
+                    "index": 12.25
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        33,
+                        34,
+                        477,
+                        362
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                33,
+                                34,
+                                477,
+                                362
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        34,
+                                        477,
+                                        362
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                34,
+                                                477,
+                                                362
+                                            ],
+                                            "score": 0.975,
+                                            "type": "image",
+                                            "image_path": "9ad0a36864cbb9d8e3f3f74dab498c4cee3b7d6b50ba0476ffd8b4a7ba03d0fc.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        34,
+                                        477,
+                                        143.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        143.33333333333331,
+                                        477,
+                                        252.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        252.66666666666663,
+                                        477,
+                                        361.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                34,
+                                364,
+                                561,
+                                410
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        363,
+                                        561,
+                                        382
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                363,
+                                                473,
+                                                382
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S7. Sensitivity of [OH] to individual factors (filled colors) as a function of HCHO",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                473,
+                                                366,
+                                                481,
+                                                376
+                                            ],
+                                            "score": 0.26,
+                                            "content": "^ +",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                481,
+                                                363,
+                                                561,
+                                                382
+                                            ],
+                                            "score": 1.0,
+                                            "content": "isoprene mixing",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        379,
+                                        561,
+                                        397
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                379,
+                                                122,
+                                                397
+                                            ],
+                                            "score": 1.0,
+                                            "content": "ratio (y-axis) and",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                122,
+                                                379,
+                                                154,
+                                                394
+                                            ],
+                                            "score": 0.77,
+                                            "content": "\\mathrm { O } ( ^ { 1 } \\mathrm { D } )",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                154,
+                                                379,
+                                                244,
+                                                397
+                                            ],
+                                            "score": 1.0,
+                                            "content": "photolysis rate or",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                244,
+                                                380,
+                                                268,
+                                                393
+                                            ],
+                                            "score": 0.86,
+                                            "content": "\\Nu { 0 } _ { 2 }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                268,
+                                                379,
+                                                561,
+                                                397
+                                            ],
+                                            "score": 1.0,
+                                            "content": "mixing ratio estimated by the DSMACC simulations using",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        395,
+                                        203,
+                                        411
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                395,
+                                                203,
+                                                411
+                                            ],
+                                            "score": 1.0,
+                                            "content": "MOZART-4 chemical mechanism.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        35,
+                        441,
+                        317,
+                        640
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                35,
+                                441,
+                                317,
+                                640
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        441,
+                                        317,
+                                        640
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                35,
+                                                441,
+                                                317,
+                                                640
+                                            ],
+                                            "score": 0.937,
+                                            "type": "image",
+                                            "image_path": "b46680b00805ea726fedc436b8ac567f5455ffa6b4b7323a40f9c900025e5df2.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        441,
+                                        317,
+                                        507.3333333333333
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        507.3333333333333,
+                                        317,
+                                        573.6666666666666
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        573.6666666666666,
+                                        317,
+                                        640.0
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                33,
+                                645,
+                                561,
+                                708
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        644,
+                                        561,
+                                        661
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                644,
+                                                430,
+                                                661
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S8. (a) Zonal averaged difference between modeled and observation-based",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                430,
+                                                646,
+                                                480,
+                                                660
+                                            ],
+                                            "score": 0.75,
+                                            "content": "[ \\mathrm { O H } ] _ { \\mathrm { t r o p - M } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                480,
+                                                644,
+                                                561,
+                                                661
+                                            ],
+                                            "score": 1.0,
+                                            "content": "estimated by the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 9
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        659,
+                                        563,
+                                        679
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                659,
+                                                131,
+                                                679
+                                            ],
+                                            "score": 1.0,
+                                            "content": "All_obs simulation",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                132,
+                                                661,
+                                                244,
+                                                676
+                                            ],
+                                            "score": 0.76,
+                                            "content": "( [ O H ] _ { m o d e l } - [ O H ] _ { o b s }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                244,
+                                                659,
+                                                563,
+                                                679
+                                            ],
+                                            "score": 1.0,
+                                            "content": "; yellow); The total contribution of the 8 individual factors to the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        676,
+                                        561,
+                                        692
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                677,
+                                                132,
+                                                692
+                                            ],
+                                            "score": 1.0,
+                                            "content": "difference in global",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                132,
+                                                677,
+                                                182,
+                                                691
+                                            ],
+                                            "score": 0.82,
+                                            "content": "[ \\mathrm { O H } ] _ { \\mathrm { t r o p - M } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                182,
+                                                677,
+                                                426,
+                                                692
+                                            ],
+                                            "score": 1.0,
+                                            "content": "estimated from the simulation xk_obs simulations",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                426,
+                                                676,
+                                                486,
+                                                691
+                                            ],
+                                            "score": 0.92,
+                                            "content": "( \\sum \\delta [ O H ] _ { x k }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                486,
+                                                677,
+                                                561,
+                                                692
+                                            ],
+                                            "score": 1.0,
+                                            "content": "; blue). (b) The",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        691,
+                                        414,
+                                        709
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                691,
+                                                215,
+                                                709
+                                            ],
+                                            "score": 1.0,
+                                            "content": "difference between the two estimates",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                215,
+                                                691,
+                                                410,
+                                                707
+                                            ],
+                                            "score": 0.88,
+                                            "content": "( \\sum \\delta [ O H ] _ { x k } - ( [ O H ] _ { m o d e l } - [ O H ] _ { o b s } ) )",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                410,
+                                                691,
+                                                414,
+                                                709
+                                            ],
+                                            "score": 1.0,
+                                            "content": ".",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 12
+                                }
+                            ],
+                            "index": 10.5
+                        }
+                    ],
+                    "index": 8.75
+                }
+            ],
+            "page_idx": 4,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        33,
+                        34,
+                        477,
+                        362
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                33,
+                                34,
+                                477,
+                                362
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        34,
+                                        477,
+                                        362
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                34,
+                                                477,
+                                                362
+                                            ],
+                                            "score": 0.975,
+                                            "type": "image",
+                                            "image_path": "9ad0a36864cbb9d8e3f3f74dab498c4cee3b7d6b50ba0476ffd8b4a7ba03d0fc.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        34,
+                                        477,
+                                        143.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        143.33333333333331,
+                                        477,
+                                        252.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        252.66666666666663,
+                                        477,
+                                        361.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                34,
+                                364,
+                                561,
+                                410
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        363,
+                                        561,
+                                        382
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                363,
+                                                473,
+                                                382
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S7. Sensitivity of [OH] to individual factors (filled colors) as a function of HCHO",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                473,
+                                                366,
+                                                481,
+                                                376
+                                            ],
+                                            "score": 0.26,
+                                            "content": "^ +",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                481,
+                                                363,
+                                                561,
+                                                382
+                                            ],
+                                            "score": 1.0,
+                                            "content": "isoprene mixing",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        379,
+                                        561,
+                                        397
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                379,
+                                                122,
+                                                397
+                                            ],
+                                            "score": 1.0,
+                                            "content": "ratio (y-axis) and",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                122,
+                                                379,
+                                                154,
+                                                394
+                                            ],
+                                            "score": 0.77,
+                                            "content": "\\mathrm { O } ( ^ { 1 } \\mathrm { D } )",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                154,
+                                                379,
+                                                244,
+                                                397
+                                            ],
+                                            "score": 1.0,
+                                            "content": "photolysis rate or",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                244,
+                                                380,
+                                                268,
+                                                393
+                                            ],
+                                            "score": 0.86,
+                                            "content": "\\Nu { 0 } _ { 2 }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                268,
+                                                379,
+                                                561,
+                                                397
+                                            ],
+                                            "score": 1.0,
+                                            "content": "mixing ratio estimated by the DSMACC simulations using",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        395,
+                                        203,
+                                        411
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                395,
+                                                203,
+                                                411
+                                            ],
+                                            "score": 1.0,
+                                            "content": "MOZART-4 chemical mechanism.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        35,
+                        441,
+                        317,
+                        640
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                35,
+                                441,
+                                317,
+                                640
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        441,
+                                        317,
+                                        640
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                35,
+                                                441,
+                                                317,
+                                                640
+                                            ],
+                                            "score": 0.937,
+                                            "type": "image",
+                                            "image_path": "b46680b00805ea726fedc436b8ac567f5455ffa6b4b7323a40f9c900025e5df2.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        35,
+                                        441,
+                                        317,
+                                        507.3333333333333
+                                    ],
+                                    "spans": [],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        507.3333333333333,
+                                        317,
+                                        573.6666666666666
+                                    ],
+                                    "spans": [],
+                                    "index": 7
+                                },
+                                {
+                                    "bbox": [
+                                        35,
+                                        573.6666666666666,
+                                        317,
+                                        640.0
+                                    ],
+                                    "spans": [],
+                                    "index": 8
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                33,
+                                645,
+                                561,
+                                708
+                            ],
+                            "group_id": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        33,
+                                        644,
+                                        561,
+                                        661
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                644,
+                                                430,
+                                                661
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S8. (a) Zonal averaged difference between modeled and observation-based",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                430,
+                                                646,
+                                                480,
+                                                660
+                                            ],
+                                            "score": 0.75,
+                                            "content": "[ \\mathrm { O H } ] _ { \\mathrm { t r o p - M } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                480,
+                                                644,
+                                                561,
+                                                661
+                                            ],
+                                            "score": 1.0,
+                                            "content": "estimated by the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 9
+                                },
+                                {
+                                    "bbox": [
+                                        32,
+                                        659,
+                                        563,
+                                        679
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                32,
+                                                659,
+                                                131,
+                                                679
+                                            ],
+                                            "score": 1.0,
+                                            "content": "All_obs simulation",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                132,
+                                                661,
+                                                244,
+                                                676
+                                            ],
+                                            "score": 0.76,
+                                            "content": "( [ O H ] _ { m o d e l } - [ O H ] _ { o b s }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                244,
+                                                659,
+                                                563,
+                                                679
+                                            ],
+                                            "score": 1.0,
+                                            "content": "; yellow); The total contribution of the 8 individual factors to the",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 10
+                                },
+                                {
+                                    "bbox": [
+                                        34,
+                                        676,
+                                        561,
+                                        692
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                34,
+                                                677,
+                                                132,
+                                                692
+                                            ],
+                                            "score": 1.0,
+                                            "content": "difference in global",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                132,
+                                                677,
+                                                182,
+                                                691
+                                            ],
+                                            "score": 0.82,
+                                            "content": "[ \\mathrm { O H } ] _ { \\mathrm { t r o p - M } }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                182,
+                                                677,
+                                                426,
+                                                692
+                                            ],
+                                            "score": 1.0,
+                                            "content": "estimated from the simulation xk_obs simulations",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                426,
+                                                676,
+                                                486,
+                                                691
+                                            ],
+                                            "score": 0.92,
+                                            "content": "( \\sum \\delta [ O H ] _ { x k }",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                486,
+                                                677,
+                                                561,
+                                                692
+                                            ],
+                                            "score": 1.0,
+                                            "content": "; blue). (b) The",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 11
+                                },
+                                {
+                                    "bbox": [
+                                        33,
+                                        691,
+                                        414,
+                                        709
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                33,
+                                                691,
+                                                215,
+                                                709
+                                            ],
+                                            "score": 1.0,
+                                            "content": "difference between the two estimates",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "bbox": [
+                                                215,
+                                                691,
+                                                410,
+                                                707
+                                            ],
+                                            "score": 0.88,
+                                            "content": "( \\sum \\delta [ O H ] _ { x k } - ( [ O H ] _ { m o d e l } - [ O H ] _ { o b s } ) )",
+                                            "type": "inline_equation"
+                                        },
+                                        {
+                                            "bbox": [
+                                                410,
+                                                691,
+                                                414,
+                                                709
+                                            ],
+                                            "score": 1.0,
+                                            "content": ".",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 12
+                                }
+                            ],
+                            "index": 10.5
+                        }
+                    ],
+                    "index": 8.75
+                }
+            ]
+        }
+    ],
+    "_backend": "pipeline",
+    "_version_name": "2.7.6"
+}

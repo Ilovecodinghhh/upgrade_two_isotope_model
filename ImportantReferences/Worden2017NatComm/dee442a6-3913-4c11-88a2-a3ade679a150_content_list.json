@@ -1,0 +1,1573 @@
+[
+    {
+        "type": "text",
+        "text": "Reduced biomass burning emissions reconcile conflicting estimates of the post-2006 atmospheric methane budget ",
+        "text_level": 1,
+        "bbox": [
+            72,
+            213,
+            929,
+            312
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "John R. Worden 1 , A. Anthony Bloom1 , Sudhanshu Pandey2,3, Zhe Jiang1,4, Helen M. Worden4, Thomas W. Walker1 , Sander Houweling2,3,5 & Thomas Röckmann2 ",
+        "bbox": [
+            72,
+            323,
+            825,
+            363
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Several viable but conflicting explanations have been proposed to explain the recent ${ \\sim } 8$ p.p.b. per year increase in atmospheric methane after 2006, equivalent to net emissions increase of ${ \\sim } 2 5 \\top g \\subset \\ H _ { 4 }$ per year. A concurrent increase in atmospheric ethane implicates a fossil source; a concurrent decrease in the heavy isotope content of methane points toward a biogenic source, while other studies propose a decrease in the chemical sink (OH). Here we show that biomass burning emissions of methane decreased by $3 . 7 \\ ( \\pm 1 . 4 ) \\mathsf { T g } \\ \\mathsf { C H } _ { 4 }$ per year from the 2001–2007 to the 2008–2014 time periods using satellite measurements of CO and $\\mathsf { C H } _ { 4 } ,$ nearly twice the decrease expected from prior estimates. After updating both the total and isotopic budgets for atmospheric methane with these revised biomass burning emissions (and assuming no change to the chemical sink), we find that fossil fuels contribute between $1 2 { - } 1 9 \\intercal \\mathrm { g } \\ C \\mathsf { H } _ { 4 }$ per year to the recent atmospheric methane increase, thus reconciling the isotopic- and ethane-based results. ",
+        "bbox": [
+            70,
+            414,
+            689,
+            625
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "1 Jet Propulsion Laboratory, California Institute for Technology, Pasadena, 91109 CA, USA. 2 Institute for Marine and Atmospheric Research Utrecht, Utrecht University, Utrecht, The Netherlands. 3 SRON Netherlands Institute for Space Research, Utrecht, The Netherlands. 4 National Center for Atmospheric Research, Boulder, 80301 CO, USA. 5 Department of Earth Sciences, Vrije Universiteit Amsterdam, Amsterdam, The Netherlands. Correspondence and requests for materials should be addressed to J.R.W. (email: john.r.worden@jpl.nasa.gov) ",
+        "bbox": [
+            70,
+            893,
+            926,
+            945
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "DOI: 10.1038/s41467-017-02246-0 OPEN ",
+        "bbox": [
+            72,
+            186,
+            384,
+            205
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            70,
+            959,
+            653,
+            970
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "1 ",
+        "bbox": [
+            917,
+            959,
+            927,
+            969
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "nature COMMUNICATIONS ",
+        "bbox": [
+            26,
+            20,
+            994,
+            103
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            72,
+            162,
+            161,
+            180
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Recent changes in the growth rate of methane1, the secondmost important greenhouse gas, and important ozoneprecursor2, could be due to changing anthropogenic emissions in the form of fossil fuel (FF) or agricultural emissions3– Alternatively, natural wetland methane fluxes in the high latitudes or tropics could be increasing in response to variations in temperature, the water cycle, and/or carbon availability to methanogens9–12, giving a preview of carbon cycle feedbacks to global warming13. However, determining the relative contributions of anthropogenic, biogeochemical, and chemical drivers of methane trends has been extremely challenging and consequently there is effectively no confidence in projections of future atmospheric methane concentrations. The striking disagreement from several recent studies explaining the changes to atmospheric methane since $2 0 0 6 ^ { 5 - 8 }$ is likely due to the assumptions (and extrapolations) involved in attributing source variability to the observed changes in atmospheric methane. For example, surface measurements of $\\mathrm { C H } _ { 4 }$ and its isotopic composition suggest a shift of methane sources toward increasing tropical biogenic (BG) sources5,14,15. However, this explanation appears to directly conflict with observations of increasing FF sources that range between 5 and $2 5 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year based on ethane $\\mathrm { { } ^ { \\prime } C H _ { 4 } }$ ratios6–8 as well as studies based on satellite-based total column methane measurements16,17. Other studies18,19 show that we cannot rule out inter-annual variations in the hydroxyl radical (OH) chemical methane sink as the cause; however, these studies do not directly show changes in atmospheric OH or provide a mechanistic reason for a change. ",
+        "bbox": [
+            72,
+            62,
+            489,
+            434
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Biomass burning (BB) contributes only moderately to atmospheric methane with past estimates ranging from 14 to $2 6 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year out of the ${ \\sim } 5 5 0 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year budget20,21. The range of BB $\\mathrm { C H } _ { 4 }$ emissions estimates is in part due to uncertainties in burnt area estimates, combustion factors, and emission factors22–25 and to large inter-annual variability (IAV) resulting from substantial regional changes in rainfall due to $\\mathrm { E N S O } ^ { 2 6 }$ . For example, larger than normal inter-annual changes in atmospheric $\\mathrm { C H } _ { 4 }$ in 2006 and likely 1997 can be directly attributed to massive Indonesian peat fires27,28. Estimates based on burnt area suggest a decrease of ${ \\sim } 2 \\mathrm { T g }$ per year after 2007 (Global Fire Emissions Database, version 4—GFEDv4s)29 with decreasing burnt area over Africa likely due to better fire management and agricultural practices30 as well as reduced emissions over South America and Indonesia25,31,32. Our study focuses on how changes in biomass burning BB emissions of methane affect our knowledge of the FF and BG components of the atmospheric methane budget. ",
+        "bbox": [
+            72,
+            437,
+            489,
+            663
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "GFED bottom-up estimates for methane emissions from BB depend on satellite observations of burnt area, vegetation type, combustion efficiency, and amount of burnt biomass29,33. Topdown estimates depend on the combination of observationally constrained total CO flux estimates and in situ or satellite constraints on the CH4/CO ratio25,28 (Methods). Because the seasonality and location of fires are typically distinct from other emissions such as biofuels, industry, and transportation, topdown approaches can robustly distinguish biomass burning emissions from other sources based on satellite CO concentration measurements and prior information on burnt-area-based fire emissions estimates25,28,31,32. Here, we combine bottom-up estimates of fire emissions, based on burnt area measurements, with the top-down CO emissions estimates31 (Methods), based on the satellite concentration data and the adjoint of the Goddard Earth Observing System Chemistry model (GEOS-Chem). This approach for quantifying CO and $\\mathrm { C H } _ { 4 }$ fire emissions accounts for published uncertainties in the bottom-up estimates and includes empirical estimates of the key factors that contribute to uncertainties in emissions inferred from concentration data such as errors in transport and chemistry, partitioning of CO emissions on the $5 \\times 4 ^ { \\circ }$ GEOS-Chem grid cell to FF, fires, or chemical sources31,32, and uncertainties in the $\\mathrm { C H _ { 4 } / C O }$ emission factors and their IAV. We use satellite and in situ measurements of $\\mathrm { C H } _ { 4 } /$ CO ratios to evaluate fire-based $\\mathrm { C H _ { 4 } / C O }$ values and their associated uncertainties (Methods). We then show that biomass burning emissions of methane decreased by 3.7 $\\left( \\pm 1 . 4 \\right)$ Tg $\\mathrm { C H } _ { 4 }$ per year from the 2001–2007 to the 2008–2014 time periods, nearly twice the decrease expected from prior estimates based on burnt area measurements. After updating both the total and isotopic budgets for atmospheric methane with these revised biomass burning emissions (and assuming no change to the chemical sink), we find that FFs and BG sources contribute $1 2 \\mathrm { - } 1 9 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year and $1 2 \\mathrm { - } 1 6 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year, respectively, to the recent atmospheric methane increase, thus reconciling the isotopic- and ethane-based results. ",
+        "bbox": [
+            72,
+            663,
+            489,
+            945
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            61,
+            926,
+            262
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Results ",
+        "text_level": 1,
+        "bbox": [
+            509,
+            290,
+            559,
+            301
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Trend in $\\mathrm { { C H } _ { 4 } }$ emissions from fires. Figure 1 shows the time series of $\\mathrm { C H } _ { 4 }$ emissions that were obtained from GFEDv4s and top-down estimates based on CO emission estimates and GFED4s-based emission ratios. The CO-based fire $\\mathrm { C H } _ { 4 }$ emissions estimates amount to $1 4 . 8 \\pm 3 . 8 \\mathrm { T g }$ $\\mathrm { C H _ { 4 } }$ per year for the 2001–2007 time period and $1 1 . 1 \\pm 3$ Tg $\\mathrm { C H } _ { 4 }$ per year for the 2008–2014 time period, with a $3 . 7 \\pm 1 . 4$ Tg $\\mathrm { C H } _ { 4 }$ per year decrease between the two time periods. The mean burnt area (a priori)- based estimate from GFED4s is slightly larger and shows a slightly smaller decrease $( 2 . 3 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year) in fire emissions after 2007 relative to the $2 0 0 1 { - } 2 0 0 6$ time period. The range of uncertainties (shown as blue error bars in Fig. 1 is determined by the uncertainty in top-down CO emission estimates that are derived empirically using the approaches discussed in the Methods). The red shading describes the range of uncertainty stemming from uncertainties in $\\mathrm { C H _ { 4 } / C O }$ emission factors (Methods). By assuming temporally constant sector-specific $\\mathrm { C H } _ { 4 } /$ CO emission factors, we find that mean 2001–2014 emissions average to $1 2 . 9 \\pm 3 . 3$ Tg $\\mathrm { C H } _ { 4 }$ per year, and the decrease averages to $3 . 7 \\pm 1 . 4 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year for 2008–2014, relative to 2001–2007. This decrease is largely accounted for by a $2 . 9 \\pm 1 . 2$ Tg $\\mathrm { C H } _ { 4 }$ per year decrease during 2006–2008, which is primarily attributable to a biomass burning decrease in Indonesia and South America25,28,31. ",
+        "bbox": [
+            509,
+            303,
+            926,
+            622
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "While we account for the IAV in the global $\\mathrm { C H _ { 4 } / C O }$ emission factors due to varying contributions from individual fire types (such as savannas or peat fires), the temporal $\\mathrm { C H _ { 4 } / C O }$ variability due to underlying combustion processes for each fire type is currently not well characterized. We assess the sensitivity of our result on decreasing methane BB emissions to larger IAV in global $\\mathrm { C H _ { 4 } / C O }$ emission factors by randomly perturbing annual sector-specific $\\mathrm { C H _ { 4 } / C O }$ emission factors (Methods) and examining how they affect 2001–2014 BB methane emission trends. We find that the probability of a decrease in methane BB emissions throughout 2001–2014 is ${ > } 9 5 \\%$ assuming that any unexplained global annual $\\mathrm { C H _ { 4 } / C O }$ variability is ${ < } 2 1 \\%$ (Fig. 2). There is a $9 5 \\%$ probability that fire methane emissions during 2008–2014 decreased relative to 2001–2007 if the IAV of the global annual $\\mathrm { C H _ { 4 } / C O }$ ratio is ${ < } 3 2 \\%$ . These perturbations to the $\\mathrm { C H _ { 4 } / C O }$ emission factors are roughly a factor of three greater than expected variability from changes in fire-type contributions alone (global $\\mathrm { C H _ { 4 } / C O }$ IAV $7 - 8 \\%$ , Fig. 2). We therefore conclude that the decrease in biomass burning emissions of methane after 2007 cannot be easily explained by unaccounted inter-annual variations of the $\\mathrm { C H _ { 4 } / C O }$ due to errors in fire-type contributions. Furthermore, since coherent sector-specific $\\mathrm { C H _ { 4 } / C O }$ inter-annual variations comparable to within-sector $\\mathrm { C H _ { 4 } / C O }$ uncertainty (gray area in Fig. 2) are improbable, unaccounted inter-annual sectorspecific $\\mathrm { C H _ { 4 } / C O }$ variations cannot easily explain the biomass burning emission trends. ",
+        "bbox": [
+            509,
+            624,
+            926,
+            945
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            72,
+            19,
+            166,
+            35
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            341,
+            959,
+            926,
+            970
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            537,
+            24,
+            927,
+            35
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            72,
+            960,
+            80,
+            969
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            70,
+            61,
+            489,
+            88
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Wetter years associated with La Nina during the 2008 through 2014 time periods likely contributed to the observed decrease in fire emissions in South America and Indonesia25,31. It is also likely that this increased precipitation in these regions affects the fuel moisture content and in turn the combustion efficiency of the fires. However, while both $\\mathrm { C H } _ { 4 }$ and CO emission factors, relative to burnt area or $\\mathrm { C O } _ { 2 }$ , are expected to increase in response to a 2reduction in combustion efficiency34,35, there is currently no established relationship between combustion efficiency and the $\\mathrm { C H _ { 4 } / C O }$ ratios. To the best of our knowledge, measurements tracking temporal changes in fire $\\mathrm { C H _ { 4 } / C O }$ ratios indicate no coherent relationship between fire phase and $\\mathrm { C H _ { 4 } / C O }$ variability on daily timescales34,35 or any significant relationship between seasonal $\\mathrm { C H _ { 4 } / C O }$ variability and combustion completeness36. Ultimately, joint constraints on the temporal variability of $\\mathrm { C H } _ { 4 } /$ CO, e.g., based on further in situ monitoring of fire $\\mathrm { C H _ { 4 } / C O }$ or $\\mathrm { C H } _ { 4 }$ and CO column measurements from upcoming TROPOMI satellite mission37, could be key to improving the accuracy of fire methane emission estimates derived from atmospheric CO constraints. ",
+        "bbox": [
+            70,
+            89,
+            489,
+            143
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            61,
+            927,
+            141
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/0285cec016ed58136907a40a5147dc8edcc1ba124886630eb640b3991f8a5d8b.jpg",
+        "image_caption": [
+            "Fig. 1 Trend of methane emissions from biomass burning. Expected methane emissions from fires based on the Global Fire Emissions Database (black) and the CO emissions plus $\\mathsf { C H _ { 4 } / C O }$ ratios shown here (red). The range of uncertainties in blue is due to the calculated errors from the CO emissions estimate and the shaded red describes the range of error from uncertainties in the $\\mathsf { C H _ { 4 } / C O }$ emission factors "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            213,
+            175,
+            786,
+            521
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/b2598fae0d335b894391dc7c8d7874da323ef0624bc9ba1f92418cb8b61304b3.jpg",
+        "image_caption": [
+            "Fig. 2 The probability of a decrease in biomass burning methane emissions during 2001–2014. Probability of decrease if the emission factors are withinsector $\\mathsf { C H _ { 4 } / C O }$ inter-annual variability (black, $x$ axis) and the corresponding global-scale $\\mathsf { C H _ { 4 } / C O }$ inter-annual variability (light blue, x axis). The probability estimates include the propagation of systematic errors in fire CO emission estimates, and sector-specific $\\mathsf { C H _ { 4 } / C O }$ values. For comparison, the vertical lines show the global $\\mathsf { C H _ { 4 } / C O }$ IAV due to annual changes in relative fire sector contributions. The gray-shaded area shows the within-sector $\\mathsf { C H } _ { 4 } /$ CO uncertainty "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            220,
+            604,
+            779,
+            867
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            831,
+            19,
+            926,
+            35
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            70,
+            959,
+            655,
+            970
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            70,
+            24,
+            460,
+            35
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "3 ",
+        "bbox": [
+            917,
+            959,
+            927,
+            969
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            72,
+            61,
+            489,
+            103
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            61,
+            926,
+            103
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/bfdd9e28170ad57f3b6c2bf5a9ab4806a3e15c3a8a3b79162a287b5dcb5575b0.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"3\">Table 1 Isotopic signatures of the three source categories used in our box-model analysis</td></tr><tr><td> Source type</td><td>Previous literature δ13c-CH4 (%o)</td><td>Schwietzke et al._201615 s13c- CH4(%)</td></tr><tr><td>Biogenic</td><td>-60± 4.3</td><td>-62.3± 0.7</td></tr><tr><td>Fossil fuel (+natural seepages)</td><td>-39 ±1.7</td><td>-44±0.7</td></tr><tr><td>Biomass burning</td><td>-24.0±2.0</td><td>-22.3 ± 1.9</td></tr><tr><td colspan=\"3\">The isotopic signatures are reported as means ±1-sigma uncertainty</td></tr></table>",
+        "bbox": [
+            72,
+            111,
+            926,
+            239
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/6508a349508fd9831d61ed1563a2e4c2fdca18c74b5a832e031dde603e43e9f7.jpg",
+        "image_caption": [
+            "Fig. 3 Simulated $C H _ { 4 }$ and $\\delta ^ { 1 3 } \\mathsf { C } \\cdot \\mathsf { C } \\mathsf { H } _ { 4 }$ values. $C H _ { 4 }$ mixing ratios (a) and simulated by the box model for values shown in Table 1 and listed by model scenario in Table 2. b, c describe the simulated $\\delta ^ { 1 3 } \\mathsf { C } \\cdot \\mathsf { C } \\mathsf { H } _ { 4 }$ using the updated values from Schwietzke et al.15 and from prior literature. The biomass burning changes are prescribed based on the estimates from this study (BB-this-study) and GFED4s (BB-GFED4s). For the $\\mathsf { B G - m f }$ and FF-mf scenarios, the $\\mathsf { C H } _ { 4 }$ mole fractions growth is explained by an emission increase of only biogenic or only fossil fuel, respectively (BG-mf and FF-mf overlap in a). The iso-mf scenario shows the best fit to the isotope and mole fraction data, using an additional source of $2 4 . 7 \\pm 1 . 4 \\intercal \\mathrm { g C H } _ { 4 }$ per year with an isotopic signature of $- 5 6 . 1 \\pm 1 . 1 \\% o$ . The required adjustments to the methane budgets for fossil fuel and biogenic sources are shown in Figs. 4 and 5. The 1-sigma error margins are the propagated uncertainties of isotopic source signatures and uncertainties of the perturbations. The measurements shown here are the calculated global average of NOAA-ESRL network measurements "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            233,
+            257,
+            756,
+            778
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            72,
+            19,
+            166,
+            35
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            537,
+            24,
+            927,
+            35
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            341,
+            959,
+            926,
+            970
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "4 ",
+        "bbox": [
+            72,
+            960,
+            80,
+            968
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/0357e8700bca0878029027ff8c43d6771af513a0e54f6dacd9a07a29632a42d4.jpg",
+        "table_caption": [
+            "These scenarios are presented in Figs. 3, 4, 5 a Multiple scenarios are derived based on three BB change scenarios (this study, GFEDv4s, and no change), where BB and BG are constrained based on $\\mathsf { C H } _ { 4 } \\delta ^ { 1 3 } \\mathsf { C }$ source signatures and their associated uncertainties (Figs. 4 and 5) "
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"5\">Table 2 Description of CH4 box-model scenarios</td></tr><tr><td> Scenario name</td><td>Constrained by CH4</td><td> Constrained by s13c</td><td>Biomass burning change inFF and BG change in 2007 OH change 2008</td><td></td><td></td></tr><tr><td>BB-this-study</td><td>No</td><td>No</td><td>This study</td><td>No change</td><td>No</td></tr><tr><td>BB-GFEDv4s</td><td>No</td><td>No</td><td>GFEDv4s</td><td>No change</td><td>No</td></tr><tr><td>BG-mf</td><td>Yes</td><td>No</td><td>No change</td><td>Only BG increase</td><td>No</td></tr><tr><td>FF-mf</td><td>Yes</td><td>No</td><td>No change</td><td>Only FF increase</td><td>No</td></tr><tr><td>Iso-mf</td><td>Yes</td><td>Yes</td><td>Three BB change scenariosa</td><td>Constraineda</td><td>No</td></tr><tr><td>Iso-mf-OH</td><td>Yes</td><td>Yes</td><td>Three BB change scenariosa</td><td>Constraineda</td><td>0-3% reduction</td></tr></table>",
+        "bbox": [
+            72,
+            58,
+            926,
+            203
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/57e68e521471e5bb6b5f709d711d4899cc7414ead3d516bd502d9078766d4b0d.jpg",
+        "image_caption": [
+            "Fig. 4 Change in average annual biogenic and fossil fuel emissions. Change in average annual fossil fuel (a) and biogenic (b) emissions between the 2001–2006 and 2007–2014 periods needed to fit the $C H _ { 4 }$ mole fraction for different assumptions about biomass burning emissions and the isotopic signatures of the methane emission sources. These values are calculated for different proposed changes in biomass burning emissions: $\\mathsf { G F E D 4 5 } = 2 . 1 \\pm 1 . 1$ ${ \\mathsf { T g } } { \\mathsf { C } } { \\mathsf { H } } _ { 4 }$ per year, this study $= 3 . 7 \\pm 1 . 4$ Tg $C H _ { 4 }$ per year, and no change $= 0 . 0 \\ \\mathsf { T g } \\ \\mathsf { C H } _ { 4 }$ per year. The isotopic signatures assigned to each source type are shown in Table 1. The error bars are the $1 \\sigma$ uncertainties, which are calculated by propagating the uncertainties of the source isotopic signatures, biomass burning perturbations, and total perturbations needed to fit the growth rate and isotope measurements (see iso-mf scenario in Fig. 3) "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            225,
+            277,
+            774,
+            708
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            72,
+            810,
+            489,
+            864
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Balancing the isotopic budget of methane. When accounting for a $3 . 7 \\pm 1 . 4$ Tg $\\mathrm { C H } _ { 4 }$ per year decrease in biomass burning emissions between 2001–2007, and 2008–2014, the net change of other components of the methane budget (e.g., FF, BG sources, or a change in the OH sink) must have been even stronger than previously assumed in order to explain the observed increase in global atmospheric $\\mathrm { C H } _ { 4 }$ levels. Based on our estimated reduction in biomass burning emissions, we quantify the contribution of FF-related and BG sources to atmospheric methane increase using ground-based measurements from the National Oceanic and Atmospheric Administration Earth System Research Laboratory (NOAA/ESRL) network (Methods). Relative to FFrelated sources, methane from BG sources is generally depleted in $^ { 1 3 } \\mathrm { C } ,$ while methane emitted by biomass burning is relatively enriched in $^ { 1 3 } \\mathrm { C }$ (Table $1 ) ^ { 5 , 1 4 , 1 5 }$ . Recent updates for the isotope signatures of these emission categories have profoundly changed the global partitioning between source categories, resulting in a larger FF contribution to atmospheric methane mole fractions 15 We constrain an atmospheric single box model (Methods) using isotope signatures to estimate the contributions of BG, FFs, and biomass burning methane sources to atmospheric methane5,38. We use both new estimates of isotope signatures15 as well as previously accepted isotope signatures for our methane source partitioning estimates (Table 1) in order to verify that these differences in the isotopic composition do not affect our conclusions. ",
+        "bbox": [
+            70,
+            891,
+            489,
+            946
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            810,
+            926,
+            945
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            831,
+            19,
+            926,
+            35
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            70,
+            959,
+            653,
+            970
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            70,
+            24,
+            460,
+            35
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            919,
+            959,
+            927,
+            969
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/9a935d2202364417318baf1cb9f550ad9a047c3f3d47561af2eeeba878bfef26.jpg",
+        "image_caption": [
+            "Fig. 5 Fossil fuel change needed to fit the observed ${ \\mathsf { C H } } _ { 4 }$ growth rate and isotopic composition. Fossil fuel change needed to fit the observed ${ \\mathsf { C H } } _ { 4 }$ growth rate and isotopic composition assuming a simultaneous change in the ${ \\mathsf { C H } } _ { 4 }$ lifetime due to a change in sink. The results for a constant $( 0 \\% )$ sink change correspond to the iso-mf scenario (red lines in Fig. 3) "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            225,
+            61,
+            773,
+            524
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            72,
+            607,
+            489,
+            768
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Figure 3 shows the box-model results for a range of scenarios (Table 2) that could explain the observed increase in the $\\mathrm { C H } _ { 4 }$ mole fraction, but would yield different temporal isotope trajectories, under the assumption of a constant or varying atmospheric OH sink during this time period (Methods). Attributing the $\\mathrm { C H } _ { 4 }$ mole fraction increase to either BG (BGmf scenario in Table 2) or to FF (FF-mf scenario in Table 2) emissions leads to ${ 8 ^ { 1 3 } \\mathrm { C } \\mathrm { - } \\mathrm { C H } _ { 4 } }$ trajectories that do not agree with the NOAA/ESRL measurements in the post-2007 period. When optimizing the box-model fluxes in order to fit both the $\\mathrm { C H } _ { 4 }$ and $\\delta ^ { 1 3 } \\mathrm { C - C H _ { 4 } } ^ { \\bullet }$ time series to the NOAA/ESRL network measurements (iso-mf scenario), the fits correspond to an additional global methane source of $2 4 . 7 \\pm 1 . 4$ Tg $\\mathrm { C H } _ { 4 }$ per year with average isotopic signature of $- 5 6 . 1 \\pm 1 . 1 \\% 0 $ ; for the iso-mf scenario, this additional source has been partitioned into contributions from BG and FF source categories for three scenarios of BB emission change: no change in biomass burning; the current GFED4s estimate $( - 2 . 1 \\mathrm { T g } ^ { \\mathrm { ^ { - } C H _ { 4 } } }$ per year); and our CO-based top-down estimate $( - 3 . 7 \\pm 1 . 4 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year). ",
+        "bbox": [
+            72,
+            771,
+            489,
+            943
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            609,
+            926,
+            690
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "We find that the larger-than-expected reduction in methane BB emissions $( - 3 . 7 \\pm 1 . { \\bar { 4 } } \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year) leads to a substantial shift of the global methane source increase from BG to FF emissions, due to the impact of decreasing $^ { 1 3 } \\mathrm { C }$ -enriched BB emissions in the $\\mathrm { C H } _ { 4 }$ isotope budget (Fig. 4). For both choices of isotopic source signatures used in this study, the required increase in FF emissions is $1 2 \\mathrm { - } 1 9 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year with a corresponding increase in BG emissions of $1 2 \\mathrm { - } 1 6 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year. As shown in Fig. 4, FF contributions have to become an increasingly larger contribution to the overall increase in methane to account for larger decreases in biomass burning in order to also balance the isotopic budget. The required FF emission enhancement found here is substantially larger than in previous literature5, which showed a contribution of approximately $5 . 5 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year from FF when assuming BB changes of between 0 and $- 1 . 5 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year. In principle, a compensating increase in biofuels could cancel the decrease in the biomass burning because their isotopic signatures are similar. However, there are no current measurements of a concurrent biofuel emissions increase and furthermore such an increase is unlikely as it would amount to $2 5 \\%$ of the estimated yearly total for the biofuel emissions39. ",
+        "bbox": [
+            509,
+            690,
+            926,
+            943
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            72,
+            19,
+            166,
+            34
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            341,
+            959,
+            926,
+            970
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            537,
+            24,
+            927,
+            35
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "6 ",
+        "bbox": [
+            70,
+            960,
+            80,
+            969
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/e86f4c4c738719d04ee9348ce644d2827d6eb1ba8ba65f5efd065fa8282d6435.jpg",
+        "image_caption": [
+            "Fig. 6 Comparison of $\\mathsf { C H _ { 4 } / C O }$ ratios from the GEOS-Chem model and Aura TES data. a Comparison of $\\mathsf { C H } _ { 4 } / \\mathsf { C O }$ ratios observed in tropical and subtropical fire plumes from the Aura TES data to those expected from the GEOS-Chem model with GFED-based emission factors. b The regions corresponding to symbols in a. The best fit (weighted to the size of the fire emissions) and the corresponding standard error (standard error or the pinkshaded area in figure) are shown by the red line and shaded area. Fires from different regions are shown as different symbols. The relative size of the fire emissions is indicated by the relative size of the symbols "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            220,
+            62,
+            773,
+            391
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            70,
+            484,
+            489,
+            510
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Recent publications have also shown that we cannot rule out a decrease in the chemical sink of methane (reaction with OH) as the cause for the recent increase18,19. To address this possibility, we have performed additional box-model simulations where the sink is decreased progressively from 0 to $3 \\% ^ { 1 9 }$ (Fig. 5). The largest effect of assuming changes in the atmospheric OH sink is that the required global $\\mathrm { C H } _ { 4 }$ source changes accordingly. For example, a $3 \\%$ sink decrease would require a net source enhancement of ${ \\sim } 8$ Tg $\\mathrm { C H } _ { 4 }$ per year instead of ${ \\sim } 2 5 \\mathrm { T g } \\ \\mathrm { C H } _ { 4 }$ per year. The isotope source signature required to match the observed temporal evolution of $\\delta ^ { 1 3 } \\mathrm { C }$ also changes, from $^ { - 5 6 }$ to $- 6 1 \\text{‰}$ . Using the mass balance equation (Eqs. (10)–(12), Methods), the corresponding FF emission contributions have been calculated for the different BB emissions change scenarios (iso-mf-OH scenario; Fig. 5). As shown in Fig. 5, we find that a FF enhancement of 6–12 Tg $\\mathrm { C H } _ { 4 }$ per year is still needed to explain the $\\delta ^ { 1 3 } \\mathrm { C }$ measurements in case of a $3 \\%$ OH sink decrease; this amount reflects the total excess of ${ \\sim } 8 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year, a 1–6 Tg $\\mathrm { C H } _ { 4 }$ per year contribution from BG sources, and the $2 . 4 { - } 5 . 1 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year decrease from fires. Therefore, our conclusion that an increase in post-2007 FF emissions is needed to explain the observed shift in methane emissions5 remains valid, even if a sizeable fraction of the atmospheric methane concentration increase is due to decreasing atmospheric OH concentrations. ",
+        "bbox": [
+            72,
+            511,
+            489,
+            831
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "In conclusion, this study provides an updated estimate to global emissions of methane from fires that are on the low-end of previous estimates $( 1 2 . 9 \\pm 3 . 3 \\mathrm { T g }$ $\\mathrm { C H _ { 4 } }$ per year, in contrast to prior estimates of $1 4 { - } 2 6 \\mathrm { T g C H _ { 4 } }$ per year20,21) for the 2001–2014 time period. We also find that methane emissions from fires decreased after 2007 by $3 . 7 \\pm 1 . 4 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year; this decrease is substantially larger than the GFED4s estimated reduction $( 2 . 1 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year). Because fire emissions are isotopically heavier than those from FF or BG $\\mathrm { C H } _ { 4 }$ sources, the larger-than-expected decrease in fire emissions requires a substantial re-balancing of sources to explain both the recent increase in the mole fraction and isotopic composition of atmospheric methane. We show that new estimates for biomass burning and revisions to the isotopic composition of methane sources5,15 lead to a revised estimate of the FF and BG contributions to the post-2007 atmospheric methane budget (increase of $1 2 \\mathrm { - } 1 9 \\mathrm { T g } \\ \\bar { \\mathrm { C H _ { 4 } } }$ year and $1 2 \\mathrm { - } 1 6 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ year, respectively), assuming no change in the atmospheric OH sink of methane; reducing the sink by up to $3 \\%$ reduces the FF and BG emissions changes to $6 { \\mathrm { - } } 1 2 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ year, and $1 { - } 6 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ year. Our results therefore reconcile the previously conflicting findings on the recent changes to atmospheric methane and its isotopic composition, where isotopic evidence indicated a BG $\\mathrm { C H } _ { 4 }$ emission increase, while ethane/methane measurements indicated an increase in FF $\\mathrm { C H } _ { 4 }$ emissions. ",
+        "bbox": [
+            72,
+            832,
+            490,
+            938
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            484,
+            927,
+            696
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Methods ",
+        "text_level": 1,
+        "bbox": [
+            509,
+            726,
+            569,
+            737
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Approach for characterizing $\\mathbf { C H _ { 4 } }$ emissions from fires. Our approach for quantifying $\\mathrm { C H } _ { 4 }$ emissions from fires using satellite-based CO and $\\mathrm { C H _ { 4 } }$ concentration measurements is intended to mitigate and characterize uncertainties due to (1) errors in transport and chemistry, (2) uncertainties in partitioning CO emissions on the GEOS-Chem grid back to a priori CO emission types, and (3) uncertainties in the $\\mathrm { C H _ { 4 } / C O }$ emission factors and their IAV. As discussed in the following sections, we first quantify monthly CO fluxes and their uncertainties at monthly timescales on a $5 \\times 4 ^ { \\circ }$ (longitude $\\times$ latitude) grid using measurements of CO concentrations from the Terra Measurements of Pollution in the Troposphere (MOPITT) satellite instrument (V6J multi-spectral product40 and the adjoint version of GEOS-Chem31). CO fluxes are then re-partitioned to the CO emission types plus uncertainties on each $5 \\times 4 ^ { \\circ }$ grid cell using a Bayesian Markov Chain Monte Carlo approach25,41 that accounts for the a priori and a posteriori uncertainties of the BB emissions and other CO emissions. Estimates of the $\\mathrm { C H _ { 4 } }$ emissions and their uncertainties are then calculated by multiplying BB CO emissions by the GFED-based estimate of each fire-type contribution, the expected $\\mathrm { C H _ { 4 } / C O }$ emission factors for all fire types within each grid cell, and the uncertainties of the GFED-recommended emission factors. The emission factor uncertainties are tested with $\\mathrm { C H } _ { 4 }$ and CO measurements from the Aura TES instrument. ",
+        "bbox": [
+            509,
+            739,
+            927,
+            943
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            831,
+            19,
+            927,
+            35
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            70,
+            959,
+            653,
+            970
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            70,
+            25,
+            460,
+            35
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            919,
+            960,
+            927,
+            968
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Approach for quantifying CO fluxes. The approach used to quantify CO fluxes over 15 years using the GEOS-Chem adjoint and Terra MOPITT data is described in previously published research31. In summary, the inversion approach is to compare MOPITT data, averaged hourly and on the GEOS-Chem $5 \\times 4 ^ { \\circ }$ degree grid, to the model and modified by prior knowledge of CO emissions based on published inventories. The prior error for the CO fluxes on each grid is assumed to $5 0 \\%$ and is uncorrelated between grid cells31. The error prescribed for each set of hourly, $5 \\times 4 ^ { \\circ }$ degree averaged data is $2 0 \\%$ , consistent with the mean uncertainty of the MOPITT data. Emissions for the prior CO fluxes are also averaged onto the GEOS-Chem grid. As discussed in previous studies42,43, observations or models that are coarser than the scales of the actual smoke plumes can have larger uncertainty because of the effects of sub-grid scale diffusion, transport processes, and chemistry. However, the emissions from models at different spatial resolutions that are observationally constrained by satellite concentration data become consistent when averaged over several of the coarser scale model grid cells because the different model posterior concentrations have to be consistent with the observed CO concentrations42 The emissions results presented here should therefore be conservatively interpreted as averages of all fire emissions over a month for aggregates of the GEOS-Chem grid cells ${ \\sim } 2 0 0 0 \\mathrm { k m }$ spatial scales). ",
+        "bbox": [
+            72,
+            63,
+            490,
+            269
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The approach for calculating CO emissions mitigates and characterizes error in atmospheric transport and chemistry because they are typically the largest errors when quantifying CO emissions using concentration data44–46. For example, errors in the modeled CO fields can be amplified as CO is advected away from a source region due to the accumulation of transport and chemistry errors. We use a twostep approach to reduce the impact of these errors: firstly, we assimilate the MOPITT CO measurements over the ocean so that the modeled CO concentration fields that are advected over land from the ocean are consistent with the satellite $\\mathtt { d a t a } ^ { 4 2 }$ . We then estimate the CO emissions through comparison of model and data just over continental regions. Effectively this approach accounts for advection of the observed CO fields over the continents from the oceans while reducing the sensitivity of emissions from one continent to those from other continents42. ",
+        "bbox": [
+            72,
+            269,
+            490,
+            398
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Our inversion approach reduces, but does not remove, chemistry and transport errors contributions from our CO flux estimates. In order to characterize the remaining CO flux estimate errors, we produce three different estimates that are, respectively, based on the MOPITT CO total column, profile, and lowertroposphere28,46 concentration measurements. The three concentration measurements have different sensitivities to CO as a function of altitude, and therefore impose varying effects of transport and chemistry errors onto the model concentrations28,46 after they are passed through the corresponding instrument operators described by the a priori and averaging kernels. For example, estimates based on the total column data will be less sensitive to convection errors because the total column of the model estimate is effectively the same for all ranges of convection. However, these estimates will be the most sensitive to errors in advection and chemistry because the model has to balance these errors with remotely advected emissions. Total column measurements are also less sensitive to nearby surface emissions because the total column is representative of air parcels that originate from hundreds to thousands of kilometers away from the measurements28. Similarly, estimates based on the profile data will be more sensitive to emissions near to the measurement site than the total column data but are also more sensitive to errors in convection in the model. Estimates using the lower-tropospheric (lowest three to four levels of the MOPITT CO profile) will be more sensitive to nearby emissions but also more sensitive to errors in 28,31,46 ",
+        "bbox": [
+            72,
+            400,
+            490,
+            636
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "We have increased/decreased confidence in the magnitude and trend of emissions that are similar/different between these three estimates. For example, the largest differences between the three estimates occur in India and Indonesia, regions where there are relatively large emissions and relatively large convective mass fluxes46, and contributions from remote sources due to strong advection47,48. The mean of these three estimates is used for estimating the CO fluxes at each grid box and the variance between the three estimates is used as our uncertainty for these estimates28,31. To obtain the uncertainty of the fire emissions of CO, we next need to account for this posterior uncertainty in the CO estimate along with the partitioning of CO to its different sectors (e.g., biomass burning, FFs, and so on) and its uncertainties, as discussed next. ",
+        "bbox": [
+            72,
+            638,
+            490,
+            757
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Partitioning of posterior CO fluxes to CO emission sectors. In order to partition CO fluxes estimated on the GEOS-Chem grid cells to their corresponding emissions, we use a Markov Chain Monte Carlo approach25,41. This approach quantifies the sectoral CO emissions and their uncertainties on each grid cell such that the sum of the emissions and their uncertainties statistically represents the posterior total CO fluxes and its associated uncertainty. In particular, we estimate emissions for biomass burning (BB, including biofuels), FF, and BG sources. For each timestep and grid cell, the vector $\\mathbf { x }$ represents the emissions for each CO sector $\\mathbf { x } =$ [BB, FF, BG]); $p ( \\mathbf { x } )$ denotes the prior information on the CO emissions for each sector; and $F$ is a scalar denoting the sum of all CO sector emissions $\\boldsymbol { \\mathrm { { \\mathit { F } } = \\boldsymbol { \\Sigma } } }$ $[ \\mathbf { x } ] ) \\times p ( F | \\mathbf { A } )$ denotes the probability distribution of $F$ given atmospheric inversion constraints (denoted collectively as A), which can be expressed via Bayesian inference as ",
+        "bbox": [
+            72,
+            772,
+            490,
+            913
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/affef18fd6395cf41c63ced82c6d69e0b69f2c55aa30641e68f6c161efba3a97.jpg",
+        "text": "$$\n\\begin{array} { r } { p ( F | A ) \\propto p ( A | F ) p ( F ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            221,
+            929,
+            339,
+            942
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "As discussed previously, $p ( F )$ is prescribed as a Gaussian distribution with mean equal to the sum of total prior fluxes $( \\mathrm { B B } _ { 0 }$ , $\\mathrm { F F } _ { 0 } ,$ and $\\mathrm { B G } _ { 0 , \\dag }$ ) and a standard deviation of $\\pm 5 0 \\% ^ { 3 1 }$ . For each grid cell, we model the posterior probability distribution, $p ( F |$ A), based on the flux estimates of the three inversion results, $\\pmb { f } = [ f _ { 1 } , f _ { 2 } , f _ { 3 } ]$ , where ",
+        "bbox": [
+            507,
+            63,
+            926,
+            107
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/8a47f6b0be156b2e37d4ed9b5999c687a31903e0a5799d3756a3fe4b85813d3c.jpg",
+        "text": "$$\np ( F | A ) = \\overline { { \\mathbf { f } } } \\pm \\mathsf { S t D e v } ( \\mathbf { f } ) .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            655,
+            111,
+            778,
+            126
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Similarly, the probability distribution of $\\mathbf { x }$ given atmospheric data A, $p ( \\mathbf { x } | A )$ , can be expressed via Bayesian inference as ",
+        "bbox": [
+            507,
+            136,
+            927,
+            158
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/81ba4a5296af873f155b4a6693276f8e5879edce4dc80ed8c9868499e62dcf8a.jpg",
+        "text": "$$\n\\begin{array} { r } { p ( \\mathbf { x } | A ) \\propto p ( A | \\mathbf { x } ) p ( \\mathbf { x } ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            660,
+            163,
+            774,
+            177
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The analytical link between $p ( \\mathbf { x } | A )$ and known distributions $p ( F | A )$ , $p ( F )$ , and $p ( \\mathbf { x } )$ is given by joint probability distribution of $\\mathbf { x } , A , F , p ( \\mathbf { x } , A , F )$ , where—through the probability chain rule: ",
+        "bbox": [
+            507,
+            187,
+            926,
+            221
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/d9795dc90ed69cee4fd728d4d62e6cfba267497eec032bfc69d3e0f8bf4d3846.jpg",
+        "text": "$$\n\\begin{array} { r } { p ( \\mathbf { x } , A , F ) = p ( \\mathbf { x } | A , F ) p ( F | A ) p ( A ) , } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            628,
+            226,
+            805,
+            239
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/614f8ba3bf8f87e9bfbf7e5b1c44eb6ca7e5568d2c32285a9b61bf8d4e2830c6.jpg",
+        "text": "$$\n\\begin{array} { r } { p ( { \\bf x } , A , F ) = p ( F | A , { \\bf x } ) p ( A | { \\bf x } ) p ( { \\bf x } ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            630,
+            255,
+            805,
+            268
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Since $F$ and $\\mathbf { x }$ are conditionally independent of $A$ , the above can be summarized as ",
+        "bbox": [
+            507,
+            278,
+            927,
+            291
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/3bad4f7b83fd3a328db9c6560604bef11327c0cc6dd5d0a943d89f7368b1ad20.jpg",
+        "text": "$$\n\\begin{array} { r } { p ( \\mathbf { x } , A , F ) \\propto p ( \\mathbf { x } | F ) p ( F | A ) , } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            647,
+            295,
+            786,
+            309
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/ed80fd5a6dc3126581e0ff4a7fc0036ec04f7e36ebc7044349b7d2dd716ef6c2.jpg",
+        "text": "$$\n\\begin{array} { r } { p ( \\mathbf { x } , A , F ) \\propto p ( F | \\mathbf { x } ) p ( A | \\mathbf { x } ) p ( \\mathbf { x } ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            636,
+            324,
+            798,
+            338
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Since $\\begin{array} { r } { p ( \\mathbf x | F ) \\propto \\frac { p ( F | \\mathbf x ) p ( \\mathbf x ) } { p ( F ) } , } \\end{array}$ the above equations can be expressed as the following distribution: ",
+        "bbox": [
+            507,
+            347,
+            912,
+            370
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/3a4882ff49eea8e18f022d74e52a415a4055e9bc2ba961444e632bfaf006cdba.jpg",
+        "text": "$$\np ( \\mathbf { x } | A ) \\propto \\frac { p ( \\mathbf { x } ) p ( F | A ) } { p ( F ) } .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            658,
+            375,
+            774,
+            401
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The distribution of $p ( \\mathbf { x } )$ is defined as normal, uncorrelated distributions for BB, FF, and BG, with means $\\mathrm { F F } _ { 0 }$ , $\\mathrm { B B } _ { 0 }$ , and $\\mathrm { B G } _ { 0 }$ . The prior distribution of BB is constructed based on monthly total CO emissions from the GFEDv4s inventory29, and uncertainties in the CO emission factor for each fire type (i.e., savannas, agriculture, forests, and so on). Fire CO emission factors and associated uncertainties are based on those reported in the product GFED4s readme file (http://www.globalfiredata.org/data.html). For each $5 \\times 4 ^ { \\circ }$ area, we assumed that the CO emission factor errors from different fire types are uncorrelated. We note that prior fire CO emission uncertainties are possibly underestimated as the roles of fuel load and burned area uncertainties are not well known at $5 \\times 4 ^ { \\circ }$ scales, and hence not included in our burned area estimates. ",
+        "bbox": [
+            509,
+            421,
+            927,
+            542
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Gridded $5 \\times 4 ^ { \\circ }$ monthly uncertainty estimates are not readily available for FF and BG sources. We therefore prescribe the FF prior distribution with a mean FF (or $\\mathrm { F F } _ { 0 . }$ ) and corresponding uncertainty of $\\pm 5 0 \\%$ , which is consistent with largest country-level uncertainty reported by previous estimates49. Similarly, we prescribe a prior BG distribution of $\\mathrm { B G } _ { 0 } \\pm 5 0 \\%$ . The prior distribution for the CO emissions used in our analysis31, $p ( F ) _ { : }$ 0   is based on GFED version 3, whereas we use GFED4s for our results described here. Due to computational limitations, we are unable to repeat the full 15-year CO inversion used in our analysis with GFED4s. However, the role of the grid cell level GFED version 3 prior is mitigated because the posterior flux distribution $p ( F | A )$ is (a) normalized by the GFED3-based prior CO emission distribution $p ( F )$ , and re-weighed by the GFEDv4s-based prior $p ( \\mathbf { x } )$ using Eq. (8). In addition, the difference between the posterior CO emissions from the prior are typically comparable or larger to the GFEDv3-GFEDv4s difference. We would therefore expect the re-partitioning to provide a similar estimate for the mean CO emissions (within the calculated uncertainties) for the reported time period and have effectively no impact on our conclusions about the trend estimate. ",
+        "bbox": [
+            509,
+            542,
+            927,
+            714
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "We use an adaptive Metropolis–Hastings Markov Chain Monte Carlo (MHMCMC) approach to sample $p ( \\mathbf { x } | A ) ^ { 5 0 }$ . Finally, we model the spatial and temporal error co-variances of BB based on total emission estimates f to match the mean and standard deviations of retrieved BB emissions. For each monthly $5 \\times 4 ^ { \\circ }$ retrieval of BB, we create three realizations of BB, $\\mathbf { B } = \\left[ B _ { 1 } , B _ { 2 } , B _ { 3 } \\right]$ based on the three CO emissions estimates. $\\mathbf { B }$ is derived based on the three total inverse CO emissions estimates $\\mathbf { f } = [ f _ { 1 } , f _ { 2 } , f _ { 3 } ]$ as follows: ",
+        "bbox": [
+            509,
+            716,
+            927,
+            791
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "img_path": "images/5e68b043972ce392eb4d79c173cbd2c5ef089e970314ab678b15cb36c8d979a9.jpg",
+        "text": "$$\n\\mathbf { B } = \\left( \\mathbf { f } - { \\overline { { \\mathbf { f } } } } \\right) { \\frac { \\mathrm { S t D e v } ( \\mathbf { b } ) } { \\mathrm { S t D e v } ( \\mathbf { f } ) } } + { \\overline { { \\mathbf { b } } } } ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            648,
+            795,
+            786,
+            820
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "where $\\bar { \\mathbf { b } }$ and StDev (b) represents the retrieved mean and standard deviation of BB within each monthly $5 \\times 4 ^ { \\circ }$ grid cell. In this manner, we simultaneously conserve grid scale BB variances while representing a first-order approximation of the BB spatial and temporal error covariance structure. ",
+        "bbox": [
+            507,
+            831,
+            926,
+            874
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Relating estimated CO fire emissions to $\\mathsf { c h } _ { 4 }$ fire emissions. In order to quantify fire $\\mathrm { C H } _ { 4 }$ emissions, gridded CO emissions are partitioned into fire types, fuel load, and burned area extent as reported by $\\mathrm { G F E D 4 s ^ { 2 9 } }$ fire emission estimates as discussed in the last section. $\\mathrm { C H } _ { 4 }$ emissions and their associated uncertainties (pink-shaded area in Fig. 1) are then derived by multiplying individual fire sector ",
+        "bbox": [
+            507,
+            890,
+            927,
+            945
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            72,
+            19,
+            166,
+            35
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            341,
+            959,
+            926,
+            970
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            537,
+            24,
+            927,
+            35
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "8 ",
+        "bbox": [
+            70,
+            960,
+            80,
+            969
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "CO emissions by the mean and standard deviations of sector-specific $\\mathrm { C H _ { 4 } / C O }$ emission ratios based on GFEDv4s recommended $\\mathrm { C H } _ { 4 }$ and CO emission factors and associated uncertainties. The GFED4s $\\mathrm { C H _ { 4 } / C O }$ emission factor is assumed to be constant but with their reported uncertainties varying between 34 and $6 9 \\%$ . As discussed in the main text, it is possible that this emission factor could change with different fire phases and combustion efficiency34–36. Since these assumptions are based on sparse in situ measurements, we further test the GFED4s $\\mathrm { C H _ { 4 } / C O }$ emission factors, and the corresponding $3 4 \\mathrm { - } 6 9 \\%$ uncertainty range, with satellite measurements of $\\mathrm { C H } _ { 4 }$ and CO in the free troposphere by the Aura tropospheric emission spectrometer (TES) over tropical fires51 as shown in Fig. 6 and Supplementary Figs. 1, 2, 3, 4. Only TES data that are associated with biomass burning in which CO in the free troposphere is larger than 80 p.p.b. are used because these data are most likely affected by fire emissions25,28,51. Transport effects in these comparisons are also mitigated by comparing observed $\\mathrm { C H _ { 4 } / C O }$ ratios from the satellite data to those corresponding to air parcels modeled by GEOS-Chem after the model atmospheric concentrations have been convolved with the Aura TES $\\mathrm { C H } _ { 4 }$ and CO averaging kernels and a priori constraints in order to account for the vertical resolution and inversion regularization of the Aura TES $\\mathrm { C H } _ { 4 }$ and CO estimates25,28,51. We find that modeled and TES-observed $\\mathrm { C H _ { 4 } / C O }$ 4   ratios are consistent (shaded red area overlaps the one-to-one dashed line in Fig. 6) if these ratios are within $\\pm 3 4 \\%$ of the GFED4s values (Supplementary Figs. 1 and 2), whereas the model-observation agreement are inconsistent for a $^ { - 6 9 }$ and $+ 6 9 \\%$ change in $\\mathrm { C H _ { 4 } / C O }$ ratios (Supplementary Figs. 3 and 4). Based on these comparisons, we conservatively assume the GFED4 $\\mathrm { C H _ { 4 } / C O }$ ratios and their reported uncertainties ranging from 34 to $6 9 \\%$ for our analysis. ",
+        "bbox": [
+            72,
+            62,
+            489,
+            335
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Testing a decrease in methane emissions from fires. The global $\\mathrm { C H _ { 4 } / C O }$ ratio uncertainty (pink-shaded area in Fig. 1) is derived as a function of fire sector $\\mathrm { C H _ { 4 } }$ contributions and their associated $\\mathrm { { C H _ { 4 } } / \\mathrm { { C O } } }$ uncertainties. $\\mathrm { C H } _ { 4 }$ emission uncertainty stemming from CO emission uncertainty (Fig. 1, blue bars), is based on the three CO BB realizations discussed previously. We find the fire $\\mathrm { C H _ { 4 } / C O }$ emission factor uncertainties are larger than CO-based emission uncertainties and comparable to the resulting trend in $\\mathrm { C H } _ { 4 }$ emissions (Fig. 1). Assuming no inter-annual $\\mathrm { C H _ { 4 } / C O }$ emission factor variability for each sector throughout 2001–2014, we find a significant decreasing trend in methane emissions (Fig. 2). To test the sensitivity of our result to this assumption about yearly variations in the global mean $\\mathrm { C H _ { 4 } / C O }$ emission factor variability, we statistically evaluate the decreasing BB $\\mathrm { C H } _ { 4 }$ emission hypothesis under increasing levels of random $\\mathrm { C H _ { 4 } / C O }$ IAV within each fire sector. The statistical evaluation is performed by randomly sampling one of the three CO BB emission realizations, their time-invariant $\\mathrm { C H _ { 4 } / C O }$ values for each sector based on sector-specific $\\mathrm { C H _ { 4 } / C O }$ uncertainty estimates, and their annually varying within-sector $\\mathrm { C H _ { 4 } / C O }$ anomalies. We find that the probability of a $2 0 0 1 { - } 2 0 1 4 \\mathrm { C H } _ { 4 }$ emissions decrease is ${ > } 9 5 \\%$ assuming that sector-specific $\\mathrm { C H _ { 4 } / C O }$ IAV is ${ \\leq } 4 0 \\%$ of the derived $\\mathrm { C H _ { 4 } / C O }$ uncertainty. To our knowledge, $\\mathrm { C H _ { 4 } / C O }$ IAV remains poorly characterized, and we cannot reject a $\\mathrm { C H _ { 4 } / C O }$ IAV of ${ > } 4 0 \\%$ ; however, the corresponding global $\\mathrm { C H _ { 4 } / C O }$ variability $( \\sim 2 1 \\% )$ is roughly a factor of 3 greater than the prior and posterior sector-based global $\\mathrm { C H _ { 4 } / C O }$ IAV. Moreover, a ${ < } 9 5 \\%$ probability of an emission decrease is only possible when the within-sector $\\mathrm { C H } _ { 4 } /$ CO IAV is comparable to the sector $\\mathrm { C H _ { 4 } / C O }$ uncertainty (gray-shaded area in Fig. 2). This analysis demonstrates an increasing $2 0 0 1 { - } 2 0 1 4 \\ \\mathrm { C H } _ { 4 }$ fire trend is only possible if the global fire $\\mathrm { C H } _ { 4 }$ emission variability is largely dominated by random global-scale $\\mathrm { C H _ { 4 } / C O }$ IAV (i.e., unaccounted by sector-based contributions to global $\\mathrm { C H _ { 4 } / C O }$ IAV), and globally coherent inter-annual within-sector $\\mathrm { C H _ { 4 } / C O }$ variability is comparable to sector $\\mathrm { C H _ { 4 } / C O }$ uncertainty; we note that both statements are theoretically possible but exceedingly unlikely, as these levels of $\\mathrm { C H _ { 4 } / C O }$ IAV would be statistically represented with substantially larger uncertainties in sector-specific $\\mathrm { C H _ { 4 } / C O }$ estimates. ",
+        "bbox": [
+            72,
+            350,
+            490,
+            685
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Impact of decreasing biomass burning for global $\\mathbf { C H _ { 4 } }$ budgets. The impact of the observed drop in fire emissions on global $\\mathrm { C H } _ { 4 }$ is studied using a single box model5,38 , which simulates the $8 ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ values and $\\mathrm { C H } _ { 4 }$ mixing ratios, assuming a well-mixed atmosphere. The model uses the following scalar mass balance equations: ",
+        "bbox": [
+            70,
+            702,
+            492,
+            755
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "img_path": "images/13937c3cafe840adc7cc2fed51020f18fa2dc3db934c5b43d783b9412af4b5b6.jpg",
+        "text": "$$\nc ( t + \\Delta t ) = c ( t ) + [ [ e _ { \\mathrm { F F } } + e _ { \\mathrm { B G } } + e _ { \\mathrm { B B } } ] / m - k \\times c ( t ) ] \\times \\Delta t ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            136,
+            762,
+            425,
+            776
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "img_path": "images/e7760ae36eed0ecb4fa2103d1b7c209640d11199bf76209e13c9a9bab4fdcffe.jpg",
+        "text": "$$\n^ { 1 3 } c ( t + \\Delta t ) = { } ^ { 1 3 } c ( t ) + \\big [ \\big [ q _ { \\mathrm { F F } } \\times e _ { \\mathrm { F F } } + q _ { \\mathrm { B G } } \\times e _ { \\mathrm { B G } } + q _ { \\mathrm { B B } } \\times e _ { \\mathrm { B B } } \\big ] / m - \\alpha \\times k \\times { } ^ { 1 3 } c ( t ) \\big ] \\times \\Delta t ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            73,
+            794,
+            495,
+            809
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "img_path": "images/81c52874daf3989d18b67a9a740666f2b978e008339126ad9fc2834936ccbc4c.jpg",
+        "text": "$$\n\\delta ^ { 1 3 } ( t ) = \\left( \\frac { \\frac { ^ { 1 3 } c ( t ) } { c ( t ) - ^ { 1 3 } c ( t ) } } { r _ { \\mathrm { s t d } } } - 1 \\right) \\times 1 0 0 0 \\% ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            189,
+            841,
+            371,
+            879
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "where $c ( t )$ and $^ { 1 3 } c ( t )$ are global mean mixing ratios of $\\mathrm { C H } _ { 4 }$ and $^ { 1 3 } \\mathrm { C H } _ { 4 }$ at time $t ,$ respectively. $e _ { \\mathrm { F F } } , e _ { \\mathrm { B G } }$ , and $e _ { \\mathrm { B B } }$ are methane emissions from FF (thermogenic), BG (microbial), and biomass burning (pyrogenic: biomass and biofuel burning) sources, respectively. $m$ is a factor of $2 . 7 6 7 \\mathrm { T g } \\mathrm { C H _ { 4 } }$ per p.p.b. used to convert emissions into atmospheric mole fractions. $\\begin{array} { r } { k = \\frac { 1 } { \\tau } } \\end{array}$ is the first-order removal rate coefficient, where $\\tau$ $( = 9 . 1$ years) is the atmospheric lifetime and $\\alpha = \\varepsilon + 1$ , where $\\varepsilon ( =$ $- 6 . 8 \\\\\\\\\\\\text{ textperthousand}$ is sink-weighted isotopic fractionation of the $\\mathrm { C H } _ { 4 }$ in the atmosphere5. $q _ { \\mathrm { F F } } ,$ $q _ { \\mathrm { B G } } ,$ and $q _ { \\mathrm { B B } }$ are the $^ { 1 3 } \\mathrm { C H } _ { 4 }$ fractions of the corresponding emissions. The model is numerically discretized to run at daily resolution $\\Delta t = 1$ d). $\\delta ^ { 1 3 } ( t )$ is the global mean $8 ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ value at time t. ",
+        "bbox": [
+            70,
+            888,
+            487,
+            946
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            63,
+            926,
+            117
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We assume that $\\mathrm { C H } _ { 4 }$ mixing ratios are in a steady state between 2000–2006 and invert global emissions to optimize the agreement between the model and the mole fraction and isotope measurements from 2007 onwards. Although we report the decrease in BB emissions for the time periods between 2001–2007 and 2008–2014, we choose the year 2007 as our start year for the flux inversion because it provides the most realistic fit in our highly simplified model setup. The isotopic source signatures5,15 used in the model are listed in Table 1. We perform 1000 Monte Carlo simulations for each scenario to account for the uncertainties in the isotopic source signatures and the associated emission adjustments. All the associated uncertainties are assumed to be normally distributed. For each run, a randomized isotopic source signature is selected based on the isotopic source signature uncertainty distribution. For all runs, the pyrogenic contribution (biomass burning $^ +$ biofuel burning) to the total annual methane source is fixed to $3 5 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year20,21 for the period with no biomass burning perturbation (i.e., 2001–2007). The FF and BG contributions are adjusted to match the mean values of $\\mathrm { C H } _ { 4 }$ and $8 ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ between 2000–2007. Each of the different scenarios shown in Fig. 4 is constrained to fit the observed growth from beginning of 2007 until the end of 2014. The biomass burning perturbation starts in 2008, corresponding to the transitioning between periods of higher and lower biomass burning in Fig. 1. ",
+        "bbox": [
+            509,
+            118,
+            927,
+            323
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Biogenic and FF emission perturbations are introduced in 2007 to fit the observed $\\mathrm { C H } _ { 4 }$ mole fraction increase. To determine these numbers, we select NOAA-ESRL sites with both $\\mathrm { C H } _ { 4 }$ mole fraction and isotope measurements. Only sites with a minimum of 2 years of data between 2001–007 were selected, so that the corresponding steady state was well defined. From these data, a global mean time series is derived for $\\mathrm { C H } _ { 4 }$ and $8 ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ (Supplementary Fig. $6 ) ^ { 5 \\hat { 2 } }$ . Thereafter, the mix of sources in the box model is adjusted to find the source composition compatible with the global mean steady state. Then, the box model is run with perturbations within a range of realistic emission increases $_ { + 1 0 }$ to $4 0 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year) and isotopic signatures (–45 to $- 7 0 \\text{‰}$ ). We select the emission strength and isotopic signatures with the minimum root mean square deviation (RMSD) between model and measurements. ",
+        "bbox": [
+            509,
+            324,
+            927,
+            453
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Choice of 2007 as start of the emission perturbation. Biogenic and FF emission perturbations are introduced in 2007 to fit the observed $\\mathrm { C H } _ { 4 }$ mole fraction increase. This choice was made after comparing the RMSD between the measurements and the best fit case when starting the optimization in different years (Supplementary Table 1). 2007 was selected as it resulted in the lowest RMSD. Supplementary Table 1 shows the goodness of fit as measured by the RMSD between $\\mathrm { C H } _ { 4 }$ mole fractions measurements and optimized box-model simulations for starting years varying between 2005 and 2008. The corresponding strength of the optimized methane emission perturbation is also given. ",
+        "bbox": [
+            509,
+            473,
+            927,
+            571
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Calculation of global average $\\mathbf { c h } _ { 4 }$ and $\\delta ^ { 1 3 } \\mathsf { C - C H } _ { 4 }$ . Here we describe the method used to calculate a global representative time series shown in Fig. 3 of the main text. We use only stations with a sufficient number of measurements for both $\\mathrm { C H } _ { 4 }$ and ${ 8 ^ { 1 3 } \\mathrm { C - C H _ { 4 } , } }$ so that our model is fit to measurements representing the same air masses. In the first step, zonal averages are taken of measurements in four latitudinal bands: NET (Northern Extra Tropics: $3 0 ^ { \\circ } \\mathrm { N } { - } 9 0 ^ { \\circ } \\mathrm { N }$ ), NTRO (Northern Tropics: $0 ^ { \\circ } - 3 0 ^ { \\circ } \\mathrm { N } ,$ , STRO (Southern Tropics: $3 0 ^ { \\circ } \\mathrm { S - } 0 ^ { \\circ } ,$ ), and SET (Southern Extra Tropics: $9 0 ^ { \\circ } \\mathrm { S } { - } 3 0 ^ { \\circ } \\mathrm { S }$ ). The time series for each station is shown in Supplementary Fig. 5 and for each zonal average in Supplementary Fig. 6. We derive global representative measurements by averaging the time series for each zone. The zones are weighted equally in the averaging as they represent the same area and hence approximately the same air mass. This method avoids the problem that a disproportionally large number of stations in one particularly zone biases the global mean. Note that in the zonal to global averaging, we use months when zonal means are available for each zone. For example, we skipped a few months of 2001, as isotopic values were unavailable for NET. This approach minimizes the influence of a varying representation of zones due to limitations in measurement availability. Using this method, we find an optimum fit to the $\\mathrm { C H } _ { 4 }$ and $\\ S ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ data when adding $2 5 . 7 \\pm 1 . 4 \\mathrm { T g }$ $\\mathrm { C H } _ { 4 }$ per year with an isotopic signature of $- 5 6 . 1 \\pm 1 . 1$ . A recent study5 performed a similar analysis but obtained a slightly different average additional source strength of $1 9 . 7 \\mathrm { T g } \\mathrm { C H } _ { 4 }$ per year and a range of $- 5 6$ to $- 6 1 \\text{‰}$ for the isotopic composition. The disagreement between their values and our best fit scenario can be explained because they fit their isotope model for the 2006–2014 time period, whereas we start at 2007 (see previous section) and because they use a different set of NOAA sites to calculate the global mean $\\mathrm { C H } _ { 4 }$ and $\\ S ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ time series. ",
+        "bbox": [
+            509,
+            588,
+            927,
+            870
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Data availability. All data used here are publicly available through the Terra MOPITT website, https://www2.acom.ucar.edu/mopitt and the NASA AVDC repository, https://eosweb.larc.nasa.gov/project/tes/l2_lite_table. Atmospheric $\\mathrm { C H } _ { 4 }$ mole fraction and $8 ^ { 1 3 } \\mathrm { C - C H _ { 4 } }$ data are publically available through NOAA GMD website, www.esrl.noaa.gov/gmd/. Isotopic composition of atmospheric methane data are taken from: White, J.W.C., Vaughn, B. H. and Michel, S. E. (2017), University of Colorado, Institute of Arctic and Alpine Research (INSTAAR), Stable Isotopic Composition of Atmospheric Methane ${ \\bar { ( } } ^ { 1 3 } \\mathrm { C ) }$ from the NOAA ESRL Carbon Cycle Cooperative Global Air Sampling Network, 1998-2015, Version: 2017-01-20,Path: ftp://aftp.cmdl.noaa.gov/data/trace_gases/ch4c13/flask/. Surface $\\mathrm { C H } _ { 4 }$ data are taken from:Dlugokencky, E.J. et al. (2017), Atmospheric Methane Dry Air Mole Fractions from the NOAA ESRL Carbon Cycle Cooperative Global Air Sampling Network, 1983-2016, Version: 2017-07-28, Path: ftp://aftp.cmdl.noaa. gov/data/trace_gases/ch4/flask/surface/. ",
+        "bbox": [
+            507,
+            890,
+            926,
+            945
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            831,
+            19,
+            926,
+            35
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            70,
+            959,
+            653,
+            970
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            70,
+            24,
+            460,
+            35
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "9 ",
+        "bbox": [
+            919,
+            960,
+            927,
+            968
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            72,
+            63,
+            490,
+            161
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Received: 30 March 2017 Accepted: 15 November 2017 Published online:20 December 2017 ",
+        "text_level": 1,
+        "bbox": [
+            72,
+            177,
+            413,
+            204
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "References ",
+        "text_level": 1,
+        "bbox": [
+            70,
+            248,
+            147,
+            260
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "1. Dlugokencky, E. J. et al. Observational constraints on recent increases in the atmospheric $\\mathrm { C H } _ { 4 }$ burden. Geophys. Res. Lett. 36, L18803 (2009).   \n2. Shindell, D. et al. Simultaneously mitigating near-term climate change and improving human health and food security. Science 335, 183–189 (2012).   \n3. Aydin, M. et al. Recent decreases in fossil-fuel emissions of ethane and methane derived from firn air. Nature 476, 198–201 (2011).   \n4. Miller, S. et al. Anthropogenic emissions of methane in the United States. Proc. Natl Acad. Sci. USA 110, 20018–20022 (2013).   \n5. Schaefer, H. et al. A 21st century shift from fossil-fuel to biogenic methane emissions indicated by $^ { 1 3 } \\mathrm { C H } _ { 4 }$ . Science 352, 80–84 (2016).   \n6. Franco, B. et al. Evaluating ethane and methane emissions associated with the development of oil and natural gas extraction in North America. Environ. Res. Lett. 11, 1–11 (2016).   \n7. Hausmann, P., Sussmann, R. & Smale, D. Contribution of oil and natural gas production to renewed increase in atmospheric methane (2007–2014): top–down estimate from ethane and methane column observations. Atmos. Chem. Phys. 16, 3227–3244 (2016).   \n8. Helmig, D. et al. Reversal of global atmospheric ethane and propane trends largely due to US oil and natural gas production. Nat. Geosci. 9, 490–495 (2016).   \n9. Bousquet, P. et al. Source attribution of the changes in atmospheric methane for 2006–2008. Atmos. Chem. Phys. 11, 3689–3700 (2011).   \n10. Bloom, A. A., Palmer, P. I., Fraser, A., Reay, D. S. & Frankenberg, C. Large-scale controls of methanogenesis inferred from methane and gravity spaceborne data. Science 327, 322–325 (2010).   \n11. Bloom, A. A., Palmer, P. I., Fraser, A. & Reay, D. S. Seasonal variability of tropical wetland $\\mathrm { C H } _ { 4 }$ emissions: the role of the methanogen-available carbon pool. Biogeosciences 9, 2821–2830 (2012).   \n12. Koven, C. et al. Permafrost carbon-climate feedbacks accelerate global warming. Proc. Natl Acad. Sci. USA 108, 14769–14774 (2011).   \n13. Cox, P. M. et al. Sensitivity of tropical carbon to climate change constrained by carbon dioxide variability. Nature 494, 341–344 (2013).   \n14. Nisbet, E. G. et al. Rising atmospheric methane: 2007–2014 growth and isotopic shift. Global Biogeochem. Cycles 30, 1356–1370 (2016).   \n15. Schwietzke, S. et al. Upward revision of global fossil fuel methane emissions based on isotope database. Nature 538, 88–91 (2016).   \n16. Turner, A. J. et al. A large increase in US methane emissions over the past decade inferred from satellite data and surface observations. Geophys. Res. Lett. 43, 2218–2224 (2016).   \n17. Bruhwiler, L. M. et al. US $\\mathrm { C H } _ { 4 }$ emissions from oil and gas production: have recent large increases been detected? J. Geophys. Res. Atmos. 122, 4070–4083 (2017).   \n18. Turner, A. J., Frankenberg, C., Wennberg, P. & Jacob, D. Ambiguity in the causes for decadal trends in atmospheric methane and hydroxyl. Proc. Natl Acad. Sci. USA 114, 5367–5372 (2017).   \n19. Rigby, M. et al. Role of atmospheric oxidation in recent methane growth. Proc. Natl Acad. Sci. USA 114, 5373–5377 (2017).   \n20. Kirschke, S. et al. Three decades of global methane sources and sinks. Nat. Geosci. 6, 813–8213 (2013).   \n21. Saunois, M. et al. The global methane budget 2000–2012. Earth Syst. Sci. Data Discuss. 8, 697–751 (2016).   \n22. van Leeuwen, T. T. & van der Werf, G. R. Spatial and temporal variability in the ratio of trace gases emitted from biomass burning. Atmos. Chem. Phys. 11, 3611–3629 (2011).   \n23. Van Der Werf, G. R. et al. Global fire emissions and the contribution of deforestation, savanna, forest, agricultural, and peat fires (1997–2009). Atmos. Chem. Phys. 10, 11707–11735 (2010).   \n24. Randerson, J. T., Chen, Y., van der Werf, G. R., Rogers, B. M. & Morton, D. C. Global burned area and biomass burning emissions from small fires. J. Geophys. Res. 10.1029/2012JG002128 (2012).   \n25. Bloom, A. A. et al. Remote-sensing constraints on South America fire traits by Bayesian fusion of atmospheric and surface data. Geophys. Res. Lett. 41, 1329–1335 (2015).   \n26. Field, R. D. et al. Indonesian fire activity and smoke pollution in 2015 show persistent nonlinear sensitivity to El Niño-induced drought. Proc. Natl Acad. Sci. USA 113, 9204–9209 (2016).   \n27. Bousquet, P. et al. Contribution of anthropogenic and natural sources to atmospheric methane variability. Nature 443, 439–443 (2006).   \n28. Worden, J. et al. El Niño, the 2006 indonesian peat fires, and the distribution of atmospheric methane. Geophys. Res. Lett. 40, 1 (2013).   \n29. van der Werf, G. R. et al. Global fire emissions estimates during 1997–2016. Earth Syst. Sci. Data 9, 697-720 (2017).   \n30. Andela, N. et al. A human-driven decline in global burned area. Science 356, 1356–1362 (2017).   \n31. Jiang, Z. et al. A 15-year record of CO emissions constrained by MOPITT CO observations. Atmos. Chem. Phys. 17, 4565–4583 (2017).   \n32. Yin, Y. et al. Decadal trends in global CO emissions as seen by MOPITT. Atmos. Chem. Phys. 15, 13433–13451 (2015).   \n33. Giglio, L., Randerson, J. T. & van der Werf, G. R. Analysis of daily, monthly, and annual burned area using the fourth-generation global fire emissions database (GFED4). J. Geophys. Res. Biogeosci. 118, 317–328 (2013).   \n34. Wooster, M. J. et al. Field determination of biomass burning emission ratios and factors via open-path FTIR spectroscopy and fire radiative power assessment: headfire, backfire and residual smouldering combustion in African savannahs. Atmos. Chem. Phys. 11, 11591–11615 (2011).   \n35. Smith, T. E. L. et al. New emission factors for Australian vegetation fires measured using open-path Fourier transform infrared spectroscopy—Part 2: Australian tropical savanna fires. Atmos. Chem. Phys. 14, 11335–11352 (2014).   \n36. Korontzi, S. et al. Seasonal variation and ecosystem dependence of emission factors for selected trace gases and PM 2.5 for southern African savanna fires. J. Geophys. Res. 10.1029/2003JD003730 (2003).   \n37. Veefkind, J. P. et al. A GMES mission for global observations of the atmospheric composition for climate, air quality and ozone layer applications. Remote Sens. Environ. 120, 70–83 (2012).   \n38. Sapart, C. J. et al. Natural and anthropogenic variations in methane sources during the past two millennia. Nature 490, 85–88 (2012).   \n39. European Commission Joint Research Centre & Netherlands Environmental Assessment Agency. Emission Database for Global Atmospheric Research (EDGAR), V.4.2 http://edgar.jrc.ec.europa.eu (2011).   \n40. Deeter, M. N. et al. The MOPITT Version 6 product: algorithm enhancements and validation. Atmos. Meas. Tech. 7, 3623–3632 (2014).   \n41. Bloom, A. A. et al. The decadal state of the terrestrial carbon cycle: global retrievals of terrestrial carbon allocation, pools, and residence times. Proc. Natl Acad. Sci. USA 113, 1285–1290 (2016).   \n42. Jiang, Z. et al. Regional data assimilation of multi-spectral MOPITT observations of CO over North America. Atmos. Chem. Phys. 15, 6801–6814 (2015).   \n43. Stroud, C. A. et al. Impact of model grid spacing on regional- and urban- scale air quality predictions of organic aerosol. Atmos. Chem. Phys. 11, 3107–3118 (2011).   \n44. Jones, D. B. A. et al. Potential of observations from the tropospheric emission spectrometer to constrain continental sources of carbon monoxide. J. Geophys. Res. 108, 4789 (2003).   \n45. Kopacz, M. et al. Global estimates of CO sources with high resolution by adjoint inversion of multiple satellite datasets (MOPITT, AIRS, SCIAMACHY, TES). Atmos. Chem. Phys. 10, 855–876 (2010).   \n46. Jiang, Z. et al. Impact of model errors in convective transport on CO source estimates inferred from MOPITT CO retrievals. J. Geophys. Res. Atmos. 118, 2073–2083 (2013).   \n47. Worden, J. et al. Observed vertical distribution of tropospheric ozone during the Asian summertime monsoon. J. Geophys. Res. 114, D13304 (2009).   \n48. Park, M., Randel, W. J., Emmons, L. K. & Livesey, N. J. Transport pathways of carbon monoxide in the Asian summer monsoon diagnosed from Model of Ozone and Related Tracers (MOZART). J. Geophys. Res. 114, D08303 (2009).   \n49. Granier, C. et al. Evolution of anthropogenic and biomass burning emissions of air pollutants at global and regional scales during the 1980–2010 period. Clim. Change 109, 1–2 (2011).   \n50. Bloom, A. A. & Williams, M. Constraining ecosystem carbon dynamics in a data-limited world: integrating ecological “common sense” in a model-data fusion framework. Biogeosciences 12, 1299–1315 (2015).   \n51. Worden, J. et al. $\\mathrm { C H _ { 4 } }$ and CO distributions over tropical fires during October 2006 observed by the Aura TES satellite instrument and modeled by GEOS-Chem. Atmos. Chem. Phys. 13, 3679–3692 (2013).   \n52 Miller, J. B. et al. Development of analytical methods and measurements of $^ { 1 3 } \\mathrm { C } /$ $^ { 1 2 } \\mathrm { C }$ in atmospheric $\\mathrm { C H } _ { 4 }$ from the NOAA Climate Monitoring and Diagnostics Laboratory Global Air Sampling Network. J. Geophys. Res. 10.1029/ 2001JD000630 (2002). ",
+        "bbox": [
+            70,
+            259,
+            490,
+            929
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            507,
+            60,
+            929,
+            923
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            72,
+            19,
+            166,
+            35
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            537,
+            24,
+            927,
+            35
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            341,
+            959,
+            926,
+            970
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            72,
+            959,
+            87,
+            969
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Acknowledgements ",
+        "text_level": 1,
+        "bbox": [
+            72,
+            62,
+            206,
+            75
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "This research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration. The work at Utrecht University is related to the program of the Netherlands Earth System Science Centre (NESSC), financially supported by the Ministry of Education, Culture and Science (OCW). The National Center for Atmospheric Research (NCAR) is sponsored by the National Science Foundation. The MOPITT and TES projects are supported by the National Aeronautics and Space Administration (NASA) Earth Observing System (EOS) Program. The MOPITT team also acknowledges support from the Canadian Space Agency (CSA), the Natural Sciences and Engineering Research Council (NSERC) and Environment Canada, along with the contributions of COMDEV and ABB BOMEM. Methane surface data were downloaded from the World Data Centre for Greenhouse Gases. We are very grateful to all the institutions and individuals who provide these surface data for researchers to use as these efforts are critical for carbon cycle science research; the following is hopefully an inclusive list of institutions and individuals, based on email response, who provide data that we use in this research: (1) NOAA, Boulder CO/Ed Dlugokencky, Laboratory for Earth Observations and Analyses, (2) ENEA, Palermo, Italy/Salvatore Piacentino, the CSIRO Flask Network/Paul Krummel, (3) Atmospheric Environment Division, Global Environment and Marine Department Japan Meteorological Agency/Atsushi Takizawa, and (4) Canadian Greenhouse Gas Measurement Program, Environment Canada/Doug Worthy. We would like to thank Dr. David Schimel of JPL for his helpful comments and feedback. We would like to thank the Stable Isotope Lab, CU-INSTAAR: James White, Bruce Vaughn, and Sylvia Michel for use of their data in this analysis. ",
+        "bbox": [
+            72,
+            76,
+            490,
+            331
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Author contributions ",
+        "text_level": 1,
+        "bbox": [
+            72,
+            354,
+            216,
+            367
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "J.R.W. led the study. A.A.B. characterized how uncertainties in the total CO emissions and $\\mathrm { C H _ { 4 } / C O }$ ratios affected conclusions about the $\\mathrm { C H } _ { 4 }$ emission trends. Z.J., T.W.W. and H.M.W. provided CO emissions and supporting analysis using MOPITT data. S.P., S.H., and T.R. led the isotopic analysis. ",
+        "bbox": [
+            70,
+            368,
+            489,
+            411
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Additional information ",
+        "text_level": 1,
+        "bbox": [
+            509,
+            61,
+            667,
+            74
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Supplementary Information accompanies this paper at https://doi.org/10.1038/s41467- 017-02246-0. ",
+        "bbox": [
+            507,
+            75,
+            924,
+            97
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Competing interests: This research was funded through a NASA Carbon Cycle Science ROSES grant NNH13ZDA001N. The remaining authors declare no competing financial interests. ",
+        "bbox": [
+            507,
+            108,
+            926,
+            141
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Reprints and permission information is available online at http://npg.nature.com/ reprintsandpermissions/ ",
+        "bbox": [
+            507,
+            153,
+            905,
+            175
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Publisher's note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations. ",
+        "bbox": [
+            507,
+            186,
+            926,
+            208
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/ licenses/by/4.0/. ",
+        "bbox": [
+            584,
+            242,
+            926,
+            264
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            265,
+            927,
+            368
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "ARTICLE ",
+        "bbox": [
+            831,
+            19,
+            926,
+            35
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | DOI: 10.1038/s41467-017-02246-0 ",
+        "bbox": [
+            70,
+            24,
+            460,
+            35
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "NATURE COMMUNICATIONS | 8: 2227 | DOI: 10.1038/s41467-017-02246-0 | www.nature.com/naturecommunications ",
+        "bbox": [
+            70,
+            959,
+            653,
+            970
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            509,
+            241,
+            579,
+            260
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "11 ",
+        "bbox": [
+            912,
+            960,
+            926,
+            969
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "$^ ©$ The Author(s) 2017 ",
+        "bbox": [
+            509,
+            387,
+            616,
+            398
+        ],
+        "page_idx": 10
+    }
+]

@@ -1,0 +1,2350 @@
+[
+    {
+        "type": "text",
+        "text": "Supplementary Information ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            85,
+            322,
+            99
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. Prior Emissions ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            117,
+            252,
+            131
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The a priori methane (CH₄) emissions for the inversion model were derived from six data inventories and grouped into five main source categories: wetlands, agriculture, pyrogenic (biomass burning), fossil fuel use, and waste management (Fig. S1; Table S1). Wetland emissions are estimated using the Lund–Potsdam–Jena – Wald, Schnee, Landschaft v2.0 (LPJ-wsl; Zhang et al., 2017) model, which incorporates precipitation variability via the Trends in Precipitation and its Predictability (TIPP) framework. This category includes emissions from swamps and freshwater systems, as well as other natural microbial sources (e.g., oceans and wild animals), which contribute on average $20 \\%$ and $1 7 \\%$ of natural emissions in the Northern and Southern Hemispheres, respectively (Sitch et al., 2003; Hodson et al., 2011). Agricultural emissions are derived from EDGAR v7.0 (Crippa et al., 2022), primarily from enteric fermentation ( $6 9 \\%$ and $89 \\%$ in the Northern/Southern Hemispheres, respectively) and agricultural soils, including rice cultivation. Pyrogenic emissions are informed by EDGAR, the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP/MACCity; Voulgarakis et al., 2013), and the Global Fire Assimilation System (GFAS) for wildfire observations. Natural fires account for $44 \\%$ to $8 1 \\%$ of pyrogenic emissions in the Northern/Southern Hemispheres, with the remainder attributed to anthropogenic burning of waste, transportation fuels, industrial processes, and energy use in buildings. Fossil fuel emissions are categorised according to EDGAR and are primarily driven by fugitive releases during extraction $9 6 \\%$ and $8 5 \\%$ in the Northern/Southern Hemispheres, respectively), with the remaining contributions coming from refining, power generation, and the chemical industries. Waste emissions include wastewater treatment $( 4 4 \\% / 5 6 \\% )$ , landfills $( 4 0 \\% / 3 6 \\%$ ), and manure management $( 1 6 \\% / 8 \\% )$ ). ",
+        "bbox": [
+            115,
+            148,
+            884,
+            635
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "A Python script compiles the CH₄ emissions from different sources into a hemispheric time series dataset for use in a two-box atmospheric model. Emissions are grouped based on established sector definitions (e.g., EDGAR anthropogenic sectors, GFAS and ACCMIP/MACCity for biomass burning, LPJ-wsl for wetlands, and TIPP for additional natural emissions such as oceans, termites, and wild animals). Gridded emission fields are summed across all longitudes and separated into Northern and Southern Hemisphere totals ( $0 { - } 9 0 ^ { \\circ } \\mathrm { N }$ and $0 \\mathrm { { } ^ { \\circ } - }$ $9 0 ^ { \\circ } \\mathrm { S }$ ). These are then averaged into annual values and expressed in teragrams of CH₄ per year $( \\mathrm { T g \\ y r ^ { - 1 } } )$ . Anthropogenic emissions are taken from EDGAR v7.0. Biomass burning emissions are based on ACCMIP/MACCity for 1980–2002 and GFAS satellite-based estimates for 2003 onward. Wetland emissions are from the LPJ-wsl model, while the remaining natural microbial emissions are based on TIPP outputs. Each source type is first compiled at the subsector level and then aggregated into the five major categories. These category totals are finally summed to produce overall methane emissions for each hemisphere. The resulting dataset is also used to produce stacked bar figures comparing source contributions over time (Fig. S1). ",
+        "bbox": [
+            117,
+            650,
+            884,
+            913
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "1 ",
+        "bbox": [
+            494,
+            927,
+            504,
+            939
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            117,
+            84,
+            882,
+            128
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/ea080b6652257ce5fde0231b783a0c0b6d28b5c5691d0d68e1ce5ae7ea1cd596.jpg",
+        "image_caption": [
+            "Figure S1: Yearly a priori CH₄ emission estimates for Agriculture, Pyrogenic, Fossil, Waste and Wetlands, "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            119,
+            149,
+            877,
+            498
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "compiled from different inventories (see text), integrated by hemisphere. ",
+        "bbox": [
+            250,
+            548,
+            744,
+            564
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Table S1: a priori emissions sources for the $\\mathrm { C H } _ { 4 }$ inversion model. All categories verified from European ",
+        "bbox": [
+            132,
+            576,
+            862,
+            604
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "table",
+        "img_path": "images/6a8e50621d905ff9395e9b07e4d92c9dffcfa8c49d0c418cbe048243883a2982.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"3\">Commission, Joint Research Centre (EC-JRC)/Netherlands Environmental Assessment Agency (PBL), 2021</td></tr><tr><td>Source Category</td><td colspan=\"2\">Data Inventory/Model</td></tr><tr><td>Natural Wetlands</td><td>LPJ-wsl (Lund-Potsdam-Jena -Wald, Schnee,Landschaft v2.0)</td><td>Predicts emissions using precipitation trends via the TIPP (Trends in Precipitation and its Predictability) framework.</td></tr><tr><td rowspan=\"2\">Agriculture</td><td>EDGAR v7.0 (Emissions Database for Global</td><td>Includes subcategories like Agricultural Soils and Enteric Fermentation.</td></tr><tr><td>Atmospheric Research)</td><td>- EDGAR: Agricultural, Waste, Pyrogenic, Fossil Fuel use</td></tr><tr><td>Pyrogenic (Biomass Burning)</td><td>EDGAR, ACCMIP/MACCity, GFAS</td><td>- ACCMIP/MACCity: Historical biomass burning - GFAS: Daily wildfire emissions via satellite data (since 2003)</td></tr><tr><td>Fossil Fuel Use</td><td>EDGAR</td><td>Includes Fuel exploration, Oil refineries, Chemical processes, and Power industry. Covers emissions from mining, landfills,and</td></tr><tr><td>Waste ManagementEDGAR</td><td></td><td>wastewater treatment.</td></tr></table>",
+        "bbox": [
+            126,
+            587,
+            863,
+            834
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            494,
+            927,
+            504,
+            939
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Harmonised long-term atmospheric timeseries ",
+        "text_level": 1,
+        "bbox": [
+            121,
+            103,
+            472,
+            118
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The CH₄ mole fraction and isotope composition data were compiled from eight laboratories, using atmospheric measurements from high northern and southern latitudes following Dasgupta et al. (2025b). These regions were chosen because their well-mixed air masses allow for effective interlaboratory comparison of colocated samples. The dataset is harmonised with respect to the MPI-BGC scale and merged into two sets of three hemispheric time series for $\\chi ( \\mathrm { C H } _ { 4 } )$ , $\\delta ^ { 1 3 } \\mathrm { C - C H } 4$ , and $\\delta \\mathrm { D - C H } _ { 4 }$ , which overlap between 1994 and 2022. This original dataset is shown in Fig. S2. To extend our original time series back to 1980 and forward to 2025, we used extrapolated data from longer measurement periods, constrained with 2 criteria (1) Firn core χ(CH₄), $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , and δD-CH₄ data from Antarctica and Greenland converted to atmospheric values, as reported in Sapart et al. (2013); and (2) a relatively constant interhemispheric difference for each tracer, consistent with that of the original data. The NOAA Curve Fitting Methods and Seasonal Decomposition model (Thoning et al., 1989), widely utilised in previous studies (Miller and Tans, 2003; Ballantyne et al., 2010; Dowd et al., 2023; Woolley Maisch et al., 2023), was applied for this extrapolation. This fit function captures the annual oscillation, depicted by harmonic cycles, and the long-term growth, represented by a polynomial function, using general linear least squares regression methods (Press et al., 1988). The harmonic and polynomial functions thus obtained were applied to the extrapolated years of the time series. While the analysis period covered co-overlapping original data from 1994 to 2022, the extended periods (1980-1993 and 2023-2025) were utilised for the spin-up and spin-down periods of the model. ",
+        "bbox": [
+            115,
+            136,
+            884,
+            592
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "3 ",
+        "bbox": [
+            494,
+            927,
+            504,
+            939
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/3a679d1b8bec25bc28cc9b1d89e28a37cc86d9f6e40f9cfa3538d8aafb404b5f.jpg",
+        "image_caption": [
+            "Figure S2: Merged time series of harmonised data in black, with extrapolation periods in red for each tracer and "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            121,
+            85,
+            875,
+            534
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "hemisphere. For additional information about offset correction, data merging and uncertainties, please refer to ",
+        "bbox": [
+            124,
+            578,
+            875,
+            595
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Dasgupta et al. (2025a). ",
+        "bbox": [
+            416,
+            605,
+            581,
+            621
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "4 ",
+        "bbox": [
+            494,
+            927,
+            505,
+            938
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "3. Analysis and Spin-up / Spin-down Periods ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            92,
+            440,
+            108
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "In atmospheric inversion models, observational constraints critically influence the posterior emission estimates obtained, requiring a careful treatment of spin-up and spin-down phases. The spin-up period ensures that inversion results are independent of initial conditions. During this phase, the model is initialised with constant emissions and observation errors, following the approach of Thanwerdas et al. (2022), who used a 30-year spinup with meteorological data from 2012. As the initial condition effects on isotopic composition diminish, the posterior fluxes become more consistent with the prior values. In the spin-down phase, the measurement constraints reduce, causing the posterior emissions to converge toward the priors. The equilibration timescales for $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ and δD-CH₄ are longer than those for $\\chi ( \\mathrm { C H } 4 )$ (Tans, 1997), making isotopic signatures particularly sensitive to initial conditions and observational fluctuations. Houweling et al. (2017) pointed out that if the initial burdens of χ(CH₄), $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , and δD-CH₄ are well known, the inversion can recover in a relatively short spin-up period. Thanwerdas et al. (2022) further showed that isotope signatures diverge from their priors during spin-up, stabilising only after 2–3 years. We take both arguments into account by using a long spin-up but also optimising the initial conditions by constraining our extrapolated time series to firn core measurements, ensuring that results accurately represent posterior fluxes rather than artefacts of initial biases, if any. ",
+        "bbox": [
+            117,
+            127,
+            884,
+            500
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "To test the sensitivity of the model output to the spin-up and spin-down periods, the extrapolated dataset (Fig. S3) was systematically perturbed during these periods. Perturbations were introduced by incrementally offsetting values backwards from 1994 (end of spin-up) and forward from 2023 (start of spin-down) by $\\pm 0 . 0 1 \\text{‰}$ per year and $\\pm 0 . 0 2 \\text{‰}$ per year for $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , and by $\\pm 0 . 2 \\text{‰}$ per year and $\\pm 0 . 4 \\text{‰}$ per year for δD-CH₄. These offsets correspond to $1 0 \\%$ and $20 \\%$ of the observation error ( $0 . 1 \\text{‰}$ for $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ and $2 \\text{‰}$ for δD-CH₄). The inverted tracer results for the respective prior iterations during the spin periods are shown in the right panel of Fig. S3. The spin period iterations weren’t tested on $\\chi ( \\mathrm { C H } 4 )$ , because the measurements are better constrained and the equilibration period is negligible compared to the isotopologues ",
+        "bbox": [
+            117,
+            516,
+            885,
+            724
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "3.1 Spin-up and Spin-down results ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            744,
+            368,
+            758
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Figure S3 shows the prior and observational tracers alongside their posterior model results, based on five different starting and ending points for the tracers, as designed during the spin-up and spin-down periods. Excluding the spin-up (first 13 years) and spin-down (last 3 years) periods from the original time series is essential to ensure the reliability and robustness of the model's results. Sensitivity tests were performed by varying tracer observational values during these periods, offset by $10 \\%$ and $20 \\%$ of the observed baseline, on either side, to assess the stability of the analysis period (1994–2022) and eliminate potential biases from initial and final conditions (Fig. S3). Posterior model estimates of emissions and their corresponding atmospheric tracers (coloured lines) showed variability during the spin-up but stabilised within the first year of the analysis period, confirming that the results within the main analysis period are independent of initial condition artefacts. Towards the end of the analysis period, the spin-down phase demonstrated a gradual divergence from prior values over time, as expected. ",
+        "bbox": [
+            117,
+            779,
+            884,
+            904
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "5 ",
+        "bbox": [
+            494,
+            927,
+            504,
+            939
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            117,
+            83,
+            884,
+            236
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The equilibration times for CH₄, $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , and $\\delta \\mathrm { D }$ -CH₄ differ, with δD-CH₄ requiring the longest equilibration period, reflecting its sensitivity to isotopic changes. Nevertheless, the allotted spin-up and spin-down durations were sufficient for all three tracers to equilibrate, ultimately converging to a common posterior trajectory from five diverse starting and ending points. This underscores the sufficiency of the spin-up/spin-down periods in providing consistent and reliable results. It ensures that the conclusions drawn from the main analysis period are robust, reflecting the true dynamics of the CH₄ cycle rather than artefacts of observational errors, prior emissions, or initial and final artefacts in the timeseries. ",
+        "bbox": [
+            117,
+            255,
+            884,
+            435
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/5943d58ead7bf769341781ff93c17c5912f20f6b595bc80b8a2e694cbeaf49bf.jpg",
+        "image_caption": [
+            "Figure S3: Impact of initial and final conditions during the spin-up and spin-down periods (shaded "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            122,
+            453,
+            880,
+            725
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "background) on the main analysis period (unshaded) for inverted tracers: $\\chi ( \\mathrm { C H } _ { 4 } )$ , $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , and δD-CH₄. The left panel shows the prior scenarios (original-extrapolated in black and perturbed in various colours) used to test different spin-up and spin-down periods. The right panel displays the posterior results (from the original prior and five perturbed scenarios, in black and various colours) for the three tracers. The prior-perturbed scenarios start and end at different values for each hemisphere during the spin-up and spin-down periods. The posterior results of the perturbed scenarios converge or diverge into the central posterior values during the main analysis period, demonstrating the model's robustness to diverse spin scenarios and the stability of results within the analysis timeframe. Black circles represent the observed tracer values measured at SH firn air (Sapart et al., 2013). The spin-up and spin-down periods have a shaded background, and the analysis period is unshaded. ",
+        "bbox": [
+            122,
+            771,
+            880,
+            899
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "6 ",
+        "bbox": [
+            492,
+            927,
+            504,
+            939
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            122,
+            83,
+            873,
+            182
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "7 ",
+        "bbox": [
+            494,
+            927,
+            504,
+            938
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "4. Source Isotopic Signatures ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            92,
+            329,
+            108
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The isotopic signatures of $\\delta ^ { 1 3 } \\mathrm { C }$ and $\\delta \\mathrm { D }$ in $\\mathrm { C H } _ { 4 }$ are specific to the type of emissions and latitude. The values assigned for each emission category are obtained from recent publications (Table S2). Most values are averages from the global isotope database (Sherwood et al., 2017; Menoud et al., 2022) and weighted by emission rates used as prior information in the model. For fossil fuels and biomass burning, $\\delta ^ { 1 3 } \\mathrm { C }$ values are from Schwietzke et al. (2016), while the $\\delta ^ { 1 3 } \\mathrm { C }$ -CH₄ value for enteric fermentation is from Chang et al. (2019). The isotopic signature of CH₄ from wetlands and freshwater is known to be latitude-dependent (Brownlow et al., 2017; Ganesan et al., 2018; Douglas et al., 2021), and we use averaged hemispheric $\\delta ^ { 1 3 } \\mathrm { C }$ -CH₄ and $\\delta \\mathrm { D }$ -CH₄ values computed from a global model by Stell et al. (2021), based on up-to-date observations from sites at various latitudes. Further details on the calculations for each category are provided in Table S2. ",
+        "bbox": [
+            117,
+            127,
+            885,
+            361
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "images/aa8853ab841edffb6759ce7ec9d80501d542a64480decf8258b01b0321152f74.jpg",
+        "table_caption": [
+            "Table S2: Assigned $\\delta ^ { 1 3 } \\mathrm { C }$ and δD Values for CH₄ Sources "
+        ],
+        "table_footnote": [
+            "Footnotes: 1Schwietzke et al., 2016 – Nature 2Chang et al., 2019 – Nature Communications 3Stell et al., 2021 – Phil. Trans. R. Soc. A ${ \\mathrm { N S } } = { \\mathrm { N o } }$ Significant Values "
+        ],
+        "table_body": "<table><tr><td rowspan=\"2\">Source Category Fossil Fuels</td><td rowspan=\"2\">Region</td><td rowspan=\"2\">Sub-category</td><td rowspan=\"2\">813C (%0)</td><td rowspan=\"2\">8D (%0)</td><td colspan=\"2\">Weight (from emission rates a-priori)</td></tr><tr><td></td><td></td></tr><tr><td></td><td>NH</td><td>Oil &amp; natural gas exploitation Coal exploitation</td><td></td><td>-182.9 -209.8</td><td></td><td>0.69 0.31</td></tr><tr><td rowspan=\"8\">Agriculture</td><td rowspan=\"3\">SH</td><td>Total</td><td>-441</td><td>-191.2</td><td></td><td>1</td></tr><tr><td></td><td></td><td>-182.9</td><td></td><td>0.66</td></tr><tr><td>Coal exploitation</td><td> Oil &amp; natural gas exploitation</td><td></td><td>-209.8</td><td>0.34</td></tr><tr><td></td><td>Total</td><td></td><td>-441</td><td>-192</td><td>1</td></tr><tr><td>NH</td><td>Ruminants</td><td></td><td>-64.932</td><td>-310.4</td><td>0.69</td></tr><tr><td></td><td>Rice paddies</td><td>-59.9</td><td>-323.3</td><td></td><td>0.31</td></tr><tr><td></td><td>Total</td><td>-63.4</td><td>-314.4</td><td></td><td>1</td></tr><tr><td>SH</td><td>Ruminants</td><td>-64.93²</td><td>-310.4</td><td></td><td>0.89</td></tr><tr><td rowspan=\"6\">Wetlands</td><td></td><td>Rice paddies</td><td>-59.9</td><td>-323.3</td><td></td><td>0.11</td></tr><tr><td></td><td>Total</td><td>-64.4</td><td>-311.8</td><td></td><td>1</td></tr><tr><td>NH</td><td>Wetlands</td><td>-64.93</td><td>-3383</td><td></td><td>0.8</td></tr><tr><td></td><td>Termites</td><td>-65.2</td><td>-343</td><td></td><td>0.11</td></tr><tr><td></td><td>Oceans</td><td>NS</td><td>NS</td><td></td><td>0.09</td></tr><tr><td></td><td>Total</td><td>-64.9</td><td>-338.6</td><td></td><td>1</td></tr><tr><td rowspan=\"10\">Waste Pyrogenic</td><td>SH</td><td>Wetlands</td><td>-57.43</td><td>-2973</td><td></td><td>0.83</td></tr><tr><td></td><td>Termites</td><td>-65.2</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>-343</td><td></td><td>0.11</td></tr><tr><td>Total</td><td>Oceans</td><td>NS</td><td>NS</td><td></td><td>0.06</td></tr><tr><td>NH/SH</td><td></td><td>-58.3</td><td>-302.4</td><td></td><td>1</td></tr><tr><td>NH</td><td>Total</td><td></td><td>-54.5</td><td>-292.2</td><td></td></tr><tr><td></td><td>Biomass burning</td><td>-22.21</td><td>-225.6</td><td></td><td>0.53</td></tr><tr><td></td><td>Fossil fuel burning</td><td>-22.7</td><td>-136</td><td></td><td>0.48</td></tr><tr><td>SH</td><td>Total</td><td>-22.4</td><td>-183</td><td></td><td>1.01</td></tr><tr><td></td><td>Biomass burning</td><td>-22.21</td><td>-225.6</td><td></td><td>0.86</td></tr><tr><td rowspan=\"4\"></td><td></td><td>Fossil fuel burning</td><td>-22.7</td><td>-136</td><td></td><td>0.14</td></tr><tr><td>Total</td><td></td><td>-22.3</td><td>-213.1</td><td></td><td>1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            124,
+            389,
+            900,
+            783
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "8 ",
+        "bbox": [
+            492,
+            927,
+            504,
+            939
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "5. Intra and Inter-Hemispheric Gradients ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            85,
+            420,
+            99
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Atmospheric CH₄ mixing ratios and isotopic compositions are known to vary with latitude (Brownlow et al., 2017; Ganesan et al., 2018; Douglas et al., 2021). As a result, time series reconstructed from high-latitude sites do not represent hemispheric averages. Latitudinal gradients must be considered to draw representative time series for each hemispheric average. We calculated the difference between hemispheric average and high-latitude values based on data from measurement stations at various latitudes, provided by the NOAA network (White et al., 2018). Figure S4 shows the data used to calculate the gradient. Each hemisphere was divided into two latitudinal zones, from 0 to $3 0 ^ { \\mathrm { o } }$ and 30 to $9 0 ^ { \\mathrm { o } }$ , and a high-latitude zone, from 60 to $9 0 ^ { \\mathrm { o } }$ . The average of the two latitudinal zones represents the hemispheric averages, from which we calculated the difference with the highlatitude zone stations and applied the resulting differences to the time series as a constant offset. The time series from high latitudes is adjusted for these offsets, with corrections of $+ 0 . 1 0 7 \\text{‰}$ for the NH and $- 0 . 0 1 5 \\text{‰}$ for the SH in $\\delta ^ { 1 3 } \\mathrm { C }$ , and $+ 4 . 3 2 \\text{‰}$ and $- 2 . 0 8 \\text{‰}$ for $\\delta \\mathrm { D }$ in the NH and SH, respectively. ",
+        "bbox": [
+            115,
+            118,
+            885,
+            408
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/d9491110e2931d919b81c0133554b573283683efe490b02ae79553f6d4161bda.jpg",
+        "image_caption": [
+            "Figure S4: Latitude dependence of $\\chi ( \\mathrm { C H } _ { 4 } )$ , $\\ S ^ { 1 3 } \\mathrm { C }$ , and $\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 }$ based on observations from the NOAA Global Greenhouse Gas Reference Network (White et al., 2018). ’nh $^ { \\ ' } =$ northern hemisphere; ’sh $^ { \\circ } =$ southern hemisphere. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            315,
+            434,
+            680,
+            858
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "9 ",
+        "bbox": [
+            492,
+            927,
+            505,
+            938
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The inter-hemispheric transport of CH₄ plays a crucial role in determining its global distribution. A key factor in this process is the inter-hemispheric CH₄ concentration gradient. The tau term (parametrised in the twobox model as $\\cdot _ { \\tau }$ ) represents the interhemispheric exchange time, i.e., how quickly methane mixes between the NH and SH. It directly affects the transport of CH₄ and its isotopologues between hemispheres, influencing the posterior concentration gradients and isotopic signatures. The exchange time between the hemispheres is set to $\\tau$ $= 0 . 7 5$ yr, which is shorter than the commonly assumed value of 1 year, but has been found to produce realistic fields of the transport tracer for our two-box model setup. The shorter exchange time in our two-box framework likely compensates for structural simplifications in the model, including the lack of vertical stratification and explicit stratospheric representation, which affect interhemispheric transport dynamics differently than in threedimensional models (see Fig. S5 for sensitivity analysis). The model updates the CH₄ concentrations in each hemisphere at every time step based on this τ-controlled exchange rate. A lower τ value means faster interhemispheric mixing, so methane differences between the NH and SH are reduced more quickly by atmospheric transport. As a result, the model cannot sustain large concentration gradients between hemispheres. To fit the observed hemispheric differences in CH₄, the inversion compensates by making the emissions in the NH and SH more different (further apart) in the posterior. This larger emission contrast is necessary to maintain the observed gradient when mixing is rapid, as any difference in emissions is quickly evened out by the fast exchange. In contrast, with a higher $\\tau$ (slower mixing), the model can maintain a given concentration difference with a smaller emission contrast, since the hemispheres remain more isolated. To assess the model's sensitivity to this parameter, we perform a sensitivity test by varying $\\cdot _ { \\tau } ,$ in steps (e.g., from 0.65 to 0.95 years; Fig. S5), running the full inversion for each value, and comparing the resulting posterior emissions and sinks. The choice of $\\tau =$ 0.75 years appears ideal because it produces posterior emission and sink estimates that are physically reasonable and consistent with prior knowledge, without requiring extreme hemispheric contrasts. At this value, the model achieves a balance: it is fast enough to realistically mix atmospheric CH₄ between hemispheres, but not so fast that it forces the inversion to create unrealistic emission differences. This value is also supported by literature (Naus et al., 2019) and atmospheric tracer studies $( \\mathrm { S F } _ { 6 } )$ , making it a robust and justifiable choice for the two-box model. ",
+        "bbox": [
+            117,
+            77,
+            884,
+            783
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "10 ",
+        "bbox": [
+            489,
+            927,
+            510,
+            939
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/f6ef096fd2b522093ae16ee4e954020bf09653350e9ed7e5a8cc3f3f8e20fa95.jpg",
+        "image_caption": [
+            "Figure: S5: Sensitivity tests with varying $\\cdot _ { \\tau } ,$ values to optimise the interhemispheric exchange time of $\\mathrm { C H } _ { 4 }$ , "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            126,
+            87,
+            875,
+            459
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "with NH lines dashed and SH lines dash-dotted. The spin-up and spin-down periods have a shaded background, ",
+        "bbox": [
+            124,
+            494,
+            870,
+            510
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "and the analysis period is unshaded. ",
+        "bbox": [
+            376,
+            522,
+            621,
+            536
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "11 ",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "6. Lifetime ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            85,
+            198,
+            98
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "CH₄ is primarily removed from the atmosphere through reactions with OH, Cl, (O¹D), and soil microbes, with an average atmospheric lifetime of approximately 9 years; however, its exact value remains unknown and is subject to uncertainties. This is determined as the sum of the reciprocals of the three major sinks— troposphere, stratosphere, and soil—corresponding to lifetimes of 9.97, 181, and 188 years (Stevenson et al., 2020), with relative removal contributions of ${ \\sim } 9 0 { : } 5 { : } 5$ , respectively. Variability in simulated OH distributions among global atmospheric chemistry models arises from differences in chemical mechanisms and meteorological conditions, which are influenced by large-scale teleconnections such as the El Niño-Southern Oscillation (ENSO). In the model, the total CH₄ lifetime is fixed at $9 . 0 \\pm 0 . 9$ years, with individual sink lifetimes optimised based on their inverted removal percentages. These values align with those reported by Prather et al. (2012) $9 . 1 \\pm 0 . 9$ years, mean $\\pm \\nobreakspace 1 \\nobreakspace$ standard deviation), as used by the Intergovernmental Panel on Climate Change (IPCC; Myhre et al., 2013). Lifetimes may have decreased since the increase in OH (Anderson et al., 2021). ",
+        "bbox": [
+            117,
+            118,
+            885,
+            409
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "In the two-box model, the handling of CH₄ lifetimes has a significant influence on inversion results and model complexity. Initially, we applied a constant prior lifetime of 9 years, which resulted in scenarios where the posterior lifetimes were adjusted to account for variability in both sinks and sources. Alternatively, the model can be initialised with a dynamic prior lifetime, such as the CAMS TM5 inverted lifetime. This method adds complexity by allowing the prior lifetime to vary over time, reflecting changes in atmospheric conditions and chemical processes. The TM5 model calculates methane's lifetime by simulating its chemical loss through reactions with hydroxyl radicals (OH), $\\mathrm { O } ( ^ { 1 } \\mathrm { D } )$ , and chlorine (Cl), using monthly time series of concentration fields and fitting an exponential decay function to observed surface concentrations (Innes et al., 2019). To further explore the impact of varying prior lifetimes, perturbations were applied to the original CAMS TM5 dataset in incremental steps. These adjustments increased the lifetime values by $1 \\%$ , $3 \\%$ , and $5 \\%$ relative to the original dataset. Starting with baseline lifetimes of 9.5, 10.5, and 11.5 years in 1980, the perturbed lifetimes reflect year-to-year changes in atmospheric conditions, progressively increasing the deviation from the reference case. ",
+        "bbox": [
+            117,
+            427,
+            885,
+            744
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Figure S6 shows the two-box inverted results for different lifetimes input. For priors, the constant value is 9 years, while the variable lifetimes are versions of the TM5 CAMS inverted lifetime values. For posteriors, as depicted in the lower-right panel of Fig. S6, there is a general trend of lowering lifetime from all scenarios. In both cases, regardless of whether the prior lifetime is constant or variable, the inverted lifetime drops to under 10 years before the analysis period and eventually converges to $9 . 2 5 \\pm 0 . 2$ years. The effect of variable prior lifetimes, based on a combined sink of the troposphere, stratosphere, and soil, does not yield significantly different posterior results for both tracers and emissions compared to the constant prior lifetime. ",
+        "bbox": [
+            117,
+            762,
+            884,
+            888
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            117,
+            84,
+            880,
+            128
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/3316b230d472774899a6af4b54e95394198293d3d15a893bdba8fb44c29e665e.jpg",
+        "image_caption": [
+            "Figure S6: Prior (black) and posterior (coloured) emissions and sink lifetime values, with NH in $\\cdot _ { + } ,$ markers and "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            129,
+            176,
+            877,
+            587
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "SH in ‘o’ markers, modelled by the two-box inversion from both constant (DPT Optimised) and variable (TM5 perturbed) prior lifetimes and a consolidated sink on the analysis period (not shaded). ",
+        "bbox": [
+            119,
+            638,
+            873,
+            682
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "discarded",
+        "text": "13 ",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "7. Two‐Box Bayesian Inversion: uncertainty and limitations ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            84,
+            549,
+            99
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The two-box model simplifies atmospheric $\\mathrm { C H } _ { 4 }$ dynamics by dividing the atmosphere into the NH and SH boxes, assuming slow mixing between them and well-mixed CH₄ concentrations in each box. $\\mathrm { C H } _ { 4 }$ concentrations in each box are governed by the balance of sources and sinks, with an estimated residence time of about 9 years. In each box, the $\\mathrm { C H } _ { 4 }$ mole fraction, $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , and $\\delta \\mathrm { D - C H } _ { 4 }$ isotopic signatures result from the combined effects of emission sources, chemistry, and transport processes. Briefly, the two-box model uses prior estimates and sink kinetic isotope effects in a forward model to generate fluxes, compares these with observations, and iteratively adjusts the state vector through a cost function to achieve the best agreement between the model output and the observed data. ",
+        "bbox": [
+            117,
+            118,
+            885,
+            326
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The following differential equation describes the inversion model ",
+        "bbox": [
+            119,
+            345,
+            564,
+            361
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "equation",
+        "img_path": "images/731b0866bc10c142084263f40f0d72988680cd34532e410ed2d1845b265682f0.jpg",
+        "text": "$$\n\\begin{array} { r } { d X _ { \\mathrm { i } \\cdot \\mathrm { , } \\mathrm { n } } ( t ) / d t = \\ E _ { \\mathrm { i } \\cdot \\mathrm { , } \\mathrm { n } } ( t ) \\ - \\ \\sum _ { \\mathrm { k } } \\big [ L _ { \\mathrm { k } \\mathrm { b } } / K I E _ { \\mathrm { i } \\cdot \\mathrm { k } } \\big ] \\ \\cdot \\ X _ { \\mathrm { i } \\cdot \\mathrm { n } } ( t ) \\ + \\ \\big [ X _ { \\mathrm { i } \\cdot \\mathrm { o p p } } ( t ) \\ - \\ X _ { \\mathrm { i } \\cdot \\mathrm { h } } ( t ) \\big ] / \\tau _ { \\mathrm { e q p } } \\ , } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            210,
+            380,
+            786,
+            397
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "where: ",
+        "bbox": [
+            117,
+            418,
+            168,
+            431
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm { E } _ { \\mathrm { i } , \\mathrm { h } } ( \\mathrm { t } ) =$ emissions of tracer i in hemisphere h $( \\mathrm { T g } \\mathrm { y r } ^ { - 1 } )$ , ",
+        "bbox": [
+            147,
+            452,
+            554,
+            469
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "• $\\mathbf { L } _ { \\mathbf { k } , \\mathbf { h } } =$ sink reaction rate for process $\\mathbf { k }$ (troposphere, stratosphere, soil) in h, ",
+        "bbox": [
+            144,
+            488,
+            684,
+            504
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "${ \\mathrm { K I E } } _ { \\mathrm { i } , { \\bf k } } =$ kinetic isotope effect for tracer i and sink k $1 0 \\%$ uncertainty), ",
+        "bbox": [
+            146,
+            523,
+            675,
+            540
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "• $\\mathrm { X _ { i } , _ { o p p } }$ is the mole fraction in the opposite hemisphere, ",
+        "bbox": [
+            147,
+            560,
+            541,
+            577
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "• $\\tau _ { \\mathrm { e } } \\simeq 0 . 7 5$ yr is the inter-hemispheric exchange time. ",
+        "bbox": [
+            147,
+            596,
+            532,
+            612
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The inversion minimises the following cost function ",
+        "bbox": [
+            117,
+            631,
+            475,
+            647
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "equation",
+        "img_path": "images/a981f32f44eb1cb0e9e7e339972748c8eb3758ec5916eca4ed039e87cec8218a.jpg",
+        "text": "$$\nJ ( x ) = ( x - x _ { p r i o r } ) ^ { \\mathrm { { T } } } \\cdot S _ { \\mathrm { { a } } } ^ { - 1 } \\cdot ( x - x _ { p r i o r } ) + ( y - F ( x ) ) ^ { \\mathrm { { T } } } \\cdot S _ { y } ^ { - 1 } \\cdot ( y - F ( x ) )\n$$",
+        "text_format": "latex",
+        "bbox": [
+            215,
+            665,
+            810,
+            685
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "where: ",
+        "bbox": [
+            117,
+            705,
+            166,
+            718
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "• $\\mathbf { X } =$ vector of sectoral $\\mathrm { C H } _ { 4 }$ and isotopologue mole fraction fluxes; ${ \\bf { X } } _ { \\mathrm { { p r i o r } } } =$ prior flux estimate $( \\pm 3 0 \\% )$ , ",
+        "bbox": [
+            146,
+            739,
+            862,
+            756
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "• $\\mathrm { S } _ { a } =$ prior flux error covariance; $\\mathrm { S } _ { y } =$ data error covariance ",
+        "bbox": [
+            146,
+            775,
+            576,
+            792
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "• $\\mathbf { y } =$ observed CH₄ mole fractions; $\\operatorname { F } ( x ) =$ forward‐modelled mole fractions ",
+        "bbox": [
+            146,
+            812,
+            680,
+            827
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Step 1: $\\mathbf { { C H } _ { 4 } } .$ -only linear update ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            846,
+            342,
+            862
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "We prescribe a prior flux vector $x _ { a }$ (sectoral emissions, with an aggregate sink/lifetime parameterisation as appropriate) with covariance $\\mathrm { S } _ { a }$ representing $\\pm 3 0 \\%$ uncertainty in the inventory. Observation errors for hemispheric CH₄ mole fractions are represented by a diagonal covariance $\\mathrm { S } _ { y } { = } \\mathrm { d i a g } ( \\sigma ^ { 2 } \\mathrm { c } _ { \\mathrm { H } 4 } )$ with $\\sigma _ { \\mathrm { C H 4 } } { = } 1$ ppb; these $\\sigma$ values encode total model–data mismatch (not instrument precision alone). The two-box forward model maps $x$ to observations $\\operatorname { F } ( x )$ ; its Jacobian $\\scriptstyle \\mathrm { K = } \\partial \\mathrm { F } / \\partial x$ is computed analytically from the model. Under linear– Gaussian assumptions, the posterior mean and covariance are: $x _ { \\mathrm { p o s t } } = x _ { a } + \\mathrm { S _ { p o s t } K ^ { T } S ^ { - 1 } } { _ \\mathrm { y } \\left[ \\boldsymbol { y } - \\mathrm { F } ( \\boldsymbol { x } _ { a } ) \\right] } , \\mathrm { S _ { p o s t } = ( K ^ { T } S ^ { - 1 } ) K }$ $+ \\ \\mathrm { S } ^ { - 1 } a ) ^ { - 1 }$ . This step yields a self-consistent CH₄ mass balance that (i) initialises the subsequent isotopologue analysis and (ii) provides the reference needed to express isotopologue measurements in per-mil units. ",
+        "bbox": [
+            186,
+            882,
+            880,
+            897
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "discarded",
+        "text": "14 ",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            117,
+            83,
+            884,
+            264
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Step 2: Joint isotopologue Gauss–Newton update. ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            283,
+            475,
+            299
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "We take $\\mathrm { S _ { p o s t } }$ from Step 1 as the new prior covariance for emissions and assimilate $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ $( \\sigma _ { \\delta 1 3 \\mathrm { C } } { = } 0 . 0 1 \\ \\mathrm { p p b } )$ ), and $\\delta \\mathrm { D - C H _ { 4 } ( \\sigma _ { \\mathrm { 8 D } } = 0 . 0 0 1 p p b ) }$ observations. Observation errors are specified as 1-σ uncertainties in the absolute isotopologue concentrations. These uncertainties enter the block in a block-diagonal $\\mathrm { S _ { y } }$ , alongside uncertainties in sink KIEs $( \\pm 1 0 \\% )$ . At iteration $\\mathbf { k }$ , with state $x _ { \\mathrm { k } }$ , Jacobian $\\mathrm { K } _ { \\mathrm { k } }$ , and model output $\\mathrm { F } ( x _ { \\mathrm { k } } )$ , we minimise the quadratic cost function via the Gauss–Newton step: ",
+        "bbox": [
+            117,
+            318,
+            885,
+            444
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "equation",
+        "img_path": "images/cc805e2d4c697f7fe4f311e10cc5e13e0f79714bda4e47f506f1572be6ce8aeb.jpg",
+        "text": "$$\nx _ { \\mathrm { k + 1 } } = x _ { \\mathrm { a } } + ( \\mathrm { K ^ { T } _ { k } } \\mathrm { S ^ { - 1 } _ { y } } \\mathrm { K } + \\mathrm { S ^ { - 1 } } _ { a } ) ^ { - 1 } \\mathrm { K ^ { T } _ { k } } \\mathrm { S ^ { - 1 } _ { y } } \\left[ \\mathrm { y } - \\mathrm { F } ( x _ { \\mathrm { k } } ) + \\mathrm { K } _ { \\mathrm { k } } ( x _ { \\mathrm { k } } - x _ { a } ) \\right]\n$$",
+        "text_format": "latex",
+        "bbox": [
+            290,
+            461,
+            707,
+            478
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "This joint update refines both emission rates and tracer-specific parameters (including adjustable KIEs), yielding an updated posterior covariance that is invariably tighter than the original $\\mathrm { S } _ { a }$ , and reflecting the incremental information gained from the isotopologue data. Throughout, $\\sigma$ denotes combined model–data mismatch (not measurement precision alone), and the state vector $x$ includes all emission sectors, as well as the adjustable KIE parameters in Step 2, so that each source of uncertainty is treated distinctly and transparently. ",
+        "bbox": [
+            117,
+            496,
+            884,
+            623
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "discarded",
+        "text": "15 ",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "8. Sensitivity Testing and Optimisation of the Two-Box Model ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            84,
+            564,
+            99
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "To systematically explore the parameter space of prior choices, we employ a Discrete Parameter Tuning technique that iteratively tests different combinations of prior parameter values (Table S2), based on previously reported literature values. This involves varying the source $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ and δD-CH₄ values of the five emission categories by $\\pm 0 . 2 \\ : \\text{‰}$ and $14 \\text{‰}$ , respectively, around the literature values. Additionally, the sink $^ { 1 3 } \\mathrm { C }$ and D KIEs are varied by $\\pm 0 . 0 0 0 2$ and $\\pm 0 . 0 0 2$ , respectively, along with the error percentages associated with the priors (only Tropospheric KIEs are varied in the tests, as the other 2 sinks remove very small amounts of CH₄). The model adjusts the emissions according to these combinations to generate posterior outputs that best fit the observed tracer distributions. The six posterior tracers $\\left( \\chi ( \\mathrm { C H } _ { 4 } ) _ { \\mathrm { ( N H , S H ) } } \\right.$ , ${ \\delta } ^ { 1 3 } \\mathrm { C } \\mathrm { - } \\mathrm { C H } _ { 4 } \\left( \\mathrm { N H } , \\mathrm { S H } \\right) ,$ and $\\mathrm { \\delta \\Delta \\delta \\mathrm { B \\mathrm { - } C H _ { 4 } ( N H , S H ) } }$ are then compared to their respective observational counterparts, and the root-mean-square error (RMSE) is calculated. By systematically testing all possible combinations of input parameter values described in Table S2, approximately 13.1 million simulations are generated, each associated with six RMSE values for the six outputs. To ensure equal weighing across tracers and hemispheres, normalisation is applied to the RMSE of each tracer and hemisphere, scaling values to a range between 0 and 1. The mean normalised RMSE (unitless fractional numeral) is then computed for each simulation. Only simulations with a mean normalised RMSE below 0.1 are retained, representing combinations of prior parameter values that produce the best fit to the observational data. These optimised parameter ranges, identified through the lowest RMSE, enable a more accurate closure of the CH₄ budget within the simplified two-box model framework (Fig. S8). The results and discussion in the following sections are limited to this optimised range of input parameters. ",
+        "bbox": [
+            117,
+            117,
+            884,
+            603
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "discarded",
+        "text": "16 ",
+        "bbox": [
+            489,
+            927,
+            510,
+            939
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "table",
+        "img_path": "images/78f16fd818eadb3fb87500cfc1df71f5795fa5e6fd7ec6b92204eedd10b3d44a.jpg",
+        "table_caption": [
+            "Table S3: Summary of all Parameters and Their Ranges Used in Our Simulations. For source signatures and KIEs the range is twice the measurement errors on either side of the values from Table S2. For errors its approximately $2 5 \\%$ or "
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"3\">less on either side of the baseline values.</td></tr><tr><td>Parameter</td><td>Mean [min., max.]</td><td>Definition</td></tr><tr><td>Wetland NH</td><td>813C-CH4: -64.9 [-65.1, -64.7]</td><td>δ1³C-CH4 for wetland sources in NH (%o)</td></tr><tr><td rowspan=\"2\">Wetland SH</td><td>δD-CH4: -339 [-343,-335]</td><td>δD-CH4 for wetland sources in NH (%o)</td></tr><tr><td>813C-CH4: -58.3 [-58.5, -58.1]</td><td>δ13C-CH4 for wetland sources in SH (%o)</td></tr><tr><td rowspan=\"2\">Agriculture</td><td>δD-CH4: -302[-306, -298]</td><td>SD-CH4 for wetland sources in SH (%o)</td></tr><tr><td>δ13C-CH4: -64.4 [-64.6, -64.2]</td><td>δ13C-CH4 for agricultural sources (%o)</td></tr><tr><td rowspan=\"2\">Pyrogenic</td><td>δD-CH4: -311 [-315,-307]</td><td> δD-CH4 for agricultural sources (%o)</td></tr><tr><td>813C-CH4: -22.3 [-22.5, -22.1]</td><td>δ13C-CH4 for pyrogenic sources (%o)</td></tr><tr><td rowspan=\"2\">Fossil fuels</td><td>δD-CH4: -213 [-217,-209]</td><td> SD-CH4 for pyrogenic sources (%o)</td></tr><tr><td>δ13C-CH4: -44 [-44.2, -43.8]</td><td>δ1³C-CH4 for fossil fuel sources (%o)</td></tr><tr><td rowspan=\"2\">Waste</td><td>δD-CH4: -192 [-196, -188]</td><td>δD-CH4 for fossil fuel sources (%o)</td></tr><tr><td>813C-CH4: -54.5 [-54.7, -54.3]</td><td>δ13C-CH4 for waste sources (%o)</td></tr><tr><td rowspan=\"2\">Troposphere</td><td>δD-CH4: -292 [-296, -288]</td><td>δD-CH4 for waste sources (%o)</td></tr><tr><td>KIE&#x27;3C: 1.0066 [1.0052,1.0075]</td><td>Sink-weighted total KIE1³C in the troposphere</td></tr><tr><td rowspan=\"2\">Stratosphere</td><td>KIE D: 1.317 [1.305,1.327]</td><td>Sink-weighted total KIE D in the troposphere</td></tr><tr><td>KIE13C: 1.01436 [not varied]</td><td>KIE1C in the stratosphere</td></tr><tr><td rowspan=\"2\">Soil</td><td>KIE D: 1.133 [not varied]</td><td>KIE D in the stratosphere</td></tr><tr><td>KIE13C: 1.0201 [not varied]</td><td>KIE1C in the soil</td></tr><tr><td>Emission errors</td><td>KIE D: 1.0825 [not varied]</td><td>KIE D in the soil</td></tr><tr><td>(€) Interhem. Mixing</td><td>Prior values ± 30% [10-50%]</td><td>Emission errors per source category Interhemispheric exchange time of methane between</td></tr><tr><td>(t）</td><td>Prior values 0.75 [0.65-0.95]</td><td>NH and SH</td></tr><tr><td>Observational errors:</td><td>1, 0.1, 0.001</td><td>Observational errors based on natural abundance of species</td></tr><tr><td>σ_ x(CH4),</td><td>1 ppb, 0.001 ppb, 0.0001 ppb</td><td>Optimal for δ13C-CH4</td></tr><tr><td>σ_813C-CH4,</td><td>1 ppb,0.001 ppb,0.00005 ppb</td><td>Balanced observational errors</td></tr><tr><td>σ_δD-CH4</td><td>1 ppb,0.005 ppb, 0.0001 ppb</td><td>Optimal for δD-CH4</td></tr><tr><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            90,
+            115,
+            912,
+            526
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "discarded",
+        "text": "17 ",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/a7cda4a76ee4e81beb6f8ea334ad0b11926bb9b6d057a84cf01ff111675b85d0.jpg",
+        "image_caption": [
+            "Figure S7: Scatter plot showing the relationship between the raw RMSE and the normalised RMSE across "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            243,
+            89,
+            751,
+            435
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "approximately 13.1 million simulations. Each point represents a specific combination of prior parameter values, with normalisation applied to the RMSE of each tracer and hemisphere to ensure comparability. Only simulations with a mean normalised RMSE below 0.1 are highlighted in grey, indicating the optimised parameter combinations that best align the posterior tracers with the observational data. ",
+        "bbox": [
+            122,
+            480,
+            877,
+            579
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "discarded",
+        "text": "18 ",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/65e7abd340854583fb85cb93d6c5312bbfa7f5fc181513f5851df38050aebbf5.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            181,
+            102,
+            818,
+            666
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Figure S8: Variability in isotopic composition of CH₄ sources for each hemisphere, showing $\\delta ^ { 1 3 } \\mathrm { C }$ and $\\delta \\mathrm { D }$ values $( \\text{‰}$ by source category in the two-box model. The x-axis represents the range of source isotopic compositions tested during model iterations, and the y-axis indicates the count of occurrences for each value within the $< 0 . 1$ RMSE subset of results. Optimised values shown as the peak in each subplot, derived from this approach, are the most occurring model parameters within the sub-0.1 RMSE subset. ",
+        "bbox": [
+            122,
+            687,
+            878,
+            814
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "discarded",
+        "text": "19 ",
+        "bbox": [
+            489,
+            927,
+            510,
+            939
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "9. Isotopic Fractionation Due to Sink ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            92,
+            384,
+            108
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm { C H } _ { 4 }$ is removed from the atmosphere mainly by three photochemical reactions with OH, O(¹D), and Cl. Approximately $9 0 \\%$ of atmospheric $\\mathrm { C H } _ { 4 }$ removal occurs in the troposphere (Oh et al., 2025). The largest part is thereby the reaction with OH $5 9 0 \\%$ of the tropospheric sink), while the rest is attributed to the reaction with Cl in the marine boundary layer (MBL; Kirschke et al., 2013). About $8 \\%$ of $\\mathrm { C H } _ { 4 }$ is depleted in the stratosphere through reactions with OH, O(¹D), and Cl, as well as via photolysis and soil uptake (IPCC, 2013). ",
+        "bbox": [
+            117,
+            127,
+            884,
+            252
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Three types of atmospheric CH₄ sink processes were considered: a weighted tropospheric chemical sink (reaction with OH and Cl), a weighted stratospheric sink (reaction with OH, O(¹D), and Cl in the stratosphere), and a soil sink. These sink reactions influence the isotopic composition of the remaining CH₄, with fractionation constants summarised in Table 2. When discrepancies arose among studies, we opted for values supported by inverse modelling results; for instance, for tropospheric OH fractionation on $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , Lan et al. (2021) found that a fractionation value of $- 5 . 4 \\text{‰}$ based on Cantrell et al. (1990) best matched observations, in contrast to -3.9 $\\text{‰}$ from Saueressig et al. (2001). Similarly, for Cl, Saueressig et al. (1995) reported a value of 1.0676. Combining both of these values in their relative form, we get a net tropospheric KIE of 1.0066. Tropospheric removal of $\\delta \\mathrm { D }$ - CH₄ due to Cl and OH is temperature-dependent, with a global rate-weighted average temperature of $4 . 0 \\pm 0 . 1 ^ { \\mathrm { ~ o ~ } } \\mathrm { C }$ derived from the ECHAM/MESSy Atmospheric Chemistry model (2009-2017) (Gromov, 2022). The fractionation constants of sink reactions occurring in the stratosphere with OH, $\\mathrm { O } ( ^ { 1 } \\mathrm { D } )$ , and Cl were determined from sample observations (Röckmann et al., 2011). However, since our model doesn’t consider each stratospheric sink separately, the effective stratospheric sink is parameterised as a first-order sink in the hemispheric boxes with a pseudo KIE that mimics the stratospheric removal processes (see Rockmann et al., 2011; also explained below). This parameterisation allows the model to account for the influence of stratospheric sinks on tropospheric CH₄ without explicitly modelling the stratosphere as a separate entity (Table 2). For tropospheric KIE, the DPT analysis was iterated over specified ranges of fractionation values (e.g., 1.005–1.0076 for $^ { 1 3 } \\mathrm { C }$ , with a step size of 0.0002) and calculated the RMSE for all combinations, identifying the lowest RMSE values as the best candidates (Fig. S9). ",
+        "bbox": [
+            115,
+            267,
+            884,
+            780
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            510,
+            939
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "image",
+        "img_path": "images/dee87da5acc95507c51dbce06435cce21bc07f9530a8d8317aa1db4d24512c78.jpg",
+        "image_caption": [
+            "Figure S9: Range of KIE signatures for $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ derived from DPT tests with RMSE $< 0 . 1$ "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            122,
+            85,
+            880,
+            283
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "measured in the model output (between atmospheric observations and posterior results) ",
+        "bbox": [
+            198,
+            333,
+            800,
+            347
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Pseudo-KIE Calculation Process ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            85,
+            356,
+            98
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "1. Stratospheric Fractionation Factor (epsilon) ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            105,
+            455,
+            119
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Using the formula: $\\begin{array} { r l } & { \\epsilon _ { s } = 1 / \\mathrm { K I E s } - 1 } \\\\ & { \\mathrm { ~ \\ ~ \\bullet ~ \\quad ~ F o r ~ ^ { 1 3 } C : } } \\\\ & { \\epsilon _ { s } ^ { 1 3 \\mathrm { C } } = 1 / 1 . 0 1 4 7 - 1 = 0 . 9 8 5 5 - 1 = - 0 . 0 1 4 5 } \\\\ & { \\mathrm { ~ \\ ~ \\bullet ~ \\quad ~ F o r ~ ^ { 2 } H : } } \\\\ & { \\epsilon _ { s } ^ { 2 \\mathrm { H } } = 1 / 1 . 1 3 7 - 1 = 0 . 8 7 9 3 - 1 = - 0 . 1 2 0 7 } \\end{array}$ These align with the previously calculated values. ",
+        "bbox": [
+            174,
+            124,
+            517,
+            264
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "2. Effective Fractionation Factor (epsilon effective) ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            270,
+            487,
+            285
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Using the formula for effective fractionation: $\\epsilon _ { \\mathrm { e f f } } { = } \\mathrm { l n } ( \\delta _ { \\mathrm { e f f } } / \\delta _ { 0 } ) / \\ln ( \\mathrm { f f _ { t r o p \\_ s i n k } } )$   \nwith:   \n$\\mathrm { f _ { t r o p \\_ s i n k } = ( t o t a l \\ s o u r c e s - s i n k ) / }$ total sources ",
+        "bbox": [
+            178,
+            290,
+            484,
+            369
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "• Given: Total sources $= 7 0 3 \\mathrm { T g }$ /year, Stratospheric $\\mathrm { s i n k } = 3 1 \\mathrm { T g } / \\mathrm { y } \\epsilon$ ear, $\\mathrm { f _ { t r o p \\_ s i n k } = ( 7 0 3 - 3 1 ) / 7 0 3 = 0 . 9 5 6 }$ For $^ { 1 3 } \\mathrm { C }$ : Using $\\mathrm { K I E s } { = } 1 . 0 1 4 7$ , $\\epsilon _ { \\mathrm { s } } ^ { ~ 1 3 \\mathrm { C } } = \\ln ( 1 . 0 1 4 7 ) ~ / \\ln ( 0 . 9 5 6 ) = 0 . 0 1 4 6 ~ / - 0 . 0 4 5 2 = - 0 . 3 2 3$ For $^ 2 \\mathrm { H }$ : Using KIE $\\mathord { \\mathrm { s } } = 1 . 1 3 7$ , $\\epsilon _ { \\mathrm { s } } ^ { \\mathrm { 2 H } } = \\ln ( 1 . 1 3 7 ) / \\ln ( 0 . 9 5 6 ) = 0 . 1 2 8 6 / - 0 . 0 4 5 2 = - 2 . 8 4 7$ ",
+        "bbox": [
+            206,
+            375,
+            630,
+            574
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "3. Adjusting the KIE Values ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            580,
+            324,
+            595
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "The adjusted KIE incorporates the effective fractionation $( \\epsilon _ { \\mathrm { e f f } } )$ to modify the observed fractionation. ",
+        "bbox": [
+            142,
+            600,
+            825,
+            616
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "For ${ \\mathrm { K I E } } _ { \\mathrm { a d j u s t e d } }$ , we add $\\epsilon _ { \\mathrm { e f f } }$ to the original KIEs.• For 13C:  \n${ \\mathrm { K I E } } { \\mathrm { a d j u s t e d } } ^ { 1 3 \\mathrm { C } } = 1 . 0 1 4 7 - 0 . 0 0 0 3 2 3 = 1 . 0 1 4 4$ For 2H:  \n$\\mathrm { K I E _ { a d j u s t e d } } ^ { 2 \\mathrm { H } } = 1 . 1 3 7 - 0 . 0 0 2 8 4 7 = 1 . 1 3 3$ ",
+        "bbox": [
+            147,
+            622,
+            463,
+            720
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Final Adjusted KIE Values ",
+        "text_level": 1,
+        "bbox": [
+            149,
+            726,
+            347,
+            741
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "img_path": "images/9c110c6d2644e0d1f423d1a495e4001b9e73c463151a11d43a1266040f86e54f.jpg",
+        "text": "$$\n\\begin{array} { r l } { \\cdot } & { { } \\mathrm { K I E } ^ { 1 3 \\mathrm { C } } = 1 . 0 1 4 4 } \\\\ { \\cdot } & { { } \\mathrm { K I E } ^ { 2 \\mathrm { H } } = 1 . 1 3 3 } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            184,
+            745,
+            322,
+            783
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "10. Isotopic Constraints on the Inversion ",
+        "text_level": 1,
+        "bbox": [
+            121,
+            85,
+            413,
+            99
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Three inversion setups were tested: dual‐isotope $\\mathrm { ( C H _ { 4 } + \\delta ^ { 1 3 } C - C H _ { 4 } + \\delta D ) }$ ), carbon‐only $\\mathrm { ( C H } _ { 4 } + \\delta ^ { 1 3 } \\mathrm { C } \\mathrm { ) }$ , and hydrogen‐only $\\mathrm { C H } _ { 4 } + \\delta \\mathrm { D } _ { \\mathit { i } } ^ { \\mathit { \\Pi } }$ . All inversions utilise the same two-box framework, DPT-optimized source signatures, sink KIEs, and prior uncertainties. To evaluate each inversion’s performance, we calculate residuals, defined as the difference between the modelled and observed isotopic values. Lower residuals indicate that the inversion better reproduces the measured data. ",
+        "bbox": [
+            117,
+            111,
+            884,
+            237
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "The optimised source signatures from our DPT framework (Table 1), particularly the $+ 3 \\text{‰}$ enrichment in wetland $\\delta \\mathrm { D }$ relative to literature values, suggest that field-based isotopic characterisation may underrepresent emissions from enriched tropical wetland environments. While our residual analysis (Fig. S10) shows that dual-isotope inversions achieve superior fits for both tracers (mean $\\delta ^ { 1 3 } \\mathrm { C }$ residual $- 0 . 0 5 \\text{‰}$ ; $\\delta \\mathrm { D }$ residual $- 0 . 1 8 \\text{ textperthousand}$ ), systematic biases remain in specific periods, highlighting the need for expanded high-frequency isotopic observations, particularly in tropical and mid-latitude regions where source characterisation uncertainties are largest. ",
+        "bbox": [
+            117,
+            256,
+            884,
+            437
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "image",
+        "img_path": "images/fc942f5cadde04d1c6d0f905997b9cabe0fbe2788a4f1d5d23ab193b76cfe30f.jpg",
+        "image_caption": [
+            "Figure S10: Histogram of residuals (modelled minus observed) for the 3 inversion setups (rows) calculated for the 2 isotopic tracers (columns). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            121,
+            467,
+            878,
+            824
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "table",
+        "img_path": "images/d0e48ed61854d266e9423b942f50834ac33dbbac9c15878faf8fb3fb756c7b20.jpg",
+        "table_caption": [
+            "11. Prior and posterior Flux Statistics (1994–2022). Growth is defined as the difference between the 1993- 95 and 2021-23 averages. ",
+            "Table S4: Prior and posterior Flux Statistics (1994–2022). Growth is defined as the difference between the 1993-95 and 2021- 23 averages. "
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"3\"></td><td colspan=\"2\">SH</td><td rowspan=\"2\">NH Growth</td><td rowspan=\"2\">Global Mean ± SD (Tg)</td><td rowspan=\"2\">Global Growtl</td></tr><tr><td>Iteration</td><td>Source</td><td>SH Mean ± SD (Tg)</td><td>Growth (Tg)</td><td>NH Mean ± SD (Tg)</td></tr><tr><td>Prior</td><td>wetlands</td><td>97.5 ± 3.9</td><td>9.8</td><td>123.5 ± 7.5</td><td>(Tg) 20.3</td><td>221.1 ± 10.1</td><td>(Tg) 30.1</td></tr><tr><td>Prior</td><td>agriculture</td><td>31.3 ± 2.7</td><td>7.6</td><td>104.5 ± 5.9</td><td>14.7</td><td>135.7 ± 8.4</td><td>22.3</td></tr><tr><td>Prior</td><td>pyrogenic</td><td>12.0 ± 5.1</td><td>-5.0</td><td>25.5 ± 3.4</td><td>-3.0</td><td>37.5 ± 6.3</td><td>-8.0</td></tr><tr><td>Prior</td><td>fossil</td><td>11.8 ± 2.0</td><td>7.1</td><td>93.6 ± 12.8</td><td>36.9</td><td>105.4 ± 14.7</td><td>44</td></tr><tr><td>Prior</td><td>waste</td><td>12.2 ± 1.9</td><td>6.4</td><td>68.3 ± 7.1</td><td>22.7</td><td>80.5 ± 9.0</td><td>29.1</td></tr><tr><td>Dual isotope</td><td>wetlands</td><td>106.5 ± 7.4</td><td>19.2</td><td>111.3 ± 8.7</td><td>16.1</td><td>217.8 ± 13.9</td><td>35.3</td></tr><tr><td>Dual isotope</td><td>agriculture</td><td>31.8± 2.9</td><td>9</td><td>96.4± 5.9</td><td>5.8</td><td>128.1 ± 7.5</td><td>14.8</td></tr><tr><td>Dual isotope</td><td>pyrogenic</td><td>12.6± 5.8</td><td>-5.6</td><td>27.1 ± 4.5</td><td>-6.0</td><td>39.7 ± 7.6</td><td>-11.6</td></tr><tr><td>Dual isotope</td><td>fossil</td><td>12.0 ± 2.0</td><td>7.4</td><td>96.3 ± 6.2</td><td>13.3</td><td>108.4 ± 7.9</td><td>20.7</td></tr><tr><td>Dual isotope</td><td>waste</td><td>12.4 ± 1.9</td><td>6.7</td><td>67.7 ± 5.7</td><td>16.7</td><td>80.1 ± 7.5</td><td>23.4</td></tr><tr><td>Dual isotope</td><td>sink</td><td>9.3 ± 0.1</td><td>0.3</td><td>9.0± 0.1</td><td>-0.2</td><td>9.1 ± 0.1</td><td>-0.1</td></tr><tr><td>Carbon only</td><td>wetlands</td><td>106.5 ± 7.5</td><td>20.5</td><td>110.3 ± 8.1</td><td>12.1</td><td>216.8 ± 13.3</td><td>32.6</td></tr><tr><td>Carbon only</td><td> agriculture</td><td>31.8± 3.0</td><td>9.4</td><td>96.2 ± 5.9</td><td>7.5</td><td>128.0± 7.8</td><td>16.9</td></tr><tr><td>Carbon only</td><td>pyrogenic</td><td>12.6 ± 5.9</td><td>-5.8</td><td>27.1 ± 4.6</td><td>-6.4</td><td>39.7 ± 7.9</td><td>-12.1</td></tr><tr><td>Carbon only</td><td>fossil</td><td>12.1 ± 2.1</td><td>7.4</td><td>98.0 ± 9.0</td><td>21.3</td><td>110.1 ± 10.7</td><td>28.7</td></tr><tr><td>Carbon only</td><td>waste</td><td>12.4 ± 1.9</td><td>6.7</td><td>67.5 ± 5.5</td><td>16.1</td><td>79.9 ± 7.3</td><td>22.8</td></tr><tr><td>Carbon only</td><td>sink</td><td>9.3 ± 0.1</td><td>0.2</td><td>9.0 ± 0.2</td><td>-0.4</td><td>9.1 ± 0.1</td><td>-0.2</td></tr><tr><td>Hydrogen only</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Hydrogen only</td><td>wetlands agriculture</td><td>107.5 ± 7.1 32.2 ± 3.0</td><td>18.9 9.1</td><td>113.1 ± 8.9 99.3 ± 5.7</td><td>16.9 5.8</td><td>220.7 ± 13.7 131.5 ± 7.6</td><td>35.8</td></tr><tr><td>Hydrogen only</td><td> pyrogenic</td><td>12.3 ± 5.6</td><td>-5.5</td><td>26.1 ± 4.3</td><td>-5.9</td><td>38.4± 7.4</td><td>14.8 -11.3</td></tr><tr><td>Hydrogen only</td><td>fossil</td><td>12.0 ± 2.0</td><td>7.4</td><td>96.6 ± 5.8</td><td>11.9</td><td>108.6 ± 7.4</td><td>19.2</td></tr><tr><td>Hydrogen only</td><td></td><td>12.4 ± 1.9</td><td>6.7</td><td>66.7 ± 5.5</td><td>16.4</td><td>79.1 ± 7.3</td><td></td></tr><tr><td>Hydrogen only</td><td>waste sink</td><td>9.3 ± 0.1</td><td>0.3</td><td>8.9± 0.1</td><td>-0.2</td><td>9.1 ± 0.1</td><td>23.1 -0.1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Error-scaled Error-scaled</td><td>wetlands</td><td>101.1 ± 4.5</td><td>13.1</td><td>119.4 ± 7.1</td><td>18.5</td><td>220.4 ± 10.3</td><td>31.5</td></tr><tr><td>Error-scaled</td><td>agriculture</td><td>32.4 ± 2.9</td><td>9.3</td><td>96.8 ± 6.3</td><td>5.4</td><td>129.3 ± 7.8</td><td>14.7</td></tr><tr><td>Error-scaled</td><td> pyrogenic</td><td>12.5 ± 5.7</td><td>-5.5</td><td>26.4 ± 4.5</td><td>-5.9</td><td>38.9 ± 7.5</td><td>-11.4</td></tr><tr><td></td><td>fossil</td><td>12.2 ± 2.1</td><td>7.6</td><td>98.7 ± 6.8</td><td>13.5</td><td>110.9 ± 8.4</td><td>21.1</td></tr><tr><td>Error-scaled Error-scaled</td><td>waste sink</td><td>12.5 ± 1.9 9.5 ± 0.2</td><td>6.9</td><td>65.2 ± 5.6 8.8± 0.2</td><td>15.5</td><td>77.7 ± 7.3 9.1 ± 0.1</td><td>22.4 0.0</td></tr><tr><td></td><td></td><td></td><td>0.5</td><td></td><td>-0.2</td><td></td><td></td></tr><tr><td>DPT-ensemble</td><td>wetlands</td><td>107.8 ± 7.4</td><td>19.1</td><td>114.7 ± 8.7</td><td>14.4</td><td>222.6 ± 13.8</td><td>33.5</td></tr><tr><td>DPT-ensemble</td><td>agriculture</td><td>32.3 ± 2.9</td><td>8.9</td><td>99.8 ± 5.6</td><td>3</td><td>132.0 ± 7.2</td><td>12</td></tr><tr><td>DPT-ensemble</td><td>pyrogenic</td><td>12.2 ± 5.4</td><td>-5.3</td><td>26.0 ± 4.1</td><td>-5.2</td><td>38.2 ± 7.0</td><td>-10.5</td></tr><tr><td>DPT-ensemble</td><td>fossil</td><td>12.0 ± 2.0</td><td>7.4</td><td>94.5 ± 5.6</td><td>10.8</td><td>106.5 ± 7.2</td><td>18.2</td></tr><tr><td>DPT-ensemble</td><td>waste</td><td>12.4 ± 1.9</td><td>6.7</td><td>66.8 ± 5.8</td><td>16.8</td><td>79.1 ± 7.6</td><td>23.5</td></tr><tr><td>DPT-ensemble</td><td>sink</td><td>9.3 ± 0.2</td><td>0.3</td><td>8.9 ± 0.1</td><td>-0.2</td><td>9.1 ± 0.1</td><td>-0.1</td></tr></table>",
+        "bbox": [
+            92,
+            148,
+            924,
+            749
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "12. Hemispheric plots for figures 3 and 4; $\\mathbf { C H _ { 4 } }$ -only inversion results in figure 5 ",
+        "text_level": 1,
+        "bbox": [
+            117,
+            85,
+            690,
+            99
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/b626a050e1a4f4c70ac4b8514ab60fbf5516c9bdf21afe13abf19978a718cbc6.jpg",
+        "image_caption": [
+            "Figure 12.S3: (Hemispheric): Prior (black) and posterior (coloured) emissions and sink lifetime values, with NH "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            127,
+            108,
+            878,
+            570
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "in $\\cdot _ { + } ,$ markers and SH in ‘o’ markers, modelled by the two-box inversion computed for 3 inversion scenarios: ",
+        "bbox": [
+            119,
+            621,
+            870,
+            636
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "(i) $\\mathrm { C H } _ { 4 } + \\delta ^ { 1 3 } \\mathrm { C } + \\delta \\mathrm { D }$ , (ii) $\\mathrm { C H } _ { 4 } + \\delta ^ { 1 3 } \\mathrm { C }$ , and (iii) $\\mathrm { C H } _ { 4 } + \\delta \\mathrm { D }$ . The spin-up and spin-down periods have a shaded background, and the analysis period is unshaded. ",
+        "bbox": [
+            132,
+            647,
+            872,
+            691
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "image",
+        "img_path": "images/f533cd37671f32ad6e7a3efc3c931aa28715428862c36b64f5b5f687dcae2722.jpg",
+        "image_caption": [
+            "Figure 12.S4: Prior (black; with NH in $\\cdot _ { + } ,$ markers and SH in ‘o’ markers) and posterior (NH – blue, SH – red) "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            124,
+            86,
+            878,
+            465
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "emission rates and lifetime computed from the optimised values derived from sensitivity tests ${ \\tt < } 0 . 1$ RMSE). These values are calculated based on the ensemble mean of the DPT-optimised model output, which is the result of comparing the posterior tracers (CH₄, $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ , and δD-CH₄) with atmospheric observational data. The optimised emission rates and lifetime represent the model’s best estimates of CH₄ sources and sinks, refined to minimise the difference between simulated and observed tracer values. The spin-up and spin-down periods have a shaded background, and the analysis period is unshaded. ",
+        "bbox": [
+            119,
+            497,
+            882,
+            668
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            510,
+            939
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "image",
+        "img_path": "images/0e86c6ab43133bb55dfbd1b50c7b4663ab9b497839133c70d03a2ba60f4d355e.jpg",
+        "image_caption": [
+            "Hemispheric and Global Revisions for Methane Sources "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            121,
+            97,
+            880,
+            363
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "image",
+        "img_path": "images/c75749ec619dfc1e5e4aff57fa344e434ba09a723bbe92be57c21edcd33e6261.jpg",
+        "image_caption": [
+            "Hemispheric and Global Revisions for Methane Lifetime "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            122,
+            377,
+            865,
+            494
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "Fig. 12.S5: Top panel: Hemispheric and global revisions w.r.t the priors (Posteriorgrowth – Priorgrowth) of the growth in emissions by sector (wetlands, agriculture, waste, fossil, pyrogenic) in teragrams $( \\mathrm { T g } )$ . Growth is defined as the difference between the 1993-95 and 2021-23 averages. Bottom panel: hemispheric and global revisions for CH₄ lifetime (in years). Apart from not being able to reproduce the atmospheric measurements of $\\delta ^ { 1 3 } \\mathrm { C - C H } { 4 }$ and δD-CH₄, the χ(CH₄)-only inversion also shows the maximum disagreement with the Priors compared to all other inversion scenarios in both sources and lifetime, suggesting that $\\chi ( \\mathrm { C H } 4 )$ -only inversion inadequately budgets the global CH₄ burden. ",
+        "bbox": [
+            126,
+            504,
+            878,
+            685
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "References ",
+        "text_level": 1,
+        "bbox": [
+            119,
+            86,
+            200,
+            98
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Allan, W., Lowe, D. C., Gomez, A. J., Struthers, H., and Brailsford, G. W.: Interannual variation of 13C in tropospheric methane: Implications for a possible atomic chlorine sink in the marine boundary layer, J. Geophys. Res.-Atmos., 110, D11306, https://doi.org/10.1029/2004JD005650, 2005. ",
+        "bbox": [
+            117,
+            98,
+            843,
+            140
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Anderson, D. C., Duncan, B. N., Fiore, A. M., Baublitz, C. B., Follette-Cook, M. B., Nicely, J. M., and Wolfe, G. M.: Spatial and temporal variability in the hydroxyl (OH) radical: understanding the role of large-scale climate features and their influence on OH through its dynamical and photochemical drivers, Atmos. Chem. Phys., 21, 6481–6508, https://doi.org/10.5194/acp-21-6481-2021, 2021. ",
+        "bbox": [
+            119,
+            153,
+            865,
+            207
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Basu, S., Lan, X., Dlugokencky, E., Michel, S., Schwietzke, S., Miller, J. B., Bruhwiler, L., Oh, Y., Tans, P. P., Apadula, F., Gatti, L. V., Jordan, A., Necki, J., Sasakawa, M., Morimoto, S., Di Iorio, T., Lee, H., Arduini, J., and Manca, G.: Estimating emissions of methane consistent with atmospheric measurements of methane and δ13C of methane, Atmos. Chem. Phys., 22, 15351–15377, https://doi.org/10.5194/acp-22-15351-2022, 2022. ",
+        "bbox": [
+            117,
+            220,
+            870,
+            276
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Bellisario, L. M., Bubier, J. L., Moore, T. R., and Chanton, J. P.: Controls on CH4 emissions from a northern peatland, Global Biogeochem. Cy., 13, 81–91, https://doi.org/10.1029/1998GB900021, 1999. ",
+        "bbox": [
+            117,
+            288,
+            858,
+            318
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Bousquet, P., Ciais, P., Miller, J. B., Dlugokencky, E. J., Hauglustaine, D. A., Prigent, C., Van der Werf, G. R., Peylin, P., Brunke, E. G., Carouge, C., and Langenfelds, R. L.: Contribution of anthropogenic and natural sources to atmospheric methane variability, Nature, 443, 439–443, https://doi.org/10.1038/nature05132, 2006. ",
+        "bbox": [
+            117,
+            330,
+            872,
+            372
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Bousquet, P., Ringeval, B., Pison, I., Dlugokencky, E. J., Brunke, E. G., Carouge, C., Chevallier, F., Fortems-Cheiney, A., Frankenberg, C., Hauglustaine, D. A., Krummel, P. B., Langenfelds, R. L., Ramonet, M., Schmidt, M., Steele, L. P., Szopa, S., Yver, C., Viovy, N., and Ciais, P.: Source attribution of the changes in atmospheric methane for 2006–2008, Atmos. Chem. Phys., 11, 3689–3700, https://doi.org/10.5194/acp-11-3689-2011, 2011. ",
+        "bbox": [
+            117,
+            384,
+            873,
+            440
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Brownlow, R., Lowry, D., Fisher, R. E., France, J. L., Lanoisellé, M., White, B., Wooster, M. J., Zhang, T., and Nisbet, E. G.: Isotopic Ratios of Tropical Methane Emissions by Atmospheric Measurement: Tropical Methane δ13C Source Signatures, Global Biogeochem. Cy., 31, 1408–1419, https://doi.org/10.1002/2017GB005689, 2017. ",
+        "bbox": [
+            119,
+            453,
+            873,
+            508
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Cantrell, C. A., Shetter, R. E., McDaniel, A. H., Calvert, J. G., Davidson, J. A., Lowe, D. C., Tyler, S. C., Cicerone, R. J., and Greenberg, J. P.: Carbon kinetic isotope effect in the oxidation of methane by the hydroxyl radical, J. Geophys. Res., 95, 22455–22462, https://doi.org/10.1029/JD095iD13p22455, 1990. ",
+        "bbox": [
+            119,
+            521,
+            870,
+            564
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Chandra, N., Patra, P. K., Fujita, R., Höglund-Isaksson, L., Umezawa, T., Goto, D., Morimoto, S., Vaughn, B. H., and Röckmann, T.: Methane emissions decreased in fossil fuel exploitation and sustainably increased in microbial source sectors during 1990–2020, Commun. Earth Environ., 5, 147, https://doi.org/10.1038/s43247- 024-01296-3, 2024. ",
+        "bbox": [
+            119,
+            576,
+            867,
+            631
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Chang, J., Peng, S., Ciais, P., Saunois, M., Dangal, S. R. S., Herrero, M., Havlík, P., Tian, H., and Bousquet, P.: Revisiting enteric methane emissions from domestic ruminants and their δ13CCH4 source signature, Nat. Commun., 10, 3420, https://doi.org/10.1038/s41467-019-11066-3, 2019. ",
+        "bbox": [
+            117,
+            644,
+            872,
+            686
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Dasgupta, B., Menoud, M., van der Veen, C., Levin, I., Moossen, H., Englund Michel, S., Sperlich, P., Morimoto, S., Fujita, R., Umezawa, T., Platt, S. M., Groot Zwaaftink, C., Lund Myhre, C., Fisher, R., Lowry, D., Nisbet, E., France, J., Woolley Maisch, C., Brailsford, G., Moss, R., Goto, D., Pandey, S., Houweling, S., Warwick, N., and Röckmann, T.: Harmonised and offset corrected methane isotopic composition (CH4, 13CH4, D2H_CH4) from high northern and southern latitudes, ICOS Data Portal [data set], https://doi.org/10.18160/V1Y4-NTK0, 2025. ",
+        "bbox": [
+            119,
+            698,
+            875,
+            782
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Dasgupta, B., Menoud, M., van der Veen, C., Levin, I., Veidt, C., Moossen, H., Englund Michel, S., Sperlich, P., Morimoto, S., Fujita, R., Umezawa, T., Platt, S. M., Groot Zwaaftink, C., Lund Myhre, C., Fisher, R., Lowry, D., Nisbet, E., France, J., Woolley Maisch, C., Brailsford, G., Moss, R., Goto, D., Pandey, S., Houweling, S., Warwick, N., and Röckmann, T.: Harmonisation of methane isotope ratio measurements from different laboratories using atmospheric samples, EGUsphere [preprint], https://doi.org/10.5194/egusphere-2024-3986, 2025. ",
+        "bbox": [
+            117,
+            794,
+            862,
+            877
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Dlugokencky, E. J., Crotwell, A. M., Mund, J. W., Crotwell, M. J., and Thoning, K. W.: Atmospheric Methane Dry Air Mole Fractions from the NOAA ESRL Carbon Cycle Cooperative Global Air Sampling Network, 1983- 2018, Version: 2019-07, NOAA [data set], 2019. ",
+        "bbox": [
+            117,
+            84,
+            880,
+            127
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Douglas, P. M. J., Stratigopoulos, E., Park, S., and Phan, D.: Geographic variability in freshwater methane hydrogen isotope ratios and its implications for global isotopic source signatures, Biogeosciences, 18, 3505– 3527, https://doi.org/10.5194/bg-18-3505-2021, 2021. ",
+        "bbox": [
+            115,
+            138,
+            860,
+            181
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Drinkwater, A., Palmer, P. I., Feng, L., Arnold, T., Lan, X., Michel, S. E., Parker, R., and Boesch, H.: Atmospheric data support a multi-decadal shift in the global methane budget towards natural tropical emissions, Atmos. Chem. Phys., 23, 8429–8452, https://doi.org/10.5194/acp-23-8429-2023, 2023. ",
+        "bbox": [
+            117,
+            193,
+            878,
+            236
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "European Commission, Joint Research Centre (EC-JRC)/Netherlands Environmental Assessment Agency (PBL): Emissions Database for Global Atmospheric Research (EDGAR), May 2021. ",
+        "bbox": [
+            117,
+            248,
+            842,
+            277
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Fujita, R., Graven, H., Zazzeri, G., Hmiel, B., Petrenko, V. V., Smith, A. M., Michel, S. E., and Morimoto, S.: Global fossil methane emissions constrained by multi-isotopic atmospheric methane histories, J. Geophys. Res.- Atmos., 130, e2024JD041266, https://doi.org/10.1029/2024JD041266, 2025. ",
+        "bbox": [
+            117,
+            288,
+            877,
+            332
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Fujita, R., Morimoto, S., Maksyutov, S., Kim, H.-S., Arshinov, M., Brailsford, G., Aoki, S., and Nakazawa, T.: Global and Regional CH4 Emissions for 1995–2013 Derived From Atmospheric CH4, δ13C-CH4, and δD-CH4 Observations and a Chemical Transport Model, J. Geophys. Res.-Atmos., 125, e2020JD032903, https://doi.org/10.1029/2020JD032903, 2020. ",
+        "bbox": [
+            117,
+            343,
+            877,
+            399
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Ganesan, A. L., Stell, A. C., Gedney, N., Comyn-Platt, E., Hayman, G., Rigby, M., Poulter, B., and Hornibrook, E. R. C.: Spatially Resolved Isotopic Source Signatures of Wetland Methane Emissions, Geophys. Res. Lett., 45, 3737–3745, https://doi.org/10.1002/2018GL077536, 2018. ",
+        "bbox": [
+            117,
+            412,
+            877,
+            454
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Gromov, S.: CH4-OH reaction weighted troposphere temperature, April 2022. ",
+        "bbox": [
+            119,
+            466,
+            647,
+            482
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Gupta, M., Tyler, S., and Cicerone, R.: Modeling atmospheric δ13CH4 and the causes of recent changes in atmospheric CH4 amounts, J. Geophys. Res.-Atmos., 101, 22923–22932, https://doi.org/10.1029/96JD02386, 1996. ",
+        "bbox": [
+            121,
+            494,
+            865,
+            535
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Hausmann, P., Sussmann, R., and Smale, D.: Contribution of oil and natural gas production to renewed increase in atmospheric methane (2007–2014): Top–down estimate from ethane and methane column observations, Atmos. Chem. Phys., 16, 3227–3244, https://doi.org/10.5194/acp-16-3227-2016, 2016. ",
+        "bbox": [
+            117,
+            548,
+            873,
+            590
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Hodson, E. L., Poulter, B., Zimmermann, N. E., Prigent, C., and Kaplan, J. O.: The El Niño-Southern Oscillation and wetland methane interannual variability, Geophys. Res. Lett., 38, L08810, https://doi.org/10.1029/2011GL046861, 2011. ",
+        "bbox": [
+            119,
+            603,
+            811,
+            646
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Höglund-Isaksson, L., Gómez-Sanabria, A., Klimont, Z., Rafaj, P., and Schöpp, W.: Technical potentials and costs for reducing global anthropogenic methane emissions in the 2050 timeframe–results from the GAINS model, Environ. Res. Commun., 2, 025004, https://doi.org/10.1088/2515-7620/ab7457, 2020. ",
+        "bbox": [
+            117,
+            657,
+            862,
+            700
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Holmes, C. D., Prather, M. J., Søvde, O. A., and Myhre, G.: Future methane, hydroxyl, and their uncertainties: Key climate and emission parameters for future predictions, Atmos. Chem. Phys., 13, 285–302, https://doi.org/10.5194/acp-13-285-2013, 2013. ",
+        "bbox": [
+            119,
+            712,
+            862,
+            755
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Holton, J. R., Haynes, P. H., McIntyre, M. E., Douglass, A. R., Rood, R. B., and Pfister, L.: Stratosphere-Troposphere exchange, Rev. Geophys., 33, 403–439, https://doi.org/10.1029/95RG02097, 1995. ",
+        "bbox": [
+            114,
+            767,
+            833,
+            796
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Hornibrook, E. R. and Bowes, H. L.: Trophic status impacts both the magnitude and stable carbon isotope composition of methane flux from peatlands, Geophys. Res. Lett., 34, L21401, https://doi.org/10.1029/2007GL031231, 2007. ",
+        "bbox": [
+            119,
+            808,
+            835,
+            850
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Hornibrook, E. R.: The stable carbon isotope composition of methane produced and emitted from northern peatlands, in: Carbon cycling in northern peatlands, edited by: Bastviken, A. J., Crill, P., Tranvik, L. J., Geophys. Monogr. Ser., 184, 187–203, AGU, Washington, D.C., 2009. ",
+        "bbox": [
+            115,
+            863,
+            836,
+            904
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Houweling, S., Bergamaschi, P., Chevallier, F., Heimann, M., Kaminski, T., Krol, M., Michalak, A. M., and Patra, P.: Global inverse modeling of CH4 sources and sinks: An overview of methods, Atmos. Chem. Phys., 17, 235–256, https://doi.org/10.5194/acp-17-235-2017, 2017.   \nHouweling, S., Dentener, F., and Lelieveld, J.: Simulation of preindustrial atmospheric methane to constrain the global source strength of natural wetlands, J. Geophys. Res.-Atmos., 105, 17243–17255,   \nhttps://doi.org/10.1029/2000JD900193, 2000.   \nHu, H., Geng, G., Xu, R., Liu, Y., Shi, Q., Xiao, Q., Liu, X., Zheng, B., Zhang, Q., and He, K.: Notable uncertainties in near real-time CO2 emission estimates in China, npj Clim. Atmos. Sci., 8, 108,   \nhttps://doi.org/10.1038/s41612-025-00932-8, 2025.   \nIEA: Fossil fuel supply, IEA, Paris, https://www.iea.org/reports/fossil-fuel-supply, Licence: CC BY 4.0, 2023. Inness, A., Ades, M., Agustí-Panareda, A., Barré, J., Benedictow, A., Blechschmidt, A.-M., Dominguez, J. J., Engelen, R., Eskes, H., Flemming, J., Huijnen, V., Jones, L., Kipling, Z., Massart, S., Parrington, M., Peuch, V.- H., Razinger, M., Remy, S., Schulz, M., and Suttie, M.: The CAMS reanalysis of atmospheric composition, Atmos. Chem. Phys., 19, 3515–3556, https://doi.org/10.5194/acp-19-3515-2019, 2019.   \nJackson, R. B., Saunois, M., Bousquet, P., Canadell, J. G., Poulter, B., Stavert, A. R., Bergamaschi, P., Niwa, Y., Segers, A., and Tsuruta, A.: Increasing anthropogenic methane emissions arise equally from agricultural and fossil fuel sources, Environ. Res. Lett., 15, 071002, https://doi.org/10.1088/1748-9326/ab9ed2, 2020.   \nKai, F. M., Tyler, S. C., Randerson, J. T., and Blake, D. R.: Reduced methane growth rate explained by decreased Northern Hemisphere microbial sources, Nature, 476, 194–197, https://doi.org/10.1038/nature10259, 2011.   \nKangasaho, V., Tsuruta, A., Backman, L., Mäkinen, P., Houweling, S., Segers, A., Krol, M., Dlugokencky, E. J., Michel, S., White, J. W., and Aalto, T.: The Role of Emission Sources and Atmospheric Sink in the Seasonal Cycle of CH4 and δ13-CH4: Analysis Based on the Atmospheric Chemistry Transport Model TM5,   \nAtmosphere, 13, 888, https://doi.org/10.3390/atmos13060888, 2022.   \nKirschke, S., Bousquet, P., Ciais, P., Saunois, M., Canadell, J. G., Dlugokencky, E. J., Bergamaschi, P., Bergmann, D., Blake, D. R., Bruhwiler, L., Cameron-Smith, P., Castaldi, S., Chevallier, F., Feng, L., Fraser, A., Heimann, M., Hodson, E. L., Houweling, S., Josse, B., Fraser, P. J., Krummel, P. B., Lamarque, J.-F., Langenfelds, R. L., Le Quéré, C., Naik, V., O'Doherty, S., Palmer, P. I., Pison, I., Plummer, D., Poulter, B., Prinn, R. G., Rigby, M., Ringeval, B., Santini, M., Schmidt, M., Shindell, D. T., Simpson, I. J., Spahni, R., Steele, L. P., Strode, S. A., Sudo, K., Szopa, S., van der Werf, G. R., Voulgarakis, A., van Weele, M., Weiss, R. F., Williams, J. E., and Zeng, G.: Three decades of global methane sources and sinks, Nat. Geosci., 6, 813–823, https://doi.org/10.1038/ngeo1955, 2013.   \nLamarque, J.-F., Bond, T. C., Eyring, V., Granier, C., Heil, A., Klimont, Z., Lee, D., Liousse, C., Mieville, A., Owen, B., Schultz, M. G., Shindell, D., Smith, S. J., Stehfest, E., Van Aardenne, J., Cooper, O. R., Kainuma, M., Mahowald, N., McConnell, J. R., Naik, V., Riahi, K., and van Vuuren, D. P.: Historical (1850–2000) gridded anthropogenic and biomass burning emissions of reactive gases and aerosols: Methodology and application, Atmos. Chem. Phys., 10, 7017–7039, https://doi.org/10.5194/acp-10-7017-2010, 2010.   \nLambert, G. and Schmidt, S.: Reevaluation of the oceanic flux of methane: Uncertainties and long term variations, Chemosphere, 26, 579–589, https://doi.org/10.1016/0045-6535(93)90443-9, 1993.   \nLan, X., Basu, S., Schwietzke, S., Bruhwiler, L. M. P., Dlugokencky, E. J., Michel, S. E., Sherwood, O. A., Tans, P. P., Thoning, K., Etiope, G., Zhuang, Q., Liu, L., Oh, Y., Miller, J. B., Pétron, G., Vaughn, B. H., and Crippa, M.: Improved Constraints on Global Methane Emissions and Sinks Using δ13C-CH4, Global Biogeochem. Cy., 35, e2021GB007000, https://doi.org/10.1029/2021GB007000, 2021.   \nLin, X., Peng, S., Ciais, P., Hauglustaine, D., Lan, X., Liu, G., Ramonet, M., Xi, Y., Yin, Y., Zhang, Z., and Bösch, H.: Recent methane surges reveal heightened emissions from tropical inundated areas, Nat. Commun., 15, 10894, https://doi.org/10.1038/s41467-024-55373-5, 2024. ",
+        "bbox": [
+            109,
+            70,
+            877,
+            900
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            510,
+            939
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Liu, Z., Guan, D., Wei, W., Davis, S. J., Ciais, P., Bai, J., Peng, S., Zhang, Q., Hubacek, K., Marland, G., Andres, R. J., Crawford-Brown, D., Lin, J., Zhao, H., Hong, C., Boden, T. A., Feng, K., Peters, G. P., Xi, F., Liu, J., Li, Y., Zhao, Y., Zeng, N., and He, K.: Reduced carbon emission estimates from fossil fuel combustion and cement production in China, Nature, 524, 335–338, https://doi.org/10.1038/nature14677, 2015. ",
+        "bbox": [
+            115,
+            84,
+            870,
+            140
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "McNorton, J., Wilson, C., Gloor, M., Parker, R. J., Boesch, H., Feng, W., Hossaini, R., and Chipperfield, M. P.: Attribution of recent increases in atmospheric methane through 3-D inverse modelling, Atmos. Chem. Phys., 18, 18149–18168, https://doi.org/10.5194/acp-18-18149-2018, 2018. ",
+        "bbox": [
+            115,
+            153,
+            875,
+            194
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Menoud, M., Van Der Veen, C., Lowry, D., Fernandez, J. M., Bakkaloglu, S., France, J. L., Fisher, R. E., Maazallahi, H., Stanisavljević, M., Nęcki, J., Vinkovic, K., Łakomiec, P., Rinne, J., Korbeń, P., Schmidt, M., Defratyka, S., Yver-Kwok, C., Andersen, T., Chen, H., and Röckmann, T.: Global inventory of the stable isotopic composition of methane surface emissions, augmented by new measurements in Europe, Earth Syst. Sci. Data Discuss. [preprint], https://doi.org/10.5194/essd-2022-30, in review, 2022. ",
+        "bbox": [
+            119,
+            206,
+            860,
+            276
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Michel, S. E., Lan, X., Miller, J., Tans, P., Clark, J. R., Schaefer, H., Sperlich, P., Brailsford, G., Morimoto, S., Moossen, H., Li, J., Pétron, G., Crotwell, A., Andrews, A., Thoning, K., Kofler, J., Hall, B., Moglia, E., Madronich, M., Umezawa, T., and White, J. W. C.: Rapid shift in methane carbon isotopes suggests microbial emissions drove record high atmospheric methane growth in 2020–2022, P. Natl. Acad. Sci. USA, 121, e2411212121, https://doi.org/10.1073/pnas.2411212121, 2024. ",
+        "bbox": [
+            117,
+            288,
+            870,
+            358
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Mikaloff Fletcher, S. E., Tans, P. P., Bruhwiler, L. M., Miller, J. B., and Heimann, M.: CH4 sources estimated from atmospheric observations of CH4 and its 13C/12C isotopic ratios: 1. Inverse modeling of source processes, Global Biogeochem. Cy., 18, GB4004, https://doi.org/10.1029/2004GB002223, 2004. ",
+        "bbox": [
+            119,
+            370,
+            880,
+            414
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Monteil, G., Houweling, S., Dlugockenky, E. J., Maenhout, G., Vaughn, B. H., White, J. W. C., and Röckmann, T.: Interpreting methane variations in the past two decades using measurements of CH4 mixing ratio and isotopic composition, Atmos. Chem. Phys., 11, 9141–9153, https://doi.org/10.5194/acp-11-9141-2011, 2011. ",
+        "bbox": [
+            117,
+            426,
+            877,
+            467
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Myhre, G., Shindell, D., Bréon, F.-M., Collins, W., Fuglestvedt, J., Huang, J., Koch, D., Lamarque, J.-F., Lee, D., Mendoza, B., Nakajima, T., Robock, A., Stephens, G., Takemura, T., and Zhang, H.: Anthropogenic and Natural Radiative Forcing, in: Climate Change 2013: The Physical Science Basis. Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change, edited by: Stocker, T. F., Qin, D., Plattner, G.-K., Tignor, M., Allen, S. K., Boschung, J., Nauels, A., Xia, Y., Bex, V., and Midgley, P. M., Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA, 659–740, 2014. ",
+        "bbox": [
+            117,
+            479,
+            878,
+            564
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Naus, S., Montzka, S. A., Pandey, S., Basu, S., Dlugokencky, E. J., and Krol, M.: Constraints and biases in a tropospheric two-box model of OH, Atmos. Chem. Phys., 19, 407–424, https://doi.org/10.5194/acp-19-407- 2019, 2019. ",
+        "bbox": [
+            117,
+            576,
+            858,
+            617
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Nisbet, E. G., Dlugokencky, E. J., Manning, M. R., Lowry, D., Fisher, R. E., France, J. L., Michel, S. E., Miller, J. B., White, J. W. C., Vaughn, B., Bousquet, P., Pyle, J. A., Warwick, N. J., Cain, M., Brownlow, R., Zazzeri, G., Lanoisellé, M., Manning, A. C., Gloor, E., Worthy, D. E. J., Brunke, E.-G., Labuschagne, C., Wolff, E. W., and Ganesan, A. L.: Rising atmospheric methane: 2007-2014 growth and isotopic shift, Global Biogeochem. Cy., 30, 1356–1370, https://doi.org/10.1002/2016GB005406, 2016. ",
+        "bbox": [
+            117,
+            630,
+            875,
+            700
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Nisbet, E. G., Manning, M. R., Dlugokencky, E. J., Fisher, R. E., Lowry, D., Michel, S. E., Lund Myhre, C., Platt, S. M., Allen, G., Bousquet, P., Brownlow, R., Cain, M., France, J. L., Hermansen, O., Hossaini, R., Jones, A. E., Levin, I., Manning, A. C., Myhre, G., Pyle, J. A., Vaughn, B. H., Warwick, N. J., and White, J. W. C.: Very Strong Atmospheric Methane Growth in the 4 Years 2014–2017: Implications for the Paris Agreement, Global Biogeochem. Cy., 33, 318–342, https://doi.org/10.1029/2018GB006009, 2019. ",
+        "bbox": [
+            117,
+            713,
+            873,
+            782
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "NOAA ESRL GMD CCGG Group: Earth System Research Laboratory Carbon Cycle and Greenhouse Gases Group Flask-Air Sample Measurements of CH4 at Global and Regional Background Sites, 1967-Present, NOAA [data set], 2019. ",
+        "bbox": [
+            119,
+            794,
+            857,
+            837
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Pérez-Barbería, F. J.: Scaling methane emissions in ruminants and global estimates in wild populations, Sci.   \nTotal Environ., 579, 1572–1580, https://doi.org/10.1016/j.scitotenv.2016.11.175, 2017. ",
+        "bbox": [
+            117,
+            850,
+            850,
+            878
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Prather, M. J., Holmes, C. D., and Hsu, J.: Reactive greenhouse gas scenarios: Systematic exploration of uncertainties and the role of atmospheric chemistry, Geophys. Res. Lett., 39, L09803, https://doi.org/10.1029/2012GL051440, 2012. ",
+        "bbox": [
+            117,
+            85,
+            826,
+            127
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Prinn, R., Weiss, R., Krummel, P., O'Doherty, S., and Muhle, J.: The ALE/GAGE/AGAGE Network (DB1001), Carbon Dioxide Information Analysis Center (CDIAC), Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States), https://doi.org/10.3334/CDIAC/atg.db1001, 2008. ",
+        "bbox": [
+            114,
+            138,
+            877,
+            181
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Qu, Z., Jacob, D. J., Bloom, A. A., Worden, J. R., Parker, R. J., and Boesch, H.: Inverse modeling of 2010–2022 satellite observations shows that inundation of the wet tropics drove the 2020–2022 methane surge, P. Natl. Acad. Sci. USA, 121, e2402730121, https://doi.org/10.1073/pnas.2402730121, 2024. ",
+        "bbox": [
+            119,
+            193,
+            875,
+            236
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Ramsden, A. E., Ganesan, A. L., Western, L. M., Rigby, M., Manning, A. J., Foulds, A., France, J. L., Barker, P., Levy, P., Say, D., and Wisher, A.: Quantifying fossil fuel methane emissions using observations of atmospheric ethane and an uncertain emission ratio, Atmos. Chem. Phys., 22, 3911–3929, https://doi.org/10.5194/acp-22-3911-2022, 2022. ",
+        "bbox": [
+            117,
+            248,
+            865,
+            304
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Reeburgh, W. S., Hirsch, A. I., Sansone, F. J., Popp, B. N., and Rust, T. M.: Carbon kinetic isotope effect accompanying microbial oxidation of methane in boreal forest soils, Geochim. Cosmochim. Ac., 61, 4761– 4767, https://doi.org/10.1016/S0016-7037(97)00277-9, 1997. ",
+        "bbox": [
+            119,
+            315,
+            855,
+            359
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Rice, A. L., Butenhoff, C. L., Teama, D. G., Röger, F. H., Khalil, M. A. K., and Rasmussen, R. A.: Atmospheric methane isotopic record favors fossil sources flat in 1980s and 1990s with recent increase, P. Natl. Acad. Sci. USA, 113, 10791–10796, https://doi.org/10.1073/pnas.1522923113, 2016. ",
+        "bbox": [
+            117,
+            370,
+            877,
+            414
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Riddell-Young, B., Michel, S. E., Lan, X., Tans, P., Röckmann, T., Dasgupta, B., Oh, Y., Bruhwiler, L. M. P., Fujita, R., Umezawa, T., Morimoto, S., and Miller, J. B.: Microbial driver of 2006–2023 CH₄ growth indicated by trends in atmospheric δD-CH₄ and $\\delta ^ { 1 3 } \\mathrm { C }$ -CH₄, P. Natl. Acad. Sci. USA, in press, 2025. ",
+        "bbox": [
+            117,
+            426,
+            870,
+            467
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Rigby, M., Manning, A. J., and Prinn, R. G.: The value of high-frequency high-precision methane isotopologue measurements for source and sink estimation, J. Geophys. Res.-Atmos., 117, D12312, https://doi.org/10.1029/2011JD017384, 2012. ",
+        "bbox": [
+            119,
+            479,
+            873,
+            522
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Röckmann, T., Brass, M., Borchers, R., and Engel, A.: The isotopic composition of methane in the stratosphere: High-altitude balloon sample measurements, Atmos. Chem. Phys., 11, 13287–13304, https://doi.org/10.5194/acp-11-13287-2011, 2011. ",
+        "bbox": [
+            117,
+            535,
+            872,
+            578
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Sanderson, M. G.: Biomass of termites and their emissions of methane and carbon dioxide: A global database, Global Biogeochem. Cy., 10, 543–557, https://doi.org/10.1029/96GB01893, 1996. ",
+        "bbox": [
+            115,
+            590,
+            867,
+            618
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Sapart, C. J., Martinerie, P., Witrant, E., Chappellaz, J., van de Wal, R. S., Sperlich, P., van der Veen, C., Bernard, S., Sturges, W. T., Blunier, T., Schwander, J., Etheridge, D., and Steele, P.: Can the carbon isotopic composition of methane be reconstructed from multi-site firn air measurements?, Atmos. Chem. Phys., 13, 6993–7005, https://doi.org/10.5194/acp-13-6993-2013, 2013. ",
+        "bbox": [
+            117,
+            630,
+            863,
+            687
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Saueressig, G., Bergamaschi, P., Crowley, J. N., Fischer, H., and Harris, G. W.: Carbon kinetic isotope effect in the reaction of CH4 with Cl atoms, Geophys. Res. Lett., 22, 1225–1228, https://doi.org/10.1029/95GL00881, 1995. ",
+        "bbox": [
+            117,
+            698,
+            873,
+            741
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Saueressig, G., Bergamaschi, P., Crowley, J. N., Fischer, H., and Harris, G. W.: D/H kinetic isotope effect in the reaction $\\mathrm { C H } 4 + \\mathrm { C l }$ , Geophys. Res. Lett., 23, 3619–3622, https://doi.org/10.1029/96GL03292, 1996. ",
+        "bbox": [
+            114,
+            754,
+            878,
+            782
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Saueressig, G., Crowley, J. N., Bergamaschi, P., Brühl, C., Brenninkmeijer, C. A. M., and Fischer, H.: Carbon 13 and D kinetic isotope effects in the reactions of CH4 with O(1D) and OH: New laboratory measurements and their implications for the isotopic composition of stratospheric methane, J. Geophys. Res.-Atmos., 106, 23127– 23138, https://doi.org/10.1029/2000JD000120, 2001. ",
+        "bbox": [
+            119,
+            794,
+            877,
+            850
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Saunois, M., Bousquet, P., Poulter, B., Peregon, A., Ciais, P., Canadell, J. G., Dlugokencky, E. J., Etiope, G., Bastviken, D., Houweling, S., Janssens-Maenhout, G., Tubiello, F. N., Castaldi, S., Jackson, R. B., Alexe, M., Arora, V. K., Beerling, D. J., Bergamaschi, P., Blake, D. R., Brailsford, G., Brovkin, V., Bruhwiler, L., ",
+        "bbox": [
+            119,
+            863,
+            865,
+            906
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Crevoisier, C., Crill, P., Covey, K., Curry, C., Frankenberg, C., Gedney, N., Höglund-Isaksson, L., Ishizawa, M., Ito, A., Joos, F., Kim, H.-S., Kleinen, T., Krummel, P., Lamarque, J.-F., Langenfelds, R., Locatelli, R., Machida, T., Maksyutov, S., McDonald, K. C., Marshall, J., Melton, J. R., Morino, I., Naik, V., O'Doherty, S., Parmentier, F.-J. W., Patra, P. K., Peng, C., Peng, S., Peters, G. P., Pison, I., Prigent, C., Prinn, R., Ramonet, M., Riley, W. J., Saito, M., Santini, M., Schroeder, R., Simpson, I. J., Spahni, R., Steele, P., Takizawa, A., Thornton, B. F., Tian, H., Tohjima, Y., Viovy, N., Voulgarakis, A., van Weele, M., van der Werf, G. R., Weiss, R., Wiedinmyer, C., Wilton, D. J., Wiltshire, A., Worthy, D., Wunch, D., Xu, X., Yoshida, Y., Zhang, B., Zhang, Z., and Zhu, Q.: The global methane budget 2000–2012, Earth Syst. Sci. Data, 8, 697–751, https://doi.org/10.5194/essd-8-697-2016, 2016. ",
+        "bbox": [
+            117,
+            84,
+            877,
+            207
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Saunois, M., Martinez, A., Poulter, B., Zhang, Z., Raymond, P. A., Regnier, P., Canadell, J. G., Jackson, R. B., Patra, P. K., Bousquet, P., Ciais, P., Dlugokencky, E. J., Lan, X., Allen, G. H., Bastviken, D., Beerling, D. J., Belikov, D. A., Blake, D. R., Castaldi, S., Crippa, M., Deemer, B. R., Dennison, F., Etiope, G., Gedney, N., Höglund-Isaksson, L., Holgerson, M. A., Hopcroft, P. O., Hugelius, G., Ito, A., Jain, A. K., Janardanan, R., Johnson, M. S., Kleinen, T., Krummel, P. B., Lauerwald, R., Li, T., Liu, X., McDonald, K. C., Melton, J. R., Mühle, J., Müller, J., Murguia-Flores, F., Niwa, Y., Noce, S., Pan, S., Parker, R. J., Peng, C., Ramonet, M., Riley, W. J., Rocher-Ros, G., Rosentreter, J. A., Sasakawa, M., Segers, A., Smith, S. J., Stanley, E. H., Thanwerdas, J., Tian, H., Tsuruta, A., Tubiello, F. N., Weber, T. S., van der Werf, G. R., Worthy, D. E. J., Xi, Y., Yoshida, Y., Zhang, W., Zheng, B., Zhu, Q., Zhu, Q., and Zhuang, Q.: Global Methane Budget 2000–2020, Earth Syst. Sci. Data, 17, 1873–1958, https://doi.org/10.5194/essd-17-1873-2025, 2025. ",
+        "bbox": [
+            119,
+            219,
+            870,
+            358
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Saunois, M., Stavert, A. R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R. B., Raymond, P. A., Dlugokencky, E. J., Houweling, S., Patra, P. K., Ciais, P., Arora, V. K., Bastviken, D., Bergamaschi, P., Blake, D. R., Brailsford, G., Bruhwiler, L., Carlson, K. M., Carrol, M., Castaldi, S., Chandra, N., Crevoisier, C., Crill, P. M., Covey, K., Curry, C. L., Etiope, G., Frankenberg, C., Gedney, N., Hegglin, M. I., Höglund-Isaksson, L., Hugelius, G., Ishizawa, M., Ito, A., Janssens-Maenhout, G., Jensen, K. M., Joos, F., Kleinen, T., Krummel, P. B., Langenfelds, R. L., Laruelle, G. G., Liu, L., Machida, T., Maksyutov, S., McDonald, K. C., McNorton, J., Miller, P. A., Melton, J. R., Morino, I., Müller, J., Murguia-Flores, F., Naik, V., Niwa, Y., Noce, S., O'Doherty, S., Parker, R. J., Peng, C., Peng, S., Peters, G. P., Prigent, C., Prinn, R., Ramonet, M., Regnier, P., Riley, W. J., Rosentreter, J. A., Segers, A., Simpson, I. J., Shi, H., Smith, S. J., Steele, L. P., Thornton, B. F., Tian, H., Tohjima, Y., Tubiello, F. N., Tsuruta, A., Viovy, N., Voulgarakis, A., Weber, T. S., van Weele, M., van der Werf, G. R., Weiss, R. F., Worthy, D., Wunch, D., Yin, Y., Yoshida, Y., Zhang, W., Zhang, Z., Zhao, Y., Zheng, B., Zhu, Q., Zhu, Q., and Zhuang, Q.: The Global Methane Budget 2000–2017, Earth Syst. Sci. Data, 12, 1561–1623, https://doi.org/10.5194/essd-12-1561-2020, 2020. ",
+        "bbox": [
+            117,
+            370,
+            875,
+            551
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Schaefer, H., Fletcher, S. E. M., Veidt, C., Lassey, K. R., Brailsford, G. W., Bromley, T. M., Dlugokencky, E. J., Michel, S. E., Miller, J. B., Levin, I., Lowe, D. C., Martin, R. J., Vaughn, B. H., and White, J. W. C.: A 21stcentury shift from fossil-fuel to biogenic methane emissions indicated by 13CH4, Science, 352, 80–84, https://doi.org/10.1126/science.aad2705, 2016. ",
+        "bbox": [
+            117,
+            562,
+            877,
+            617
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Schwietzke, S., Sherwood, O. A., Bruhwiler, L. M. P., Miller, J. B., Etiope, G., Dlugokencky, E. J., Michel, S. E., Arling, V. A., Vaughn, B. H., White, J. W. C., and Tans, P. P.: Upward revision of global fossil fuel methane emissions based on isotope database, Nature, 538, 88–91, https://doi.org/10.1038/nature19797, 2016. ",
+        "bbox": [
+            117,
+            630,
+            877,
+            673
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Sherwood, O. A., Schwietzke, S., Arling, V. A., and Etiope, G.: Global Inventory of Gas Geochemistry Data from Fossil Fuel, Microbial and Burning Sources, version 2017, Earth Syst. Sci. Data, 9, 639–656, https://doi.org/10.5194/essd-9-639-2017, 2017. ",
+        "bbox": [
+            117,
+            685,
+            862,
+            728
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Shyamsundar, P., Springer, N. P., Tallis, H., Polasky, S., Jat, M. L., Sidhu, H. S., Krishnapriya, P. P., Skiba, N., Ginn, W., Ahuja, V., and Cummins, J.: Fields on fire: Alternatives to crop residue burning in India, Science, 365, 536–538, https://doi.org/10.1126/science.aaw4085, 2019. ",
+        "bbox": [
+            115,
+            739,
+            872,
+            782
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Sitch, S., Smith, B., Prentice, I. C., Arneth, A., Bondeau, A., Cramer, W., Kaplan, J. O., Levis, S., Lucht, W., Sykes, M. T., Thonicke, K., and Venevsky, S.: Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ dynamic global vegetation model, Glob. Change Biol., 9, 161–185, https://doi.org/10.1046/j.1365-2486.2003.00569.x, 2003. ",
+        "bbox": [
+            117,
+            794,
+            862,
+            850
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Snover, A. K. and Quay, P. D.: Hydrogen and carbon kinetic isotope effects during soil uptake of atmospheric methane, Global Biogeochem. Cy., 14, 25–39, https://doi.org/10.1029/1999GB900089, 2000. ",
+        "bbox": [
+            115,
+            863,
+            863,
+            891
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Spivakovsky, C. M., Logan, J. A., Montzka, S. A., Balkanski, Y. J., Foreman-Fowler, M., Jones, D. B. A., Horowitz, L. W., Fusco, A. C., Brenninkmeijer, C. A. M., Prather, M. J., and Wofsy, S. C.: Three-dimensional climatological distribution of tropospheric OH: Update and evaluation, J. Geophys. Res.-Atmos., 105, 8931– 8980, https://doi.org/10.1029/1999JD901006, 2000.   \nStavert, A. R., Saunois, M., Canadell, J. G., Poulter, B., Jackson, R. B., Regnier, P., Lauerwald, R., Raymond, P. A., Allen, G. H., Patra, P. K., and Bergamaschi, P.: Regional trends and drivers of the global methane budget, Glob. Change Biol., 28, 182–200, https://doi.org/10.1111/gcb.15901, 2022.   \nStell, A. C., Douglas, P. M. J., Rigby, M., and Ganesan, A. L.: The impact of spatially varying wetland source signatures on the atmospheric variability of δD-CH4, Philos. T. Roy. Soc. A, 379, 20200442,   \nhttps://doi.org/10.1098/rsta.2020.0442, 2021.   \nStevenson, D. S., Zhao, A., Naik, V., O'Connor, F. M., Tilmes, S., Zeng, G., Murray, L. T., Collins, W. J., Griffiths, P. T., Shim, S., Horowitz, L. W., Sentman, L. T., and Emmons, L.: Trends in global tropospheric hydroxyl radical and methane lifetime since 1850 from AerChemMIP, Atmos. Chem. Phys., 20, 12905–12920, https://doi.org/10.5194/acp-20-12905-2020, 2020.   \nStrode, S. A., Wang, J. S., Manyin, M., Duncan, B., Hossaini, R., Keller, C. A., Michel, S. E., and White, J. W.: Strong sensitivity of the isotopic composition of methane to the plausible range of tropospheric chlorine, Atmos. Chem. Phys., 20, 8405–8419, https://doi.org/10.5194/acp-20-8405-2020, 2020.   \nThanwerdas, J., Saunois, M., Berchet, A., Pison, I., and Bousquet, P.: Investigation of the renewed methane growth post-2007 with high-resolution 3-D variational inverse modeling and isotopic constraints, Atmos. Chem. Phys., 24, 2129–2167, https://doi.org/10.5194/acp-24-2129-2024, 2024.   \nThompson, R. L., Nisbet, E. G., Pisso, I., Stohl, A., Blake, D., Dlugokencky, E. J., Helmig, D., and White, J. W. C.: Variability in Atmospheric Methane From Fossil Fuel and Microbial Sources Over the Last Three Decades, Geophys. Res. Lett., 45, 11499–11508, https://doi.org/10.1029/2018GL078127, 2018.   \nThoning, K. W., Tans, P. P., and Komhyr, W. D.: Atmospheric carbon dioxide at Mauna Loa Observatory: 2. Analysis of the NOAA GMCC data, 1974-1985, J. Geophys. Res.-Atmos., 94, 8549–8565,   \nhttps://doi.org/10.1029/JD094iD06p08549, 1989.   \nTuretsky, M. R., Abbott, B. W., Jones, M. C., Anthony, K. W., Olefeldt, D., Schuur, E. A., Grosse, G., Kuhry, P., Hugelius, G., Koven, C., and Lawrence, D. M.: Carbon release through abrupt permafrost thaw, Nat. Geosci., 13, 138–143, https://doi.org/10.1038/s41561-019-0526-0, 2020.   \nTurner, A. J., Frankenberg, C., and Kort, E. A.: Interpreting contemporary trends in atmospheric methane, P. Natl. Acad. Sci. USA, 116, 2805–2813, https://doi.org/10.1073/pnas.1814297116, 2019.   \nTurner, A. J., Frankenberg, C., Wennberg, P. O., and Jacob, D. J.: Ambiguity in the causes for decadal trends in atmospheric methane and hydroxyl, P. Natl. Acad. Sci. USA, 114, 5367–5372,   \nhttps://doi.org/10.1073/pnas.1616020114, 2017.   \nTyler, S. C., Brailsford, G. W., Yagi, K., Minami, K., and Cicerone, R. J.: Seasonal variations in methane flux and δ13CH4 values for rice paddies in Japan and their implications, Global Biogeochem. Cy., 8, 1–12, https://doi.org/10.1029/93GB03123, 1994.   \nTyler, S. C., Rice, A. L., and Ajie, H. O.: Stable isotope ratios in atmospheric CH4: Implications for seasonal sources and sinks, J. Geophys. Res., 112, D03303, https://doi.org/10.1029/2006JD007231, 2007.   \nUmezawa, T., Brenninkmeijer, C. A. M., Röckmann, T., van der Veen, C., Tyler, S. C., Fujita, R., Morimoto, S., Aoki, S., Sowers, T., Schmitt, J., Bock, M., Beck, J., Fischer, H., Michel, S. E., Vaughn, B. H., Miller, J. B., White, J. W. C., Brailsford, G., Schaefer, H., Sperlich, P., Brand, W. A., Rothe, M., Blunier, T., Lowry, D., Fisher, R. E., Nisbet, E. G., Rice, A. L., Bergamaschi, P., Veidt, C., and Levin, I.: Interlaboratory comparison of δ13C and δD measurements of atmospheric CH4 for combined use of data sets from different laboratories, Atmos. Meas. Tech., 11, 1207–1231, https://doi.org/10.5194/amt-11-1207-2018, 2018. Uveges, B. T., Howarth, R. W., and Sparks, J. P.: Fossil fuel methane emissions likely underestimated in a model based on atmospheric delta(13)C trends, P. Natl. Acad. Sci. USA, 122, e2507837122,   \nhttps://doi.org/10.1073/pnas.2507837122, 2025.   \nvan Der Werf, G. R., Randerson, J. T., Giglio, L., Van Leeuwen, T. T., Chen, Y., Rogers, B. M., Mu, M., Van Marle, M. J., Morton, D. C., Collatz, G. J., Yokelson, R. J., and Kasibhatla, P. S.: Global fire emissions estimates during 1997–2016, Earth Syst. Sci. Data, 9, 697–720, https://doi.org/10.5194/essd-9-697-2017, 2017. van Herpen, M. M., Li, Q., Saiz-Lopez, A., Liisberg, J. B., Röckmann, T., Cuevas, C. A., Fernandez, R. P., Mak, J. E., Mahowald, N. M., Hess, P., and Meidan, D.: Photocatalytic chlorine atom production on mineral dust–sea spray aerosols over the North Atlantic, P. Natl. Acad. Sci. USA, 120, e2303974120,   \nhttps://doi.org/10.1073/pnas.2303974120, 2023.   \nVoulgarakis, A., Naik, V., Lamarque, J.-F., Shindell, D. T., Young, P. J., Prather, M. J., Wild, O., Field, R. D., Bergmann, D., Cameron-Smith, P., Cionni, I., Collins, W. J., Dalsøren, S. B., Doherty, R. M., Eyring, V., Faluvegi, G., Folberth, G. A., Horowitz, L. W., Josse, B., MacKenzie, I. A., Nagashima, T., Plummer, D. A., Righi, M., Rumbold, S. T., Stevenson, D. S., Strode, S. A., Sudo, K., Szopa, S., and Zeng, G.: Analysis of present day and future OH and methane lifetime in the ACCMIP simulations, Atmos. Chem. Phys., 13, 2563– 2587, https://doi.org/10.5194/acp-13-2563-2013, 2013.   \nWarwick, N. J., Cain, M. L., Fisher, R., France, J. L., Lowry, D., Michel, S. E., Nisbet, E. G., Vaughn, B. H., White, J. W., and Pyle, J. A.: Using δ13C-CH4 and δD-CH4 to constrain Arctic methane emissions, Atmos. Chem. Phys., 16, 14891–14908, https://doi.org/10.5194/acp-16-14891-2016, 2016.   \nWhite, J. W. C., Vaughn, B. H., and Michel, S. E.: Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA ESRL Carbon Cycle Cooperative Global Air Sampling Network, 1998-2017, Version: 2021- 05-28, NOAA [data set], 2018.   \nWorden, J. R., Bloom, A. A., Pandey, S., Jiang, Z., Worden, H. M., Walker, T. W., Houweling, S., and Röckmann, T.: Reduced biomass burning emissions reconcile conflicting estimates of the post-2006   \natmospheric methane budget, Nat. Commun., 8, 2227, https://doi.org/10.1038/s41467-017-02246-0, 2017. Yu, X., Dasgupta, B., Michel, S. E., Miller, J. B., Lan, X., Basu, S., Morimoto, S., Fujita, R., Goto, D., and Röckmann, T.: Isotope evidence for changing methane sources at high northern latitudes, P. Natl. Acad. Sci. USA, submitted, 2025. ",
+        "bbox": [
+            115,
+            28,
+            882,
+            888
+        ],
+        "page_idx": 33
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            115,
+            74,
+            870,
+            568
+        ],
+        "page_idx": 34
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            489,
+            927,
+            509,
+            939
+        ],
+        "page_idx": 34
+    }
+]

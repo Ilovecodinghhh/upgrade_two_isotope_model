@@ -1,0 +1,1358 @@
+[
+    {
+        "type": "text",
+        "text": "QAGU.PUBLICATIONS ",
+        "text_level": 1,
+        "bbox": [
+            302,
+            99,
+            691,
+            141
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "JGR-Atmospheres ",
+        "bbox": [
+            424,
+            167,
+            573,
+            185
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Supporting Information for ",
+        "bbox": [
+            390,
+            204,
+            607,
+            222
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Global fossil methane emissions constrained by multi-isotopic atmospheric methane histories ",
+        "text_level": 1,
+        "bbox": [
+            228,
+            239,
+            766,
+            286
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Ryo Fujita1,2\\*, Heather Graven1 , Giulia Zazzeri1,3, Benjamin Hmiel4, 5, Vasilii V. Petrenko4 , Andrew M. Smith6 , Sylvia E. Michel7 , Shinji Morimoto8 ",
+        "bbox": [
+            191,
+            301,
+            810,
+            338
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Affiliations: ",
+        "text_level": 1,
+        "bbox": [
+            449,
+            361,
+            549,
+            377
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1 Department of Physics, Imperial College London, London, United Kingdom 2 Meteorological Research Institute, Japan Meteorological Agency, Tsukuba, Japan 3 Ricerca sul Sistema Energetico (RSE), Milan, Italy 4 Department of Earth and Environmental Sciences, University of Rochester, Rochester, NY, USA 5 Environmental Defense Fund, NY, USA 6 Centre for Accelerator Science, Australian Nuclear Science and Technology Organisation (ANSTO), Lucas Heights, Australia 7 Institute of Arctic and Alpine Research, University of Colorado, Boulder, Colorado, USA 8 Center for Atmospheric and Oceanic Studies, Graduate School of Science, Tohoku University, Sendai, Japan ",
+        "bbox": [
+            98,
+            383,
+            901,
+            578
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "\\*Corresponding author. Email: ryo.fujita $@$ mri-jma.go.jp ",
+        "bbox": [
+            276,
+            587,
+            725,
+            604
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Contents of this file ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            659,
+            282,
+            678
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Text S1 Figures S1 to S13 Tables S1 to S5 SI References ",
+        "bbox": [
+            147,
+            685,
+            292,
+            779
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "1 ",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Text S1. Supplementary Text ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            90,
+            379,
+            112
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Isotope definition ",
+        "text_level": 1,
+        "bbox": [
+            89,
+            137,
+            238,
+            154
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The definition of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ are: ",
+        "bbox": [
+            148,
+            160,
+            503,
+            178
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "img_path": "images/62d526c67098795deecb2d4bac065b050eec267eecfd82ca1c3f0ba09e3ca0f4.jpg",
+        "text": "$$\n\\delta ^ { 1 3 } C = \\left( \\frac { \\left( \\frac { 1 3 } { 1 2 } C H _ { 4 } \\right) _ { s a m p l e } } { \\left( \\frac { 1 3 } { 1 2 } C \\right) _ { V P D B } } - 1 \\right) \\times 1 , 0 0 0\n$$",
+        "text_format": "latex",
+        "bbox": [
+            308,
+            184,
+            632,
+            275
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "img_path": "images/f4a1b08d021f2f1e4b743addfc49930781c6499b4d5ab4f81b954f59b2083078.jpg",
+        "text": "$$\n\\delta D = \\left( \\frac { \\left( \\frac { C H _ { 3 } D } { C H _ { 4 } } \\right) _ { s a m p l e } } { \\left( \\frac { D } { H } \\right) _ { V S M O W } } - 1 \\right) \\times 1 , 0 0 0\n$$",
+        "text_format": "latex",
+        "bbox": [
+            318,
+            280,
+            619,
+            356
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "where subscript “sample” denotes the sample, and Vienna Pee Dee belemnite (VPDB) represents the international standard for $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , with $^ { 1 3 } \\mathrm { C } / ^ { 1 2 } \\mathrm { C }$ of $1 , 1 2 3 . 7 2 \\times 1 0 ^ { - 5 }$ (Craig, 1957), and the Vienna standard mean ocean water (VSMOW) for $\\delta \\mathrm { D - C H } _ { 4 }$ , with $\\mathrm { D } / \\mathrm { H }$ of $1 5 5 . 7 6 \\times 1 0 ^ { - 6 }$ (Hagemann et al., 1970). ",
+        "bbox": [
+            89,
+            361,
+            883,
+            434
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The definition of $\\Delta ^ { 1 4 } \\mathrm { C - C H } 4$ is following Lassey et al. (2007) as: ",
+        "bbox": [
+            148,
+            438,
+            653,
+            457
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "img_path": "images/38f1471f3d65a4be0e115c7998f108b970c20ebb6c773542066d4689b59efdd5.jpg",
+        "text": "$$\n\\Delta ^ { 1 4 } C = \\left( \\frac { A _ { S N } } { A _ { a b s } } - 1 \\right) \\times 1 , 0 0 0\n$$",
+        "text_format": "latex",
+        "bbox": [
+            334,
+            468,
+            571,
+            508
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "img_path": "images/496d66548ea45142e32d25ee537ee4add7cfe17aeb8fa4fddfd2252ae7e656a3.jpg",
+        "text": "$$\nA _ { S N } = A _ { S } \\left( \\frac { 0 . 9 7 5 } { 1 + \\delta ^ { 1 3 } C / 1 , 0 0 0 } \\right) ^ { 2 }\n$$",
+        "text_format": "latex",
+        "bbox": [
+            326,
+            529,
+            576,
+            577
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "where $A _ { a b s }$ is the “absolute international standard activity” of $0 . 2 2 6 0 \\pm 0 . 0 0 1 2 \\mathrm { B q g C ^ { - 1 } }$ (Stuiver, 1980), Bq is Becquerel, or disintegrations per second equates to $4 3 3 . 2 \\times 1 0 ^ { - 1 5 } \\mathrm { m o l e } ( ^ { 1 4 } \\mathrm { C } )$ , and $A _ { S N }$ is the “normalized” sample activity (assumed to be corrected for “shelf” decay between sample collection and $^ { 1 4 } \\mathrm { C }$ analysis) expressed in terms of the measured activity $A _ { S }$ (i.e. $^ { 1 4 } \\mathrm { C H } _ { 4 } ,$ /total $\\mathrm { C H } _ { 4 }$ of sample) normalized to a $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ of $- 2 5 \\text{‰}$ (see Lassey et al. (2007) for more detail). ",
+        "bbox": [
+            89,
+            585,
+            901,
+            675
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Observation targets ",
+        "text_level": 1,
+        "bbox": [
+            89,
+            717,
+            259,
+            734
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We set atmospheric $\\mathrm { C H } _ { 4 }$ , $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $\\delta \\mathrm { D - C H } _ { 4 }$ , and $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ observational target ranges for 51 target years, 1750, 1850, 1900, 1950, 1960, and every year for 1970–2015 (Fig. S1 and Table S1). The mean and uncertainty of targets, for which the values were not prescribed, were linearly interpolated using the adjacent data. The atmospheric target year is assumed to be at 0:00 UTC, January 1st in each year; thus the annual observational targets are interpolated when adjacent annual mean data is available (e.g., target data at 2000.0 is derived from annal mean in 1999 $( \\mathrm { y e a r } = 1 9 9 9 . 5 )$ and in 2000 (year $=$ 2000.5)) (Table S1). Since the setting of atmospheric $\\mathrm { C H } _ { 4 }$ is already described in the main text, here we describe how atmospheric $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $\\delta \\mathrm { D - C H } _ { 4 }$ , and $\\Delta ^ { 1 4 } \\mathrm { C - C H } 4$ targets were constructed in more detail. ",
+        "bbox": [
+            89,
+            738,
+            906,
+            880
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Since the spatiotemporal coverages of these observations were limited before 1970s, especially for $\\delta \\mathrm { D - C H } _ { 4 }$ and $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ , it is difficult to reconstruct annual-basis global observational targets. Thus we adopted multi-decadal blocks of observational target before 1970. To reconstruct the global mean and uncertainty under the sparse data coverage, we often utilized the Arctic and Antarctic data as the boundary value of global tropospheric mean (see below). Although these approaches should weaken their actual observational constraints, we confirmed such historical targets can still constrain the average $\\mathrm { C H } _ { 4 }$ source and sink parameters, perticularly natural source parameters (see section 3.1 amd Fig. 4 in the main text). ",
+        "bbox": [
+            140,
+            882,
+            901,
+            901
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "2 ",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            89,
+            90,
+            892,
+            213
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The $\\delta ^ { 1 3 } \\mathrm { C - C H } 4$ target ranges over 1750–1900 and $\\delta \\mathrm { D - C H } _ { 4 }$ over 1750–1970 are assumed to be time-invariant, which are inferred from Antarctic ice-core and firn-air observational data in Ferretti et al. (2005) and Mischler et al. (2009). The target ranges are set to be wide, $[ - 5 0 , - 4 8 ] \\textdegree _ { 0 0 }$ for $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $[ - 1 1 5 , - 8 5 ] \\ : \\%$ for $\\delta \\mathrm { D - C H } _ { 4 }$ , respectively, considering the limited time and space representativeness of the observation, the inter-hemispheric differences in $\\delta ^ { 1 3 } \\mathrm { C } \\mathrm { - } \\mathrm { C H } _ { 4 } \\left( \\mathrm { - } 0 . 6 \\% \\right)$ and $ { \\delta \\mathrm { D - C H } _ { 4 } } \\left(  { - } 1 6 \\% \\right)$ (Beck et al., 2018), and their potential inter-laboratory measurement differences (Umezawa et al., 2018). For $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ over 1900-1970, a secular increasing trend, $0 . 0 1 5 \\text{‰}$ year, is estimated from the data in Ferretti et al. (2005), Mischler et al. (2009), and Rice et al. (2016). The linear trend is applied to the respective lower and upper bounds of the target from 1900 every 10 years to 1970. It is known that the atmospheric krypton (Kr) can led to biases in $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ during mass spectrometric measurements, estimated to be about $+ 0 . 4 \\text{‰}$ on Ferretti et al. (2005) and Mischler et al. (2009)’s $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ data (Schmitt et al., 2013). Also, Ferretti et al. (2005)’s data have not been corrected for diffusive fractionation in the firn air at Law Dome DE-08 site, estimated to be up to $- 0 . 4 \\text{‰}$ (the largest during the period of rapid atmospheric $\\mathrm { C H } _ { 4 }$ increase around 1970) (Sapart et al., 2013). Since our historical $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ target ranges are specified to be quite wide, allowing a wide range of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ trends over 1750–1970, we assume the potential biases for both $\\mathrm { K r }$ interference and diffusive fractionation in Ferretti et al. (2005) and Mischler et al. (2009)’s data are not significant in our analysis. ",
+        "bbox": [
+            88,
+            218,
+            903,
+            522
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For 1984–2013, annual mean globally averaged $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ data is taken from SI Figure 3 of Schwietzke et al. (2016), where INSTAAR $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ data is used for 1999–2013 (Michel et al., 2021) and NIWA $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ data is used for 1984–1998 (Schaefer et al., 2016) after unifying to INSTAAR $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ scale (see Schwietzke et al. (2016)). Before 1984, the global average is extrapolated until 1978 using northern hemispheric composite $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ trend in Rice et al. (2016) for 1978–1983 and the mean difference of the global averages from the nortern composite $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ for 1984–2009, $0 . 1 5 \\pm$ $0 . 0 4 \\text{‰}$ (1 SD). Note that the difference includes both the spatial representative difference and potential inter-laboratory measurement differences (Umezawa et al., 2018). ",
+        "bbox": [
+            88,
+            527,
+            906,
+            672
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For $\\delta \\mathrm { D - C H } _ { 4 }$ , the annual mean globally average is derived from global coverage observational network by Tohoku University (TU) for 2006–2013 (Fujita et al., 2020) and INSTAAR for 2006–2009 (except Black Sea, Romania, for the purpose of background site selection) (White et al., 2016) (see Fig. S1). The procedure for obtaining the global averages and uncertainties is as follows (updated from Turner et al. (2017) for obtaining global averages): ",
+        "bbox": [
+            89,
+            678,
+            906,
+            765
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "1. Compute annual averages of $\\delta \\mathrm { D - C H } _ { 4 }$ at each station using long-term trend to the observed data estimated by a digital-filtering technique (Nakazawa et al., 1997).   \n2. Group each annual mean record by 4 latitudinal bands: NET (Northern Extra Tropics: $3 0 ^ { \\circ } \\mathrm { N - }$ $9 0 ^ { \\circ } \\mathrm { N } )$ ), NTRO (Northern Tropics: $\\mathrm { E Q } { - } 3 0 ^ { \\circ } \\mathrm { N } )$ , STRO (Southern Tropics: $3 0 ^ { \\circ } \\mathrm { S }$ –EQ), and SET (Southern Extra Tropics: $9 0 ^ { \\circ } \\mathrm { S } { - } 3 0 ^ { \\circ } \\mathrm { S }$ ) and determine the number of sites in each latitude: nNET, nNTRO, nSTRO, and, nSET.   \n3. Randomly select $n \\chi \\chi$ sites from each latitudinal band with replacement.   \n4. Compute the zonal means in 4 latitudinal bands from the randomly selected nXX sites and derive global average by averaging the 4 zonal means.   \n5. Repeat 1000 times, yielding 1000 different global averages.   \n6. Compute the mean global average and standard deviation from the 1000 realizations. ",
+        "bbox": [
+            109,
+            768,
+            897,
+            900
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            111,
+            90,
+            905,
+            167
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "In step 4, a random error of $2 \\text{‰}$ (1 SD) is applied when generating the annual mean for each station as the inclusion of measurement uncertainty and spatial representativeness (White et al., 2016; Fujita et al., 2020). The shipboard data in the western Pacific region in Fujita et al. (2020) is combined into 4 latitudinal band $3 3 ^ { \\circ } \\mathrm { N } { - } 2 0 ^ { \\circ } \\mathrm { N }$ , $1 5 ^ { \\circ } \\mathrm { N - E Q }$ , $2 0 ^ { \\circ } \\mathrm { S } { - } 5 ^ { \\circ } \\mathrm { S }$ , and $4 0 ^ { \\circ } \\mathrm { S } { - } 2 5 ^ { \\circ } \\mathrm { S } )$ ), which are grouped into each latitudinal band in step 2 using their mean latitudes. There is no siginificant difference in global averages calculated from either TU or INSTAAR dataset for 2006–2009; thus we combine their data for 2006–2009 and the global averages from TU dataset for 2010–2013. Before 2005, the global average is extrapolated by averaging the NET and SET trends for 1995–2005 (Rice et al., 2016; Fujita et al., 2020) and incorporating the mean difference between global averages and NET and SET averages for 2006–2013 $( 1 . 5 \\pm 0 . 2 \\% 0 )$ . Additionally, the extrapolation includes the NET trend for 1978– 1994 (Rice et al., 2016) and the mean difference between global averages and NET for 2006–2013 (8.9 $\\pm \\ : 0 . 4 \\text{‰}$ . The potential inter-laboratory differences are added to Rice et al. (2016)’s $\\delta \\mathrm { D - C H } _ { 4 }$ data $( - 2 . 4$ $\\pm \\ : 1 . 6 \\text{‰}$ (Umezawa et al., 2018) to adjust to the TU $\\delta \\mathrm { D - C H } _ { 4 }$ scale (Fujita et al., 2020). ",
+        "bbox": [
+            88,
+            171,
+            905,
+            400
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The observational $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ targets for 1750–1970 are constructed using the Greenland and Antarctic ice-core and firn-air data in Hmiel et al. (2020). First, the measured data, whose mean age of air is around 25 years from 1750 and 1900 and around 10 years from 1950, 1960, 1970 are selected. Then, the target range in each target year is determined by using the minimum and maximum among these data—mean $\\pm 2$ SD of each data in Table S2 of Hmiel et al. (2020). Note that the target range is specified to be wider if the data number is less than three or the dataset does not contain both northern and southern hemispheric data, to take into account the limited spatiotemporal representativeness in the measured data over the period. Only one measurement at Summit, Greenland, is available in 1750, thus the target range is widened by mean $\\pm 4$ SD. No northern hemispheric data are available in 1950, thus the measured data at Summit whose mean age of air is 1966 are also used for the target range in 1950. Only one measurement in each hemisphere is available in 1960, thus the target range is widened to mean $\\pm 3$ SD. After the 1950s, there is a discernible increasing trend in $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ observed in both hemispheres, which is attributed to biospheric $^ { 1 4 } \\mathrm { C H } _ { 4 }$ emissions after the 1950s and NPP $^ { 1 4 } \\mathrm { C H } _ { 4 }$ emissions after the 1970s (Lassey et al., 2007; Hmiel et al., 2020). Following 1980, the availability of $\\Delta ^ { 1 4 } \\mathrm { C - C H _ { 4 } }$ data increases, allowing for the estimation of global averages and uncertainties through spline fitting applied to data from both the northern and southern hemispheres. To account for measurement uncertainties reported in Hmiel et al. (2020), the spline fit is iteratively applied to the data spanning from the 1950s to the 2010s, with uncertainties randomly sampled 5000 times assuming a Gaussian distribution. Subsequently, the global average is determined as the mean of the northern and southern hemispheric data for each year. The uncertainty (1 SD) of the global averages is specified as one quarter of the inter-polar difference of spline fit for each year, assuming that the global averages fall within the two polar values with $9 5 \\%$ CI. All the target ranges, constructed as above, encompass independent $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ measurements of firn air in Antarctica for 1940s–1970s and of air sampled globally for 1986–2000 in Lassey et al. (2007), except the data around 1976 $( \\sim 1 6 0 \\text{‰}$ , which exceeds our original upper bound at 1970 $(11 7 \\text{‰}$ . To cover a wider range considering the potential uncertainty of age of air both in Lassey et al. (2007) and Hmiel et al. (2020), we set $160 \\text{‰}$ as our upper bound at 1970 (see Table S1). ",
+        "bbox": [
+            88,
+            402,
+            906,
+            875
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "When we convert global mean surface mole fractions to global atmospheric burden using the conversion factor of $2 . 7 5 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { p p b } ^ { - 1 }$ (Prather et al. 2012), we did not account for the vertical gradient of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , dD- $\\mathrm { C H } _ { 4 }$ , $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ , as similar to previous isotope box model studies (e.g., Lassey et al. 2007; Schwietzke et al. 2016; Turner et al. 2017; Hmiel et al. 2020). Therefore, we assumed the same correction factor to account for reduced abundance in the stratosphere for $^ { 1 3 } \\mathrm { C H } _ { 4 }$ , $\\mathrm { C H } _ { 3 } \\mathrm { D }$ , and $^ { 1 4 } \\mathrm { C H } _ { 4 }$ as for total $\\mathrm { C H } _ { 4 }$ (“fill factor\"; see Prather et al. (2012)), although the potential mean differences of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $\\delta \\mathrm { D - C H } _ { 4 }$ , $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ between the stratosphere $\\mathord { \\sim } 1 8 \\mathrm { k m }$ altitudes in the mid latitudes) and surface are about $+ 1 . 7 \\text{‰}$ for $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $+ 2 5 \\text{‰}$ for $\\delta \\mathrm { D - C H } _ { 4 }$ and $- 5 5 \\text{‰}$ for $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ , respectively. Here, the stratospheric values for $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ were taken from Röckmann et al. (2011). No $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ data was available in the stratopshere, but since $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ cancels out isotopic fractionations due to loss processes, we can assume only the mean age of air in the stratosphere at 18 $\\mathrm { k m }$ (assumed to be 4 year; Waugh and Hall (2002)) would affect the mean difference from the tropospheric $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ . Therefore, the potential maximum difference of $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ between stratosphere and surface over the analysis period is ${ \\sim } 5 5 \\mathrm { ‰}$ in the latter 1960s when the most rapid changes in $\\Delta ^ { 1 4 } \\mathrm { C - C H } 4$ were observed (Fig. S1). Based on the above estimates and the mean air mass ratio between troposphere and stratosphere of 0.8 and 0.2 and corresponding $\\mathrm { C H } _ { 4 }$ mole fractions of 1800 and $1 5 5 0 \\mathrm { p p b }$ (equivalent to fill factor of 0.972; similar to Prather et al. (2012)’s estimate), the impact of potential biases using the same fill factor for $^ { 1 3 } \\mathrm { C H } _ { 4 }$ , $\\mathrm { C H } _ { 3 } \\mathrm { D }$ , and $^ { 1 4 } \\mathrm { C H } _ { 4 }$ with $\\mathrm { C H } _ { 4 }$ are estimated to be 0.3, 5, and $10 \\text{‰}$ for the global mean $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $\\delta \\mathrm { D - C H } _ { 4 }$ , $\\Delta ^ { 1 4 } \\mathrm { C - C H } 4$ , respectively. These are comparable to the uncertainties of our prescribed atmospheric targets and are within the range of potential inter-laboratory differences in these measurements, where we find they do not significantly affect our posterior source fraction estimates (Fig. S12). ",
+        "bbox": [
+            143,
+            877,
+            882,
+            896
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            88,
+            90,
+            903,
+            465
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Prior emission scenarios ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            507,
+            297,
+            525
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Table S2 shows our three a priori global $\\mathrm { C H } _ { 4 }$ source scenarios using CEDS (version 2017-05- 18) (Hoesly et al., 2018), EDGARv5.0 (Crippa et al., 2020) and EDGARv6.0 (Crippa et al., 2021), together with biomass burning (van Marle et al., 2017), natural biogenic (e.g., wetlands, freshwater) (Saunois et al. 2020) and geologic $\\mathrm { C H } _ { 4 }$ sources (Etiope & Schwietzke, 2019; Hmiel et al., 2020). Our definition of total anthropogenic fossil emissions include “residential, commercial, and other sectors” (RCO) (Hoesly et al., 2018), whereas Saunois et al. (2020) separated these sectors into biomass burning sources. Thus our prior total anthropogenic fossil emissions are reported to be ${ \\sim } 1 0 \\mathrm { T g / y r }$ higher than those summarized in Saunois et al. (2020) (and vice versa in biomass burning emissions). We have investigated the sensitivity by moving the RCO emissions from prior anthropogenic FF emissions to prior BB emissions and confirmed that the posterior FF fractions are within the range of our base simulation results (Fig S5). ",
+        "bbox": [
+            89,
+            534,
+            906,
+            724
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Comparison among different inventories ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            767,
+            434,
+            784
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The fugitive $\\mathrm { C H } _ { 4 }$ emission estimates in CEDS are based on EDGARv4.2 (Hoesly et al., 2018) and that EDGARv5.0 is based on EDGARv4.3.2 (Crippa et al., 2020), respectively, whose coal $\\mathrm { C H } _ { 4 }$ emissions in China is reported to be overestimated (e.g., Maasakkers et al. (2019)). The total FF emissions in China in EDGARv6.0 for 2003–2012 is calculated to be $2 4 . 7 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ , which is even $2 . 4 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ higher than those in EDGARv5.0. The difference is mostly explained by upward revision of coal emissions in China in EDGARv6.0, indicating that the overestimated China’s coal emission can still remain in EDGARv6.0. Similar overestimation in China is also seen when applied the United Nations Framework Convention on Climate Change (UNFCCC)-based emission inventories (Scarpelli et al., 2020) to the atmospheric $\\mathrm { C H } _ { 4 }$ inversion (Lu et al., 2021), although the global total anthropogenic emission estimates in UNFCCC are underestimated (IEA, 2022). The EDGARv7.0 is also available (https://edgar.jrc.ec.europa.eu/dataset_ghg70) (Crippa et al., 2022), but the values are almost the same as EDGARv6.0 until 2018 (Fig. 7). Also newer CEDS version 2021-04-21 is available (O'Rourke et al., 2021), which has higher fossil emissions than the version 2017-05-18 before 2000 but rather lowered after 2003 (Fig. 7). To investigate the robustness of our findings, further studies using other available prior emission inventories (Höglund-Isaksson et al., 2020; O'Rourke et al., 2021; IEA, 2022) are also required. ",
+        "bbox": [
+            89,
+            785,
+            892,
+            906
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "5 ",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            89,
+            89,
+            906,
+            247
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Spin-up procedure ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            294,
+            250,
+            311
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Our spin-up procedure consists of two steps. First, to initiate the spin-up, the first target year, 1750, was initially compared to the atmospheric values assuming steady state. These atmospheric values were computed by the initial parameter ensembles generated from their full initial ranges using Latin hypercube sampling. The initial ensembles were then resampled based on the likelihood function in 1750. Subsequently, new uniform distributions were created for each parameter, based on the minimum and maximum values from the resampled distributions. These bounds were expanded by $\\pm 2 \\%$ of the full initial ranges to encompass broader potential parameter solutions. Following this initial approximate optimization, a 50-yr spin-up simulation was further performed with the new parameter ensembles, during which all parameters were prescribed to be constant at their initial values. Finally, new ensembles were once again resampled based on the likelihood function in 1750. As a result of this two step procedure, the posterior ensembles are effectively determined while saving calculation time. ",
+        "bbox": [
+            88,
+            315,
+            903,
+            506
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Reported posterior distributions ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            553,
+            362,
+            569
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "We report annual posterior $\\mathrm { C H } _ { 4 }$ emissions and sinks and 20 parameter distributions for $1 7 5 0 -$ 2015 for the CEDS, EDGARv5, and v6 scenarios individually (Fig. 1–6, Fig. S7, and Table S2) or averaged (Fig. 7–12, Table 2, Table 3, Fig. S2–S6, S8–S13, and Table S5). To calculate averages, we combined their posterior emsembles of each scenario (the each number of ensemble is 100,000) and calculate the statistics from the combined 300,000 ensembles. ",
+        "bbox": [
+            89,
+            574,
+            910,
+            660
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Sensitivity tests ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            695,
+            222,
+            713
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Here, we present the results of our sensitivity tests in Fig. S5–S6, S8–S12, which we did not fully discuss in the main text. ",
+        "bbox": [
+            93,
+            717,
+            875,
+            751
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Only a few studies utilized atmospheric $\\delta \\mathrm { D - C H } _ { 4 }$ data to estimate global $\\mathrm { C H } _ { 4 }$ budget as additional constraints (Rice et al., 2016; Fujita et al., 2020) and there is no recent studies that solely utilized $\\delta \\mathrm { D - C H } _ { 4 }$ with atmospheric $\\mathrm { C H } _ { 4 }$ , which restricted the detailed investigation on the impact of $\\delta \\mathbf { D } \\cdot$ - $\\mathrm { C H } _ { 4 }$ . Experimental $\\mathrm { K I E ^ { D } o _ { H } }$ ranges 1.29 to 1.31 (Gierczak et al. 1997; Saueressig et al. 2001; Joelsson et al. 2016) except DeMore (1993) as 1.18. Based on the experimental KIED and sink fractions reported in Saunois et al. (2020), sink-weighted total $\\mathrm { K I E ^ { D } }$ are calculated to be from 1.275 to 1.300, except when applying DeMore (1993) to $\\mathrm { K I E ^ { D } o _ { H } }$ as ${ \\sim } 1 . 2 0$ (Table S3). Considering the uncertainty in these estimated range and adopting the total KIED of 1.275 as our prior mean, used in Fujita et al. (2020), as our prior mean, our prior base KIED range was set to be [1.25, 1.30]. Although this range does not fully cover the lower bound of total KIED based on $\\mathrm { K I E ^ { D } o _ { H } }$ of DeMore (1993), we attempted to cover the possibility of lower KIED scenario, less than 1.275. We exploered the sensitivity by excluding the lower outlier of experimental $\\mathrm { K I E ^ { D } o _ { H } }$ (DeMore, 1993) and thus applying a narrower prior KIED range, [1.275, 1.300] (ParaRange $\\# 6$ , Table S3), the impact on the posterior sectorial source fraction being minimal (brown circle in Fig. S8). ",
+        "bbox": [
+            89,
+            756,
+            908,
+            897
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "6 ",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            88,
+            89,
+            908,
+            195
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Process models suggest stable global wetland emissions for 2000–2012 (Poulter et al., 2017), whereas recent ESMs indicate an increase up to ${ \\sim } 3 0 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ since pre-industrial (Paudel et al., 2016; Swart et al., 2019). Emissions from freshwater systems also vary widely $( 1 3 4 { - } 2 8 4 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ in bottom-up and less than $3 0 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ in top-down; Saunois et al. 2020). Our base scenario assumes time-invariant prior wetland and freshwater emissions from GCP bottom-up estimates $( 1 4 7 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ and $1 5 9 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ , respectively; Saunois et al. 2020), but with wider uncertainties including timevariable scaling factor $( f _ { n a t r \\_ b i o } )$ . To explore the sensitivity of natural BIO (mainly wetlands and freshwater) emissions and trends, four altanative scenarios are also considered: (E) increasing wetland scenario from $1 4 7 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ to $1 8 0 \\mathrm { T g } \\mathrm { C H } _ { 4 } \\mathrm { y r } ^ { - 1 }$ for 1850–2015 (Paudel et al., 2016; Swart et al., 2019), (F) using VISIT (Ito, 2021) wetland emissions for 1901–2015 under Walter and Heimann (2000) emission scheme (G) same with (F) but for Cao et al. (1996) emission scheme, and (H) excluding freshwater emissions (IAWetBIOem and NoFRESHem #1). The results show minimal impact on recent $\\mathrm { C H } _ { 4 }$ trends or mean source fractions for 2003–2012 (Fig S9). However, posterior anthropogenic BIO emissions in scenario E align more closely with CEDS prior emissions than in our base scenario that align with EDGARv5 and v6, despite total BIO emissions being consistent. Therefore, we have presented our posterior BIO emissions mainly for total BIO sources. ",
+        "bbox": [
+            88,
+            199,
+            910,
+            477
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "We found that “NoFRESHem” scenario (scenario H in Fig. S9) significantly impacts on the posterior source fractions when atmospheric $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ data are not used as constraints, yeilding higher FF fractions compared to those under the base prior emission setting (Fig. S11 and Table S5). This is primarily due to the lower posterior natural BIO and higher posterior GEO emissions under $^ { 6 6 } \\mathrm { C H } _ { 4 }$ only”, $\\mathrm { ^ { * } C H _ { 4 } } \\mathrm { + } \\delta ^ { 1 3 } \\mathrm { C } ^ { 3 }$ , and $\\mathrm { ^ { \\circ } C H _ { 4 } } \\mathrm { + } \\delta \\mathrm { D } ^ { \\mathrm { , } }$ cases of no-freshwater scenario. For “Base” (all isotopic constraints) and $^ { 6  } \\mathrm { C H } _ { 4 } { + } \\Delta ^ { 1 4 } \\mathrm { C } ^ { , , }$ , lower GEO emissions are well constrained by atmospheric $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ data during historical period, regardless of the different prior natural BIO emissions, and thus the impact of no-freshwater scenario to the sectorial source fraction was minimal (Fig. S11 and Table S5). ",
+        "bbox": [
+            89,
+            481,
+            901,
+            625
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The impact of potential inter-laboratory differences for isotopic measurements were also investigated (Fig. S12). When applying the upper bounds of $\\delta ^ { 1 3 } \\mathrm { C - C H } 4$ and $\\delta \\mathrm { D - C H } _ { 4 }$ inter-laboratory differences from our base setting $( - 0 . 3 1 \\text{‰}$ from INSTAAR $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ scale and $+ 1 3 . 1 \\text{‰}$ from TU $\\delta \\mathbf { D }$ - $\\mathrm { C H } _ { 4 }$ scale, presented in Fig. 2 of Umezawa et al. (2018)) to our observational target, our posterior FF fractions are derived to be 22.8 [18.9, 26.8] $\\%$ and 25.4 [21.8, $2 8 . 7 ] \\%$ , respectively. These are within the uncertainty of our base results, $2 3 . 1 \\ : [ 1 9 . 0 , 2 6 . 8 ] \\ : \\%$ , but careful attention should be paid to the impact of $\\delta \\mathrm { D - C H } _ { 4 }$ offset. No inter-laboratory comparison for $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ measurements has been reported yet, but our sensitivity tests indicate our posterior estimate is robust within $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ differences of $\\pm 1 5 \\text{‰}$ (22.3 [18.0, 26.3] % and $2 4 . 2 [ 2 0 . 0 , 2 8 . 1 ] \\%$ of posterior FF fraction, respectively). More careful consideration is required when assimilating historical raw $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ data directly, whose inter-laboratory offsets are much larger than modern air samples (Umezawa et al. 2018). In this regard, we did not utilize respective raw $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ data but applied wider multi-decadal target range for historical period, considering their potential large uncertainty to represent global averages. ",
+        "bbox": [
+            88,
+            631,
+            901,
+            883
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Sink fractions derived from posterior total ${ \\bf K I E ^ { C } }$ and KIED ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            107,
+            584,
+            126
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In the base scenario, we derive higher total $\\mathrm { K I E ^ { C } }$ (1.0075 [1.0070, 1.0078]) and KIED (1.283 [1.274, 1.292]) for 2003–2012 than our prior mean setting (Fig. 3), which contributes to balancing the atmospheric $^ { 1 3 } \\mathrm { C H } _ { 4 }$ and $\\mathrm { C H } _ { 3 } \\mathrm { D }$ budgets. These parameters are also correlated with BIO and FF fractions in our base ensemble results, but not well correlated among the multiple sensitivity tests, compared with BIO $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ source signatures and NPP factors $( \\phi )$ . Here, we assume that the estimated total KIEs are equivalent to the sum of the experimental KIEs of the base setting (refer to Table S4) weighted by the respective sink fractions (similar approach in eq (5) of Röckmann et al., 2011). We also consider the atmospheric total $\\mathrm { C H } _ { 4 }$ and stratospheric $\\mathrm { C H } _ { 4 }$ lifetime to be 8.8 [8.3–9.4] years (our posterior mean for 2003–2012) and $1 5 2 \\pm 2 4$ years (as adopted in Rigby et al. (2017)), respectively. Based on these assumptions, we derive the average sink fractions (and corresponding average atmospheric $\\mathrm { C H } _ { 4 }$ lifetimes) as follows: $89 \\pm 2 \\%$ (10.0 years) for tropospheric OH, $2 . 2 \\pm 2 . 9 \\%$ (409 years) for soil oxidation, and $3 . 2 \\pm 1 . 1 \\%$ (275 years) for tropospheric Cl. These estimates are generally consistent with bottom-up estimates in the Global Carbon Project (GCP) (Saunois et al., 2020). The poorly quantified sink contribution of tropospheric $\\mathrm { C H } _ { 4 } { - } \\mathrm { C l }$ reactions is an important contributor to the uncertainty of $\\mathrm { C H } _ { 4 }$ budget estimated from $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ due to its large KIEC. Our estimated Cl contribution is lower than Allan et al. (2007), but higher than Gromov et al. (2018) where the tropospheric Cl contribution is almost zero. However, our derived sink-weighted KIEs are also sensitive to the selected KIEs in $\\mathrm { C H } _ { 4 }$ -OH reactions from the literature (Table S4). Further validation of Cl sink contributions and experimental studies on the KIEs are needed. ",
+        "bbox": [
+            88,
+            128,
+            898,
+            462
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Comparison with Basu et al. (2022) ",
+        "text_level": 1,
+        "bbox": [
+            91,
+            508,
+            387,
+            526
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Basu et al. (2022) concluded from their sensitivity tests in the joint $\\mathrm { C H } _ { 4 }$ and $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ inversion that the uncertainty in our knowledge of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ source signatures is almost never a leading driver of uncertainty in sectorial source partitioning and larger uncertainties are related to tropospheric Cl and OH fractionation. However, their sensitivity test only evaluated the former impact by replacing prior $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ signature maps for selected three sources (biomass burning, ruminants, oil/natural gas, and wetlands), respectively, and they did not evaluate the whole combined uncertainty related to all $\\delta ^ { 1 3 } \\mathrm { C }$ - $\\mathrm { C H } _ { 4 }$ source signatures. It is also noted such $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ signature maps are generally produced by extrapolating and smoothing the limited direct measurements, whose potential uncertainty is large, particularly in the region where the data number is limited (e.g., tropics). Under the situation, we believe it is possible the uncertainty of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ source signatures they have explored is still underestimated and more careful treatment is required for evaluating their impact comprehensively. Another reason of the contradiction between Basu et al. (2022) and ours could be due to different consideration of uncertainty for BIO $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ signatures. While our one-box model approach can only treat the global average explicitly, they evaluated the uncertainty of prior emission maps (i.e. wetland inundation extent) and source signature maps, separately. Therefore, if they combined all the uncertainties related to biogenic sources, the impact of uncertainty in their BIO isotopic source signature would be larger than they reported. Although our simple sensitivity tests suggest the impact of whole uncertainty of BIO $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ source signatures could be comparable to or even exceed that of total $\\mathrm { K I E ^ { C } }$ when estimating the global $\\mathrm { C H } _ { 4 }$ budget (Fig. 11), we acknowledge further investigation using a 3D model is more reliable, which can resolve their spatial information. ",
+        "bbox": [
+            88,
+            535,
+            905,
+            891
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "8 ",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/7c79425e267746fbb79e4029e82f1adb5f0669a12a23fd42ffd3fe031c809bf3.jpg",
+        "image_caption": [
+            "Fig. S1. Observed atmospheric $\\mathrm { C H } _ { 4 }$ and isotopic histories compared to observation-based target ranges as shown in Fig. 1. Time series of observed atmospheric a, $\\mathrm { C H } _ { 4 }$ , b, $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , c, $\\delta \\mathrm { D - C H } _ { 4 }$ , and d, $\\Delta ^ { 1 4 } \\mathrm { C } \\cdot$ $\\mathrm { C H } _ { 4 }$ are used to define the target ranges. Note that the range represents minimum and maximum in Table S1 or ave. $\\pm 3$ SD when available. Enlarged axes for 1970–2020 are shown in e–h. Error bars in $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ represents inter-laboratory differences summarized in Umezawa et al. (2018). Note that the inter-laboratory differences of ice core and firn air samples whose $\\mathrm { C H } _ { 4 }$ mole fraction is low could be larger than those of modern surface air samples (Umezawa et al., 2018); thus wider target ranges are roughly specified for the period of 1750–1970 (Text S1). Error bars in $\\Delta ^ { 1 4 } \\mathrm { C - C H } 4$ represents 3 SD of each measurement in Hmiel et al. (2020). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            98,
+            165,
+            883,
+            694
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "9 ",
+        "bbox": [
+            493,
+            921,
+            504,
+            934
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/4c1a62edef768ab47411c7c31a557b9ed7b7d10feee5132a6c18e9ea498b97ba.jpg",
+        "image_caption": [
+            "Fig. S2. Same as Fig. 8 in the main text, but for global total $\\mathrm { C H } _ { 4 }$ emissions (tot), biogenic emissions (bio), fossil fuel emissions (ff), and biomass burning emissions (bb) vs respective parameters. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            243,
+            112,
+            709,
+            838
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/6ce86a3dfe6c1444c583af0720b27527940e3b49ea0aec4a319198b9b75ef1e5.jpg",
+        "image_caption": [
+            "Fig. S3. Same as Fig. 8, but for among sectorial source fractions. The numbers on each histogram show mean and $6 8 \\%$ CI for each posterior source fractions. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            230,
+            104,
+            743,
+            513
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            508,
+            934
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/b4d79c7db71ae3007ba3d2c34ef2ad821891ab0256f2fcec004e3f5fafad749e.jpg",
+        "image_caption": [
+            "Fig. S4. Same as Fig. 8, but for among respective parameters. The numbers on each histogram show mean and $6 8 \\%$ CI for each posterior parameter. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            148,
+            92,
+            834,
+            585
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/77826cd7ed6fa235ac202d39647c1777f7bd8cffaa9a3a384736fcd80b54a781.jpg",
+        "image_caption": [
+            "Fig. S5. Timeseries of posterior global sectorial source fractions for total fossil fuel (FF) (a), total biogenic (BIO) (b), and biomass burning (c) sources. Different colors indicate different observational constraints scenarios, as presented in Fig. 10. Posterior mean values are shown in solid lines and colored bands (only for $\\mathrm { ^ { 6 6 } C H } _ { 4 } \\mathrm { + } \\delta ^ { 1 3 } \\mathrm { C } ^ { \\mathrm { 9 } }$ , $\\mathrm { ^ { . 4 } C H _ { 4 } } \\mathrm { + } \\Delta ^ { 1 4 } \\mathrm { C ^ { , 9 } }$ , and base results) mark the $6 8 \\%$ CI. Colored bars in right show average and $6 8 \\%$ CI for 2003–2012. Dotted gray lines (mostly overlapped by $\\mathrm { C H } _ { 4 }$ -only results) and gray bars show prior estimates. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            318,
+            99,
+            661,
+            492
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/f7386750b6fd3f45027c0664e6086b006d4653a2773a69f67ffc7dc9ef1d768a.jpg",
+        "image_caption": [
+            "Fig. S6. Same as Fig. S5 in the main text, but for simulated atmospheric isotopic histories compared to observation-based target ranges (same as Fig. 1). Color bands $6 8 \\%$ CI) are presented only for $\\cdot \\mathrm { C H } _ { 4 } { + } \\delta ^ { 1 3 } \\mathrm { C } ^ { 3 }$ and $\\mathrm { \\cdot { C H _ { 4 } } \\mathrm { + } \\Delta ^ { 1 4 } C ^ { 3 } }$ . Here simulation results of atmospheric $\\mathrm { C H } _ { 4 }$ is not presented since the difference of simulate $\\mathrm { C H } _ { 4 }$ among the presented scenarios is neglegible, except Prior scenario (see Fig. 1). Due to the significantly higher atmospheric $\\mathrm { C H } _ { 4 }$ mole fraction in the Prior scenario $( \\sim 1 . 3$ times higher than the other scenarios), the influence of rapid NPP $^ { 1 4 } \\mathrm { C H } _ { 4 }$ emissions after the 1980s on atmospheric $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ variations is diluted in the Prior scenario, in constrast to the other scenarios. Consequently, despite similar fossil source fractions and NPP $^ { 1 4 } \\mathrm { C H } _ { 4 }$ emissions with $^ { 6 6 } \\mathrm { C H } _ { 4 }$ -only” scenario after 1980s (see Fig. S5), the rate of increase in atmospheric $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ shows smaller in the Prior scenario than $^ { 6 6 } \\mathrm { C H } _ { 4 }$ -only” scenario. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            243,
+            101,
+            738,
+            666
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/c2ef3a18095659e26288821ccaf6d56dda5751d1a07815e6dc3d0fb14ac9b680.jpg",
+        "image_caption": [
+            "Fig. S7. Same as Fig. 6 in the main text, but for $^ { 6 6 } \\mathrm { C H } _ { 4 }$ -only” case. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            114,
+            97,
+            911,
+            577
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            114,
+            246,
+            142,
+            424
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "image",
+        "img_path": "images/601107242621810ea9f3188c216cd974c4509063ed6c0d608902fcfa92a62380.jpg",
+        "image_caption": [
+            "Fig. S8. Same as Fig. 10 in the main text, but for sensitivity tests on the different prior ranges of source scaling factors and KIED, different prior BB and FF source allocations (by allocating “RCO” sources from prior FF sources to prior BB sources), and different time-variations of prior isotopic parameters (i.e. $\\alpha$ of all isotopic source signatures, KIEs, tbios, and $\\phi$ are fixed at 0.3, same as geologic parameters). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            124,
+            106,
+            841,
+            311
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/629fe8363961e13e71f00db7d1327f9f6a227e4ee7c4535c4dfe34eb11a0cb15.jpg",
+        "image_caption": [
+            "Fig. S9. Same as Fig. 10, but for sensitivity tests on the difference of global OH trends between global chemistry-climate models and methyl chloroform (MCF)-based estimates and difference of prior natural BIO emission settings. All sensitivity test results are barely changed from the base simulation in terms of mean source fractions, which are shown to be overwrapped here. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            124,
+            473,
+            839,
+            680
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/bf764d202483d1af084b25ffde392119825c9bfd6af59602df71bb034e6fcbb3.jpg",
+        "image_caption": [
+            "Fig. S10. Changes of $\\mathrm { C H } _ { 4 }$ emissions and loss rates averaged between 2000–2006 and 2007–2013. Base result represents our posterior base scenario and A–D (same as Fig. S9) represent sensitivity test results examining the influence of different prior OH scenarios. The impact of different prior natural BIO emission scenarios (scenario E–H) on the posterior emission and loss changes for the period are minimal; thus not shown here. Error bars represent $6 8 \\%$ CI. Prior mean values are represented by colored asterisks. The vertical range of change in total $\\mathrm { C H } _ { 4 }$ loss rate (right axis) is adjusted corresponding to the percentage of change in total $\\mathrm { C H } _ { 4 }$ emissions. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            127,
+            108,
+            879,
+            539
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            408,
+            106,
+            619,
+            121
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/a8f44c5419dd3ecc04097d23ca8ebfbc1a5b51c3bc5e7bdec4139ae90c0056d0.jpg",
+        "image_caption": [
+            "Fig. S11. Same as Fig. 10, but for sensitivity tests on the “NoFRESHem” scenario under different isotopic constraints. “noFresh” (white triangle with black edge) represents the same as “H: No freshwater” in Fig S9. $\\mathrm { \\Sigma ^ { \\circ } C H _ { 4 } }$ only”, $\\cdot \\mathrm { C H } _ { 4 } { + } \\delta ^ { 1 3 } \\mathrm { C } ^ { , , }$ , $\\mathrm { \\ ^ { \\circ } C H } _ { 4 } \\mathrm { + } \\delta \\mathrm { D } ^ { \\mathrm { \\prime } }$ , and $\\mathrm { \\cdot { C H _ { 4 } } \\mathrm { + } \\Delta ^ { 1 4 } C ^ { 3 } }$ represent the same as those in Fig. 10. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            125,
+            102,
+            839,
+            309
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/0d1069c7e6c8b8ca1a2fc1d43d84eecb9192cd1d7d072307e1d22e0a2cb3c6d2.jpg",
+        "image_caption": [
+            "Fig. S12. Same as Fig. 10, but for sensitivity tests that applied the potential offset to the observational target for exmining the influence of inter-laboratory differences in $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $\\delta \\mathrm { D - C H } _ { 4 }$ , and $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ measurements. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            122,
+            433,
+            839,
+            630
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/df68b78d6c31bb28e4c72485ed5ccfcdce8e05e6a68bc2f4c6b8a142f8e5da44.jpg",
+        "image_caption": [
+            "Fig. S13. Timeseries of global fossil source fractions (a), and timeseries of global nuclear power plant $^ { 1 4 } \\mathrm { C H } _ { 4 }$ emission factor (b). Our posterior mean and $6 8 \\%$ CI under the base simulation are represented by black lines and gray shades. Results from “L07method” (see section 4 in the main text) using our model dataset with 10-yr windows and 15-yr windows are represented by blue solid and blue dash lines, respectively. Results from Lassey et al. (2007) for 1986–2000 is represented by red square (mean $\\pm \\nobreakspace 1 \\nobreakspace$ SD). Our updated observational estimates updated from Zazzeri et al. (2018) are represented by light cyan line and shades (median and $9 5 \\%$ CI). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            266,
+            102,
+            725,
+            592
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            490,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "table",
+        "img_path": "images/d149faa4bb34b135fa8aa536c11ee02bdf549ff1ac8e591d2df669c121d785c6.jpg",
+        "table_caption": [
+            "Table S1. Observational target years and ranges for atmospheric $\\mathrm { C H } _ { 4 }$ , $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ , $\\delta \\mathrm { D - C H } _ { 4 }$ , and $\\Delta ^ { 1 4 } \\mathrm { C - C H } _ { 4 }$ "
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=\"2\">Target year</td><td colspan=\"2\">CH4 (ppb)</td><td colspan=\"4\">813C-CH4 (%0)</td><td colspan=\"4\"> SD-CH4 (%0)</td><td colspan=\"4\">△14C-CH4 (%o)</td></tr><tr><td>ave.</td><td>1 s.d.</td><td>ave.</td><td>1 s.d.</td><td>min.</td><td>max.</td><td>ave.</td><td>1 s.d.</td><td>min.</td><td>max.</td><td>ave.</td><td>1 s.d.</td><td>min.</td><td>max.</td></tr><tr><td>1750.0</td><td>731.2</td><td>20</td><td>=</td><td></td><td>-50.00</td><td>-48.00</td><td>=</td><td></td><td>-115.0</td><td>-85.0</td><td></td><td>=</td><td>-40.9</td><td>43.9</td></tr><tr><td>1850.0</td><td>808.2</td><td>20</td><td></td><td></td><td>-50.00</td><td>-48.00</td><td></td><td></td><td>-115.0</td><td>-85.0</td><td></td><td></td><td>-97.2</td><td>16.5</td></tr><tr><td>1900.0</td><td>923.9</td><td>20</td><td></td><td></td><td>-50.00</td><td>-48.00</td><td></td><td></td><td>-115.0</td><td>-85.0</td><td></td><td></td><td>-125.4</td><td>2.8</td></tr><tr><td>1950.0</td><td>1162.1</td><td>10</td><td></td><td></td><td>-49.25</td><td>-47.25</td><td></td><td></td><td>-115.0</td><td>-85.0</td><td></td><td></td><td>-185.8</td><td>19.6</td></tr><tr><td>1960.0</td><td>1260.7</td><td>10</td><td></td><td></td><td>-49.10</td><td>-47.10</td><td></td><td></td><td>-115.0</td><td>-85.0</td><td></td><td></td><td>-167.3</td><td>29.0</td></tr><tr><td>1970.0</td><td>1400.2</td><td>10</td><td>=</td><td></td><td>-48.95</td><td>-46.95</td><td></td><td></td><td>-115.0</td><td>-85.0</td><td></td><td></td><td>-18.0</td><td>160.0</td></tr><tr><td>1971.0</td><td>1421.1</td><td>10</td><td>=</td><td></td><td>-48.82</td><td>-46.98</td><td></td><td></td><td>-114.6</td><td>-86.3</td><td></td><td></td><td>-6.2</td><td>160.4</td></tr><tr><td>1972.0</td><td>1440.2</td><td>10</td><td>■</td><td></td><td>-48.70</td><td>-47.02</td><td></td><td></td><td>-114.1</td><td>-87.5</td><td></td><td></td><td>5.5</td><td>160.9</td></tr><tr><td>1973.0</td><td>1456.1</td><td>10</td><td>=</td><td></td><td>-48.57</td><td>-47.05</td><td></td><td></td><td>-113.7</td><td>-88.8</td><td></td><td></td><td>17.3</td><td>161.3</td></tr><tr><td>1974.0</td><td>1469.5</td><td>10</td><td>■</td><td></td><td>-48.44</td><td>-47.08</td><td></td><td></td><td>-113.2</td><td>-90.0</td><td></td><td></td><td>29.1</td><td>161.7</td></tr><tr><td>1975.0</td><td>1483.9</td><td>10</td><td>=</td><td></td><td>-48.32</td><td>-47.11</td><td></td><td></td><td>-112.8</td><td>-91.3</td><td></td><td></td><td>40.9</td><td>162.2</td></tr><tr><td>1976.0</td><td>1500.4</td><td>10</td><td>■</td><td></td><td>-48.19</td><td>-47.15</td><td></td><td></td><td>-112.3</td><td>-92.5</td><td></td><td></td><td>52.6</td><td>162.6</td></tr><tr><td>1977.0</td><td>1518.4</td><td>10</td><td></td><td></td><td>-48.07</td><td>-47.18</td><td></td><td></td><td>-111.9</td><td>-93.8</td><td></td><td></td><td>64.4</td><td>163.0</td></tr><tr><td>1978.0</td><td>1537.3</td><td>10</td><td>1</td><td></td><td>-47.94</td><td>-47.21</td><td>1</td><td></td><td>-111.5</td><td>-95.0</td><td></td><td></td><td>76.2</td><td>163.4</td></tr><tr><td>1979.0</td><td>1556.5</td><td>10</td><td>-47.54</td><td>0.11</td><td>=</td><td></td><td>-103.4</td><td>2.6</td><td>■</td><td></td><td></td><td></td><td>87.9</td><td>163.9</td></tr><tr><td>1980.0</td><td>1575.6</td><td>10</td><td>-47.52</td><td>0.11</td><td></td><td></td><td>-103.8</td><td>2.6</td><td>■</td><td></td><td>132.0</td><td>10.8</td><td></td><td></td></tr><tr><td>1981.0</td><td>1593.8</td><td>10</td><td>-47.51</td><td>0.11</td><td></td><td></td><td>-103.8</td><td>2.6</td><td>=</td><td></td><td>141.4</td><td>10.7</td><td></td><td></td></tr><tr><td>1982.0</td><td>1610.7</td><td>10</td><td>-47.50</td><td>0.11</td><td></td><td></td><td>-103.1</td><td>2.6</td><td>=</td><td></td><td>150.7</td><td>10.5</td><td></td><td></td></tr><tr><td>1983.0</td><td>1625.7</td><td>10</td><td>-47.49</td><td>0.11</td><td></td><td></td><td>-102.4</td><td>2.6</td><td></td><td></td><td>160.0</td><td>10.3</td><td></td><td></td></tr><tr><td>1984.0</td><td>1638.1</td><td>10</td><td>-47.49</td><td>0.10</td><td></td><td></td><td>-102.0</td><td>2.6</td><td></td><td></td><td>169.2</td><td>10.1</td><td></td><td></td></tr><tr><td>1985.0</td><td>1650.9</td><td>5</td><td>-47.49</td><td>0.10</td><td></td><td></td><td>-101.7</td><td>2.6</td><td></td><td></td><td>178.4</td><td>9.9</td><td></td><td></td></tr><tr><td>1986.0</td><td>1663.7</td><td>5</td><td>-47.46</td><td>0.10</td><td></td><td></td><td>-101.1</td><td>2.6</td><td></td><td></td><td>187.0</td><td>10.1</td><td></td><td></td></tr><tr><td>1987.0</td><td>1676.5</td><td>5</td><td>-47.44</td><td>0.10</td><td></td><td></td><td>-100.5</td><td>2.6</td><td></td><td></td><td>195.4</td><td>10.3</td><td></td><td></td></tr><tr><td>1988.0</td><td>1687.9</td><td>5</td><td>-47.39</td><td>0.10</td><td></td><td></td><td>-99.9</td><td>2.6</td><td></td><td></td><td>203.8</td><td>10.5</td><td></td><td></td></tr><tr><td>1989.0</td><td>1698.8</td><td>5</td><td>-47.34</td><td>0.10</td><td></td><td></td><td>-99.1</td><td>2.6</td><td></td><td></td><td>212.3</td><td>10.7</td><td></td><td></td></tr></table>",
+        "bbox": [
+            77,
+            156,
+            948,
+            882
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "discarded",
+        "text": "20 ",
+        "bbox": [
+            491,
+            898,
+            508,
+            916
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "table",
+        "img_path": "images/f8a1fbb98bc9d7b92f3dfefa5323621819c537bb3174710c090b8ff937cff74f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>1990.0</td><td>1709.5</td><td></td><td>5 -47.31</td><td>0.10</td><td></td><td></td><td>-98.0 2.6</td><td></td><td></td><td>221.0</td><td>11.0</td><td></td><td></td></tr><tr><td></td><td>1991.0</td><td>1719.7</td><td>5 -47.31</td><td>0.10</td><td></td><td></td><td>-97.0 2.6</td><td></td><td></td><td>229.9</td><td>11.5</td><td></td><td></td></tr><tr><td>1992.0</td><td></td><td>1730.2</td><td>5 -47.30</td><td>0.10</td><td></td><td></td><td>-96.0 2.6</td><td></td><td></td><td>238.8</td><td>11.9</td><td></td><td></td></tr><tr><td></td><td>1993.0</td><td>1736.1</td><td>5 -47.28</td><td>0.10</td><td></td><td></td><td>-95.1 2.6</td><td></td><td></td><td>247.8</td><td>12.3</td><td></td><td></td></tr><tr><td></td><td>1994.0</td><td>1739.4</td><td>5 -47.26</td><td>0.10</td><td></td><td></td><td>-94.1 2.6</td><td></td><td></td><td>257.0</td><td>12.5</td><td></td><td></td></tr><tr><td>1995.0</td><td></td><td>1745.6</td><td>5 -47.21</td><td>0.10</td><td></td><td></td><td>-93.6 2.1</td><td></td><td></td><td>266.5</td><td>12.7</td><td></td><td></td></tr><tr><td>1996.0</td><td></td><td>1750.2</td><td>5 -47.21</td><td>0.10</td><td></td><td>-93.2</td><td>1.6</td><td></td><td></td><td>276.5</td><td>12.5</td><td></td><td></td></tr><tr><td>1997.0</td><td></td><td>1753.0</td><td>5 -47.19</td><td>0.10</td><td></td><td>-92.1</td><td>1.6</td><td></td><td></td><td>286.5</td><td>12.4</td><td></td><td></td></tr><tr><td>1998.0</td><td></td><td>1760.2</td><td>5 -47.13</td><td>0.10</td><td></td><td>-91.2</td><td>1.6</td><td></td><td></td><td>294.5</td><td>11.4</td><td></td><td></td></tr><tr><td>1999.0</td><td></td><td>1769.1</td><td>5 -47.12</td><td>0.10</td><td></td><td>-90.4</td><td>1.6</td><td></td><td></td><td>299.9</td><td>15.3</td><td></td><td></td></tr><tr><td>2000.0</td><td></td><td>1772.8</td><td>5 -47.13</td><td>0.10</td><td></td><td>-89.8</td><td>1.6</td><td></td><td></td><td>305.0</td><td>14.8</td><td></td><td></td></tr><tr><td>2001.0</td><td></td><td>1772.1</td><td>5 -47.11</td><td>0.10</td><td></td><td>-89.2</td><td>1.6</td><td></td><td></td><td>310.7</td><td>15.0</td><td></td><td></td></tr><tr><td>2002.0</td><td>1772.0</td><td>5</td><td>-47.09</td><td>0.10</td><td></td><td>-88.5</td><td>1.6</td><td></td><td></td><td>316.3</td><td>15.0</td><td></td><td></td></tr><tr><td>2003.0</td><td>1775.1</td><td>5</td><td>-47.08</td><td>0.10</td><td></td><td>-87.8</td><td>1.6</td><td></td><td></td><td>321.8</td><td>14.8</td><td></td><td></td></tr><tr><td>2004.0</td><td>1777.3</td><td>5</td><td>-47.06</td><td>0.10</td><td></td><td>-87.5</td><td>1.6</td><td></td><td></td><td>327.2</td><td>15.0</td><td></td><td></td></tr><tr><td>2005.0</td><td>1775.6</td><td>5</td><td>-47.07</td><td>0.10</td><td></td><td>-86.9</td><td>1.6</td><td></td><td></td><td>332.5</td><td>15.4</td><td></td><td></td></tr><tr><td>2006.0</td><td>1774.4</td><td>5</td><td>-47.10</td><td>0.10</td><td></td><td>-86.4</td><td>1.2</td><td></td><td></td><td>336.2</td><td>15.1</td><td></td><td></td></tr><tr><td>2007.0</td><td>1778.0</td><td>5</td><td>-47.10</td><td>0.10</td><td></td><td>-86.7</td><td>0.7</td><td></td><td></td><td>338.4</td><td>14.6</td><td></td><td></td></tr><tr><td>2008.0</td><td>1784.2</td><td>5</td><td>-47.08</td><td>0.10</td><td></td><td>-86.9</td><td>0.6</td><td></td><td></td><td>339.8</td><td>14.3</td><td></td><td></td></tr><tr><td>2009.0</td><td>1790.3</td><td>5</td><td>-47.10</td><td>0.10</td><td></td><td>-87.1</td><td>0.7</td><td></td><td></td><td>340.6</td><td>14.3</td><td></td><td></td></tr><tr><td>2010.0</td><td>1796.2</td><td>5</td><td>-47.16</td><td>0.10</td><td></td><td>-87.1</td><td>0.9</td><td></td><td></td><td>341.5</td><td>14.3</td><td></td><td></td></tr><tr><td>2011.0</td><td>1801.0</td><td>5</td><td>-47.21</td><td>0.10</td><td></td><td>-86.9</td><td>1.0</td><td></td><td></td><td>342.4</td><td>14.1</td><td></td><td></td></tr><tr><td>2012.0</td><td>1805.6</td><td>5</td><td>-47.24</td><td>0.10</td><td></td><td>-86.6</td><td>1.0</td><td></td><td></td><td>343.5</td><td>14.5</td><td></td><td></td></tr><tr><td>2013.0</td><td>1810.6</td><td>5</td><td>-47.25</td><td>0.10</td><td></td><td>-86.5</td><td>1.1</td><td></td><td></td><td>345.1</td><td>15.0</td><td></td><td></td></tr><tr><td>2014.0</td><td>1817.9</td><td>5</td><td>-47.26</td><td>0.10</td><td></td><td></td><td>-86.5 1.1</td><td></td><td></td><td>345.1</td><td>15.0</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>-47.26</td><td></td><td></td><td></td><td></td><td></td><td></td><td>345.1</td><td></td><td></td><td></td></tr><tr><td>2015.0</td><td>1828.3</td><td>5</td><td></td><td>0.10</td><td></td><td></td><td>-86.5</td><td>1.1</td><td></td><td></td><td>15.0</td><td></td><td></td></tr></table>",
+        "bbox": [
+            80,
+            83,
+            954,
+            776
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Note: Our atmospheric $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ target for 1984–2013 is taken from Fig S3 of Schwietzke et al. (2016). The target in 2014.0 and 2015.0 is repeated by the annual average in 2013. We confirmed the consistency with updated global annual $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ averages for 1999–2013 by INSTAAR (Michel et al., 2021), the difference being within $\\pm 0 . 0 1 \\text{‰}$ . We also performed the sensitivity test by replacing the $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ target for 1999–2015 by the updated dataset (Michel et al. 2021) and confirmed the impact on the posterior results is minimal. ",
+        "bbox": [
+            84,
+            800,
+            909,
+            883
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            491,
+            898,
+            506,
+            916
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "table",
+        "img_path": "images/09275deeb41fba0dbfc12acd5bd90dffc9bc46c6f1cedf0f202e9eee99ed594d.jpg",
+        "table_caption": [
+            "Table S2. A priori global $\\mathrm { C H } _ { 4 }$ emissions for CEDS, EDGARv5, and EDGARv6 scenarios for selected periods. The bold character represents main source categories and italic character represents subcategories. The units are teragrams of methane per year. "
+        ],
+        "table_footnote": [
+            "a Table 3 of Saunois et al. (2020) bottom-up estimates for the period 2000–2009. b Mean of our prior ranges (see Table 1 in the main text). c van Marle et al. (2017). Here it is multiplied by 2.0 (i.e., mean of our prior ranges of $f _ { b b }$ , see Table 1). "
+        ],
+        "table_body": "<table><tr><td rowspan=\"2\">Source Category</td><td colspan=\"3\">1900-1950</td><td colspan=\"3\">1986-2000</td><td colspan=\"3\">2003-2012</td></tr><tr><td>CEDS</td><td>EDGA Rv5</td><td>EDGA Rv6</td><td>CEDS</td><td>EDGA Rv5</td><td>EDGA Rv6</td><td>CEDS</td><td>EDGA Rv5</td><td>EDGA Rv6</td></tr><tr><td>Anthropogenic biogenic</td><td>74</td><td>86</td><td>86</td><td>170</td><td>200</td><td>195</td><td>191</td><td>218</td><td>214</td></tr><tr><td>Agriculture</td><td>57</td><td>75</td><td>75</td><td>119</td><td>138</td><td>139</td><td>129</td><td>146</td><td>147</td></tr><tr><td>Waste Natural biogenic a</td><td>17</td><td>11</td><td>11</td><td>51</td><td>62 317</td><td>56</td><td>62</td><td>72</td><td>68</td></tr><tr><td>Wetlands Freshwater</td><td colspan=\"9\">147 159 9</td></tr><tr><td>Termites Wild animals Anthropogenic fossil</td><td colspan=\"9\">2</td></tr><tr><td>Energy (oil, gas, &amp;coal)</td><td>29 24</td><td>36 28</td><td>36 28</td><td>120 107</td><td>103 89</td><td>97 82</td><td>152 139</td><td>115 100</td><td>120 106</td></tr><tr><td>Residential + others</td><td>6</td><td>9</td><td>9</td><td>14</td><td>15</td><td>15</td><td>13</td><td>14</td><td>14</td></tr><tr><td>Geologicb</td><td colspan=\"3\"></td><td colspan=\"3\">40</td><td colspan=\"3\"></td></tr><tr><td>Biomass burning c</td><td colspan=\"3\">23</td><td colspan=\"3\">32</td><td colspan=\"3\">29</td></tr><tr><td>Total biogenic</td><td>391</td><td>403</td><td>403</td><td>487</td><td>517</td><td>512</td><td>508</td><td>535</td><td>531</td></tr><tr><td>Total fossil fuel</td><td>69</td><td>76</td><td>76</td><td>160</td><td>143</td><td>137</td><td>192</td><td>155</td><td>160</td></tr><tr><td>Total (Total biogenic + Total fossil fuel + Biomass burning)</td><td>484</td><td>502</td><td>502</td><td>680</td><td>693</td><td>681</td><td>729</td><td>719</td><td>720</td></tr></table>",
+        "bbox": [
+            84,
+            175,
+            880,
+            631
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "table",
+        "img_path": "images/944bb69493426fd3067c73b0f213c3154a3f86697f968a7db63d2c48906864b3.jpg",
+        "table_caption": [
+            "Table S3. Sensitivity tests of our one-box model inversions. "
+        ],
+        "table_footnote": [
+            "a Both $\\delta ^ { l 3 } C _ { a n t h \\_ b i o }$ and $\\delta ^ { l 3 } C _ { n a t r \\_ b i o }$ b To find plausible solutions of posterior BB emissions reported among previous studies, we have also changed the range of $f _ { b b }$ from [0.5, 3.5] to [0.5, 2.0]. "
+        ],
+        "table_body": "<table><tr><td>Scenario</td><td>Focus</td><td>Description</td><td>Fig.</td><td>Legend name</td></tr><tr><td>Base</td><td></td><td>The base inversion using all observational constraints and default parameter settings.</td><td></td><td>Base (All)</td></tr><tr><td>Obs</td><td>Observational targets below.</td><td colspan=\"3\">Seven inversions under different combinations of observational isotopic constraints listed</td></tr><tr><td rowspan=\"7\">2 3 4 5 6</td><td></td><td>CH4 only</td><td>Fig.10</td><td>CH4 only</td></tr><tr><td></td><td>CH4 and δC-CH4</td><td>Fig.10</td><td>CH4+83C</td></tr><tr><td></td><td>CH4 and 8D-CH4</td><td>Fig.10</td><td>CH4+δD</td></tr><tr><td></td><td>CH4 and △14C-CH4</td><td>Fig.10</td><td>CH4+△14C</td></tr><tr><td></td><td>CH4, δ3C-CH4, and δD-CH4</td><td>Fig.10</td><td>CH4+83C+8D</td></tr><tr><td></td><td>CH4, δl3C-CH4, and △14C-CH4</td><td>Fig.10</td><td>CH4+δ3C+△14C</td></tr><tr><td></td><td>CH4, δD-CH4, and △14C-CH4</td><td>Fig.10</td><td>CH4+δD+△14C</td></tr><tr><td>ObsIsoILD</td><td>Observational targets</td><td colspan=\"3\">Four inversions under potential maximum inter-laboratory differences of δ3C-CH4, D- CH4,and △l4C-CH4 measurements from our base targets listed below.</td></tr><tr><td rowspan=\"5\">1 2 3</td><td>813C-CH4</td><td>Adding offset -0.31%o to the observational target (from INSTAAR to UB; see Fig 2a of Umezawa et al. 2018).</td><td>Fig.S12</td><td>813C: -0.31%</td></tr><tr><td>8D-CH4</td><td>Adding offset +13.1%o to the observational target (from TU to IMAU; see Fig 2b of Umezawa et al. 2018).</td><td>Fig.S12</td><td>δD: +13.1%0</td></tr><tr><td>△14C-CH4</td><td>Adding offset +15%o to the observational target.</td><td>Fig. S12</td><td>△14C: +15%0</td></tr><tr><td>△14C-CH4</td><td>Adding offset -15%o to the observational target.</td><td>Fig.S12</td><td>△14C: -15%0</td></tr><tr><td>Parameters</td><td>15 inversions under different prior parameter ranges listed as below.</td><td></td><td></td></tr><tr><td>ParaRange</td><td></td><td colspan=\"3\"></td></tr><tr><td rowspan=\"8\">1 2 3 4 5 6 7 8</td><td>BIO 83C-CH4a</td><td>Fix at -62.2</td><td>Fig.11</td><td>Fixed prior BIO 8I3CH4 Fixed prior BIO</td></tr><tr><td>BIO 8C-CH4&amp;KIEC</td><td>Fix at -62.2 and 1.0065</td><td>Fig.11</td><td>8I3CH4&amp; KIEC CH4+δ3C+Fixed</td></tr><tr><td>BIO 8³C-CH4&amp;KIEC</td><td>Fix at -62.2 and 1.0065 under“CH4+δC\"case</td><td>Fig.11</td><td>prior BIO 8CH4 &amp;KIEC</td></tr><tr><td>KIEC</td><td>Fixed at 1.0065</td><td>Fig.11</td><td>Fixed prior KIEC</td></tr><tr><td>KIEC</td><td>Wider prior range [1.005,1.010]</td><td>Fig.11</td><td>Prior KIEC = [1.005,1.010]</td></tr><tr><td>KIED</td><td>Fixed at 1.275</td><td>Fig.11</td><td>Fixed prior KIED Prior KIED =</td></tr><tr><td>KIED</td><td>Narrower prior range [1.275,1.300]</td><td>Fig.S8</td><td>[1.275,1.30]</td></tr><tr><td>州</td><td>Different mean with same prior range 286 [136, 436]</td><td>Fig.12</td><td>Prior Φ=[136, 436]</td></tr><tr><td>9</td><td>?</td><td>Different mean with wider prior range 3Oo [0, 600]</td><td>Fig. 12</td><td>Prior Φ=[0,600]</td></tr><tr><td>10</td><td>?</td><td>Fixed at 286</td><td>Fig.12</td><td>Prior = 286 fixed</td></tr><tr><td>11</td><td>?</td><td>Different mean with wider prior range 3Oo [0, 600] under “CH4+△14C\" case</td><td>Fig.12</td><td>CH4+△14C &amp; Prior =[0,600]</td></tr><tr><td>12</td><td>?</td><td>Fixed at 286 under“CH4+△14C\" case</td><td>Fig.12</td><td>CH4+△14C &amp; Prior = 286 fixed</td></tr><tr><td>13</td><td>Tbios</td><td>Fixed at 6.5 yr</td><td>Fig.12</td><td>Fixed prior Tbios</td></tr><tr><td>14</td><td>fb</td><td>Narrower prior range [0.5,1.5]</td><td>Fig.S8</td><td>f6b [0.5,1.5]</td></tr><tr><td>15</td><td>fanthbiofnatrbio&amp;fanthff</td><td>Wider prior range [0.5,3.5]</td><td>Fig.S8</td><td>all source f[0.5, 3.5]</td></tr><tr><td>IsoParaFixT</td><td>All isotopic source signatures,KIEs,Tbios,&amp;</td><td>Time variation parameter α is fixed at 0.3</td><td>Fig. S8</td><td>time-invariable iso-param</td></tr><tr><td>RCOem</td><td>Prior BB and anthropogenic FF emissions</td><td>Allocating “RCO” emissions from prior FF to prior BB emissions.b</td><td>Fig.S8</td><td>RCO FFtoBB</td></tr><tr><td>OHtrend 1 2</td><td>Prior sinks</td><td colspan=\"3\">Four inversions under different prior OH anomaly scenarios listed below. Fig. S9 &amp; Time-invariant OH for 1750-2015 A: S10</td></tr><tr><td>3 4 IAWetBIOem</td><td>Prior natural BIO</td><td>MCF-based OH from Turner et al. (2017) for 1980- 2015 MCF-based OH from Rigby et al.(2017) for 1980- 2015 MCF-based OH from Patra et al. (2021) for 1995- 2015 Three inversions under different prior interannual wetland emission scenarios listed as</td><td>Fig. S9 &amp; S10 Fig.S9 &amp; S10 Fig.S9 &amp; S10</td><td>OH_time_invariant B: OH_Turner17 C: OH_Rigby17 D: OH_Patra21</td></tr><tr><td>1 2</td><td>emissions</td><td>below.</td><td></td><td></td></tr><tr><td rowspan=\"5\">3</td><td rowspan=\"5\">Prior natural BIO</td><td>Increasing wetland emissions from 147 TgCH4yr-1 to 180 TgCH4yrl for 1850-2015 (Paudel et al.,2016; Swart et al., 2019)</td><td>Fig. S9</td><td>E: Wet147to180Tg/yr</td></tr><tr><td>VISIT (Ito,2021) wetland emissions for 1901-2015 under Walter and Heimann (2ooo) emission scheme</td><td>Fig. S9</td><td>F: wetVISIT-Cao</td></tr><tr><td>VISIT (Ito,2021) wetland emissions for 1901-2015</td><td></td><td>G: wetVISIT-WH</td></tr><tr><td>under Cao et al.(1996) emission scheme</td><td>Fig.S9</td><td></td></tr><tr><td>Five inversions with freshwater emissions (159 Tg/yr) excluded under different</td><td></td><td></td></tr><tr><td rowspan=\"5\">NoFRESHem 1 2 3 4 5</td><td>emissions</td><td>observational isotopic constraints listed below.</td><td></td><td></td></tr><tr><td></td><td>All isotopic constraints</td><td>Fig.S9 &amp; S11</td><td>H: No Freshwater (Fig. S9) or noFresh (Fig. S11)</td></tr><tr><td></td><td>CH4 only</td><td>Fig. S11 &amp; Table S5</td><td>CH4 only &amp; noFresh</td></tr><tr><td></td><td>CH4 and δC-CH4</td><td>Fig. S11 &amp; Table S5</td><td>CH4+83C &amp; noFresh</td></tr><tr><td></td><td>CH4 and δD-CH4 CH4 and △14C-CH4</td><td>Fig.S11 &amp; Table S5 Fig.S11 &amp;</td><td>CH4+δD&amp; noFresh CH4+△14C &amp;</td></tr></table>",
+        "bbox": [
+            88,
+            114,
+            877,
+            901
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "discarded",
+        "text": "23 ",
+        "bbox": [
+            488,
+            921,
+            509,
+            935
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [
+            ""
+        ],
+        "table_footnote": [
+            ""
+        ],
+        "bbox": [
+            89,
+            123,
+            875,
+            805
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "table",
+        "img_path": "images/4f3d84f6ac0fdbb345e5dfcf807f7207142d12a17a3c1a016b60baa937e72255.jpg",
+        "table_caption": [
+            "Table S4. Summary of experimental KIEs based on the literatures. ",
+            "a Average of Cantrell et al. (1990) and Saueressig et al. (2001); b Average of Snover and Quay (2000), Tyler et al. (1994), and Reeburgh et al. (1997); c Saueressig et al. (1995); d Röckmann et al. (2011); e Saueressig et al. (2001); f Cantrell et al. (1990); g Tyler et al. (2000); h Rice et al. (2003); Gierczak et al. (1997); j Snover and Quay (2000); k Saueressig et al. (1996); l Joelsson et al. (2016); mDeMore (1993) "
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=\"3\">Scenario</td><td colspan=\"7\">KIEC</td><td colspan=\"7\">KIED</td></tr><tr><td></td><td></td><td></td><td></td><td colspan=\"3\">total</td><td rowspan=\"2\">OH</td><td rowspan=\"2\">soil</td><td rowspan=\"2\">Cl</td><td rowspan=\"2\">S20: min</td><td colspan=\"3\">total S20:max</td></tr><tr><td>OH</td><td>soil</td><td>Cl</td><td> strat.</td><td>S20: min trop. Cl</td><td>S20 ave.</td><td>S20: max trop. Cl</td><td>strat.</td><td>trop. Cl</td><td>S20 ave.</td></tr><tr><td>Base</td><td>1.00465a</td><td>1.0201b</td><td>1.0666c</td><td>1.0147d</td><td>1.0060</td><td>1.0070</td><td>1.0092</td><td>1.292i</td><td>1.083j</td><td>1.527k</td><td>1.137d</td><td>1.278</td><td>1.279</td><td>trop. Cl 1.274</td></tr><tr><td>KIEC_OH_S01</td><td>1.0039e</td><td>*</td><td>*</td><td>*</td><td>1.0054</td><td>1.0064</td><td>1.0086</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td></tr><tr><td>KIEC_0H_C90</td><td>1.0054f</td><td>*</td><td>*</td><td>*</td><td>1.0067</td><td>1.0077</td><td>1.0099</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td></tr><tr><td>KIEC_CI_T00</td><td>*</td><td>*</td><td>1.0625g</td><td>*</td><td>1.0060</td><td>1.0069</td><td>1.0090</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td></tr><tr><td>KIEC_strat_R03</td><td>*</td><td>*</td><td>*</td><td>1.0154h</td><td>1.0060</td><td>1.0070</td><td>1.0092</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td></tr><tr><td>KIED_OH_S01</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>1.294f</td><td>*</td><td>*</td><td>*</td><td>1.276</td><td>1.280</td><td>1.289</td></tr><tr><td>KIED_OH_J16</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>1.311</td><td>*</td><td>*</td><td>*</td><td>1.290</td><td>1.294</td><td>1.303</td></tr><tr><td>KIED_OH_D93</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>1.18m</td><td>*</td><td>*</td><td>*</td><td>1.174</td><td>1.179</td><td>1.192</td></tr><tr><td>KIED_CI_T00</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>1.479g</td><td>*</td><td>1.274</td><td>1.278</td><td>1.285</td></tr><tr><td>KIED_CI_R03</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>*</td><td>1.153h</td><td>1.280</td><td>1.279</td><td>1.289</td></tr></table>",
+        "bbox": [
+            84,
+            147,
+            925,
+            566
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Note: The total KIEs are caluclated using bottom-up estimates of respective sink fractions reported in Saunois et al. (2020) (S20) for 2000–2009 and presented respective KIEs of tropospheric OH reaction, soil oxidation, tropospheric Cl reaction, and stratospheric destruction processes in the literatures (Cantrell et al., 1990; DeMore, 1993; Tyler et al., 1994; Saueressig et al., 1995, 1996; Gierczak et al., 1997; Reeburgh et al., 1997; Snover & Quay, 2000; Tyler et al., 2000; Saueressig et al., 2001; Rice et al. 2003; Röckmann et al., 2011; Joelsson et al., 2016). For the sink fractions, we used the bottom-up mean values of tropospheric OH sink $( 5 5 3 \\mathrm { T g / y r } )$ , soil oxdation $( 3 0 \\mathrm { T g } / \\mathrm { y r } )$ , stratospheric destruction $( 3 1 \\mathrm { T g } / \\mathrm { y r } )$ , except tropospheric Cl for three scenarios: $1 \\mathrm { T g / y r }$ (\"S20: min trop. Cl”), $1 1 \\ \\mathrm { T g / y r }$ (“S20 ave.”), and $3 5 \\mathrm { T g / y r }$ (“S20: max trop. Cl”), taken from Table 3 of Saunois et al. (2020). The base KIE scenario is based on Fujita et al. (2020), except stratospheric KIEs derived from balloon sample data collected globally (Röckmann et al., 2011). The same values from the base setting are represented by asterisks. The values of KIEs for the respective sink processes are given at $\\mathrm { T } = 2 8 8 \\mathrm { K }$ when the temperature dependent KIEs are available (Saueressig et al., 1995, 1996; Gierczak et al., 1997; Tyler et al., 2000). ",
+        "bbox": [
+            85,
+            686,
+            912,
+            892
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            491,
+            898,
+            507,
+            915
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "table",
+        "img_path": "images/b48deb15c4edea5ace9339f0b6dc89abae91a05b3436289ae3f79b57488bdda3.jpg",
+        "table_caption": [
+            "Table S5. Same as Table 3 in the main text, but for “NoFRESHem” scenario (see Table S3 and Fig. S11). The base results reported in Table 3 (i.e. under the default prior freshwater emissions) is also presented. "
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td></td><td>Prior</td><td>CH4 only</td><td>CH4+δ3C</td><td>CH4+δD</td><td>CH4+△14C</td><td>Base (All)</td></tr><tr><td>Fossil Fraction (%)</td><td>30.1 [22.5, 37.6]</td><td>27.7 [19.3,36.2]</td><td>36.9 [31.2, 42.7]</td><td>27.4 [19.7,35.0]</td><td>18.6 [14.1, 23.1]</td><td>23.4 [18.9,27.9]</td></tr><tr><td>Error reduction ratio</td><td>-</td><td>-11%</td><td>24%</td><td>-1%</td><td>41%</td><td>41%</td></tr><tr><td>Fossil Fraction in Table 3 (%)</td><td>23.6 [17.2, 30.1]</td><td>23.2 [15.1, 31.6]</td><td>31.5 [27.0, 35.9]</td><td>23.9 [17.9, 29.8]</td><td>18.1 [13.5,22.7]</td><td>23.1 [19.0, 26.8]</td></tr></table>",
+        "bbox": [
+            101,
+            159,
+            892,
+            273
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "SI References   \nAllan, W., Struthers, H., & Lowe, D. C. (2007). Methane carbon isotope effects caused by atomic chlorine in the marine boundary layer: Global model results compared with Southern Hemisphere measurements. Journal of Geophysical Research, 112(D4). doi:10.1029/2006jd007369   \nBasu, S., Lan, X., Dlugokencky, E., Michel, S., Schwietzke, S., Miller, J. B., et al. (2022). Estimating emissions of methane consistent with atmospheric measurements of methane and δ13C of methane. Atmospheric Chemistry and Physics, 22(23), 15351-15377. doi:10.5194/acp-22-15351-2022   \nBeck, J., Bock, M., Schmitt, J., Seth, B., Blunier, T., & Fischer, H. (2018). Bipolar carbon and hydrogen isotope constraints on the Holocene methane budget. Biogeosciences, 15(23), 7155-7175. doi:10.5194/bg-15-7155-2018   \nCantrell, C. A., Shetter, R. E., McDaniel, A. H., Calvert, J. G., Davidson, J. A., Lowe, D. C., et al. (1990). Carbon kinetic isotope effect in the oxidation of methane by the hydroxyl radical. Journal of Geophysical Research, 95(D13). doi:10.1029/JD095iD13p22455   \nCao, M., Marshall, S., & Gregson, K. (1996). Global carbon exchange and methane emissions from natural wetlands: Application of a process-based model. Journal of Geophysical Research: Atmospheres, 101(D9), 14399-14414. doi:10.1029/96jd00219   \nCraig, H. (1957). Isotopic standards for carbon and oxygen and correction factors for massspectrometric analysis of carbon dioxide. Geochimica et Cosmochimica Acta, 12(1), 133- 149. doi:10.1016/0016-7037(57)90024-8   \nCrippa, M., Guizzardi, D., Banja, M., Solazzo, E., Muntean, M., Schaaf, E., et al. (2022). CO2 emissions of all world countries - 2022 Report. Retrieved from EUR 31182 EN, Publications Office of the European Union, Luxembourg:   \nCrippa, M., Guizzardi, D., Muntean, M., Schaaf, E., Lo Vullo, E., Solazzo, E., et al. (2021). EDGAR v6.0 Greenhouse Gas Emissions. European Commission, Joint Research Centre (JRC) [Dataset]. Retrieved from: http://data.europa.eu/89h/97a67d67-c62e-4826-b873- 9d972c4f670b   \nCrippa, M., Solazzo, E., Huang, G., Guizzardi, D., Koffi, E., Muntean, M., et al. (2020). High resolution temporal profiles in the Emissions Database for Global Atmospheric Research. Earth Syst. Sci. Data, 7(1), 121. doi:10.1038/s41597-020-0462-2   \nDeMore, W. B. (1993). Rate constant ratio for the reactions of OH with $\\mathrm { C H } _ { 3 } \\mathrm { D }$ and CH4. J. Phys. Chem., 97(33), 8564-8566. doi:10.1021/j100135a006   \nEtiope, G., & Schwietzke, S. (2019). Global geological methane emissions: An update of top-down and bottom-up estimates. Elementa: Science of the Anthropocene, 7(47). doi:10.1525/journal.elementa.383   \nFerretti, D. F., Miller, J. B., White, J. W. C., Etheridge, D. M., Lassey, K. R., Lowe, D. C., et al. (2005). Unexpected Changes to the Global Methane Budget over the Past 2000 Years. Science, 309(5741), 1714-1717. doi:10.1126/science.1115193   \nFujita, R., Morimoto, S., Maksyutov, S., Kim, H. S., Arshinov, M., Brailsford, G., et al. (2020). Global and Regional $\\mathrm { C H } _ { 4 }$ Emissions for 1995–2013 Derived From Atmospheric $\\mathrm { C H } _ { 4 }$ , $\\delta ^ { 1 3 } \\mathrm { C } .$ ‐ $\\mathrm { C H } _ { 4 }$ , and δD $\\mathrm { C H } _ { 4 }$ Observations and a Chemical Transport Model. Journal of Geophysical Research: Atmospheres, 125(14). doi:10.1029/2020JD032903   \nGierczak, T., Talukdar, R. K., Herndon, S. C., Vaghjiani, G. L., & Ravishankara, A. R. (1997). Rate Coefficients for the Reactions of Hydroxyl Radicals with Methane and Deuterated Methanes. The Journal of Physical Chemistry A, 101(17), 3125-3134. doi:10.1021/jp963892r   \nGromov, S., Brenninkmeijer, C. A. M., & Jöckel, P. (2018). A very limited role of tropospheric chlorine as a sink of the greenhouse gas methane. Atmospheric Chemistry and Physics, 18(13), 9831-9843. doi:10.5194/acp-18-9831-2018   \nHagemann, R., Nief, G., & Roth, E. (1970). Absolute isotopic scale for deuterium analysis of natural waters. Absolute D/H ratio for SMOW. Tellus, 22(6), 712-715. doi:10.1111/j.2153- 3490.1970.tb00540.x   \nHmiel, B., Petrenko, V. V., Dyonisius, M. N., Buizert, C., Smith, A. M., Place, P. F., et al. (2020). Preindustrial $^ { 1 4 } \\mathrm { C H } _ { 4 }$ indicates greater anthropogenic fossil $\\mathrm { C H } _ { 4 }$ emissions. Nature, 578(7795), 409-412. doi:10.1038/s41586-020-1991-8   \nHoesly, R. M., Smith, S. J., Feng, L., Klimont, Z., Janssens-Maenhout, G., Pitkanen, T., et al. (2018). Historical (1750–2014) anthropogenic emissions of reactive gases and aerosols from the Community Emissions Data System (CEDS). Geoscientific Model Development, 11(1), 369-408. doi:10.5194/gmd-11-369-2018   \nHöglund-Isaksson, L., Gómez-Sanabria, A., Klimont, Z., Rafaj, P., & Schöpp, W. (2020). Technical potentials and costs for reducing global anthropogenic methane emissions in the 2050 timeframe –results from the GAINS model. Environmental Research Communications, 2(2). doi:10.1088/2515-7620/ab7457   \nIEA. (2022). Global Methane Tracker 2022, IEA, Paris https://www.iea.org/reports/global-methanetracker-2022, License: CC BY 4.0.   \nIto A. (2021), Output data of greenhouse gas budget and carbon cycle simulated by the VISIT terrestrial ecosystem model, ver.2021.1, NIES, doi:10.17595/20210521.001, (Reference date: 2024/1/19)   \nJoelsson, L. M. T., Schmidt, J. A., Nilsson, E. J. K., Blunier, T., Griffith, D. W. T., Ono, S., & Johnson, M. S. (2016). Kinetic isotope effects of $^ { 1 2 } \\mathrm { C H } _ { 3 } \\mathrm { D } + \\mathrm { O H }$ and $^ { 1 3 } \\mathrm { C H } _ { 3 } \\mathrm { D } + \\mathrm { O H }$ from 278 to 313 K. Atmospheric Chemistry and Physics, 16(7), 4439-4449. doi:10.5194/acp-16-4439- 2016   \nLassey, K. R., Etheridge, D. M., Lowe, D. C., Smith, A. M., & Ferretti, D. F. (2007). Centennial evolution of the atmospheric methane budget: what do the carbon isotopes tell us? Atmospheric Chemistry and Physics, 7(8), 2119-2139. doi:10.5194/acp-7-2119-2007   \nLu, X., Jacob, D. J., Zhang, Y., Maasakkers, J. D., Sulprizio, M. P., Shen, L., et al. (2021). Global methane budget and trend, 2010–2017: complementarity of inverse analyses using in situ (GLOBALVIEWplus CH4 ObsPack) and satellite (GOSAT) observations. Atmospheric Chemistry and Physics, 21(6), 4637-4657. doi:10.5194/acp-21-4637-2021   \nMaasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Scarpelli, T. R., Nesser, H., Sheng, J.-X., et al. (2019). Global distribution of methane emissions, emission trends, and OH concentrations and trends inferred from an inversion of GOSAT satellite data for 2010–2015. Atmospheric Chemistry and Physics, 19(11), 7859-7881. doi:10.5194/acp-19-7859-2019   \nMichel, S. E., Vaughn, B. H., Tans, P., Thoning, K., & Lan, X. (2021). Atmospheric d13C-CH4 data from the Institute of Arctic and Alpine Research (INSTAAR) at the University of Colorado, Boulder in cooperation with NOAA Global Monitoring Laboratory.   \nMischler, J. A., Sowers, T. A., Alley, R. B., Battle, M., McConnell, J. R., Mitchell, L., et al. (2009). Carbon and hydrogen isotopic composition of methane over the last 1000 years. Global Biogeochemical Cycles, 23(4). doi:10.1029/2009gb003460   \nNakazawa, T., Ishizawa, M., Higuchi, K. A. Z., & Trivett, N. B. A. (1997). Two Curve Fitting Methods Applied to $\\mathrm { C O } _ { 2 }$ Flask Data. Environmetrics, 8(3), 197-218. doi:10.1002/(sici)1099-095x(199705)8:3<197::Aid-env248>3.0.Co;2-c   \nO'Rourke, P. R., Smith, S. J., Mott, A., Ahsan, H., McDuffie, E. E., Crippa, M., et al. (2021). CEDS v_2021_04_21 Release Emission Data (v_2021_04_21) [Data set]. doi:10.5281/zenodo.4741285.   \nPaudel, R., Mahowald, N. M., Hess, P. G. M., Meng, L., & Riley, W. J. (2016). Attribution of changes in global wetland methane emissions from pre-industrial to present using CLM4.5- BGC. Environmental Research Letters, 11(3). doi:10.1088/1748-9326/11/3/034020   \nPoulter, B., Bousquet, P., Canadell, J. G., Ciais, P., Peregon, A., Saunois, M., et al. (2017). Global wetland contribution to 2000–2012 atmospheric methane growth rate dynamics. Environmental Research Letters, 12(9). doi:10.1088/1748-9326/aa8391   \nPrather, M. J., Holmes, C. D., & Hsu, J. (2012). Reactive greenhouse gas scenarios: Systematic exploration of uncertainties and the role of atmospheric chemistry. Geophysical Research Letters, 39(9). doi:10.1029/2012gl051440   \nReeburgh, W. S., Hirsch, A. I., Sansone, F. J., Popp, B. N., & Rust, T. M. (1997). Carbon kinetic isotope effect accompanying microbial oxidation of methane in boreal forest soils. Geochimica et Cosmochimica Acta, 61(22), 4761-4767. doi:10.1016/s0016-7037(97)00277- 9   \nRice, A. L., Butenhoff, C. L., Teama, D. G., Roger, F. H., Khalil, M. A., & Rasmussen, R. A. (2016). Atmospheric methane isotopic record favors fossil sources flat in 1980s and 1990s with recent increase. Proc. Natl. Acad. Sci. USA, 113(39), 10791-10796. doi:10.1073/pnas.1522923113   \nRice, A. L., Tyler, S. C., McCarthy, M. C., Boering, K. A., & Atlas, E. (2003). Carbon and hydrogen isotopic compositions of stratospheric methane: 1. High-precision observations from the NASA ER-2 aircraft. Journal of Geophysical Research, 108(D15). doi:10.1029/2002jd003042   \nRigby, M., Montzka, S. A., Prinn, R. G., White, J. W. C., Young, D., O'Doherty, S., et al. (2017). Role of atmospheric oxidation in recent methane growth. Proc. Natl. Acad. Sci. USA, 114(21), 5373-5377. doi:10.1073/pnas.1616426114   \nRöckmann, T., Brass, M., Borchers, R., & Engel, A. (2011). The isotopic composition of methane in the stratosphere: high-altitude balloon sample measurements. Atmospheric Chemistry and Physics, 11(24), 13287-13304. doi:10.5194/acp-11-13287-2011   \nSapart, C. J., Martinerie, P., Witrant, E., Chappellaz, J., van de Wal, R. S. W., Sperlich, P., et al. (2013). Can the carbon isotopic composition of methane be reconstructed from multi-site firn air measurements? Atmospheric Chemistry and Physics, 13(14), 6993-7005. doi:10.5194/acp-13-6993-2013   \nSaueressig, G., Bergamaschi, P., Crowley, J. N., Fischer, H., & Harris, G. W. (1995). Carbon kinetic isotope effect in the reaction of $\\mathrm { C H } _ { 4 }$ with Cl atoms. Geophysical Research Letters, 22, 1225–1228. doi:10.1029/95GL00881   \nSaueressig, G., Bergamaschi, P., Crowley, J. N., Fischer, H., & Harris, G. W. (1996). D/H kinetic isotope effect in the reaction $\\mathrm { C H } _ { 4 } { + } \\mathrm { C l }$ . Geophysical Research Letters, 23(24), 3619-3622. doi:10.1029/96gl03292   \nSaueressig, G., Crowley, J. N., Bergamaschi, P., Brühl, C., Brenninkmeijer, C. A. M., & Fischer, H. (2001). Carbon 13 and D kinetic isotope effects in the reactions of $\\mathrm { C H } _ { 4 }$ with $\\mathrm { O } ( ^ { 1 } \\mathrm { D } )$ and OH: New laboratory measurements and their implications for the isotopic composition of stratospheric methane. Journal of Geophysical Research: Atmospheres, 106(D19), 23127- 23138. doi:10.1029/2000jd000120   \nSaunois, M., Stavert, A. R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R. B., et al. (2020). The Global Methane Budget 2000–2017. Earth System Science Data, 12(3), 1561-1623. doi:10.5194/essd-12-1561-2020   \nScarpelli, T. R., Jacob, D. J., Maasakkers, J. D., Sulprizio, M. P., Sheng, J.-X., Rose, K., et al. (2020). A global gridded $( 0 . 1 ^ { \\circ } \\times 0 . 1 ^ { \\circ } )$ inventory of methane emissions from oil, gas, and coal exploitation based on national reports to the United Nations Framework Convention on Climate Change. Earth System Science Data, 12(1), 563-575. doi:10.5194/essd-12-563- 2020   \nSchaefer, H., Mikaloff Fletcher, S. E., Veidt, C., Lassey, K. R., Brailsford, G. W., Bromley, T. M., et al. (2016). A 21st-century shift from fossil-fuel to biogenic methane emissions indicated by $^ { 1 3 } \\mathrm { C H } _ { 4 }$ . Science, 352(6281), 80-84. doi:10.1126/science.aad2705   \nSchmitt, J., Seth, B., Bock, M., van der Veen, C., Möller, L., Sapart, C. J., et al. (2013). On the interference of Kr during carbon isotope analysis of methane using continuous-flow combustion–isotope ratio mass spectrometry. Atmospheric Measurement Techniques, 6(5), 1425-1445. doi:10.5194/amt-6-1425-2013   \nSchwietzke, S., Sherwood, O. A., Bruhwiler, L. M., Miller, J. B., Etiope, G., Dlugokencky, E. J., et al. (2016). Upward revision of global fossil fuel methane emissions based on isotope database. Nature, 538(7623), 88-91. doi:10.1038/nature19797   \nSnover, A. K., & Quay, P. D. (2000). Hydrogen and carbon kinetic isotope effects during soil uptake of atmospheric methane. Global Biogeochemical Cycles, 14(1), 25-39. doi:10.1029/1999gb900089   \nStuiver. (1980). Workshop on 14C data reporting. Radiocarbon, 22(3), 964-966.   \nSwart, N. C., Cole, J. N. S., Kharin, V. V., Lazare, M., Scinocca, J. F., Gillett, N. P., et al. (2019). The Canadian Earth System Model version 5 (CanESM5.0.3). Geoscientific Model Development, 12(11), 4823-4873. doi:10.5194/gmd-12-4823-2019   \nTurner, A. J., Frankenberg, C., Wennberg, P. O., & Jacob, D. J. (2017). Ambiguity in the causes for decadal trends in atmospheric methane and hydroxyl. Proc. Natl. Acad. Sci. USA, 114(21), 5367-5372. doi:10.1073/pnas.1616020114   \nTyler, S. C., Ajie, H. O., Rice, A. L., Cicerone, R. J., & Tuazon, E. C. (2000). Experimentally determined kinetic isotope effects in the reaction of $\\mathrm { C H } _ { 4 }$ with Cl: Implications for atmospheric CH4. Geophysical Research Letters, 27(12), 1715-1718. doi:10.1029/1999gl011168   \nTyler, S. C., Crill, P. M., & Brailsford, G. W. (1994). Fractionation of methane during oxidation in a temperate forested soil. Geochimica et Cosmochimica Acta, 58(6), 1625-1633. doi:10.1016/0016-7037(94)90564-9   \nUmezawa, T., Brenninkmeijer, C. A. M., Röckmann, T., van der Veen, C., Tyler, S. C., Fujita, R., et al. (2018). Interlaboratory comparison of $\\delta ^ { 1 3 } \\mathrm { C }$ and δD measurements of atmospheric $\\mathrm { C H } _ { 4 }$ for combined use of data sets from different laboratories. Atmospheric Measurement Techniques, 11(2), 1207-1231. doi:10.5194/amt-11-1207-2018   \nvan Marle, M. J. E., Kloster, S., Magi, B. I., Marlon, J. R., Daniau, A.-L., Field, R. D., et al. (2017). Historic global biomass burning emissions for CMIP6 (BB4CMIP) based on merging satellite observations with proxies and fire models (1750–2015). Geoscientific Model Development, 10(9), 3329-3357. doi:10.5194/gmd-10-3329-2017 Walter, B. P., & Heimann, M. (2000). A process-based, climate-sensitive model to derive methane emissions from natural wetlands: Application to five wetland sites, sensitivity to model parameters, and climate. Global Biogeochemical Cycles, 14(3), 745-765. doi:10.1029/1999gb001204 Waugh, D., & Hall, T. (2002). Age of Stratospheric Air: Theory, Observations, and Models. Reviews of Geophysics, 40(4). doi:10.1029/2000rg000101 White, J. W. C., Vaughn, B. H., & Michel, S. E. (2016). University of Colorado, Institute of Arctic and Alpine Research (INSTAAR), stable isotopic composition of atmospheric methane (D/H) from the NOAA ESRL carbon cycle cooperative global air sampling network, 2005-   \n2009, version: 2016‐04‐25 [Dataset]. Retrieved from: ftp://aftp.cmdl.noaa.gov/data/trace_gases/ch4h2/flask/ Zazzeri, G., Yeomans, E. A., & Graven, H. D. (2018). Global and Regional Emissions of Radiocarbon from Nuclear Power Plants from 1972 to 2016. Radiocarbon, 60(4), 1067-   \n1081. doi:10.1017/rdc.2018.42 ",
+        "bbox": [
+            99,
+            84,
+            892,
+            896
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            99,
+            56,
+            895,
+            875
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            98,
+            63,
+            892,
+            897
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            96,
+            30,
+            893,
+            878
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            509,
+            934
+        ],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            98,
+            88,
+            888,
+            334
+        ],
+        "page_idx": 30
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            488,
+            921,
+            508,
+            934
+        ],
+        "page_idx": 30
+    }
+]
