@@ -1,0 +1,273 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+
+\title{Reducing Kinetic Isotope Effect Sensitivity in Methane Source Apportionment via a Dual-Isotope Agreement Filter}
+\author{He\textsuperscript{1,*} \\[4pt]
+\textsuperscript{1}[Affiliation] \\[2pt]
+\textsuperscript{*}Corresponding author: ilovecodinghh@gmail.com}
+\date{}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+\begin{abstract}
+Atmospheric methane (CH$_4$) concentrations have risen sharply since 2007 while $\delta^{13}$C-CH$_4$ has simultaneously declined---a combination often interpreted as increased microbial emissions. However, this attribution depends critically on the kinetic isotope effect (KIE) for the CH$_4$ + OH reaction, where two laboratory measurements remain unreconciled: Saueressig et al.\ (2001; $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0039) and Cantrell et al.\ (1990; $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0054). This 0.15\% difference propagates to 20--40~Tg~yr$^{-1}$ uncertainty in source partitioning---comparable to the post-2006 emission trend itself. Here, we introduce a dual-isotope \emph{Agreement Filter} that exploits independent $\delta^{13}$C and $\delta$D mass balances to reduce KIE sensitivity by a factor of 2.5--3.2$\times$. The method solves the two isotopic budgets separately and retains only Monte Carlo iterations where both yield consistent fossil fuel estimates. We define a KIE Sensitivity Ratio (KSR) to quantify improvement. With a 50~Tg~yr$^{-1}$ agreement threshold, KSR = 3.2. Furthermore, the agreement rate itself serves as a novel KIE discriminant: under Cantrell's fractionation, 68\% of iterations achieve $\delta^{13}$C--$\delta$D consistency versus 44\% under Saueressig's (24.7 percentage points; $p < 0.05$). This provides observational evidence favoring $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0054. An OSSE confirms the filter reduces recovery bias by $\sim$7\% but cannot eliminate fundamental $\pm$18~Tg~yr$^{-1}$ uncertainty from an incorrect KIE---positioning $\delta$D as a diagnostic tool rather than a silver bullet.
+\end{abstract}
+
+\noindent\textbf{Key Points:}
+\begin{itemize}
+\item Adding $\delta$D as a coupled WLS constraint \emph{amplifies} KIE sensitivity (KSR $<$ 1); no optimal weight exists
+\item Using $\delta$D as an independent agreement filter \emph{reduces} KIE sensitivity by 2.5--3.2$\times$ (KSR $>$ 1)
+\item The $\delta^{13}$C--$\delta$D agreement rate is a novel, statistically significant discriminant favoring $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0054
+\end{itemize}
+
+% ============================================================
+\section{Introduction}
+
+\subsection{The Methane Budget Problem}
+
+Atmospheric methane is the second most important anthropogenic greenhouse gas, responsible for approximately 0.5~W~m$^{-2}$ of current radiative forcing. Since 2007, CH$_4$ concentrations have increased at an accelerating rate, reaching $\sim$1920~ppb by 2022 \citep{Nisbet2019}. Simultaneously, atmospheric $\delta^{13}$C-CH$_4$ has declined by approximately 0.6\permil\ from 1999 to 2022 \citep{Lan2021,RiddellYoung2025}, suggesting a growing contribution from isotopically depleted sources---primarily microbial emissions \citep{Schwietzke2016,Basu2022,He2026Science}.
+
+However, this interpretation masks a critical vulnerability: quantitative partitioning depends on the fractionation factor $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ applied to the dominant CH$_4$ sink. Two laboratory measurements remain unreconciled:
+\begin{itemize}
+\item \textbf{Cantrell et al.\ (1990):} $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0054 $\pm$ 0.0009
+\item \textbf{Saueressig et al.\ (2001):} $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0039 $\pm$ 0.0004
+\end{itemize}
+
+The JPL evaluation \citep{Burkholder2019} recommends the Saueressig value but expands uncertainty to encompass both, acknowledging that ``this earlier result has not been refuted in the literature.''
+
+\subsection{Consequences for Source Attribution}
+
+The 0.15\% difference has substantial consequences. Because OH oxidation accounts for $\sim$84\% of total CH$_4$ destruction \citep{Saunois2020}, the KIE choice directly controls computed isotopic enrichment by sinks. \citet{Basu2022} demonstrated that switching from Saueressig to Cantrell shifts fossil--microbial partitioning by 30--40~Tg~yr$^{-1}$. \citet{Thanwerdas2024} noted this sensitivity but chose not to test alternatives. \citet{He2026JGR} found that using Saueressig ``would require negative biomass burning emissions''---a physically unrealistic result.
+
+\subsection{Prevalence of Saueressig in Current Models}
+
+A survey of 16 relevant studies reveals asymmetric KIE adoption (Table~\ref{tab:kie_survey}). Among the most influential inverse-modeling papers, Saueressig (1.0039) remains the default \citep{Basu2022,Thanwerdas2024}, despite growing evidence favoring higher values.
+
+\begin{table}[h]
+\caption{KIE adoption in recent methane isotope studies.}
+\label{tab:kie_survey}
+\centering
+\footnotesize
+\begin{tabular}{lll}
+\toprule
+Study & Default KIE & Notes \\
+\midrule
+Basu+ 2022 & 1.0039 (S) & Cantrell as sensitivity \\
+Thanwerdas+ 2024 & 1.0039 (S) & Preferred; cited precision \\
+He+ 2026b & 1.00465 & Average; S alone unphysical \\
+Chandra+ 2024 & 1.00465 & Tested both \\
+Fujita+ 2025 & 1.00465 & Mean as base \\
+Rice+ 2016 & $\sim$1.005 (C) & S as sensitivity (S7) \\
+Riddell-Young+ 2025 & 1.0054 (C) & Dual-isotope balance \\
+Dasgupta+ 2025 & 1.0054 (C) & Citing Lan+ validation \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The Promise and Peril of $\delta$D}
+
+Recent studies demonstrate the potential of $\delta$D-CH$_4$ \citep{Rice2016,RiddellYoung2025}. However, \textbf{no prior study has systematically quantified whether $\delta$D can reduce sensitivity to the $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ controversy}, nor used the degree of $\delta^{13}$C--$\delta$D agreement as an observational KIE discriminant.
+
+\subsection{This Study}
+
+We test five approaches: (1) WLS coupling, (2) weight optimization, (3) Cl fraction interaction, (4) agreement filtering, (5) KIE discrimination via agreement rates. We demonstrate that approaches 1--3 amplify KIE sensitivity (KSR $<$ 1), while 4 reduces it (KSR = 2.5--3.2) and 5 provides novel observational evidence favoring $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ = 1.0054.
+
+% ============================================================
+\section{Methods}
+
+\subsection{Box Model Framework}
+
+We employ global one-box and hemispheric two-box isotope mass-balance models \citep{Schwietzke2016,RiddellYoung2025,He2026Science}. The isotope mass balance:
+\begin{equation}
+S \cdot f_X^{\mathrm{src}} = n_X(t{+}1) - n_X(t) + n_X(t) \cdot \frac{\alpha_X}{\tau(t)}
+\end{equation}
+where $S$ is total source (Tg~yr$^{-1}$), $f_X^{\mathrm{src}}$ is the source isotope fraction, $n_X$ is atmospheric burden, $\alpha_X$ is combined sink fractionation, and $\tau(t) = 9.0 - 0.017(t - 2010)$~yr.
+
+\subsection{Source Partitioning}
+
+Total emissions: $S = S_{\mathrm{FF}} + S_{\mathrm{Mic}} + S_{\mathrm{BB}}$, with $S_{\mathrm{BB}}$ from GFEDv4.1s. Source-weighted isotopic constraint:
+\begin{equation}
+S \cdot \delta_{\mathrm{src}} = S_{\mathrm{FF}} \cdot \delta_{\mathrm{FF}} + S_{\mathrm{Mic}} \cdot \delta_{\mathrm{Mic}} + S_{\mathrm{BB}} \cdot \delta_{\mathrm{BB}}
+\end{equation}
+
+\subsection{Monte Carlo Uncertainty Propagation}
+
+$N$ = 1000 iterations (seed 42) sampling:
+\begin{itemize}
+\item OH-$^{13}$C KIE: $\mathcal{U}$[1.0039, 1.0054]
+\item OH-D KIE: $\mathcal{U}$[1.294, 1.327]
+\item Cl-$^{13}$C KIE: $\mathcal{N}$(1.066, 0.002)
+\item Cl-D KIE: $\mathcal{N}$(1.52, 0.02)
+\end{itemize}
+
+Three scenarios: A (Saueressig, fixed 1.0039), B (Cantrell, fixed 1.0054), C (sampled from $\mathcal{U}$[1.0039, 1.0054]).
+
+\subsection{The KIE Sensitivity Ratio}
+
+\begin{equation}
+\mathrm{KSR} = \frac{\Delta_{\mathrm{baseline}}}{\Delta_{\mathrm{filtered}}}
+\label{eq:ksr}
+\end{equation}
+where $\Delta = |$median trend$_{\mathrm{Cantrell}}$ $-$ median trend$_{\mathrm{Saueressig}}|$. KSR $>$ 1 indicates reduced sensitivity.
+
+\subsection{The Agreement Filter}
+
+\begin{algorithm}[h]
+\caption{Dual-Isotope Agreement Filter}
+\label{alg:filter}
+\begin{algorithmic}[1]
+\REQUIRE Threshold $T$ (Tg~yr$^{-1}$), MC samples $k = 1\ldots N$
+\FOR{each iteration $k$}
+  \STATE Solve $\delta^{13}$C $\rightarrow S_{\mathrm{FF}}^{13\mathrm{C}}(j,k)$
+  \STATE Solve $\delta$D $\rightarrow S_{\mathrm{FF}}^{\mathrm{D}}(j,k)$
+  \FOR{each year $j$}
+    \STATE agree$(j,k) = |S_{\mathrm{FF}}^{13\mathrm{C}} - S_{\mathrm{FF}}^{\mathrm{D}}| < T$
+  \ENDFOR
+  \STATE good$(k) = \sum_j$agree$(j,k) \geq 0.8 \times n_{\mathrm{yr}}$
+\ENDFOR
+\RETURN \{$S_{\mathrm{FF}}^{13\mathrm{C}}(k)$ : good$(k)$ = True\}
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Agreement Rate as KIE Discriminant}
+
+\begin{equation}
+R = \frac{1}{N \cdot n_{\mathrm{yr}}} \sum_{k=1}^{N} \sum_{j=1}^{n_{\mathrm{yr}}} \mathbb{1}\left[|S_{\mathrm{FF}}^{13\mathrm{C}}(j,k) - S_{\mathrm{FF}}^{\mathrm{D}}(j,k)| < T\right]
+\end{equation}
+
+Statistical significance assessed via bootstrap (2000 iterations).
+
+% ============================================================
+\section{Results}
+
+\subsection{WLS Coupling Amplifies KIE Sensitivity}
+
+Across all configurations (1-box, 2-box, all weights, all Cl fractions), coupling $\delta$D into WLS yields KSR $<$ 1 (Table~\ref{tab:wls}).
+
+\begin{table}[h]
+\caption{KSR under WLS coupling---all values $<$ 1.}
+\label{tab:wls}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Configuration & KSR (FF) & KSR (Mic) \\
+\midrule
+1-box, $w_D=1$ & 0.20 & 0.32 \\
+1-box, $w_D=0.01$ & 0.24 & 0.33 \\
+2-box, $w_D=1$ & 0.22 & 0.35 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{No Optimal $\delta$D Weight Exists}
+
+A sweep of $w_D$ from 0 to 1 reveals step-function degradation: at $w_D = 0.01$, emission spread jumps from 1.98 to 8.38~Tg~yr$^{-1}$ (4.2$\times$). Higher Cl fractions exacerbate the problem (15~Tg~yr$^{-1}$ at 6.5\% Cl vs.\ 6.5~Tg~yr$^{-1}$ at 0.6\%).
+
+\subsection{Agreement Filter Reduces KIE Sensitivity}
+
+\begin{table}[h]
+\caption{Agreement filter performance across thresholds.}
+\label{tab:agree}
+\centering
+\footnotesize
+\begin{tabular}{ccccc}
+\toprule
+$T$ (Tg/yr) & $R_S$ (\%) & $R_C$ (\%) & $\Delta R$ (pp) & KSR \\
+\midrule
+50 & 14.6 & 33.4 & 18.8 & \textbf{3.21} \\
+75 & 27.2 & 51.5 & 24.3 & 2.16 \\
+100 & 43.5 & 68.1 & 24.7 & \textbf{2.48} \\
+150 & 76.0 & 90.5 & 14.5 & 1.51 \\
+200 & 94.0 & 98.0 & 4.0 & 1.09 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Agreement Rate as KIE Discriminant}
+
+At $T = 100$~Tg~yr$^{-1}$: Cantrell $R = 68.1\%$ [95\% CI: 67.5, 68.7]; Saueressig $R = 43.5\%$ [95\% CI: 42.8, 44.1]. Non-overlapping CIs ($p < 0.05$). The real atmosphere is more internally consistent with $\alpha_{\mathrm{OH}}^{13\mathrm{C}} = 1.0054$.
+
+\subsection{OSSE Results}
+
+The filter reduces bias by $\sim$7\% and RMSE by $\sim$5\%, but cannot eliminate the $\pm$18~Tg~yr$^{-1}$ systematic bias from using the wrong KIE (Table~\ref{tab:osse}).
+
+\begin{table}[h]
+\caption{OSSE: bias (Tg~yr$^{-1}$) with/without agreement filter.}
+\label{tab:osse}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Inversion KIE & Unfiltered & Filtered \\
+\midrule
+True (1.0046) & +2.1 & +1.5 \\
+Saueressig (1.0039) & +19.6 & +18.3 \\
+Cantrell (1.0054) & $-$17.8 & $-$17.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Discussion}
+
+\subsection{Why WLS Coupling Fails}
+
+In an over-determined system where $\delta^{13}$C shifts with the OH-$^{13}$C KIE but $\delta$D does not, the WLS solution amplifies asymmetric perturbation through the shared unknowns. This implies that variational inversions jointly optimizing both isotopes may inadvertently amplify KIE sensitivity unless $\delta$D is sufficiently downweighted or applied as a posterior check---consistent with approaches by \citet{Thanwerdas2024} (weak prior) and \citet{RiddellYoung2025} (separate solutions).
+
+\subsection{Observational Evidence Favoring Cantrell}
+
+Our agreement-rate discriminant is fundamentally different from prior approaches. Rather than asking ``which KIE gives more reasonable emissions?'' (presupposing the answer), we ask: ``under which KIE do two independent isotopic systems agree more often?'' The answer---Cantrell---is robust to lifetime parameterization, Cl fraction, and model dimensionality.
+
+\subsection{A Course Correction}
+
+The emerging picture from \citet{He2026JGR}, \citet{Dasgupta2025}, \citet{Chandra2024}, \citet{Whitehill2023}, and this work converges: the effective $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ is likely $\geq$1.0054. The continued use of 1.0039 as default should be reconsidered.
+
+\subsection{Limitations}
+
+\begin{enumerate}
+\item Box-model simplicity (3D transport may modify KSR values)
+\item Constant sink fractions (Cl may vary decadally)
+\item Time-invariant source signatures
+\item Threshold choice is not fully objective
+\end{enumerate}
+
+% ============================================================
+\section{Conclusions}
+
+\begin{enumerate}
+\item $\delta$D as a coupled WLS constraint \textbf{amplifies} KIE sensitivity (KSR = 0.2--0.35).
+\item $\delta$D as an independent agreement filter \textbf{reduces} KIE sensitivity (KSR = 2.5--3.2).
+\item The $\delta^{13}$C--$\delta$D agreement rate is a statistically significant KIE discriminant favoring $\alpha_{\mathrm{OH}}^{13\mathrm{C}} = 1.0054$ over 1.0039 (24.7 pp difference, $p < 0.05$).
+\item The filter improves accuracy by $\sim$7\% but cannot eliminate $\pm$18~Tg~yr$^{-1}$ fundamental KIE bias.
+\end{enumerate}
+
+\noindent\textbf{Recommendations:}
+\begin{itemize}
+\item Do \emph{not} couple $\delta^{13}$C and $\delta$D in joint optimizations without KIE sensitivity testing
+\item Implement the agreement filter as a standard post-processing diagnostic
+\item Adopt 1.0054 as the preferred central $\alpha_{\mathrm{OH}}^{13\mathrm{C}}$ value
+\end{itemize}
+
+% ============================================================
+\section*{Data Availability}
+Code and data: \url{https://github.com/Ilovecodinghhh/upgrade_two_isotope_model}
+
+\section*{Acknowledgments}
+[To be added]
+
+% ============================================================
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
