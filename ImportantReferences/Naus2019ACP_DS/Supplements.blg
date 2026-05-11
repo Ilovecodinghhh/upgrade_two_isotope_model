@@ -1,0 +1,9 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Supplements.aux
+The style file: unsrt.bst
+Database file #1: mybib.bib
+I was expecting a `,' or a `}'---line 495 of file mybib.bib
+ : 
+ : @article{quay1999,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There was 1 error message)

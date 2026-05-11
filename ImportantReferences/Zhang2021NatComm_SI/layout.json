@@ -1,0 +1,3402 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        53,
+                        195,
+                        559,
+                        229
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                194,
+                                559,
+                                216
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        194,
+                                        559,
+                                        216
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Attribution of the accelerating increase in atmospheric methane during",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                210,
+                                429,
+                                231
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        210,
+                                        429,
+                                        231
+                                    ],
+                                    "score": 1.0,
+                                    "content": "2010–2018 by inverse analysis of GOSAT observations",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 0.5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        241,
+                        146,
+                        253
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                241,
+                                146,
+                                254
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        241,
+                                        146,
+                                        254
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Yuzhong Zhang et al.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        266,
+                        340,
+                        277
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                265,
+                                341,
+                                279
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        265,
+                                        341,
+                                        279
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Correspondence to: Yuzhong Zhang (zhangyuzhong@westlake.edu.cn)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        304,
+                        429,
+                        316
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                303,
+                                432,
+                                317
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        303,
+                                        432,
+                                        317
+                                    ],
+                                    "score": 1.0,
+                                    "content": "The copyright of individual parts of the supplement might differ from the CC BY 4.0 License.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4
+                }
+            ],
+            "page_idx": 0,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        396,
+                        45,
+                        558,
+                        97
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                396,
+                                44,
+                                484,
+                                62
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        396,
+                                        44,
+                                        484,
+                                        62
+                                    ],
+                                    "score": 0.999,
+                                    "content": "Atmospheric",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                411,
+                                61,
+                                483,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        411,
+                                        61,
+                                        483,
+                                        81
+                                    ],
+                                    "score": 0.999,
+                                    "content": "Chemistry",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                399,
+                                80,
+                                483,
+                                98
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        399,
+                                        80,
+                                        483,
+                                        98
+                                    ],
+                                    "score": 0.985,
+                                    "content": "and Physics",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        54,
+                        96,
+                        97,
+                        112
+                    ],
+                    "lines": []
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        54,
+                        46,
+                        287,
+                        93
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                46,
+                                288,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        46,
+                                        288,
+                                        58
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of Atmos. Chem. Phys., 21, 3643–3666, 2021",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                57,
+                                273,
+                                72
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        57,
+                                        273,
+                                        72
+                                    ],
+                                    "score": 1.0,
+                                    "content": "https://doi.org/10.5194/acp-21-3643-2021-supplement",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                70,
+                                252,
+                                82
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        70,
+                                        63,
+                                        80
+                                    ],
+                                    "score": 0.71,
+                                    "content": "©",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        63,
+                                        70,
+                                        252,
+                                        82
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Author(s) 2021. This work is distributed under",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                81,
+                                245,
+                                95
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        81,
+                                        245,
+                                        95
+                                    ],
+                                    "score": 1.0,
+                                    "content": "the Creative Commons Attribution 4.0 License.",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        55,
+                        166,
+                        150,
+                        184
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                165,
+                                151,
+                                187
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        165,
+                                        151,
+                                        187
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        53,
+                        195,
+                        559,
+                        229
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                194,
+                                559,
+                                216
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        194,
+                                        559,
+                                        216
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Attribution of the accelerating increase in atmospheric methane during",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                210,
+                                429,
+                                231
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        210,
+                                        429,
+                                        231
+                                    ],
+                                    "score": 1.0,
+                                    "content": "2010–2018 by inverse analysis of GOSAT observations",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 0.5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        241,
+                        146,
+                        253
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                241,
+                                146,
+                                254
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        241,
+                                        146,
+                                        254
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Yuzhong Zhang et al.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2,
+                    "bbox_fs": [
+                        54,
+                        241,
+                        146,
+                        254
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        266,
+                        340,
+                        277
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                265,
+                                341,
+                                279
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        265,
+                                        341,
+                                        279
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Correspondence to: Yuzhong Zhang (zhangyuzhong@westlake.edu.cn)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3,
+                    "bbox_fs": [
+                        53,
+                        265,
+                        341,
+                        279
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        304,
+                        429,
+                        316
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                303,
+                                432,
+                                317
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        303,
+                                        432,
+                                        317
+                                    ],
+                                    "score": 1.0,
+                                    "content": "The copyright of individual parts of the supplement might differ from the CC BY 4.0 License.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4,
+                    "bbox_fs": [
+                        54,
+                        303,
+                        432,
+                        317
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        88,
+                        82,
+                        504,
+                        311
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                88,
+                                82,
+                                504,
+                                311
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        82,
+                                        504,
+                                        311
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                82,
+                                                504,
+                                                311
+                                            ],
+                                            "score": 0.961,
+                                            "type": "image",
+                                            "image_path": "f0aa0a14edd188ddb384065fb8bd55eb17c3e25238ec893f50abfbd1b3771932.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        82,
+                                        504,
+                                        158.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        158.33333333333331,
+                                        504,
+                                        234.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        234.66666666666663,
+                                        504,
+                                        310.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                322,
+                                508,
+                                398
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        322,
+                                        507,
+                                        337
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                322,
+                                                507,
+                                                337
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S1. Spatial distribution of wetland emissions in Africa averaged over 2010-2018. (Left) Same as",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        339,
+                                        507,
+                                        351
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                339,
+                                                507,
+                                                351
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure 1 except that only Africa is shown here. We use WetCHARTS ensemble mean as prior estimates",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        354,
+                                        507,
+                                        367
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                354,
+                                                507,
+                                                367
+                                            ],
+                                            "score": 1.0,
+                                            "content": "for wetland emissions in the base inversion. (Right) Spatial distribution of wetland emissions is perturbed",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        370,
+                                        506,
+                                        382
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                370,
+                                                506,
+                                                382
+                                            ],
+                                            "score": 1.0,
+                                            "content": "in a sensitivity inversion, in which emissions over the Sudd region are increased by a factor of 3 and",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        386,
+                                        343,
+                                        398
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                386,
+                                                343,
+                                                398
+                                            ],
+                                            "score": 1.0,
+                                            "content": "emissions over the Congo Basin are reduced by a factor of 2.5.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 7
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ],
+            "page_idx": 1,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        88,
+                        82,
+                        504,
+                        311
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                88,
+                                82,
+                                504,
+                                311
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        82,
+                                        504,
+                                        311
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                82,
+                                                504,
+                                                311
+                                            ],
+                                            "score": 0.961,
+                                            "type": "image",
+                                            "image_path": "f0aa0a14edd188ddb384065fb8bd55eb17c3e25238ec893f50abfbd1b3771932.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        82,
+                                        504,
+                                        158.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        158.33333333333331,
+                                        504,
+                                        234.66666666666663
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        234.66666666666663,
+                                        504,
+                                        310.99999999999994
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                322,
+                                508,
+                                398
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        322,
+                                        507,
+                                        337
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                322,
+                                                507,
+                                                337
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S1. Spatial distribution of wetland emissions in Africa averaged over 2010-2018. (Left) Same as",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        339,
+                                        507,
+                                        351
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                339,
+                                                507,
+                                                351
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure 1 except that only Africa is shown here. We use WetCHARTS ensemble mean as prior estimates",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        354,
+                                        507,
+                                        367
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                354,
+                                                507,
+                                                367
+                                            ],
+                                            "score": 1.0,
+                                            "content": "for wetland emissions in the base inversion. (Right) Spatial distribution of wetland emissions is perturbed",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        370,
+                                        506,
+                                        382
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                370,
+                                                506,
+                                                382
+                                            ],
+                                            "score": 1.0,
+                                            "content": "in a sensitivity inversion, in which emissions over the Sudd region are increased by a factor of 3 and",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        386,
+                                        343,
+                                        398
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                386,
+                                                343,
+                                                398
+                                            ],
+                                            "score": 1.0,
+                                            "content": "emissions over the Congo Basin are reduced by a factor of 2.5.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 7
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        133,
+                        92,
+                        464,
+                        283
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                133,
+                                92,
+                                464,
+                                283
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        133,
+                                        92,
+                                        464,
+                                        283
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                133,
+                                                92,
+                                                464,
+                                                283
+                                            ],
+                                            "score": 0.973,
+                                            "type": "image",
+                                            "image_path": "a4313137e80348918efe8714bc5c49b24cc8c2c88b8b2b4ca2a3742b995076f1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        133,
+                                        92,
+                                        464,
+                                        155.66666666666666
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        133,
+                                        155.66666666666666,
+                                        464,
+                                        219.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        133,
+                                        219.33333333333331,
+                                        464,
+                                        283.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                291,
+                                507,
+                                336
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        292,
+                                        506,
+                                        304
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                292,
+                                                506,
+                                                304
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S2. The same as Figure 2, except that the GEOS-Chem stratospheric bias correction factors for",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        308,
+                                        507,
+                                        321
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                308,
+                                                507,
+                                                321
+                                            ],
+                                            "score": 1.0,
+                                            "content": "individual years are computed using ACE-FTS observations. The outlier values in SON of 2011 are",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        324,
+                                        465,
+                                        336
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                324,
+                                                465,
+                                                336
+                                            ],
+                                            "score": 1.0,
+                                            "content": "associated a considerably smaller number of ACE-FTS observations relative to other seasons.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                }
+            ],
+            "page_idx": 2,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        133,
+                        92,
+                        464,
+                        283
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                133,
+                                92,
+                                464,
+                                283
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        133,
+                                        92,
+                                        464,
+                                        283
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                133,
+                                                92,
+                                                464,
+                                                283
+                                            ],
+                                            "score": 0.973,
+                                            "type": "image",
+                                            "image_path": "a4313137e80348918efe8714bc5c49b24cc8c2c88b8b2b4ca2a3742b995076f1.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        133,
+                                        92,
+                                        464,
+                                        155.66666666666666
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        133,
+                                        155.66666666666666,
+                                        464,
+                                        219.33333333333331
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        133,
+                                        219.33333333333331,
+                                        464,
+                                        283.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                291,
+                                507,
+                                336
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        292,
+                                        506,
+                                        304
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                292,
+                                                506,
+                                                304
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S2. The same as Figure 2, except that the GEOS-Chem stratospheric bias correction factors for",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        308,
+                                        507,
+                                        321
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                308,
+                                                507,
+                                                321
+                                            ],
+                                            "score": 1.0,
+                                            "content": "individual years are computed using ACE-FTS observations. The outlier values in SON of 2011 are",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        324,
+                                        465,
+                                        336
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                324,
+                                                465,
+                                                336
+                                            ],
+                                            "score": 1.0,
+                                            "content": "associated a considerably smaller number of ACE-FTS observations relative to other seasons.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        104,
+                        84,
+                        488,
+                        429
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                104,
+                                84,
+                                488,
+                                429
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        104,
+                                        84,
+                                        488,
+                                        429
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                104,
+                                                84,
+                                                488,
+                                                429
+                                            ],
+                                            "score": 0.978,
+                                            "type": "image",
+                                            "image_path": "76b4243e260d3367812210797ecc1cf60556735254297c204c9b80b646036d48.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        104,
+                                        84,
+                                        488,
+                                        199.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        104,
+                                        199.0,
+                                        488,
+                                        314.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        104,
+                                        314.0,
+                                        488,
+                                        429.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                447,
+                                508,
+                                508
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        448,
+                                        506,
+                                        461
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                448,
+                                                506,
+                                                461
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S3. Difference of methane mixing ratios between model simulations and ground-based",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        463,
+                                        507,
+                                        477
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                463,
+                                                507,
+                                                477
+                                            ],
+                                            "score": 1.0,
+                                            "content": "observations, averaged over latitude bands. Top panels show comparison with TCCON measurements,",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        478,
+                                        507,
+                                        493
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                478,
+                                                507,
+                                                493
+                                            ],
+                                            "score": 1.0,
+                                            "content": "and bottom panels NOAA surface measurements. Results are shown for GEOS-Chem simulations using",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        496,
+                                        306,
+                                        507
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                496,
+                                                306,
+                                                507
+                                            ],
+                                            "score": 1.0,
+                                            "content": "prior (left) and posterior (right) state vector estimates.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 6
+                                }
+                            ],
+                            "index": 4.5
+                        }
+                    ],
+                    "index": 2.75
+                }
+            ],
+            "page_idx": 3,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        104,
+                        84,
+                        488,
+                        429
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                104,
+                                84,
+                                488,
+                                429
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        104,
+                                        84,
+                                        488,
+                                        429
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                104,
+                                                84,
+                                                488,
+                                                429
+                                            ],
+                                            "score": 0.978,
+                                            "type": "image",
+                                            "image_path": "76b4243e260d3367812210797ecc1cf60556735254297c204c9b80b646036d48.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        104,
+                                        84,
+                                        488,
+                                        199.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        104,
+                                        199.0,
+                                        488,
+                                        314.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        104,
+                                        314.0,
+                                        488,
+                                        429.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                447,
+                                508,
+                                508
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        448,
+                                        506,
+                                        461
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                448,
+                                                506,
+                                                461
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S3. Difference of methane mixing ratios between model simulations and ground-based",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        463,
+                                        507,
+                                        477
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                463,
+                                                507,
+                                                477
+                                            ],
+                                            "score": 1.0,
+                                            "content": "observations, averaged over latitude bands. Top panels show comparison with TCCON measurements,",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        478,
+                                        507,
+                                        493
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                478,
+                                                507,
+                                                493
+                                            ],
+                                            "score": 1.0,
+                                            "content": "and bottom panels NOAA surface measurements. Results are shown for GEOS-Chem simulations using",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        496,
+                                        306,
+                                        507
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                496,
+                                                306,
+                                                507
+                                            ],
+                                            "score": 1.0,
+                                            "content": "prior (left) and posterior (right) state vector estimates.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 6
+                                }
+                            ],
+                            "index": 4.5
+                        }
+                    ],
+                    "index": 2.75
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        93,
+                        82,
+                        442,
+                        430
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                93,
+                                82,
+                                442,
+                                430
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        82,
+                                        442,
+                                        430
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                93,
+                                                82,
+                                                442,
+                                                430
+                                            ],
+                                            "score": 0.976,
+                                            "type": "image",
+                                            "image_path": "f358151aef2a7ebf8b98dad6a82d1c73511f0053823ff78b3c8d095c05645f93.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        82,
+                                        442,
+                                        198.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        198.0,
+                                        442,
+                                        314.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        314.0,
+                                        442,
+                                        430.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                448,
+                                507,
+                                492
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        448,
+                                        507,
+                                        461
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                448,
+                                                507,
+                                                461
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S4. Posterior estimates for anthropogenic emissions (top) and their trends (bottom) in Africa. Left",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        463,
+                                        507,
+                                        477
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                463,
+                                                507,
+                                                477
+                                            ],
+                                            "score": 1.0,
+                                            "content": "column shows results from the base inversion, right column shows results from a sensitivity inversion in",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        479,
+                                        465,
+                                        492
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                479,
+                                                465,
+                                                492
+                                            ],
+                                            "score": 1.0,
+                                            "content": "which the spatial distribution of prior wetland emissions is perturbed over Africa (Figure S1).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                }
+            ],
+            "page_idx": 4,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        93,
+                        82,
+                        442,
+                        430
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                93,
+                                82,
+                                442,
+                                430
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        82,
+                                        442,
+                                        430
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                93,
+                                                82,
+                                                442,
+                                                430
+                                            ],
+                                            "score": 0.976,
+                                            "type": "image",
+                                            "image_path": "f358151aef2a7ebf8b98dad6a82d1c73511f0053823ff78b3c8d095c05645f93.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        82,
+                                        442,
+                                        198.0
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        198.0,
+                                        442,
+                                        314.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        314.0,
+                                        442,
+                                        430.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                448,
+                                507,
+                                492
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        448,
+                                        507,
+                                        461
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                448,
+                                                507,
+                                                461
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S4. Posterior estimates for anthropogenic emissions (top) and their trends (bottom) in Africa. Left",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        463,
+                                        507,
+                                        477
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                463,
+                                                507,
+                                                477
+                                            ],
+                                            "score": 1.0,
+                                            "content": "column shows results from the base inversion, right column shows results from a sensitivity inversion in",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        479,
+                                        465,
+                                        492
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                479,
+                                                465,
+                                                492
+                                            ],
+                                            "score": 1.0,
+                                            "content": "which the spatial distribution of prior wetland emissions is perturbed over Africa (Figure S1).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 2.5
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        91,
+                        73,
+                        425,
+                        333
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                91,
+                                73,
+                                425,
+                                333
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        91,
+                                        73,
+                                        425,
+                                        333
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                91,
+                                                73,
+                                                425,
+                                                333
+                                            ],
+                                            "score": 0.976,
+                                            "type": "image",
+                                            "image_path": "2789f817556cb7b6c969b048062faf1cec46ecf07149ccd6d84e1006c9aed522.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        91,
+                                        73,
+                                        425,
+                                        159.66666666666669
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        91,
+                                        159.66666666666669,
+                                        425,
+                                        246.33333333333337
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        91,
+                                        246.33333333333337,
+                                        425,
+                                        333.00000000000006
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                338,
+                                507,
+                                414
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        339,
+                                        506,
+                                        351
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                339,
+                                                506,
+                                                351
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S5. Posterior estimates for the seasonality (top) and inter-annual trends (bottom) of wetland",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        354,
+                                        506,
+                                        367
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                354,
+                                                506,
+                                                367
+                                            ],
+                                            "score": 1.0,
+                                            "content": "emissions in Sub-Sahara Africa (left) and southern Africa (right). See Figure 1 for definition of these",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        369,
+                                        506,
+                                        384
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                369,
+                                                506,
+                                                384
+                                            ],
+                                            "score": 1.0,
+                                            "content": "regions. Solid lines show results from the base inversion, dashed lines show results from a sensitivity",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        385,
+                                        506,
+                                        399
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                385,
+                                                506,
+                                                399
+                                            ],
+                                            "score": 1.0,
+                                            "content": "inversion in which the spatial distribution of prior wetland emissions is perturbed over Africa (Figure",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        399,
+                                        109,
+                                        416
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                399,
+                                                109,
+                                                416
+                                            ],
+                                            "score": 1.0,
+                                            "content": "S1).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 7
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ],
+            "page_idx": 5,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        91,
+                        73,
+                        425,
+                        333
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                91,
+                                73,
+                                425,
+                                333
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        91,
+                                        73,
+                                        425,
+                                        333
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                91,
+                                                73,
+                                                425,
+                                                333
+                                            ],
+                                            "score": 0.976,
+                                            "type": "image",
+                                            "image_path": "2789f817556cb7b6c969b048062faf1cec46ecf07149ccd6d84e1006c9aed522.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        91,
+                                        73,
+                                        425,
+                                        159.66666666666669
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        91,
+                                        159.66666666666669,
+                                        425,
+                                        246.33333333333337
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        91,
+                                        246.33333333333337,
+                                        425,
+                                        333.00000000000006
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                338,
+                                507,
+                                414
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        339,
+                                        506,
+                                        351
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                339,
+                                                506,
+                                                351
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S5. Posterior estimates for the seasonality (top) and inter-annual trends (bottom) of wetland",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        354,
+                                        506,
+                                        367
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                354,
+                                                506,
+                                                367
+                                            ],
+                                            "score": 1.0,
+                                            "content": "emissions in Sub-Sahara Africa (left) and southern Africa (right). See Figure 1 for definition of these",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        369,
+                                        506,
+                                        384
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                369,
+                                                506,
+                                                384
+                                            ],
+                                            "score": 1.0,
+                                            "content": "regions. Solid lines show results from the base inversion, dashed lines show results from a sensitivity",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        385,
+                                        506,
+                                        399
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                385,
+                                                506,
+                                                399
+                                            ],
+                                            "score": 1.0,
+                                            "content": "inversion in which the spatial distribution of prior wetland emissions is perturbed over Africa (Figure",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 6
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        399,
+                                        109,
+                                        416
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                399,
+                                                109,
+                                                416
+                                            ],
+                                            "score": 1.0,
+                                            "content": "S1).",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 7
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        106,
+                        124,
+                        487,
+                        330
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                106,
+                                124,
+                                487,
+                                330
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        124,
+                                        487,
+                                        330
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                106,
+                                                124,
+                                                487,
+                                                330
+                                            ],
+                                            "score": 0.974,
+                                            "type": "image",
+                                            "image_path": "7b92fff4bd5d770cb1b4286483b47e05b5244fad8a178d8d7d9f6c88ec3790d5.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        124,
+                                        487,
+                                        192.66666666666669
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        192.66666666666669,
+                                        487,
+                                        261.33333333333337
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        261.33333333333337,
+                                        487,
+                                        330.00000000000006
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                338,
+                                506,
+                                367
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        338,
+                                        506,
+                                        352
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                338,
+                                                506,
+                                                352
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S6. The same as the right bottom panel of Figure 3, except that the y axis is in a smaller scale for",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        354,
+                                        286,
+                                        368
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                354,
+                                                286,
+                                                368
+                                            ],
+                                            "score": 1.0,
+                                            "content": "legibility of details in the posterior model errors.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                }
+                            ],
+                            "index": 3.5
+                        }
+                    ],
+                    "index": 2.25
+                }
+            ],
+            "page_idx": 6,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        240,
+                        110,
+                        387,
+                        121
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                240,
+                                109,
+                                387,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        240,
+                                        109,
+                                        387,
+                                        122
+                                    ],
+                                    "score": 0.992,
+                                    "content": "GEOS-Chem (posterior) - GOSAT",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        106,
+                        124,
+                        487,
+                        330
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                106,
+                                124,
+                                487,
+                                330
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        124,
+                                        487,
+                                        330
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                106,
+                                                124,
+                                                487,
+                                                330
+                                            ],
+                                            "score": 0.974,
+                                            "type": "image",
+                                            "image_path": "7b92fff4bd5d770cb1b4286483b47e05b5244fad8a178d8d7d9f6c88ec3790d5.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        124,
+                                        487,
+                                        192.66666666666669
+                                    ],
+                                    "spans": [],
+                                    "index": 0
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        192.66666666666669,
+                                        487,
+                                        261.33333333333337
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        106,
+                                        261.33333333333337,
+                                        487,
+                                        330.00000000000006
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                338,
+                                506,
+                                367
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        338,
+                                        506,
+                                        352
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                338,
+                                                506,
+                                                352
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S6. The same as the right bottom panel of Figure 3, except that the y axis is in a smaller scale for",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 3
+                                },
+                                {
+                                    "bbox": [
+                                        87,
+                                        354,
+                                        286,
+                                        368
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                354,
+                                                286,
+                                                368
+                                            ],
+                                            "score": 1.0,
+                                            "content": "legibility of details in the posterior model errors.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                }
+                            ],
+                            "index": 3.5
+                        }
+                    ],
+                    "index": 2.25
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        143,
+                        89,
+                        454,
+                        112
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                137,
+                                88,
+                                458,
+                                116
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        137,
+                                        88,
+                                        458,
+                                        116
+                                    ],
+                                    "score": 0.98,
+                                    "content": " Posterior - Prior emissions (Mg km-² a-1)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        95,
+                        122,
+                        501,
+                        329
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                95,
+                                122,
+                                501,
+                                329
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        95,
+                                        122,
+                                        501,
+                                        329
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                95,
+                                                122,
+                                                501,
+                                                329
+                                            ],
+                                            "score": 0.958,
+                                            "type": "image",
+                                            "image_path": "a06e09f3ff6f3204c4d7e535c43ba8b37d5533f60b324b08a36557730cc97ae7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        95,
+                                        122,
+                                        501,
+                                        191.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        95,
+                                        191.0,
+                                        501,
+                                        260.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                },
+                                {
+                                    "bbox": [
+                                        95,
+                                        260.0,
+                                        501,
+                                        329.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                338,
+                                507,
+                                367
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        338,
+                                        507,
+                                        352
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                338,
+                                                507,
+                                                352
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S7. Corrections to prior estimates of 2010–2018 mean non-wetland methane emissions, expressed",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        354,
+                                        439,
+                                        368
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                354,
+                                                439,
+                                                368
+                                            ],
+                                            "score": 1.0,
+                                            "content": "as the difference between the posterior and the prior estimates of emission flux density.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4.5
+                        }
+                    ],
+                    "index": 3.25
+                }
+            ],
+            "page_idx": 7,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "title",
+                    "bbox": [
+                        143,
+                        89,
+                        454,
+                        112
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                137,
+                                88,
+                                458,
+                                116
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        137,
+                                        88,
+                                        458,
+                                        116
+                                    ],
+                                    "score": 0.98,
+                                    "content": " Posterior - Prior emissions (Mg km-² a-1)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        95,
+                        122,
+                        501,
+                        329
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                95,
+                                122,
+                                501,
+                                329
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        95,
+                                        122,
+                                        501,
+                                        329
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                95,
+                                                122,
+                                                501,
+                                                329
+                                            ],
+                                            "score": 0.958,
+                                            "type": "image",
+                                            "image_path": "a06e09f3ff6f3204c4d7e535c43ba8b37d5533f60b324b08a36557730cc97ae7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        95,
+                                        122,
+                                        501,
+                                        191.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        95,
+                                        191.0,
+                                        501,
+                                        260.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                },
+                                {
+                                    "bbox": [
+                                        95,
+                                        260.0,
+                                        501,
+                                        329.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                338,
+                                507,
+                                367
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        338,
+                                        507,
+                                        352
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                338,
+                                                507,
+                                                352
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S7. Corrections to prior estimates of 2010–2018 mean non-wetland methane emissions, expressed",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                },
+                                {
+                                    "bbox": [
+                                        88,
+                                        354,
+                                        439,
+                                        368
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                88,
+                                                354,
+                                                439,
+                                                368
+                                            ],
+                                            "score": 1.0,
+                                            "content": "as the difference between the posterior and the prior estimates of emission flux density.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 5
+                                }
+                            ],
+                            "index": 4.5
+                        }
+                    ],
+                    "index": 3.25
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "text",
+                    "bbox": [
+                        119,
+                        104,
+                        477,
+                        126
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                117,
+                                105,
+                                478,
+                                127
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        117,
+                                        105,
+                                        478,
+                                        127
+                                    ],
+                                    "score": 0.99,
+                                    "content": " Posterior anthropogenic emission trends (Mg km-2 a-1 a-1)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        93,
+                        134,
+                        503,
+                        344
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                93,
+                                134,
+                                503,
+                                344
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        134,
+                                        503,
+                                        344
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                93,
+                                                134,
+                                                503,
+                                                344
+                                            ],
+                                            "score": 0.964,
+                                            "type": "image",
+                                            "image_path": "131748b648ff6991ad51085d1f77765e41c6dbd231412ce6ca5133da629e01dc.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        134,
+                                        503,
+                                        204.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        204.0,
+                                        503,
+                                        274.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        274.0,
+                                        503,
+                                        344.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                354,
+                                484,
+                                367
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        353,
+                                        487,
+                                        368
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                353,
+                                                487,
+                                                368
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S8. 2010–2018 absolute linear trends in non-wetland emissions inferred from the inversion.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ],
+            "page_idx": 8,
+            "page_size": [
+                595,
+                841
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "text",
+                    "bbox": [
+                        119,
+                        104,
+                        477,
+                        126
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                117,
+                                105,
+                                478,
+                                127
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        117,
+                                        105,
+                                        478,
+                                        127
+                                    ],
+                                    "score": 0.99,
+                                    "content": " Posterior anthropogenic emission trends (Mg km-2 a-1 a-1)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "bbox_fs": [
+                        117,
+                        105,
+                        478,
+                        127
+                    ]
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        93,
+                        134,
+                        503,
+                        344
+                    ],
+                    "blocks": [
+                        {
+                            "type": "image_body",
+                            "bbox": [
+                                93,
+                                134,
+                                503,
+                                344
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        134,
+                                        503,
+                                        344
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                93,
+                                                134,
+                                                503,
+                                                344
+                                            ],
+                                            "score": 0.964,
+                                            "type": "image",
+                                            "image_path": "131748b648ff6991ad51085d1f77765e41c6dbd231412ce6ca5133da629e01dc.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2,
+                            "virtual_lines": [
+                                {
+                                    "bbox": [
+                                        93,
+                                        134,
+                                        503,
+                                        204.0
+                                    ],
+                                    "spans": [],
+                                    "index": 1
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        204.0,
+                                        503,
+                                        274.0
+                                    ],
+                                    "spans": [],
+                                    "index": 2
+                                },
+                                {
+                                    "bbox": [
+                                        93,
+                                        274.0,
+                                        503,
+                                        344.0
+                                    ],
+                                    "spans": [],
+                                    "index": 3
+                                }
+                            ]
+                        },
+                        {
+                            "type": "image_caption",
+                            "bbox": [
+                                88,
+                                354,
+                                484,
+                                367
+                            ],
+                            "group_id": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        87,
+                                        353,
+                                        487,
+                                        368
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                87,
+                                                353,
+                                                487,
+                                                368
+                                            ],
+                                            "score": 1.0,
+                                            "content": "Figure S8. 2010–2018 absolute linear trends in non-wetland emissions inferred from the inversion.",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "index": 4
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 3.0
+                }
+            ]
+        }
+    ],
+    "_backend": "pipeline",
+    "_version_name": "2.7.6"
+}

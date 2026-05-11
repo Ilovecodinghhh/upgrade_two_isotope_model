@@ -1,0 +1,2499 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        166,
+                        150,
+                        184
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                165,
+                                151,
+                                187
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        165,
+                                        151,
+                                        187
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        52,
+                        195,
+                        484,
+                        214
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                195,
+                                486,
+                                215
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        195,
+                                        486,
+                                        215
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Constraints and biases in a tropospheric two-box model of OH",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        226,
+                        122,
+                        238
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                226,
+                                124,
+                                239
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        226,
+                                        124,
+                                        239
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Stijn Naus et al.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        250,
+                        259,
+                        262
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                250,
+                                260,
+                                263
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        250,
+                                        221,
+                                        263
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Correspondence to: Stijn Naus (stijn.naus",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        222,
+                                        251,
+                                        230,
+                                        260
+                                    ],
+                                    "score": 0.27,
+                                    "content": "@",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        231,
+                                        250,
+                                        260,
+                                        263
+                                    ],
+                                    "score": 1.0,
+                                    "content": "wur.nl)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        70,
+                        298,
+                        255,
+                        309
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                298,
+                                255,
+                                311
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        298,
+                                        255,
+                                        311
+                                    ],
+                                    "score": 1.0,
+                                    "content": "• acp-19-407-2019-supplement-title-page.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        70,
+                        318,
+                        154,
+                        329
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                316,
+                                155,
+                                330
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        316,
+                                        155,
+                                        330
+                                    ],
+                                    "score": 1.0,
+                                    "content": "• Supplemental data",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        90,
+                        334,
+                        299,
+                        703
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                337,
+                                179,
+                                349
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        337,
+                                        179,
+                                        349
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– OH anomalies.xlsx",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                352,
+                                298,
+                                366
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        352,
+                                        298,
+                                        366
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplemental data; CH4 and MCF averages.xlsx",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                367,
+                                172,
+                                382
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        367,
+                                        172,
+                                        382
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.aux",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                384,
+                                170,
+                                396
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        384,
+                                        170,
+                                        396
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.bbl",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                398,
+                                171,
+                                413
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        398,
+                                        171,
+                                        413
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.blg",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                414,
+                                170,
+                                430
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        414,
+                                        170,
+                                        430
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.log",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                430,
+                                171,
+                                445
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        430,
+                                        171,
+                                        445
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.out",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 12
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                446,
+                                169,
+                                459
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        446,
+                                        169,
+                                        459
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 13
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                462,
+                                169,
+                                475
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        462,
+                                        169,
+                                        475
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.tex",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 14
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                477,
+                                169,
+                                492
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        477,
+                                        169,
+                                        492
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.zip",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 15
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                493,
+                                140,
+                                507
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        493,
+                                        140,
+                                        507
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– appendix",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 16
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                510,
+                                243,
+                                522
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        510,
+                                        243,
+                                        522
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* MCF_latitude_1990_2015.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 17
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                523,
+                                244,
+                                536
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        525,
+                                        116,
+                                        533
+                                    ],
+                                    "score": 0.37,
+                                    "content": "^ *",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        117,
+                                        523,
+                                        244,
+                                        536
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MCF_vertical_1990_2015.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 18
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                537,
+                                188,
+                                549
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        537,
+                                        188,
+                                        549
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* OH_latitude.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 19
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                551,
+                                191,
+                                564
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        551,
+                                        191,
+                                        564
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* OH_seasonal.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 20
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                565,
+                                187,
+                                577
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        565,
+                                        187,
+                                        577
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* OH_vertical.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 21
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                578,
+                                194,
+                                592
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        578,
+                                        194,
+                                        592
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* kih_all_comp.png",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 22
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                592,
+                                271,
+                                605
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        592,
+                                        271,
+                                        605
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* nudge_nonudge_obs_comparison.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 23
+                        },
+                        {
+                            "bbox": [
+                                107,
+                                606,
+                                211,
+                                618
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        107,
+                                        606,
+                                        211,
+                                        618
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* nudged_emissions.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 24
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                619,
+                                164,
+                                633
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        619,
+                                        164,
+                                        633
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_full.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 25
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                633,
+                                174,
+                                647
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        633,
+                                        174,
+                                        647
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_k_ch4.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 26
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                648,
+                                176,
+                                660
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        648,
+                                        176,
+                                        660
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_k_mcf.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 27
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                661,
+                                165,
+                                675
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        661,
+                                        165,
+                                        675
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_koh.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 28
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                675,
+                                180,
+                                688
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        675,
+                                        180,
+                                        688
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_oh_ch4.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 29
+                        },
+                        {
+                            "bbox": [
+                                107,
+                                689,
+                                180,
+                                702
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        107,
+                                        689,
+                                        180,
+                                        702
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_oh_mcf.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 30
+                        }
+                    ],
+                    "index": 18
+                }
+            ],
+            "page_idx": 0,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        396,
+                        45,
+                        558,
+                        97
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                395,
+                                43,
+                                484,
+                                63
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        395,
+                                        43,
+                                        484,
+                                        63
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Atmospheric",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                411,
+                                61,
+                                483,
+                                81
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        411,
+                                        61,
+                                        483,
+                                        81
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Chemistry",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                397,
+                                80,
+                                483,
+                                99
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        397,
+                                        80,
+                                        483,
+                                        99
+                                    ],
+                                    "score": 0.995,
+                                    "content": "and Physics",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        54,
+                        96,
+                        97,
+                        112
+                    ],
+                    "lines": []
+                },
+                {
+                    "type": "discarded",
+                    "bbox": [
+                        54,
+                        46,
+                        278,
+                        93
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                46,
+                                279,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        46,
+                                        279,
+                                        58
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of Atmos. Chem. Phys., 19, 407–424, 2019",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                58,
+                                268,
+                                71
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        58,
+                                        268,
+                                        71
+                                    ],
+                                    "score": 1.0,
+                                    "content": "https://doi.org/10.5194/acp-19-407-2019-supplement",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                54,
+                                70,
+                                252,
+                                82
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        70,
+                                        63,
+                                        80
+                                    ],
+                                    "score": 0.71,
+                                    "content": "©",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        63,
+                                        70,
+                                        252,
+                                        82
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Author(s) 2019. This work is distributed under",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                52,
+                                81,
+                                245,
+                                95
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        81,
+                                        245,
+                                        95
+                                    ],
+                                    "score": 1.0,
+                                    "content": "the Creative Commons Attribution 4.0 License.",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "para_blocks": [
+                {
+                    "type": "text",
+                    "bbox": [
+                        55,
+                        166,
+                        150,
+                        184
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                52,
+                                165,
+                                151,
+                                187
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        52,
+                                        165,
+                                        151,
+                                        187
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Supplement of",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "bbox_fs": [
+                        52,
+                        165,
+                        151,
+                        187
+                    ]
+                },
+                {
+                    "type": "title",
+                    "bbox": [
+                        52,
+                        195,
+                        484,
+                        214
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                195,
+                                486,
+                                215
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        195,
+                                        486,
+                                        215
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Constraints and biases in a tropospheric two-box model of OH",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        226,
+                        122,
+                        238
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                226,
+                                124,
+                                239
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        226,
+                                        124,
+                                        239
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Stijn Naus et al.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        }
+                    ],
+                    "index": 2,
+                    "bbox_fs": [
+                        53,
+                        226,
+                        124,
+                        239
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        54,
+                        250,
+                        259,
+                        262
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                54,
+                                250,
+                                260,
+                                263
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        54,
+                                        250,
+                                        221,
+                                        263
+                                    ],
+                                    "score": 1.0,
+                                    "content": "Correspondence to: Stijn Naus (stijn.naus",
+                                    "type": "text"
+                                },
+                                {
+                                    "bbox": [
+                                        222,
+                                        251,
+                                        230,
+                                        260
+                                    ],
+                                    "score": 0.27,
+                                    "content": "@",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        231,
+                                        250,
+                                        260,
+                                        263
+                                    ],
+                                    "score": 1.0,
+                                    "content": "wur.nl)",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3,
+                    "bbox_fs": [
+                        54,
+                        250,
+                        260,
+                        263
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        70,
+                        298,
+                        255,
+                        309
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                298,
+                                255,
+                                311
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        298,
+                                        255,
+                                        311
+                                    ],
+                                    "score": 1.0,
+                                    "content": "• acp-19-407-2019-supplement-title-page.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        }
+                    ],
+                    "index": 4,
+                    "bbox_fs": [
+                        69,
+                        298,
+                        255,
+                        311
+                    ]
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        70,
+                        318,
+                        154,
+                        329
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                69,
+                                316,
+                                155,
+                                330
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        69,
+                                        316,
+                                        155,
+                                        330
+                                    ],
+                                    "score": 1.0,
+                                    "content": "• Supplemental data",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        }
+                    ],
+                    "index": 5,
+                    "bbox_fs": [
+                        69,
+                        316,
+                        155,
+                        330
+                    ]
+                },
+                {
+                    "type": "list",
+                    "bbox": [
+                        90,
+                        334,
+                        299,
+                        703
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                337,
+                                179,
+                                349
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        337,
+                                        179,
+                                        349
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– OH anomalies.xlsx",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                352,
+                                298,
+                                366
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        352,
+                                        298,
+                                        366
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplemental data; CH4 and MCF averages.xlsx",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                367,
+                                172,
+                                382
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        367,
+                                        172,
+                                        382
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.aux",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                384,
+                                170,
+                                396
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        384,
+                                        170,
+                                        396
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.bbl",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                398,
+                                171,
+                                413
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        398,
+                                        171,
+                                        413
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.blg",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                414,
+                                170,
+                                430
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        414,
+                                        170,
+                                        430
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.log",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                430,
+                                171,
+                                445
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        430,
+                                        171,
+                                        445
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.out",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 12,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                446,
+                                169,
+                                459
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        446,
+                                        169,
+                                        459
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 13,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                462,
+                                169,
+                                475
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        462,
+                                        169,
+                                        475
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.tex",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 14,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                477,
+                                169,
+                                492
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        477,
+                                        169,
+                                        492
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– Supplements.zip",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 15,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                493,
+                                140,
+                                507
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        493,
+                                        140,
+                                        507
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– appendix",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 16,
+                            "is_list_start_line": true,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                510,
+                                243,
+                                522
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        510,
+                                        243,
+                                        522
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* MCF_latitude_1990_2015.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 17,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                109,
+                                523,
+                                244,
+                                536
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        109,
+                                        525,
+                                        116,
+                                        533
+                                    ],
+                                    "score": 0.37,
+                                    "content": "^ *",
+                                    "type": "inline_equation"
+                                },
+                                {
+                                    "bbox": [
+                                        117,
+                                        523,
+                                        244,
+                                        536
+                                    ],
+                                    "score": 1.0,
+                                    "content": "MCF_vertical_1990_2015.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 18,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                537,
+                                188,
+                                549
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        537,
+                                        188,
+                                        549
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* OH_latitude.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 19,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                551,
+                                191,
+                                564
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        551,
+                                        191,
+                                        564
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* OH_seasonal.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 20,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                565,
+                                187,
+                                577
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        565,
+                                        187,
+                                        577
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* OH_vertical.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 21,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                578,
+                                194,
+                                592
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        578,
+                                        194,
+                                        592
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* kih_all_comp.png",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 22,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                592,
+                                271,
+                                605
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        592,
+                                        271,
+                                        605
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* nudge_nonudge_obs_comparison.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 23,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                107,
+                                606,
+                                211,
+                                618
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        107,
+                                        606,
+                                        211,
+                                        618
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* nudged_emissions.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 24,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                619,
+                                164,
+                                633
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        619,
+                                        164,
+                                        633
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_full.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 25,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                633,
+                                174,
+                                647
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        633,
+                                        174,
+                                        647
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_k_ch4.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 26,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                648,
+                                176,
+                                660
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        648,
+                                        176,
+                                        660
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_k_mcf.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 27,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                661,
+                                165,
+                                675
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        661,
+                                        165,
+                                        675
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_koh.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 28,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                106,
+                                675,
+                                180,
+                                688
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        675,
+                                        180,
+                                        688
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_oh_ch4.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 29,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                107,
+                                689,
+                                180,
+                                702
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        107,
+                                        689,
+                                        180,
+                                        702
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* rr_oh_mcf.pdf",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 30,
+                            "is_list_end_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                46,
+                                160,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        46,
+                                        160,
+                                        58
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– copernicus.bst",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 0,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                62,
+                                161,
+                                75
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        62,
+                                        161,
+                                        75
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– copernicus.cfg",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 1,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                79,
+                                160,
+                                90
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        79,
+                                        160,
+                                        90
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– copernicus.cls",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 2,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                92,
+                                121,
+                                106
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        92,
+                                        121,
+                                        106
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– data",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 3,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                110,
+                                316,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        110,
+                                        316,
+                                        122
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* Supplemental data; CH4 and MCF averages.xlsx",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                126,
+                                143,
+                                139
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        126,
+                                        143,
+                                        139
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– mybib.bib",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 5,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                141,
+                                142,
+                                156
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        141,
+                                        142,
+                                        156
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– natbib.sty",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 6,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                158,
+                                173,
+                                169
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        158,
+                                        173,
+                                        169
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– oh_anomalies.csv",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 7,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                174,
+                                177,
+                                186
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        174,
+                                        177,
+                                        186
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– oh_anomalies.xlsx",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 8,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                190,
+                                156,
+                                203
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        190,
+                                        156,
+                                        203
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– pdfscreen.sty",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 9,
+                            "is_list_start_line": true
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                204,
+                                144,
+                                220
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        204,
+                                        144,
+                                        220
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– texput.log",
+                                    "type": "text",
+                                    "cross_page": true
+                                }
+                            ],
+                            "index": 10,
+                            "is_list_start_line": true
+                        }
+                    ],
+                    "index": 18,
+                    "bbox_fs": [
+                        88,
+                        337,
+                        298,
+                        702
+                    ]
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "text",
+                    "bbox": [
+                        90,
+                        46,
+                        316,
+                        218
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                89,
+                                46,
+                                160,
+                                58
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        46,
+                                        160,
+                                        58
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– copernicus.bst",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                62,
+                                161,
+                                75
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        62,
+                                        161,
+                                        75
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– copernicus.cfg",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 1
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                79,
+                                160,
+                                90
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        79,
+                                        160,
+                                        90
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– copernicus.cls",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                92,
+                                121,
+                                106
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        92,
+                                        121,
+                                        106
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– data",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 3
+                        },
+                        {
+                            "bbox": [
+                                108,
+                                110,
+                                316,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        110,
+                                        316,
+                                        122
+                                    ],
+                                    "score": 1.0,
+                                    "content": "* Supplemental data; CH4 and MCF averages.xlsx",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                126,
+                                143,
+                                139
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        126,
+                                        143,
+                                        139
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– mybib.bib",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 5
+                        },
+                        {
+                            "bbox": [
+                                88,
+                                141,
+                                142,
+                                156
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        88,
+                                        141,
+                                        142,
+                                        156
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– natbib.sty",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                158,
+                                173,
+                                169
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        158,
+                                        173,
+                                        169
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– oh_anomalies.csv",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 7
+                        },
+                        {
+                            "bbox": [
+                                90,
+                                174,
+                                177,
+                                186
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        90,
+                                        174,
+                                        177,
+                                        186
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– oh_anomalies.xlsx",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 8
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                190,
+                                156,
+                                203
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        190,
+                                        156,
+                                        203
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– pdfscreen.sty",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 9
+                        },
+                        {
+                            "bbox": [
+                                89,
+                                204,
+                                144,
+                                220
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        89,
+                                        204,
+                                        144,
+                                        220
+                                    ],
+                                    "score": 1.0,
+                                    "content": "– texput.log",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 10
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        52,
+                        227,
+                        430,
+                        240
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                227,
+                                432,
+                                240
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        227,
+                                        432,
+                                        240
+                                    ],
+                                    "score": 1.0,
+                                    "content": "The copyright of individual parts of the supplement might differ from the CC BY 4.0 License.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 11
+                }
+            ],
+            "page_idx": 1,
+            "page_size": [
+                612,
+                792
+            ],
+            "discarded_blocks": [],
+            "para_blocks": [
+                {
+                    "type": "list",
+                    "bbox": [
+                        90,
+                        46,
+                        316,
+                        218
+                    ],
+                    "lines": [],
+                    "index": 5,
+                    "bbox_fs": [
+                        88,
+                        46,
+                        316,
+                        220
+                    ],
+                    "lines_deleted": true
+                },
+                {
+                    "type": "text",
+                    "bbox": [
+                        52,
+                        227,
+                        430,
+                        240
+                    ],
+                    "lines": [
+                        {
+                            "bbox": [
+                                53,
+                                227,
+                                432,
+                                240
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        53,
+                                        227,
+                                        432,
+                                        240
+                                    ],
+                                    "score": 1.0,
+                                    "content": "The copyright of individual parts of the supplement might differ from the CC BY 4.0 License.",
+                                    "type": "text"
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "index": 11,
+                    "bbox_fs": [
+                        53,
+                        227,
+                        432,
+                        240
+                    ]
+                }
+            ]
+        }
+    ],
+    "_backend": "pipeline",
+    "_version_name": "2.7.6"
+}

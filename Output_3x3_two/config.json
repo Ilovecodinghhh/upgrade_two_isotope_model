@@ -1,0 +1,23 @@
+{
+  "NH": {
+    "label": "NH",
+    "total_solves": 23000,
+    "nonphysical_count": 0,
+    "nonphysical_pct": 0.0,
+    "nan_count": 0,
+    "mean_condition": 178412.5,
+    "max_condition": 311910.2
+  },
+  "SH": {
+    "label": "SH",
+    "total_solves": 23000,
+    "nonphysical_count": 0,
+    "nonphysical_pct": 0.0,
+    "nan_count": 0,
+    "mean_condition": 178412.5,
+    "max_condition": 311910.2
+  },
+  "kie_mode": "sampled",
+  "lifetime_mode": "varying",
+  "n_iterations": 1000
+}

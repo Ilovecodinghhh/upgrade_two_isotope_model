@@ -1,0 +1,245 @@
+[
+    {
+        "type": "text",
+        "text": "Attribution of the accelerating increase in atmospheric methane during 2010–2018 by inverse analysis of GOSAT observations ",
+        "text_level": 1,
+        "bbox": [
+            86,
+            246,
+            913,
+            289
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Yuzhong Zhang et al. ",
+        "bbox": [
+            89,
+            304,
+            238,
+            319
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Correspondence to: Yuzhong Zhang (zhangyuzhong@westlake.edu.cn) ",
+        "bbox": [
+            89,
+            335,
+            555,
+            349
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The copyright of individual parts of the supplement might differ from the CC BY 4.0 License. ",
+        "bbox": [
+            88,
+            383,
+            700,
+            398
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Atmospheric Chemistry and Physics ",
+        "bbox": [
+            647,
+            56,
+            911,
+            122
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            88,
+            121,
+            158,
+            141
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Supplement of Atmos. Chem. Phys., 21, 3643–3666, 2021 https://doi.org/10.5194/acp-21-3643-2021-supplement $©$ Author(s) 2021. This work is distributed under the Creative Commons Attribution 4.0 License. ",
+        "bbox": [
+            88,
+            58,
+            468,
+            117
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Supplement of ",
+        "bbox": [
+            89,
+            209,
+            245,
+            232
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/f0aa0a14edd188ddb384065fb8bd55eb17c3e25238ec893f50abfbd1b3771932.jpg",
+        "image_caption": [
+            "Figure S1. Spatial distribution of wetland emissions in Africa averaged over 2010-2018. (Left) Same as Figure 1 except that only Africa is shown here. We use WetCHARTS ensemble mean as prior estimates for wetland emissions in the base inversion. (Right) Spatial distribution of wetland emissions is perturbed in a sensitivity inversion, in which emissions over the Sudd region are increased by a factor of 3 and emissions over the Congo Basin are reduced by a factor of 2.5. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            147,
+            97,
+            847,
+            369
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/a4313137e80348918efe8714bc5c49b24cc8c2c88b8b2b4ca2a3742b995076f1.jpg",
+        "image_caption": [
+            "Figure S2. The same as Figure 2, except that the GEOS-Chem stratospheric bias correction factors for individual years are computed using ACE-FTS observations. The outlier values in SON of 2011 are associated a considerably smaller number of ACE-FTS observations relative to other seasons. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            223,
+            109,
+            779,
+            336
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/76b4243e260d3367812210797ecc1cf60556735254297c204c9b80b646036d48.jpg",
+        "image_caption": [
+            "Figure S3. Difference of methane mixing ratios between model simulations and ground-based observations, averaged over latitude bands. Top panels show comparison with TCCON measurements, and bottom panels NOAA surface measurements. Results are shown for GEOS-Chem simulations using prior (left) and posterior (right) state vector estimates. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            174,
+            99,
+            820,
+            510
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/f358151aef2a7ebf8b98dad6a82d1c73511f0053823ff78b3c8d095c05645f93.jpg",
+        "image_caption": [
+            "Figure S4. Posterior estimates for anthropogenic emissions (top) and their trends (bottom) in Africa. Left column shows results from the base inversion, right column shows results from a sensitivity inversion in which the spatial distribution of prior wetland emissions is perturbed over Africa (Figure S1). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            156,
+            97,
+            742,
+            511
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/2789f817556cb7b6c969b048062faf1cec46ecf07149ccd6d84e1006c9aed522.jpg",
+        "image_caption": [
+            "Figure S5. Posterior estimates for the seasonality (top) and inter-annual trends (bottom) of wetland emissions in Sub-Sahara Africa (left) and southern Africa (right). See Figure 1 for definition of these regions. Solid lines show results from the base inversion, dashed lines show results from a sensitivity inversion in which the spatial distribution of prior wetland emissions is perturbed over Africa (Figure S1). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            152,
+            86,
+            714,
+            395
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/7b92fff4bd5d770cb1b4286483b47e05b5244fad8a178d8d7d9f6c88ec3790d5.jpg",
+        "image_caption": [
+            "Figure S6. The same as the right bottom panel of Figure 3, except that the y axis is in a smaller scale for legibility of details in the posterior model errors. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            178,
+            147,
+            818,
+            392
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "GEOS-Chem (posterior) - GOSAT ",
+        "bbox": [
+            403,
+            130,
+            650,
+            143
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Posterior - Prior emissions (Mg km-² a-1) ",
+        "text_level": 1,
+        "bbox": [
+            240,
+            105,
+            763,
+            133
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/a06e09f3ff6f3204c4d7e535c43ba8b37d5533f60b324b08a36557730cc97ae7.jpg",
+        "image_caption": [
+            "Figure S7. Corrections to prior estimates of 2010–2018 mean non-wetland methane emissions, expressed as the difference between the posterior and the prior estimates of emission flux density. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            159,
+            145,
+            842,
+            391
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Posterior anthropogenic emission trends (Mg km-2 a-1 a-1) ",
+        "bbox": [
+            200,
+            123,
+            801,
+            149
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/131748b648ff6991ad51085d1f77765e41c6dbd231412ce6ca5133da629e01dc.jpg",
+        "image_caption": [
+            "Figure S8. 2010–2018 absolute linear trends in non-wetland emissions inferred from the inversion. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            156,
+            159,
+            845,
+            409
+        ],
+        "page_idx": 8
+    }
+]

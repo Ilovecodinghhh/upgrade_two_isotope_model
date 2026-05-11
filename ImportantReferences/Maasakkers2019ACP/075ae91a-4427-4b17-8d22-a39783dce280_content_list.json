@@ -1,0 +1,2519 @@
+[
+    {
+        "type": "text",
+        "text": "Global distribution of methane emissions, emission trends, and OH concentrations and trends inferred from an inversion of GOSAT satellite data for 2010–2015 ",
+        "text_level": 1,
+        "bbox": [
+            75,
+            202,
+            900,
+            281
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Joannes D. Maasakkers1,a, Daniel J. Jacob1, Melissa P. Sulprizio1, Tia R. Scarpelli1, Hannah Nesser1, Jian-Xiong Sheng1, Yuzhong Zhang1,2, Monica Hersher1, A. Anthony Bloom3, Kevin W. Bowman3,4, John R. Worden3, Greet Janssens-Maenhout5, and Robert J. Parker6,7,8 ",
+        "bbox": [
+            77,
+            295,
+            801,
+            341
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1Harvard University, Cambridge, MA, USA   \n2Environmental Defense Fund, Washington, DC, USA   \n3Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA   \n4Joint Institute for Regional Earth System Science and Engineering, University of California, Los Angeles, CA, USA   \n5European Commission Joint Research Centre, Ispra (VA), Italy   \n6Earth Observation Science, Department of Physics and Astronomy, University of Leicester, Leicester, UK   \n7Leicester Institute for Space and Earth Observation, University of Leicester, Leicester, UK   \n8NERC National Centre for Earth Observation, Leicester, UK   \nanow at: SRON Netherlands Institute for Space Research, Utrecht, the Netherlands ",
+        "bbox": [
+            75,
+            347,
+            867,
+            484
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Correspondence: Joannes D. Maasakkers (maasakkers $@$ fas.harvard.edu) ",
+        "bbox": [
+            77,
+            495,
+            573,
+            509
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Received: 31 December 2018 – Discussion started: 18 January 2019   \nRevised: 1 May 2019 – Accepted: 9 May 2019 – Published: 12 June 2019 ",
+        "bbox": [
+            77,
+            523,
+            574,
+            552
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Abstract. We use 2010–2015 observations of atmospheric methane columns from the GOSAT satellite instrument in a global inverse analysis to improve estimates of methane emissions and their trends over the period, as well as the global concentration of tropospheric OH (the hydroxyl radical, methane’s main sink) and its trend. Our inversion solves the Bayesian optimization problem analytically including closed-form characterization of errors. This allows us to (1) quantify the information content from the inversion towards optimizing methane emissions and its trends, (2) diagnose error correlations between constraints on emissions and OH concentrations, and (3) generate a large ensemble of solutions testing different assumptions in the inversion. We show how the analytical approach can be used, even when prior error standard deviation distributions are lognormal. Inversion results show large overestimates of Chinese coal emissions and Middle East oil and gas emissions in the EDGAR v4.3.2 inventory but little error in the United States where we use a new gridded version of the EPA national greenhouse gas inventory as prior estimate. Oil and gas emissions in the EDGAR v4.3.2 inventory show large differences with national totals reported to the United Nations ",
+        "bbox": [
+            77,
+            583,
+            482,
+            915
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Framework Convention on Climate Change (UNFCCC), and our inversion is generally more consistent with the UN-FCCC data. The observed 2010–2015 growth in atmospheric methane is attributed mostly to an increase in emissions from India, China, and areas with large tropical wetlands. The contribution from OH trends is small in comparison. We find that the inversion provides strong independent constraints on global methane emissions $( 5 4 6 \\mathrm { T g } \\mathrm { a } ^ { - 1 } $ ) and global mean OH concentrations (atmospheric methane lifetime against oxidation by tropospheric OH of $1 0 . 8 \\pm 0 . 4$ years), indicating that satellite observations of atmospheric methane could provide a proxy for OH concentrations in the future. ",
+        "bbox": [
+            514,
+            583,
+            921,
+            764
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1 Introduction ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            812,
+            630,
+            826
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Methane is an important greenhouse gas with a particularly strong decadal climate impact (Stocker et al., 2013). The atmospheric methane concentration has increased by a factor of 2.5 since pre-industrial times (Hartmann et al., 2013). This increase is not well understood but is most likely to be mainly driven by anthropogenic activities including the oil and gas industry, coal mining, livestock, landfills, wastewater treatment, biomass burning, and rice cultivation (Dlugokencky et al., 2011; Kirschke et al., 2013; Saunois et al., 2016). Wetlands are the main natural source and could be affected by climate change (Kirschke et al., 2013). Atmospheric methane has a lifetime of $9 . 1 \\pm 0 . 9$ years (Prather et al., 2012), with a dominant sink from oxidation by the hydroxyl radical (OH) that is also subject to interannual variability and trends (Holmes et al., 2013). The methane burden rose by $\\sim 1 2 \\mathrm { p p b a } ^ { - 1 }$ in the late 1980s and by $\\sim 6 \\mathrm { \\ p p b a ^ { - 1 } }$ in the 1990s, plateaued in the early 2000s $( \\sim 0 . 5 \\mathrm { p p b a } ^ { - 1 }$ ), and has resumed increasing at $\\sim 7 \\mathrm { p p b a } ^ { - 1 }$ since 2007 (https://www.esrl.noaa.gov/ gmd/ccgg/trends_ch4/, last access: 27 April 2019), for reasons that remain unclear (Turner et al., 2017). Inverse analyses can help interpret these trends by combining atmospheric methane observations with a chemical transport model (CTM) to infer the distribution of methane emissions most likely to explain the observations (Houweling et al., 2017; Saunois et al., 2016; Jacob et al., 2016). Here we use global 2010–2015 methane observations from the GOSAT satellite in an analytical inverse analysis with closed-form error characterization to better quantify methane sources and interpret the recent trend, including changes in both methane emissions and OH concentrations. ",
+        "bbox": [
+            515,
+            843,
+            921,
+            917
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Atmospheric Chemistry and Physics ",
+        "bbox": [
+            670,
+            45,
+            922,
+            107
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 https://doi.org/10.5194/acp-19-7859-2019 $©$ Author(s) 2019. This work is distributed under the Creative Commons Attribution 4.0 License. C $\\textcircled{6}$ BY ",
+        "bbox": [
+            75,
+            47,
+            408,
+            129
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Published by Copernicus Publications on behalf of the European Geosciences Union. ",
+        "bbox": [
+            77,
+            941,
+            680,
+            955
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            77,
+            81,
+            482,
+            475
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "A number of explanations have been proposed for the renewed growth of atmospheric methane concentrations since 2007. A parallel increase in ethane has been proposed as evidence for an increase in oil and gas emissions (Hausmann et al., 2016; Franco et al., 2016). A trend towards isotopically lighter methane has been attributed to an increase in microbial sources such as livestock and wetlands (Schaefer et al., 2016; Schwietzke et al., 2016; Nisbet et al., 2016; McNorton et al., 2016; Thompson et al., 2018). Worden et al. (2017) suggest that a decrease in open fire emissions may mask the isotopic signature of increasing fossil fuel emissions. Observations of methyl chloroform, a proxy for global OH concentrations, suggest that a decrease in the methane sink may be implicated in the renewed growth (Turner et al., 2017; Rigby et al., 2017; McNorton et al., 2018). Turner et al. (2017) find from a global two-box model analysis that the surface record of methane observations is too sparse to arbitrate between methane emissions and OH concentrations as drivers for the methane increase, though Naus et al. (2019) pointed out that there are inherent biases in the two-box modeling approach. ",
+        "bbox": [
+            77,
+            477,
+            482,
+            780
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "GOSAT was launched in 2009 and measures atmospheric methane columns with high precision $( 0 . 7 \\% )$ by solar backscatter in the shortwave infrared (SWIR) (Butz et al., 2011; Buchwitz et al., 2015; Kuze et al., 2016). A number of inverse analyses have used the GOSAT data to improve estimates of methane emissions (Monteil et al., 2013; Cressot et al., 2014; Alexe et al., 2015; Turner et al., 2015; Pandey et al., 2016, 2017; Miller et al., 2019). Here we use the GOSAT data to optimize not only global emissions but also their 2010–2015 trends together with OH concentrations and their trends. The independent optimization of OH and emissions in the inversion is based on the different signatures of those two terms on the methane concentration field (Zhang et al., 2018). We use an analytical inverse method with closed-form error characterization of the solution, rather than the adjoint approaches used in previous inverse studies that do not provide rigorous characterization of errors. This allows us in particular to diagnose the error correlation between the independent constraints on methane emissions and OH concentrations and their trends. It also allows us to readily conduct inversions for an ensemble of cases once the Jacobian matrix for the problem has been constructed. ",
+        "bbox": [
+            77,
+            782,
+            482,
+            917
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            81,
+            921,
+            276
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2 Data and methods ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            312,
+            670,
+            326
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We use the GEOS-Chem CTM (http://acmg.seas.harvard. edu/geos/, last access: 27 April 2019) as forward model to simulate the distribution of atmospheric methane and its response to trends. Model results are fit statistically to the GOSAT data by Bayesian optimization, including regularization from prior knowledge of methane emissions and OH concentrations. The January 2010–December 2015 GOSAT methane column data are arranged in an observation vector $\\textbf {  { y } }$ , and the inversion optimizes a state vector $\\boldsymbol { x }$ including global methane emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ GEOS-Chem grid, 2010–2015 linear trends of emissions on that same grid, and global mean OH concentrations for individual years (we will also present results from an inversion optimizing a linear OH trend over the 2010–2015 period). The optimal solution $\\widehat { \\mathbf { x } }$ is obtained by minimizing a Bayesian cost function that bbalances the information from the observations (weighed by the observational error covariance matrix ${ \\bf { S } } _ { 0 }$ ) and the prior knowledge $\\pmb { x } _ { \\mathrm { a } }$ (weighed by the prior error covariance matrix $\\mathbf { S } _ { \\mathbf { a } , \\mathbf { \\ell } }$ ) (Rodgers, 2000). Below we describe the different elements and steps in the inversion. ",
+        "bbox": [
+            514,
+            340,
+            921,
+            644
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2.1 GOSAT observations ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            661,
+            704,
+            673
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The TANSO-FTS instrument on board the Greenhouse Gases Observing Satellite (GOSAT) observes column-averaged dry-air methane mixing ratios by solar backscatter in the SWIR with near-unit sensitivity down to the surface (Butz et al., 2011). The satellite is in polar sun-synchronous orbit. Observations are made at around 13:00 local time for circular pixels of $1 0 \\mathrm { k m }$ diameter. In the default observation mode, the pixels are separated by $\\sim 2 5 0 \\mathrm { k m }$ along track and cross track, with repeated observation of the same pixels every 3 days. Denser observations are also made in target mode over features of interest. GOSAT spectra have shown no significant drift or degradation of data quality since the beginning of the record (Kuze et al., 2016). We use the University of Leicester version 7 $\\mathrm { C O } _ { 2 }$ proxy retrieval over land (Parker et al., 2011, 2015) from January 2010 to December 2015 in order to have even observations of all seasons. The single-observation precision is $1 3 \\mathrm { p p b }$ , and the relative (regional) bias is 2 ppb compared to ground-based columnaveraged dry-air mole factions from the Total Carbon Column Observing Network (TCCON; Buchwitz et al., 2015). Other retrievals of GOSAT data are consistent with the University of Leicester product (Buchwitz et al., 2015). Figure 1 illustrates the GOSAT data ingested in our inversion, representing a total of 1 211 468 retrievals. Glint data over the oceans and data poleward of $6 0 ^ { \\circ }$ are not included because of seasonal sampling biases (Turner et al., 2015). ",
+        "bbox": [
+            514,
+            690,
+            921,
+            917
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "discarded",
+        "text": "7860 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            70,
+            47,
+            921,
+            62
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/dd286b8a9a2e1313955d6d6844891d78a49055573f1e2f94ffd532106b3232c7.jpg",
+        "image_caption": [
+            "Figure 1. 2010–2015 average of the GOSAT methane dry column mixing ratios used in our inversion. Data are from the University of Leicester version $7 \\mathrm { C O } _ { 2 }$ proxy retrieval (Parker et al., 2015), excluding glint observations over the oceans and observations poleward of $6 0 ^ { \\circ }$ . GOSAT pixels are of $1 0 \\mathrm { k m }$ circular diameter and are inflated here to $0 . 5 ^ { \\circ }$ for visibility. The red stripes are an averaging artifact as these retrievals are from towards the end of the 2010– 2015 time period when methane was higher. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            122,
+            81,
+            435,
+            233
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            77,
+            387,
+            482,
+            554
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "2.2 Prior estimates ",
+        "text_level": 1,
+        "bbox": [
+            77,
+            569,
+            223,
+            583
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The inversion requires prior estimates and error statistics for all components of the state vector including methane emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ GEOS-Chem grid (1009 ice-free land-containing grid cells with prior emissions larger than $8 \\times 1 0 ^ { - 3 } \\mathrm { M g } \\mathrm { k m } ^ { - 2 } \\mathrm { a } ^ { - 1 }$ , covering $99 \\%$ of global emissions), 2010–2015 linear emission trends on the same grid, and global mean OH concentrations for individual years 2009– 2015 (2009 is only used for initialization), for a total of 2025 state vector elements. ",
+        "bbox": [
+            77,
+            598,
+            482,
+            733
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Table 1 gives our global prior inventory with the contributions from different source types, and Fig. 2 shows the spatial distributions. Monthly wetland emissions for individual years are from the WetCHARTS v1.0 extended ensemble mean (Bloom et al., 2017). For anthropogenic emissions we use the EDGAR v4.3.2 global emission inventory for 2012 (https://edgar.jrc.ec.europa.eu/, last access: 1 December 2017; Janssens-Maenhout et al., 2019) as worldwide default, including additional information from EDGAR to subset the “fuel exploitation” emissions category into oil and gas and coal mining. Over the continental United States, we replace EDGAR v4.3.2 with a gridded version of the US ",
+        "bbox": [
+            77,
+            736,
+            482,
+            917
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/f1a3b44a3ac8b6d14967c1a463d8cf072c0abea6ee5b56092229bd97c23bf369.jpg",
+        "table_caption": [
+            "Table 1. Prior global estimates of methane sources and sinks (mean 2010–2015 values). "
+        ],
+        "table_footnote": [
+            "∗ Including fossil fuel combustion, industrial processes, and agricultural field burning. "
+        ],
+        "table_body": "<table><tr><td>Source (Tg a-1)</td><td colspan=\"2\">Sink (Tga-1)</td></tr><tr><td colspan=\"3\">Natural</td></tr><tr><td>Wetlands</td><td>161 Tropospheric OH</td><td>475</td></tr><tr><td>Open fires</td><td>15 Stratospheric loss</td><td>33</td></tr><tr><td>Termites</td><td>12 Soil uptake</td><td>18 9</td></tr><tr><td>Seeps</td><td>5</td><td>Tropospheric Cl</td></tr><tr><td colspan=\"3\">Anthropogenic</td></tr><tr><td>Livestock</td><td>117</td><td></td></tr><tr><td>Oil and natural gas</td><td>70</td><td></td></tr><tr><td>Coal mining</td><td>38</td><td></td></tr><tr><td>Rice cultivation</td><td>38</td><td></td></tr><tr><td>Wastewater</td><td>38</td><td></td></tr><tr><td>Landfills</td><td>30</td><td></td></tr><tr><td>Other anthropogenic*</td><td>25</td><td></td></tr><tr><td>Total source</td><td>548</td><td>Total sink 535</td></tr></table>",
+        "bbox": [
+            531,
+            118,
+            902,
+            379
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "EPA greenhouse gas inventory (Maasakkers et al., 2016). In Canada and Mexico, we use the oil and gas emissions from Sheng et al. (2017). Anthropogenic emissions are assumed as aseasonal for lack of better prior information except for manure management and rice cultivation. Seasonal scaling of manure management emissions is done using the temperature dependence of Maasakkers et al. (2016). Seasonal scaling of rice cultivation emissions is based on Zhang et al. (2016). Daily global open fire emissions are from QFED (Darmenov and da Silva, 2013). Termite emissions are from Fung et al. (1991). Emissions from geological macroseeps (oil and gas seeps and mud volcanoes) are based on Etiope (2015) and Kvenvolden and Rogers (2005). For areal seepage, we use the sedimentary basins (microseepage) and potential geothermal seepage maps from Kvenvolden and Rogers (2005) with the emission factor previously used by Lyon et al. (2015). Over the United States, we use the sedimentary basin map from the Energy Information Administration (EIA, 2016) and basinspecific emission factors from Etiope and Klusman (2010). While global geological emissions have previously been estimated to be over $5 0 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ (Kirschke et al., 2013), Petrenko et al. (2017) showed that based on ice core measurements they should be no higher than $1 5 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ . ",
+        "bbox": [
+            514,
+            447,
+            921,
+            794
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Construction of the prior error covariance matrix $\\mathbf { S _ { \\mathrm { a } } }$ requires estimates of error variances for the prior emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid. For wetland emissions, we use the standard deviation of $4 ^ { \\circ } \\times 5 ^ { \\circ }$ annual emissions from the WetCHARTs ensemble members (Bloom et al., 2017). The error variance averages $58 \\%$ on the grid level. For US anthropogenic emissions and oil and gas emissions in Canada and Mexico, we use the scale-dependent error variances from ",
+        "bbox": [
+            514,
+            797,
+            921,
+            917
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7861 ",
+        "bbox": [
+            72,
+            47,
+            924,
+            62
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/bfa7ebea0405c6c6e9c9750fecdea8c858f54d92566ca454e98752fbab3b59bc.jpg",
+        "image_caption": [
+            "Figure 2. Prior estimates of methane emissions from wetlands, livestock, coal mining, oil and gas, wastewater and landfills, and other sources. Values are 2010–2015 averages and are shown on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ GEOS-Chem grid used for the inversion. Global totals for each source type are given in Table 1. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            210,
+            80,
+            786,
+            402
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Maasakkers et al. (2016). For lack of better information, we assume $50 \\%$ error standard deviation for EDGAR v4.3.2 emissions (Turner et al., 2015) and $100 \\%$ for non-wetland natural emissions. The diagonal terms of $\\mathbf { S } _ { \\mathbf { a } }$ are then constructed by adding the error variances of individual source types for $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells in quadrature, capping total errors at $50 \\%$ . We assume no error spatial covariance on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid so that $\\mathbf { S } _ { \\mathrm { a } }$ is diagonal. This is a reasonable assumption for anthropogenic emissions (Maasakkers et al., 2016), though errors on wetland emissions may still be correlated on that scale (Bloom et al., 2017). ",
+        "bbox": [
+            77,
+            485,
+            482,
+            650
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Our state vector in the inversion includes linear emission trends for $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells over the 2010–2015 period, superimposed on interannual variability in the case of wetlands and fires. Our global prior estimate of mean methane emissions for the 2010–2015 period exceeds the sinks by $1 3 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ (Table 1), which drives a $5 \\mathrm { p p b a } ^ { - 1 }$ increase in methane concentrations over that period, even in the absence of an emission trend. Therefore our prior estimate of linear emission trends for individual $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells is zero, with an absolute error standard deviation of $10 \\%$ of the local prior emissions over the 2010–2015 time period $( 1 . 7 \\% { \\mathrm { a } } ^ { - 1 } )$ . This error standard deviation is based on trend estimates for North America inferred from GOSAT data (Turner et al., 2016; Sheng et al., 2018a). ",
+        "bbox": [
+            77,
+            653,
+            482,
+            864
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The prior estimate of the global tropospheric OH concentration is based on a GEOS-Chem full-chemistry simulation (Wecht et al., 2014) that yields a methane lifetime $\\tau _ { \\mathrm { C H } _ { 4 } } ^ { \\mathrm { O H } }$ of ",
+        "bbox": [
+            75,
+            866,
+            482,
+            912
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "10.6 years, consistent with the best estimate inferred from the methyl chloroform proxy (Prather et al., 2012) and the $9 . 7 \\pm 1 . 5$ years estimate from the ACCMIP model ensemble (Naik et al., 2013). Here and elsewhere, τ OHCH i s defined as the ratio between the total mass of atmospheric methane (including the stratosphere) and the annual loss rate from oxidation by OH below the tropopause. The uncertainty in the methane lifetime is about $10 \\%$ (Prather et al., 2012), but the uncertainty on OH interannual variability is less, about $3 \\%$ (Holmes et al., 2013). We assume a $3 \\%$ error standard deviation in the global annual mean OH concentration for our standard inversion but also conduct a sensitivity study with $10 \\%$ error standard deviation. We further conduct an inversion taking the OH trend over the 2010–2015 period as linear and assuming in that case error standard deviations of $10 \\%$ for the mean global OH concentration and $5 \\% \\mathrm { { a } ^ { - 1 } }$ (absolute) for the linear trend. Scaling of global OH concentrations in the inversion is done without modifying the spatial or seasonal OH distribution. Zhang et al. (2018) found that inversions of atmospheric methane data using the 3-D GEOS-Chem OH fields give consistent results with inversions using other global OH distributions from the ACCMIP model ensemble (Naik et al., 2013). ",
+        "bbox": [
+            514,
+            487,
+            921,
+            834
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "2.3 Forward model ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            854,
+            665,
+            868
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "We use the GEOS-Chem CTM v11-01 at $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid resolution (Wecht et al., 2014; Turner et al., 2015) as forward model for the inversion. The model is driven with 2009–2015 MERRA-2 meteorological fields (Bosilovich et al., 2016) from the NASA Global Modeling and Assimilation Office (GMAO). Atmospheric methane concentrations are initialized on January 2009 using the previous GOSAT inversion results of Turner et al. (2015), shown in that work to be unbiased compared to surface and aircraft background data including for the tropospheric meridional gradient. ",
+        "bbox": [
+            514,
+            887,
+            921,
+            917
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            78,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "discarded",
+        "text": "7862 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            70,
+            47,
+            919,
+            62
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            77,
+            80,
+            484,
+            201
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The loss from oxidation by tropospheric OH is computed with archived 3-D monthly fields of OH concentrations from a GEOS-Chem full-chemistry simulation as described by Wecht et al. (2014). Local tropopause information is from the MERRA-2 data. The global loss rate for individual years is optimized in the inversion by uniform scaling of the OH concentrations. Other minor loss terms include stratospheric oxidation computed with archived monthly loss frequencies from the NASA Global Modeling Initiative model (Murray et al., 2012), tropospheric oxidation by Cl atoms computed using archived Cl concentration fields from Sherwen et al. (2016) and the reaction rate constant from Allan et al. (2007), and soil uptake as described by Fung et al. (1991) with temperature-based seasonality based on Ridgwell et al. (1999). The loss from oxidation by Cl totals $9 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ , intermediate between the $1 2 \\mathrm { - } 1 3 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ estimated by Hossaini et al. (2016) using the TOMCAT chemical transport model and $5 . 3 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ estimated by Wang et al. (2019) in a GEOS-Chem simulation with full accounting of tropospheric chlorine. These minor sinks are not optimized in the inversion. ",
+        "bbox": [
+            77,
+            202,
+            482,
+            505
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The GEOS-Chem simulation of GOSAT methane columns features a latitude-dependent background bias that needs to be corrected (Turner et al., 2015). This bias likely reflects a model overestimate of methane in the extratropical stratosphere (Saad et al., 2016), which is common across global models due to excessive meridional transport in the stratosphere (Patra et al., 2011) and was first seen in a SCIA-MACHY inversion using the TM5 chemical transport model (Bergamaschi et al., 2007). Stanevich (2018) found a significant difference in methane columns simulated by GEOS-Chem at $4 ^ { \\circ } \\times 5 ^ { \\circ }$ compared to $2 ^ { \\circ } \\times 2 . 5 ^ { \\circ }$ resolution, but we find that this difference is mainly in the stratosphere (Appendix A). We remove the background bias by applying the latitudinal correction based on background grid cells from Turner et al. (2015), recomputed with the University of Leicester v7 GOSAT proxy retrieval (Parker et al., 2015) and the MERRA-2 meteorological fields. The mean model– GOSAT difference in column mean mixing ratio for background $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells is fitted to a second-order polynomial of latitude: ",
+        "bbox": [
+            77,
+            507,
+            482,
+            810
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "img_path": "images/d1613a12df67a8f3d8318ada486502a56c3505d887620171eed79112efac597d.jpg",
+        "text": "$$\n\\xi = \\left( 4 . 0 \\theta ^ { 2 } - 1 . 3 \\theta \\right) \\times 1 0 ^ { - 3 } - 5 ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            73,
+            817,
+            297,
+            847
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "where $\\theta$ is the latitude in degrees, and $\\xi$ is the model correction in ppb. This correction is similar to Turner et al. (2015), who used $\\xi = \\left( 5 \\theta ^ { 2 } - 5 \\theta \\right) \\times 1 0 ^ { - 3 } - 0 . 5$ . A seasonal bias remains after application of this correction, and we fix it by removing the zonal monthly mean concentration differences averaged over rolling $1 2 ^ { \\circ }$ latitudinal bands. This seasonal bias may be due to errors in the seasonality of emissions or atmospheric transport (Saad et al., 2016; Bader et al., 2017; Stanevich, 2018). We find that the seasonal correction does not affect the inversion results significantly, as shown in Appendix B, where we optimize emissions for individual seasons separately without applying a seasonal correction. ",
+        "bbox": [
+            75,
+            857,
+            482,
+            918
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            81,
+            921,
+            202
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "2.4 Observational error covariance matrix ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            215,
+            830,
+            229
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The observational error covariance matrix $\\mathbf { S } _ { \\mathrm { O } }$ includes contributions from random instrument and forward model errors. We construct it applying the residual error method of Heald et al. (2004) using the 2010–2015 time series of local methane column differences $\\Delta = \\mathrm { \\cdot }$ yGEOS-CHEM, prior − y for individual $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells between the GEOS-Chem model with prior estimates (emissions and OH concentrations) and the GOSAT observations after background bias correction. The mean difference ${ \\overline { { \\Delta } } } =$ yGEOS-CHEM, prior − yGOSAT is to be corrected in the inversion, while the residual error $\\Delta ^ { \\prime } = \\Delta - \\overline { { \\Delta } }$ is taken as the observational error. Statistics of $\\Delta ^ { \\prime }$ define the observational error variance (diagonal of the observational error covariance matrix). The same method was previously used in the satellite-based methane inversions by Wecht et al. (2014) and Turner et al. (2015). The resulting observational error standard deviation averages $1 3 \\mathrm { p p b }$ . The mean instrument error standard deviation is $1 1 \\mathrm { p p b }$ (Parker et al., 2015), implying that most of the observational error is generally from the instrument rather than from the forward model. This would indeed be expected for the random error of individual measurements. For a given measurement, if the local error standard deviation computed by the residual error method is smaller than the reported measurement precision, then we use the latter instead; this is the case for $10 \\%$ of retrievals. All observational error standard deviations are set to be at least $1 0 \\mathrm { p p }$ (this threshold affects $8 \\%$ of retrievals). $\\mathbf { S } _ { \\mathrm { O } }$ is taken to be diagonal for lack of better information, but the general effect of error correlation in the observations is accounted for in the inversion by a regularization factor (Sect. 2.5). ",
+        "bbox": [
+            514,
+            243,
+            921,
+            699
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "2.5 Inversion procedure ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            713,
+            697,
+            727
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "We perform inversions with two different specifications of prior error variance statistics: normal and lognormal. Assumption of normally distributed errors enables a linear optimization problem with an analytical solution including closed-form error characterization (Rodgers, 2000). Assumption of lognormal errors may be more appropriate for modeling the high tail of the probability density function (Zavala-Araiza et al., 2015) and also has the advantage of enforcing positive solutions (Miller et al., 2014), but the optimization problem is then nonlinear. By comparing the two approaches we can evaluate consistency in results. ",
+        "bbox": [
+            514,
+            740,
+            921,
+            908
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7863 ",
+        "bbox": [
+            75,
+            47,
+            924,
+            62
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Both inversions minimize the Bayesian cost function $J ( x )$ (Rodgers, 2000): ",
+        "bbox": [
+            75,
+            80,
+            484,
+            109
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "img_path": "images/86e028f6573f6d7f5461237c2bf8536de5d496e2965dba4bbaddc452560b213d.jpg",
+        "text": "$$\n\\begin{array} { c } { { J ( { \\pmb x } ) = ( { \\pmb x } - { \\pmb x } _ { \\mathrm { a } } ) ^ { T } { \\bf S } _ { \\mathrm { a } } ^ { - 1 } \\left( { \\pmb x } - { \\pmb x } _ { \\mathrm { a } } \\right) + \\gamma ( { \\pmb y } - { \\pmb F } ( { \\pmb x } ) ) ^ { T } } } \\\\ { { { \\bf S } _ { \\mathrm { O } } ^ { - 1 } \\left( { \\pmb y } - { \\pmb F } ( { \\pmb x } ) \\right) , } } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            75,
+            118,
+            398,
+            164
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "where $\\boldsymbol { x }$ is the state vector, $\\pmb { x } _ { \\mathrm { a } }$ is the prior estimate, $\\mathbf { S } _ { \\mathbf { a } }$ is the prior error covariance matrix, $F ( { \\pmb x } )$ is the simulation of observations $\\textbf {  { y } }$ by the GEOS-Chem model, ${ \\bf { S } } _ { \\mathrm { { O } } }$ is the observational error covariance matrix, and $\\gamma$ is a regularization factor (Brasseur and Jacob, 2017). The variances in ${ \\bf { S } } _ { \\mathrm { { O } } }$ are underestimated because of correlation in the observational error that is missing in the diagonal formulation of ${ \\bf { S } } _ { 0 }$ and is difficult to quantify. We use $\\gamma$ to scale the original diagonal $\\mathbf { S } _ { \\mathrm { O } }$ to get an optimal covariance matrix to be used in the inversion. Zhang et al. (2018) showed in an observing system simulation experiment (OSSE) for inversion of methane satellite data that a regularization factor $\\gamma = 0 . 0 5$ adjusts the variances optimally and prevents overfitting. This was done by calculating the likelihood at $\\widehat { \\mathbf { x } }$ for a range of values of $\\gamma$ . bDiagnosis of overfit and optimization of $\\gamma$ is readily done in an OSSE such as in Zhang et al. (2018) where the “true” solution is known. Here we find that using $\\gamma = 1$ (as in the pure Bayesian statement of the optimization problem) produces checkerboard patterns in the solution that are likely spurious. We choose $\\gamma = 0 . 0 5$ consistent with Zhang et al. (2018) for our base inversion as providing the best balance between prior and observational terms in the posterior value of the cost function. We examine the sensitivity to the choice of $\\gamma$ by conducting a sensitivity inversion with $\\gamma = 0 . 1$ . ",
+        "bbox": [
+            77,
+            171,
+            484,
+            536
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Further balancing of the cost function is needed because the global OH concentration and its interannual variability are represented by only seven state vector elements, while the emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid are represented by 1009 elements. To provide equal weight to OH and emissions for explaining global methane trends, we increase the weight of the OH terms in the cost function (through the OH components of $\\mathbf { S } _ { \\mathbf { a } }$ ) by the ratio of the number of state vector elements $1 0 0 9 / 7$ so that from a cost-function perspective, a change in OH and global methane emissions is equally expensive. The sensitivity inversion assuming $10 \\%$ prior error standard deviation on OH instead of $3 \\%$ is equivalent to decreasing this weighting by a factor of 11. ",
+        "bbox": [
+            77,
+            537,
+            482,
+            735
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The GEOS-Chem forward model $\\mathbf { \\boldsymbol { y } } = \\boldsymbol { F } ( \\mathbf { \\boldsymbol { x } } )$ relating methane column concentrations $\\textbf {  { y } }$ to the state vector $\\boldsymbol { x }$ is essentially linear. There is a small nonlinearity from the optimization of OH concentrations because changes in the methane concentrations affect the loss rate (Houweling et al., 2017), which we neglect because changes in methane concentrations are small, and methane is well mixed globally. We therefore express the forward model as $F ( { \\pmb x } ) = \\mathbf { K } { \\pmb x } + { \\pmb c }$ , where ${ \\bf K } = \\partial y / \\partial x$ is the Jacobian matrix of the model, and $\\pmb { c }$ is an initialization constant (January 2009 concentrations taken from Turner et al., 2015). Replacing $F ( { \\pmb x } ) = \\mathbf { K } { \\pmb x }$ in Eq. (2) and subtracting the initialization constant $\\pmb { c }$ from the observations, the minimization problem $\\mathrm { d } J ( \\pmb { x } ) / \\mathrm { d } \\pmb { x } = \\pmb { 0 }$ has an analytical solution for the optimal posterior solution $\\widehat { \\mathbf { x } }$ (Rodgers, 2000): ",
+        "bbox": [
+            77,
+            736,
+            484,
+            918
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            80,
+            922,
+            126
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "img_path": "images/003aabae66a8db04161a8a89002267e67dce5dd3297bd5cbcceafd3a43cb6aea.jpg",
+        "text": "$$\n\\widehat { \\pmb { x } } = { \\pmb x } _ { \\mathrm { a } } + { \\bf S } _ { \\mathrm { a } } { \\bf K } ^ { T } \\left( { \\bf K } { \\bf S } _ { \\mathrm { a } } { \\bf K } ^ { T } + \\frac { { \\bf S } _ { \\mathrm { O } } } { \\gamma } \\right) ^ { - 1 } ( { \\pmb y } - { \\bf K } { \\pmb x } _ { \\mathrm { a } } ) .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            510,
+            132,
+            835,
+            171
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The posterior error covariance matrix $\\widehat { \\mathbf { s } }$ describing the error statistics of $\\widehat { \\mathbf { x } }$ is given by ",
+        "bbox": [
+            514,
+            179,
+            921,
+            211
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "img_path": "images/1c20c64f9e361b9ec7b23b1091bf70036c551ed2c5f8cc03bc4e620784e256d6.jpg",
+        "text": "$$\n\\widehat { \\mathbf { S } } = \\left( \\gamma \\mathbf { K } ^ { T } \\mathbf { S } _ { 0 } ^ { - 1 } \\mathbf { K } + \\mathbf { S } _ { \\mathrm { a } } ^ { - 1 } \\right) ^ { - 1 } ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            510,
+            219,
+            705,
+            249
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "and the averaging kernel matrix $( \\mathbf { A } = \\partial \\widehat { \\mathbf { x } } / \\partial x \\partial$ ) defining the bsensitivity of the solution to the true state is given by ",
+        "bbox": [
+            514,
+            256,
+            922,
+            286
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "img_path": "images/30f97138219d1026ceb9d4a2c33e1844ce4a69996f0e0bb3168ae93e96b4fd36.jpg",
+        "text": "$$\n\\mathbf { A } = \\mathbf { S _ { a } K } ^ { T } \\left( \\mathbf { K S _ { a } K } ^ { T } + \\frac { \\mathbf { S } _ { 0 } } { \\gamma } \\right) ^ { - 1 } .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            510,
+            294,
+            727,
+            332
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The trace of the averaging kernel matrix defines the degrees of freedom for signal (DOFS) of the inversion, that is the number of pieces of information on the state vector that can be gained from the observing system. ",
+        "bbox": [
+            514,
+            340,
+            921,
+            400
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The analytical solution as described by Eqs. (3)–(5) requires the explicit construction of the Jacobian matrix K characterizing the GEOS-Chem model. We do this column by column, with GEOS-Chem simulations perturbing each element of the state vector independently. This is readily achievable, even for 2025 state vector elements as a massively parallel computation. Sparse matrix algebra is used where possible in solving Eqs. (3)–(5), taking advantage of the diagonal structure of the error covariance matrices. ",
+        "bbox": [
+            514,
+            401,
+            922,
+            536
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The analytical solution to the Bayesian optimization problem requires assumption of Gaussian errors, but this allows for the possibility of negative values of state vector elements. Negative emissions could conceivably be attributed to locally strong soil uptake or oxidation by Cl atoms but may also be unphysical (Miller et al., 2014). We can enforce positivity in the Bayesian solution by optimizing for $\\ln ( x )$ instead of $\\boldsymbol { x }$ , with normal Gaussian errors specified for $\\ln ( x )$ (corresponding to lognormal errors for $\\boldsymbol { x }$ ). The model is then nonlinear, so that the solution and the corresponding error statistics must be found iteratively with an updated Jacobian matrix ${ \\bf K } _ { N } ^ { \\prime } = \\partial { \\bf y } / \\partial \\ln x$ at each iteration $N$ . This recomputation is immediate using the previously derived Jacobian matrix $\\mathbf { K }$ for the linear problem, since the individual scalar elements $\\partial y _ { i } / \\partial \\ln ( x _ { i } )$ of $\\mathbf { K } ^ { \\prime }$ are related to those of $\\mathbf { K }$ by ${ \\partial y _ { i } } / { \\partial \\ln ( x _ { j } ) } = { x _ { j } } { \\partial y _ { i } } / { \\partial x _ { j } }$ . Thus only a simple scaling of the linear Jacobian matrix is required at each iteration. This conversion to log space is done only for the emissions component of $\\boldsymbol { x }$ . Emission trends and global OH concentrations are still optimized with normal error distributions, and no scaling is applied to those rows of the Jacobian. ",
+        "bbox": [
+            514,
+            537,
+            921,
+            856
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Optimizing emissions in log space means that the best posterior estimate is for the median of emissions instead of the mean. The mean and the median of the lognormal distribution are not equal, so results cannot be summed over grid squares to provide a best estimate of the mean. For this reason, analysis of aggregate and global emissions and sinks will be done with the inversion using normal errors. ",
+        "bbox": [
+            514,
+            857,
+            921,
+            917
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "discarded",
+        "text": "7864 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            67,
+            47,
+            922,
+            62
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            80,
+            480,
+            124
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The iterative solution for the inverse problem with lognormal errors is obtained with the Levenberg–Marquardt method (Rodgers, 2000) for each iteration $N$ : ",
+        "bbox": [
+            75,
+            126,
+            482,
+            171
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "img_path": "images/5318b14cba64fb38191192840e22221939df9b592b07c8b9f7811bcf62e276fe.jpg",
+        "text": "$$\n\\begin{array} { r } { \\pmb { x } ^ { \\prime } { } _ { N + 1 } = \\pmb { x } ^ { \\prime } { } _ { N } + \\left( ( 1 + \\kappa ) \\pmb { \\mathrm { S } } _ { \\mathrm { A } } ^ { \\prime - 1 } + \\gamma \\pmb { \\mathrm { K } } _ { N } ^ { \\prime T } \\pmb { \\mathrm { S } } _ { \\mathrm { O } } ^ { - 1 } \\pmb { \\mathrm { K } } _ { N } ^ { \\prime - 1 } \\right) ^ { - 1 } } \\\\ { \\left( \\gamma \\pmb { \\mathrm { K } } _ { N } ^ { \\prime T } \\pmb { \\mathrm { S } } _ { \\mathrm { O } } ^ { - 1 } \\left( \\pmb { y } - \\pmb { \\mathrm { K } } \\pmb { x } _ { N } \\right) - \\pmb { \\mathrm { S } } _ { \\mathrm { A } } ^ { \\prime } { } ^ { - 1 } \\left( \\pmb { x } ^ { \\prime } { } _ { N } - \\pmb { x } _ { \\mathrm { A } } ^ { \\prime } \\right) \\right) , } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            73,
+            180,
+            445,
+            242
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "where $\\scriptstyle { x ^ { \\prime } = \\ln x }$ , the initial guess $\\mathbf { \\boldsymbol { x } } _ { \\mathrm { ~ 0 ~ } } ^ { \\prime }$ is the prior estimate, and $\\kappa$ is a coefficient for the iterative approach to the solution that is set to 100 to start and is gradually decreased as the solution is approached. The prior error covariance matrix ${ \\bf { S } } _ { \\mathrm { { a } } } ^ { \\prime }$ (diagonal elements $s _ { \\mathrm { A } } ^ { \\prime } .$ ) defining error variances for $\\ln { \\pmb x } _ { \\mathrm { a } }$ is derived from the previously described prior error covariance matrix $\\mathbf { S } _ { \\mathrm { a } }$ (diagonal elements $s _ { \\mathrm { A } }$ ) by scaling the error variances for the individual elements: ",
+        "bbox": [
+            75,
+            249,
+            484,
+            371
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "img_path": "images/c10dfa5b2e563f69266eb474f86289ad741fa8fe9eb822f304754d44abfdea90.jpg",
+        "text": "$$\ns _ { \\mathrm { A } } ^ { \\prime } = \\left( \\frac { \\ln \\left( \\frac { x _ { \\mathrm { A } } + \\sqrt { s _ { \\mathrm { A } } } } { x _ { \\mathrm { A } } } \\right) + \\left| \\ln \\left( \\frac { x _ { \\mathrm { A } } - \\sqrt { s _ { \\mathrm { A } } } } { x _ { \\mathrm { A } } } \\right) \\right| } { 2 } \\right) ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "bbox": [
+            72,
+            379,
+            359,
+            435
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "2.6 Error correlations between global estimates of sources and sinks ",
+        "text_level": 1,
+        "bbox": [
+            75,
+            444,
+            447,
+            473
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Inversion results for the spatial distributions of emissions and trends on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid are mainly informed by local and regional patterns of methane concentration. However, implied inversion results for the global methane emission and its trend may be significantly correlated with those for the global tropospheric OH concentration and its trend. Some separation is expected because sources of methane have a different spatial and seasonal imprint on the global methane distribution than the OH sink (Zhang et al., 2018), but it is important to quantify the error correlation, i.e., the extent to which adjustments to the global methane emission and its trend may be aliased by adjustments to the global OH concentration and its trend. ",
+        "bbox": [
+            77,
+            487,
+            484,
+            684
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "To do this we reduce the dimensionality of the inverse analysis by collapsing global emissions and trends into one state vector element each. Following Calisesi et al. (2005), if the state vector can be transformed using a summation matrix $\\mathbf { W }$ as ",
+        "bbox": [
+            75,
+            686,
+            484,
+            760
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "img_path": "images/045e0a00810c901a829d1f8bfe5cce7f531f088a08589649d07ea03b633cca7c.jpg",
+        "text": "$$\n\\begin{array} { r } { { \\boldsymbol { x } } _ { \\mathrm { r e d } } = { \\bf W } { \\boldsymbol { x } } , } \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            73,
+            773,
+            157,
+            789
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "then the averaging kernel matrix of the reduced system $( \\mathbf { A } _ { \\mathrm { r e d } } )$ is given by ",
+        "bbox": [
+            75,
+            802,
+            482,
+            833
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "img_path": "images/bb254ff7e0bfad089fe3734354ee20ab9be300e8f22d4614813a8550a29131d4.jpg",
+        "text": "$$\n\\mathbf { A } _ { \\mathrm { { r e d } } } = \\mathbf { W } \\mathbf { A } \\mathbf { W } ^ { * } ,\n$$",
+        "text_format": "latex",
+        "bbox": [
+            73,
+            843,
+            181,
+            861
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "where $\\mathbf { W } ^ { * } = ( \\mathbf { W } ^ { T } \\mathbf { W } ) ^ { - 1 } \\mathbf { W } ^ { T }$ is the generalized pseudoinverse of $\\mathbf { W }$ . Our original state vector $\\boldsymbol { x }$ in this case includes mean 2010–2015 emissions and their linear trends on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid and the global mean tropospheric OH concentration for 2010–2015 and its linear trend. Again, the minor sinks in Table 1 are not optimized and are maintained instead at their prior values. We apply the summation matrix W to the emission terms and thus reduce the state vector to four elements defining the global methane budget (global mean emission, global mean OH concentration, global emission trend, global OH trend). The off-diagonal terms of the reduced averaging kernel matrix $\\mathbf { A } _ { \\mathrm { r e d } }$ then measure the extent to which differences relative to the true state are aliased between sources and sinks in the optimization of this global budget. The advantage of this summation approach, as compared to a global inversion including just four elements, is that the distribution of methane emissions and its trends is still optimized. ",
+        "bbox": [
+            75,
+            871,
+            482,
+            918
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            81,
+            921,
+            308
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "3 Results and discussion ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            352,
+            699,
+            368
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "We conduct an ensemble of inversions to characterize the sensitivity of the solution to different assumptions made in the formulation of the inverse problem. Our base inversion optimizes annual mean emissions with normal error distributions and seasonal background correction to the GOSAT– model difference as discussed above. To test whether choices in the regularization and cost-function construction affect our conclusions, we also conduct inversions with (1) lognormal error distributions for emissions, (2) a regularization factor $\\gamma$ of 0.1 instead of 0.05, (3) no seasonal background correction to the model–GOSAT difference, (4) a $10 \\%$ error standard deviation on the global OH concentration instead of $3 \\%$ , (5) optimization of a linear trend in global OH concentration instead of year-to-year variability, assuming $10 \\%$ error standard deviation for mean OH and $5 \\%$ for the 2010– 2015 trend, (6) no interannual variability in prior emission estimates, and (7, 8) seasonally resolved emission optimization including seasonal correction and not including seasonal correction (see Appendix B). All inversions produce consistent results, and we will focus our main presentation on the base inversion, bringing in the sensitivity inversions to illustrate the spread of results and to address specific issues. ",
+        "bbox": [
+            514,
+            384,
+            921,
+            719
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Before presenting results from the inversion, we compare the posterior solution to observations to show that the inversion accomplishes its task of providing an improved forward model fit to observations. Figure 3a–d show the improvement in the GEOS-Chem comparison to the GOSAT data when using posterior vs. prior emissions, emission trends, and OH concentrations. As expected for a successful inversion, the posterior values provide a better fit to the observations. The inversion corrects prior underestimates over tropical regions and an overestimate over China. It also fits the observed 2010–2015 trend in methane concentrations and its latitudinal distribution, while the prior model underestimated the growth rate, especially in 2014–2015. It does not fully correct the prior bias in the Arctic because GOSAT observations north of $6 0 ^ { \\circ } \\mathrm { N }$ are not used in the inversion. ",
+        "bbox": [
+            514,
+            721,
+            921,
+            918
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7865 ",
+        "bbox": [
+            73,
+            47,
+            924,
+            62
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            941,
+            371,
+            955
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/6911bdf42f81c41b8f8faabbb21b7c0f894dee3d8fc4182a62d3ce1cb216a1b8.jpg",
+        "image_caption": [
+            "Figure 3. Comparisons of observed methane concentrations to the GEOS-Chem forward model using either prior or posterior (optimized) estimates of 2010–2015 emissions and OH concentrations. Panels (a) and (b) show differences between the model and GOSAT observations for 2010–2015 means on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid. Panels (c) and (d) show the monthly time series of the differences averaged over latitude bands. Panels (e–g) show independent 2010–2015 comparisons to global observations from NOAA surface stations, HIPPO aircraft meridional cross sections over the Pacific (2010 and 2011, with the model sampled along the flight tracks), and TCCON. Reduced major axis (RMA) regressions are as shown along with the 1 : 1 line (in grey). HIPPO observations are averaged over GEOS-Chem grid cells. The NOAA surface stations and HIPPO aircraft measure local methane dry-air mole fractions, while TCCON measures column-averaged dry-air mole factions. We apply the same latitudinal and seasonal corrections to TCCON that we applied to GOSAT. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            211,
+            80,
+            783,
+            519
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            672,
+            480,
+            701
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Figure 3 also shows independent evaluation of the inversion results with background observations from the NOAA cooperative flask sampling network (https://esrl.noaa.gov/ gmd/ccgg/flask.php, last access: 16 February 2018), the HIPPO aircraft campaigns across the Pacific and Atlantic (legs III–V; https://hippo.ornl.gov/, last access: 27 April 2019; Wofsy, 2011), and the Total Carbon Column Observing Network (TCCON; https://tccondata.org/, last access: 27 April 2019; Wunch et al., 2011). These observations are mainly of the seasonal/latitudinal methane background and are not used in the inversion. The background is already well simulated in the prior estimate, and the posterior simulation does not degrade this agreement. ",
+        "bbox": [
+            77,
+            703,
+            482,
+            899
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "3.1 Spatial distribution and source attribution of methane emissions ",
+        "text_level": 1,
+        "bbox": [
+            514,
+            672,
+            875,
+            701
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Figure 4 shows the global distribution of mean 2010–2015 posterior emissions from the base inversion and from the sensitivity inversion assuming lognormal errors in the prior emission estimates. Correction patterns are very similar between the two inversions. Small negative emissions are found in the base inversion for 6 of the 1009 optimized grid cells. The inversion assuming lognormal errors does not allow these negative emissions. Downward corrections tend to be smaller in the inversion assuming lognormal errors, while positive corrections are larger and more concentrated in a few grid cells, as would be expected from the different shapes of the error standard deviation distributions. ",
+        "bbox": [
+            514,
+            714,
+            921,
+            896
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            941,
+            373,
+            955
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "discarded",
+        "text": "7866 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            65,
+            47,
+            919,
+            62
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/ce026f3fc54125f8bed1b9a62cdfeabd6205a7b6471b67fc1fb8a42cac395ffe.jpg",
+        "image_caption": [
+            "Figure 4. Optimization of the global distribution of mean 2010–2015 methane emissions using GOSAT observations. Prior emissions are in (a) (see breakdown in Fig. 2). Panel $\\mathbf { ( b ) }$ shows averaging kernel sensitivities for the base inversion (diagonal elements of the averaging kernel matrix), with the degrees of freedom for signal (DOFS; trace of the averaging kernel matrix) in the legend. Panels (c, d) show the posterior emissions from the base inversion and the associated ratios between posterior and prior emissions. Grey grid cells (for example in North Africa and Australia) indicate small negative posterior emissions. Panels (e, f) show the same but for the inversion assuming lognormal prior errors, which does not allow for negative posterior emissions. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            210,
+            80,
+            784,
+            417
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Figure 4b shows the diagonal terms of the averaging kernel matrix for the base inversion (averaging kernel sensitivities), measuring the ability of the observations to constrain the inversion. The trace of the averaging kernel matrix $( \\mathrm { D O F S } = 1 2 8 )$ ) measures the number of independent pieces of information constrained by the inversion. A Bayesian inversion without correcting for overfit ( $\\gamma = 1$ in Eq. 3) would erroneously produce much higher DOFS. We find that the inversion provides strong constraints on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid for source regions in East Asia, central Africa, and South America. Averaging kernel sensitivities are generally weaker over North America and in Europe, indicating that the inversion provides more diffuse spatial information in these regions. ",
+        "bbox": [
+            77,
+            541,
+            482,
+            737
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We find that the EDGAR v4.3.2 inventory prominently overestimates anthropogenic emissions over eastern China, likely from coal production, and around the Persian Gulf, likely from oil and gas production. The finding of an EDGAR overestimate in China is consistent with previous global inversions of GOSAT data using EDGAR v4.1, v4.2, and v4.2FT2010 as prior estimates (Monteil et al., 2013; Thompson et al., 2015; Alexe et al., 2015; Turner et al., 2015; Pandey et al., 2016) and a regional inversion using EDGAR v4.3.2 (Miller et al., 2019). The overestimate of coal mining emissions may be because standard IPCC emission factors used by EDGAR v4.2 were too high for Chinese coal mines, and recovery of coal mine methane is not sufficiently taken into account (Peng et al., 2016). Emission factors were decreased in EDGAR v4.3.2 (Janssens-Maenhout et al., 2019), but we still find an overestimate. We find that EDGAR underestimates emissions over Japan and Southeast Asia, where rice cultivation is the largest anthropogenic source, but there are also large wetland emissions. There are also large corrections in wetland areas of central Africa, South America, and North America. ",
+        "bbox": [
+            77,
+            740,
+            482,
+            905
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            541,
+            921,
+            691
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We do not find large correction factors over the United States, except for the southeastern coast which is likely due to an overestimate of methane emissions from coastal wetlands in the prior WetCHARTs inventory. This overestimate of US coastal wetland emissions in WetCHARTs is consistent with a previous inversion of aircraft observations over the Southeast United States by Sheng et al. (2018b) and may be explained by low soil organic carbon in these ecosystems (Holmquist et al., 2018) and/or the overestimated impacts of partial wetland land-cover classes predominant in the southeastern United States (Lehner and Döll, 2004; Bloom et al., 2017). Previous inversions found factor of 2 underestimates of EDGAR v4.2 emissions of the South Central United States (Miller et al., 2013; Turner et al., 2015), but we do not find such an underestimate here and attribute this to our use of the gridded version of the US EPA inventory as prior estimate (Maasakkers et al., 2016). EDGAR $\\mathrm { v } 4 . 2$ allocated oil and gas emissions mainly according to population, which greatly underestimates emissions in oil and gas production regions in the South Central United States (Maasakkers et al., 2016). ",
+        "bbox": [
+            514,
+            694,
+            921,
+            905
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7867 ",
+        "bbox": [
+            70,
+            47,
+            924,
+            62
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/43fadc6fe35d054ec1959d39d24cdaa852bebc7c0378742cb6232499c4aca0eb.jpg",
+        "image_caption": [
+            "Figure 5. Global methane emissions by source type in the prior estimate for the inversion (Table 1, “other” includes fossil fuel combustion, industrial processes, and agricultural field burning) and in the posterior estimate. Values are 2010–2015 means. The attribution to source types in the posterior estimate is done by assuming that the relative contributions of different source types in individual $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells are correct in the prior estimate. Posterior estimates are from the base inversion, and error bars show the ranges of results from the inversion ensemble. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            110,
+            82,
+            448,
+            289
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            461,
+            482,
+            566
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Improved estimates of global methane emissions for the individual source types of Table 1 can be inferred from our results by assuming that the relative contributions from different source types in a given $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cell are correct in the prior inventory. The global posterior estimate for a given source type is then obtained by applying the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ posterior / prior ratios from Fig. 4 to the distribution of source types in Fig. 2. Results in Fig. 5 indicate little change to 2010–2015 average emissions compared to the global prior inventory by source type, even though there are large regional reallocations. Coal mining emissions decrease by $29 \\%$ , mainly due to China, and rice cultivation and livestock increase by $15 \\%$ and $8 \\%$ respectively, mainly driven by the tropics. ",
+        "bbox": [
+            77,
+            569,
+            482,
+            779
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "There has been particular interest in quantifying emissions from oil and gas exploitation because of the potential for large reductions of these emissions through simple control measures (Zavala-Araiza et al., 2015; Alvarez et al., 2018). The EDGAR v4.3.2 national oil and gas emission totals can differ greatly from the national (spatially unresolved) totals reported by individual countries to the United Nations Framework Convention on Climate Change (UN-FCCC, 2017). This is shown in Fig. 6 with national oil and gas emissions from the top 10 countries in either the EDGAR $\\mathrm { \\ v } 4 . 3 . 2$ or UNFCCC inventories. We can estimate national oil and gas emission totals from our inversion by again assuming that the relative contributions of oil and gas to total emissions in individual $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells are correct and by further mapping the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ correction factors to the $0 . 1 ^ { \\circ } \\times 0 . 1 ^ { \\circ }$ EDGAR emission grid. The emission-weighted scaling factor is then used with the national oil and gas totals reported by EDGAR. Russia is the largest national source, but the inversion is limited in its ability to constrain oil and gas emissions there because a third of these emissions are north of $6 0 ^ { \\circ } \\mathrm { N }$ in EDGAR v4.3.2 (Fig. 2). ",
+        "bbox": [
+            77,
+            782,
+            482,
+            917
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/0c5b6e69db3e51ff8019a1290ee8fa7930a08a1a55a8c1f97f6dcb2edd4f2c6e.jpg",
+        "image_caption": [
+            "Figure 6. National estimates of methane emissions from the oil and gas industry for countries in the top 10 of either the EDGAR v4.3.2 or UNFCCC inventories. Values reported by individual countries to the UNFCCC for 2012 (Annex I countries) or the closest year (non-Annex I countries: Nigeria (1994), Venezuela (1999), Algeria (2000), Iran (2000), India (2010), Saudi Arabia (2010), and China (2012)) are compared to 2012 emissions from EDGAR v4.3.2 national oil and gas totals and to the posterior values from our base inversion as described in the text. Black lines are ranges for the ensemble of inversions. A large part of Russian emissions are too far north to be effectively constrained by the inversion. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            573,
+            81,
+            863,
+            361
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            568,
+            921,
+            749
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Results in Fig. 6 show that the inversion generally pushes the prior EDGAR v4.3.2 estimates of oil and gas emissions toward the UNFCCC values. One would expect the UNFCCC national reports to provide better estimates than EDGAR v4.3.2 because of their use of local information (Scarpelli et al., 2018) as compared to the more generic estimates used by EDGAR on the basis of IPCC Tier 1 methodology (IPCC, 2006). Thus we find that EDGARv4.3.2 greatly underestimates emissions in Uzbekistan, which are high because of leaky infrastructure (Scarpelli et al., 2018). For Iran, Algeria, Nigeria, Saudi Arabia, and Qatar we find much lower emissions than EDGAR $\\mathrm { \\ v } 4 . 3 . 2$ that are more consistent with the UNFCCC data. For China we are in better agreement with EDGAR v4.3.2 than with the UNFCCC estimate, which relies on anomalously low emission factors (Larsen et al., 2015). In Venezuela we find higher emissions than both EDGAR v4.3.2 and UNFCCC. The latest available report from Venezuela to the UNFCCC dates back to 1999. ",
+        "bbox": [
+            514,
+            751,
+            921,
+            917
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "discarded",
+        "text": "7868 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            60,
+            47,
+            917,
+            62
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/97d176edd1428bc0295429b580cee3e7a552feb22b4e92d35293b4b2e57a4544.jpg",
+        "image_caption": [
+            "Figure 7. 2010–2015 methane emission trends and global tropospheric OH trends as optimized by the inversion of GOSAT data and corresponding averaging kernel sensitivities (diagonal terms of the average kernel matrix). The degrees of information for signal or DOFS (trace of the averaging kernel matrix) is shown inset. Panel (c) gives the global attribution of the emission trends to individual source types, with ranges from the inversion ensemble. Shaded sections of the bars indicate the contribution from the tropics $( 2 4 ^ { \\circ } \\mathrm { S } { - } 2 4 ^ { \\circ } \\mathrm { N } )$ . The vertical bars in the OH trend panel are the posterior error standard deviations from the base inversion. The 2010–2015 decreasing trend in OH concentrations is not statistically significant $9 5 \\%$ confidence level). "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            163,
+            81,
+            833,
+            408
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            77,
+            532,
+            482,
+            638
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "3.2 Spatial distribution and source attribution of methane emission trends ",
+        "text_level": 1,
+        "bbox": [
+            75,
+            657,
+            436,
+            687
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Figure 7 shows base inversion results for the linear emission trends on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid for 2010–2015 and the associated averaging kernel sensitivities. Also shown in panel d is the 2010–2015 time series of posterior OH concentrations with error standard deviations from the posterior error covariance matrix. We find no significant OH trend over the period, although uncertainties are large. The information on the spatial distribution of emission trends originates from local and regional gradients of atmospheric methane observed by GOSAT, and we find from the posterior error covariance matrix of the inversion that it is not correlated with information on OH concentrations. Thus the large posterior uncertainty in global OH concentrations does not induce any significant correlated error in the spatial distribution of emission trends. This may be expected in view of the long lifetime of methane relative to the relevant timescales for atmospheric transport. ",
+        "bbox": [
+            77,
+            705,
+            482,
+            917
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            533,
+            921,
+            577
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The GOSAT data provide seven independent pieces of information (DOFS) on the spatial distribution of the emission trend. Again, a Bayesian inversion without correcting for overfit $( \\gamma = 1 )$ would erroneously indicate much higher DOFS. We find increasing emissions in the tropics and little change at higher latitudes. There are well-defined anthropogenic positive trends over China, India, and the Persian Gulf. Trends in China are in areas with dominant emissions from coal mining but also significant contributions from livestock and waste. In an inversion of surface observations, Thompson et al. (2015) previously found an increasing trend over China for 2000–2011, which they attributed to coal mining. Miller et al. (2019) found that this trend continued up to 2015 using GOSAT in a regional inversion. Trends over India are in areas of rice production but may also reflect waste management and livestock. The trend over India is 0 $) . 4 ~ ( 0 . 3 \\mathrm { - } 0 . 5 ) \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ (range of the inversion ensemble), consistent with the 2010–2015 trend of $0 . 7 { \\pm } 0 . 5 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ from a regional GOSAT inversion by Miller et al. (2019). Ganesan et al. (2017) found a nonsignificant trend $( 0 . 2 \\pm$ $0 . 7 \\mathrm { T g } \\mathrm { a } ^ { - 1 } ,$ ) over India for 2010–2015 using an ensemble of GOSAT, commercial aircraft (CARIBIC), and surface station methane data, but our estimate is not incompatible with their range. EDGAR v4.3.2 predicts a $0 . 4 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ increase in anthropogenic emissions from India between 2010 and 2012, mainly from livestock, coal, and waste based on increasing activity data (this trend is not included in our prior estimate). The trend over the United States is less well defined and not well constrained but suggests an increase over the eastern part of the country where multiple source types could contribute (Sheng et al., 2018a, b). ",
+        "bbox": [
+            514,
+            579,
+            921,
+            912
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7869 ",
+        "bbox": [
+            70,
+            47,
+            921,
+            62
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "table",
+        "img_path": "images/cf98b161515b365d2a1e6a1850da0bde2d142c9fb211763d588e30ae146be755.jpg",
+        "table_caption": [
+            "Table 2. Global 2010–2015 methane budgeta. "
+        ],
+        "table_footnote": [
+            "a From the inversion optimizing (1) mean 2010–2015 methane emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid, (2) linear methane emission trends on that same grid, (3) global mean 2010–2015 tropospheric OH concentration, and (4) linear trend in global OH concentrations. Expected values and error standard deviations are shown. The prior estimates are described in Sect. 2.2. The posterior global emission and its trend are obtained by summing the contributions from all $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid cells, and the error standard deviations are computed accounting for posterior error correlation. Minor methane sinks totaling $6 1 \\mathrm { T g a } ^ { - 1 }$ are not optimized in the inversion. b Methane lifetime against oxidation by tropospheric OH, computed as the ratio between the total atmospheric mass of methane (including the stratosphere) and the annual loss rate from oxidation by OH in the troposphere. "
+        ],
+        "table_body": "<table><tr><td></td><td>Prior</td><td>Posterior</td></tr><tr><td>Mean emission (Tga-1)</td><td>548±10</td><td>546±2</td></tr><tr><td>Emission trend (% a-1)</td><td>0±0.1</td><td>0.84±0.04</td></tr><tr><td>Mean methane lifetime CH4 OH (a)b</td><td>10.6±1.1</td><td>10.8±0.4</td></tr><tr><td>OH trend (% a-1)</td><td>0±0.8</td><td>-0.2±0.8</td></tr></table>",
+        "bbox": [
+            85,
+            105,
+            467,
+            194
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            77,
+            337,
+            482,
+            473
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Figure 7c shows the attribution of the global increasing trend in emissions to individual source types, following the same assumption that was used in Fig. 5 to attribute emissions to source types. We further separate tropical and extratropical contributions. Boreal wetland trends cannot be constrained by our inversion effectively (no observations north of $6 0 ^ { \\circ } \\mathrm { N }$ ). $43 \\%$ of the $5 \\mathrm { T g } \\mathrm { a } ^ { - 1 }$ global emission trend found in the inversion for 2010–2015 is driven by wetlands (mainly tropical), $16 \\%$ by livestock, and $11 \\%$ by oil and gas. No source type shows a global decrease. Our source attribution of the methane trend is consistent with isotopic evidence, suggesting that the increase in methane over the past decade has been driven by biogenic sources outside the Arctic (Nisbet et al., 2016; Schwietzke et al., 2016; Schaefer et al., 2016), including tropical wetlands (McNorton et al., 2016). Worden et al. (2017) previously found a decrease in biomass burning from 2001–2007 to 2008–2014 but no significant change for the 2010–2015 period investigated here. Their argument that a decrease in the biomass burning emissions would have masked the effect of an increase in fossil fuel emissions on the isotope signature of methane would not apply for our time period. ",
+        "bbox": [
+            77,
+            476,
+            482,
+            808
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "3.3 Global methane budget and trends ",
+        "text_level": 1,
+        "bbox": [
+            78,
+            826,
+            363,
+            840
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "The previous sections showed that our inversion of the GOSAT data is able to provide relatively fine information on the spatial distribution of methane emissions $( \\mathrm { D O F S } = 1 2 8 )$ ) as well as some information on the spatial distribution of ",
+        "bbox": [
+            75,
+            857,
+            482,
+            918
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/1bd2e6b1956b90bc5a3a9d1dfd20d85a84c08f898dc090c8cae32ac30f066a37.jpg",
+        "image_caption": [
+            "Figure 8. Constraints on the global 2010–2015 methane budget from our inversion of GOSAT data. The lines show the rows of the averaging kernel matrix $\\mathbf { A } _ { \\mathrm { r e d } }$ (Eq. 9) for the reduced four-element state vector consisting of the 2010–2015 mean emission, the linear emission trend, the 2010–2015 mean tropospheric OH concentration, and the linear OH trend. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            517,
+            81,
+            915,
+            317
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "2010–2015 emission trends $( \\mathrm { D O F S } = 7 $ ). This information on the spatial distribution originates from local and regional gradients of atmospheric methane observed by GOSAT. We now examine to what extent error correlations may limit our ability to independently quantify the global emission of methane, the global tropospheric OH concentrations, and their respective trends. ",
+        "bbox": [
+            515,
+            445,
+            921,
+            551
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "To analyze the constraints from the inversion on the global budget of methane, we collapse the inversion to the reduced four-member global state vector of 2010–2015 mean values described in Sect. 2.6 (global methane emission, global emission trend, global tropospheric OH concentration, global OH trend). We use normal errors for all state vector elements (using lognormal errors could bias the mean). Table 2 compares the prior and posterior values for this global budget. The uncertainty in global emissions and trends is likely underestimated because of the lack of prior error covariance assumed between the 1009 grid cells. The global mean tropospheric OH concentration is expressed in terms of the corresponding methane lifetime τ OHCH . Figure 8 shows the averaging kernel rows for this reduced global state vector $\\mathbf { A } _ { \\mathrm { r e d } }$ in Sect. 2.6), measuring the sensitivity of the inversion results to the true values (diagonal terms) and the aliasing due to error correlations (off-diagonal terms). We find that the mean 2010–2015 global methane emission and OH concentration are strongly and independently constrained, with averaging kernel sensitivities near unity and little error correlation. On the other hand, there is strong negative error correlation between emission trends and OH trends, and the OH trend can only be weakly constrained. This is illustrated further in Fig. 9 with the joint probability density function (pdf) plots of the posterior estimates, where the confidence levels measure the probability of a given value, and the tilts of the ellipses measure the error correlations. ",
+        "bbox": [
+            514,
+            555,
+            921,
+            917
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            77,
+            48,
+            110,
+            59
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            126,
+            47,
+            915,
+            62
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/f7f3dec8035311ef265dbdb9c5eb5743661352dca3ddec8ec8efdfd49a4f47d9.jpg",
+        "image_caption": [
+            "Figure 9. Joint probability density functions (pdfs) for the global methane budget as constrained by the 2010–2015 GOSAT data. Panel (a) shows the joint pdfs of the 2010–2015 global mean methane emission and methane lifetime against oxidation by tropospheric OH. Panel $\\mathbf { ( b ) }$ shows the joint pdfs of the 2010–2015 global emission trend and the OH trend. Contours show confidence ranges from 0.1 to 0.9. The error correlation coefficients are shown inset. The tilt of the ellipse indicates the extent of error correlation. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            210,
+            81,
+            783,
+            290
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            387,
+            480,
+            430
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "A major implication of being able to constrain the global methane emission and the global OH concentration independently is that satellite observations of atmospheric methane can provide an independent proxy for quantifying the global mean tropospheric OH concentration. Our posterior estimate of the methane lifetime τ OHCH is $1 0 . 8 { \\pm } 0 . 4 $ years. It is strongly constrained by the inversion, as shown by the averaging kernel sensitivity near unity, and is thus largely independent of the prior estimate of $1 0 . 6 { \\pm } 1 . 1$ years. So far the main method for estimating global OH has been through the methyl chloroform budget (Prather et al., 2012), but this is becoming problematic as methyl chloroform concentrations decrease, and previously minor potential sources like ocean outgassing may become significant (Wennberg et al., 2004; Liang et al., 2017). Satellite observations of methane could provide an alternative. Our inversion confirms the best estimate of global OH from the methyl chloroform budget (Prather et al., 2012) but reduces its uncertainty from $10 \\%$ to $4 \\%$ . The magnitude of reduction may be overoptimistic because of the idealized treatment of error statistics, the assumption that the global 3-D OH distribution in the forward model is correct, and the assumption that the minor sinks (Table 1) are correct. Zhang et al. (2018) present a more thorough error analysis of this potential of methane satellite observations as proxy for global OH concentrations. ",
+        "bbox": [
+            77,
+            435,
+            482,
+            811
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "We find on the other hand that there is large error correlation between our estimates of global 2010–2015 emission trends and OH trends and limited ability to constrain the OH trend. We find that most of the increase in methane is explained by increasing emissions. Our posterior estimates for the 2010–2015 trends are $+ 0 . 8 4 \\pm 0 . 0 4 \\% \\mathrm { { a } ^ { - 1 } }$ $4 . 6 \\pm$ ",
+        "bbox": [
+            77,
+            814,
+            482,
+            903
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "$0 . 2 \\mathrm { T g } \\mathrm { a } ^ { - 1 } ,$ for emissions and $- 0 . 2 \\pm 0 . 8 \\% \\mathrm { { a } } ^ { - 1 }$ $( - 1 . 0 \\pm$ $3 . 8 \\mathrm { T g } \\mathrm { a } ^ { - 1 } )$ for OH. The joint pdf in Fig. 9 illustrates the error correlation between the two. Other factors driving the 2010–2015 atmospheric methane trend are the initial imbalance in the 2010 budget, which we can derive from the posterior estimates of the mean 2010–2015 budget imbalance and trends, and the interannual variability of wetlands emissions as represented by WetCHARTS. Figure 10 shows the contributions of these different terms to the observed 2010–2015 methane growth. 2010 was a relatively high year for tropical wetlands emissions according to WetCHARTS, which acts to dampen the overall trend. We can state with some confidence that increasing tropical emissions (Fig. 7) made an important contribution to the 2010–2015 methane trend, but any conclusion about the effect of an OH trend is highly uncertain, including in its sign. Our 2010–2015 growth rate averages $6 . 8 \\mathrm { p p b a } ^ { - 1 }$ , compared to $7 . 3 \\mathrm { p p b a } ^ { - 1 }$ in the NOAA record (https://www.esrl.noaa.gov/gmd/ccgg/ trends_ch4/, last access: 27 April 2019). The increase in the NOAA record is higher because of especially strong growth in 2014 $( 1 2 . 8 \\mathrm { p p b } )$ , which is not fully captured by the linearized optimization used here. In our base inversion, this anomaly is explained by a reduced sink from OH. ",
+        "bbox": [
+            514,
+            387,
+            921,
+            735
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "4 Conclusions ",
+        "text_level": 1,
+        "bbox": [
+            515,
+            768,
+            626,
+            782
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "We used 2010–2015 observations of atmospheric methane columns from the GOSAT satellite instrument in a global inverse analysis to optimize a state vector including (1) mean 2010–2015 methane emissions on a $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid, (2) 2010– 2015 emission trends on that same grid, and (3) global mean tropospheric OH concentrations for individual years. Our work aimed to improve current understanding of global methane sources and the renewed growth in atmospheric methane over the past decade and to examine if satellite observations can independently constrain methane emissions and tropospheric OH, the main methane sink. ",
+        "bbox": [
+            515,
+            796,
+            921,
+            917
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7871 ",
+        "bbox": [
+            70,
+            47,
+            922,
+            62
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/b15dcd21e14edd53bfcc4e154b1f115abe2bdcfde75ab42ad82d33da746a5c4e.jpg",
+        "image_caption": [
+            "Figure 10. Attribution of the 2010–2015 increase in the atmospheric burden of methane. The grey bars show the trend imposed by the 2010 imbalance between sources and sinks combined with the interannual variability (IAV) of the prior estimate (mainly from wetlands). This trend decreases over the 2010–2015 period because the methane sink rises in response to the increasing methane concentration and also because wetland emissions in 2010 are higher than in other years. Purple and orange show the contributions of the 2010–2015 methane emission trends and OH trends. The apportionment of the emission trend by source region and source type is shown in Fig. 7. The OH trend has high uncertainty as discussed in the text. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            80,
+            82,
+            478,
+            335
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            552,
+            480,
+            597
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Our inversion used the GEOS-Chem chemical transport model as forward model to relate the state vector elements (1)–(3) to atmospheric methane columns. We fitted the model to the GOSAT observations by analytical solution of the Bayesian problem, including construction of the full Jacobian matrix. The analytical solution provides closedform characterization of errors and of the information content in the solution. This is critical for diagnosing the ability of the GOSAT observations to constrain emission trends and to achieve separate constraints on emissions and OH concentrations. It also allows us to easily generate an ensemble of inversions testing different assumptions. An analytical solution of the inverse problem generally requires normal prior error distributions, but we show here that it can be readily extended to lognormal prior error distributions by using a simple scaling of the original Jacobian matrix. ",
+        "bbox": [
+            77,
+            598,
+            482,
+            840
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Our optimization of mean 2010–2015 methane emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid achieves 128 degrees of information for signal (DOFS), with strong constraints in source regions. The EDGAR v4.3.2 anthropogenic emission inventory taken as default anthropogenic prior estimate in the inversion is too high in China (coal emissions) and in the Middle East (oil and gas emissions). Oil and gas national totals in EDGAR v4.3.2 can differ greatly from the values reported by individual countries to the United Nations Framework Convention on Climate Change (UNFCCC), and our inversion results are generally more consistent with the UNFCCC estimates. We find little correction to anthropogenic US emissions when a new gridded version of the US EPA greenhouse gas inventory is used as the anthropogenic prior estimate. Previous inverse studies that relied on the EDGAR v4.2 inventory as prior estimate found large underestimates of US emissions, but this may reflect errors in the spatial distribution of EDGAR v4.2 oil and gas emissions. ",
+        "bbox": [
+            77,
+            843,
+            482,
+            917
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            514,
+            80,
+            921,
+            276
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Optimization of methane emission trends over the 2010– 2015 period yields DOFS of 7 on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid, meaning that only strong source regions can be constrained. We find that the 2010–2015 increasing trend in atmospheric methane is mostly due to increasing emissions rather than decreasing OH concentrations. Most of the increase is in tropical wetlands, India, and China. Trends in North America and Europe are small. Our findings are consistent with isotopic constraints pointing to tropical biogenic sources as responsible for the renewed growth of methane over the past decade. ",
+        "bbox": [
+            514,
+            278,
+            921,
+            430
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "We further examined the ability of the GOSAT data to constrain the global methane emission and its trend over the 2010–2015 period independently of the global OH concentration and its trend. For this purpose we considered a reduced four-component state vector consisting of (1) the global mean methane emission for 2010–2015, (2) the global emission trend over that period, (3) the global mean OH concentration for 2010–2015, and (4) the global OH trend over that period. (1) and (2) were obtained by collapsing the inverse solutions for emissions on the $4 ^ { \\circ } \\times 5 ^ { \\circ }$ grid, so that the distributions of emissions and their trends are still optimized. Results show that the global methane emission $( 5 4 6 \\pm$ $2 \\mathrm { T g } \\mathrm { a } ^ { - 1 } .$ ) can be constrained independently of the global OH concentration (atmospheric methane lifetime against oxidation by tropospheric OH of $1 0 . 8 \\pm 0 . 4$ years), with little error correlation. This is because methane emissions and loss have different and separable signatures on atmospheric methane columns. An important implication is that satellite observations of atmospheric methane can serve as a useful proxy for the global OH concentration. In contrast, we find that errors on the 2010–2015 OH trends are strongly correlated with the stronger signal from emission trends. ",
+        "bbox": [
+            514,
+            431,
+            921,
+            764
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Satellite observations of atmospheric methane are expected to vastly improve in the near future with the launch of the TROPOMI instrument in October 2017, the advent of geostationary observations from the GeoCARB instrument to be launched in the early 2020s, and other instruments measuring methane on local to global scales (Jacob et al., 2016). Our work with the relatively sparse GOSAT data suggests that this future constellation of satellites will enable the mapping of emissions at fine scales. Satellite observations of methane could also provide an effective means for monitoring OH concentrations, replacing methyl chloroform whose ability to serve as an OH proxy is declining. ",
+        "bbox": [
+            514,
+            766,
+            921,
+            917
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            141,
+            47,
+            917,
+            62
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "discarded",
+        "text": "7872 ",
+        "bbox": [
+            77,
+            48,
+            110,
+            59
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            80,
+            484,
+            110
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Data availability. TCCON data were obtained from the TCCON data archive, hosted by CaltechDATA – https://tccondata.org/ (last access: 27 April 2019) (Strong et al., 2017; Wunch et al., 2015; Morino et al., 2014a, b; Wennberg et al., 2014a, b, 2016a, b; Iraci et al., 2016a, b; Kivi et al., 2014; Blumenstock et al., 2014; De Mazière et al., 2014; Dubey et al., 2014a, b; Te et al., 2014; Kawakami et al., 2014; Hase et al., 2014; Griffith et al., 2014a, b; Sherlock et al., 2014; Sussmann and Rettinger, 2014; Deutscher et al., 2014; Notholt et al., 2014; Warneke et al., 2014). ",
+        "bbox": [
+            75,
+            140,
+            484,
+            266
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            922,
+            955
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7873 ",
+        "bbox": [
+            73,
+            47,
+            924,
+            62
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Appendix A: Comparison of forward model simulations at $4 ^ { \\circ } \\times 5 ^ { \\circ }$ and $2 ^ { \\circ } \\times 2 . 5 ^ { \\circ }$ resolutions ",
+        "text_level": 1,
+        "bbox": [
+            75,
+            80,
+            480,
+            109
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Stanevich (2018) pointed out significant global meridional biases in the GEOS-Chem simulation of methane columns at $4 ^ { \\circ } \\times 5 ^ { \\circ }$ resolution relative to $2 ^ { \\circ } \\times 2 . 5 ^ { \\circ }$ , and they argued that $2 ^ { \\circ } \\times 2 . 5 ^ { \\circ }$ was much better for use in global inversions of methane sources. However, we find that most of the difference between the two resolutions is in the stratosphere, which we correct following Eq. (1). Figure A1 illustrates this point with the differences between the two resolutions averaged over latitudinal bands. Values are 2010–2015 means for the full column and for the tropospheric column only. There are large high-latitude biases for the total column, but these are mainly in the stratosphere. The tropospheric bias is less than $5 \\mathrm { p p b }$ at all latitudes. Results for individual seasons are similar. Buchwitz et al. (2015) consider that biases below $1 0 \\mathrm { p p }$ are acceptable in methane inversions. ",
+        "bbox": [
+            77,
+            123,
+            484,
+            351
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/1d7e010c981a3797ff8ad4f3e96a6a377524e8ee4d453b7cfc71a2820685e846.jpg",
+        "image_caption": [
+            "Figure A1. Difference between methane column concentrations simulated by GEOS-Chem at $4 ^ { \\circ } \\times 5 ^ { \\circ }$ versus $2 ^ { \\circ } \\times 2 . 5 ^ { \\circ }$ . Values are 2010–2015 averages over latitudinal bands for total atmospheric columns and tropospheric columns. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            208,
+            370,
+            786,
+            689
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "discarded",
+        "text": "7874 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            89,
+            47,
+            919,
+            62
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            77,
+            48,
+            110,
+            59
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Appendix B: Sensitivity to seasonal bias in prior emission estimates ",
+        "text_level": 1,
+        "bbox": [
+            75,
+            80,
+            425,
+            109
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The GEOS-Chem forward model simulation using prior emission estimates shows a seasonal background bias relative to GOSAT observations, for which we applied a latitudedependent correction (Sect. 2.3). This correction could mask a bias in the seasonality of prior emissions. We conducted an additional inversion in which we did not apply this seasonal correction and instead optimized emissions for individual seasons with no prior error correlation between seasons. This brings the total size of the state vector up to 5052, which challenges the power of the GOSAT observations to provide independent constraints. As shown in Fig. B1, the effective posterior / prior ratios found by summing the seasonal emissions are very similar to the ones from the base inversion. This indicates that the global pattern of scaling factors is not driven by corrections made to improve the seasonal agreement between the model and GOSAT. The effective scaling factors are smaller in magnitude and smoother than the previous results because fewer observations are available per state vector element, resulting in smoothing error (Turner and Jacob, 2015). ",
+        "bbox": [
+            77,
+            123,
+            484,
+            428
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/31a3b3cd52ecd6c36b03ad806f366cf36ed577866e213e69508b85f64b5a3ec1.jpg",
+        "image_caption": [
+            "Figure B1. Results from the seasonal inversion, showing effective posterior / prior scaling factors in the top panel and the seasonal scaling factors in the four bottom panels. "
+        ],
+        "image_footnote": [],
+        "bbox": [
+            208,
+            447,
+            788,
+            778
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            922,
+            955
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7875 ",
+        "bbox": [
+            75,
+            47,
+            922,
+            62
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Author contributions. JDM and DJJ designed the study. JDM performed the analysis. JDM, MPS, HN, and MH performed simulations and supporting simulations and analysis. JDM, DJJ, MPS, TRS, HN, JXS, YZ, MH, AAB, KWB, and JRW discussed the results. AAB provided the WetCHARTS emissions and supporting data. GJM provided guidance and supporting data on the EDGAR v4.3.2 emissions. RJP provided the GOSAT data and supporting guidance. JDM and DJJ wrote the paper, and all authors provided input on the paper for revision before submission. ",
+        "bbox": [
+            77,
+            81,
+            482,
+            206
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Competing interests. The authors declare that they have no conflict of interest. ",
+        "bbox": [
+            75,
+            238,
+            480,
+            264
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Acknowledgements. We thank the anonymous reviewers and Luke Western for their thorough comments. Robert J.Parker thanks the Japanese Aerospace Exploration Agency, National Institute for Environmental Studies, and the Ministry of Environment for the GOSAT data and their continuous support as part of the Joint Research Agreement. This research used the ALICE High Performance Computing Facility at the University of Leicester for the GOSAT retrievals. ",
+        "bbox": [
+            77,
+            295,
+            482,
+            406
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Financial support. This research was funded by the Carbon Monitoring System program of the NASA Earth Science Division. Part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration. Kevin W. Bowman acknowledges support from the NASA Carbon Monitoring System (NNH16ZDA001N-CMS). Robert J. Parker is funded by the UK National Centre for Earth Observation (NCEO grant no. nceo020005) and the ESA Greenhouse Gas Climate Change Initiative (GHG-CCI). ",
+        "bbox": [
+            77,
+            438,
+            482,
+            577
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Review statement. This paper was edited by Andreas Hofzumahaus and reviewed by two anonymous referees. ",
+        "bbox": [
+            75,
+            608,
+            482,
+            634
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "References ",
+        "text_level": 1,
+        "bbox": [
+            77,
+            680,
+            154,
+            695
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Alexe, M., Bergamaschi, P., Segers, A., Detmers, R., Butz, A., Hasekamp, O., Guerlet, S., Parker, R., Boesch, H., Frankenberg, C., Scheepmaker, R. A., Dlugokencky, E., Sweeney, C., Wofsy, S. C., and Kort, E. A.: Inverse modelling of CH4 emissions for 2010–2011 using different satellite retrieval products from GOSAT and SCIAMACHY, Atmos. Chem. Phys., 15, 113–133, https://doi.org/10.5194/acp-15-113-2015, 2015. Allan, W., Struthers, H., and Lowe, D.: Methane carbon isotope effects caused by atomic chlorine in the marine boundary layer: Global model results compared with Southern Hemisphere measurements, J. Geophys. Res.-Atmos., 112, D04306, https://doi.org/10.1029/2006JD007369, 2007. Alvarez, R. A., Zavala-Araiza, D., Lyon, D. R., Allen, D. T., Barkley, Z. R., Brandt, A. R., Davis, K. J., Herndon, S. C., Jacob, D. J., Karion, A., Kort, E. A., Lamb, B. K., Lau-",
+        "bbox": [
+            77,
+            708,
+            484,
+            917
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "vaux, T., Maasakkers, J. D., Marchese, A. J., Omara, M., Pacala, S. W., Peischl, J., Robinson, A. L., Shepson, P. B., Sweeney, C., Townsend-Small, A., Wofsy, S. C., and Hamburg, S. P.: Assessment of methane emissions from the U.S. oil and gas supply chain, Science, 361, 186–188, https://doi.org/10.1126/science.aar7204, 2018. Bader, W., Bovy, B., Conway, S., Strong, K., Smale, D., Turner, A. J., Blumenstock, T., Boone, C., Collaud Coen, M., Coulon, A., Garcia, O., Griffith, D. W. T., Hase, F., Hausmann, P., Jones, N., Krummel, P., Murata, I., Morino, I., Nakajima, H., O’Doherty, S., Paton-Walsh, C., Robinson, J., Sandrin, R., Schneider, M., Servais, C., Sussmann, R., and Mahieu, E.: The recent increase of atmospheric methane from 10 years of ground-based NDACC FTIR observations since 2005, Atmos. Chem. Phys., 17, 2255– 2277, https://doi.org/10.5194/acp-17-2255-2017, 2017. Bergamaschi, P., Frankenberg, C., Meirink, J. F., Krol, M., Dentener, F., Wagner, T., Platt, U., Kaplan, J. O., Körner, S., Heimann, M., Dlugokencky, E. J., and Goede, A.: Satellite chartography of atmospheric methane from SCIA-MACHY on board ENVISAT: 2. Evaluation based on inverse model simulations, J. Geophys. Res.-Atmos., 112, D02304, https://doi.org/10.1029/2006JD007268, 2007. Bloom, A. A., Bowman, K. W., Lee, M., Turner, A. J., Schroeder, R., Worden, J. R., Weidner, R., McDonald, K. C., and Jacob, D. J.: A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0), Geosci. Model Dev., 10, 2141–2156, https://doi.org/10.5194/gmd-10-2141-2017, 2017. Blumenstock, T., Hase, F., Schneider, M., Garcia, O. E., andv67 Sepulveda, E.: TCCON data from Izana (ES), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.izana01.R0/114929, 2014. Bosilovich, M. G., Lucchesi, R., and Suarez, M.: File Specification for MERRA-2. GMAO Office Note No. 9 (Version 1.1), 73 pp., available at: https://gmao.gsfc.nasa.gov/pubs/docs/ Bosilovich785.pdf (last access: 27 April 2019), 2016. Brasseur, G. and Jacob, D.: Mathematical Modeling of Atmospheric Chemistry, Cambridge University Press, https://doi.org/10.1017/9781316544754, 2017. Buchwitz, M., Reuter, M., Schneising, O., Boesch, H., Guerlet, S., Dils, B., Aben, I., Armante, R., Bergamaschi, P., Blumenstock, T., Bovensmann, H., Brunner, D., Buchmann, B., Burrows, J. P., Butz, A., Chédin, A., Chevallier, F., Crevoisier, C. D., Deutscher, N. M., Frankenberg, C., Hase, F., Hasekamp, O. P., Heymann, J., Kaminski, T., Laeng, A., Lichtenberg, G., De Mazière, M., Noël, S., Notholt, J., Orphal, J., Popp, C., Parker, R., Scholze, M., Sussmann, R., Stiller, G. P., Warneke, T., Zehner, C., Bril, A., Crisp, D., Griffith, D. W. T., Kuze, A., O’Dell, C., Oshchepkov, S., Sherlock, V., Suto, H., Wennberg, P., Wunch, D., Yokota, T., and Yoshida, Y.: Comparison and quality assessment of nearsurface-sensitive satellite-derived $\\mathrm { C O } _ { 2 }$ and $\\mathrm { C H } _ { 4 }$ global data sets, Remote Sens. Environ., 162, 344–362, 2015. Butz, A., Guerlet, S., Hasekamp, O., Schepers, D., Galli, A., Aben, I., Frankenberg, C., Hartmann, J.-M., Tran, H., and Kuze, A.: Toward accurate $\\mathrm { C O } _ { 2 }$ and $\\mathrm { C H } _ { 4 }$ observations from GOSAT, Geophys. Res. Lett., 38, L14812, https://doi.org/10.1029/2011GL047888, 2011. ",
+        "bbox": [
+            514,
+            34,
+            922,
+            891
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            941,
+            373,
+            955
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            114,
+            47,
+            919,
+            62
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            77,
+            48,
+            110,
+            59
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Calisesi, Y., Soebijanta, V. T., and van Oss Roeland: Regridding of remote soundings: Formulation and application to ozone profile comparison, J. Geophys. Res.-Atmos., 110, D23306, https://doi.org/10.1029/2005JD006122, 2005.   \nCressot, C., Chevallier, F., Bousquet, P., Crevoisier, C., Dlugokencky, E. J., Fortems-Cheiney, A., Frankenberg, C., Parker, R., Pison, I., Scheepmaker, R. A., Montzka, S. A., Krummel, P. B., Steele, L. P., and Langenfelds, R. L.: On the consistency between global and regional methane emissions inferred from SCIAMACHY, TANSO-FTS, IASI and surface measurements, Atmos. Chem. Phys., 14, 577–592, https://doi.org/10.5194/acp-14-577-2014, 2014.   \nDarmenov, A. and da Silva, A.: The quick fire emissions dataset (QFED)–documentation of versions 2.1, 2.2 and 2.4, NASA Technical Report Series on Global Modeling and Data Assimilation, NASA TM-2013-104606, 32, 183 pp., 2013.   \nDe Mazière, M., Sha, M. K., Desmet, F., Hermans, C., Scolas, F., Kumps, N., Metzger, J.-M., Duflot, V., and Cammas, J.-P.: TCCON data from Reunion Island (RE), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.reunion01.R0/1149288, 2014.   \nDeutscher, N. M., Notholt, J., Messerschmidt, J., Weinzierl, C., Warneke, T., Petri, C., Grupe, P., and Katrynski, K.: TCCON data from Bialystok (PL), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.bialystok01.R1/1183984, 2014.   \nDlugokencky, E. J., Nisbet, E. G., Fisher, R., and Lowry, D.: Global atmospheric methane: budget, changes and dangers, Philos. T. R. Soc. S.-A, 369, 2058–2072, 2011.   \nDubey, M., Henderson, B., Green, D., Butterfield, Z., Keppel-Aleks, G., Allen, N., Blavier, J.-F., Roehl, C., Wunch, D., and Lindenmaier, R.: TCCON data from Manaus (BR), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.manaus01.R0/1149274, 2014a.   \nDubey, M., Lindenmaier, R., Henderson, B., Green, D., Allen, N., Roehl, C., Blavier, J.-F., Butterfield, Z., Love, S., Hamelmann, J., and Wunch, D.: TCCON data from Four Corners (US), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.fourcorners01.R0/1149272, 2014b.   \nEIA: Shapefile for sedimentary basin boundaries in Lower 48 States, available at: http://eia.gov/maps/map_data/ SedimentaryBasins_US_EIA.zip (last access: 27 April 2019), 2016.   \nEtiope, G.: Natural Gas Seepage: The Earth’s Hydrocarbon Degassing, Springer, 2015.   \nEtiope, G. and Klusman, R. W.: Microseepage in drylands: flux and implications in the global atmospheric source/sink budget of methane, Global Planet. Change, 72, 265–274, 2010.   \nFranco, B., Mahieu, E., Emmons, L. K., Tzompa-Sosa, Z. A., Fischer, E. V., Sudo, K., Bovy, B., Conway, S., Griffin, D., Hannigan, J. W., Strong, K., and Walker, K. A.: Evaluating ethane and methane emissions associated with the development of oil and natural gas extraction in North America, Environ. Res. Lett., 11, 044010, https://doi.org/10.1088/1748-9326/11/4/044010, 2016.   \nFung, I., John, J., Lerner, J., Matthews, E., Prather, M., Steele, L., and Fraser, P.: Three-dimensional model synthesis of the global methane cycle, J. Geophys. Res.-Atmos., 96, 13033– 13065, 1991.   \nGanesan, A. L., Rigby, M., Lunt, M. F., Parker, R. J., Boesch, H., Goulding, N., Umezawa, T., Zahn, A., Chatterjee, A., Prinn, R. G., Tiwari, Y. K., van der Schoot, M., and Krummel, P. B.: Atmospheric observations show accurate reporting and little growth in India’s methane emissions, Nature Commun., 8, 836, https://doi.org/10.1038/s41467-017-00994-7, 2017.   \nGriffith, D. W., Deutscher, N. M., Velazco, V. A., Wennberg, P. O., Yavin, Y., Aleks, G. K., Washenfelder, R. a., Toon, G. C., Blavier, J.-F., Murphy, C., Jones, N., Kettlewell, G., Connor, B. J., Macatangay, R., Roehl, C., Ryczek, M., Glowacki, J., Culgan, T., and Bryant, G.: TCCON data from Darwin (AU), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.darwin01.R0/1149290, 2014a.   \nGriffith, D. W., Velazco, V. A., Deutscher, N. M., Murphy, C., Jones, N., Wilson, S., Macatangay, R., Kettlewell, G., Buchholz, R. R., and Riggenbach, M.: TC-CON data from Wollongong (AU), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.wollongong01.R0/114929 2014b.   \nHartmann, D. L., Tank, A. M. K., Rusticucci, M., Alexander, L. V., Brönnimann, S., Charabi, Y. A. R., Dentener, F. J., Dlugokencky, E. J., Easterling, D. R., Kaplan, A., Soden, B. J., Thorne, P. W., Wild, M., and Zhai, P. M.: Observations: atmosphere and surface, in: Climate Change 2013 the Physical Science Basis: Working Group I Contribution to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change, Cambridge University Press, 2013.   \nHase, F., Blumenstock, T., Dohe, S., Gross, J., and Kiel, M.: TCCON data from Karlsruhe (DE), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.karlsruhe01.R1/1182416, 2014.   \nHausmann, P., Sussmann, R., and Smale, D.: Contribution of oil and natural gas production to renewed increase in atmospheric methane (2007–2014): top–down estimate from ethane and methane column observations, Atmos. Chem. Phys., 16, 3227–3244, https://doi.org/10.5194/acp-16-3227-2016, 2016.   \nHeald, C. L., Jacob, D. J., Jones, D., Palmer, P. I., Logan, J. A., Streets, D., Sachse, G. W., Gille, J. C., Hoffman, R. N., and Nehrkorn, T.: Comparative inverse analysis of satellite (MO-PITT) and aircraft (TRACE-P) observations to estimate Asian sources of carbon monoxide, J. Geophys. Res.-Atmos., 109, D23306, https://doi.org/10.1029/2004JD005185, 2004.   \nHolmes, C. D., Prather, M. J., Søvde, O. A., and Myhre, G.: Future methane, hydroxyl, and their uncertainties: key climate and emission parameters for future predictions, Atmos. Chem. Phys., 13, 285–302, https://doi.org/10.5194/acp-13-285-2013, 2013.   \nHolmquist, J. R., Windham-Myers, L., Bliss, N., Crooks, S., Morris, J. T., Megonigal, J. P., Troxler, T., Weller, D., Callaway, J., Drexler, J., Ferner, M. C., Gonneea, M. E., Kroeger, K. D., Schile-Beers, L., Woo, I., Buffington, K., Breithaupt, J., Boyd, B. M., Brown, L. N., Dix, N., Hice, L., Horton, B. P., MacDonald, G. M., Moyer, R. P., Reay, W., Shaw, T., Smith, E., Smoak, J. M., Sommerfield, C., Thorne, K., Velinsky, D., Watson, E., Wilson Grimes, K., and Woodrey, M.: Accuracy and Precision of Tidal Wetland Soil Carbon Mapping in the Conterminous United States, Sci. Rep., 8, 9478, https://doi.org/10.1038/s41598-018- 26948-7, 2018.   \nHossaini, R., Chipperfield, M. P., Saiz-Lopez, A., Fernandez, R., Monks, S., Feng, W., Brauer, P., and von Glasow, R.: A global model of tropospheric chlorine chemistry: Organic versus inorganic sources and impact on methane oxidation, J. Geophys. Res.-Atmos., 121, 14271–14297, https://doi.org/10.1002/2016JD025756, 2016.   \nHouweling, S., Bergamaschi, P., Chevallier, F., Heimann, M., Kaminski, T., Krol, M., Michalak, A. M., and Patra, P.: Global inverse modeling of $\\mathrm { C H } _ { 4 }$ sources and sinks: an overview of methods, Atmos. Chem. Phys., 17, 235–256, https://doi.org/10.5194/acp-17-235-2017, 2017.   \nIPCC: Guidelines for National Greenhouse Gas Inventories, in: The National Greenhouse Gas Inventories Programme, edited by: Eggleston, H. S., Buendia, L., Miwa, K., Ngara, T., and Tanabe, K., Hayama, Kanagawa, Japan, 2006.   \nIraci, L. T., Podolske, J., Hillyard, P. W., Roehl, C., Wennberg, P. O., Blavier, J.-F., Allen, N., Wunch, D., Osterman, G. B., and Albertson, R.: TCCON data from Edwards (US), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.edwards01.R1/1255068, 2016a.   \nIraci, L. T., Podolske, J., Hillyard, P. W., Roehl, C., Wennberg, P. O., Blavier, J.-F., Landeros, J., Allen, N., Wunch, D., Zavaleta, J., Quigley, E., Osterman, G. B., Barrow, E., and Barney, J.: TCCON data from Indianapolis (US), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.indianapolis01.R1/1330094 2016b.   \nJacob, D. J., Turner, A. J., Maasakkers, J. D., Sheng, J., Sun, K., Liu, X., Chance, K., Aben, I., McKeever, J., and Frankenberg, C.: Satellite observations of atmospheric methane and their value for quantifying methane emissions, Atmos. Chem. Phys., 16, 14371–14396, https://doi.org/10.5194/acp-16-14371- 2016, 2016.   \nJanssens-Maenhout, G., Crippa, M., Guizzardi, D., Muntean, M., Schaaf, E., Dentener, F., Bergamaschi, P., Pagliari, V., Olivier, J., Peters, J., van Aardenne, J., Monni, S., Doering, U., Petrescu, R., Solazzo, E., and Oreggioni, G.: EDGAR v4.3.2 Global Atlas of the three major Greenhouse Gas Emissions for the period 1970–2012, Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2018-164, in review, 2019.   \nKawakami, S., Ohyama, H., Arai, K., Okumura, H., Taura, C., Fukamachi, T., and Sakashita, M.: TC-CON data from Saga (JP), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.saga01.R0/1149283, 2014.   \nKirschke, S., Bousquet, P., Ciais, P., Saunois, M., Canadell, J. G., Dlugokencky, E. J., Bergamaschi, P., Bergmann, D., Blake, D. R., and Bruhwiler, L.: Three decades of global methane sources and sinks, Nat. Geosci., 6, 813–823, 2013.   \nKivi, R., Heikkinen, P., and Kyrö, E.: TCCON data from Sodankyla (FI), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.sodankyla01.R0/114928 2014.   \nKuze, A., Suto, H., Shiomi, K., Kawakami, S., Tanaka, M., Ueda, Y., Deguchi, A., Yoshida, J., Yamamoto, Y., Kataoka, F., Taylor, T. E., and Buijs, H. L.: Update on GOSAT TANSO-FTS performance, operations, and data products after more than 6 years in space, Atmos. Meas. Tech., 9, 2445–2461, https://doi.org/10.5194/amt-9-2445-2016, 2016.   \nKvenvolden, K. A. and Rogers, B. W.: Gaia’s breath-global methane exhalations, Mar. Petrol. Geol., 22, 579–590, 2005.   \nLarsen, K., Delgado, M., and Marsters, P.: Untapped potential: Reducing global methane emissions from oil and natural gas systems, Rhodium Group, LLC, New York, NY, USA, 2015.   \nLehner, B. and Döll, P.: Development and validation of a global database of lakes, reservoirs and wetlands, J. Hydrol., 296, 1–22, 2004.   \nLiang, Q., Chipperfield, M. P., Fleming, E. L., Abraham, N. L., Braesicke, P., Burkholder, J. B., Daniel, J. S., Dhomse, S., Fraser, P. J., Hardiman, S. C., Jackman, C. H., Kinnison, D. E., Krummel, P. B., Montzka, S. A., Morgenstern, O., McCulloch, A., Mühle, J., Newman, P. A., Orkin, V. L., Pitari, G., Prinn, R. G., Rigby, M., Rozanov, E., Stenke, A., Tummon, F., Velders, G. J. M., Visioni, D., and Weiss, R. F.: Deriving Global OH Abundance and Atmospheric Lifetimes for Long-Lived Gases: A Search for CH3CCl3 Alternatives, J. Geophys. Res.-Atmos., 122, 11914–11933, https://doi.org/10.1002/2017JD026926, 2017.   \nLyon, D. R., Zavala-Araiza, D., Alvarez, R. A., Harriss, R., Palacios, V., Lan, X., Talbot, R., Lavoie, T., Shepson, P., and Yacovitch, T. I.: Constructing a spatially resolved methane emission inventory for the Barnett Shale region, Environ. Sci. Technol., 49, 8147–8157, 2015.   \nMaasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., and Schmeltz, R.: Gridded national inventory of US methane emissions, Environ. Sci. Technol., 50, 13123–13133, 2016.   \nMcNorton, J., Gloor, E., Wilson, C., Hayman, G. D., Gedney, N., Comyn-Platt, E., Marthews, T., Parker, R. J., Boesch, H., and Chipperfield, M. P.: Role of regional wetland emissions in atmospheric methane variability, Geophys. Res. Lett., 43, 11433– 11444, https://doi.org/10.1002/2016GL070649, 2016.   \nMcNorton, J., Wilson, C., Gloor, M., Parker, R. J., Boesch, H., Feng, W., Hossaini, R., and Chipperfield, M. P.: Attribution of recent increases in atmospheric methane through 3- D inverse modelling, Atmos. Chem. Phys., 18, 18149–18168, https://doi.org/10.5194/acp-18-18149-2018, 2018.   \nMiller, S. M., Wofsy, S. C., Michalak, A. M., Kort, E. A., Andrews, A. E., Biraud, S. C., Dlugokencky, E. J., Eluszkiewicz, J., Fischer, M. L., Janssens-Maenhout, G., Miller, B. R., Miller, J. B., Montzka, S. A., Nehrkorn, T., and Sweeney, C.: Anthropogenic emissions of methane in the United States, P. Natl. Acad. Sci. USA, 110, 20018–20022, https://doi.org/10.1073/pnas.1314392110, 2013.   \nMiller, S. M., Michalak, A. M., and Levi, P. J.: Atmospheric inverse modeling with known physical bounds: an example from trace gas emissions, Geosci. Model Dev., 7, 303–315, https://doi.org/10.5194/gmd-7-303-2014, 2014.   \nMiller, S. M., Michalak, A. M., Detmers, R. G., Hasekamp, O. P., Bruhwiler, L. M., and Schwietzke, S.: China’s coal mine methane regulations have not curbed growing emissions, Nat. Commun., 10, 303, https://doi.org/10.1038/s41467-018-07891-7, 2019.   \nMonteil, G., Houweling, S., Butz, A., Guerlet, S., Schepers, D., Hasekamp, O., Frankenberg, C., Scheepmaker, R., Aben, I., and Röckmann, T.: Comparison of $\\mathrm { C H } _ { 4 }$ inversions based on 15 months of GOSAT and SCIAMACHY observations, J. Geophys. Res.-Atmos., 118, 11807–11823, https://doi.org/10.1002/2013JD019760, 2013.   \nMorino, I., Matsuzaki, T., and Shishime, A.: TCCON data from Tsukuba (JP), 125HR, Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.tsukuba02.R1/1241486, 2014a.   \nMorino, I., Yokozeki, N., Matzuzaki, T., and Horikawa, M.: TCCON data from Rikubetsu (JP), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.rikubetsu01.R1/1242265, 2014b.   \nMurray, L. T., Jacob, D. J., Logan, J. A., Hudman, R. C., and Koshak, W. J.: Optimized regional and interannual variability of lightning in a global chemical transport model constrained by LIS/OTD satellite data, J. Geophys. Res.-Atmos., 117, D20307, https://doi.org/10.1029/2012JD017934, 2012.   \nNaik, V., Voulgarakis, A., Fiore, A. M., Horowitz, L. W., Lamarque, J.-F., Lin, M., Prather, M. J., Young, P. J., Bergmann, D., Cameron-Smith, P. J., Cionni, I., Collins, W. J., Dalsøren, S. B., Doherty, R., Eyring, V., Faluvegi, G., Folberth, G. A., Josse, B., Lee, Y. H., MacKenzie, I. A., Nagashima, T., van Noije, T. P. C., Plummer, D. A., Righi, M., Rumbold, S. T., Skeie, R., Shindell, D. T., Stevenson, D. S., Strode, S., Sudo, K., Szopa, S., and Zeng, G.: Preindustrial to present-day changes in tropospheric hydroxyl radical and methane lifetime from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP), Atmos. Chem. Phys., 13, 5277–5298, https://doi.org/10.5194/acp-13-5277-2013, 2013.   \nNaus, S., Montzka, S. A., Pandey, S., Basu, S., Dlugokencky, E. J., and Krol, M.: Constraints and biases in a tropospheric two-box model of OH, Atmos. Chem. Phys., 19, 407–424, https://doi.org/10.5194/acp-19-407-2019, 2019.   \nNisbet, E., Dlugokencky, E., Manning, M., Lowry, D., Fisher, R., France, J., Michel, S., Miller, J., White, J., Vaughn, B., Bousquet, P., Pyle, J. A., Warwick, N. J., Cain, M., Brownlow, R., Zazzeri, G., Lanoisellé, M., Manning, A. C., Gloor, E., Worthy, D. E. J., Brunke, E.-G., Labuschagne, C., Wolff, E. W., and Ganesan, A. L.: Rising atmospheric methane: 2007–2014 growth and isotopic shift, Global Biogeochem. Cy., 30, 1356–1370, 2016.   \nNotholt, J., Petri, C., Warneke, T., Deutscher, N. M., Buschmann, M., Weinzierl, C., Macatangay, R., and Grupe, P.: TCCON data from Bremen (DE), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.bremen01.R0/1149275, 2014.   \nPandey, S., Houweling, S., Krol, M., Aben, I., Chevallier, F., Dlugokencky, E. J., Gatti, L. V., Gloor, E., Miller, J. B., Detmers, R., Machida, T., and Röckmann, T.: Inverse modeling of GOSAT-retrieved ratios of total column $\\mathrm { C H } _ { 4 }$ and $\\mathrm { C O } _ { 2 }$ for 2009 and 2010, Atmos. Chem. Phys., 16, 5043–5062, https://doi.org/10.5194/acp-16-5043-2016, 2016.   \nPandey, S., Houweling, S., Krol, M., Aben, I., Monteil, G., Nechita-Banda, N., Dlugokencky, E. J., Detmers, R., Hasekamp, O., Xu, X., Riley, W. J., Poulter, B., Zhang, Z., McDonald, K. C., White, J. W. C., Bousquet, P., and Röckmann, T.: Enhanced methane emissions from tropical wetlands during the 2011 La Niña, Sci. Rep., 7, 45759, https://doi.org/10.1038/srep45759, 2017.   \nParker, R., Boesch, H., Cogan, A., Fraser, A., Feng, L., Palmer, P. I., Messerschmidt, J., Deutscher, N., Griffith, D. W., and Notholt, J.: Methane observations from the Greenhouse Gases Observing SATellite: Comparison to ground-based TCCON data and model calculations, Geophys. Res. Lett., 38, L15807, https://doi.org/10.1029/2011GL047871, 2011.   \nParker, R. J., Boesch, H., Byckling, K., Webb, A. J., Palmer, P. I., Feng, L., Bergamaschi, P., Chevallier, F., Notholt, J., Deutscher, N., Warneke, T., Hase, F., Sussmann, R., Kawakami, S., Kivi, R., Griffith, D. W. T., and Velazco, V.: Assessing 5 years of GOSAT Proxy $\\mathrm { X C H } _ { 4 }$ data and associated uncertainties, Atmos. Meas. Tech., 8, 4785–4801, https://doi.org/10.5194/amt-8-4785-2015, 2015.   \nPatra, P. K., Houweling, S., Krol, M., Bousquet, P., Belikov, D., Bergmann, D., Bian, H., Cameron-Smith, P., Chipperfield, M. P., Corbin, K., Fortems-Cheiney, A., Fraser, A., Gloor, E., Hess, P., Ito, A., Kawa, S. R., Law, R. M., Loh, Z., Maksyutov, S., Meng, L., Palmer, P. I., Prinn, R. G., Rigby, M., Saito, R., and Wilson, C.: TransCom model simulations of $\\mathrm { C H } _ { 4 }$ and related species: linking transport, surface flux and chemical loss with $\\mathrm { C H } _ { 4 }$ variability in the troposphere and lower stratosphere, Atmos. Chem. Phys., 11, 12813–12837, https://doi.org/10.5194/acp-11-12813- 2011, 2011.   \nPeng, S., Piao, S., Bousquet, P., Ciais, P., Li, B., Lin, X., Tao, S., Wang, Z., Zhang, Y., and Zhou, F.: Inventory of anthropogenic methane emissions in mainland China from 1980 to 2010, Atmos. Chem. Phys., 16, 14545-14562, https://doi.org/10.5194/acp-16-14545-2016, 2016.   \nPetrenko, V. V., Smith, A. M., Schaefer, H., Riedel, K., Brook, E., Baggenstos, D., Harth, C., Hua, Q., Buizert, C., Schilt, A., Fain, X., Mitchell, L., Bauska, T., Orsi, A., Weiss, R. F., and Severinghaus, J. P.: Minimal geological methane emissions during the Younger Dryas–Preboreal abrupt warming event, Nature, 548, 443–446, 2017.   \nPrather, M. J., Holmes, C. D., and Hsu, J.: Reactive greenhouse gas scenarios: Systematic exploration of uncertainties and the role of atmospheric chemistry, Geophys. Res. Lett., 39, L09803, https://doi.org/10.1029/2012GL051440, 2012.   \nRidgwell, A. J., Marshall, S. J., and Gregson, K.: Consumption of atmospheric methane by soils: A process-based model, Global Biogeochem. Cy., 13, 59–70, 1999.   \nRigby, M., Montzka, S. A., Prinn, R. G., White, J. W., Young, D., O’Doherty, S., Lunt, M. F., Ganesan, A. L., Manning, A. J., Simmonds, P. G., Salameh, P. K., Harth, C. M., Mühle, J., Weiss, R. F., Fraser, P. J., Steele, L. P., Krummel, P. B., McCulloch, A., and Park, S.: Role of atmospheric oxidation in recent methane growth, P. Natl. Acad. Sci. USA, 114, 5373–5377, 2017.   \nRodgers, C. D.: Inverse methods for atmospheric sounding: theory and practice, Series on Atmospheric Oceanic and Planetary Physics, vol. 2, World scientific, 256 pp., 2000.   \nSaad, K. M., Wunch, D., Deutscher, N. M., Griffith, D. W. T., Hase, F., De Mazière, M., Notholt, J., Pollard, D. F., Roehl, C. M., Schneider, M., Sussmann, R., Warneke, T., and Wennberg, P. O.: Seasonal variability of stratospheric methane: implications for constraining tropospheric methane budgets using total column observations, Atmos. Chem. Phys., 16, 14003–14024, https://doi.org/10.5194/acp-16-14003-2016, 2016.   \nSaunois, M., Bousquet, P., Poulter, B., Peregon, A., Ciais, P., Canadell, J. G., Dlugokencky, E. J., Etiope, G., Bastviken, D., Houweling, S., Janssens-Maenhout, G., Tubiello, F. N., Castaldi, S., Jackson, R. B., Alexe, M., Arora, V. K., Beerling, D. J., Bergamaschi, P., Blake, D. R., Brailsford, G., Brovkin, V., Bruhwiler, L., Crevoisier, C., Crill, P., Covey, K., Curry, C., Frankenberg, C., Gedney, N., Höglund-Isaksson, L., Ishizawa, M., Ito, A., Joos, F., Kim, H.-S., Kleinen, T., Krummel, P., Lamarque, J.-F., Langenfelds, R., Locatelli, R., Machida, T., Maksyutov, S., McDonald, K. C., Marshall, J., Melton, J. R., Morino, I., Naik, V., O’Doherty, S., Parmentier, F.-J. W., Patra, P. K., Peng, C., Peng, S., Peters, G. P., Pison, I., Prigent, C., Prinn, R., Ramonet, M., Riley, W. J., Saito, M., Santini, M., Schroeder, R., Simpson, I. J., Spahni, R., Steele, P., Takizawa, A., Thornton, B. F., Tian, H., Tohjima, Y., Viovy, N., Voulgarakis, A., van Weele, M., van der Werf, G. R., Weiss, R., Wiedinmyer, C., Wilton, D. J., Wiltshire, A., Worthy, D., Wunch, D., Xu, X., Yoshida, Y., Zhang, B., Zhang, Z., and Zhu, Q.: The global methane budget 2000–2012, Earth Syst. Sci. Data, 8, 697–751, https://doi.org/10.5194/essd-8-697-2016, 2016.   \nScarpelli, T., Jacob, D., Maasakkers, J. D., Sheng, J.-X., Rose, K., Sulprizio, M. P., and Worden, J.: A Global Gridded Inventory of Methane Emissions from Fuel Exploitation including Oil, Gas, and Coal, AGU 2018 Fall Meeting Abstract, 2018.   \nSchaefer, H., Fletcher, S. E. M., Veidt, C., Lassey, K. R., Brailsford, G. W., Bromley, T. M., Dlugokencky, E. J., Michel, S. E., Miller, J. B., Levin, I., Lowe, D. C., Martin, R. J., Vaughn, B. H., and White, J. W. C.: A 21st-century shift from fossil-fuel to biogenic methane emissions indicated by $^ { 1 3 } \\mathrm { C H } _ { 4 }$ , Science, 352, 80– 84, https://doi.org/10.1126/science.aad2705, 2016.   \nSchwietzke, S., Sherwood, O. A., Bruhwiler, L. M., Miller, J. B., Etiope, G., Dlugokencky, E. J., Michel, S. E., Arling, V. A., Vaughn, B. H., White, J. W., and Tans, P. P.: Upward revision of global fossil fuel methane emissions based on isotope database, Nature, 538, 88–91, 2016.   \nSheng, J.-X., Jacob, D. J., Maasakkers, J. D., Sulprizio, M. P., Zavala-Araiza, D., and Hamburg, S. P.: A high-resolution $( 0 . 1 ^ { \\circ } \\times$ $0 . 1 ^ { \\circ } )$ inventory of methane emissions from Canadian and Mexican oil and gas systems, Atmos. Environ., 158, 211–215, 2017.   \nSheng, J.-X., Jacob, D. J., Turner, A. J., Maasakkers, J. D., Benmergui, J., Bloom, A. A., Arndt, C., Gautam, R., Zavala-Araiza, D., Boesch, H., and Parker, R. J.: 2010–2016 methane trends over Canada, the United States, and Mexico observed by the GOSAT satellite: contributions from different source sectors, Atmos. Chem. Phys., 18, 12257–12267, https://doi.org/10.5194/acp-18- 12257-2018, 2018a.   \nSheng, J.-X., Jacob, D. J., Turner, A. J., Maasakkers, J. D., Sulprizio, M. P., Bloom, A. A., Andrews, A. E., and Wunch, D.: High-resolution inversion of methane emissions in the Southeast US using SEAC4RS aircraft observations of atmospheric methane: anthropogenic and wetland sources, Atmos. Chem. Phys., 18, 6483–6491, https://doi.org/10.5194/acp-18- 6483-2018, 2018b.   \nSherlock, V., Connor, B. J., Robinson, J., Shiona, H., Smale, D., and Pollard, D.: TCCON data from Lauder (NZ), 120HR, Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.lauder01.R0/1149293, 2014.   \nSherwen, T., Schmidt, J. A., Evans, M. J., Carpenter, L. J., Groß- mann, K., Eastham, S. D., Jacob, D. J., Dix, B., Koenig, T. K., Sinreich, R., Ortega, I., Volkamer, R., Saiz-Lopez, A., Prados-Roman, C., Mahajan, A. S., and Ordóñez, C.: Global impacts of tropospheric halogens (Cl, Br, I) on oxidants and composition in GEOS-Chem, Atmos. Chem. Phys., 16, 12239–12271, https://doi.org/10.5194/acp-16-12239-2016, 2016.   \nStanevich, I.: Variational data assimilation of satellite remote sensing observations for improving methane simulations in chemical transport models, PhD thesis, University of Toronto, 2018.   \nStocker, T. F., Qin, D., Plattner, G.-K., Tignor, M., Allen, S. K., Boschung, J., Nauels, A., Xia, Y., Bex, V., and Midgley, P. M.: Climate Change 2013: The Physical Science Basis, Contribution of Working Group I to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change, 1535 pp., 2013.   \nStrong, K., Mendonca, J., Weaver, D., Fogal, P., Drummond, J., Batchelor, R., and Lindenmaier, R.: TC-CON data from Eureka (CA), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.eureka01.R1/1325515, 2017.   \nSussmann, R. and Rettinger, M.: TCCON data from Garmisch (DE), Release GGG2014R0, TC-CON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.garmisch01.R0/1149299, 2014.   \nTe, Y., Jeseck, P., and Janssen, C.: TCCON data from Paris (FR), Release GGG2014R0, TC-CON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.paris01.R0/1149279, 2014.   \nThompson, R. L., Stohl, A., Zhou, L. X., Dlugokencky, E., Fukuyama, Y., Tohjima, Y., Kim, S.-Y., Lee, H., Nisbet, E. G., Fisher, R. E., Lowry, D., Weiss, R. F., Prinn, R. G., O’Doherty, S., Young, D., and White, J. W. C.: Methane emissions in East Asia for 2000–2011 estimated using an atmospheric Bayesian inversion, J. Geophys. Res.-Atmos., 120, 4352–4369, https://doi.org/10.1002/2014JD022394, 2015.   \nThompson, R. L., Nisbet, E. G., Pisso, I., Stohl, A., Blake, D., Dlugokencky, E. J., Helmig, D., and White, J. W. C.: Variability in Atmospheric Methane From Fossil Fuel and Microbial Sources Over the Last Three Decades, Geophys. Res. Lett., 45, 11499– 11508, https://doi.org/10.1029/2018GL078127, 2018.   \nTurner, A. J. and Jacob, D. J.: Balancing aggregation and smoothing errors in inverse models, Atmos. Chem. Phys., 15, 7039–7048, https://doi.org/10.5194/acp-15-7039-2015, 2015.   \nTurner, A. J., Jacob, D. J., Wecht, K. J., Maasakkers, J. D., Lundgren, E., Andrews, A. E., Biraud, S. C., Boesch, H., Bowman, K. W., Deutscher, N. M., Dubey, M. K., Griffith, D. W. T., Hase, F., Kuze, A., Notholt, J., Ohyama, H., Parker, R., Payne, V. H., Sussmann, R., Sweeney, C., Velazco, V. A., Warneke, T., Wennberg, P. O., and Wunch, D.: Estimating global and North American methane emissions with high spatial resolution using GOSAT satellite data, Atmos. Chem. Phys., 15, 7049–7069, https://doi.org/10.5194/acp-15-7049-2015, 2015.   \nTurner, A. J., Jacob, D. J., Benmergui, J., Wofsy, S. C., Maasakkers, J. D., Butz, A., Hasekamp, O., and Biraud, S. C.: A large increase in U.S. methane emissions over the past decade inferred from satellite data and surface observations, Geophys. Res. Lett., 43, 2218–2224, https://doi.org/10.1002/2016GL067987, 2016.   \nTurner, A. J., Frankenberg, C., Wennberg, P. O., and Jacob, D. J.: Ambiguity in the causes for decadal trends in atmospheric methane and hydroxyl, P. Natl. Acad. Sci. USA, 114, 5367–5372, 2017.   \nUNFCCC: United Nations Framework Convention on Climate Change: Greenhouse Gas Inventory Data, available at: https://unfccc.int/process/transparency-and-reporting/ greenhouse-gas-data/ghg-data-unfccc (last access: 27 April 2019), 2017.   \nWang, X., Jacob, D. J., Eastham, S. D., Sulprizio, M. P., Zhu, L., Chen, Q., Alexander, B., Sherwen, T., Evans, M. J., Lee, B. H., Haskins, J. D., Lopez-Hilfiker, F. D., Thornton, J. A., Huey, G. L., and Liao, H.: The role of chlorine in global tropospheric chemistry, Atmos. Chem. Phys., 19, 3981–4003, https://doi.org/10.5194/acp-19-3981-2019, 2019.   \nWarneke, T., Messerschmidt, J., Notholt, J., Weinzierl, C., Deutscher, N. M., Petri, C., Grupe, P., Vuillemin, C., Truong, F., Schmidt, M., Ramonet, M., and Parmentier, E.: TCCON data from Orléans (FR), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.orleans01.R0/1149276, 2014.   \nWecht, K. J., Jacob, D. J., Frankenberg, C., Jiang, Z., and Blake, D. R.: Mapping of North American methane emissions with high spatial resolution by inversion of SCIAMACHY satellite data, J. Geophys. Res.-Atmos., 119, 7741–7756, 2014.   \nWennberg, P. O., Peacock, S., Randerson, J. T., and Bleck, R.: Recent changes in the air-sea gas exchange of methyl chloroform, Geophys. Res. Lett., 31, L16112, https://doi.org/10.1029/2004GL020476, 2004.   \nWennberg, P. O., Roehl, C., Wunch, D., Toon, G. C., Blavier, J.-F., Washenfelder, R. a., Keppel-Aleks, G., Allen, N., and Ayers, J.: TCCON data from Park Falls (US), Release GGG2014R0, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.parkfalls01.R0/1149161, 2014a.   \nWennberg, P. O., Wunch, D., Roehl, C., Blavier, J.-F., Toon, G. C., and Allen, N.: TCCON data from Caltech (US), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.pasadena01.R1/1182415, 2014b.   \nWennberg, P. O., Roehl, C., Blavier, J.-F., Wunch, D., Landeros, J., and Allen, N.: TCCON data from Jet Propulsion Laboratory (US), 2011, Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.jpl02.R1/1330096, 2016a.   \nWennberg, P. O., Wunch, D., Roehl, C., Blavier, J.-F., Toon, G. C., Allen, N., Dowell, P., Teske, K., Martin, C., and Martin, J.: TCCON data from Lamont (US), Release GGG2014R1, TCCON data archive, hosted by CaltechDATA, https://doi.org/10.14291/tccon.ggg2014.lamont01.R1/1255070, 2016b.   \nWofsy, S. C.: HIAPER Pole-to-Pole Observations (HIPPO): finegrained, global-scale measurements of climatically important atmospheric gases and aerosols, Philos. T. R. Soc. S.-A, 369, 2073–2086, 2011.   \nWorden, J. R., Bloom, A. A., Pandey, S., Jiang, Z., Worden, H. M., Walker, T. W., Houweling, S., and Röckmann, T.: Reduced biomass burning emissions reconcile conflicting estimates of the post-2006 atmospheric methane budget, Nat. Commun., 8, 2227, https://doi.org/10.1038/s41467-017-02246-0, 2017.   \nWunch, D., Toon, G. C., Blavier, J.-F. L., Washenfelder, R. A., Notholt, J., Connor, B. J., Griffith, D. W., Sherlock, V., and Wennberg, P. O.: The total carbon column observing network, Philos. T. R. Soc. S.-A, 369, 2087–2112, 2011.   \nWunch, D., Toon, G. C., Sherlock, V., Deutscher, N. M., Liu, C., Feist, D. G., and Wennberg, P. O.: The Total Carbon Column Observing Network’s GGG2014 Data Version, Tech. rep., California Institute of Technology, Pasadena, CA, https://doi.org/10.14291/tccon.ggg2014.documentation.R0/1221662, 2015.   \nZavala-Araiza, D., Lyon, D. R., Alvarez, R. A., Davis, K. J., Harriss, R., Herndon, S. C., Karion, A., Kort, E. A., Lamb, B. K., Lan, X., Marchese, A. J., Pacala, S. W., Robinson, A. L., Shepson, P. B., Sweeney, C., Talbot, R., Townsend-Small, A., Yacovitch, T. I., Zimmerle, D. J., and Hamburg, S. P.: Reconciling divergent estimates of oil and gas methane emissions, P. Natl. Acad. Sci. USA, 112, 15597–15602, https://doi.org/10.1073/pnas.1522126112, 2015.   \nZhang, B., Tian, H., Ren, W., Tao, B., Lu, C., Yang, J., Banger, K., and Pan, S.: Methane emissions from global rice fields: Magnitude, spatiotemporal patterns, and environmental controls, Global Biogeochem. Cy., 30, 1246–1263, 2016.   \nZhang, Y., Jacob, D. J., Maasakkers, J. D., Sulprizio, M. P., Sheng, J.-X., Gautam, R., and Worden, J.: Monitoring global tropospheric OH concentrations using satellite observations of atmospheric methane, Atmos. Chem. Phys., 18, 15959–15973, https://doi.org/10.5194/acp-18-15959-2018, 2018. ",
+        "bbox": [
+            72,
+            42,
+            495,
+            901
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            512,
+            58,
+            932,
+            905
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7877 ",
+        "bbox": [
+            72,
+            47,
+            909,
+            62
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            885,
+            48,
+            921,
+            59
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            73,
+            52,
+            499,
+            907
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            509,
+            58,
+            922,
+            899
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "discarded",
+        "text": "7878 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            70,
+            47,
+            924,
+            62
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            941,
+            373,
+            955
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            73,
+            57,
+            484,
+            901
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            512,
+            75,
+            922,
+            903
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            626,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7879 ",
+        "bbox": [
+            72,
+            47,
+            910,
+            62
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            885,
+            48,
+            921,
+            59
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            76,
+            485,
+            908
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            512,
+            47,
+            924,
+            896
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            625,
+            942,
+            921,
+            955
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            77,
+            942,
+            373,
+            955
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "discarded",
+        "text": "7880 J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations ",
+        "bbox": [
+            63,
+            47,
+            922,
+            62
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            75,
+            81,
+            484,
+            811
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            512,
+            76,
+            947,
+            667
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "discarded",
+        "text": "Atmos. Chem. Phys., 19, 7859–7881, 2019 ",
+        "bbox": [
+            625,
+            942,
+            922,
+            955
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "discarded",
+        "text": "www.atmos-chem-phys.net/19/7859/2019/ ",
+        "bbox": [
+            77,
+            942,
+            371,
+            955
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "discarded",
+        "text": "J. D. Maasakkers et al.: Global distribution of methane emissions, emission trends, and OH concentrations 7881 ",
+        "bbox": [
+            72,
+            47,
+            919,
+            62
+        ],
+        "page_idx": 22
+    }
+]

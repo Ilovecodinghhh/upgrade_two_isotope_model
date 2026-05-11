@@ -1,0 +1,135 @@
+[
+    {
+        "type": "text",
+        "text": "Supplement of ",
+        "bbox": [
+            89,
+            209,
+            245,
+            232
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Constraints and biases in a tropospheric two-box model of OH ",
+        "text_level": 1,
+        "bbox": [
+            84,
+            246,
+            790,
+            270
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Stijn Naus et al. ",
+        "bbox": [
+            88,
+            285,
+            199,
+            300
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Correspondence to: Stijn Naus (stijn.naus $@$ wur.nl) ",
+        "bbox": [
+            88,
+            315,
+            423,
+            330
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "• acp-19-407-2019-supplement-title-page.pdf ",
+        "bbox": [
+            114,
+            376,
+            416,
+            390
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "• Supplemental data ",
+        "bbox": [
+            114,
+            401,
+            251,
+            415
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "– OH anomalies.xlsx   \n– Supplemental data; CH4 and MCF averages.xlsx   \n– Supplements.aux   \n– Supplements.bbl   \n– Supplements.blg   \n– Supplements.log   \n– Supplements.out   \n– Supplements.pdf   \n– Supplements.tex   \n– Supplements.zip   \n– appendix \\* MCF_latitude_1990_2015.pdf $^ *$ MCF_vertical_1990_2015.pdf \\* OH_latitude.pdf \\* OH_seasonal.pdf \\* OH_vertical.pdf \\* kih_all_comp.png \\* nudge_nonudge_obs_comparison.pdf \\* nudged_emissions.pdf \\* rr_full.pdf \\* rr_k_ch4.pdf \\* rr_k_mcf.pdf \\* rr_koh.pdf \\* rr_oh_ch4.pdf \\* rr_oh_mcf.pdf   \n– copernicus.bst   \n– copernicus.cfg   \n– copernicus.cls   \n– data \\* Supplemental data; CH4 and MCF averages.xlsx   \n– mybib.bib   \n– natbib.sty   \n– oh_anomalies.csv   \n– oh_anomalies.xlsx   \n– pdfscreen.sty   \n– texput.log ",
+        "bbox": [
+            147,
+            421,
+            488,
+            887
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Atmospheric Chemistry and Physics ",
+        "bbox": [
+            647,
+            56,
+            911,
+            122
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "",
+        "bbox": [
+            88,
+            121,
+            158,
+            141
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "discarded",
+        "text": "Supplement of Atmos. Chem. Phys., 19, 407–424, 2019 https://doi.org/10.5194/acp-19-407-2019-supplement $©$ Author(s) 2019. This work is distributed under the Creative Commons Attribution 4.0 License. ",
+        "bbox": [
+            88,
+            58,
+            454,
+            117
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            147,
+            58,
+            516,
+            275
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The copyright of individual parts of the supplement might differ from the CC BY 4.0 License. ",
+        "bbox": [
+            84,
+            286,
+            702,
+            303
+        ],
+        "page_idx": 1
+    }
+]
