@@ -197,7 +197,7 @@
 | 1999–2006 (high KIE, EXP3) | −54.64 ± 0.20 | −5.70 ± 0.05 | He et al. (2026, JGR) EXP3 |
 | 2007–2017 (high KIE, EXP3) | −54.37 ± 0.24 | −5.57 ± 0.02 | He et al. (2026, JGR) EXP3 |
 
-**Key insight:** Switching from "medium" to "higher" OH–¹³C fractionation shifts the sink-weighted ε by ~0.6‰ — demonstrating the KIE sensitivity your Title 2 paper would quantify.
+**Key insight:** Switching from "medium" to "higher" OH–¹³C fractionation shifts the sink-weighted ε by ~0.6‰ 
 
 ---
 
@@ -228,7 +228,7 @@
 
 | Category | Density | Gap Description | Impact on Model |
 |---|---|---|---|
-| **δD source signatures (all categories)** | ★★☆☆☆ | Far fewer measurements than δ¹³C; large uncertainties (±30–130‰ in Thanwerdas) | **CRITICAL** — directly limits Title 1 (δD threshold) |
+| **δD source signatures (all categories)** | ★★☆☆☆ | Far fewer measurements than δ¹³C; large uncertainties (±30–130‰ in Thanwerdas) | **CRITICAL** —  (δD threshold) |
 | **Hemispheric δD observations** | ★☆☆☆☆ | No published NH/SH δD-CH₄ time series; relies on sparse station data | **CRITICAL** — limits 2-box δD validation |
 | **Soil sink KIE (both isotopes)** | ★★☆☆☆ | Single study (Snover & Quay 2000); ecosystem variability poorly characterized | Moderate — soil is only 6% of total sink |
 | **Stratospheric sink δD KIE** | ★★☆☆☆ | Ice core-based (Dyonisius 2020); Beck (2018); limited direct measurements | Moderate — strat is 7% of sink |
@@ -240,12 +240,12 @@
 
 ## Critical Uncertainties for Your Box Model
 
-1. **OH–¹³C KIE (1.0039 vs. 1.0054):** Single largest structural uncertainty. No new lab measurement since 2001. Your Title 2 directly addresses this.
+1. **OH–¹³C KIE (1.0039 vs. 1.0054):** Single largest structural uncertainty. No new lab measurement since 2001. 
 
 2. **Cl sink fraction (0.6% vs. 3.5%):** Factor of ~6 disagreement between Thanwerdas and your default. Cl has the largest δD KIE (α=1.52), so this massively affects the δD budget.
 
-3. **Microbial δD signatures:** Uncertainty of ±93–128‰ (Thanwerdas 2024) vs. your MC draws with σ≈7–8‰. This discrepancy is central to Title 1 — which uncertainty specification is correct?
+3. **Microbial δD signatures:** Uncertainty of ±93–128‰ (Thanwerdas 2024) vs. your MC draws with σ≈7–8‰. 
 
-4. **NH/SH δD gradient:** Your model assumes 6‰ offset (Riddell-Young 2025) but this has never been directly measured from hemispheric station data. A key testable prediction from Title 3.
+4. **NH/SH δD gradient:** Your model assumes 6‰ offset (Riddell-Young 2025) but this has never been directly measured from hemispheric station data.
 
 5. **Time-varying lifetime:** He 2026 suggests τ declining at 0.017 yr/yr since 2010, implying increasing OH. Most other studies assume constant. Major impact on trend attribution.
