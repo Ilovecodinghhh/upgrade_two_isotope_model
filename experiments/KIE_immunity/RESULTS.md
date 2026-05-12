@@ -238,6 +238,52 @@ not just source-signature separation.
 
 ---
 
+## Phase 12: EDGAR / CarbonTracker Validation
+
+**Question:** Is the negative FF trend consistent with bottom-up inventories?
+
+| Dataset | Post-2007 ΔFF (Tg/yr) | Absolute level (Tg/yr) |
+|---|---|---|
+| **This study** (dual real-hemi) | **−6.8** | ~50–60 |
+| CarbonTracker CH₄ (posterior) | +5.5 | ~130–155 |
+| EDGAR 8.0 (Coal+ONG) | +20.6 | ~80–115 |
+
+**Key observations:**
+1. **Absolute levels diverge** — our 2-box model gives FF ~50–60 Tg/yr vs
+   EDGAR ~80–115 and CarbonTracker ~130–155. This is expected: the 2-box
+   residual solver partitions total CH₄ differently from a full 3D inversion
+   or a process-based inventory. The models are not solving the same problem.
+2. **Trend directions disagree** — our model shows declining FF post-2007,
+   EDGAR shows +20.6 Tg/yr increase, CarbonTracker shows +5.5. This is the
+   core tension: if δD is genuinely constraining, either (a) bottom-up
+   inventories overestimate FF growth, or (b) the δD constraint is biased.
+3. **This is not necessarily a problem** — the isotope-based approach
+   partitions sources by isotopic signature, not by process category.
+   "Fossil-fuel" in our model means "isotopically FF-like", which may not
+   map exactly to EDGAR categories. Geological seepage, for example, is
+   isotopically FF-like but not in EDGAR.
+
+See `figures/fig_edgar_validation.png`.
+
+---
+
+## Phase 13: Summary Table
+
+All headline numbers with 95% bootstrap CIs (1000 resamples of 400 MC):
+
+| Config | σ(FF) (Tg/yr) | ΔFF trend (Tg/yr) | KIE% | Sig% |
+|---|---|---|---|---|
+| δ¹³C-only | 31.0 [28.8, 33.2] | +13.0 [+12.7, +13.3] | 11.1 [3.4, 17.4] | 82.6 [79.3, 85.1] |
+| Dual (offset) | 16.8 [14.8, 19.1] | −3.1 [−3.3, −2.7] | 0.0 [0.0, 0.8] | 0.0 [0.0, 0.0] |
+| **Dual (real hemi)** | **14.3 [13.3, 15.2]** | **−6.9 [−7.3, −6.4]** | **19.8 [4.3, 30.7]** | **42.8 [31.3, 52.3]** |
+| Basu et al. (2022, 3D) | — | — | — | — |
+
+*Basu KIE spread: 13.0 Tg/yr. Our KIE spread: 0.7–0.9 Tg/yr across all configs.*
+
+Exported as: `results/table1.tex` (LaTeX), `results/table1.csv`, `results/phase13_summary.json`.
+
+---
+
 ## Key Scientific Findings (Updated)
 
 ### 1. FF Trend Reversal is Robust — With One Caveat
@@ -313,13 +359,18 @@ experiments/KIE_immunity/
 │   ├── phase7_Cl_sensitivity.py       ← Cl fraction + variance decomp
 │   ├── phase8_robustness_matrix.py    ← 18-cell combined matrix
 │   ├── phase9_bootstrap_variance.py   ← bootstrap CIs
-│   └── phase11_tau_ex.py              ← IH exchange sensitivity
+│   ├── phase11_tau_ex.py              ← IH exchange sensitivity
+│   ├── phase12_edgar_validation.py    ← bottom-up comparison
+│   └── phase13_summary_table.py       ← summary table generator
 ├── figures/
 │   ├── fig_kie_immunity.py
 │   ├── fig_kie_immunity.png
 │   ├── fig_variance_v2.py             ← 3-panel publication figure
 │   ├── fig_variance_v2.png
-│   └── fig_variance_v2.pdf
+│   ├── fig_variance_v2.pdf
+│   ├── fig_edgar_validation.py        ← EDGAR comparison figure
+│   ├── fig_edgar_validation.png
+│   └── fig_edgar_validation.pdf
 └── results/
     ├── variance_decomposition.json       (v1)
     ├── variance_decomposition_v2.json    (v2)
@@ -330,5 +381,9 @@ experiments/KIE_immunity/
     ├── phase7_Cl_sensitivity.json
     ├── phase8_robustness_matrix.json
     ├── phase9_bootstrap.json
-    └── phase11_tau_ex.json
+    ├── phase11_tau_ex.json
+    ├── phase12_edgar.json
+    ├── phase13_summary.json
+    ├── table1.tex
+    └── table1.csv
 ```
