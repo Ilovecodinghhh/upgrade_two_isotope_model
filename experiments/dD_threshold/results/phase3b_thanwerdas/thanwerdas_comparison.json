@@ -1,11 +1,11 @@
 {
   "our_uncertainties": {
-    "CI": 54.39205070672561,
-    "improvement_pct": 46.27981252687154
+    "CI": 43.515807357774825,
+    "improvement_pct": 57.02170999382542
   },
   "thanwerdas_uncertainties": {
-    "CI": 271.5854967171015,
-    "improvement_pct": -168.23080963228676
+    "CI": 253.5123659488433,
+    "improvement_pct": -150.38092236967717
   },
   "d13C_reference": {
     "CI": 101.25067179620925

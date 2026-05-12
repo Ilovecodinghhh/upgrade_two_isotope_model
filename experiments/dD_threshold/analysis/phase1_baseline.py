@@ -27,7 +27,8 @@ from common import (
     ModelConfig, QualityMonitor, load_data,
     sample_KIE, compute_bulk_KIE, compute_lifetime,
     delta_to_fraction_d13C, delta_to_fraction_dD,
-    sample_source_signatures, sample_atm_d13C, sample_atm_dD,
+    sample_source_signatures, sample_source_signatures_hemi,
+    sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
     smooth_5yr, pad_to_length,
     SINK_FRACTIONS_GLOBAL, SINK_FRACTIONS_NH, SINK_FRACTIONS_SH,
     PT, PT_HEMI, LIFETIME_RATIO_NH, LIFETIME_RATIO_SH,
@@ -224,16 +225,14 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
             d13C_src_NH[j] = (n13_NH1 - n13_NH + n13_NH * a13_NH / tau_NH[j] - ex13_NH) / S_NH[j]
             d13C_src_SH[j] = (n13_SH1 - n13_SH + n13_SH * a13_SH / tau_SH[j] - ex13_SH) / S_SH[j]
         
-        sigs = sample_source_signatures(rng, data, k, n)
+        sigs = sample_source_signatures_hemi(rng, data, k, n)
         f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
         f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
         f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
         
         if mode == "dual":
-            # Also compute δD
-            dD_glob_MC = sample_atm_dD(data, k, n)
-            dD_NH_MC = dD_glob_MC - DD_IH_OFFSET
-            dD_SH_MC = dD_glob_MC + DD_IH_OFFSET
+            # Also compute δD — use real hemispheric data
+            dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
             fD_NH_atm = delta_to_fraction_dD(dD_NH_MC)
             fD_SH_atm = delta_to_fraction_dD(dD_SH_MC)
             
@@ -248,19 +247,23 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
                 dD_src_NH[j] = (nD_NH1 - nD_NH + nD_NH * aD_NH / tau_NH[j] - exD_NH) / S_NH[j]
                 dD_src_SH[j] = (nD_SH1 - nD_SH + nD_SH * aD_SH / tau_SH[j] - exD_SH) / S_SH[j]
             
-            fD_bb = delta_to_fraction_dD(sigs['bb_dD'])
-            fD_ff = delta_to_fraction_dD(sigs['ff_dD'])
-            fD_mic = delta_to_fraction_dD(sigs['mic_dD'])
+            # Hemispheric δD source signatures
+            fD_bb_NH = delta_to_fraction_dD(sigs['bb_dD_NH'])
+            fD_ff_NH = delta_to_fraction_dD(sigs['ff_dD_NH'])
+            fD_mic_NH = delta_to_fraction_dD(sigs['mic_dD_NH'])
+            fD_bb_SH = delta_to_fraction_dD(sigs['bb_dD_SH'])
+            fD_ff_SH = delta_to_fraction_dD(sigs['ff_dD_SH'])
+            fD_mic_SH = delta_to_fraction_dD(sigs['mic_dD_SH'])
             
             for j in range(n):
-                A = np.array([
+                # NH
+                A_nh = np.array([
                     [1.0, 1.0, 1.0],
                     [f13_bb[j], f13_ff[j], f13_mic[j]],
-                    [fD_bb[j], fD_ff[j], fD_mic[j]],
+                    [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]],
                 ])
-                # NH
                 B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
-                A_w = W_NH @ A; B_w = W_NH @ B_nh
+                A_w = W_NH @ A_nh; B_w = W_NH @ B_nh
                 try:
                     res = lsq_linear(A_w, B_w, bounds=(0, S_NH[j]*1.5))
                     x = res.x
@@ -269,8 +272,13 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
                 BB_NH_comp[j,k] = x[0]; FF_NH_comp[j,k] = x[1]; Mic_NH_comp[j,k] = x[2]
                 
                 # SH
+                A_sh = np.array([
+                    [1.0, 1.0, 1.0],
+                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]],
+                ])
                 B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
-                A_w = W_SH @ A; B_w = W_SH @ B_sh
+                A_w = W_SH @ A_sh; B_w = W_SH @ B_sh
                 try:
                     res = lsq_linear(A_w, B_w, bounds=(0, S_SH[j]*1.5))
                     x = res.x

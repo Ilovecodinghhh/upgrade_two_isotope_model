@@ -29,6 +29,8 @@ from common import (
     PT, PT_HEMI, LIFETIME_RATIO_NH, LIFETIME_RATIO_SH,
     DD_IH_OFFSET, TAU_EX_MEAN, TAU_EX_STD,
     BB_NH_FRACTION, BB_SH_FRACTION,
+    sample_source_signatures, sample_source_signatures_hemi,
+    sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
 )
 
 OUT_DIR = Path(__file__).resolve().parent.parent / "results" / "phase3_threshold"
@@ -44,6 +46,9 @@ def inflate_dD_uncertainty(sigs, rng, multiplier, year_idx):
     
     The original MC draw has σ ≈ 7-8‰ for Mic_dD; we inflate to simulate
     the larger uncertainties used by Thanwerdas et al. (±128‰).
+    
+    Handles both global keys (mic_dD, ff_dD, bb_dD) and hemispheric keys
+    (mic_dD_NH, mic_dD_SH, etc.) when present.
     """
     if multiplier <= 1.0:
         return sigs
@@ -55,9 +60,16 @@ def inflate_dD_uncertainty(sigs, rng, multiplier, year_idx):
     extra_bb = rng.normal() * 7.09 * (multiplier - 1)
     
     sigs_new = dict(sigs)
+    # Global keys
     sigs_new['mic_dD'] = sigs['mic_dD'] + extra_mic
     sigs_new['ff_dD'] = sigs['ff_dD'] + extra_ff
     sigs_new['bb_dD'] = sigs['bb_dD'] + extra_bb
+    # Hemispheric keys (same perturbation applied to both NH and SH)
+    for hemi in ('NH', 'SH'):
+        for src, extra in [('mic_dD', extra_mic), ('ff_dD', extra_ff), ('bb_dD', extra_bb)]:
+            key = f'{src}_{hemi}'
+            if key in sigs:
+                sigs_new[key] = sigs[key] + extra
     return sigs_new
 
 
@@ -125,7 +137,7 @@ def run_twobox_with_inflation(data, multiplier, n_iter=500, seed=42, mode="dual"
             d13C_src_NH[j] = (n13_NH1-n13_NH + n13_NH*a13_NH/tau_NH[j] - ex13_NH)/S_NH[j]
             d13C_src_SH[j] = (n13_SH1-n13_SH + n13_SH*a13_SH/tau_SH[j] - ex13_SH)/S_SH[j]
         
-        sigs = sample_source_signatures(rng, data, k, n)
+        sigs = sample_source_signatures_hemi(rng, data, k, n)
         
         # INFLATE δD uncertainty
         if multiplier > 1.0 and mode == "dual":
@@ -136,9 +148,7 @@ def run_twobox_with_inflation(data, multiplier, n_iter=500, seed=42, mode="dual"
         f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
         
         if mode == "dual":
-            dD_glob = sample_atm_dD(data, k, n)
-            dD_NH_MC = dD_glob - DD_IH_OFFSET
-            dD_SH_MC = dD_glob + DD_IH_OFFSET
+            dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
             fD_NH_atm = delta_to_fraction_dD(dD_NH_MC)
             fD_SH_atm = delta_to_fraction_dD(dD_SH_MC)
             
@@ -152,26 +162,35 @@ def run_twobox_with_inflation(data, multiplier, n_iter=500, seed=42, mode="dual"
                 dD_src_NH[j] = (nD_NH1-nD_NH + nD_NH*aD_NH/tau_NH[j] - exD_NH)/S_NH[j]
                 dD_src_SH[j] = (nD_SH1-nD_SH + nD_SH*aD_SH/tau_SH[j] - exD_SH)/S_SH[j]
             
-            fD_bb = delta_to_fraction_dD(sigs['bb_dD'])
-            fD_ff = delta_to_fraction_dD(sigs['ff_dD'])
-            fD_mic = delta_to_fraction_dD(sigs['mic_dD'])
+            # Hemispheric δD source signatures
+            fD_bb_NH = delta_to_fraction_dD(sigs['bb_dD_NH'])
+            fD_ff_NH = delta_to_fraction_dD(sigs['ff_dD_NH'])
+            fD_mic_NH = delta_to_fraction_dD(sigs['mic_dD_NH'])
+            fD_bb_SH = delta_to_fraction_dD(sigs['bb_dD_SH'])
+            fD_ff_SH = delta_to_fraction_dD(sigs['ff_dD_SH'])
+            fD_mic_SH = delta_to_fraction_dD(sigs['mic_dD_SH'])
             
             for j in range(n):
-                A = np.array([
+                A_nh = np.array([
                     [1.0, 1.0, 1.0],
                     [f13_bb[j], f13_ff[j], f13_mic[j]],
-                    [fD_bb[j], fD_ff[j], fD_mic[j]],
+                    [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]],
                 ])
                 B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
                 try:
-                    res = lsq_linear(W_NH @ A, W_NH @ B_nh, bounds=(0, S_NH[j]*1.5))
+                    res = lsq_linear(W_NH @ A_nh, W_NH @ B_nh, bounds=(0, S_NH[j]*1.5))
                     x = res.x
                 except: x = np.array([np.nan]*3)
                 FF_NH[j,k] = x[1]; Mic_NH[j,k] = x[2]
                 
+                A_sh = np.array([
+                    [1.0, 1.0, 1.0],
+                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]],
+                ])
                 B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
                 try:
-                    res = lsq_linear(W_SH @ A, W_SH @ B_sh, bounds=(0, S_SH[j]*1.5))
+                    res = lsq_linear(W_SH @ A_sh, W_SH @ B_sh, bounds=(0, S_SH[j]*1.5))
                     x = res.x
                 except: x = np.array([np.nan]*3)
                 FF_SH[j,k] = x[1]; Mic_SH[j,k] = x[2]

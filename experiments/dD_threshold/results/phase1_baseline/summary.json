@@ -1,8 +1,8 @@
 {
   "onebox_dual": {
-    "FF_mean": 43.08797438847959,
-    "FF_95CI_width_mean": 201.3056354968011,
-    "FF_95CI_width_2007_2022": 206.66349639624045
+    "FF_mean": 46.26138418360375,
+    "FF_95CI_width_mean": 201.5431445181898,
+    "FF_95CI_width_2007_2022": 207.01504956063334
   },
   "onebox_d13C_only": {
     "FF_mean": 177.0620174706022,
@@ -10,15 +10,15 @@
     "FF_95CI_width_2007_2022": 104.06504808181224
   },
   "twobox_dual": {
-    "FF_mean": 52.89172811432827,
-    "FF_95CI_width_mean": 46.617138030203456,
-    "FF_95CI_width_2007_2022": 52.79102229529397
+    "FF_mean": 53.331722757987485,
+    "FF_95CI_width_mean": 42.29849778437682,
+    "FF_95CI_width_2007_2022": 43.225385031209605
   },
   "twobox_d13C_only": {
     "FF_mean": 179.36285261069793,
     "FF_95CI_width_mean": 96.6062122903859,
     "FF_95CI_width_2007_2022": 99.00152159877649
   },
-  "onebox_improvement_pct": -98.3,
-  "twobox_improvement_pct": 51.7
+  "onebox_improvement_pct": -98.5,
+  "twobox_improvement_pct": 56.2
 }
