@@ -3,20 +3,18 @@
 """
 variance_decomposition.py — Decompose FF uncertainty into its sources
 ======================================================================
+v2: Uses REAL hemispheric δD observations and source signatures
+    instead of the DD_IH_OFFSET = ±6‰ hack.
 
-For each (model × isotope mode) configuration, run with:
-  - All sources varied → variance_total
-  - KIE fixed → variance_minus_KIE
-  - Source signatures fixed → variance_minus_sigs
-  - Lifetime fixed → variance_minus_tau
+Compares three configurations:
+  1. δ¹³C-only (2-box, BB-fixed)
+  2. Dual-isotope with OLD δD hemispheric data (±6‰ offset hack)
+  3. Dual-isotope with REAL hemispheric δD (station-level MC + gridded sigs)
 
-Then attribution:
-  KIE contribution = variance_total − variance_minus_KIE
-  Sig contribution = variance_total − variance_minus_sigs
-  τ   contribution = variance_total − variance_minus_tau
-
-Key paper claim: In δ¹³C-only, KIE dominates (>50% of variance).
-                  In dual-isotope, KIE shrinks to a minor contributor.
+For each config, decomposes FF variance by:
+  - Fixing KIE → measure KIE contribution
+  - Fixing source signatures → measure sig contribution
+  - Fixing lifetime → measure τ contribution
 """
 
 import sys
@@ -31,7 +29,8 @@ sys.path.insert(0, str(REPO_ROOT))
 from common import (
     load_data, sample_KIE, compute_bulk_KIE, compute_lifetime,
     delta_to_fraction_d13C, delta_to_fraction_dD,
-    sample_source_signatures, sample_atm_d13C, sample_atm_dD,
+    sample_source_signatures, sample_source_signatures_hemi,
+    sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
     smooth_5yr,
     SINK_FRACTIONS_NH, SINK_FRACTIONS_SH,
     PT_HEMI, LIFETIME_RATIO_NH, LIFETIME_RATIO_SH,
@@ -44,8 +43,15 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def run_2box(data, mode, n_iter, seed,
-             fix_kie=False, fix_sigs=False, fix_tau=False):
-    """Run 2-box with selectable randomness sources."""
+             fix_kie=False, fix_sigs=False, fix_tau=False,
+             use_real_hemi_dD=False):
+    """
+    Run 2-box model with selectable randomness sources.
+    
+    mode: "d13C_only" or "dual"
+    use_real_hemi_dD: if True and mode=="dual", use real hemispheric δD
+                       instead of global ± offset
+    """
     rng = np.random.default_rng(seed)
     n = data.n_years
     years = data.model_years
@@ -53,7 +59,7 @@ def run_2box(data, mode, n_iter, seed,
     c13_NH, c13_SH = data.c13_NH, data.c13_SH
     c13_glob = data.c13_global
     
-    # Lifetime (vary or fix)
+    # Lifetime
     if fix_tau:
         tau_global = compute_lifetime(years, "fixed", 9.0)
     else:
@@ -67,7 +73,7 @@ def run_2box(data, mode, n_iter, seed,
     FF_G = np.zeros((n, n_iter))
     W = np.diag([100.0, 1.0, 0.5]) if mode == "dual" else None
     
-    # Fixed-value placeholders if fix_kie/fix_sigs
+    # Pre-compute fixed values if needed
     if fix_kie:
         kie_fixed = {'OH_13C': 0.5*(1.0039+1.0054),
                      'OH_D': 0.5*(1.294+1.327),
@@ -75,9 +81,11 @@ def run_2box(data, mode, n_iter, seed,
                      'Strat_13C': 1.003, 'Strat_D': 1.050,
                      'Soil_13C': 1.0201, 'Soil_D': 1.103}
     if fix_sigs:
-        # Use means from CSVs (call once with seed=0 and take iter 0)
         rng_tmp = np.random.default_rng(0)
-        sigs_fixed = sample_source_signatures(rng_tmp, data, 0, n)
+        if use_real_hemi_dD:
+            sigs_fixed = sample_source_signatures_hemi(rng_tmp, data, 0, n)
+        else:
+            sigs_fixed = sample_source_signatures(rng_tmp, data, 0, n)
     
     for k in range(n_iter):
         tau_ex = TAU_EX_MEAN if fix_tau else max(0.5, rng.normal(TAU_EX_MEAN, TAU_EX_STD))
@@ -92,6 +100,7 @@ def run_2box(data, mode, n_iter, seed,
         a13_NH, aD_NH = 1.0/K13_NH, 1.0/KD_NH
         a13_SH, aD_SH = 1.0/K13_SH, 1.0/KD_SH
         
+        # Total source strength
         S_NH = np.zeros(n); S_SH = np.zeros(n)
         for i in range(n):
             M_NH = CH4_NH[i]*PT_HEMI; M_NH1 = CH4_NH[i+1]*PT_HEMI
@@ -100,6 +109,7 @@ def run_2box(data, mode, n_iter, seed,
             S_NH[i] = (M_NH1-M_NH) + M_NH/tau_NH[i] - ex_NH
             S_SH[i] = (M_SH1-M_SH) + M_SH/tau_SH[i] - ex_SH
         
+        # δ¹³C source composition
         d13C_glob = sample_atm_d13C(data, k, n)
         nc = min(len(c13_glob), n+1)
         d13C_off = d13C_glob[:nc] - c13_glob[:nc]
@@ -118,15 +128,39 @@ def run_2box(data, mode, n_iter, seed,
             d13C_src_NH[j] = (n13_NH1-n13_NH + n13_NH*a13_NH/tau_NH[j] - ex13_NH)/S_NH[j]
             d13C_src_SH[j] = (n13_SH1-n13_SH + n13_SH*a13_SH/tau_SH[j] - ex13_SH)/S_SH[j]
         
-        sigs = sigs_fixed if fix_sigs else sample_source_signatures(rng, data, k, n)
-        f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
-        f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
-        f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+        # Source signatures
+        if fix_sigs:
+            sigs = sigs_fixed
+        elif use_real_hemi_dD:
+            sigs = sample_source_signatures_hemi(rng, data, k, n)
+        else:
+            sigs = sample_source_signatures(rng, data, k, n)
+
+        # δ¹³C source signatures: hemispheric when available
+        if use_real_hemi_dD and 'ff_d13C_NH' in sigs:
+            f13_bb_NH  = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+            f13_ff_NH  = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+            f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+            f13_bb_SH  = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+            f13_ff_SH  = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+            f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
+        else:
+            f13_bb  = delta_to_fraction_d13C(sigs['bb_d13C'])
+            f13_ff  = delta_to_fraction_d13C(sigs['ff_d13C'])
+            f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+            f13_bb_NH = f13_bb_SH = f13_bb
+            f13_ff_NH = f13_ff_SH = f13_ff
+            f13_mic_NH = f13_mic_SH = f13_mic
         
         if mode == "dual":
-            dD_glob = sample_atm_dD(data, k, n)
-            dD_NH_MC = dD_glob - DD_IH_OFFSET
-            dD_SH_MC = dD_glob + DD_IH_OFFSET
+            # δD atmospheric observations
+            if use_real_hemi_dD:
+                dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
+            else:
+                dD_glob = sample_atm_dD(data, k, n)
+                dD_NH_MC = dD_glob - DD_IH_OFFSET
+                dD_SH_MC = dD_glob + DD_IH_OFFSET
+            
             fD_NH_atm = delta_to_fraction_dD(dD_NH_MC)
             fD_SH_atm = delta_to_fraction_dD(dD_SH_MC)
             
@@ -140,52 +174,70 @@ def run_2box(data, mode, n_iter, seed,
                 dD_src_NH[j] = (nD_NH1-nD_NH + nD_NH*aD_NH/tau_NH[j] - exD_NH)/S_NH[j]
                 dD_src_SH[j] = (nD_SH1-nD_SH + nD_SH*aD_SH/tau_SH[j] - exD_SH)/S_SH[j]
             
-            fD_bb = delta_to_fraction_dD(sigs['bb_dD'])
-            fD_ff = delta_to_fraction_dD(sigs['ff_dD'])
-            fD_mic = delta_to_fraction_dD(sigs['mic_dD'])
+            # δD source signatures — hemispheric or global
+            if use_real_hemi_dD:
+                fD_bb_NH = delta_to_fraction_dD(sigs['bb_dD_NH'])
+                fD_ff_NH = delta_to_fraction_dD(sigs['ff_dD_NH'])
+                fD_mic_NH = delta_to_fraction_dD(sigs['mic_dD_NH'])
+                fD_bb_SH = delta_to_fraction_dD(sigs['bb_dD_SH'])
+                fD_ff_SH = delta_to_fraction_dD(sigs['ff_dD_SH'])
+                fD_mic_SH = delta_to_fraction_dD(sigs['mic_dD_SH'])
+            else:
+                fD_bb = delta_to_fraction_dD(sigs['bb_dD'])
+                fD_ff = delta_to_fraction_dD(sigs['ff_dD'])
+                fD_mic = delta_to_fraction_dD(sigs['mic_dD'])
+                fD_bb_NH = fD_bb_SH = fD_bb
+                fD_ff_NH = fD_ff_SH = fD_ff
+                fD_mic_NH = fD_mic_SH = fD_mic
             
             for j in range(n):
-                A = np.array([
-                    [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
-                    [fD_bb[j], fD_ff[j], fD_mic[j]],
-                ])
-                for hemi, S, d13C_src, dD_src in [
-                    ('NH', S_NH[j], d13C_src_NH[j], dD_src_NH[j]),
-                    ('SH', S_SH[j], d13C_src_SH[j], dD_src_SH[j]),
-                ]:
+                for hemi_idx, (S, d13C_src, dD_src, f13_bb_h, f13_ff_h, f13_mic_h, fD_bb_h, fD_ff_h, fD_mic_h) in enumerate([
+                    (S_NH[j], d13C_src_NH[j], dD_src_NH[j],
+                     f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j],
+                     fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]),
+                    (S_SH[j], d13C_src_SH[j], dD_src_SH[j],
+                     f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j],
+                     fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]),
+                ]):
+                    A = np.array([
+                        [1.0, 1.0, 1.0],
+                        [f13_bb_h, f13_ff_h, f13_mic_h],
+                        [fD_bb_h, fD_ff_h, fD_mic_h],
+                    ])
                     B = np.array([S, S*d13C_src, S*dD_src])
                     try:
                         res = lsq_linear(W@A, W@B, bounds=(0, S*1.5))
                         FF_G[j,k] += res.x[1]
                     except: pass
         else:
+            # δ¹³C-only: BB fixed, solve for FF and Mic
             for j in range(n):
-                denom = f13_ff[j] - f13_mic[j]
-                if abs(denom) < 1e-15: continue
-                for S, d13C_src, BB in [
-                    (S_NH[j], d13C_src_NH[j], BB_NH),
-                    (S_SH[j], d13C_src_SH[j], BB_SH),
+                denom_NH = f13_ff_NH[j] - f13_mic_NH[j]
+                denom_SH = f13_ff_SH[j] - f13_mic_SH[j]
+                for S, d13C_src, BB, denom, f13_bb_h, f13_mic_h in [
+                    (S_NH[j], d13C_src_NH[j], BB_NH, denom_NH, f13_bb_NH[j], f13_mic_NH[j]),
+                    (S_SH[j], d13C_src_SH[j], BB_SH, denom_SH, f13_bb_SH[j], f13_mic_SH[j]),
                 ]:
+                    if abs(denom) < 1e-15: continue
                     S_rem = S - BB
-                    rhs = S*d13C_src - BB*f13_bb[j]
-                    ff = (rhs - S_rem*f13_mic[j]) / denom
+                    rhs = S*d13C_src - BB*f13_bb_h
+                    ff = (rhs - S_rem*f13_mic_h) / denom
                     FF_G[j,k] += max(0, min(ff, S*1.5))
     
     return FF_G
 
 
-def compute_var(data, mode, n_iter, seed, **flags):
+def compute_var(data, mode, n_iter, seed, use_real_hemi_dD=False, **flags):
     """Run and return mean post-2007 variance."""
-    FF = run_2box(data, mode, n_iter, seed, **flags)
+    FF = run_2box(data, mode, n_iter, seed,
+                  use_real_hemi_dD=use_real_hemi_dD, **flags)
     FF_s = smooth_5yr(FF)
-    # Average variance over post-2007 (smoothed window starts at index 8)
     return float(np.nanmean(np.nanvar(FF_s[8:], axis=1)))
 
 
 def main():
     print("="*70)
-    print("VARIANCE DECOMPOSITION: Source-of-uncertainty analysis")
+    print("VARIANCE DECOMPOSITION v2: Real hemispheric δD")
     print("="*70)
     
     data = load_data(REPO_ROOT, two_box=True)
@@ -194,15 +246,21 @@ def main():
     
     results = {}
     
-    for mode in ["d13C_only", "dual"]:
-        print(f"\n  Mode: {mode}")
+    configs = [
+        ("d13C_only", False),
+        ("dual_offset", False),     # Old: global δD ± 6‰
+        ("dual_real_hemi", True),   # New: real hemispheric δD
+    ]
+    
+    for label, use_real in configs:
+        mode = "d13C_only" if label == "d13C_only" else "dual"
+        print(f"\n  Config: {label} (mode={mode}, real_hemi={use_real})")
         
-        var_total = compute_var(data, mode, N, SEED)
-        var_no_kie = compute_var(data, mode, N, SEED, fix_kie=True)
-        var_no_sigs = compute_var(data, mode, N, SEED, fix_sigs=True)
-        var_no_tau = compute_var(data, mode, N, SEED, fix_tau=True)
+        var_total = compute_var(data, mode, N, SEED, use_real_hemi_dD=use_real)
+        var_no_kie = compute_var(data, mode, N, SEED, use_real_hemi_dD=use_real, fix_kie=True)
+        var_no_sigs = compute_var(data, mode, N, SEED, use_real_hemi_dD=use_real, fix_sigs=True)
+        var_no_tau = compute_var(data, mode, N, SEED, use_real_hemi_dD=use_real, fix_tau=True)
         
-        # Contributions = variance removed when that source is fixed
         kie_contrib = max(0, var_total - var_no_kie)
         sigs_contrib = max(0, var_total - var_no_sigs)
         tau_contrib = max(0, var_total - var_no_tau)
@@ -212,36 +270,65 @@ def main():
         if total < 1e-9:
             total = 1.0
         
-        print(f"    Total variance:    {var_total:8.1f} (Tg/yr)²")
+        sigma = np.sqrt(var_total)
+        print(f"    Total variance:    {var_total:8.1f} (Tg/yr)² → σ = {sigma:.1f} Tg/yr")
         print(f"    Fix KIE  → var =   {var_no_kie:8.1f}  (KIE contrib = {kie_contrib/total*100:.1f}%)")
         print(f"    Fix sigs → var =   {var_no_sigs:8.1f}  (Sig contrib = {sigs_contrib/total*100:.1f}%)")
         print(f"    Fix tau  → var =   {var_no_tau:8.1f}  (Tau contrib = {tau_contrib/total*100:.1f}%)")
         print(f"    Residual (atm + interaction): {residual/total*100:.1f}%")
         
-        results[mode] = {
+        results[label] = {
             'var_total': var_total,
+            'sigma': sigma,
             'kie_pct': kie_contrib/total*100,
             'sigs_pct': sigs_contrib/total*100,
             'tau_pct': tau_contrib/total*100,
             'residual_pct': residual/total*100,
         }
     
-    # Final comparison
+    # Comparison table
     print(f"\n{'='*70}")
-    print("KEY RESULT: KIE contribution to FF variance")
+    print("COMPARISON TABLE")
     print(f"{'='*70}")
-    print(f"  δ¹³C-only: KIE = {results['d13C_only']['kie_pct']:.1f}% of FF variance")
-    print(f"  Dual:      KIE = {results['dual']['kie_pct']:.1f}% of FF variance")
+    print(f"{'Config':<20} {'σ(FF)':>8} {'KIE%':>7} {'Sig%':>7} {'τ%':>7} {'Resid%':>7}")
+    print("-"*60)
+    for label in ['d13C_only', 'dual_offset', 'dual_real_hemi']:
+        r = results[label]
+        print(f"{label:<20} {r['sigma']:>7.1f}  {r['kie_pct']:>6.1f} {r['sigs_pct']:>7.1f} {r['tau_pct']:>6.1f} {r['residual_pct']:>7.1f}")
     
-    reduction = results['d13C_only']['kie_pct'] - results['dual']['kie_pct']
-    print(f"\n  → Dual isotopes reduce KIE's variance share by {reduction:.1f} pp")
+    # Key scientific findings
+    print(f"\n{'='*70}")
+    print("KEY FINDINGS")
+    print(f"{'='*70}")
     
-    if results['dual']['kie_pct'] < results['d13C_only']['kie_pct']:
-        print(f"  ✓ Confirms KIE immunity from dual-isotope constraint")
+    d13c = results['d13C_only']
+    old = results['dual_offset']
+    new = results['dual_real_hemi']
     
-    with open(OUT_DIR / "variance_decomposition.json", 'w') as f:
+    print(f"\n1. δ¹³C-only → dual (offset):  σ reduction = {d13c['sigma']:.1f} → {old['sigma']:.1f} Tg/yr ({(1-old['sigma']/d13c['sigma'])*100:.0f}%)")
+    print(f"2. δ¹³C-only → dual (real):    σ reduction = {d13c['sigma']:.1f} → {new['sigma']:.1f} Tg/yr ({(1-new['sigma']/d13c['sigma'])*100:.0f}%)")
+    print(f"3. dual (offset) → dual (real): σ change = {old['sigma']:.1f} → {new['sigma']:.1f} Tg/yr ({(new['sigma']/old['sigma']-1)*100:+.0f}%)")
+    
+    kie_reduction_offset = d13c['kie_pct'] - old['kie_pct']
+    kie_reduction_real = d13c['kie_pct'] - new['kie_pct']
+    print(f"\n4. KIE contribution: δ¹³C-only = {d13c['kie_pct']:.1f}% → offset = {old['kie_pct']:.1f}% → real = {new['kie_pct']:.1f}%")
+    
+    if new['sigma'] < old['sigma']:
+        print(f"\n✓ REAL hemispheric δD FURTHER reduces FF uncertainty!")
+        print(f"  This means the ±6‰ offset was too crude — real NH/SH δD")
+        print(f"  gradient (~15‰) provides stronger constraint.")
+    elif new['sigma'] > old['sigma'] * 1.1:
+        print(f"\n⚠ REAL hemispheric δD INCREASES FF uncertainty!")
+        print(f"  This means the ±6‰ offset was artificially constraining —")
+        print(f"  real NH/SH δD data introduce realistic scatter that the")
+        print(f"  crude offset suppressed. This is actually MORE HONEST.")
+    else:
+        print(f"\n≈ Real vs offset δD yield similar variance")
+        print(f"  The ±6‰ offset was a reasonable first-order approximation.")
+    
+    with open(OUT_DIR / "variance_decomposition_v2.json", 'w') as f:
         json.dump(results, f, indent=2, default=float)
-    print(f"\n  Saved: {OUT_DIR}/variance_decomposition.json")
+    print(f"\n  Saved: {OUT_DIR}/variance_decomposition_v2.json")
 
 
 if __name__ == "__main__":

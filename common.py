@@ -153,6 +153,44 @@ SINK_FRACTIONS_GLOBAL = {'OH': 0.835, 'Cl': 0.035, 'Strat': 0.070, 'Soil': 0.060
 SINK_FRACTIONS_NH = {'OH': 0.825, 'Cl': 0.040, 'Strat': 0.070, 'Soil': 0.065}
 SINK_FRACTIONS_SH = {'OH': 0.850, 'Cl': 0.028, 'Strat': 0.070, 'Soil': 0.052}
 
+# Three-box sink fractions (NHext / Trop / SHext)
+# NHext >30°N: more soil, less OH than tropics
+# Trop 30°S–30°N: dominant OH, less soil
+# SHext <30°S: less Cl, more strat
+SINK_FRACTIONS_NHEXT = {'OH': 0.810, 'Cl': 0.040, 'Strat': 0.080, 'Soil': 0.070}
+SINK_FRACTIONS_TROP  = {'OH': 0.860, 'Cl': 0.035, 'Strat': 0.055, 'Soil': 0.050}
+SINK_FRACTIONS_SHEXT = {'OH': 0.840, 'Cl': 0.025, 'Strat': 0.080, 'Soil': 0.055}
+
+# Three-box lifetime ratios (relative to global τ)
+# OH peaks in tropics → shorter lifetime; extratropics longer
+LIFETIME_RATIO_NHEXT = 1.05
+LIFETIME_RATIO_TROP  = 0.90
+LIFETIME_RATIO_SHEXT = 1.08
+
+# BB split across 3 boxes (GFED4 latitude fractions)
+BB_NHEXT_FRACTION = 0.30  # Boreal fires
+BB_TROP_FRACTION  = 0.55  # Tropical fires dominate
+BB_SHEXT_FRACTION = 0.15  # Southern Africa/Australia
+
+# Three-box CH₄ concentration fractions (fraction of global mean per box)
+# Based on NOAA latitudinal gradient: NH enriched, SH depleted
+CH4_NHEXT_OFFSET = 30.0   # ppb above global mean
+CH4_TROP_OFFSET  = 10.0   # ppb above global mean
+CH4_SHEXT_OFFSET = -25.0  # ppb below global mean
+
+# Three-box atmospheric mass fraction (proportional to surface area)
+# NHext (30–90°N): ~25%, Trop (30°S–30°N): ~50%, SHext (30–90°S): ~25%
+PT_NHEXT = PT * 0.25
+PT_TROP  = PT * 0.50
+PT_SHEXT = PT * 0.25
+
+# Interhemispheric exchange times for 3-box
+# NHext↔Trop exchange is faster than Trop↔SHext (ITCZ barrier)
+TAU_EX_NT_MEAN = 0.8   # years (NHext ↔ Trop)
+TAU_EX_NT_STD  = 0.1
+TAU_EX_TS_MEAN = 1.2   # years (Trop ↔ SHext)
+TAU_EX_TS_STD  = 0.1
+
 
 def compute_bulk_KIE(kies: dict, sink_fracs: dict):
     """Compute weighted-mean KIE for ¹³C and D from individual sink KIEs.
@@ -206,7 +244,7 @@ TAU_EX_MEAN = 1.0   # years
 TAU_EX_STD = 0.1
 
 # δD hemispheric offset (Riddell-Young 2025: NH ~12‰ lower than SH)
-DD_IH_OFFSET = 6.0  # ‰ — NH = global − 6, SH = global + 6
+DD_IH_OFFSET = 6.0  # ‰ — LEGACY: NH = global − 6, SH = global + 6 (unused when real hemi data loaded)
 
 # IH gradient in CH₄ concentration
 def compute_IH_gradient(n_points: int) -> np.ndarray:
@@ -331,10 +369,17 @@ class LoadedData:
 
     # δD annual global mean
     dD_global: np.ndarray = field(default_factory=lambda: np.array([]))
+    # δD hemispheric (NH/SH) — actual observations when available
+    dD_NH: Optional[np.ndarray] = None
+    dD_SH: Optional[np.ndarray] = None
 
     # MC iteration matrices (rows=years, cols=iterations)
     d13C_MC: np.ndarray = field(default_factory=lambda: np.array([]))
     dD_MC: np.ndarray = field(default_factory=lambda: np.array([]))
+    dD_NH_MC: Optional[np.ndarray] = None
+    dD_SH_MC: Optional[np.ndarray] = None
+    # δD data year range (may differ from CH₄/δ¹³C range of 1999–2022)
+    dD_start_year: int = 2005
 
     # Source signatures — central values + uncertainties
     ff_d13C: np.ndarray = field(default_factory=lambda: np.array([]))
@@ -355,27 +400,81 @@ class LoadedData:
     Mic_d13C_MC: Optional[pd.DataFrame] = None
     Mic_dD_MC: Optional[pd.DataFrame] = None
 
+    # Hemispheric δD source-signature MC matrices (rows=years, cols=1000 MC)
+    FF_dD_NH_MC: Optional[np.ndarray] = None
+    FF_dD_SH_MC: Optional[np.ndarray] = None
+    Mic_dD_NH_MC: Optional[np.ndarray] = None
+    Mic_dD_SH_MC: Optional[np.ndarray] = None
+    BB_dD_NH_MC: Optional[np.ndarray] = None
+    BB_dD_SH_MC: Optional[np.ndarray] = None
+
+    # Hemispheric δ¹³C source-signature MC matrices (rows=years, cols=1000 MC)
+    FF_d13C_NH_MC: Optional[np.ndarray] = None
+    FF_d13C_SH_MC: Optional[np.ndarray] = None
+    Mic_d13C_NH_MC: Optional[np.ndarray] = None
+    Mic_d13C_SH_MC: Optional[np.ndarray] = None
+    BB_d13C_NH_MC: Optional[np.ndarray] = None
+    BB_d13C_SH_MC: Optional[np.ndarray] = None
+
     # CarbonTracker BB (for 2×2 models)
     BB_annual: np.ndarray = field(default_factory=lambda: np.array([]))
     BB_global_mean: float = 0.0
+
+    # Three-box fields
+    CH4_NHext: Optional[np.ndarray] = None
+    CH4_Trop: Optional[np.ndarray] = None
+    CH4_SHext: Optional[np.ndarray] = None
+    c13_NHext: Optional[np.ndarray] = None
+    c13_Trop: Optional[np.ndarray] = None
+    c13_SHext: Optional[np.ndarray] = None
+    dD_NHext: Optional[np.ndarray] = None
+    dD_Trop: Optional[np.ndarray] = None
+    dD_SHext: Optional[np.ndarray] = None
+    # 3-box δD source signature MC matrices
+    FF_dD_NHext_MC: Optional[np.ndarray] = None
+    FF_dD_Trop_MC: Optional[np.ndarray] = None
+    FF_dD_SHext_MC: Optional[np.ndarray] = None
+    Mic_dD_NHext_MC: Optional[np.ndarray] = None
+    Mic_dD_Trop_MC: Optional[np.ndarray] = None
+    Mic_dD_SHext_MC: Optional[np.ndarray] = None
+    BB_dD_NHext_MC: Optional[np.ndarray] = None
+    BB_dD_Trop_MC: Optional[np.ndarray] = None
+    BB_dD_SHext_MC: Optional[np.ndarray] = None
+    # 3-box δ¹³C source signature MC matrices
+    FF_d13C_NHext_MC: Optional[np.ndarray] = None
+    FF_d13C_Trop_MC: Optional[np.ndarray] = None
+    FF_d13C_SHext_MC: Optional[np.ndarray] = None
+    Mic_d13C_NHext_MC: Optional[np.ndarray] = None
+    Mic_d13C_Trop_MC: Optional[np.ndarray] = None
+    Mic_d13C_SHext_MC: Optional[np.ndarray] = None
+    BB_d13C_NHext_MC: Optional[np.ndarray] = None
+    BB_d13C_Trop_MC: Optional[np.ndarray] = None
+    BB_d13C_SHext_MC: Optional[np.ndarray] = None
+    # 3-box atmospheric δ¹³C MC bootstrap
+    c13_NHext_MC: Optional[np.ndarray] = None
+    c13_Trop_MC: Optional[np.ndarray] = None
+    c13_SHext_MC: Optional[np.ndarray] = None
 
     # Model dimensions
     n_years: int = 0
     model_years: np.ndarray = field(default_factory=lambda: np.array([]))
 
 
-def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
+def load_data(base_dir: Path, two_box: bool = False, three_box: bool = False) -> LoadedData:
     """Load all observational and source-signature data.
 
     Parameters
     ----------
     base_dir : Path to the repository root
     two_box : if True, also compute NH/SH CH₄ and δ¹³C splits
+    three_box : if True, also compute NHext/Trop/SHext splits (implies two_box=True)
 
     Returns
     -------
     LoadedData instance
     """
+    if three_box:
+        two_box = True
     data_dir, src_dir = _resolve_data_dirs(base_dir)
     d = LoadedData()
 
@@ -408,11 +507,122 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
     d13C_raw = np.loadtxt(str(data_dir / "d13C_dei_compiled.txt"))
     d.d13C_MC = d13C_raw[1:, 1:]  # rows=years, cols=iterations
 
-    # === δD ===
-    dD_df = pd.read_excel(data_dir / "GlobMean_dD_iterations_UmezawaCal_noBUDS.xlsx")
+    # === δD (Dasgupta calibration) ===
+    dD_df = pd.read_excel(data_dir / "GlobMean_dD_iterations_DasguptaCal_noBUDS.xlsx")
+    # Drop any non-numeric columns (e.g. 'Unnamed: ...')
+    dD_df = dD_df.loc[:, [isinstance(c, (int, float)) for c in dD_df.columns]]
     dD_num = dD_df.apply(pd.to_numeric, errors="coerce")
-    d.dD_global = dD_num.iloc[:, 1].to_numpy(dtype=np.float64) - 0.5
-    d.dD_MC = dD_num.iloc[:, 5:].to_numpy(dtype=np.float64)
+    # Reconstruct full annual MC: header row (year0 = 2005) + data rows (2006..2023)
+    d.dD_start_year = int(float(dD_df.columns[0]))  # 2005
+    _dD_first = dD_num.columns[1:].to_numpy(dtype=np.float64).reshape(1, -1)
+    _dD_rest = dD_num.iloc[:, 1:].to_numpy(dtype=np.float64)
+    d.dD_MC = np.vstack([_dD_first, _dD_rest])  # (19, ~998) — years × iterations
+    d.dD_global = np.nanmean(d.dD_MC, axis=1)    # annual global mean from MC
+
+    # === δD hemispheric MC iterations (Dasgupta calibration) ===
+    if two_box:
+        dD_NH_file = data_dir / "NHMean_dD_iterations_DasguptaCal_noBUDS.xlsx"
+        dD_SH_file = data_dir / "SHMean_dD_iterations_DasguptaCal_noBUDS.xlsx"
+        if dD_NH_file.exists() and dD_SH_file.exists():
+            dD_NH_df = pd.read_excel(dD_NH_file)
+            dD_SH_df = pd.read_excel(dD_SH_file)
+            dD_NH_df = dD_NH_df.loc[:, [isinstance(c, (int, float)) for c in dD_NH_df.columns]]
+            dD_SH_df = dD_SH_df.loc[:, [isinstance(c, (int, float)) for c in dD_SH_df.columns]]
+            dD_NH_num = dD_NH_df.apply(pd.to_numeric, errors="coerce")
+            dD_SH_num = dD_SH_df.apply(pd.to_numeric, errors="coerce")
+            # Reconstruct: header year + data rows → full annual series
+            nh_first = dD_NH_num.columns[1:].to_numpy(dtype=np.float64).reshape(1, -1)
+            nh_rest = dD_NH_num.iloc[:, 1:].to_numpy(dtype=np.float64)
+            d.dD_NH_MC = np.vstack([nh_first, nh_rest])  # (19, 1000)
+            sh_first = dD_SH_num.columns[1:].to_numpy(dtype=np.float64).reshape(1, -1)
+            sh_rest = dD_SH_num.iloc[:, 1:].to_numpy(dtype=np.float64)
+            d.dD_SH_MC = np.vstack([sh_first, sh_rest])  # (19, 1000)
+            # Annual means for reference
+            d.dD_NH = np.nanmean(d.dD_NH_MC, axis=1)
+            d.dD_SH = np.nanmean(d.dD_SH_MC, axis=1)
+
+            # Fill NaN rows (e.g. 2020-2023 station gaps) using global MC +
+            # mean hemispheric offset from years with good data
+            _nan_rows_nh = np.where(np.all(np.isnan(d.dD_NH_MC), axis=1))[0]
+            if len(_nan_rows_nh) > 0:
+                # Compute mean offset from valid rows that exist in both global and hemi
+                _n_common = min(d.dD_NH_MC.shape[1], d.dD_MC.shape[1])
+                _valid = np.where(~np.all(np.isnan(d.dD_NH_MC[:, :_n_common]), axis=1))[0]
+                _nh_offset = np.nanmean(
+                    d.dD_NH_MC[np.ix_(_valid, range(_n_common))] -
+                    d.dD_MC[np.ix_(_valid, range(_n_common))]
+                )
+                _sh_offset = np.nanmean(
+                    d.dD_SH_MC[np.ix_(_valid, range(_n_common))] -
+                    d.dD_MC[np.ix_(_valid, range(_n_common))]
+                )
+                for _r in _nan_rows_nh:
+                    if _r < d.dD_MC.shape[0]:
+                        # Use global MC + offset; broadcast to match column count
+                        _g = d.dD_MC[_r, :_n_common]
+                        d.dD_NH_MC[_r, :_n_common] = _g + _nh_offset
+                        d.dD_SH_MC[_r, :_n_common] = _g + _sh_offset
+                        # Fill any remaining columns with repeat
+                        if _n_common < d.dD_NH_MC.shape[1]:
+                            d.dD_NH_MC[_r, _n_common:] = d.dD_NH_MC[_r, _n_common - 1]
+                            d.dD_SH_MC[_r, _n_common:] = d.dD_SH_MC[_r, _n_common - 1]
+                # Recompute means
+                d.dD_NH = np.nanmean(d.dD_NH_MC, axis=1)
+                d.dD_SH = np.nanmean(d.dD_SH_MC, axis=1)
+
+    # === Hemispheric δD MC iterations (from Riddell-Young station-level pipeline) ===
+    if two_box:
+        dD_NH_file = data_dir / "NHMean_dD_iterations_DasguptaCal_noBUDS.xlsx"
+        dD_SH_file = data_dir / "SHMean_dD_iterations_DasguptaCal_noBUDS.xlsx"
+        if dD_NH_file.exists() and dD_SH_file.exists():
+            dD_NH_df = pd.read_excel(dD_NH_file, header=None)
+            dD_SH_df = pd.read_excel(dD_SH_file, header=None)
+            # Col 0 = year (2005–2023), cols 1–1000 = MC iterations
+            dD_NH_years = dD_NH_df.iloc[:, 0].to_numpy(dtype=int)
+            dD_NH_mc = dD_NH_df.iloc[:, 1:].to_numpy(dtype=np.float64)
+            dD_SH_mc = dD_SH_df.iloc[:, 1:].to_numpy(dtype=np.float64)
+            # Forward-fill NaN rows (2020+ may be all-NaN)
+            for arr in [dD_NH_mc, dD_SH_mc]:
+                for i in range(1, arr.shape[0]):
+                    mask = np.isnan(arr[i])
+                    if mask.all():
+                        arr[i] = arr[i - 1]
+            d.dD_NH_MC = dD_NH_mc
+            d.dD_SH_MC = dD_SH_mc
+            d.dD_NH = np.nanmean(d.dD_NH_MC, axis=1)
+            d.dD_SH = np.nanmean(d.dD_SH_MC, axis=1)
+            d._dD_hemi_years = dD_NH_years
+
+    # === Hemispheric δD source signatures MC ===
+    if two_box:
+        for attr, fname in [
+            ('FF_dD_NH_MC', 'FF_dD_NH_MC.csv'),
+            ('FF_dD_SH_MC', 'FF_dD_SH_MC.csv'),
+            ('Mic_dD_NH_MC', 'Mic_dD_NH_MC.csv'),
+            ('Mic_dD_SH_MC', 'Mic_dD_SH_MC.csv'),
+            ('BB_dD_NH_MC', 'BB_dD_NH_MC.csv'),
+            ('BB_dD_SH_MC', 'BB_dD_SH_MC.csv'),
+        ]:
+            fpath = data_dir / fname
+            if fpath.exists():
+                mc_df = pd.read_csv(fpath)
+                # Col 0 = year (1998–2021), cols 1–1000 = MC iterations
+                setattr(d, attr, mc_df.iloc[:, 1:].to_numpy(dtype=np.float64))
+
+    # === Hemispheric δ¹³C source signatures MC ===
+    if two_box:
+        for attr, fname in [
+            ('FF_d13C_NH_MC', 'FF_d13C_NH_MC.csv'),
+            ('FF_d13C_SH_MC', 'FF_d13C_SH_MC.csv'),
+            ('Mic_d13C_NH_MC', 'Mic_d13C_NH_MC.csv'),
+            ('Mic_d13C_SH_MC', 'Mic_d13C_SH_MC.csv'),
+            ('BB_d13C_NH_MC', 'BB_d13C_NH_MC.csv'),
+            ('BB_d13C_SH_MC', 'BB_d13C_SH_MC.csv'),
+        ]:
+            fpath = data_dir / fname
+            if fpath.exists():
+                mc_df = pd.read_csv(fpath)
+                setattr(d, attr, mc_df.iloc[:, 1:].to_numpy(dtype=np.float64))
 
     # === Source signatures — d13C ===
     BB_d13C_data = pd.read_csv(src_dir / "BB_d13C_annual.csv", header=None)
@@ -458,6 +668,24 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
 
     d.Mic_dD_MC = Mic_dD_MC_trends.iloc[6:, 1:]
 
+    # === Hemispheric δD source signatures (MC iterations) ===
+    if two_box:
+        _hemi_src_files = {
+            'FF_dD_NH_MC': 'FF_dD_NH_MC.csv',
+            'FF_dD_SH_MC': 'FF_dD_SH_MC.csv',
+            'Mic_dD_NH_MC': 'Mic_dD_NH_MC.csv',
+            'Mic_dD_SH_MC': 'Mic_dD_SH_MC.csv',
+            'BB_dD_NH_MC': 'BB_dD_NH_MC.csv',
+            'BB_dD_SH_MC': 'BB_dD_SH_MC.csv',
+        }
+        for attr, fname in _hemi_src_files.items():
+            fpath = data_dir / fname
+            if fpath.exists():
+                _df = pd.read_csv(fpath)
+                # col 0 = year, cols 1..1000 = MC iterations
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, attr, _mat)
+
     # === CarbonTracker BB ===
     data_CT = pd.read_excel(data_dir / "CarbonTracker_CH4.xlsx")
     bbCT = data_CT.iloc[:, 9].values
@@ -480,9 +708,16 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
     d.bb_dD_U = pad_to_length(d.bb_dD_U, tl)
 
     # Pad MC matrices
+    # δD data starts at dD_start_year (2005), model starts at 1999 → front-pad
     pad_dD = max(0, tl + 1 - d.dD_MC.shape[0])
     if pad_dD > 0:
         d.dD_MC = np.vstack([np.repeat(d.dD_MC[0:1], pad_dD, axis=0), d.dD_MC])
+    # Also pad hemispheric δD MC matrices if available
+    if d.dD_NH_MC is not None:
+        pad_hemi = max(0, tl + 1 - d.dD_NH_MC.shape[0])
+        if pad_hemi > 0:
+            d.dD_NH_MC = np.vstack([np.repeat(d.dD_NH_MC[0:1], pad_hemi, axis=0), d.dD_NH_MC])
+            d.dD_SH_MC = np.vstack([np.repeat(d.dD_SH_MC[0:1], pad_hemi, axis=0), d.dD_SH_MC])
 
     if d.Mic_dD_MC.shape[0] < tl:
         pn = tl - d.Mic_dD_MC.shape[0]
@@ -497,6 +732,131 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
         d.BB_annual = d.BB_annual[:d.n_years].astype(float)
     else:
         d.BB_annual = np.full(d.n_years, d.BB_global_mean)
+
+    # =================================================================
+    # THREE-BOX DATA (NHext / Trop / SHext)
+    # =================================================================
+    if three_box:
+        # CH₄ concentrations per box (offset from global mean)
+        d.CH4_NHext = d.CH4_global + CH4_NHEXT_OFFSET
+        d.CH4_Trop  = d.CH4_global + CH4_TROP_OFFSET
+        d.CH4_SHext = d.CH4_global + CH4_SHEXT_OFFSET
+
+        # δ¹³C per box: use ThreeBox_atm_d13C_annual.csv if available
+        d13C_3box_file = data_dir / "ThreeBox_atm_d13C_annual.csv"
+        if d13C_3box_file.exists():
+            d13C_3box = pd.read_csv(d13C_3box_file)
+            d13C_years = d13C_3box['year'].values
+            d13C_nhext = d13C_3box['NHext'].values
+            d13C_trop  = d13C_3box['Trop'].values
+            d13C_shext = d13C_3box['SHext'].values
+
+            full_c13_nhext = np.full(tl + 1, d13C_nhext[0])
+            full_c13_trop  = np.full(tl + 1, d13C_trop[0])
+            full_c13_shext = np.full(tl + 1, d13C_shext[0])
+            for i, yr in enumerate(d13C_years):
+                idx = int(yr) - 1999
+                if 0 <= idx < tl + 1:
+                    full_c13_nhext[idx] = d13C_nhext[i]
+                    full_c13_trop[idx]  = d13C_trop[i]
+                    full_c13_shext[idx] = d13C_shext[i]
+            # Forward-fill pre-observation years
+            for arr in [full_c13_nhext, full_c13_trop, full_c13_shext]:
+                for j in range(1, len(arr)):
+                    if j > 0 and int(1999 + j) < int(d13C_years[0]):
+                        arr[j] = arr[j-1]
+
+            d.c13_NHext = full_c13_nhext
+            d.c13_Trop  = full_c13_trop
+            d.c13_SHext = full_c13_shext
+            print(f"  3-box atm δ¹³C: loaded {len(d13C_3box)} years from ThreeBox_atm_d13C_annual.csv")
+        elif d.c13_NH is not None and d.c13_SH is not None:
+            # Fallback: interpolate from NH/SH
+            d.c13_NHext = d.c13_NH - 0.05
+            d.c13_Trop  = 0.6 * d.c13_NH + 0.4 * d.c13_SH
+            d.c13_SHext = d.c13_SH + 0.03
+            print("  3-box atm δ¹³C: interpolated from NH/SH (fallback)")
+        else:
+            d.c13_NHext = d.c13_global - 0.1
+            d.c13_Trop  = d.c13_global
+            d.c13_SHext = d.c13_global + 0.1
+            print("  3-box atm δ¹³C: offset from global (fallback)")
+
+        # 3-box atmospheric δ¹³C bootstrap MC
+        for box_name in ['NHext', 'Trop', 'SHext']:
+            mc_file = data_dir / f"ThreeBox_atm_d13C_{box_name}_MC.csv"
+            if mc_file.exists():
+                _df = pd.read_csv(mc_file)
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, f'c13_{box_name}_MC', _mat)
+
+        # δD atmospheric: use ThreeBox_atm_dD_annual.csv (2005–2024)
+        dD_3box_file = data_dir / "ThreeBox_atm_dD_annual.csv"
+        if dD_3box_file.exists():
+            dD_3box = pd.read_csv(dD_3box_file)
+            # Align to model years (1999–2021): front-pad with first value
+            dD_years = dD_3box['year'].values
+            dD_nhext = dD_3box['NHext'].values
+            dD_trop  = dD_3box['Trop'].values
+            dD_shext = dD_3box['SHext'].values
+
+            # Build full tl+1 length arrays (1999–2022 = 24 points)
+            full_nhext = np.full(tl + 1, dD_nhext[0])
+            full_trop  = np.full(tl + 1, dD_trop[0])
+            full_shext = np.full(tl + 1, dD_shext[0])
+            for i, yr in enumerate(dD_years):
+                idx = int(yr) - 1999
+                if 0 <= idx < tl + 1:
+                    full_nhext[idx] = dD_nhext[i]
+                    full_trop[idx]  = dD_trop[i]
+                    full_shext[idx] = dD_shext[i]
+            # Forward-fill remaining NaN / first-value entries
+            for arr in [full_nhext, full_trop, full_shext]:
+                for i in range(1, len(arr)):
+                    if arr[i] == arr[0] and i > 0 and int(1999 + i) < int(dD_years[0]):
+                        arr[i] = arr[max(0, i-1)]  # keep first value for pre-obs years
+
+            d.dD_NHext = full_nhext
+            d.dD_Trop  = full_trop
+            d.dD_SHext = full_shext
+
+        # δD source signature MC (NHext / Trop / SHext)
+        _three_box_src = {
+            'FF_dD_NHext_MC': 'FF_dD_NHext_MC.csv',
+            'FF_dD_Trop_MC':  'FF_dD_Trop_MC.csv',
+            'FF_dD_SHext_MC': 'FF_dD_SHext_MC.csv',
+            'Mic_dD_NHext_MC': 'Mic_dD_NHext_MC.csv',
+            'Mic_dD_Trop_MC':  'Mic_dD_Trop_MC.csv',
+            'Mic_dD_SHext_MC': 'Mic_dD_SHext_MC.csv',
+            'BB_dD_NHext_MC': 'BB_dD_NHext_MC.csv',
+            'BB_dD_Trop_MC':  'BB_dD_Trop_MC.csv',
+            'BB_dD_SHext_MC': 'BB_dD_SHext_MC.csv',
+        }
+        for attr, fname in _three_box_src.items():
+            fpath = data_dir / fname
+            if fpath.exists():
+                _df = pd.read_csv(fpath)
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, attr, _mat)
+
+        # δ¹³C source signature MC (NHext / Trop / SHext)
+        _three_box_d13C_src = {
+            'FF_d13C_NHext_MC': 'FF_d13C_NHext_MC.csv',
+            'FF_d13C_Trop_MC':  'FF_d13C_Trop_MC.csv',
+            'FF_d13C_SHext_MC': 'FF_d13C_SHext_MC.csv',
+            'Mic_d13C_NHext_MC': 'Mic_d13C_NHext_MC.csv',
+            'Mic_d13C_Trop_MC':  'Mic_d13C_Trop_MC.csv',
+            'Mic_d13C_SHext_MC': 'Mic_d13C_SHext_MC.csv',
+            'BB_d13C_NHext_MC': 'BB_d13C_NHext_MC.csv',
+            'BB_d13C_Trop_MC':  'BB_d13C_Trop_MC.csv',
+            'BB_d13C_SHext_MC': 'BB_d13C_SHext_MC.csv',
+        }
+        for attr, fname in _three_box_d13C_src.items():
+            fpath = data_dir / fname
+            if fpath.exists():
+                _df = pd.read_csv(fpath)
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, attr, _mat)
 
     return d
 
@@ -551,6 +911,56 @@ def sample_source_signatures(rng, data: LoadedData, k: int, target_length: int):
     }
 
 
+def sample_source_signatures_hemi(rng, data: LoadedData, k: int, target_length: int):
+    """Sample hemispheric source signatures (both d13C and dD) for MC iteration k.
+
+    Uses actual NH/SH MC iterations when available; falls back to global.
+
+    Returns dict with keys:
+        ff_dD_NH, ff_dD_SH, bb_dD_NH, bb_dD_SH, mic_dD_NH, mic_dD_SH
+        ff_d13C_NH, ff_d13C_SH, bb_d13C_NH, bb_d13C_SH, mic_d13C_NH, mic_d13C_SH
+        ff_d13C, bb_d13C, mic_d13C  (global, for backward compat)
+        ff_dD, bb_dD, mic_dD  (global, for backward compat)
+    """
+    tl = target_length
+    # Get global signatures first
+    global_sigs = sample_source_signatures(rng, data, k, tl)
+
+    # Helper: use hemispheric MC if available, else duplicate global
+    def _pick_hemi(mc_mat, global_arr, k, tl):
+        if mc_mat is not None:
+            col = min(k, mc_mat.shape[1] - 1)
+            # Source sig MC covers 1998-2021 (24 rows); model starts 1999 -> skip row 0
+            arr = mc_mat[1:tl+1, col].copy()
+            return pad_to_length(arr, tl)
+        return global_arr
+
+    result = {
+        # Global (backward compat)
+        'ff_d13C': global_sigs['ff_d13C'],
+        'bb_d13C': global_sigs['bb_d13C'],
+        'mic_d13C': global_sigs['mic_d13C'],
+        'ff_dD': global_sigs['ff_dD'],
+        'bb_dD': global_sigs['bb_dD'],
+        'mic_dD': global_sigs['mic_dD'],
+        # Hemispheric dD
+        'ff_dD_NH': _pick_hemi(data.FF_dD_NH_MC, global_sigs['ff_dD'], k, tl),
+        'ff_dD_SH': _pick_hemi(data.FF_dD_SH_MC, global_sigs['ff_dD'], k, tl),
+        'bb_dD_NH': _pick_hemi(data.BB_dD_NH_MC, global_sigs['bb_dD'], k, tl),
+        'bb_dD_SH': _pick_hemi(data.BB_dD_SH_MC, global_sigs['bb_dD'], k, tl),
+        'mic_dD_NH': _pick_hemi(data.Mic_dD_NH_MC, global_sigs['mic_dD'], k, tl),
+        'mic_dD_SH': _pick_hemi(data.Mic_dD_SH_MC, global_sigs['mic_dD'], k, tl),
+        # Hemispheric d13C
+        'ff_d13C_NH': _pick_hemi(data.FF_d13C_NH_MC, global_sigs['ff_d13C'], k, tl),
+        'ff_d13C_SH': _pick_hemi(data.FF_d13C_SH_MC, global_sigs['ff_d13C'], k, tl),
+        'bb_d13C_NH': _pick_hemi(data.BB_d13C_NH_MC, global_sigs['bb_d13C'], k, tl),
+        'bb_d13C_SH': _pick_hemi(data.BB_d13C_SH_MC, global_sigs['bb_d13C'], k, tl),
+        'mic_d13C_NH': _pick_hemi(data.Mic_d13C_NH_MC, global_sigs['mic_d13C'], k, tl),
+        'mic_d13C_SH': _pick_hemi(data.Mic_d13C_SH_MC, global_sigs['mic_d13C'], k, tl),
+    }
+    return result
+
+
 def sample_atm_d13C(data: LoadedData, k: int, target_length: int) -> np.ndarray:
     """Return sampled global δ¹³C time series (length target_length+1)."""
     tl1 = target_length + 1
@@ -569,6 +979,88 @@ def sample_atm_dD(data: LoadedData, k: int, target_length: int) -> np.ndarray:
     if len(arr) < tl1:
         arr = np.concatenate([np.full(tl1 - len(arr), arr[0]), arr])
     return arr
+
+
+def sample_atm_dD_hemi(data: LoadedData, k: int, target_length: int):
+    """Return sampled NH and SH δD time series (each length target_length+1).
+
+    Uses actual hemispheric MC iterations when available; falls back to
+    global +/- DD_IH_OFFSET for backward compatibility.
+
+    Returns (dD_NH, dD_SH) as numpy arrays.
+    """
+    tl1 = target_length + 1
+    if data.dD_NH_MC is not None and data.dD_SH_MC is not None:
+        # Use real hemispheric data (already padded during load_data)
+        col = min(k, data.dD_NH_MC.shape[1] - 1)
+        nh = data.dD_NH_MC[:tl1, col].copy()
+        sh = data.dD_SH_MC[:tl1, col].copy()
+        if len(nh) < tl1:
+            nh = np.concatenate([np.full(tl1 - len(nh), nh[0]), nh])
+            sh = np.concatenate([np.full(tl1 - len(sh), sh[0]), sh])
+        return nh, sh
+    else:
+        # Legacy fallback: global ± fixed offset
+        dD_glob = sample_atm_dD(data, k, target_length)
+        return dD_glob - DD_IH_OFFSET, dD_glob + DD_IH_OFFSET
+
+
+def sample_source_signatures_three_box(rng, data: LoadedData, k: int, target_length: int):
+    """Sample 3-box δD and δ¹³C source signatures for MC iteration k.
+
+    Returns dict with keys:
+        Per-box δ¹³C:
+          ff_d13C_NHext, ff_d13C_Trop, ff_d13C_SHext
+          bb_d13C_NHext, bb_d13C_Trop, bb_d13C_SHext
+          mic_d13C_NHext, mic_d13C_Trop, mic_d13C_SHext
+        Per-box δD:
+          ff_dD_NHext, ff_dD_Trop, ff_dD_SHext
+          bb_dD_NHext, bb_dD_Trop, bb_dD_SHext
+          mic_dD_NHext, mic_dD_Trop, mic_dD_SHext
+        Global fallbacks:
+          ff_d13C, bb_d13C, mic_d13C, ff_dD, bb_dD, mic_dD
+    """
+    tl = target_length
+    global_sigs = sample_source_signatures(rng, data, k, tl)
+
+    def _pick_box(mc_mat, global_arr, k, tl):
+        if mc_mat is not None:
+            col = min(k, mc_mat.shape[1] - 1)
+            arr = mc_mat[1:tl+1, col].copy()  # skip row 0 (1998), model starts 1999
+            return pad_to_length(arr, tl)
+        return global_arr
+
+    result = {
+        # Per-box δ¹³C source signatures (fall back to global if MC data unavailable)
+        'ff_d13C_NHext':  _pick_box(data.FF_d13C_NHext_MC,  global_sigs['ff_d13C'], k, tl),
+        'ff_d13C_Trop':   _pick_box(data.FF_d13C_Trop_MC,   global_sigs['ff_d13C'], k, tl),
+        'ff_d13C_SHext':  _pick_box(data.FF_d13C_SHext_MC,  global_sigs['ff_d13C'], k, tl),
+        'bb_d13C_NHext':  _pick_box(data.BB_d13C_NHext_MC,  global_sigs['bb_d13C'], k, tl),
+        'bb_d13C_Trop':   _pick_box(data.BB_d13C_Trop_MC,   global_sigs['bb_d13C'], k, tl),
+        'bb_d13C_SHext':  _pick_box(data.BB_d13C_SHext_MC,  global_sigs['bb_d13C'], k, tl),
+        'mic_d13C_NHext': _pick_box(data.Mic_d13C_NHext_MC, global_sigs['mic_d13C'], k, tl),
+        'mic_d13C_Trop':  _pick_box(data.Mic_d13C_Trop_MC,  global_sigs['mic_d13C'], k, tl),
+        'mic_d13C_SHext': _pick_box(data.Mic_d13C_SHext_MC, global_sigs['mic_d13C'], k, tl),
+        # Global δ¹³C fallback
+        'ff_d13C':  global_sigs['ff_d13C'],
+        'bb_d13C':  global_sigs['bb_d13C'],
+        'mic_d13C': global_sigs['mic_d13C'],
+        # Per-box δD source signatures
+        'ff_dD_NHext': _pick_box(data.FF_dD_NHext_MC, global_sigs['ff_dD'], k, tl),
+        'ff_dD_Trop':  _pick_box(data.FF_dD_Trop_MC,  global_sigs['ff_dD'], k, tl),
+        'ff_dD_SHext': _pick_box(data.FF_dD_SHext_MC, global_sigs['ff_dD'], k, tl),
+        'bb_dD_NHext': _pick_box(data.BB_dD_NHext_MC, global_sigs['bb_dD'], k, tl),
+        'bb_dD_Trop':  _pick_box(data.BB_dD_Trop_MC,  global_sigs['bb_dD'], k, tl),
+        'bb_dD_SHext': _pick_box(data.BB_dD_SHext_MC, global_sigs['bb_dD'], k, tl),
+        'mic_dD_NHext': _pick_box(data.Mic_dD_NHext_MC, global_sigs['mic_dD'], k, tl),
+        'mic_dD_Trop':  _pick_box(data.Mic_dD_Trop_MC,  global_sigs['mic_dD'], k, tl),
+        'mic_dD_SHext': _pick_box(data.Mic_dD_SHext_MC, global_sigs['mic_dD'], k, tl),
+        # Global δD fallback
+        'ff_dD': global_sigs['ff_dD'],
+        'bb_dD': global_sigs['bb_dD'],
+        'mic_dD': global_sigs['mic_dD'],
+    }
+    return result
 
 
 # ============================================================================

@@ -1,11 +1,11 @@
 # Methane Isotope Box Models — Clean Taxonomy
 
-## Model Infra (2 × 2 = 4 models)
+## Model Infra (2 × 3 = 6 models)
 
-|  | **One Box (Global)** | **Two Boxes (NH + SH)** |
-|---|---|---|
-| **2×2** (BB fixed; δ¹³C and δD solved separately) | `22_one.py` | `22_two.py` |
-| **3×3** (δ¹³C and δD used simultaneously) | `33_one.py` | `33_two.py` |
+|  | **One Box (Global)** | **Two Boxes (NH + SH)** | **Three Boxes (NHext / Trop / SHext)** |
+|---|---|---|---|
+| **2×2** (BB fixed; δ¹³C and δD solved separately) | `22_one.py` | `22_two.py` | `2x2_three.py` |
+| **3×3** (δ¹³C and δD used simultaneously) | `33_one.py` | `33_two.py` | `3x3_three.py` |
 
 ### What "2×2" means
 Fix biomass-burning from CarbonTracker (GFED4 prior). Solve for FF and Mic using δ¹³C alone, then independently using δD alone. Cross-validate the two estimates.
@@ -13,9 +13,10 @@ Fix biomass-burning from CarbonTracker (GFED4 prior). Solve for FF and Mic using
 ### What "3×3" means
 Solve a 3-equation system (mass + δ¹³C + δD) simultaneously for all three sources (BB, FF, Mic). No external BB constraint needed. Uses bounded least-squares for non-negativity.
 
-### What "one" vs "two" means
+### What "one" vs "two" vs "three" means
 - **one**: Single global well-mixed box. τ = global lifetime.
-- **two**: Two hemispheric boxes (NH/SH) connected by interhemispheric exchange (τ_ex ~ 1.0 ± 0.1 yr). Hemisphere-specific lifetimes, sink fractions, and δD offset (±6‰).
+- **two**: Two hemispheric boxes (NH/SH) connected by interhemispheric exchange (τ_ex ~ 1.0 ± 0.1 yr). Hemisphere-specific lifetimes, sink fractions, and real hemispheric δD.
+- **three**: Three latitude-band boxes (NHext >30°N, Trop 30°S–30°N, SHext <30°S) with two exchange paths (NHext↔Trop τ_NT ~ 0.8 yr; Trop↔SHext τ_TS ~ 1.2 yr). Box-specific sink fractions, lifetimes, BB splits, and real per-box δD observations.
 
 ---
 
@@ -83,6 +84,8 @@ See `models/inputs.py` → `ATM_OBS_CATALOG` and `FF_SIGNATURE_OPTIONS` for full
 
 | Date | Change |
 |------|--------|
+| 2026-05-12 | Three-box models (`2x2_three.py`, `3x3_three.py`) on `three-box` branch |
+| 2026-05-12 | Real hemispheric δD upgrade in `common.py` (v2 KIE immunity experiment) |
 | 2026-05-09 | Clean taxonomy: 4 models + shared `models/` infra + `inputs.py` catalog |
 | 2026-05-05 | v3.1/v3.2 with Ben-model optimisations |
 | 2026-05-04 | v2.0 upgrades (KIE sampling, time-varying τ, quality monitor) |
