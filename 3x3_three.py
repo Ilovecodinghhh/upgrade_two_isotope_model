@@ -17,7 +17,8 @@ Inter-box exchange:
 
 δD atmospheric:  ThreeBox_atm_dD_annual.csv (real 3-box observations)
 δD source sigs:  per-box MC matrices (NHext/Trop/SHext)
-δ¹³C source sigs: global (shared across boxes — no hemispheric data yet)
+δ¹³C atmospheric: ThreeBox_atm_d13C_annual.csv (derived from NH/SH obs)
+δ¹³C source sigs: per-box MC matrices (NHext/Trop/SHext)
 """
 
 import argparse
@@ -137,8 +138,14 @@ def run(cfg: ModelConfig):
 
         d13C_MC_box = {}
         for b in BOXES:
-            base = c13[b][:nc] if len(c13[b]) >= nc else pad_to_length(c13[b], nc)
-            d13C_MC_box[b] = base + d13C_off
+            mc_attr = getattr(data, f'c13_{b}_MC', None)
+            if mc_attr is not None:
+                col = min(k, mc_attr.shape[1] - 1)
+                arr = mc_attr[1:nc, col].copy() if mc_attr.shape[0] >= nc else pad_to_length(mc_attr[1:, col], nc - 1)
+                d13C_MC_box[b] = pad_to_length(arr, nc)
+            else:
+                base = c13[b][:nc] if len(c13[b]) >= nc else pad_to_length(c13[b], nc)
+                d13C_MC_box[b] = base + d13C_off
 
         dD_glob_MC = sample_atm_dD(data, k, n)
         dD_glob_mean = data.dD_global[:n+1] if len(data.dD_global) >= n+1 else pad_to_length(data.dD_global, n+1)
@@ -193,12 +200,12 @@ def run(cfg: ModelConfig):
                 dD_src[b][j]   = (nD_j1  - nD_j  + nD_j  * aD  / tau_b - exD)  / S[b][j]
 
         sigs = sample_source_signatures_three_box(rng, data, k, n)
-        f13_bb  = delta_to_fraction_d13C(sigs['bb_d13C'])
-        f13_ff  = delta_to_fraction_d13C(sigs['ff_d13C'])
-        f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
 
         for j in range(n):
             for b in BOXES:
+                f13_bb  = delta_to_fraction_d13C(sigs[f'bb_d13C_{b}'])
+                f13_ff  = delta_to_fraction_d13C(sigs[f'ff_d13C_{b}'])
+                f13_mic = delta_to_fraction_d13C(sigs[f'mic_d13C_{b}'])
                 fD_bb  = delta_to_fraction_dD(sigs[f'bb_dD_{b}'])
                 fD_ff  = delta_to_fraction_dD(sigs[f'ff_dD_{b}'])
                 fD_mic = delta_to_fraction_dD(sigs[f'mic_dD_{b}'])

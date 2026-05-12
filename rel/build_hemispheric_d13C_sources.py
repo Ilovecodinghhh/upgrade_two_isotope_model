@@ -89,6 +89,12 @@ def load_C3C4():
     Returns C4exp (24, 180, 360) as percentage [0,100], row0=90°N.
     """
     luo_path = DATA / "C4_distribution_NUS_v2.2.nc"
+    # Auto-reassemble from split parts if needed
+    if not luo_path.exists():
+        reassemble = DATA / "reassemble_luo_c4.sh"
+        if reassemble.exists():
+            import subprocess
+            subprocess.run(["bash", str(reassemble)], check=True)
     if luo_path.exists():
         C3C4_data = nc.Dataset(str(luo_path), 'r')
         C4_maps = C3C4_data.variables['C4_area'][:]
@@ -128,40 +134,74 @@ def load_prior_subcategories():
 
 
 def load_wetland_d13C():
-    """Load isotem wetland δ¹³C map if available; else use Oh 2022 global means.
-    Returns (24, 180, 360) or None if no spatial data available."""
-    isotem_path = DATA / "isotem_wetland_d13C-CH4.nc4"
-    if isotem_path.exists():
-        wf = nc.Dataset(str(isotem_path), 'r')
-        d13C = wf.variables['wetland_d13C-CH4'][:]
-        wf.close()
-        d13C_ann = np.mean(d13C, axis=0)  # (33, 720, 360)
-        d13C_ann = np.swapaxes(d13C_ann, 1, 2)
-        d13C_ann = d13C_ann[:, ::-1, :]
-        d13C_ann = np.ma.filled(d13C_ann, fill_value=np.nan)
-        for i in range(d13C_ann.shape[0]):
-            avg = np.nanmean(d13C_ann[i])
-            d13C_ann[i, np.isnan(d13C_ann[i])] = avg
-        trimmed = d13C_ann[14:33]  # 1998-2016
-        trimmed = np.concatenate([trimmed, np.repeat(trimmed[-1:], 5, axis=0)])  # to 2021
-        compressed = trimmed.reshape(24, 180, 2, 360, 2).mean(axis=(2, 4))
-        print("  Using isotem wetland δ¹³C spatial map")
-        return compressed
-    else:
-        # Use Oh 2022 global time series — no spatial variation
-        oh_path = DATA / "Oh_2022_Wetlands.xlsx"
-        if oh_path.exists():
-            oh = pd.read_excel(oh_path).values
-            # oh has columns: Year, d13C, stdev
-            wetland_d13C_ts = oh[:, 1]  # 24 values for 1998-2021
-            print(f"  Using Oh 2022 wetland δ¹³C global means (no spatial map): {np.mean(wetland_d13C_ts):.1f}‰")
-            # Broadcast to grid (uniform)
-            result = np.zeros((N_YEARS, 180, 360))
-            for yr in range(N_YEARS):
-                result[yr, :, :] = wetland_d13C_ts[yr]
-            return result
-        print("  WARNING: No wetland δ¹³C data found, using -61.0‰")
-        return np.full((N_YEARS, 180, 360), -61.0)
+    """Load isotem wetland δ¹³C spatial maps (per-year NC4 files).
+    
+    Looks for rel/data/isotem_wetland_d13C-CH4/ directory with per-year files.
+    Falls back to Oh 2022 global time series if unavailable.
+    
+    Returns (24, 180, 360) array of wetland δ¹³C values at 1° resolution,
+    row0 = 90°N. Also returns uncertainty: scalar if Oh 2022, or per-grid
+    standard deviation across months if isotem.
+    """
+    # Try isotem per-year directory first
+    isotem_dir = SCRIPT_DIR / "data" / "isotem_wetland_d13C-CH4"
+    if isotem_dir.is_dir():
+        result = np.full((N_YEARS, 180, 360), np.nan)
+        unc_result = np.full((N_YEARS, 180, 360), np.nan)
+        last_valid = None
+        
+        for yr_idx, year in enumerate(YEARS):
+            fpath = isotem_dir / f"isotem_wetland_d13C-CH4_{year}.nc4"
+            if fpath.exists():
+                wf = nc.Dataset(str(fpath), 'r')
+                d13c = wf.variables['wetland_d13C-CH4'][:]  # (12, 720, 360) = (month, lon, lat)
+                wf.close()
+                d13c = np.ma.filled(d13c, fill_value=np.nan)
+                # Annual mean: average across months
+                ann = np.nanmean(d13c, axis=0)  # (720, 360)
+                # Monthly std for uncertainty
+                ann_std = np.nanstd(d13c, axis=0)  # (720, 360)
+                # Transpose: (lon, lat) → (lat, lon)
+                ann_ll = ann.T     # (360, 720), lat goes 90N to 89.5S
+                std_ll = ann_std.T
+                # Regrid 0.5° → 1° by averaging 2×2 blocks
+                ann_1deg = np.nanmean(ann_ll.reshape(180, 2, 360, 2), axis=(1, 3))
+                std_1deg = np.nanmean(std_ll.reshape(180, 2, 360, 2), axis=(1, 3))
+                # Keep NaN for cells with no wetlands — emission-weighting handles this
+                result[yr_idx] = ann_1deg
+                unc_result[yr_idx] = std_1deg
+                last_valid = yr_idx
+            elif last_valid is not None:
+                # Pad with last valid year
+                result[yr_idx] = result[last_valid]
+                unc_result[yr_idx] = unc_result[last_valid]
+        
+        # Fill any leading NaN years (before first isotem file)
+        first_valid = next((i for i in range(N_YEARS) if not np.all(np.isnan(result[i]))), 0)
+        for i in range(first_valid):
+            result[i] = result[first_valid]
+            unc_result[i] = unc_result[first_valid]
+        
+        nh_mean = np.nanmean(result[:, :90, :])
+        sh_mean = np.nanmean(result[:, 90:, :])
+        print(f"  Using isotem wetland δ¹³C spatial maps ({isotem_dir.name})")
+        print(f"    NH mean: {nh_mean:.2f}‰, SH mean: {sh_mean:.2f}‰, gap: {nh_mean - sh_mean:.2f}‰")
+        return result, unc_result
+    
+    # Fallback: Oh 2022 global time series (no spatial variation)
+    oh_path = DATA / "Oh_2022_Wetlands.xlsx"
+    if oh_path.exists():
+        oh = pd.read_excel(oh_path).values
+        wetland_d13C_ts = oh[:, 1]  # 24 values for 1998-2021
+        wetland_d13C_unc = 0.7
+        print(f"  Using Oh 2022 wetland δ¹³C global means (no spatial map): {np.mean(wetland_d13C_ts):.1f}‰")
+        result = np.zeros((N_YEARS, 180, 360))
+        unc = np.full((N_YEARS, 180, 360), wetland_d13C_unc)
+        for yr in range(N_YEARS):
+            result[yr, :, :] = wetland_d13C_ts[yr]
+        return result, unc
+    print("  WARNING: No wetland δ¹³C data found, using -61.0‰")
+    return np.full((N_YEARS, 180, 360), -61.0), np.full((N_YEARS, 180, 360), 1.0)
 
 
 # ============================================================================
@@ -363,18 +403,17 @@ def compute_ff_d13C_hemi(fos_ann):
 # Mic δ¹³C — HEMISPHERIC MC
 # ============================================================================
 
-def compute_mic_d13C_hemi(C4exp, mic_ann):
+def compute_mic_d13C_hemi(C4exp, mic_ann, wetland_d13C_grid=None, wetland_d13C_unc_grid=None):
     """Microbial δ¹³C: subcategory mass balance per hemisphere.
     
-    Without prior subcategory emission files, we use a simplified approach:
-    - Ruminant/wild animal δ¹³C varies by hemisphere via C3/C4 fractions
-      from Still 2003, weighted by CTCH4 microbial emission grid.
-    - Wetland δ¹³C: Oh 2022 global time series (no spatial variation).
-    - Rice, termite, waste: constant values with Suess effect.
-    - Subcategory proportions from Riddell-Young 2025 Table 1 
-      (global fractions, slight hemispheric weighting by CTCH4).
+    Uses isotem spatial wetland δ¹³C if provided (emission-weighted per hemisphere),
+    otherwise falls back to Oh 2022 global time series.
     """
-    print("Computing Mic δ¹³C hemispheric MC (simplified, no subcategory priors)...")
+    use_isotem = wetland_d13C_grid is not None
+    if use_isotem:
+        print("Computing Mic δ¹³C hemispheric MC (with isotem spatial wetland δ¹³C)...")
+    else:
+        print("Computing Mic δ¹³C hemispheric MC (simplified, no subcategory priors)...")
 
     # Source signature parameters
     C3_RUM_D13C = -66.64; C3_RUM_STD = 3.39
@@ -383,15 +422,20 @@ def compute_mic_d13C_hemi(C4exp, mic_ann):
     RICE_D13C = -59.9; RICE_STD = 4.5
     TERMITE_D13C = -65.2; TERMITE_STD = 7.6
 
-    # Wetland δ¹³C from Oh 2022
-    oh_path = DATA / "Oh_2022_Wetlands.xlsx"
-    if oh_path.exists():
-        oh = pd.read_excel(oh_path).values
-        wetland_d13C_ts = oh[:, 1]  # 24 values
-        wetland_d13C_unc = 0.7
+    # Wetland δ¹³C — spatial (isotem) or global (Oh 2022)
+    if use_isotem:
+        # Will compute emission-weighted per hemisphere in loop
+        wetland_d13C_ts = None
+        wetland_d13C_unc = None
     else:
-        wetland_d13C_ts = np.full(N_YEARS, -61.5)
-        wetland_d13C_unc = 1.0
+        oh_path = DATA / "Oh_2022_Wetlands.xlsx"
+        if oh_path.exists():
+            oh = pd.read_excel(oh_path).values
+            wetland_d13C_ts = oh[:, 1]  # 24 values
+            wetland_d13C_unc = 0.7
+        else:
+            wetland_d13C_ts = np.full(N_YEARS, -61.5)
+            wetland_d13C_unc = 1.0
 
     # Ruminant δ¹³C from Chang 2019
     chang_path = DATA / "Chang_2019_ruminants.xlsx"
@@ -421,13 +465,13 @@ def compute_mic_d13C_hemi(C4exp, mic_ann):
     results_SH = np.zeros((N_YEARS, N_MC))
 
     for k in range(N_MC):
-        # Perturbed values (single draw per MC iteration)
         c3_rum = C3_RUM_D13C + np.random.normal() * C3_RUM_STD
         c4_rum = C4_RUM_D13C + np.random.normal() * C4_RUM_STD
         waste_d13C = WASTE_D13C + np.random.normal() * WASTE_STD
         rice_d13C = RICE_D13C + np.random.normal() * RICE_STD
         termite_d13C = TERMITE_D13C + np.random.normal() * TERMITE_STD
-        wetland_pert = np.random.normal() * wetland_d13C_unc
+        if not use_isotem:
+            wetland_pert = np.random.normal() * wetland_d13C_unc
         rum_pert = np.random.normal() * rum_d13C_unc
 
         # Proportion perturbation (10% relative)
@@ -457,8 +501,27 @@ def compute_mic_d13C_hemi(C4exp, mic_ann):
                 # Ruminant δ¹³C (emission-weighted C3/C4)
                 rum_d13C_h = (1 - c4_h) * c3_rum + c4_h * c4_rum
 
-                # Wetland δ¹³C (global, no spatial variation)
-                wet_d13C_h = wetland_d13C_ts[yr] + wetland_pert
+                # Wetland δ¹³C — spatial (isotem) or global (Oh 2022)
+                if use_isotem:
+                    wet_grid = wetland_d13C_grid[yr, sl, :]
+                    unc_grid = wetland_d13C_unc_grid[yr, sl, :]
+                    valid = ~np.isnan(wet_grid)
+                    if em_total > 0 and valid.any():
+                        # Only weight cells where isotem has data
+                        w = em_h * valid
+                        w_sum = w.sum()
+                        if w_sum > 0:
+                            wet_d13C_h = (wet_grid[valid] * em_h[valid]).sum() / w_sum
+                            wet_unc_h = np.sqrt((unc_grid[valid]**2 * em_h[valid]).sum()) / w_sum
+                        else:
+                            wet_d13C_h = np.nanmean(wet_grid)
+                            wet_unc_h = np.nanmean(unc_grid)
+                    else:
+                        wet_d13C_h = np.nanmean(wet_grid) if valid.any() else -61.0
+                        wet_unc_h = np.nanmean(unc_grid) if valid.any() else 1.0
+                    wet_d13C_h += np.random.normal() * wet_unc_h
+                else:
+                    wet_d13C_h = wetland_d13C_ts[yr] + wetland_pert
 
                 # Suess-corrected constant sources
                 waste_s = waste_d13C + yr_offset * suess
@@ -539,7 +602,8 @@ def main():
     ff_NH, ff_SH = compute_ff_d13C_hemi(fos_ann)
 
     print("\n[5/6] Mic δ¹³C...")
-    mic_NH, mic_SH = compute_mic_d13C_hemi(C4exp, mic_ann)
+    wetland_grid, wetland_unc_grid = load_wetland_d13C()
+    mic_NH, mic_SH = compute_mic_d13C_hemi(C4exp, mic_ann, wetland_grid, wetland_unc_grid)
 
     print("\n[6/6] Saving results...")
     save_mc_csv("BB_d13C_NH_MC.csv", bb_NH)

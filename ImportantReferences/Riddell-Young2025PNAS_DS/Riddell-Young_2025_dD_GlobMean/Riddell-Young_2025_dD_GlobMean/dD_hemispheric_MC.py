@@ -63,11 +63,16 @@ n_years = len(year)
 iterations = df_glob.shape[1] - 1  # first col is year
 print(f"Years: {year[0]}–{year[-1]} ({n_years} years), {iterations} MC iterations")
 
-# Date vector — use the longest station file for maximum coverage
-max_len = max(s['data'].shape[0] for s in stations)
-ref_station = [s for s in stations if s['data'].shape[0] == max_len][0]
-date_full = ref_station['data'][:, 0]
+# Date vector — build a unified grid spanning all stations' time ranges
+# Using the longest station alone can miss data if newer stations extend
+# further than older (longer) ones.
+all_t0 = min(s['data'][0, 0] for s in stations)
+all_t1 = max(s['data'][-1, 0] for s in stations)
+# Use approximate weekly spacing (~0.01918 yr ≈ 7/365.25)
+dt = 7.0 / 365.25
+date_full = np.arange(all_t0, all_t1 + dt/2, dt)
 n_weeks = len(date_full)
+print(f"Unified date grid: {date_full[0]:.2f} – {date_full[-1]:.2f} ({n_weeks} points)")
 
 # Split NH / SH
 NH_stations = [s for s in stations if s['lat'] >= 0]
@@ -90,13 +95,11 @@ for k in range(iterations):
     for si, s in enumerate(NH_stations):
         if col < s['data'].shape[1]:
             slen = s['data'].shape[0]
-            # Find where this station's dates fall in the reference grid
             s_dates = s['data'][:, 0]
-            # Quick approach: find offset by matching first date
-            offset = np.searchsorted(date_full, s_dates[0])
-            end = min(offset + slen, n_weeks)
-            actual_len = end - offset
-            nh_vals[si, offset:end] = s['data'][:actual_len, col]
+            # Map each station date to nearest grid point
+            indices = np.searchsorted(date_full, s_dates, side='left')
+            indices = np.clip(indices, 0, n_weeks - 1)
+            nh_vals[si, indices] = s['data'][:, col]
     nh_mean = np.nanmean(nh_vals, axis=0)
     
     # SH weekly mean
@@ -105,10 +108,9 @@ for k in range(iterations):
         if col < s['data'].shape[1]:
             slen = s['data'].shape[0]
             s_dates = s['data'][:, 0]
-            offset = np.searchsorted(date_full, s_dates[0])
-            end = min(offset + slen, n_weeks)
-            actual_len = end - offset
-            sh_vals[si, offset:end] = s['data'][:actual_len, col]
+            indices = np.searchsorted(date_full, s_dates, side='left')
+            indices = np.clip(indices, 0, n_weeks - 1)
+            sh_vals[si, indices] = s['data'][:, col]
     sh_mean = np.nanmean(sh_vals, axis=0)
     
     # Annual averages

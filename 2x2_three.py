@@ -15,7 +15,8 @@ Inter-box exchange:
 
 δD atmospheric:  ThreeBox_atm_dD_annual.csv (station-level, 2005–2024)
 δD source sigs:  per-box MC matrices (1998–2021, 1000 iterations)
-δ¹³C:            real NH/SH split → interpolated to 3 boxes
+δ¹³C atmospheric: ThreeBox_atm_d13C_annual.csv + bootstrap MC
+δ¹³C source sigs: per-box MC matrices (NHext/Trop/SHext, 1000 iterations)
 """
 
 import argparse
@@ -124,11 +125,19 @@ def run(cfg: ModelConfig):
         nc = min(len(c13_glob), n + 1)
         d13C_off = d13C_glob_MC[:nc] - c13_glob[:nc]
 
-        # δ¹³C per box: real mean + MC offset
+        # δ¹³C per box: use per-box bootstrap MC if available, else mean + global MC offset
         d13C_MC_box = {}
         for b in BOXES:
-            base = c13[b][:nc] if len(c13[b]) >= nc else pad_to_length(c13[b], nc)
-            d13C_MC_box[b] = base + d13C_off
+            mc_attr = getattr(data, f'c13_{b}_MC', None)
+            if mc_attr is not None:
+                col = min(k, mc_attr.shape[1] - 1)
+                # MC matrix rows = years (1998–2021); align to model years (1999–2021)
+                arr = mc_attr[1:nc, col].copy() if mc_attr.shape[0] >= nc else pad_to_length(mc_attr[1:, col], nc - 1)
+                # Prepend first value for year index 0 alignment
+                d13C_MC_box[b] = pad_to_length(arr, nc)
+            else:
+                base = c13[b][:nc] if len(c13[b]) >= nc else pad_to_length(c13[b], nc)
+                d13C_MC_box[b] = base + d13C_off
 
         # δD per box: use annual observations + small MC perturbation from global
         dD_glob_MC = sample_atm_dD(data, k, n)
@@ -210,12 +219,12 @@ def run(cfg: ModelConfig):
 
                 BB_j = BB_fixed[b][j] if j < len(BB_fixed[b]) else data.BB_global_mean * BB_FRAC[b]
 
-                denom_c = sigs['ff_d13C'][j] - sigs['mic_d13C'][j]
+                denom_c = sigs[f'ff_d13C_{b}'][j] - sigs[f'mic_d13C_{b}'][j]
                 denom_d = sigs[f'ff_dD_{b}'][j] - sigs[f'mic_dD_{b}'][j]
 
                 # δ¹³C solve
                 if abs(denom_c) > 0.1:
-                    ff = (S[b][j] * d13c_delta - sigs['mic_d13C'][j] * (S[b][j] - BB_j) - sigs['bb_d13C'][j] * BB_j) / denom_c
+                    ff = (S[b][j] * d13c_delta - sigs[f'mic_d13C_{b}'][j] * (S[b][j] - BB_j) - sigs[f'bb_d13C_{b}'][j] * BB_j) / denom_c
                     mic = S[b][j] - BB_j - ff
                     if ff < 0 or mic < 0:
                         n_neg['c'] += 1

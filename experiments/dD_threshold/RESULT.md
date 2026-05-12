@@ -2,7 +2,7 @@
 
 **Branch:** `dD_threshold`  
 **Repository:** `Ilovecodinghhh/upgrade_two_isotope_model`  
-**Status:** Phases 1–5 complete (2026-05-12, v4: fully hemispheric — both δ¹³C and δD source signatures)
+**Status:** All phases complete (2026-05-12, v4: fully hemispheric — both δ¹³C and δD source signatures)
 
 ---
 
@@ -98,6 +98,55 @@ Crossover between 3× (+26.1%) and 5× (−37.2%). Estimated exact crossover ≈
 ### Phase 5 — Sensitivity (KIE + Lifetime)
 
 Threshold at 5× for all 6 configurations. Completely robust.
+
+### Phase 6 — Deep Dive (v4 data)
+
+#### A. Fine-Grid Threshold
+Exact crossover at **3.82× (σ = 31.5‰)**; 10% improvement threshold at **3.53× (σ = 29.1‰)**.
+
+| Multiplier | σ(Mic δD) | FF 90% CI (Tg/yr) | Improvement |
+|------------|-----------|--------------------|-----------  |
+| 0.5× | 4.1‰ | 57.6 | **+45.1%** |
+| 1.0× | 8.2‰ | 57.6 | **+45.1%** |
+| 2.0× | 16.5‰ | 59.4 | **+43.4%** |
+| 3.0× | 24.8‰ | 77.6 | **+26.1%** |
+| 3.5× | 28.9‰ | 93.4 | **+11.1%** |
+| **3.82× ← crossover** | **31.5‰** | **~105** | **~0%** |
+| 4.0× | 33.0‰ | 111.7 | −6.3% |
+| 5.0× | 41.2‰ | 144.1 | −37.2% |
+| 8.0× | 66.0‰ | 210.8 | −100.7% |
+
+#### B. Hemispheric Breakdown
+NH drives the threshold entirely. SH improvement is modest and stable.
+
+| Config | NH CI | SH CI | Global CI | NH imp | SH imp | Global imp |
+|--------|-------|-------|-----------|--------|--------|------------|
+| d13C-only | 71.6 | 56.7 | 105.1 | — | — | — |
+| 1× dual | 14.0 | 52.1 | 57.6 | **+80.4%** | +8.1% | +45.1% |
+| 3× dual | 48.4 | 50.2 | 77.6 | +32.3% | +11.3% | +26.1% |
+| 5× dual | 117.7 | 52.3 | 144.1 | −64.5% | +7.8% | −37.2% |
+| 8× dual | 177.8 | 60.3 | 210.8 | −148.3% | −6.4% | −100.7% |
+
+#### C. Bootstrap Confidence
+| Metric | Mean ± std | 95% CI |
+|--------|-----------|--------|
+| d13C-only CI | 106.8 ± 2.8 | [101.1, 112.8] |
+| Dual CI | 59.0 ± 1.2 | [56.7, 61.6] |
+| Improvement | 44.7 ± 1.6% | [41.7, 47.6] |
+| P(improvement > 0%) | **100%** | |
+| P(improvement > 30%) | **100%** | |
+
+#### D. Year-Range Sensitivity
+| Range | d13C CI | Dual CI | Improvement |
+|-------|---------|---------|-------------|
+| Full (1999–2021) | 100.1 | 54.3 | +45.7% |
+| Post-padding (2005–2021) | 103.2 | 58.0 | +43.8% |
+| Post-2007 (2007–2021) | 105.1 | 57.6 | +45.1% |
+
+Year range has <2% effect on the result.
+
+#### E. Bound-Hit Diagnostics
+~99% of LSQ iterations hit at least one bound — expected for constrained optimization with 3 equations and 3 unknowns.
 
 ---
 

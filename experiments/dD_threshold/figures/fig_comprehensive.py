@@ -42,6 +42,14 @@ def main():
     with open(RESULTS_DIR / "phase5_sensitivity" / "sensitivity_results.json") as f:
         sens = json.load(f)
 
+    # Load Phase 6 deep dive for exact crossover and fine-grid sweep
+    deep_dive_path = RESULTS_DIR / "phase6_deep_dive" / "deep_dive_results.json"
+    if deep_dive_path.exists():
+        with open(deep_dive_path) as f:
+            deep = json.load(f)
+    else:
+        deep = None
+
     # Load hemispheric source summary
     src_summary = pd.read_csv(REPO_ROOT / "rel" / "data" / "Hemispheric_dD_sources_summary.csv")
 
@@ -82,20 +90,34 @@ def main():
     ax.set_ylim(0, 4.0)
     ax.grid(axis='y', alpha=0.3)
 
-    # ═══ Panel B: Threshold (core result) — UPDATED NUMBERS ═══
+    # ═══ Panel B: Threshold (core result) — from Phase 6 fine grid ═══
     ax = axes[0, 1]
-    multipliers = thresh['multipliers']
-    improvements = thresh['improvements']
-    sigma_vals = [improvements[str(m)]['mic_dD_sigma_permil'] for m in multipliers]
-    improve_vals = [improvements[str(m)]['improvement_pct'] for m in multipliers]
+
+    # Use Phase 6 fine-grid data if available, else fall back to Phase 3
+    if deep is not None:
+        fg = deep['A_fine_grid']
+        sweep = fg['sweep']
+        sigma_vals = [8.25 * float(m) for m in sorted(sweep.keys(), key=float)]
+        improve_vals = [sweep[m]['improvement'] for m in sorted(sweep.keys(), key=float)]
+        # Exact crossover from interpolation
+        cross = fg['crossover_0pct']
+        thresh_sigma = cross['sigma_permil'] if cross['sigma_permil'] else 41
+        cross_10 = fg['crossover_10pct']
+        thresh_sigma_10 = cross_10['sigma_permil'] if cross_10['sigma_permil'] else 29
+    else:
+        multipliers = thresh['multipliers']
+        improvements = thresh['improvements']
+        sigma_vals = [improvements[str(m)]['mic_dD_sigma_permil'] for m in multipliers]
+        improve_vals = [improvements[str(m)]['improvement_pct'] for m in multipliers]
+        thresh_sigma = thresh.get('threshold_mic_dD_sigma_permil', 41)
+        thresh_sigma_10 = None
 
     ax.plot(sigma_vals, improve_vals, 'o-', lw=2.5, color=c_blue, markersize=7, zorder=5)
     ax.axhline(0, color='black', lw=0.8)
     ax.axhline(10, color='gray', lw=1, ls='--', alpha=0.6, label='10% criterion')
     ax.axvspan(95, 140, alpha=0.12, color='red', label='Thanwerdas (2024)')
 
-    # Updated threshold annotation (~35-41 permil)
-    thresh_sigma = thresh.get('threshold_mic_dD_sigma_permil', 41)
+    # Exact threshold from Phase 6 interpolation
     ax.axvline(thresh_sigma, color=c_red, lw=2, ls=':', alpha=0.8)
 
     ax.fill_between(sigma_vals, improve_vals, 0,
@@ -208,21 +230,21 @@ def main():
     ax.legend(fontsize=8)
     ax.grid(axis='y', alpha=0.3)
 
-    # ═══ Panel F: Version comparison ═══
+    # ═══ Panel F: Version comparison (v1–v4) ═══
     ax = axes[2, 1]
 
-    versions = ['v1\n(Umezawa/\nglobal src)', 'v2\n(Dasgupta/\nglobal src)', 'v3\n(+ hemi\nsrc sigs)']
-    baseline_ci = [46.6, 37.8, 43.5]
-    improvements_v = [52, 60.8, 57.0]
+    versions = ['v1\n(Umezawa/\nglobal)', 'v2\n(Dasgupta/\nglobal)', 'v3\n(+ hemi\nδD src)', 'v4\n(+ hemi\nδ¹³C src)']
+    baseline_ci = [46.6, 37.8, 43.5, 57.6]
+    improvements_v = [52, 60.8, 57.0, 45.1]
 
-    x = np.arange(3)
+    x = np.arange(4)
     # Dual bars: CI width + improvement
     ax2 = ax.twinx()
     bars_ci = ax.bar(x - 0.15, baseline_ci, 0.3, label='Dual CI width', color=c_blue, alpha=0.8)
     bars_imp = ax2.bar(x + 0.15, improvements_v, 0.3, label='Improvement %', color=c_green, alpha=0.8)
 
     ax.set_xticks(x)
-    ax.set_xticklabels(versions, fontsize=8)
+    ax.set_xticklabels(versions, fontsize=7)
     ax.set_ylabel('CI width (Tg/yr)', color=c_blue, fontsize=9)
     ax2.set_ylabel('Improvement (%)', color=c_green, fontsize=9)
     ax.set_title('F. Data version comparison', fontsize=10, fontweight='bold')

@@ -440,6 +440,20 @@ class LoadedData:
     BB_dD_NHext_MC: Optional[np.ndarray] = None
     BB_dD_Trop_MC: Optional[np.ndarray] = None
     BB_dD_SHext_MC: Optional[np.ndarray] = None
+    # 3-box δ¹³C source signature MC matrices
+    FF_d13C_NHext_MC: Optional[np.ndarray] = None
+    FF_d13C_Trop_MC: Optional[np.ndarray] = None
+    FF_d13C_SHext_MC: Optional[np.ndarray] = None
+    Mic_d13C_NHext_MC: Optional[np.ndarray] = None
+    Mic_d13C_Trop_MC: Optional[np.ndarray] = None
+    Mic_d13C_SHext_MC: Optional[np.ndarray] = None
+    BB_d13C_NHext_MC: Optional[np.ndarray] = None
+    BB_d13C_Trop_MC: Optional[np.ndarray] = None
+    BB_d13C_SHext_MC: Optional[np.ndarray] = None
+    # 3-box atmospheric δ¹³C MC bootstrap
+    c13_NHext_MC: Optional[np.ndarray] = None
+    c13_Trop_MC: Optional[np.ndarray] = None
+    c13_SHext_MC: Optional[np.ndarray] = None
 
     # Model dimensions
     n_years: int = 0
@@ -728,17 +742,53 @@ def load_data(base_dir: Path, two_box: bool = False, three_box: bool = False) ->
         d.CH4_Trop  = d.CH4_global + CH4_TROP_OFFSET
         d.CH4_SHext = d.CH4_global + CH4_SHEXT_OFFSET
 
-        # δ¹³C per box: approximate from NH/SH
-        # NHext is slightly more depleted than NH, Trop near global, SHext similar to SH
-        if d.c13_NH is not None and d.c13_SH is not None:
-            # Use measured NH/SH as anchors with interpolation
-            d.c13_NHext = d.c13_NH - 0.05    # NHext slightly more negative than NH mean
-            d.c13_Trop  = 0.6 * d.c13_NH + 0.4 * d.c13_SH  # tropics: weighted
-            d.c13_SHext = d.c13_SH + 0.03    # SHext slightly less negative than SH mean
+        # δ¹³C per box: use ThreeBox_atm_d13C_annual.csv if available
+        d13C_3box_file = data_dir / "ThreeBox_atm_d13C_annual.csv"
+        if d13C_3box_file.exists():
+            d13C_3box = pd.read_csv(d13C_3box_file)
+            d13C_years = d13C_3box['year'].values
+            d13C_nhext = d13C_3box['NHext'].values
+            d13C_trop  = d13C_3box['Trop'].values
+            d13C_shext = d13C_3box['SHext'].values
+
+            full_c13_nhext = np.full(tl + 1, d13C_nhext[0])
+            full_c13_trop  = np.full(tl + 1, d13C_trop[0])
+            full_c13_shext = np.full(tl + 1, d13C_shext[0])
+            for i, yr in enumerate(d13C_years):
+                idx = int(yr) - 1999
+                if 0 <= idx < tl + 1:
+                    full_c13_nhext[idx] = d13C_nhext[i]
+                    full_c13_trop[idx]  = d13C_trop[i]
+                    full_c13_shext[idx] = d13C_shext[i]
+            # Forward-fill pre-observation years
+            for arr in [full_c13_nhext, full_c13_trop, full_c13_shext]:
+                for j in range(1, len(arr)):
+                    if j > 0 and int(1999 + j) < int(d13C_years[0]):
+                        arr[j] = arr[j-1]
+
+            d.c13_NHext = full_c13_nhext
+            d.c13_Trop  = full_c13_trop
+            d.c13_SHext = full_c13_shext
+            print(f"  3-box atm δ¹³C: loaded {len(d13C_3box)} years from ThreeBox_atm_d13C_annual.csv")
+        elif d.c13_NH is not None and d.c13_SH is not None:
+            # Fallback: interpolate from NH/SH
+            d.c13_NHext = d.c13_NH - 0.05
+            d.c13_Trop  = 0.6 * d.c13_NH + 0.4 * d.c13_SH
+            d.c13_SHext = d.c13_SH + 0.03
+            print("  3-box atm δ¹³C: interpolated from NH/SH (fallback)")
         else:
             d.c13_NHext = d.c13_global - 0.1
             d.c13_Trop  = d.c13_global
             d.c13_SHext = d.c13_global + 0.1
+            print("  3-box atm δ¹³C: offset from global (fallback)")
+
+        # 3-box atmospheric δ¹³C bootstrap MC
+        for box_name in ['NHext', 'Trop', 'SHext']:
+            mc_file = data_dir / f"ThreeBox_atm_d13C_{box_name}_MC.csv"
+            if mc_file.exists():
+                _df = pd.read_csv(mc_file)
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, f'c13_{box_name}_MC', _mat)
 
         # δD atmospheric: use ThreeBox_atm_dD_annual.csv (2005–2024)
         dD_3box_file = data_dir / "ThreeBox_atm_dD_annual.csv"
@@ -783,6 +833,25 @@ def load_data(base_dir: Path, two_box: bool = False, three_box: bool = False) ->
             'BB_dD_SHext_MC': 'BB_dD_SHext_MC.csv',
         }
         for attr, fname in _three_box_src.items():
+            fpath = data_dir / fname
+            if fpath.exists():
+                _df = pd.read_csv(fpath)
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, attr, _mat)
+
+        # δ¹³C source signature MC (NHext / Trop / SHext)
+        _three_box_d13C_src = {
+            'FF_d13C_NHext_MC': 'FF_d13C_NHext_MC.csv',
+            'FF_d13C_Trop_MC':  'FF_d13C_Trop_MC.csv',
+            'FF_d13C_SHext_MC': 'FF_d13C_SHext_MC.csv',
+            'Mic_d13C_NHext_MC': 'Mic_d13C_NHext_MC.csv',
+            'Mic_d13C_Trop_MC':  'Mic_d13C_Trop_MC.csv',
+            'Mic_d13C_SHext_MC': 'Mic_d13C_SHext_MC.csv',
+            'BB_d13C_NHext_MC': 'BB_d13C_NHext_MC.csv',
+            'BB_d13C_Trop_MC':  'BB_d13C_Trop_MC.csv',
+            'BB_d13C_SHext_MC': 'BB_d13C_SHext_MC.csv',
+        }
+        for attr, fname in _three_box_d13C_src.items():
             fpath = data_dir / fname
             if fpath.exists():
                 _df = pd.read_csv(fpath)
@@ -937,14 +1006,19 @@ def sample_atm_dD_hemi(data: LoadedData, k: int, target_length: int):
 
 
 def sample_source_signatures_three_box(rng, data: LoadedData, k: int, target_length: int):
-    """Sample 3-box δD source signatures for MC iteration k.
+    """Sample 3-box δD and δ¹³C source signatures for MC iteration k.
 
     Returns dict with keys:
-        ff_d13C, bb_d13C, mic_d13C  (global — δ¹³C shared across boxes)
-        ff_dD_NHext, ff_dD_Trop, ff_dD_SHext
-        bb_dD_NHext, bb_dD_Trop, bb_dD_SHext
-        mic_dD_NHext, mic_dD_Trop, mic_dD_SHext
-        ff_dD, bb_dD, mic_dD  (global fallback)
+        Per-box δ¹³C:
+          ff_d13C_NHext, ff_d13C_Trop, ff_d13C_SHext
+          bb_d13C_NHext, bb_d13C_Trop, bb_d13C_SHext
+          mic_d13C_NHext, mic_d13C_Trop, mic_d13C_SHext
+        Per-box δD:
+          ff_dD_NHext, ff_dD_Trop, ff_dD_SHext
+          bb_dD_NHext, bb_dD_Trop, bb_dD_SHext
+          mic_dD_NHext, mic_dD_Trop, mic_dD_SHext
+        Global fallbacks:
+          ff_d13C, bb_d13C, mic_d13C, ff_dD, bb_dD, mic_dD
     """
     tl = target_length
     global_sigs = sample_source_signatures(rng, data, k, tl)
@@ -957,9 +1031,21 @@ def sample_source_signatures_three_box(rng, data: LoadedData, k: int, target_len
         return global_arr
 
     result = {
-        'ff_d13C': global_sigs['ff_d13C'],
-        'bb_d13C': global_sigs['bb_d13C'],
+        # Per-box δ¹³C source signatures (fall back to global if MC data unavailable)
+        'ff_d13C_NHext':  _pick_box(data.FF_d13C_NHext_MC,  global_sigs['ff_d13C'], k, tl),
+        'ff_d13C_Trop':   _pick_box(data.FF_d13C_Trop_MC,   global_sigs['ff_d13C'], k, tl),
+        'ff_d13C_SHext':  _pick_box(data.FF_d13C_SHext_MC,  global_sigs['ff_d13C'], k, tl),
+        'bb_d13C_NHext':  _pick_box(data.BB_d13C_NHext_MC,  global_sigs['bb_d13C'], k, tl),
+        'bb_d13C_Trop':   _pick_box(data.BB_d13C_Trop_MC,   global_sigs['bb_d13C'], k, tl),
+        'bb_d13C_SHext':  _pick_box(data.BB_d13C_SHext_MC,  global_sigs['bb_d13C'], k, tl),
+        'mic_d13C_NHext': _pick_box(data.Mic_d13C_NHext_MC, global_sigs['mic_d13C'], k, tl),
+        'mic_d13C_Trop':  _pick_box(data.Mic_d13C_Trop_MC,  global_sigs['mic_d13C'], k, tl),
+        'mic_d13C_SHext': _pick_box(data.Mic_d13C_SHext_MC, global_sigs['mic_d13C'], k, tl),
+        # Global δ¹³C fallback
+        'ff_d13C':  global_sigs['ff_d13C'],
+        'bb_d13C':  global_sigs['bb_d13C'],
         'mic_d13C': global_sigs['mic_d13C'],
+        # Per-box δD source signatures
         'ff_dD_NHext': _pick_box(data.FF_dD_NHext_MC, global_sigs['ff_dD'], k, tl),
         'ff_dD_Trop':  _pick_box(data.FF_dD_Trop_MC,  global_sigs['ff_dD'], k, tl),
         'ff_dD_SHext': _pick_box(data.FF_dD_SHext_MC, global_sigs['ff_dD'], k, tl),
@@ -969,6 +1055,7 @@ def sample_source_signatures_three_box(rng, data: LoadedData, k: int, target_len
         'mic_dD_NHext': _pick_box(data.Mic_dD_NHext_MC, global_sigs['mic_dD'], k, tl),
         'mic_dD_Trop':  _pick_box(data.Mic_dD_Trop_MC,  global_sigs['mic_dD'], k, tl),
         'mic_dD_SHext': _pick_box(data.Mic_dD_SHext_MC, global_sigs['mic_dD'], k, tl),
+        # Global δD fallback
         'ff_dD': global_sigs['ff_dD'],
         'bb_dD': global_sigs['bb_dD'],
         'mic_dD': global_sigs['mic_dD'],
