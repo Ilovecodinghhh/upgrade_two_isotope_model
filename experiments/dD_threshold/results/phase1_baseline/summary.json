@@ -1,0 +1,24 @@
+{
+  "onebox_dual": {
+    "FF_mean": 43.08797438847959,
+    "FF_95CI_width_mean": 201.3056354968011,
+    "FF_95CI_width_2007_2022": 206.66349639624045
+  },
+  "onebox_d13C_only": {
+    "FF_mean": 177.0620174706022,
+    "FF_95CI_width_mean": 101.53014996473544,
+    "FF_95CI_width_2007_2022": 104.06504808181224
+  },
+  "twobox_dual": {
+    "FF_mean": 52.89172811432827,
+    "FF_95CI_width_mean": 46.617138030203456,
+    "FF_95CI_width_2007_2022": 52.79102229529397
+  },
+  "twobox_d13C_only": {
+    "FF_mean": 179.36285261069793,
+    "FF_95CI_width_mean": 96.6062122903859,
+    "FF_95CI_width_2007_2022": 99.00152159877649
+  },
+  "onebox_improvement_pct": -98.3,
+  "twobox_improvement_pct": 51.7
+}
