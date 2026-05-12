@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Supplementary Information:\\
+Reducing KIE Sensitivity via a Dual-Isotope Agreement Filter}
+\author{He}
+\date{}
+
+\begin{document}
+\maketitle
+
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+
+% ============================================================
+\section*{S1. Phase 1: $\delta^{13}$C-Only Baseline}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/phase1_d13C_only_trends.png}
+\caption{$\delta^{13}$C-only emission trends under three KIE scenarios (Saueressig, Cantrell, sampled). The spread between Saueressig and Cantrell medians is 2.0~Tg~yr$^{-1}$ for fossil fuel and 2.0~Tg~yr$^{-1}$ for microbial.}
+\label{fig:s1}
+\end{figure}
+
+% ============================================================
+\section*{S2. Phase 2: Dual-Isotope WLS}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/phase2_dual_isotope_trends.png}
+\caption{Dual-isotope WLS emission trends. KIE spread increases to 10.1~Tg~yr$^{-1}$ (5$\times$ worse than $\delta^{13}$C-only).}
+\label{fig:s2}
+\end{figure}
+
+% ============================================================
+\section*{S3. Phase 3: KSR Comparison (1-Box)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/fig1_KSR_summary.png}
+\caption{KSR summary histograms for 1-box model. KSR(FF) = 0.20, KSR(Mic) = 0.32---both $<$ 1, indicating dual-isotope WLS amplifies KIE sensitivity.}
+\label{fig:s3}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/fig2_uncertainty_timeseries.png}
+\caption{Time series of emission uncertainty ($\sigma$) for $\delta^{13}$C-only vs.\ dual-isotope WLS.}
+\label{fig:s4}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/fig3_emission_timeseries.png}
+\caption{Emission time series with 90\% confidence intervals under three KIE scenarios, for both $\delta^{13}$C-only and dual-isotope inversions.}
+\label{fig:s5}
+\end{figure}
+
+% ============================================================
+\section*{S4. Phase 4b: Two-Box Model (Fixed Exchange)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/fig5_2box_fixed.png}
+\caption{Two-box model results with corrected inter-hemispheric exchange isotopic flux. KSR(FF) = 0.22, KSR(Mic) = 0.35---consistent with 1-box findings.}
+\label{fig:s6}
+\end{figure}
+
+% ============================================================
+\section*{S5. Phase 5: Cl Fraction $\times$ Weight Interaction}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/fig7_Cl_weight_interaction.png}
+\caption{Interaction between Cl fraction (0.6\%--6.5\%) and $\delta$D weight ($w_D$). Higher Cl amplifies $\delta$D-induced KIE degradation due to the large Cl-D KIE ($\alpha = 1.52$).}
+\label{fig:s7}
+\end{figure}
+
+% ============================================================
+\section*{S6. Phase 6: Agreement Framework (Base)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../experiments/KIE_sensitivity/figures/fig8_agreement_framework.png}
+\caption{Agreement framework base results. At $T = 100$~Tg~yr$^{-1}$: $R_{\text{Cantrell}} = 68.1\%$, $R_{\text{Saueressig}} = 43.5\%$, KSR = 2.48.}
+\label{fig:s8}
+\end{figure}
+
+% ============================================================
+\section*{S7. Sink Fractionation Parameters}
+
+\begin{table}[h]
+\caption{Default sink fractions and KIE values used in this study.}
+\label{tab:s_sink}
+\centering
+\begin{tabular}{lccccc}
+\toprule
+Sink & Fraction & $^{13}$C KIE & Source & D KIE & Source \\
+\midrule
+OH & 0.835 & $\mathcal{U}$[1.0039, 1.0054] & S01/C90 & $\mathcal{U}$[1.294, 1.327] & S01/G97 \\
+Cl & 0.035 & $\mathcal{N}$(1.066, 0.002) & S95 & $\mathcal{N}$(1.52, 0.02) & S96 \\
+Strat & 0.070 & 1.003 & R02 & 1.179 & I04 \\
+Soil & 0.060 & 1.020 & S16 & 1.083 & S16 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Hemispheric sink fractions (two-box model).}
+\label{tab:s_hemi}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Hemisphere & OH & Cl & Strat & Soil \\
+\midrule
+NH & 0.825 & 0.040 & 0.070 & 0.065 \\
+SH & 0.850 & 0.028 & 0.070 & 0.052 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section*{S8. Cl Fraction Configurations Tested}
+
+\begin{table}[h]
+\caption{Cl fraction configurations used in Phase 5 sensitivity analysis.}
+\label{tab:s_cl}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Config & OH & Cl & Strat & Soil \\
+\midrule
+Thanwerdas (low) & 0.899 & 0.006 & 0.030 & 0.065 \\
+Default & 0.835 & 0.035 & 0.070 & 0.060 \\
+High Cl & 0.805 & 0.065 & 0.070 & 0.060 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
