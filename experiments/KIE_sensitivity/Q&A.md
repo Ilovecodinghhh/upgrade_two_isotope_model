@@ -167,11 +167,18 @@ In practice, 50–100 Tg/yr is the physically meaningful range. Lower thresholds
 **Q: For the agreement filter, did you use the 1-box or 2-box model? Why?**
 
 A: The agreement filter results in FigM6 (and in Phases 6, 6b, 6c, 7, 8) all use the **1-box (global mean) model**. Reasons:
-1. **Data availability:** The δD atmospheric record (`GlobMean_dD_iterations_UmezawaCal_noBUDS.xlsx`) is a global mean product — there is no published hemispheric δD record with sufficient precision.
+1. **Current data loading:** Our `common.py` loads only the global-mean δD product (`GlobMean_dD_iterations_UmezawaCal_noBUDS.xlsx`). The 2-box scripts (`2x2_two.py`, `3x3_two.py`) construct hemispheric δD by applying a **fixed offset hack**: `dD_NH = dD_global − 6‰`, `dD_SH = dD_global + 6‰` (parameter `DD_IH_OFFSET = 6.0` in `common.py`). This is a rough approximation, not real hemispheric observations.
 2. **Simplicity and interpretability:** The 1-box keeps the agreement test clean — one δ¹³C budget and one δD budget, no inter-hemispheric exchange corrections confounding the consistency check.
 3. **Phase 4b showed the 2-box doesn't help for WLS:** KSR(FF) was 0.22 in the 2-box WLS, essentially the same as the 1-box WLS (0.20). Adding spatial resolution doesn't fix the fundamental problem, so the 1-box is sufficient to demonstrate the agreement filter works.
 
-The 2-box agreement filter (Phase 4b + Phase 6 merged) is a potential future extension once hemispheric δD data become available.
+**However — hemispheric δD data DO exist** and can be constructed from Riddell-Young's own data package. The `dD_globmean.py` script in Riddell-Young's supplementary data (path: `ImportantReferences/Riddell-Young2025PNAS_DS/Riddell-Young_2025_dD_GlobMean/`) computes and saves:
+- **Weekly NH and SH means** with 1000 MC iterations (`smoothedNH_matrix`, `smoothedSH_matrix`)
+- **Semi-hemispheric annual means** for 4 latitude bands: PN (Polar North), TN (Tropical North), TS (Tropical South), PS (Polar South) — available in `data/dD_semihem_results.xlsx` (2005–2024, all data / no INSTAAR / no INSTAAR+BUDS variants)
+- **Hemispheric CSV output** (`HemMean_dD_dei_DasguptaCal_noBUDS.csv`) with columns `Glob_smooth_mean`, `NH_smooth_mean`, `SH_smooth_mean`
+
+The station-level data files (33 sites from ~82°N to ~90°S across NOAA/INSTAAR, MPI, Tohoku/NIPR, and IMAU networks) are all included. A proper 2-box agreement filter could use these real NH/SH δD products instead of the ±6‰ offset hack — this would be a meaningful extension.
+
+**Note on the 2-box scripts (`2x2_two.py`, `3x3_two.py`):** These *do* run δD hemispheric inversions, but they use the offset hack (`dD_NH = global − 6`, `dD_SH = global + 6`), NOT real hemispheric observations. The ±6‰ offset was taken from the approximate NH–SH gradient reported in Riddell-Young et al. (2025), but it's a constant applied to a single global time series — it doesn't capture year-to-year hemispheric variability, which is the whole point of going to 2-box.
 
 ---
 
