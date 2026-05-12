@@ -28,34 +28,63 @@ Run the existing `2x2_one.py` model three times using only the δ¹³C-derived e
 
 ### Phase 2: Quantify Dual-Isotope KIE Sensitivity (δ¹³C + δD combined)
 
-Create a new script `kie_sensitivity.py` that implements a **joint dual-isotope inversion** — using both δ¹³C and δD *simultaneously* as constraints in a single least-squares system (3 equations for 2 unknowns → over-determined):
-
-```
-Eq 1: S_total = FF + Mic + BB_fixed           (mass balance)
-Eq 2: S × δ¹³C_src = FF×δ¹³C_FF + Mic×δ¹³C_Mic + BB×δ¹³C_BB  (¹³C balance)
-Eq 3: S × δD_src = FF×δD_FF + Mic×δD_Mic + BB×δD_BB            (D balance)
-```
-
-Solve via weighted least squares (WLS) or bounded `lsq_linear`.
-
-Run this joint system with the same three KIE settings and compute the same metric.
+WLS joint dual-isotope inversion (3 equations, 2 unknowns).
 
 ### Phase 3: Comparison & Visualization
 
-**Key outputs:**
-1. **KIE Sensitivity Ratio (KSR):**
-   ```
-   KSR = Spread(δ¹³C-only, Cantrell vs Saueressig) / Spread(dual-isotope, Cantrell vs Saueressig)
-   ```
-   If KSR > 1 (ideally >> 1), dual isotopes reduce KIE sensitivity.
+Compute KSR, KS test, uncertainty reduction; produce Figures 1–3.
 
-2. **Histogram comparison:** Overlapping distributions of FF/Mic trends for all 6 runs (3 KIE × 2 methods)
+### Phase 4 / 4b: Extension to 2-Box (NH/SH)
 
-3. **Uncertainty reduction plot:** 2σ uncertainty band width for FF and Mic emissions over time, comparing δ¹³C-only vs dual-isotope
+Per-hemisphere WLS; Phase 4b fixes the exchange-term bug in the original
+Phase 4 implementation.
 
-### Phase 4: Extension to 2-Box (NH/SH)
+### Phase 5: Weight Sweep & Cl-Fraction Interaction
 
-Repeat Phases 1–3 using the hemispheric 2-box model (`3x3_two.py` logic) to test whether spatial disaggregation amplifies or reduces the dual-isotope KIE-dampening effect.
+Vary the δD weight (0 to 1) and the Cl-sink fraction; demonstrates there
+is no optimal WLS weight and that higher Cl fraction amplifies the
+problem.
+
+### Phase 6 / 6b / 6c: Bayesian Agreement Framework
+
+Solve δ¹³C and δD independently, then filter by consistency. 6 = framework;
+6b = threshold sweep + KIE discriminant; 6c = OSSE.
+
+### Phase 7: Time-Varying OH-¹³C KIE
+
+Tests whether the discriminant survives if the bulk OH-¹³C KIE drifts
+year-by-year (motivated by He 2026's declining-τ result). Five scenarios:
+constant Saueressig, constant Cantrell, drift Saueressig→midpoint, drift
+Cantrell→midpoint, convergent (Saueressig→1.0046 by 2022).
+
+### Phase 8: Fine Threshold Sweep + Temporal Stability
+
+20 thresholds at 10-Tg/yr resolution with bootstrap CIs on the
+discriminant; then splits 1999–2022 into three 8-year epochs to test
+robustness across atmospheric regimes (plateau, renewed growth,
+acceleration).
+
+---
+
+## Final Results (Phases 1–8)
+
+- **Coupled WLS (Phases 1–5):** KSR ≈ 0.2 — δD coupling makes KIE
+  sensitivity **5× worse**.
+- **Agreement filter (Phases 6, 6b, 8a):** best KSR = **3.21** at
+  threshold 50 Tg/yr; maximum discriminant **25.4 pp** at threshold
+  90 Tg/yr (statistically significant for every threshold from
+  30–220 Tg/yr).
+- **OSSE (Phase 6c):** filter gives ~7% bias reduction, ~5% RMSE
+  reduction; cannot eliminate the fundamental ±18 Tg/yr KIE bias.
+- **Time-varying KIE (Phase 7):** discriminant survives even with
+  symmetric drift toward the midpoint (12.8 pp; significant).
+- **Temporal stability (Phase 8b):** discriminant 21.5–28.3 pp across
+  three independent 8-year epochs — robust to atmospheric regime.
+
+**Headline:** The δ¹³C–δD *agreement rate* (not the joint inversion) is
+a novel observational discriminant for the OH-¹³C KIE controversy. The
+real atmosphere is more internally consistent with Cantrell's KIE
+across all tested epochs and scenarios.
 
 ---
 
@@ -109,15 +138,35 @@ Based on the literature (Riddell-Young 2025 Fig. 3; He 2026), we expect KSR ≈ 
 
 ```
 experiments/KIE_sensitivity/
-├── README.md                  ← This file
-├── PLAN.md                    ← Detailed coding plan with agent prompts
-├── kie_sensitivity.py         ← Main experiment script (to be created)
-├── results/                   ← Output directory
+├── README.md                      ← This file (overview)
+├── PLAN.md                        ← Detailed coding plan with agent prompts
+├── RESULTS.md                     ← Complete per-phase results
+├── phase1_d13c_only.py            ← δ¹³C-only baseline
+├── phase2_dual_isotope.py         ← Dual-isotope WLS
+├── phase3_comparison.py           ← KSR and comparison figures
+├── phase4_two_box.py              ← Two-box (original — exchange bug)
+├── phase4b_two_box_fixed.py       ← Two-box (corrected)
+├── phase5_weight_Cl_sweep.py      ← Weight + Cl sweep
+├── phase6_agreement.py            ← Bayesian agreement framework
+├── phase6b_threshold_sweep.py     ← Threshold sweep + KIE discriminant
+├── phase6c_OSSE.py                ← Synthetic-truth OSSE
+├── phase7_timevarying_OH.py       ← Time-varying KIE robustness
+├── phase8_fine_thresholds.py      ← Fine sweep + temporal stability
+├── make_manuscript_figs.py        ← Manuscript-quality figures
+├── results/
 │   ├── phase1_d13C_only/
 │   ├── phase2_dual_isotope/
 │   ├── phase3_comparison/
-│   └── phase4_two_box/
-└── figures/                   ← Publication-quality figures
+│   ├── phase4_two_box/
+│   ├── phase4b_two_box_fixed/
+│   ├── phase5_weight_Cl_sweep/
+│   ├── phase6_bayesian/
+│   ├── phase6b_threshold_sweep/
+│   ├── phase6c_OSSE/
+│   ├── phase7_timevarying_OH/
+│   └── phase8_fine_thresholds/
+└── figures/
+    └── fig1..fig14, figM*, phase1/2 histograms
 ```
 
 ---
