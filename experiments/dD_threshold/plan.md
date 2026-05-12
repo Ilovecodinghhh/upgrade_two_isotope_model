@@ -61,9 +61,9 @@ Key results:
 
 ### High Priority (for publication)
 
-- [ ] **Re-run Phase 6 deep dive with v4 data**: Phase 6 results (exact crossover, hemispheric breakdown, bootstrap) are from v3. Need to re-run with the updated hemispheric δ¹³C to get final numbers
-- [ ] **Update figures**: `fig_comprehensive.py` needs to be re-run with v4 results
-- [ ] **Paper Table 1**: Update all numbers to v4 values
+- [x] **Re-run Phase 6 deep dive with v4 data**: Exact crossover at 3.82× (σ=31.5‰), 10% threshold at 3.53× (σ=29.1‰). Bootstrap: 44.7±1.6%, P(>0)=100%, P(>30%)=100%
+- [x] **Update figures**: `fig_comprehensive.py` re-run with Phase 6 fine-grid data, v4 version comparison, exact crossover annotation
+- [x] **Paper Table 1**: Updated in RESULT.md with all v4 Phase 6 numbers
 
 ### Model extensions
 
