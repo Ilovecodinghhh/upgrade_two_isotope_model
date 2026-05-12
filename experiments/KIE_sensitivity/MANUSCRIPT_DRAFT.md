@@ -24,7 +24,7 @@ Critically, we show that the **agreement rate itself** functions as an observati
 
 Atmospheric methane has risen from $\sim$1775 ppb in 2006 to $\sim$1930 ppb in 2024, with growth rates exceeding 15 ppb yr$^{-1}$ in some years (He et al., 2026a). Simultaneously, global-mean $\delta^{13}\mathrm{C}$-$\mathrm{CH_4}$ has decreased by $\sim$0.7‰ since 2007 (Lan et al., 2021; Riddell-Young et al., 2025), and $\delta\mathrm{D}$-$\mathrm{CH_4}$ has declined by $\sim$6.0 $\pm$ 0.8‰ between 2005 and 2023 (Riddell-Young et al., 2025). These isotopic shifts point toward an increasingly $^{13}$C-depleted and D-depleted source mixture — consistent with enhanced microbial emissions from wetlands, agriculture, and waste (Basu et al., 2022; Chandra et al., 2024).
 
-Yet this interpretation is far from settled. Atmospheric ethane measurements implicate rising fossil-fuel fugitive emissions (Rice et al., 2016; Worden et al., 2017). Satellite inversions of TROPOMI attribute 25% of post-2019 growth to increasing emissions and 16% to declining OH (He et al., 2026a). Three-dimensional variational inversions using both $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ show substantial sensitivity to assumed source signatures and kinetic fractionation (Thanwerdas et al., 2024). The controversy is not merely academic: a shift of $\pm$20 Tg yr$^{-1}$ between fossil and microbial categories fundamentally changes the policy-relevant levers for methane mitigation under the Global Methane Pledge.
+Yet this interpretation is far from settled. Atmospheric ethane measurements implicate rising fossil-fuel fugitive emissions (Rice et al., 2016; Worden et al., 2017). Satellite inversions of TROPOMI attribute 25% of post-2019 growth to increasing emissions and 16% to declining OH (He et al., 2026a). Three-dimensional variational inversions using both $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ show substantial sensitivity to assumed source signatures and kinetic fractionation (Thanwerdas et al., 2024). The controversy is not merely academic: a shift of $\pm$20 Tg yr$^{-1}$ between fossil and microbial categories fundamentally changes the policy-relevant levers for methane mitigation under the Global Methane Pledge. If the post-2007 growth is predominantly microbial (wetlands, agriculture), mitigation must focus on land-use management, rice cultivation practices, and livestock emissions — all diffuse and politically difficult. If fossil-fuel fugitive emissions are rising significantly, the response is comparatively straightforward: plugging leaks in natural gas infrastructure. The KIE uncertainty is thus not merely a scientific nuisance but a direct impediment to rational climate policy.
 
 ### 1.2 The KIE Problem
 
@@ -158,7 +158,7 @@ We run $N$ = 5000 iterations with seed = 42 over the period 1999–2022 (23 year
 | $\delta\mathrm{D}$-$\mathrm{CH_4}$ global mean (1000 MC iterations) | Riddell-Young et al. (2025) reconstruction, Umezawa calibration scale, excl. BUDS | 1999–2022 |
 | Biomass burning $\mathrm{CH_4}$ | GFEDv4s (van der Werf et al., 2017) scaled by Worden et al. (2017) | 1997–2022 |
 
-The $\delta\mathrm{D}$-$\mathrm{CH_4}$ dataset is a harmonized global annual-mean product from multi-network (NOAA/INSTAAR, Tohoku/NIPR) measurements calibrated on the Umezawa (2012) VSMOW scale, following the methodology of Riddell-Young et al. (2025).
+The $\delta\mathrm{D}$-$\mathrm{CH_4}$ dataset is a harmonized global annual-mean product from multi-network (NOAA/INSTAAR, Tohoku/NIPR) measurements calibrated on the Umezawa (2012) VSMOW scale, following the methodology of Riddell-Young et al. (2025). For years with sparse $\delta\mathrm{D}$ station coverage (particularly 1999–2004), the global mean is interpolated from the available network sites with inflated uncertainty in the 1000-member Monte Carlo ensemble; this is reflected in wider per-iteration scatter in the $\delta\mathrm{D}$-derived FF estimates for those early years.
 
 ---
 
@@ -183,14 +183,14 @@ The coupled WLS consistently **amplifies** KIE sensitivity (KSR < 1) regardless 
 ### 3.2 The Agreement Filter — Core Result (Phase 6)
 
 ![Agreement Framework](figures/fig8_agreement_framework.png)
-*Figure 1. The Agreement Filter concept. (a) Schematic: each iteration solves $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ independently; iterations where $|\mathrm{FF}^{(C)} - \mathrm{FF}^{(D)}| < \tau$ pass the filter. (b) Per-year agreement rate for Saueressig (blue) and Cantrell (red) KIE assumptions, $\tau$ = 100 Tg/yr.*
+*Figure 6. The Agreement Filter concept. (a) Schematic: each iteration solves $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ independently; iterations where $|\mathrm{FF}^{(C)} - \mathrm{FF}^{(D)}| < \tau$ pass the filter. (b) Per-year agreement rate for Saueressig (blue) and Cantrell (red) KIE assumptions, $\tau$ = 100 Tg/yr.*
 
 When the Agreement Filter retains only internally consistent iterations, it preferentially removes those where the assumed OH-$^{13}$C KIE produces a $\delta^{13}\mathrm{C}$-derived FF estimate that is incompatible with the $\delta\mathrm{D}$-derived estimate. Because the OH-D KIE ($\alpha_D$) is an independent quantity (measured by Saueressig et al., 2001, with no Cantrell analog), the δD inversion is not contaminated by the $^{13}$C KIE controversy — it serves as a genuinely independent cross-check.
 
 ### 3.3 The Agreement Rate as a KIE Discriminant (Phases 6b, 8a)
 
 ![Fine Threshold Sweep](figures/fig13_fine_threshold.png)
-*Figure 2. Fine-resolution threshold sweep (Phase 8a). (a) Agreement rate vs. threshold for Saueressig (blue) and Cantrell (red). (b) Discriminant Δ = rate(Cantrell) − rate(Saueressig) with bootstrap 95% CI. (c) KSR(FF) vs. threshold.*
+*Figure S6. Fine-resolution threshold sweep (Phase 8a). (a) Agreement rate vs. threshold for Saueressig (blue) and Cantrell (red). (b) Discriminant Δ = rate(Cantrell) − rate(Saueressig) with bootstrap 95% CI. (c) KSR(FF) vs. threshold.*
 
 At a threshold of $\tau$ = 90 Tg yr$^{-1}$ ($N$ = 5000):
 - **Cantrell agreement rate:** 70.8% [70.5%, 71.1%]
@@ -230,7 +230,7 @@ A legitimate concern is that the bulk OH-$^{13}$C KIE may drift over the 1999–
 Even under the most aggressive symmetric drift toward the midpoint — an unphysically large secular change that no current measurement supports — the discriminant retains **12.8 pp** with statistically non-overlapping confidence intervals.
 
 ![Time-Varying KIE](figures/fig12_timevarying_OH.png)
-*Figure 3. Phase 7 results. (a) KIE trajectories. (b) Per-year agreement rate under each scenario. (c) Discriminant power under three pair-wise comparisons (green = statistically significant).*
+*Figure 5. Phase 7 results. (a) KIE trajectories. (b) Per-year agreement rate under each scenario. (c) Discriminant power under three pair-wise comparisons (green = statistically significant).*
 
 ### 3.5 Robustness Test II: Temporal Stability (Phase 8b)
 
@@ -244,22 +244,14 @@ The 1999–2022 record spans three qualitatively different atmospheric regimes. 
 | 2007–2014 | Renewed growth phase | 46.2% | 67.7% | **+21.5** | ✅ |
 | 2015–2022 | Post-2014 acceleration | 46.1% | 70.2% | **+24.1** | ✅ |
 
-![Temporal Stability](figures/fig14_temporal_stability.png)
-*Figure 4. Temporal stability (Phase 8b). (a) Agreement rate by epoch with bootstrap error bars. (b) Discriminant Δ by epoch (green = statistically significant).*
+![Temporal Stability](figures/fig14_temporal_stability_v2.png)
+*Figure 4b. Temporal stability (Phase 8b). (a) Agreement rate by epoch with bootstrap error bars and significance brackets. (b) Discriminant Δ by epoch (green = statistically significant, *** = p < 0.001).*
 
 The discriminant is significant in **all three epochs**, demonstrating that the signal is a structural property of the atmosphere and not an artifact of any single event (e.g., the 2007 growth inflection, post-2014 microbial surge, or COVID-era anomalies).
 
 ### 3.6 OSSE Validation (Phase 6c)
 
-To validate the filter's mechanism, we conducted an Observing System Simulation Experiment (OSSE) with known synthetic truth (FF = 24%, Mic = 71%, BB = 5%; OH-$^{13}$C KIE = 1.0046; OH-D KIE = 1.310):
-
-| Metric | Unfiltered (Cantrell) | Filtered (Cantrell) | Improvement |
-|--------|----------------------|--------------------:|:-----------:|
-| FF Bias (Tg/yr) | +8.2 | +7.6 | −7% |
-| FF RMSE (Tg/yr) | 19.1 | 18.1 | −5% |
-| Mic Bias (Tg/yr) | −8.2 | −7.6 | −7% |
-
-The filter provides modest but consistent bias and RMSE reduction ($\sim$5–7%). Importantly, it **cannot eliminate** the fundamental $\pm$18 Tg yr$^{-1}$ systematic offset caused by using the wrong KIE — confirming that $\delta\mathrm{D}$ is a *diagnostic filter* rather than a "silver bullet" that resolves the KIE controversy through brute-force constraint.
+An Observing System Simulation Experiment (OSSE) with known synthetic truth (FF = 24%, Mic = 71%, BB = 5%; OH-$^{13}$C KIE = 1.0046) confirms the filter's mechanism: it reduces FF bias by ~7% and RMSE by ~5%, but cannot eliminate the fundamental $\pm$18 Tg yr$^{-1}$ systematic offset caused by using the wrong KIE. This validates our interpretation that $\delta\mathrm{D}$ serves as a *diagnostic filter* rather than a constraint that resolves the KIE controversy through brute-force coupling. Full OSSE methodology and recovery tables are provided in Supplementary §S3.
 
 ### 3.7 Threshold Selection
 
@@ -308,11 +300,13 @@ If Cantrell's KIE is indeed correct, this has implications consistent with Ridde
 
 3. **1-box framework.** The global-mean approach averages over hemispheric gradients that carry source-type information (Naus et al., 2019). A 2-box agreement filter would be a natural extension once hemispheric $\delta\mathrm{D}$ data become routinely available.
 
-4. **Lifetime parameterization.** We adopt He et al. (2026a)'s declining-$\tau$ trend. An alternative constant-$\tau$ scenario shifts absolute agreement rates by $\sim$2 pp but does not change the discriminant (Phase 6b).
+4. **Lifetime parameterization.** We adopt He et al. (2026a)'s declining-$\tau$ trend. Notably, the discriminant is **insensitive** to the choice of lifetime mode: fixed vs. time-varying $\tau$ produces identical agreement rates and discriminant values (Phase 6b). This insensitivity to one of the field's largest uncertainties strengthens the robustness of the discriminant finding.
 
 5. **Cl sink fraction.** The discriminant is sensitive to the assumed Cl fraction (19–36 pp across 0.6–6.5% Cl), but remains statistically significant across the full plausible range (Phase 9b). Higher Cl compresses the discriminant because Cl's large $\delta\mathrm{D}$ KIE ($\alpha$ = 1.52) makes the $\delta\mathrm{D}$ constraint more permissive.
 
 6. **OH-D KIE uncertainty.** Both Cantrell and Saueressig inversions sample the same OH-D KIE distribution, so this uncertainty cancels in the discriminant calculation. However, if the true OH-D KIE lies outside [1.294, 1.327], both agreement rates would shift.
+
+7. **OSSE structural bias.** The OSSE uses the same 1-box model for generating and inverting synthetic data, which precludes testing for structural misspecification (e.g., transport errors, latitudinal source heterogeneity). The modest 7% bias reduction should be interpreted as a lower bound on the filter's value in a more realistic setting where model–observation mismatch provides additional leverage for the consistency check.
 
 ---
 
@@ -332,9 +326,9 @@ If Cantrell's KIE is indeed correct, this has implications consistent with Ridde
 
 1. **Adopt the Agreement Filter as a standard diagnostic** in isotope-based methane box models. It requires no additional data beyond what dual-isotope studies already produce and provides an objective quality metric for Monte Carlo ensembles.
 
-2. **Prioritize the Cantrell OH-$^{13}$C KIE** ($\alpha$ = 1.0054) for global $\delta\mathrm{D}$-$\mathrm{CH_4}$ studies. Our atmospheric-record-based analysis favors this value with high statistical confidence across 23 years and three atmospheric regimes.
+2. **The atmospheric record is more internally consistent with the Cantrell OH-$^{13}$C KIE** ($\alpha$ = 1.0054). Our analysis favors this value over Saueressig ($\alpha$ = 1.0039), but we emphasize that both values remain experimentally plausible within their stated uncertainties, and that our discriminant — while statistically significant — cannot serve as a substitute for a direct laboratory measurement. We recommend that future isotope-based budget studies report results under both KIE assumptions alongside the agreement-rate diagnostic.
 
-3. **A new laboratory measurement remains the gold standard.** Our discriminant provides observational support for Cantrell, but a modern high-precision measurement of $\alpha_{^{13}\mathrm{C}}^{\mathrm{OH}}$ at atmospherically relevant temperatures (220–300 K) would be definitive.
+3. **A new laboratory measurement remains the gold standard.** Our discriminant provides observational support for Cantrell, but a modern high-precision measurement of $\alpha_{^{13}\mathrm{C}}^{\mathrm{OH}}$ at atmospherically relevant temperatures (220–300 K) would be definitive. The 35-year gap since Cantrell et al. (1990) is striking given the policy importance of the methane budget.
 
 4. **Report KSR alongside traditional uncertainty metrics** to quantify how strongly a given model configuration propagates KIE uncertainty into the budget.
 
@@ -396,15 +390,18 @@ Zhao, Y., Saunois, M., Bousquet, P., et al. (2023). Reconciling the bottom-up an
 
 | Figure | File | Caption |
 |--------|------|---------|
-| Fig. 1 | `figures/fig8_agreement_framework.png` | Agreement Filter schematic and per-year agreement rate |
-| Fig. 2 | `figures/fig13_fine_threshold.png` | Fine-resolution threshold sweep: rates, discriminant Δ ± CI, KSR |
-| Fig. 3 | `figures/fig12_timevarying_OH.png` | Time-varying KIE robustness test (Phase 7) |
-| Fig. 4 | `figures/fig14_temporal_stability.png` | Temporal stability across three 8-year epochs |
-| Fig. 5 | `figures/fig15_high_n.png` | N=5000 agreement rates, discriminant + CIs, KSR + bootstrap CIs |
-| Fig. 6 | `figures/fig16_cl_sensitivity.png` | Cl fraction sensitivity: agreement rates and discriminant under 3 Cl scenarios |
+| Fig. 1 | `figures/figM1_schematic_v2.png` | Agreement Filter schematic with keep/reject paths |
+| Fig. 2 | `figures/fig6_weight_sweep.png` | WLS weight sweep: monotonic worsening (the step function) |
+| Fig. 3 | `figures/figM6_KSR_summary_v2.png` | KSR summary bar chart with N=5000 bootstrap CIs |
+| Fig. 4 | `figures/figM7_forest_plot.png` | Forest plot: Cantrell vs. Saueressig full-record + epoch stability |
+| Fig. 5 | `figures/fig12_timevarying_OH.png` | Time-varying KIE robustness test (Phase 7) |
+| Fig. 6 | `figures/fig8_agreement_framework.png` | Agreement framework 4-panel (promoted from supplementary) |
+| Fig. 7 | `figures/fig16_cl_sensitivity.png` | Cl fraction sensitivity of the agreement-filter discriminant |
 | Fig. S1 | `figures/fig1_KSR_summary.png` | KSR summary histograms (Phase 3: 1-box comparison) |
-| Fig. S2 | `figures/fig6_weight_sweep.png` | WLS weight sweep showing monotonic worsening |
-| Fig. S3 | `figures/fig9_threshold_sweep.png` | Coarse threshold sweep (Phase 6b, 7 thresholds) |
-| Fig. S4 | `figures/fig11_OSSE_recovery.png` | OSSE synthetic-truth recovery |
-| Fig. S5 | `figures/figM6_KSR_summary.png` | Manuscript-quality KSR summary panel |
-| Fig. S6 | `figures/fig17_year_agree_sweep.png` | Year-agreement fraction sweep (sample sizes + KSR) |
+| Fig. S2 | `figures/phase1_d13C_only_trends.png` | Baseline δ¹³C-only trends |
+| Fig. S3 | `figures/phase2_dual_isotope_trends.png` | WLS dual-isotope trends |
+| Fig. S4 | `figures/fig9_threshold_sweep.png` | Coarse threshold sweep (Phase 6b) |
+| Fig. S5 | `figures/fig11_OSSE_recovery.png` | OSSE synthetic-truth recovery |
+| Fig. S6 | `figures/fig13_fine_threshold.png` | Fine threshold sweep (Phase 8a) |
+| Fig. S7 | `figures/fig15_high_n.png` | N=5000 results: rates, discriminant CIs, KSR CIs |
+| Fig. S8 | `figures/fig17_year_agree_sweep.png` | Year-agreement fraction sweep |
