@@ -331,6 +331,12 @@ class LoadedData:
 
     # δD annual global mean
     dD_global: np.ndarray = field(default_factory=lambda: np.array([]))
+    # δD hemispheric MC iterations (rows=years, cols=MC iterations)
+    dD_NH_MC: Optional[np.ndarray] = None
+    dD_SH_MC: Optional[np.ndarray] = None
+    # δD hemispheric annual means (for fallback)
+    dD_NH: Optional[np.ndarray] = None
+    dD_SH: Optional[np.ndarray] = None
 
     # MC iteration matrices (rows=years, cols=iterations)
     d13C_MC: np.ndarray = field(default_factory=lambda: np.array([]))
@@ -354,6 +360,14 @@ class LoadedData:
     FF_dD_MC_EDGAR: Optional[pd.DataFrame] = None
     Mic_d13C_MC: Optional[pd.DataFrame] = None
     Mic_dD_MC: Optional[pd.DataFrame] = None
+
+    # Hemispheric source signature MC matrices (rows=years, cols=MC)
+    FF_dD_NH_MC: Optional[np.ndarray] = None
+    FF_dD_SH_MC: Optional[np.ndarray] = None
+    Mic_dD_NH_MC: Optional[np.ndarray] = None
+    Mic_dD_SH_MC: Optional[np.ndarray] = None
+    BB_dD_NH_MC: Optional[np.ndarray] = None
+    BB_dD_SH_MC: Optional[np.ndarray] = None
 
     # CarbonTracker BB (for 2×2 models)
     BB_annual: np.ndarray = field(default_factory=lambda: np.array([]))
@@ -413,6 +427,45 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
     dD_num = dD_df.apply(pd.to_numeric, errors="coerce")
     d.dD_global = dD_num.iloc[:, 1].to_numpy(dtype=np.float64) - 0.5
     d.dD_MC = dD_num.iloc[:, 5:].to_numpy(dtype=np.float64)
+
+    # === Hemispheric δD MC iterations (from Riddell-Young station-level pipeline) ===
+    if two_box:
+        dD_NH_file = data_dir / "NHMean_dD_iterations_DasguptaCal_noBUDS.xlsx"
+        dD_SH_file = data_dir / "SHMean_dD_iterations_DasguptaCal_noBUDS.xlsx"
+        if dD_NH_file.exists() and dD_SH_file.exists():
+            dD_NH_df = pd.read_excel(dD_NH_file, header=None)
+            dD_SH_df = pd.read_excel(dD_SH_file, header=None)
+            # Col 0 = year (2005–2023), cols 1–1000 = MC iterations
+            dD_NH_years = dD_NH_df.iloc[:, 0].to_numpy(dtype=int)
+            dD_NH_mc = dD_NH_df.iloc[:, 1:].to_numpy(dtype=np.float64)
+            dD_SH_mc = dD_SH_df.iloc[:, 1:].to_numpy(dtype=np.float64)
+            # Forward-fill NaN rows (2020+ may be all-NaN)
+            for arr in [dD_NH_mc, dD_SH_mc]:
+                for i in range(1, arr.shape[0]):
+                    mask = np.isnan(arr[i])
+                    if mask.all():
+                        arr[i] = arr[i - 1]
+            d.dD_NH_MC = dD_NH_mc
+            d.dD_SH_MC = dD_SH_mc
+            d.dD_NH = np.nanmean(d.dD_NH_MC, axis=1)
+            d.dD_SH = np.nanmean(d.dD_SH_MC, axis=1)
+            d._dD_hemi_years = dD_NH_years
+
+    # === Hemispheric δD source signatures MC ===
+    if two_box:
+        for attr, fname in [
+            ('FF_dD_NH_MC', 'FF_dD_NH_MC.csv'),
+            ('FF_dD_SH_MC', 'FF_dD_SH_MC.csv'),
+            ('Mic_dD_NH_MC', 'Mic_dD_NH_MC.csv'),
+            ('Mic_dD_SH_MC', 'Mic_dD_SH_MC.csv'),
+            ('BB_dD_NH_MC', 'BB_dD_NH_MC.csv'),
+            ('BB_dD_SH_MC', 'BB_dD_SH_MC.csv'),
+        ]:
+            fpath = data_dir / fname
+            if fpath.exists():
+                mc_df = pd.read_csv(fpath)
+                # Col 0 = year (1998–2021), cols 1–1000 = MC iterations
+                setattr(d, attr, mc_df.iloc[:, 1:].to_numpy(dtype=np.float64))
 
     # === Source signatures — d13C ===
     BB_d13C_data = pd.read_csv(src_dir / "BB_d13C_annual.csv", header=None)
@@ -569,6 +622,84 @@ def sample_atm_dD(data: LoadedData, k: int, target_length: int) -> np.ndarray:
     if len(arr) < tl1:
         arr = np.concatenate([np.full(tl1 - len(arr), arr[0]), arr])
     return arr
+
+
+def sample_atm_dD_hemi(data: LoadedData, k: int, target_length: int):
+    """Return sampled hemispheric δD time series (NH, SH), each length target_length+1.
+
+    Uses real hemispheric MC iterations when available.
+    Falls back to global ± DD_IH_OFFSET when hemispheric data absent.
+
+    Returns (dD_NH, dD_SH) as 1-D arrays.
+    """
+    tl1 = target_length + 1
+
+    if data.dD_NH_MC is not None and data.dD_SH_MC is not None:
+        # Hemispheric MC data covers 2005–2023 (19 years)
+        # Model years start at 1999. Need to align.
+        hemi_start = int(data._dD_hemi_years[0])  # 2005
+        model_start = int(data.model_years[0])     # 1999
+        offset = hemi_start - model_start           # 6
+
+        ki = min(k, data.dD_NH_MC.shape[1] - 1)
+        nh_raw = data.dD_NH_MC[:, ki]
+        sh_raw = data.dD_SH_MC[:, ki]
+
+        # Build full-length arrays with pre-padding for years before hemi data
+        dD_NH = np.full(tl1, nh_raw[0])  # pre-fill with earliest value
+        dD_SH = np.full(tl1, sh_raw[0])
+
+        for i, yr_idx in enumerate(range(offset, offset + len(nh_raw))):
+            if 0 <= yr_idx < tl1:
+                dD_NH[yr_idx] = nh_raw[i]
+                dD_SH[yr_idx] = sh_raw[i]
+
+        # Post-pad if needed
+        if offset + len(nh_raw) < tl1:
+            dD_NH[offset + len(nh_raw):] = nh_raw[-1]
+            dD_SH[offset + len(sh_raw):] = sh_raw[-1]
+
+        return dD_NH, dD_SH
+    else:
+        # Fallback: global ± offset
+        dD_glob = sample_atm_dD(data, k, target_length)
+        return dD_glob - DD_IH_OFFSET, dD_glob + DD_IH_OFFSET
+
+
+def sample_source_sigs_hemi(rng, data: LoadedData, k: int, target_length: int):
+    """Sample hemispheric source signatures for MC iteration k.
+
+    Returns dict with keys:
+        ff_d13C, bb_d13C, mic_d13C (global — same as before),
+        ff_dD_NH, ff_dD_SH, bb_dD_NH, bb_dD_SH, mic_dD_NH, mic_dD_SH
+    """
+    tl = target_length
+    # Get global d13C signatures (unchanged)
+    sigs = sample_source_signatures(rng, data, k, tl)
+
+    # Hemispheric δD source signatures
+    for sector, nh_attr, sh_attr, nh_key, sh_key in [
+        ('FF', 'FF_dD_NH_MC', 'FF_dD_SH_MC', 'ff_dD_NH', 'ff_dD_SH'),
+        ('Mic', 'Mic_dD_NH_MC', 'Mic_dD_SH_MC', 'mic_dD_NH', 'mic_dD_SH'),
+        ('BB', 'BB_dD_NH_MC', 'BB_dD_SH_MC', 'bb_dD_NH', 'bb_dD_SH'),
+    ]:
+        nh_mc = getattr(data, nh_attr, None)
+        sh_mc = getattr(data, sh_attr, None)
+
+        if nh_mc is not None and sh_mc is not None:
+            ki = min(k, nh_mc.shape[1] - 1)
+            # Source sig MC covers 1998–2021 (24 years)
+            # Model years start at 1999 (index offset 1)
+            nh_raw = nh_mc[1:, ki]  # skip 1998 → starts at 1999
+            sh_raw = sh_mc[1:, ki]
+            sigs[nh_key] = pad_to_length(nh_raw, tl)
+            sigs[sh_key] = pad_to_length(sh_raw, tl)
+        else:
+            # Fallback: use global dD for both hemispheres
+            sigs[nh_key] = sigs[sector.lower() + '_dD']
+            sigs[sh_key] = sigs[sector.lower() + '_dD']
+
+    return sigs
 
 
 # ============================================================================
