@@ -1,0 +1,13 @@
+{
+  "basu_spread": 13.0,
+  "our_d13C_only": {
+    "trend_saueressig": 13.41529508087622,
+    "trend_cantrell": 12.733833516203248,
+    "kie_spread": 0.681461564672972
+  },
+  "our_dual": {
+    "trend_saueressig": -2.4622414985215713,
+    "trend_cantrell": -1.5897328664804888,
+    "kie_spread": 0.8725086320410824
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "threshold_sweep": {
+    "25": {
+      "KSR_FF": NaN,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": NaN,
+      "saueressig_rate": 0.059869565217391306,
+      "cantrell_rate": 0.16456521739130434,
+      "saueressig_n_good": 0,
+      "cantrell_n_good": 2
+    },
+    "50": {
+      "KSR_FF": 3.213146248855449,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": 0.6169484930132505,
+      "saueressig_rate": 0.14569565217391303,
+      "cantrell_rate": 0.33443478260869564,
+      "saueressig_n_good": 53,
+      "cantrell_n_good": 176
+    },
+    "75": {
+      "KSR_FF": 2.162808647027883,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": 0.916560851921262,
+      "saueressig_rate": 0.27156521739130435,
+      "cantrell_rate": 0.5152608695652174,
+      "saueressig_n_good": 155,
+      "cantrell_n_good": 380
+    },
+    "100": {
+      "KSR_FF": 2.4786466642412712,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": 0.799769392169237,
+      "saueressig_rate": 0.4345217391304348,
+      "cantrell_rate": 0.6811739130434783,
+      "saueressig_n_good": 290,
+      "cantrell_n_good": 572
+    },
+    "150": {
+      "KSR_FF": 1.5107880630196786,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": 1.3121269518772518,
+      "saueressig_rate": 0.7603043478260869,
+      "cantrell_rate": 0.9053043478260869,
+      "saueressig_n_good": 671,
+      "cantrell_n_good": 876
+    },
+    "200": {
+      "KSR_FF": 1.0900886824358877,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": 1.818517858228601,
+      "saueressig_rate": 0.9397826086956522,
+      "cantrell_rate": 0.9795652173913043,
+      "saueressig_n_good": 922,
+      "cantrell_n_good": 980
+    },
+    "300": {
+      "KSR_FF": 1.0025428644444978,
+      "spread_c13": 1.9823457360625483,
+      "spread_agree": 1.9773176852253123,
+      "saueressig_rate": 0.9973478260869565,
+      "cantrell_rate": 0.9993478260869565,
+      "saueressig_n_good": 998,
+      "cantrell_n_good": 999
+    }
+  },
+  "bootstrap_CI": {
+    "saueressig": {
+      "rate": 0.4345217391304348,
+      "CI_95": [
+        0.428,
+        0.44095760869565215
+      ]
+    },
+    "cantrell": {
+      "rate": 0.6811739130434783,
+      "CI_95": [
+        0.6750423913043477,
+        0.687261956521739
+      ]
+    },
+    "difference": 0.2466521739130435,
+    "significant": true
+  },
+  "lifetime_effect": {
+    "varying": {
+      "saueressig": {
+        "rate": 0.4345217391304348,
+        "n_good": 290
+      },
+      "cantrell": {
+        "rate": 0.6811739130434783,
+        "n_good": 572
+      }
+    },
+    "fixed": {
+      "saueressig": {
+        "rate": 0.4345217391304348,
+        "n_good": 288
+      },
+      "cantrell": {
+        "rate": 0.6817826086956522,
+        "n_good": 573
+      }
+    }
+  }
+}
