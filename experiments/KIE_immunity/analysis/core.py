@@ -144,9 +144,13 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
         else:
             sigs = sample_source_signatures_hemi(rng, data, k, n)
 
-        f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
-        f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
-        f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+        # Hemispheric δ¹³C source signatures
+        f13_bb_NH  = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+        f13_ff_NH  = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+        f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+        f13_bb_SH  = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+        f13_ff_SH  = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+        f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
 
         dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
         fD_NH_atm = delta_to_fraction_dD(dD_NH_MC)
@@ -171,15 +175,17 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
         fD_mic_SH = delta_to_fraction_dD(sigs['mic_dD_SH'])
 
         for j in range(n):
-            for S, d13C_src, dD_src, fD_bb_h, fD_ff_h, fD_mic_h in [
+            for S, d13C_src, dD_src, f13_bb_h, f13_ff_h, f13_mic_h, fD_bb_h, fD_ff_h, fD_mic_h in [
                 (S_NH[j], d13C_src_NH[j], dD_src_NH[j],
+                 f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j],
                  fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]),
                 (S_SH[j], d13C_src_SH[j], dD_src_SH[j],
+                 f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j],
                  fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]),
             ]:
                 A = np.array([
                     [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_h, f13_ff_h, f13_mic_h],
                     [fD_bb_h, fD_ff_h, fD_mic_h],
                 ])
                 B = np.array([S, S*d13C_src, S*dD_src])

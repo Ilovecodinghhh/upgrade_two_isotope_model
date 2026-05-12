@@ -1,7 +1,11 @@
 # KIE Immunity — Results
 
 **Date:** 2026-05-12  
-**Status:** Phases 1–9 complete (v2 real hemispheric δD + robustness + bootstrap)
+**Status:** Phases 1–13 complete (v2 real hemispheric δD + robustness + bootstrap)  
+**v3 upgrade:** Real hemispheric δ¹³C source signatures integrated into all scripts.  
+Previously, δ¹³C source sigs (FF/BB/Mic) were global for both hemispheres.  
+Now uses `FF_d13C_NH_MC.csv` / `FF_d13C_SH_MC.csv` etc. (6 new MC files, 1000 iter each).  
+All existing results should be re-run with v3 to quantify impact of hemispheric δ¹³C.
 
 ---
 

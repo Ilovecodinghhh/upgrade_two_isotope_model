@@ -204,3 +204,92 @@ v2.0  + KIE sampling + time-varying τ + diagnostics
 ```
 
 Each branch addresses a different modelling concern: **v3.0a/3.1a** tackle statistical rigour, **v3.0b/3.1b** tackle spatial resolution, **v3.2** isolates BB uncertainty, and **v4.0** simplifies the source partition for policy-relevant questions.
+
+---
+
+## Three-Box Models (NHext / Trop / SHext)
+
+*Branch: `three-box`*
+
+Two new models extend the NH/SH 2-box framework to three latitude bands:
+- **NHext** (>30°N): boreal / high-latitude sources
+- **Trop** (30°S–30°N): dominant tropical sources
+- **SHext** (<30°S): Southern Hemisphere extratropics
+
+### 2×2_three.py — BB-Fixed, Separate Isotopes, Three-Box
+
+| Feature | 2×2_two.py (2-box) | **2×2_three.py (3-box)** |
+|---------|-------------------|--------------------------|
+| Geometry | NH + SH | **NHext + Trop + SHext** |
+| Exchange | 1 path (NH↔SH, τ_ex~N(1.0,0.1)) | **2 paths** (NHext↔Trop τ_NT~N(0.8,0.1); Trop↔SHext τ_TS~N(1.2,0.1)) |
+| δ¹³C isotopes | Real NH/SH obs | Interpolated to 3 boxes from NH/SH |
+| δD atmospheric | Real NH/SH MC | **Real 3-box obs** (ThreeBox_atm_dD_annual.csv, 2005–2024) |
+| δD source sigs | NH/SH MC (1000 iter) | **Per-box MC** (NHext/Trop/SHext, 1000 iter each) |
+| BB split | NH 55%, SH 45% | **NHext 30%, Trop 55%, SHext 15%** (GFED4) |
+| Solver | Analytic 2×2 per box | Analytic 2×2 per box per isotope |
+| Sink fractions | NH/SH | **Box-specific** (tropics: more OH; extratropics: more strat) |
+| Lifetime ratio | NH 0.95×, SH 1.05× | **NHext 1.05×, Trop 0.90×, SHext 1.08×** |
+
+### 3×3_three.py — Coupled Dual-Isotope, Three-Box
+
+| Feature | 3×3_two.py (2-box) | **3×3_three.py (3-box)** |
+|---------|-------------------|--------------------------|
+| Geometry | NH + SH | **NHext + Trop + SHext** |
+| Exchange | 1 path | **2 paths** (NHext↔Trop; Trop↔SHext) |
+| System | 3×3 coupled (BB, FF, Mic) | **3×3 coupled per box** |
+| Solver | `lsq_linear` (bounded LS) | `lsq_linear` per box with **box-specific weights** |
+| δD source sigs | NH/SH MC | **Per-box MC** |
+| δ¹³C source sigs | Global (same for NH/SH) | Global (same for all boxes) |
+| Condition numbers | NH/SH | **Per-box** (NHext, Trop, SHext reported separately) |
+
+### New Data Files Used
+
+| File | Description | Coverage |
+|------|-------------|----------|
+| `ThreeBox_atm_dD_annual.csv` | Station-derived atmospheric δD annual means | 2005–2024, 3 boxes |
+| `FF_dD_{NHext,Trop,SHext}_MC.csv` | Fossil-fuel δD source signatures | 1998–2021, 1000 MC × 24 yr |
+| `BB_dD_{NHext,Trop,SHext}_MC.csv` | Biomass-burning δD source signatures | 1998–2021, 1000 MC × 24 yr |
+| `Mic_dD_{NHext,Trop,SHext}_MC.csv` | Microbial δD source signatures | 1998–2021, 1000 MC × 24 yr |
+| `ThreeBox_dD_sources_summary.csv` | Summary stats (mean ± std per box per year) | 1998–2021 |
+
+### New Parameters in `common.py`
+
+```python
+SINK_FRACTIONS_NHEXT = {'OH': 0.810, 'Cl': 0.040, 'Strat': 0.080, 'Soil': 0.070}
+SINK_FRACTIONS_TROP  = {'OH': 0.860, 'Cl': 0.035, 'Strat': 0.055, 'Soil': 0.050}
+SINK_FRACTIONS_SHEXT = {'OH': 0.840, 'Cl': 0.025, 'Strat': 0.080, 'Soil': 0.055}
+
+LIFETIME_RATIO_NHEXT = 1.05   # slower destruction in extratropics
+LIFETIME_RATIO_TROP  = 0.90   # faster destruction in tropics (more OH)
+LIFETIME_RATIO_SHEXT = 1.08
+
+BB_NHEXT_FRACTION = 0.30; BB_TROP_FRACTION = 0.55; BB_SHEXT_FRACTION = 0.15
+
+TAU_EX_NT_MEAN = 0.8; TAU_EX_TS_MEAN = 1.2  # years
+```
+
+### Updated Model Evolution Tree
+
+```
+v1.0  Fixed KIE, fixed τ, deterministic 2×2
+  │
+  ▼
+v2.0  + KIE sampling + time-varying τ + diagnostics
+  │
+  ├──► v3.0b  Two-hemisphere 3×3 (NH/SH)
+  │      │
+  │      ▼
+  │    v3.1b  + condition guard + separate NH/SH signatures
+  │      │
+  │      ├──► 2×2_two.py  BB-fixed, separate isotopes, 2-box
+  │      │       │
+  │      │       ▼
+  │      │     **2×2_three.py  BB-fixed, separate isotopes, 3-box** ← NEW
+  │      │
+  │      └──► 3×3_two.py  Coupled dual-isotope, 2-box
+  │              │
+  │              ▼
+  │            **3×3_three.py  Coupled dual-isotope, 3-box** ← NEW
+  │
+  └──► v4.0   2-source (Mic vs Non-Mic)
+```

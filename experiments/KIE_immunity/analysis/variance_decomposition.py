@@ -135,10 +135,22 @@ def run_2box(data, mode, n_iter, seed,
             sigs = sample_source_signatures_hemi(rng, data, k, n)
         else:
             sigs = sample_source_signatures(rng, data, k, n)
-        
-        f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
-        f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
-        f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+
+        # δ¹³C source signatures: hemispheric when available
+        if use_real_hemi_dD and 'ff_d13C_NH' in sigs:
+            f13_bb_NH  = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+            f13_ff_NH  = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+            f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+            f13_bb_SH  = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+            f13_ff_SH  = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+            f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
+        else:
+            f13_bb  = delta_to_fraction_d13C(sigs['bb_d13C'])
+            f13_ff  = delta_to_fraction_d13C(sigs['ff_d13C'])
+            f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+            f13_bb_NH = f13_bb_SH = f13_bb
+            f13_ff_NH = f13_ff_SH = f13_ff
+            f13_mic_NH = f13_mic_SH = f13_mic
         
         if mode == "dual":
             # δD atmospheric observations
@@ -179,13 +191,17 @@ def run_2box(data, mode, n_iter, seed,
                 fD_mic_NH = fD_mic_SH = fD_mic
             
             for j in range(n):
-                for hemi_idx, (S, d13C_src, dD_src, fD_bb_h, fD_ff_h, fD_mic_h) in enumerate([
-                    (S_NH[j], d13C_src_NH[j], dD_src_NH[j], fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]),
-                    (S_SH[j], d13C_src_SH[j], dD_src_SH[j], fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]),
+                for hemi_idx, (S, d13C_src, dD_src, f13_bb_h, f13_ff_h, f13_mic_h, fD_bb_h, fD_ff_h, fD_mic_h) in enumerate([
+                    (S_NH[j], d13C_src_NH[j], dD_src_NH[j],
+                     f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j],
+                     fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]),
+                    (S_SH[j], d13C_src_SH[j], dD_src_SH[j],
+                     f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j],
+                     fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]),
                 ]):
                     A = np.array([
                         [1.0, 1.0, 1.0],
-                        [f13_bb[j], f13_ff[j], f13_mic[j]],
+                        [f13_bb_h, f13_ff_h, f13_mic_h],
                         [fD_bb_h, fD_ff_h, fD_mic_h],
                     ])
                     B = np.array([S, S*d13C_src, S*dD_src])
@@ -196,15 +212,16 @@ def run_2box(data, mode, n_iter, seed,
         else:
             # δ¹³C-only: BB fixed, solve for FF and Mic
             for j in range(n):
-                denom = f13_ff[j] - f13_mic[j]
-                if abs(denom) < 1e-15: continue
-                for S, d13C_src, BB in [
-                    (S_NH[j], d13C_src_NH[j], BB_NH),
-                    (S_SH[j], d13C_src_SH[j], BB_SH),
+                denom_NH = f13_ff_NH[j] - f13_mic_NH[j]
+                denom_SH = f13_ff_SH[j] - f13_mic_SH[j]
+                for S, d13C_src, BB, denom, f13_bb_h, f13_mic_h in [
+                    (S_NH[j], d13C_src_NH[j], BB_NH, denom_NH, f13_bb_NH[j], f13_mic_NH[j]),
+                    (S_SH[j], d13C_src_SH[j], BB_SH, denom_SH, f13_bb_SH[j], f13_mic_SH[j]),
                 ]:
+                    if abs(denom) < 1e-15: continue
                     S_rem = S - BB
-                    rhs = S*d13C_src - BB*f13_bb[j]
-                    ff = (rhs - S_rem*f13_mic[j]) / denom
+                    rhs = S*d13C_src - BB*f13_bb_h
+                    ff = (rhs - S_rem*f13_mic_h) / denom
                     FF_G[j,k] += max(0, min(ff, S*1.5))
     
     return FF_G
