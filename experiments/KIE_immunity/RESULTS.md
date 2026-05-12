@@ -1,11 +1,8 @@
 # KIE Immunity — Results
 
 **Date:** 2026-05-12  
-**Status:** Phases 1–13 complete (v2 real hemispheric δD + robustness + bootstrap)  
-**v3 upgrade:** Real hemispheric δ¹³C source signatures integrated into all scripts.  
-Previously, δ¹³C source sigs (FF/BB/Mic) were global for both hemispheres.  
-Now uses `FF_d13C_NH_MC.csv` / `FF_d13C_SH_MC.csv` etc. (6 new MC files, 1000 iter each).  
-All existing results should be re-run with v3 to quantify impact of hemispheric δ¹³C.
+**Status:** Phases 1–13 complete — **v3 (real hemispheric δ¹³C + δD)**  
+**Previous versions:** v1 (global δD), v2 (real hemi δD, global δ¹³C sigs)
 
 ---
 
@@ -33,37 +30,56 @@ Cantrell (1.0054), compute post-2007 FF trend for each, report spread.
 Benchmark: Basu et al. (2022 ACP) get 13.0 Tg/yr KIE spread in their 3D
 TM5-4DVAR inversion.
 
-**Three δD configurations tested (v2):**
+**Three data configurations tested:**
 
-| Config | δD treatment | Source sigs | Atmospheric δD |
+| Config | δD atmospheric | δD source sigs | δ¹³C source sigs |
 |---|---|---|---|
-| **δ¹³C-only** | Not used | Global | — |
-| **Dual (offset)** | Global ± 6‰ | Global | Global ± DD_IH_OFFSET |
-| **Dual (real hemi)** | Station-level MC | Gridded hemispheric | NH/SH MC iterations |
+| **δ¹³C-only** | Not used | — | Global |
+| **Dual (offset)** | Global ± 6‰ | Global | Global |
+| **Dual (real hemi)** | Station-level NH/SH MC | Hemispheric MC | **Hemispheric MC (v3)** |
+
+**v3 upgrade (this run):** Added real hemispheric δ¹³C source signature MC
+files (`FF_d13C_NH_MC.csv`, `FF_d13C_SH_MC.csv`, etc.) in addition to
+the v2 hemispheric δD. All 3×3 solver matrices now use per-hemisphere
+δ¹³C fractionation.
 
 ---
 
-## Phase 1–4: Core Results (v2)
+## ⚡ v2 → v3 Impact: Hemispheric δ¹³C Source Signatures Changed Everything
+
+| Metric | v2 (global δ¹³C sigs) | **v3 (hemi δ¹³C sigs)** | Change |
+|---|---|---|---|
+| FF trend (ΔFF) | **−6.9 Tg/yr** (robust) | **+4.8 Tg/yr** (not robust) | **Sign flipped** |
+| σ(FF) | 14.3 Tg/yr | 17.8 Tg/yr | +24% wider |
+| KIE% | 19.8% | **24.8%** | +25% |
+| Sig% | 42.8% | **40.6%** | similar |
+| KIE spread (Basu test) | 0.8 Tg/yr | **6.9 Tg/yr** | **8.6× larger** |
+| Robustness matrix | 18/18 negative | **9/18 negative, 1/18 robust** | **Collapsed** |
+| EDGAR direction match | Opposite (−6.8 vs +20.6) | **Same sign** (+8.8 vs +20.6) | Improved |
+
+**Bottom line:** Hemispheric δ¹³C source signatures are a first-order control.
+When NH and SH get different δ¹³C signatures for FF/BB/Mic, the 3×3 system
+behaves fundamentally differently. The v2 "KIE immunity" finding — that δD
+renders KIE irrelevant — is **weakened** in v3.
+
+---
+
+## Phase 1–4: Core Results (v3)
 
 ### Variance Decomposition
 
 | Config | σ(FF) Tg/yr | KIE% | Sig% | τ% | Residual% |
 |--------|:-----------:|:----:|:----:|:--:|:---------:|
-| δ¹³C-only | 31.1 [28.8, 33.2] | 11.1 [3.4, 17.4] | 82.6 [79.3, 85.1] | 0.0 [0.0, 1.8] | 6.3 [0.0, 14.7] |
-| Dual (offset) | 16.8 [14.8, 19.1] | 0.0 [0.0, 0.8] | 0.0 [0.0, 0.0] | 15.2 [0.0, 28.2] | 84.7 [70.0, 100.0] |
-| **Dual (real hemi)** | **14.3 [13.3, 15.2]** | **19.8 [4.3, 30.7]** | **42.8 [31.3, 52.3]** | **1.1 [0.0, 2.2]** | **36.3 [19.3, 58.8]** |
+| δ¹³C-only | 31.1 | 11.2 | 82.7 | 0.0 | 6.1 |
+| Dual (offset) | 17.1 | 0.0 | 0.0 | 15.2 | 84.8 |
+| **Dual (real hemi)** | **17.8** | **10.7** | **40.0** | **36.7** | **12.6** |
 
-*95% bootstrap CIs from 1000 bootstrap resamples of 400 MC iterations (Phase 9).*
-
-**σ(FF) reductions:**
-- δ¹³C-only → dual (offset): 31.1 → 16.8 Tg/yr (**−46%**)
-- δ¹³C-only → dual (real hemi): 31.1 → 14.3 Tg/yr (**−54%**)
-- Offset → real hemi: 16.8 → 14.3 Tg/yr (**−15%** additional)
-
-**Variance budget key test (Phase 9):**
-Real-hemi Sig% [31.3, 52.3] vs offset Sig% [0.0, 0.0] — CIs don't overlap.
-The source-signature contribution is **statistically significantly** resolved
-in the real-hemi configuration but invisible with the offset hack.
+**v3 changes vs v2:**
+- σ(FF) real hemi: 14.3 → **17.8 Tg/yr** (wider — hemispheric δ¹³C adds variance)
+- KIE%: 19.8 → **10.7%** → **24.8% (bootstrap)** — still significant
+- Sig%: 42.8 → **40.0%** — stable
+- τ%: 1.1 → **36.7%** — lifetime now matters much more!
+- Residual: 36.3 → **12.6%** — variance budget now well-explained
 
 ### Basu 2022 Comparison — KIE Spread
 
@@ -72,279 +88,241 @@ in the real-hemi configuration but invisible with the offset hack.
 | Basu 2022 (3D, δ¹³C-only) | — | — | **13.0 Tg/yr** |
 | Our δ¹³C-only | +13.4 | +12.7 | **0.7 Tg/yr** |
 | Our dual (offset) | −2.5 | −1.6 | **0.9 Tg/yr** |
-| Our dual (real hemi) | −6.3 | −7.1 | **0.8 Tg/yr** |
+| **Our dual (real hemi) v3** | **+6.3** | **−0.6** | **6.9 Tg/yr** |
 
-### FF Trend Reversal (headline finding)
+**⚡ KIE spread jumped from 0.9 to 6.9 Tg/yr!** Hemispheric δ¹³C source
+signatures partially restored KIE sensitivity. Saueressig now gives a
+positive FF trend (+6.3) while Cantrell gives near-zero (−0.6). The KIE
+controversy is no longer negligible — it determines the **sign** of the trend.
 
-| Config | Post-2007 ΔFF (Tg/yr) |
-|---|---|
-| δ¹³C-only | **+13** |
-| Dual (offset) | −2 |
-| Dual (real hemi) | **−6 to −7** |
+### FF Trend (Post-2007 ΔFF)
+
+| Config | ΔFF (Tg/yr) | 90% CI | Robust? |
+|---|---|---|---|
+| δ¹³C-only | +13.0 | [+12.7, +13.3] | ✓ positive |
+| Dual (offset) | −3.1 | [−3.3, −2.7] | ✓ negative |
+| **Dual (real hemi) v3** | **+4.8** | [**+3.6, +5.8**] | ⚠ positive but CI wide |
 
 ---
 
-## Phase 5: Lifetime Sensitivity
-
-**Question:** Does the negative FF trend survive across all reasonable τ values?
+## Phase 5: Lifetime Sensitivity (v3)
 
 | Config | ΔFF median | 90% CI | σ(FF) |
 |---|---|---|---|
-| τ = 8.0 yr fixed | −9.2 | [−14.3, −5.8] | 15.8 |
-| τ = 8.5 yr fixed | −8.8 | [−14.2, −5.8] | 14.9 |
-| τ = 9.0 yr fixed | −8.6 | [−13.9, −5.6] | 14.2 |
-| τ = 9.5 yr fixed | −8.4 | [−14.4, −5.5] | 13.8 |
-| τ = 10.0 yr fixed | −8.3 | [−14.6, −5.0] | 13.2 |
-| He 2026 varying | −6.1 | [−11.5, −3.2] | 14.3 |
+| τ = 8.0 yr fixed | +5.9 | [−10.3, +24.7] | 19.2 |
+| τ = 8.5 yr fixed | +3.5 | [−12.1, +20.9] | 18.4 |
+| τ = 9.0 yr fixed | +1.8 | [−13.1, +17.8] | 17.8 |
+| τ = 9.5 yr fixed | +0.2 | [−13.3, +14.5] | 17.2 |
+| τ = 10.0 yr fixed | −1.4 | [−14.2, +11.2] | 16.7 |
+| He 2026 varying | +4.8 | [−9.3, +20.6] | 17.8 |
 
-**✓ Robustly negative across all 6 lifetime configurations.** 90% CI never
-includes zero. The negative trend is *stronger* at shorter lifetimes
-(−9.2 at τ=8.0 vs −6.1 varying), but the sign never flips.
+**⚠ No longer robustly negative.** All CIs include zero. Trend is weakly
+positive for shorter lifetimes, weakly negative only at τ ≥ 10.0 yr.
+
+**v2 → v3 change:** Previously all 6 configs were robustly negative
+(90% CI excluded zero). Now 5/6 are positive and all CIs span zero.
 
 ---
 
-## Phase 6: OH-D KIE Sensitivity
-
-**Question:** Does the FF trend depend on the OH-D KIE?
+## Phase 6: OH-D KIE Sensitivity (v3)
 
 | Config | ΔFF median | 90% CI | σ(FF) |
 |---|---|---|---|
-| Saueressig (1.294) | −7.4 | [−14.3, −2.3] | 16.4 |
-| Midpoint (1.310) | −5.9 | [−11.1, −3.3] | 13.7 |
-| Cantrell (1.327) | −5.4 | [−9.8, −3.0] | 12.0 |
-| He 2026 upper (1.35) | −4.3 | [−7.2, +1.3] | 10.8 |
-| Sampled (default) | −6.1 | [−11.5, −3.2] | 14.3 |
+| Saueressig (1.294) | +1.2 | [−13.3, +15.0] | 19.8 |
+| Midpoint (1.310) | +4.8 | [−9.1, +19.5] | 17.3 |
+| Cantrell (1.327) | +8.3 | [−4.4, +24.2] | 15.7 |
+| He 2026 upper (1.35) | +14.6 | [−0.4, +28.8] | 14.2 |
+| Sampled (default) | +4.8 | [−9.3, +20.6] | 17.8 |
 
-**✓ Robustly negative for all published OH-D values (1.294–1.327).** Only at
-He 2026's unpublished upper bound (1.35) does the 90% CI just touch zero.
-Higher OH-D KIE *reduces* σ(FF) (16.4 → 10.8 Tg/yr) — the δD constraint
-tightens as the fractionation effect increases.
+**All positive, but no CI excludes zero.** OH-D KIE has a strong directional
+effect: higher OH-D → more positive FF trend. The δD constraint is real
+but doesn't pin down the sign.
 
 ---
 
-## Phase 7: Cl Fraction Sensitivity
-
-**Question:** Does the Cl sink fraction change the FF trend or variance budget?
+## Phase 7: Cl Fraction Sensitivity (v3)
 
 | Cl fraction | ΔFF med | 90% CI | σ(FF) | KIE% | Sig% | τ% |
 |---|---|---|---|---|---|---|
-| 0.6% (Thanwerdas) | −6.1 | [−10.8, −2.7] | 13.8 | 21.2 | 40.1 | 0.3 |
-| 2.0% | −6.1 | [−11.1, −3.1] | 14.0 | 19.8 | 39.7 | 0.0 |
-| 3.5% (default) | −6.0 | [−11.5, −3.1] | 14.3 | 17.6 | 43.5 | 0.2 |
-| 5.0% | −5.8 | [−11.7, −2.9] | 14.4 | 14.1 | 49.9 | 1.3 |
-| 6.5% | −5.7 | [−11.3, −2.3] | 13.7 | 9.4 | 58.1 | 2.4 |
-| 10% (Allan upper) | −3.3 | [−8.8, −0.0] | 9.4 | 14.6 | 80.8 | 2.3 |
+| 0.6% (Thanwerdas) | **+12.0** | [−4.4, +29.5] | 17.5 | 24.2 | 40.4 | 0.2 |
+| 2.0% | +7.3 | [−6.8, +24.4] | 17.7 | 24.3 | 38.9 | 0.0 |
+| 3.5% (default) | +2.9 | [−10.9, +17.6] | 17.8 | 24.0 | 40.0 | 0.4 |
+| 5.0% | −1.2 | [−13.8, +10.4] | 17.8 | 21.9 | 42.0 | 1.8 |
+| 6.5% | −4.7 | [−16.1, +5.5] | 16.8 | 17.2 | 49.0 | 3.1 |
+| 10% (Allan upper) | **−5.1** | [−15.0, −0.0] | 8.8 | 16.2 | 88.6 | 4.0 |
 
-**✓ Trend stays negative across all Cl values.**
+**Sign flips at Cl ≈ 5%.** Low Cl gives positive trend, high Cl gives negative.
+Only at extreme Cl = 10% does the 90% CI exclude zero (barely).
 
-**Key discovery: Cl fraction controls the KIE–Sig tradeoff.** At low Cl
-(0.6%), KIE contributes 21% of variance; at high Cl (6.5%), it drops to 9%
-while source signatures rise to 58%. Higher Cl fraction amplifies the δD
-constraint (because Cl has the largest δD KIE at α=1.52), making the system
-more sensitive to source-signature accuracy and less to the OH-¹³C KIE.
-
-At 10% Cl, source signatures dominate 81% of variance — the system is almost
-entirely limited by how well we know the source δD values.
+**v2 → v3 change:** Previously all Cl values gave negative trends. Now
+the sign depends on Cl fraction — a fundamental sensitivity.
 
 ---
 
-## Phase 8: Combined Robustness Matrix
+## Phase 8: Combined Robustness Matrix (v3)
 
-**Question:** In how many of 18 combinations (τ × OH_D × Cl) is ΔFF negative?
+18 cells: τ ∈ {8.5, 9.0, 9.5} × OH_D ∈ {1.294, 1.327} × Cl ∈ {0.6%, 3.5%, 6.5%}
 
-| τ | OH_D | Cl | ΔFF median | 90% CI | Robust? |
+| τ | OH_D | Cl | ΔFF med | 90% CI | Sign |
 |---|---|---|---|---|---|
-| 8.5 | 1.294 | 0.6% | −10.6 | [−16.8, −6.0] | ✓ |
-| 8.5 | 1.294 | 3.5% | −10.3 | [−16.2, −5.1] | ✓ |
-| 8.5 | 1.294 | 6.5% | −9.8 | [−15.3, −4.6] | ✓ |
-| 8.5 | 1.327 | 0.6% | −8.3 | [−12.5, −3.3] | ✓ |
-| 8.5 | 1.327 | 3.5% | −7.9 | [−11.7, −5.3] | ✓ |
-| 8.5 | 1.327 | 6.5% | −6.7 | [−10.7, −4.8] | ✓ |
-| 9.0 | 1.294 | 0.6% | −10.6 | [−17.3, −1.8] | ✓ |
-| 9.0 | 1.294 | 3.5% | −10.1 | [−17.1, −5.1] | ✓ |
-| 9.0 | 1.294 | 6.5% | −9.6 | [−15.5, −3.5] | ✓ |
-| 9.0 | 1.327 | 0.6% | −8.3 | [−12.5, −4.8] | ✓ |
-| 9.0 | 1.327 | 3.5% | −7.6 | [−11.9, −5.6] | ✓ |
-| 9.0 | 1.327 | 6.5% | −6.4 | [−10.0, −4.3] | ✓ |
-| 9.5 | 1.294 | 0.6% | −10.4 | [−18.2, −2.8] | ✓ |
-| 9.5 | 1.294 | 3.5% | −10.2 | [−17.4, −4.4] | ✓ |
-| 9.5 | 1.294 | 6.5% | −8.9 | [−15.1, −3.1] | ✓ |
-| 9.5 | 1.327 | 0.6% | −8.1 | [−11.9, −4.7] | ✓ |
-| 9.5 | 1.327 | 3.5% | −7.4 | [−11.8, −5.5] | ✓ |
-| 9.5 | 1.327 | 6.5% | −6.1 | [−9.6, −3.0] | ✓ |
+| 8.5 | 1.294 | 0.6% | +5.3 | [−10.9, +23.3] | + ≈0 |
+| 8.5 | 1.294 | 3.5% | −2.7 | [−17.6, +11.7] | − ≈0 |
+| 8.5 | 1.294 | 6.5% | −9.7 | [−21.8, +1.9] | − ≈0 |
+| 8.5 | 1.327 | 0.6% | **+17.3** | [**+1.1, +33.7**] | **+ ⚠** |
+| 8.5 | 1.327 | 3.5% | +5.5 | [−8.1, +22.0] | + ≈0 |
+| 8.5 | 1.327 | 6.5% | −3.8 | [−13.9, +7.8] | − ≈0 |
+| 9.0 | 1.294 | 0.6% | +3.5 | [−12.0, +20.0] | + ≈0 |
+| 9.0 | 1.294 | 3.5% | −3.8 | [−17.6, +9.4] | − ≈0 |
+| 9.0 | 1.294 | 6.5% | −10.0 | [−21.0, +0.1] | − ≈0 |
+| 9.0 | 1.327 | 0.6% | +13.7 | [−1.2, +30.4] | + ≈0 |
+| 9.0 | 1.327 | 3.5% | +3.3 | [−8.6, +18.0] | + ≈0 |
+| 9.0 | 1.327 | 6.5% | −5.0 | [−13.8, +5.3] | − ≈0 |
+| 9.5 | 1.294 | 0.6% | +1.4 | [−12.8, +17.2] | + ≈0 |
+| 9.5 | 1.294 | 3.5% | −5.2 | [−17.3, +7.9] | − ≈0 |
+| 9.5 | 1.294 | 6.5% | **−10.1** | [**−20.5, −0.9**] | **− ✓** |
+| 9.5 | 1.327 | 0.6% | +10.7 | [−4.0, +26.5] | + ≈0 |
+| 9.5 | 1.327 | 3.5% | +1.5 | [−10.8, +14.8] | + ≈0 |
+| 9.5 | 1.327 | 6.5% | −5.5 | [−13.0, +3.0] | − ≈0 |
 
-**✓✓ 18/18 cells negative. 18/18 robustly negative (90% CI excludes zero).**
+**❌ Only 1/18 robustly negative (τ=9.5, OH_D=1.294, Cl=6.5%).**
+**1/18 robustly positive (τ=8.5, OH_D=1.327, Cl=0.6%).**
+**16/18 CIs include zero.**
 
-Range of ΔFF: −10.6 to −6.1 Tg/yr. The FF trend reversal is **iron-clad**
-across the entire physically plausible parameter space.
-
-Strongest negative trend: τ=8.5, OH_D=1.294, Cl=0.6% → ΔFF = −10.6 Tg/yr  
-Weakest negative trend: τ=9.5, OH_D=1.327, Cl=6.5% → ΔFF = −6.1 Tg/yr
+**v2 → v3:** Previously 18/18 robustly negative. Now split 9 positive / 9 negative
+with almost all CIs spanning zero. The "iron-clad" negative trend has collapsed.
 
 ---
 
-## Phase 9: Bootstrap Confidence Intervals
-
-Bootstrap 95% CIs on variance decomposition (1000 resamples of 400 MC).
+## Phase 9: Bootstrap Confidence Intervals (v3)
 
 | Config | σ(FF) [95% CI] | KIE% [95% CI] | Sig% [95% CI] | τ% [95% CI] | Resid% [95% CI] |
 |---|---|---|---|---|---|
 | δ¹³C-only | 31.0 [28.8, 33.2] | 11.1 [3.4, 17.4] | 82.6 [79.3, 85.1] | 0.0 [0.0, 1.8] | 6.3 [0.0, 14.7] |
-| Dual (offset) | 16.8 [14.8, 19.1] | 0.0 [0.0, 0.8] | 0.0 [0.0, 0.0] | 15.2 [0.0, 28.2] | 84.7 [70.0, 100.0] |
-| **Dual (real hemi)** | **14.3 [13.3, 15.2]** | **19.8 [4.3, 30.7]** | **42.8 [31.3, 52.3]** | **1.1 [0.0, 2.2]** | **36.3 [19.3, 58.8]** |
+| Dual (offset) | 17.0 [15.0, 19.3] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 15.7 [0.0, 28.9] | 84.3 [70.3, 100.0] |
+| **Dual (real hemi)** | **17.8 [16.7, 18.9]** | **24.8 [11.0, 34.9]** | **40.6 [28.5, 51.1]** | **0.0 [0.0, 1.4]** | **34.9 [17.1, 54.5]** |
 
 **Key findings:**
-1. σ(FF) CIs don't overlap between any pair → all three are statistically
-   distinguishable.
-2. Real-hemi Sig% [31.3, 52.3] vs offset Sig% [0.0, 0.0] → **source-signature
-   contribution is statistically significant** in real-hemi but invisible in offset.
-3. Real-hemi KIE% = 19.8% [4.3, 30.7] — notably **nonzero** unlike the point
-   estimate. Bootstrap reveals that KIE sensitivity is reduced but not fully
-   eliminated; the point estimate of 0% was an artifact of insufficient
-   bootstrap resolution.
-4. Real-hemi σ(FF) CI is **narrower** [13.3, 15.2] than offset [14.8, 19.1] →
-   the real hemispheric data not only reduces uncertainty but does so more
-   *consistently*.
+1. KIE% = **24.8% [11.0, 34.9]** — significantly nonzero. KIE matters.
+2. Sig% = **40.6% [28.5, 51.1]** — source signatures remain the dominant contributor
+3. Residual dropped from v2's 36% to **34.9%** — variance budget well-explained
 
 ---
 
-## Phase 11: Interhemispheric Exchange Sensitivity
+## Phase 11: Interhemispheric Exchange Sensitivity (v3)
 
-**Question:** Does τ_ex affect σ(FF) and the FF trend?
+| Config | ΔFF median | 90% CI | σ(FF) |
+|---|---|---|---|
+| Fast (0.5 yr) | −1.8 | [−9.7, −0.1] | 3.9 |
+| Default ~N(1.0, 0.1) | +4.8 | [−9.3, +20.6] | 17.8 |
+| Fixed (1.0 yr) | +5.7 | [−10.4, +18.7] | 14.3 |
+| Slow (1.5 yr) | +17.2 | [+0.0, +32.1] | 17.9 |
+| Very slow (2.0 yr) | +17.8 | [+5.5, +29.8] | 23.7 |
 
-| Config | ΔFF median | 90% CI | σ(FF) | KIE% | Sig% |
-|---|---|---|---|---|---|
-| Fast (0.5 yr) | −2.0 | [−9.9, −0.2] | 3.8 | — | — |
-| Default ~N(1.0, 0.1) | −6.9 | [−16.2, −1.3] | 13.6 | — | — |
-| Fixed (1.0 yr) | −6.9 | [−16.6, −1.6] | 11.6 | — | — |
-| Slow (1.5 yr) | −4.2 | [−14.1, +9.8] | 15.8 | — | — |
-| **Very slow (2.0 yr)** | **+1.6** | [−9.0, +19.6] | 19.3 | — | — |
-
-**⚠ CRITICAL FINDING: τ_ex is the one parameter that can flip the FF trend.**
-
-At τ_ex ≥ 1.5 yr, the 90% CI includes zero. At τ_ex = 2.0 yr, the median
-flips positive. This is the ONLY sensitivity tested (across τ, OH_D, Cl,
-and 18-cell matrix) where the trend reversal breaks down.
-
-**Physical interpretation:** τ_ex = 2.0 yr means hemispheres barely
-communicate. The δD constraint relies on hemispheric *contrast* — if the
-hemispheres are too decoupled, the model attributes FF differences to
-transport artifacts rather than source changes.
-
-**Practical impact:** The literature consensus for τ_ex is 0.9–1.3 yr
-(Patra et al. 2011: 1.0 yr; Hein et al. 1997: 1.1 yr). At these realistic
-values, the FF trend is robustly negative. Only unrealistically slow
-exchange (>1.5 yr) undermines the result.
-
-σ(FF) range: 3.8–19.3 Tg/yr (121% spread) → **τ_ex genuinely matters.**
-The 2-box framework provides real constraint from transport separation,
-not just source-signature separation.
+At fast exchange (0.5 yr), trend is weakly negative. At slow exchange (≥1.0 yr),
+trend is positive. σ(FF) range: 3.9–23.7 Tg/yr.
 
 ---
 
-## Phase 12: EDGAR / CarbonTracker Validation
+## Phase 12: EDGAR / CarbonTracker Validation (v3)
 
-**Question:** Is the negative FF trend consistent with bottom-up inventories?
+| Dataset | Post-2007 ΔFF (Tg/yr) |
+|---|---|
+| **This study** (dual real-hemi v3) | **+8.8** |
+| CarbonTracker CH₄ (posterior) | +5.5 |
+| EDGAR 8.0 (Coal+ONG) | +20.6 |
 
-| Dataset | Post-2007 ΔFF (Tg/yr) | Absolute level (Tg/yr) |
-|---|---|---|
-| **This study** (dual real-hemi) | **−6.8** | ~50–60 |
-| CarbonTracker CH₄ (posterior) | +5.5 | ~130–155 |
-| EDGAR 8.0 (Coal+ONG) | +20.6 | ~80–115 |
-
-**Key observations:**
-1. **Absolute levels diverge** — our 2-box model gives FF ~50–60 Tg/yr vs
-   EDGAR ~80–115 and CarbonTracker ~130–155. This is expected: the 2-box
-   residual solver partitions total CH₄ differently from a full 3D inversion
-   or a process-based inventory. The models are not solving the same problem.
-2. **Trend directions disagree** — our model shows declining FF post-2007,
-   EDGAR shows +20.6 Tg/yr increase, CarbonTracker shows +5.5. This is the
-   core tension: if δD is genuinely constraining, either (a) bottom-up
-   inventories overestimate FF growth, or (b) the δD constraint is biased.
-3. **This is not necessarily a problem** — the isotope-based approach
-   partitions sources by isotopic signature, not by process category.
-   "Fossil-fuel" in our model means "isotopically FF-like", which may not
-   map exactly to EDGAR categories. Geological seepage, for example, is
-   isotopically FF-like but not in EDGAR.
-
-See `figures/fig_edgar_validation.png`.
+**v3 now agrees directionally with both CarbonTracker and EDGAR** — all
+show positive post-2007 FF trends. Previously (v2), our model showed −6.8,
+contradicting both bottom-up inventories.
 
 ---
 
-## Phase 13: Summary Table
-
-All headline numbers with 95% bootstrap CIs (1000 resamples of 400 MC):
+## Phase 13: Summary Table (v3)
 
 | Config | σ(FF) (Tg/yr) | ΔFF trend (Tg/yr) | KIE% | Sig% |
 |---|---|---|---|---|
 | δ¹³C-only | 31.0 [28.8, 33.2] | +13.0 [+12.7, +13.3] | 11.1 [3.4, 17.4] | 82.6 [79.3, 85.1] |
-| Dual (offset) | 16.8 [14.8, 19.1] | −3.1 [−3.3, −2.7] | 0.0 [0.0, 0.8] | 0.0 [0.0, 0.0] |
-| **Dual (real hemi)** | **14.3 [13.3, 15.2]** | **−6.9 [−7.3, −6.4]** | **19.8 [4.3, 30.7]** | **42.8 [31.3, 52.3]** |
-| Basu et al. (2022, 3D) | — | — | — | — |
-
-*Basu KIE spread: 13.0 Tg/yr. Our KIE spread: 0.7–0.9 Tg/yr across all configs.*
-
-Exported as: `results/table1.tex` (LaTeX), `results/table1.csv`, `results/phase13_summary.json`.
+| Dual (offset) | 17.0 [15.0, 19.3] | −3.1 [−3.3, −2.7] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| **Dual (real hemi) v3** | **17.8 [16.7, 18.9]** | **+4.8 [+3.6, +5.8]** | **24.8 [11.0, 34.9]** | **40.6 [28.5, 51.1]** |
 
 ---
 
-## Key Scientific Findings (Updated)
+## Key Scientific Findings (v3)
 
-### 1. FF Trend Reversal is Robust — With One Caveat
+### 1. Hemispheric δ¹³C Source Signatures Are a First-Order Control
 
-Real hemispheric δD reverses the post-2007 FF trend from +13 to −6..−7 Tg/yr.
-This is robust across:
-- All lifetime values (τ = 8.0–10.0 yr) — Phase 5
-- All OH-D KIE values (1.294–1.327, marginal at 1.35) — Phase 6
-- All Cl fractions (0.6–10%) — Phase 7
-- **All 18 cells** of the combined τ × OH_D × Cl matrix — Phase 8
+Adding hemispheric δ¹³C source signatures (v3) completely changed the model behavior:
+- FF trend flipped from **−6.9** (v2) to **+4.8** (v3)
+- KIE spread jumped from **0.9** to **6.9** Tg/yr
+- Robustness collapsed from **18/18** to **1/18** cells
 
-**One caveat (Phase 11):** At interhemispheric exchange times τ_ex ≥ 1.5 yr,
-the trend weakens and at τ_ex = 2.0 yr it flips positive. However, the
-literature consensus is τ_ex ≈ 1.0 yr (range 0.9–1.3 yr), safely within
-the "robustly negative" regime.
+This means the assumption of uniform δ¹³C source signatures across hemispheres
+was artificially constraining the system. When NH and SH sources have different
+δ¹³C fingerprints (as they do in reality), the 3×3 solver explores a wider
+solution space.
 
-### 2. Cl Fraction Controls the Variance Budget
+### 2. KIE Immunity Is Weakened — But δD Still Helps
 
-At low Cl (0.6%), KIE contributes 21% of variance.  
-At high Cl (6.5%), KIE drops to 9%, source signatures rise to 58%.  
-At extreme Cl (10%), source signatures dominate at 81%.
+v2 claimed "KIE immunity" — that δD renders the OH-¹³C KIE controversy
+irrelevant. v3 shows this was partly an artifact of homogeneous δ¹³C sigs.
 
-The δD constraint strengthens with Cl fraction because Cl has the
-largest δD KIE (α = 1.52). This creates a **Cl–KIE–Sig tradeoff**: more
-Cl → more δD leverage → system limited by source sigs, not KIE.
+However, δD still provides significant constraint:
+- σ(FF) reduced from 31.0 to 17.8 Tg/yr (−43%)
+- Source-signature contribution resolved at 40.6% [28.5, 51.1]
+- KIE contribution = 24.8% [11.0, 34.9] — significant but not dominant
 
-### 3. Variance Budget Becomes Interpretable with Real Hemispheric δD
+The KIE spread is 6.9 Tg/yr (vs 13.0 in Basu), so δD halved the KIE impact
+but didn't eliminate it.
 
-Offset: 85% of variance is unattributed "residual" — a black box.  
-Real hemi: source signatures (43% [31, 52]) and KIE (20% [4, 31]) are
-statistically significant components. Residual drops to 36% [19, 59].
+### 3. FF Trend Is Now Ambiguous — But Consistent with Bottom-Up
 
-### 4. KIE Spread Remains < 1 Tg/yr
+The post-2007 FF trend is weakly positive (+4.8 Tg/yr) but with wide CIs
+that include zero in most sensitivity tests. This is:
+- Directionally consistent with EDGAR (+20.6) and CarbonTracker (+5.5)
+- More physically plausible than the v2 negative trend (−6.8)
+- But not yet a robust finding
 
-KIE spread (Saueressig vs Cantrell) is 0.7–0.9 Tg/yr across all
-configurations, vs 13 Tg/yr in Basu 2022. The "KIE controversy"
-contributes negligible uncertainty to the FF trend.
+### 4. Cl Fraction Controls the Trend Sign
+
+At low Cl (≤3.5%), ΔFF is positive. At high Cl (≥5%), ΔFF is negative.
+The Cl sink fraction — one of the most uncertain parameters in atmospheric
+methane chemistry — determines whether FF emissions rose or fell post-2007.
+
+### 5. The Variance Budget Is Now Well-Explained
+
+With real hemispheric data for both isotopes, the variance budget is:
+- **Sig 40%** + **KIE 25%** + **τ ~0%** + **Residual 35%**
+- vs offset's 85% unexplained residual
 
 ---
 
-## What Changed in v2
+## v2 → v3 Comparison (For Reference)
 
-The v1 model used `DD_IH_OFFSET = ±6‰` to split global δD into hemispheres.
-v2 replaces this with:
+### Variance Decomposition
 
-1. **Real hemispheric atmospheric δD MC** — from Riddell-Young's station-level
-   pipeline (19yr × 1000 MC). True NH–SH gradient: **~15‰** (2.5× larger
-   than the assumed 12‰). Coverage: 2005–2019 real, 2020+ forward-filled.
+| Metric | v2 | v3 | Change |
+|---|---|---|---|
+| σ(FF) | 14.3 [13.3, 15.2] | 17.8 [16.7, 18.9] | +24% |
+| KIE% | 19.8 [4.3, 30.7] | 24.8 [11.0, 34.9] | +25% (higher) |
+| Sig% | 42.8 [31.3, 52.3] | 40.6 [28.5, 51.1] | −5% (similar) |
+| ΔFF | −6.9 [−7.3, −6.4] | +4.8 [+3.6, +5.8] | **sign flip** |
 
-2. **Real hemispheric δD source signatures** — emission-weighted from gridded
-   data, 1000 MC × 24 years:
+### Robustness Matrix
 
-   | Sector | NH (‰) | SH (‰) | Δ(NH−SH) | Method |
-   |---|---|---|---|---|
-   | Mic | −316.9 ± 7.8 | −304.9 ± 7.3 | −11.9 | Douglas 2021 MAT × CTCH4 flux |
-   | BB | −236.7 ± 8.2 | −210.3 ± 7.1 | −26.4 | Umezawa 2011 MAT × CTCH4 flux |
-   | FF | −193.1 ± 5.6 | −189.6 ± 8.1 | −3.5 | Country ONG+coal × EDGAR 8.0 |
+| Metric | v2 | v3 |
+|---|---|---|
+| Negative cells | 18/18 | 9/18 |
+| Robustly negative | 18/18 | 1/18 |
+| Robustly positive | 0/18 | 1/18 |
+| CI includes zero | 0/18 | 16/18 |
+
+### Basu KIE Spread
+
+| Config | v2 | v3 |
+|---|---|---|
+| δ¹³C-only | 0.7 | 0.7 |
+| Dual (offset) | 0.9 | 0.9 |
+| Dual (real hemi) | 0.8 | **6.9** |
 
 ---
 
@@ -352,42 +330,40 @@ v2 replaces this with:
 
 ```
 experiments/KIE_immunity/
-├── RESULTS.md                         ← this file
-├── PLAN.md                            ← next steps
+├── RESULTS.md                         ← this file (v3)
+├── PLAN.md
 ├── analysis/
-│   ├── core.py                        ← shared 2-box engine (Phases 5+)
-│   ├── variance_decomposition.py      ← v2 3-config comparison
-│   ├── compare_basu2022.py            ← v2 Basu comparison + residuals
-│   ├── phase5_tau_sensitivity.py      ← lifetime sensitivity
-│   ├── phase6_OHD_sensitivity.py      ← OH-D KIE sensitivity
-│   ├── phase7_Cl_sensitivity.py       ← Cl fraction + variance decomp
-│   ├── phase8_robustness_matrix.py    ← 18-cell combined matrix
-│   ├── phase9_bootstrap_variance.py   ← bootstrap CIs
-│   ├── phase11_tau_ex.py              ← IH exchange sensitivity
-│   ├── phase12_edgar_validation.py    ← bottom-up comparison
-│   └── phase13_summary_table.py       ← summary table generator
+│   ├── core.py                        ← shared 2-box engine (v3: hemi δ¹³C)
+│   ├── variance_decomposition.py      ← 3-config comparison (v3)
+│   ├── compare_basu2022.py            ← Basu comparison + residuals (v3)
+│   ├── phase5_tau_sensitivity.py
+│   ├── phase6_OHD_sensitivity.py
+│   ├── phase7_Cl_sensitivity.py
+│   ├── phase8_robustness_matrix.py
+│   ├── phase9_bootstrap_variance.py
+│   ├── phase11_tau_ex.py
+│   ├── phase12_edgar_validation.py
+│   └── phase13_summary_table.py
 ├── figures/
 │   ├── fig_kie_immunity.py
 │   ├── fig_kie_immunity.png
-│   ├── fig_variance_v2.py             ← 3-panel publication figure
-│   ├── fig_variance_v2.png
-│   ├── fig_variance_v2.pdf
-│   ├── fig_edgar_validation.py        ← EDGAR comparison figure
-│   ├── fig_edgar_validation.png
-│   └── fig_edgar_validation.pdf
+│   ├── fig_variance_v2.py
+│   ├── fig_variance_v2.png / .pdf
+│   ├── fig_edgar_validation.py
+│   └── fig_edgar_validation.png / .pdf
 └── results/
     ├── variance_decomposition.json       (v1)
-    ├── variance_decomposition_v2.json    (v2)
+    ├── variance_decomposition_v2.json    (v3 — overwrites v2)
     ├── basu_comparison.json              (v1)
-    ├── basu_comparison_v2.json           (v2)
-    ├── phase5_tau_sensitivity.json
-    ├── phase6_OHD_sensitivity.json
-    ├── phase7_Cl_sensitivity.json
-    ├── phase8_robustness_matrix.json
-    ├── phase9_bootstrap.json
-    ├── phase11_tau_ex.json
-    ├── phase12_edgar.json
-    ├── phase13_summary.json
-    ├── table1.tex
-    └── table1.csv
+    ├── basu_comparison_v2.json           (v3 — overwrites v2)
+    ├── phase5_tau_sensitivity.json       (v3)
+    ├── phase6_OHD_sensitivity.json       (v3)
+    ├── phase7_Cl_sensitivity.json        (v3)
+    ├── phase8_robustness_matrix.json     (v3)
+    ├── phase9_bootstrap.json             (v3)
+    ├── phase11_tau_ex.json               (v3)
+    ├── phase12_edgar.json                (v3)
+    ├── phase13_summary.json              (v3)
+    ├── table1.tex                        (v3)
+    └── table1.csv                        (v3)
 ```
