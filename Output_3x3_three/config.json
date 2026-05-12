@@ -1,32 +1,32 @@
 {
   "NHext": {
     "label": "NHext",
-    "total_solves": 460,
+    "total_solves": 23000,
     "nonphysical_count": 0,
     "nonphysical_pct": 0.0,
     "nan_count": 0,
-    "mean_condition": 133853.4,
-    "max_condition": 189978.0
+    "mean_condition": 129877.6,
+    "max_condition": 204995.3
   },
   "Trop": {
     "label": "Trop",
-    "total_solves": 460,
+    "total_solves": 23000,
     "nonphysical_count": 0,
     "nonphysical_pct": 0.0,
     "nan_count": 0,
-    "mean_condition": 195129.0,
-    "max_condition": 316113.3
+    "mean_condition": 187308.5,
+    "max_condition": 341081.7
   },
   "SHext": {
     "label": "SHext",
-    "total_solves": 460,
+    "total_solves": 23000,
     "nonphysical_count": 0,
     "nonphysical_pct": 0.0,
     "nan_count": 0,
-    "mean_condition": 250863.0,
-    "max_condition": 1098960.3
+    "mean_condition": 234863.4,
+    "max_condition": 1752994.2
   },
   "kie_mode": "sampled",
   "lifetime_mode": "varying",
-  "n_iterations": 20
+  "n_iterations": 1000
 }
