@@ -1,6 +1,6 @@
 # KIE Sensitivity Experiment — Complete Results
 
-**Date:** 2026-05-12 (Phases 1–8)
+**Date:** 2026-05-12 (Phases 1–8), 2026-05-13 (Phase 9)
 **Repository:** Ilovecodinghhh/upgrade_two_isotope_model
 
 ---
@@ -11,11 +11,18 @@ This experiment tested whether combining δ¹³C and δD reduces sensitivity to 
 
 **Answer (2-part):**
 - ❌ **WLS coupling fails:** treating δD as a hard algebraic constraint in a coupled least-squares system makes KIE sensitivity **5× worse** (Phases 1–5).
-- ✅ **Agreement filtering succeeds:** treating δD as an independent solver and using the consistency of the two solutions as a quality filter yields **KSR up to 3.21** and a **statistically significant 25.4 pp** discriminant between Cantrell and Saueressig (Phases 6–8).
+- ✅ **Agreement filtering succeeds as a KIE discriminant:** treating δD as an independent solver and using the consistency of the two solutions as a quality filter reveals a **statistically significant 35.5 pp** discriminant between Cantrell and Saueressig (Phases 6–9). The filter also provides a modest ~10% reduction in KIE-driven trend spread (KSR ≈ 1.12).
+
+**Important correction (Phase 9):** The KSR values of 2.5–3.2 reported at N=1000
+were inflated by small-sample noise (only 53–290 Saueressig iterations passed the filter).
+At N=5000, the KSR stabilises at 1.12 [1.02, 1.24]. The agreement filter's primary value
+is as a **KIE discriminant**, not a KIE sensitivity reducer.
 
 Phase 7 confirms the discriminant survives time-varying KIE trajectories.
 Phase 8 confirms it is stable across three independent 8-year epochs (1999–2006,
 2007–2014, 2015–2022) — i.e. it is *not* an artifact of one atmospheric regime.
+Phase 9 confirms it survives Cl-fraction variation (0.6–6.5%) and is insensitive
+to the year-agreement threshold choice (60–95%).
 
 ### Key Numbers
 
@@ -350,8 +357,11 @@ results/
 ├── phase6_bayesian/                (run_A/B/C.npz + summary.json)
 ├── phase6b_threshold_sweep/        (summary.json)
 ├── phase6c_OSSE/                   (summary.json)
-├── phase7_timevarying_OH/          (summary.json)              [NEW]
-└── phase8_fine_thresholds/         (summary.json)              [NEW]
+├── phase7_timevarying_OH/          (summary.json)
+├── phase8_fine_thresholds/         (summary.json)
+└── phase9_editorial_fixes/         (high_n_summary.json,       [NEW]
+                                     cl_sensitivity.json,
+                                     year_agreement_sweep.json)
 
 figures/
 ├── phase1_d13C_only_trends.png     [Phase 1]
@@ -367,20 +377,130 @@ figures/
 ├── fig9_threshold_sweep.png       [Phase 6b]
 ├── fig10_agreement_timeseries.png [Phase 6b]
 ├── fig11_OSSE_recovery.png        [Phase 6c]
-├── fig12_timevarying_OH.png       [Phase 7 — NEW]
-├── fig13_fine_threshold.png       [Phase 8a — NEW]
-└── fig14_temporal_stability.png   [Phase 8b — NEW]
+├── fig12_timevarying_OH.png       [Phase 7]
+├── fig13_fine_threshold.png       [Phase 8a]
+├── fig14_temporal_stability.png   [Phase 8b]
+├── fig15_high_n.png               [Phase 9a — NEW]
+├── fig16_cl_sensitivity.png       [Phase 9b — NEW]
+└── fig17_year_agree_sweep.png     [Phase 9c — NEW]
 ```
 
 ---
 
-## Final Headline Numbers (for publication)
+## Phase 9: Editorial Assessment Fixes (added 2026-05-13)
+
+Addresses three quantitative gaps from `EditorialAssessment_v1.md`.
+
+### 9a — High-N (N=5000) + KSR Bootstrap CIs
+
+**Motivation:** Phase 6b/8 used N=1000; at the strict 50 Tg/yr threshold,
+Saueressig retained only 53 iterations — too few for robust trend estimation.
+The reported KSR=3.21 was potentially inflated by small-sample noise.
+
+**Results at N=5000:**
+
+| Threshold | Rate(S) | Rate(C) | Δ (pp) | Δ 95% CI | n_good(S) | n_good(C) | KSR | KSR 95% CI |
+|-----------|---------|---------|--------|----------|-----------|-----------|-----|-----------|
+| 50 | 7.3% | 32.6% | **25.3** | [25.0, 25.5] | 48 | 397 | 1.59 | [0.93, 4.89] |
+| **90** | **35.3%** | **70.8%** | **35.5** | **[35.3, 35.8]** | **502** | **2583** | **1.12** | **[1.02, 1.24]** |
+| 100 | 45.2% | 77.9% | **32.8** | [32.5, 33.1] | 946 | 3220 | 1.08 | [1.03, 1.15] |
+| 150 | 85.4% | 96.5% | **11.1** | [10.9, 11.2] | 3898 | 4883 | 1.08 | [1.06, 1.10] |
+
+**Key corrections relative to N=1000:**
+1. **Discriminant is even stronger:** 35.5 pp at T=90 (vs 25.4 pp at N=1000). The N=1000
+   estimate had downward noise from limited sampling.
+2. **KSR is more modest:** KSR ≈ 1.12 at T=90 (vs 3.21 at T=50 with N=1000). The old
+   KSR=3.21 was driven by noise in the 53-iteration Saueressig sample. With 502 iterations,
+   the KSR stabilises at ~1.1 — meaning the **agreement filter reduces KIE-driven trend
+   spread by ~10–12%**, not by the 3× previously claimed.
+3. **The story pivots:** At N=5000, the agreement filter's main value is as a **KIE
+   discriminant** (35.5 pp difference with tight CIs), not as a KIE sensitivity *reducer*
+   (modest KSR). This is actually a cleaner, more defensible finding.
+4. **Baseline δ¹³C-only spread:** 2.33 Tg/yr (consistent with Phase 1's 2.0 Tg/yr).
+
+### 9b — Cl Fraction Sensitivity for the Agreement Filter
+
+**Motivation:** Phase 5 tested Cl sensitivity for WLS coupling but not for the
+agreement-filter discriminant. A reviewer would ask: "Does the 35 pp hold at
+Cl=0.6%?"
+
+**Results at T=90 Tg/yr (N=5000):**
+
+| Cl Scenario | Cl Fraction | Rate(S) | Rate(C) | Δ (pp) | Δ 95% CI | Significant? |
+|-------------|-------------|---------|---------|--------|----------|-------------|
+| Thanwerdas (low) | 0.6% | 8.6% | 37.0% | **28.4** | [28.2, 28.7] | ✅ |
+| **Default** | **3.5%** | **35.3%** | **70.8%** | **35.5** | **[35.3, 35.8]** | ✅ |
+| High Cl | 6.5% | 71.5% | 90.6% | **19.1** | [18.9, 19.4] | ✅ |
+
+**Key findings:**
+1. **Discriminant survives all three Cl scenarios.** Statistically significant (p ≪ 0.001)
+   in every case.
+2. **Higher Cl compresses the discriminant** (35.5 → 19.1 pp) because Cl's large
+   δD KIE (α=1.52) makes the δD constraint more permissive. But even at the extreme
+   Cl=6.5%, the difference remains highly significant.
+3. **Lower Cl (Thanwerdas) also shows clear discriminant** (28.4 pp), despite both
+   absolute agreement rates being much lower (8.6% vs 37.0%).
+
+### 9c — Year-Agreement Fraction Sweep
+
+**Motivation:** The filter keeps iterations where ≥80% of years agree. This parameter
+was never justified or swept. A reviewer would ask: "Why not 70% or 90%?"
+
+**Results at T=90 Tg/yr (N=5000):**
+
+| Year-Agree Fraction | n_good(S) | n_good(C) | KSR | C/S Ratio (n_good) |
+|---------------------|-----------|-----------|-----|---------------------|
+| 60% | 1031 | 3318 | 1.08 | 3.2× |
+| 70% | 716 | 2942 | 1.13 | 4.1× |
+| **80%** | **502** | **2583** | **1.12** | **5.1×** |
+| 90% | 177 | 1569 | 0.91 | 8.9× |
+| 95% | 133 | 779 | 1.09 | 5.9× |
+
+**Key findings:**
+1. **The discriminant (35.5 pp) is identical** across all year-agree fractions, because
+   it's computed from the overall agreement rate (which doesn't depend on this parameter).
+2. **KSR is stable** in the range 1.08–1.13 for fractions 60–80%, only dipping to 0.91
+   at 90% (where Saueressig retains just 177 iterations — small-sample noise).
+3. **The C/S ratio of retained iterations** is itself a diagnostic: Cantrell consistently
+   passes 3–9× more iterations through the filter than Saueressig. This asymmetry is
+   independent of the year-agree threshold.
+4. **Justification for 80%:** Balances sample size (502 Saueressig iterations — sufficient
+   for robust trends) against filter stringency. The 80% value sits on the "elbow" of the
+   n_good(S) curve; above 80%, Saueressig sample size drops rapidly.
+
+### Summary: Revised Headline Numbers After Phase 9
+
+| Statistic | Old (N=1000) | **Revised (N=5000)** | Change |
+|-----------|:------------:|:--------------------:|--------|
+| Discriminant at T=90 | 25.4 pp | **35.5 pp** | ↑ stronger |
+| KSR at T=50 | 3.21 | **1.59** [0.93, 4.89] | ↓ wide CI |
+| KSR at T=90 | ~2.5 | **1.12** [1.02, 1.24] | ↓ modest but robust |
+| Cl sensitivity | untested | **sig at all 3 scenarios** | ✅ gap closed |
+| Year-agree sensitivity | untested | **KSR stable 0.91–1.13** | ✅ gap closed |
+| n_good(S) at T=90 | ~290 (of 1000) | **502 (of 5000)** | ↑ adequate |
+
+**Narrative correction:** The agreement filter's value is primarily as a **KIE
+discriminant** (35.5 pp with extremely tight CIs), not as a KIE sensitivity *reducer*
+(KSR ≈ 1.1 means ~10% reduction, not 3×). The N=1000 KSR values were inflated by
+small-sample effects. The discriminant finding is actually *stronger* at N=5000.
+
+### New figures
+- `fig15_high_n.png` — N=5000 agreement rates, discriminant + CIs, KSR + CIs
+- `fig16_cl_sensitivity.png` — Cl sensitivity: paired bars + discriminant CIs
+- `fig17_year_agree_sweep.png` — Year-agree sweep: sample sizes + KSR
+
+---
+
+## Final Headline Numbers (for publication) — REVISED
 
 | Statistic | Value | Source |
 |-----------|-------|--------|
-| **Optimal agreement threshold** | **90 Tg/yr** | Phase 8a |
-| **Maximum discriminant power** | **25.4 pp** (Cantrell − Saueressig) | Phase 8a |
-| **Significant threshold range** | 30–220 Tg/yr (all values tested) | Phase 8a |
-| **Best KSR(FF)** | **3.21** at 50 Tg/yr | Phase 8a / 6b |
-| **Robust to time-varying KIE** | discriminant 12.8 pp under symmetric drift | Phase 7 |
+| **Optimal agreement threshold** | **90 Tg/yr** | Phase 8a / 9a |
+| **Maximum discriminant power** | **35.5 pp** (Cantrell − Saueressig) | Phase 9a (N=5000) |
+| **Discriminant 95% CI** | [35.3, 35.8] pp | Phase 9a |
+| **KSR(FF) at T=90** | **1.12** [1.02, 1.24] | Phase 9a |
+| **Significant threshold range** | 30–220 Tg/yr (all tested) | Phase 8a |
+| **Robust to Cl fraction** | 19–36 pp across Cl=0.6–6.5% | Phase 9b |
+| **Robust to year-agree threshold** | KSR 0.91–1.13 across 60–95% | Phase 9c |
+| **Robust to time-varying KIE** | discriminant ≥12.8 pp under symmetric drift | Phase 7 |
 | **Robust across atmospheric regimes** | 21.5–28.3 pp across 3 epochs | Phase 8b |

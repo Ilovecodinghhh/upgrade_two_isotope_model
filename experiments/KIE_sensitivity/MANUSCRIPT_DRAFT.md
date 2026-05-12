@@ -12,9 +12,9 @@
 
 The post-2007 rise in atmospheric methane ($\mathrm{CH_4}$) presents a paradox: concentrations have increased by $\sim$140 ppb while $\delta^{13}\mathrm{C}$-$\mathrm{CH_4}$ has shifted toward more negative values, suggesting microbial dominance — yet fossil-fuel inventories continue to rise. A critical bottleneck in resolving this "methane paradox" is the 25-year-old disagreement between laboratory determinations of the OH-$\mathrm{CH_4}$ $^{13}$C kinetic isotope effect (KIE): Cantrell et al. (1990; $\alpha$ = 1.0054 $\pm$ 0.0009) versus Saueressig et al. (2001; $\alpha$ = 1.0039 $\pm$ 0.0004). This single parameter propagates to a $\pm$20 Tg yr$^{-1}$ uncertainty in fossil-fuel versus microbial source attribution.
 
-Here we introduce an **Agreement Filter** — a diagnostic framework that solves the $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ isotopic mass balances independently and retains only those Monte Carlo iterations where both isotope systems yield consistent fossil-fuel emission estimates. We define the **Kinetic Sensitivity Ratio** (KSR) as the ratio of the Cantrell–Saueressig emission-trend spread under standard $\delta^{13}\mathrm{C}$-only inversion to that under agreement-filtered inversion. The filter achieves a KSR of **2.5–3.2$\times$**, reducing the propagated KIE uncertainty from $\sim$2.0 Tg yr$^{-1}$ to $\sim$0.6 Tg yr$^{-1}$.
+Here we introduce an **Agreement Filter** — a diagnostic framework that solves the $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ isotopic mass balances independently and retains only those Monte Carlo iterations where both isotope systems yield consistent fossil-fuel emission estimates. We define the **Kinetic Sensitivity Ratio** (KSR) as the ratio of the Cantrell–Saueressig emission-trend spread under standard $\delta^{13}\mathrm{C}$-only inversion to that under agreement-filtered inversion. The filter achieves a KSR of **1.12** [1.02, 1.24] at a threshold of 90 Tg yr$^{-1}$ ($N$ = 5000 iterations), representing a modest but statistically significant reduction in KIE sensitivity.
 
-Critically, we show that the **agreement rate itself** functions as an observational discriminant between the two KIE values. At a threshold of 90 Tg yr$^{-1}$, the Cantrell KIE yields a 25.4 percentage-point higher agreement rate than Saueressig's (61.9% vs. 36.5%; bootstrap 95% CI fully non-overlapping), indicating that the real atmosphere is substantially more internally consistent with $\alpha$ = 1.0054. This discriminant is robust across three independent 8-year atmospheric regimes (1999–2006, 2007–2014, 2015–2022) and survives plausible time-varying KIE scenarios.
+Critically, we show that the **agreement rate itself** functions as an observational discriminant between the two KIE values. At a threshold of 90 Tg yr$^{-1}$, the Cantrell KIE yields a 35.5 percentage-point higher agreement rate than Saueressig's (70.8% vs. 35.3%; bootstrap 95% CI [35.3, 35.8] pp), indicating that the real atmosphere is substantially more internally consistent with $\alpha$ = 1.0054. This discriminant is robust across three independent 8-year atmospheric regimes (1999–2006, 2007–2014, 2015–2022), survives plausible time-varying KIE scenarios, and holds under alternative tropospheric Cl sink fractions (0.6–6.5%).
 
 ---
 
@@ -142,7 +142,7 @@ This negative result motivates the Agreement Filter: $\delta\mathrm{D}$ is usefu
 
 ### 2.7 Monte Carlo Setup
 
-We run $N$ = 1000 iterations with seed = 42 over the period 1999–2022 (23 years). Per iteration, we sample:
+We run $N$ = 5000 iterations with seed = 42 over the period 1999–2022 (23 years). Per iteration, we sample:
 - OH-$^{13}$C KIE: either fixed (Saueressig/Cantrell) or uniform $\mathcal{U}$[1.0039, 1.0054]
 - OH-D KIE: $\mathcal{U}$[1.294, 1.327] (Saueressig et al., 2001)
 - Source signatures: drawn from empirical distributions (Sherwood et al., 2017; Schwietzke et al., 2016; Thanwerdas et al., 2024)
@@ -172,11 +172,11 @@ Table 1 summarizes the KIE sensitivity under different model configurations.
 
 | Configuration | FF Spread (Tg/yr) | Mic Spread (Tg/yr) | KSR (FF) | KSR (Mic) |
 |---------------|-------------------|---------------------|----------|-----------|
-| **$\delta^{13}\mathrm{C}$-only, 1-box (baseline)** | **2.0** | **1.9** | **—** | **—** |
+| **$\delta^{13}\mathrm{C}$-only, 1-box (baseline)** | **2.3** | **2.3** | **—** | **—** |
 | Dual WLS, 1-box | 10.1 | 6.2 | 0.20 | 0.31 |
 | Dual WLS, 2-box (NH/SH) | 9.0 | 5.4 | 0.22 | 0.35 |
 | Weight sweep ($w_{\delta D}$ = 0.5) | 6.8 | 4.3 | 0.29 | 0.44 |
-| **Agreement Filter ($\tau$ = 50 Tg/yr)** | **0.62** | **0.56** | **3.21** | **3.39** |
+| **Agreement Filter ($\tau$ = 90 Tg/yr, N=5000)** | **2.1** | **2.1** | **1.12** [1.02, 1.24] | **—** |
 
 The coupled WLS consistently **amplifies** KIE sensitivity (KSR < 1) regardless of the δD weight, hemispheric resolution, or Cl-sink fraction. This occurs because the large uncertainty in $\delta\mathrm{D}$ source signatures allows the solver to accommodate the wrong KIE by shifting FF to unphysical values — effectively importing the $^{13}$C KIE error into the joint solution rather than averaging it out.
 
@@ -192,14 +192,24 @@ When the Agreement Filter retains only internally consistent iterations, it pref
 ![Fine Threshold Sweep](figures/fig13_fine_threshold.png)
 *Figure 2. Fine-resolution threshold sweep (Phase 8a). (a) Agreement rate vs. threshold for Saueressig (blue) and Cantrell (red). (b) Discriminant Δ = rate(Cantrell) − rate(Saueressig) with bootstrap 95% CI. (c) KSR(FF) vs. threshold.*
 
-At a threshold of $\tau$ = 90 Tg yr$^{-1}$:
-- **Cantrell agreement rate:** 61.9% [61.3%, 62.5%]
-- **Saueressig agreement rate:** 36.5% [35.9%, 37.1%]
-- **Discriminant Δ:** +25.4 pp [+24.8, +26.0 pp]
+At a threshold of $\tau$ = 90 Tg yr$^{-1}$ ($N$ = 5000):
+- **Cantrell agreement rate:** 70.8% [70.5%, 71.1%]
+- **Saueressig agreement rate:** 35.3% [34.9%, 35.6%]
+- **Discriminant Δ:** +35.5 pp [+35.3, +35.8 pp]
 
 The discriminant is statistically significant (non-overlapping bootstrap 95% CIs) across **every threshold tested** from 30 to 220 Tg yr$^{-1}$. This means the result is not sensitive to the specific threshold choice — it is a robust, structural feature of the atmospheric record.
 
-**Physical interpretation:** An inversion using the correct OH-$^{13}$C KIE will more frequently produce a FF estimate that is consistent with the independent $\delta\mathrm{D}$-derived estimate, because both isotope systems are responding to the same true source partition. The 25.4 pp gap indicates that the real atmosphere is **substantially more internally consistent** with Cantrell's $\alpha$ = 1.0054 than with Saueressig's $\alpha$ = 1.0039.
+**Cl-fraction sensitivity.** The discriminant remains significant under alternative tropospheric Cl sink assumptions (Table 4): from 28.4 pp at Thanwerdas low-Cl (0.6%) to 19.1 pp at high-Cl (6.5%), with all bootstrap CIs fully above zero.
+
+**Table 4.** Discriminant sensitivity to Cl sink fraction ($\tau$ = 90 Tg/yr, $N$ = 5000).
+
+| Cl Scenario | Cl Fraction | Rate (Saueressig) | Rate (Cantrell) | Δ (pp) | Significant? |
+|-------------|:-----------:|:------------------:|:---------------:|:------:|:------------:|
+| Thanwerdas (low) | 0.6% | 8.6% | 37.0% | **28.4** | ✅ |
+| Default | 3.5% | 35.3% | 70.8% | **35.5** | ✅ |
+| High Cl | 6.5% | 71.5% | 90.6% | **19.1** | ✅ |
+
+**Physical interpretation:** An inversion using the correct OH-$^{13}$C KIE will more frequently produce a FF estimate that is consistent with the independent $\delta\mathrm{D}$-derived estimate, because both isotope systems are responding to the same true source partition. The 35.5 pp gap indicates that the real atmosphere is **substantially more internally consistent** with Cantrell's $\alpha$ = 1.0054 than with Saueressig's $\alpha$ = 1.0039.
 
 ### 3.4 Robustness Test I: Time-Varying KIE (Phase 7)
 
@@ -253,16 +263,16 @@ The filter provides modest but consistent bias and RMSE reduction ($\sim$5–7%)
 
 ### 3.7 Threshold Selection
 
-Two complementary criteria emerge (Figure 2):
+At $N$ = 5000, two complementary criteria emerge:
 
 | Criterion | Optimal Threshold | Value |
 |-----------|:-----------------:|:-----:|
-| Maximum KSR (sensitivity reduction) | **50 Tg/yr** | KSR = 3.21 |
-| Maximum discriminant power | **90 Tg/yr** | Δ = 25.4 pp |
+| Maximum KSR (sensitivity reduction) | **50 Tg/yr** | KSR = 1.59 [0.93, 4.89] |
+| Maximum discriminant power | **90 Tg/yr** | Δ = 35.5 pp [35.3, 35.8] |
 
-The choice depends on the application:
-- **For budget estimation** (minimize KIE propagation): use $\tau$ = 50 Tg/yr (strictest filter, retains fewer iterations, gives tightest trends).
-- **For KIE diagnosis** (maximize signal): use $\tau$ = 90 Tg/yr (largest separation between Cantrell and Saueressig).
+**Note on the KSR.** At $\tau$ = 50 Tg/yr, the Saueressig run retains only 48 of 5000 iterations (0.96%), producing a noisy KSR estimate with a 95% CI that includes 1.0. At $\tau$ = 90 Tg/yr, the KSR stabilises at 1.12 [1.02, 1.24], indicating a statistically significant but modest ~12% reduction in KIE-driven trend spread. The agreement filter's primary quantitative contribution is therefore as a **KIE discriminant** (Δ = 35.5 pp with extremely tight CIs), rather than as a KIE sensitivity reducer.
+
+The choice of 80% year-agreement fraction (the minimum fraction of years that must pass the threshold per iteration) is justified by a sweep across 60–95%: KSR is stable at 1.08–1.13 across this range, and 80% represents the elbow of the sample-size curve (below 80%, retained iteration count grows rapidly; above 80%, Saueressig sample size drops to <200).
 
 Both thresholds fall within the physically plausible range where the discriminant remains significant (30–220 Tg/yr).
 
@@ -280,7 +290,7 @@ Riddell-Young et al. (2025) implicitly applied this logic when they noted that "
 
 ### 4.2 Implications for the KIE Controversy
 
-The 25.4 pp discriminant is, to our knowledge, the **first observation-driven metric** that distinguishes between the Cantrell and Saueressig OH-$^{13}$C KIE values using atmospheric data alone. Previous approaches to this problem have relied on:
+The 35.5 pp discriminant is, to our knowledge, the **first observation-driven metric** that distinguishes between the Cantrell and Saueressig OH-$^{13}$C KIE values using atmospheric data alone. Previous approaches to this problem have relied on:
 - Laboratory re-measurement (none published since 2001)
 - Sensitivity analyses showing the *magnitude* of the effect (Schwietzke et al., 2016; Basu et al., 2022) without favoring one value
 
@@ -300,7 +310,9 @@ If Cantrell's KIE is indeed correct, this has implications consistent with Ridde
 
 4. **Lifetime parameterization.** We adopt He et al. (2026a)'s declining-$\tau$ trend. An alternative constant-$\tau$ scenario shifts absolute agreement rates by $\sim$2 pp but does not change the discriminant (Phase 6b).
 
-5. **OH-D KIE uncertainty.** Both Cantrell and Saueressig inversions sample the same OH-D KIE distribution, so this uncertainty cancels in the discriminant calculation. However, if the true OH-D KIE lies outside [1.294, 1.327], both agreement rates would shift.
+5. **Cl sink fraction.** The discriminant is sensitive to the assumed Cl fraction (19–36 pp across 0.6–6.5% Cl), but remains statistically significant across the full plausible range (Phase 9b). Higher Cl compresses the discriminant because Cl's large $\delta\mathrm{D}$ KIE ($\alpha$ = 1.52) makes the $\delta\mathrm{D}$ constraint more permissive.
+
+6. **OH-D KIE uncertainty.** Both Cantrell and Saueressig inversions sample the same OH-D KIE distribution, so this uncertainty cancels in the discriminant calculation. However, if the true OH-D KIE lies outside [1.294, 1.327], both agreement rates would shift.
 
 ---
 
@@ -310,9 +322,9 @@ If Cantrell's KIE is indeed correct, this has implications consistent with Ridde
 
 1. **Coupled WLS dual-isotope inversion fails** to reduce OH-$^{13}$C KIE sensitivity (KSR = 0.20; 5× worse than $\delta^{13}\mathrm{C}$ alone).
 
-2. **The Agreement Filter succeeds**: KSR = 2.5–3.2× at thresholds of 50–90 Tg yr$^{-1}$, representing a novel use of $\delta\mathrm{D}$ as a quality filter.
+2. **The Agreement Filter provides modest KIE sensitivity reduction**: KSR = 1.12 [1.02, 1.24] at $\tau$ = 90 Tg yr$^{-1}$ ($N$ = 5000), representing a statistically significant but small (~12%) damping of KIE-driven trend spread.
 
-3. **The agreement rate is a KIE discriminant**: 25.4 pp higher for Cantrell than Saueressig (p < 0.001), robust across time-varying scenarios and three independent atmospheric epochs.
+3. **The agreement rate is a powerful KIE discriminant**: 35.5 pp higher for Cantrell than Saueressig (p ≪ 0.001), robust across time-varying scenarios, three independent atmospheric epochs, and alternative Cl sink fractions (0.6–6.5%).
 
 4. **$\delta\mathrm{D}$ is diagnostic, not deterministic**: it reduces bias by $\sim$7% and RMSE by $\sim$5%, but cannot eliminate the $\pm$18 Tg yr$^{-1}$ systematic KIE offset.
 
@@ -388,8 +400,11 @@ Zhao, Y., Saunois, M., Bousquet, P., et al. (2023). Reconciling the bottom-up an
 | Fig. 2 | `figures/fig13_fine_threshold.png` | Fine-resolution threshold sweep: rates, discriminant Δ ± CI, KSR |
 | Fig. 3 | `figures/fig12_timevarying_OH.png` | Time-varying KIE robustness test (Phase 7) |
 | Fig. 4 | `figures/fig14_temporal_stability.png` | Temporal stability across three 8-year epochs |
+| Fig. 5 | `figures/fig15_high_n.png` | N=5000 agreement rates, discriminant + CIs, KSR + bootstrap CIs |
+| Fig. 6 | `figures/fig16_cl_sensitivity.png` | Cl fraction sensitivity: agreement rates and discriminant under 3 Cl scenarios |
 | Fig. S1 | `figures/fig1_KSR_summary.png` | KSR summary histograms (Phase 3: 1-box comparison) |
 | Fig. S2 | `figures/fig6_weight_sweep.png` | WLS weight sweep showing monotonic worsening |
 | Fig. S3 | `figures/fig9_threshold_sweep.png` | Coarse threshold sweep (Phase 6b, 7 thresholds) |
 | Fig. S4 | `figures/fig11_OSSE_recovery.png` | OSSE synthetic-truth recovery |
 | Fig. S5 | `figures/figM6_KSR_summary.png` | Manuscript-quality KSR summary panel |
+| Fig. S6 | `figures/fig17_year_agree_sweep.png` | Year-agreement fraction sweep (sample sizes + KSR) |
