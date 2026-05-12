@@ -89,6 +89,12 @@ def load_C3C4():
     Returns C4exp (24, 180, 360) as percentage [0,100], row0=90°N.
     """
     luo_path = DATA / "C4_distribution_NUS_v2.2.nc"
+    # Auto-reassemble from split parts if needed
+    if not luo_path.exists():
+        reassemble = DATA / "reassemble_luo_c4.sh"
+        if reassemble.exists():
+            import subprocess
+            subprocess.run(["bash", str(reassemble)], check=True)
     if luo_path.exists():
         C3C4_data = nc.Dataset(str(luo_path), 'r')
         C4_maps = C3C4_data.variables['C4_area'][:]
