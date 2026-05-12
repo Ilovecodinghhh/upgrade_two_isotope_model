@@ -30,7 +30,7 @@ Key result: **δD threshold at σ(Mic δD) ≈ 35–40‰**, improvement of ~57%
 
 ### Data & Model
 
-- [ ] **Semi-hemispheric data**: `SemiHemMean_dD_dei_DasguptaCal_noBUDS.csv` exists but is unused — could enable a 4-box model (NH-tropical, NH-extratropical, SH-tropical, SH-extratropical)
+- [ ] **Semi-hemispheric data**: `ThreeBox_dD_sources_summary.csv` exists but is unused — could enable a 3-box model
 - [ ] **δ¹³C hemispheric source signatures**: currently only δD source signatures are hemisphere-specific; δ¹³C uses global. If hemispheric δ¹³C source data becomes available, update `sample_source_signatures_hemi()` to include `ff_d13C_NH/SH` etc.
 - [ ] **2020–2023 gap**: hemispheric atmospheric δD filled with global + offset for those years; when station data becomes available, replace the fill
 - [ ] **Year range alignment**: δD covers 2005–2023, δ¹³C/CH₄ covers 1999–2022; front-padding δD with 2005 values for 1999–2004 is crude — consider whether pre-2005 years should be excluded from CI calculations
