@@ -1,6 +1,6 @@
 # Hemispheric δD Data Inventory
 
-**Date:** 2026-05-12
+**Date:** 2026-05-12 (updated: source signatures produced)
 **Purpose:** Document all available δD data (atmospheric + source signatures) for hemispheric (NH/SH) modeling.
 
 ---
@@ -93,16 +93,25 @@ This constant offset applied to a single global mean time series. No year-to-yea
 |-------------|--------|--------|
 | NH/SH atmospheric δD (MC iterations) | ✅ **Done** | `rel/data/NHMean_dD_iterations_*` (built today) |
 | NH/SH atmospheric δ¹³C (MC iterations) | ✅ **Already exists** | `rel/data/ch4c13_nh_sh_mean.xlsx` (loaded in `common.py`) |
-| NH/SH FF δD source signature | ✅ **Available** | `FF_dD_1x1_{year}.txt` grids → split by latitude |
-| NH/SH Mic δD source signature | ✅ **Available** | `dD_90N` grid → split by latitude |
-| NH/SH BB δD source signature | ✅ **Available** | `dDBB_90N` grid → split by latitude |
+| NH/SH FF δD source signature | ✅ **Done** | `rel/data/FF_dD_NH_MC.csv`, `FF_dD_SH_MC.csv` (24yr × 1000 MC) |
+| NH/SH Mic δD source signature | ✅ **Done** | `rel/data/Mic_dD_NH_MC.csv`, `Mic_dD_SH_MC.csv` (24yr × 1000 MC) |
+| NH/SH BB δD source signature | ✅ **Done** | `rel/data/BB_dD_NH_MC.csv`, `BB_dD_SH_MC.csv` (24yr × 1000 MC) |
 | NH/SH FF δ¹³C source signature | ✅ **Already exists** | in `common.py` hemispheric config |
 | NH/SH Mic δ¹³C source signature | ✅ **Already exists** | in `common.py` hemispheric config |
 | NH/SH BB δ¹³C source signature | ✅ **Already exists** | in `common.py` hemispheric config |
 
-**Answer: YES — all data exist to run a proper 2-box (NH/SH) dual-isotope agreement filter with real hemispheric observations and gridded source signatures, replacing the ±6‰ offset hack.**
+**Answer: YES — all data now exist. The 2-box dual-isotope agreement filter can run with real hemispheric observations AND real hemispheric source signatures.**
 
-The only processing needed is to latitude-weight the 1°×1° source signature grids into NH (0°–90°N) and SH (90°S–0°) means, accounting for emission weighting. This is straightforward from the existing gridded outputs.
+### Hemispheric δD Source Signature Results (from `build_hemispheric_dD_sources.py`)
+
+| Sector | NH mean (‰) | SH mean (‰) | Δ(NH−SH) (‰) | Physical explanation |
+|--------|:-----------:|:-----------:|:-------------:|---------------------|
+| **Mic** | −316.9 ± 7.8 | −304.9 ± 7.3 | **−11.9** | NH is colder → more depleted MAT → more depleted Mic δD |
+| **BB** | −236.7 ± 8.2 | −210.3 ± 7.1 | **−26.4** | NH fires in boreal forests (cold regions) vs SH tropical fires |
+| **FF** | −193.1 ± 5.6 | −189.6 ± 8.1 | **−3.5** | FF δD depends on thermogenic vs biogenic gas mix; similar globally |
+
+Script: `rel/build_hemispheric_dD_sources.py`  
+Summary table: `rel/data/Hemispheric_dD_sources_summary.csv`
 
 ---
 
