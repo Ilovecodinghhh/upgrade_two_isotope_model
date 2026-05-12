@@ -24,7 +24,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from common import (
     load_data, compute_bulk_KIE, compute_lifetime,
     delta_to_fraction_d13C, delta_to_fraction_dD,
-    sample_source_signatures, sample_source_sigs_hemi,
+    sample_source_signatures, sample_source_signatures_hemi,
     sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
     smooth_5yr,
     SINK_FRACTIONS_NH, SINK_FRACTIONS_SH,
@@ -100,7 +100,7 @@ def run_at_fixed_kie(data, mode, oh_13c_kie, n_iter=400, seed=42,
             d13C_src_SH[j] = (n13_SH1-n13_SH + n13_SH*a13_SH/tau_SH[j] - ex13_SH)/S_SH[j]
         
         if use_real_hemi_dD:
-            sigs = sample_source_sigs_hemi(rng, data, k, n)
+            sigs = sample_source_signatures_hemi(rng, data, k, n)
         else:
             sigs = sample_source_signatures(rng, data, k, n)
         f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
@@ -244,7 +244,7 @@ def compute_residuals(data, mode, oh_13c_kie, n_iter=400, seed=42,
             d13C_src_SH[j] = (n13_SH1-n13_SH + n13_SH*a13_SH/tau_SH[j] - ex13_SH)/S_SH[j]
         
         if use_real_hemi_dD:
-            sigs = sample_source_sigs_hemi(rng, data, k, n)
+            sigs = sample_source_signatures_hemi(rng, data, k, n)
             dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
         else:
             sigs = sample_source_signatures(rng, data, k, n)

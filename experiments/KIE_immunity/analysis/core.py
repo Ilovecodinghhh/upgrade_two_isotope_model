@@ -23,7 +23,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from common import (
     load_data, sample_KIE, compute_bulk_KIE, compute_lifetime,
     delta_to_fraction_d13C, delta_to_fraction_dD,
-    sample_source_signatures, sample_source_sigs_hemi,
+    sample_source_signatures, sample_source_signatures_hemi,
     sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
     smooth_5yr, KIE_FIXED,
     SINK_FRACTIONS_NH, SINK_FRACTIONS_SH,
@@ -92,7 +92,7 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
         kie_fixed = kie_base
     if fix_sigs:
         rng_tmp = np.random.default_rng(0)
-        sigs_fixed = sample_source_sigs_hemi(rng_tmp, data, 0, n)
+        sigs_fixed = sample_source_signatures_hemi(rng_tmp, data, 0, n)
 
     for k in range(n_iter):
         if tau_ex_fixed is not None:
@@ -142,7 +142,7 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
         if fix_sigs:
             sigs = sigs_fixed
         else:
-            sigs = sample_source_sigs_hemi(rng, data, k, n)
+            sigs = sample_source_signatures_hemi(rng, data, k, n)
 
         f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
         f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])

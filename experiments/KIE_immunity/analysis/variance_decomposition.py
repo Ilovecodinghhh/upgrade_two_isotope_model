@@ -29,7 +29,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from common import (
     load_data, sample_KIE, compute_bulk_KIE, compute_lifetime,
     delta_to_fraction_d13C, delta_to_fraction_dD,
-    sample_source_signatures, sample_source_sigs_hemi,
+    sample_source_signatures, sample_source_signatures_hemi,
     sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
     smooth_5yr,
     SINK_FRACTIONS_NH, SINK_FRACTIONS_SH,
@@ -83,7 +83,7 @@ def run_2box(data, mode, n_iter, seed,
     if fix_sigs:
         rng_tmp = np.random.default_rng(0)
         if use_real_hemi_dD:
-            sigs_fixed = sample_source_sigs_hemi(rng_tmp, data, 0, n)
+            sigs_fixed = sample_source_signatures_hemi(rng_tmp, data, 0, n)
         else:
             sigs_fixed = sample_source_signatures(rng_tmp, data, 0, n)
     
@@ -132,7 +132,7 @@ def run_2box(data, mode, n_iter, seed,
         if fix_sigs:
             sigs = sigs_fixed
         elif use_real_hemi_dD:
-            sigs = sample_source_sigs_hemi(rng, data, k, n)
+            sigs = sample_source_signatures_hemi(rng, data, k, n)
         else:
             sigs = sample_source_signatures(rng, data, k, n)
         

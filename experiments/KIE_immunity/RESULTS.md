@@ -204,9 +204,43 @@ Bootstrap 95% CIs on variance decomposition (1000 resamples of 400 MC).
 
 ---
 
+## Phase 11: Interhemispheric Exchange Sensitivity
+
+**Question:** Does τ_ex affect σ(FF) and the FF trend?
+
+| Config | ΔFF median | 90% CI | σ(FF) | KIE% | Sig% |
+|---|---|---|---|---|---|
+| Fast (0.5 yr) | −2.0 | [−9.9, −0.2] | 3.8 | — | — |
+| Default ~N(1.0, 0.1) | −6.9 | [−16.2, −1.3] | 13.6 | — | — |
+| Fixed (1.0 yr) | −6.9 | [−16.6, −1.6] | 11.6 | — | — |
+| Slow (1.5 yr) | −4.2 | [−14.1, +9.8] | 15.8 | — | — |
+| **Very slow (2.0 yr)** | **+1.6** | [−9.0, +19.6] | 19.3 | — | — |
+
+**⚠ CRITICAL FINDING: τ_ex is the one parameter that can flip the FF trend.**
+
+At τ_ex ≥ 1.5 yr, the 90% CI includes zero. At τ_ex = 2.0 yr, the median
+flips positive. This is the ONLY sensitivity tested (across τ, OH_D, Cl,
+and 18-cell matrix) where the trend reversal breaks down.
+
+**Physical interpretation:** τ_ex = 2.0 yr means hemispheres barely
+communicate. The δD constraint relies on hemispheric *contrast* — if the
+hemispheres are too decoupled, the model attributes FF differences to
+transport artifacts rather than source changes.
+
+**Practical impact:** The literature consensus for τ_ex is 0.9–1.3 yr
+(Patra et al. 2011: 1.0 yr; Hein et al. 1997: 1.1 yr). At these realistic
+values, the FF trend is robustly negative. Only unrealistically slow
+exchange (>1.5 yr) undermines the result.
+
+σ(FF) range: 3.8–19.3 Tg/yr (121% spread) → **τ_ex genuinely matters.**
+The 2-box framework provides real constraint from transport separation,
+not just source-signature separation.
+
+---
+
 ## Key Scientific Findings (Updated)
 
-### 1. FF Trend Reversal is Iron-Clad
+### 1. FF Trend Reversal is Robust — With One Caveat
 
 Real hemispheric δD reverses the post-2007 FF trend from +13 to −6..−7 Tg/yr.
 This is robust across:
@@ -214,6 +248,11 @@ This is robust across:
 - All OH-D KIE values (1.294–1.327, marginal at 1.35) — Phase 6
 - All Cl fractions (0.6–10%) — Phase 7
 - **All 18 cells** of the combined τ × OH_D × Cl matrix — Phase 8
+
+**One caveat (Phase 11):** At interhemispheric exchange times τ_ex ≥ 1.5 yr,
+the trend weakens and at τ_ex = 2.0 yr it flips positive. However, the
+literature consensus is τ_ex ≈ 1.0 yr (range 0.9–1.3 yr), safely within
+the "robustly negative" regime.
 
 ### 2. Cl Fraction Controls the Variance Budget
 
@@ -273,10 +312,14 @@ experiments/KIE_immunity/
 │   ├── phase6_OHD_sensitivity.py      ← OH-D KIE sensitivity
 │   ├── phase7_Cl_sensitivity.py       ← Cl fraction + variance decomp
 │   ├── phase8_robustness_matrix.py    ← 18-cell combined matrix
-│   └── phase9_bootstrap_variance.py   ← bootstrap CIs
+│   ├── phase9_bootstrap_variance.py   ← bootstrap CIs
+│   └── phase11_tau_ex.py              ← IH exchange sensitivity
 ├── figures/
 │   ├── fig_kie_immunity.py
-│   └── fig_kie_immunity.png
+│   ├── fig_kie_immunity.png
+│   ├── fig_variance_v2.py             ← 3-panel publication figure
+│   ├── fig_variance_v2.png
+│   └── fig_variance_v2.pdf
 └── results/
     ├── variance_decomposition.json       (v1)
     ├── variance_decomposition_v2.json    (v2)
@@ -286,5 +329,6 @@ experiments/KIE_immunity/
     ├── phase6_OHD_sensitivity.json
     ├── phase7_Cl_sensitivity.json
     ├── phase8_robustness_matrix.json
-    └── phase9_bootstrap.json
+    ├── phase9_bootstrap.json
+    └── phase11_tau_ex.json
 ```

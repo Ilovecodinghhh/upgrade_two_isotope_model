@@ -153,3 +153,5 @@ The current variance decomposition has no uncertainty on the percentages.
 - [x] Phase 7: Cl fraction sensitivity — **✓ negative + Cl-KIE-Sig tradeoff discovered**
 - [x] Phase 8: Combined robustness matrix — **✓✓ 18/18 cells robustly negative**
 - [x] Phase 9: Bootstrap CIs — **✓ Sig% [31,52] statistically > offset [0,0]**
+- [x] Phase 10: 3-panel publication figure — **fig_variance_v2.png/pdf**
+- [x] Phase 11: τ_ex sensitivity — **⚠ τ_ex ≥ 1.5yr weakens trend; 2.0yr flips sign**

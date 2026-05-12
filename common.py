@@ -687,45 +687,6 @@ def sample_source_signatures(rng, data: LoadedData, k: int, target_length: int):
     }
 
 
-def sample_source_signatures_hemi(rng, data: LoadedData, k: int, target_length: int):
-    """Sample hemispheric δD source signatures for MC iteration k.
-
-    Uses actual NH/SH MC iterations when available; falls back to global.
-
-    Returns dict with keys:
-        ff_dD_NH, ff_dD_SH, bb_dD_NH, bb_dD_SH, mic_dD_NH, mic_dD_SH
-        ff_d13C, bb_d13C, mic_d13C  (global — δ¹³C unchanged)
-    """
-    tl = target_length
-    # Get global signatures first (includes δ¹³C)
-    global_sigs = sample_source_signatures(rng, data, k, tl)
-
-    # δD: use hemispheric MC if available, else duplicate global
-    def _pick_hemi(mc_mat, global_arr, k, tl):
-        if mc_mat is not None:
-            col = min(k, mc_mat.shape[1] - 1)
-            arr = mc_mat[:tl, col].copy()
-            return pad_to_length(arr, tl)
-        return global_arr
-
-    result = {
-        'ff_d13C': global_sigs['ff_d13C'],
-        'bb_d13C': global_sigs['bb_d13C'],
-        'mic_d13C': global_sigs['mic_d13C'],
-        'ff_dD_NH': _pick_hemi(data.FF_dD_NH_MC, global_sigs['ff_dD'], k, tl),
-        'ff_dD_SH': _pick_hemi(data.FF_dD_SH_MC, global_sigs['ff_dD'], k, tl),
-        'bb_dD_NH': _pick_hemi(data.BB_dD_NH_MC, global_sigs['bb_dD'], k, tl),
-        'bb_dD_SH': _pick_hemi(data.BB_dD_SH_MC, global_sigs['bb_dD'], k, tl),
-        'mic_dD_NH': _pick_hemi(data.Mic_dD_NH_MC, global_sigs['mic_dD'], k, tl),
-        'mic_dD_SH': _pick_hemi(data.Mic_dD_SH_MC, global_sigs['mic_dD'], k, tl),
-        # Also keep global for backward compat
-        'ff_dD': global_sigs['ff_dD'],
-        'bb_dD': global_sigs['bb_dD'],
-        'mic_dD': global_sigs['mic_dD'],
-    }
-    return result
-
-
 def sample_atm_d13C(data: LoadedData, k: int, target_length: int) -> np.ndarray:
     """Return sampled global δ¹³C time series (length target_length+1)."""
     tl1 = target_length + 1
