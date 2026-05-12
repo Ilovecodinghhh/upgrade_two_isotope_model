@@ -1,14 +1,14 @@
 {
   "our_uncertainties": {
-    "CI": 43.515807357774825,
-    "improvement_pct": 57.02170999382542
+    "CI": 57.64518300326716,
+    "improvement_pct": 45.13468933353199
   },
   "thanwerdas_uncertainties": {
-    "CI": 253.5123659488433,
-    "improvement_pct": -150.38092236967717
+    "CI": 250.55885922000135,
+    "improvement_pct": -138.47594777454447
   },
   "d13C_reference": {
-    "CI": 101.25067179620925
+    "CI": 105.0667212178899
   },
   "conclusion": "uncertainty_kills_dD"
 }

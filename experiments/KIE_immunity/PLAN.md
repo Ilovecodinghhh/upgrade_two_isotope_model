@@ -1,7 +1,10 @@
 # KIE Immunity — Plan & Prompts
 
 **Last updated:** 2026-05-12  
-**Depends on:** Phases 1–4 + v2 (real hemispheric δD) complete.
+**Depends on:** Phases 1–4 + v2 (real hemispheric δD) complete.  
+**v3 upgrade:** Real hemispheric δ¹³C source signatures now available.  
+All experiment scripts updated to use `sigs['ff_d13C_NH']`, `sigs['ff_d13C_SH']`, etc.  
+when `use_real_hemi_dD=True`. This affects the 3×3 solver matrices and the 2×2 δ¹³C-only fallback.
 
 ---
 
