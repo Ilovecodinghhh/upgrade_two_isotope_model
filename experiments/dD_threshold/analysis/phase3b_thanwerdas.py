@@ -156,6 +156,13 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
         f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
         f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
         f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+        # Hemispheric d13C source signatures
+        f13_bb_NH = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+        f13_ff_NH = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+        f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+        f13_bb_SH = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+        f13_ff_SH = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+        f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
         
         if mode == "dual":
             dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
@@ -183,7 +190,7 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
             for j in range(n):
                 A_nh = np.array([
                     [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j]],
                     [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]],
                 ])
                 B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
@@ -195,7 +202,7 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
                 
                 A_sh = np.array([
                     [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j]],
                     [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]],
                 ])
                 B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
@@ -207,21 +214,24 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
         
         else:  # d13C_only
             for j in range(n):
-                denom = f13_ff[j] - f13_mic[j]
-                if abs(denom) < 1e-15: continue
                 # NH
-                S_rem = S_NH[j] - BB_hemi_NH
-                rhs = S_NH[j]*d13C_src_NH[j] - BB_hemi_NH*f13_bb[j]
-                FF_G[j,k] += (rhs - S_rem*f13_mic[j]) / denom
-                Mic_G[j,k] += S_rem - FF_G[j,k]  # wrong — need to track
-                # Fix: redo properly
-                ff_nh = (rhs - S_rem*f13_mic[j]) / denom
-                mic_nh = S_rem - ff_nh
+                denom_nh = f13_ff_NH[j] - f13_mic_NH[j]
+                if abs(denom_nh) < 1e-15:
+                    ff_nh = np.nan; mic_nh = np.nan
+                else:
+                    S_rem = S_NH[j] - BB_hemi_NH
+                    rhs = S_NH[j]*d13C_src_NH[j] - BB_hemi_NH*f13_bb_NH[j]
+                    ff_nh = (rhs - S_rem*f13_mic_NH[j]) / denom_nh
+                    mic_nh = S_rem - ff_nh
                 # SH
-                S_rem = S_SH[j] - BB_hemi_SH
-                rhs = S_SH[j]*d13C_src_SH[j] - BB_hemi_SH*f13_bb[j]
-                ff_sh = (rhs - S_rem*f13_mic[j]) / denom
-                mic_sh = S_rem - ff_sh
+                denom_sh = f13_ff_SH[j] - f13_mic_SH[j]
+                if abs(denom_sh) < 1e-15:
+                    ff_sh = np.nan; mic_sh = np.nan
+                else:
+                    S_rem = S_SH[j] - BB_hemi_SH
+                    rhs = S_SH[j]*d13C_src_SH[j] - BB_hemi_SH*f13_bb_SH[j]
+                    ff_sh = (rhs - S_rem*f13_mic_SH[j]) / denom_sh
+                    mic_sh = S_rem - ff_sh
                 FF_G[j,k] = ff_nh + ff_sh
                 Mic_G[j,k] = mic_nh + mic_sh
     

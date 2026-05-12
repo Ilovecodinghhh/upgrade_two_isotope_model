@@ -370,6 +370,14 @@ class LoadedData:
     BB_dD_NH_MC: Optional[np.ndarray] = None
     BB_dD_SH_MC: Optional[np.ndarray] = None
 
+    # Hemispheric δ¹³C source-signature MC matrices (rows=years, cols=1000 MC)
+    FF_d13C_NH_MC: Optional[np.ndarray] = None
+    FF_d13C_SH_MC: Optional[np.ndarray] = None
+    Mic_d13C_NH_MC: Optional[np.ndarray] = None
+    Mic_d13C_SH_MC: Optional[np.ndarray] = None
+    BB_d13C_NH_MC: Optional[np.ndarray] = None
+    BB_d13C_SH_MC: Optional[np.ndarray] = None
+
     # CarbonTracker BB (for 2×2 models)
     BB_annual: np.ndarray = field(default_factory=lambda: np.array([]))
     BB_global_mean: float = 0.0
@@ -523,6 +531,21 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
             if fpath.exists():
                 mc_df = pd.read_csv(fpath)
                 # Col 0 = year (1998–2021), cols 1–1000 = MC iterations
+                setattr(d, attr, mc_df.iloc[:, 1:].to_numpy(dtype=np.float64))
+
+    # === Hemispheric δ¹³C source signatures MC ===
+    if two_box:
+        for attr, fname in [
+            ('FF_d13C_NH_MC', 'FF_d13C_NH_MC.csv'),
+            ('FF_d13C_SH_MC', 'FF_d13C_SH_MC.csv'),
+            ('Mic_d13C_NH_MC', 'Mic_d13C_NH_MC.csv'),
+            ('Mic_d13C_SH_MC', 'Mic_d13C_SH_MC.csv'),
+            ('BB_d13C_NH_MC', 'BB_d13C_NH_MC.csv'),
+            ('BB_d13C_SH_MC', 'BB_d13C_SH_MC.csv'),
+        ]:
+            fpath = data_dir / fname
+            if fpath.exists():
+                mc_df = pd.read_csv(fpath)
                 setattr(d, attr, mc_df.iloc[:, 1:].to_numpy(dtype=np.float64))
 
     # === Source signatures — d13C ===
@@ -687,6 +710,56 @@ def sample_source_signatures(rng, data: LoadedData, k: int, target_length: int):
     }
 
 
+def sample_source_signatures_hemi(rng, data: LoadedData, k: int, target_length: int):
+    """Sample hemispheric source signatures (both d13C and dD) for MC iteration k.
+
+    Uses actual NH/SH MC iterations when available; falls back to global.
+
+    Returns dict with keys:
+        ff_dD_NH, ff_dD_SH, bb_dD_NH, bb_dD_SH, mic_dD_NH, mic_dD_SH
+        ff_d13C_NH, ff_d13C_SH, bb_d13C_NH, bb_d13C_SH, mic_d13C_NH, mic_d13C_SH
+        ff_d13C, bb_d13C, mic_d13C  (global, for backward compat)
+        ff_dD, bb_dD, mic_dD  (global, for backward compat)
+    """
+    tl = target_length
+    # Get global signatures first
+    global_sigs = sample_source_signatures(rng, data, k, tl)
+
+    # Helper: use hemispheric MC if available, else duplicate global
+    def _pick_hemi(mc_mat, global_arr, k, tl):
+        if mc_mat is not None:
+            col = min(k, mc_mat.shape[1] - 1)
+            # Source sig MC covers 1998-2021 (24 rows); model starts 1999 -> skip row 0
+            arr = mc_mat[1:tl+1, col].copy()
+            return pad_to_length(arr, tl)
+        return global_arr
+
+    result = {
+        # Global (backward compat)
+        'ff_d13C': global_sigs['ff_d13C'],
+        'bb_d13C': global_sigs['bb_d13C'],
+        'mic_d13C': global_sigs['mic_d13C'],
+        'ff_dD': global_sigs['ff_dD'],
+        'bb_dD': global_sigs['bb_dD'],
+        'mic_dD': global_sigs['mic_dD'],
+        # Hemispheric dD
+        'ff_dD_NH': _pick_hemi(data.FF_dD_NH_MC, global_sigs['ff_dD'], k, tl),
+        'ff_dD_SH': _pick_hemi(data.FF_dD_SH_MC, global_sigs['ff_dD'], k, tl),
+        'bb_dD_NH': _pick_hemi(data.BB_dD_NH_MC, global_sigs['bb_dD'], k, tl),
+        'bb_dD_SH': _pick_hemi(data.BB_dD_SH_MC, global_sigs['bb_dD'], k, tl),
+        'mic_dD_NH': _pick_hemi(data.Mic_dD_NH_MC, global_sigs['mic_dD'], k, tl),
+        'mic_dD_SH': _pick_hemi(data.Mic_dD_SH_MC, global_sigs['mic_dD'], k, tl),
+        # Hemispheric d13C
+        'ff_d13C_NH': _pick_hemi(data.FF_d13C_NH_MC, global_sigs['ff_d13C'], k, tl),
+        'ff_d13C_SH': _pick_hemi(data.FF_d13C_SH_MC, global_sigs['ff_d13C'], k, tl),
+        'bb_d13C_NH': _pick_hemi(data.BB_d13C_NH_MC, global_sigs['bb_d13C'], k, tl),
+        'bb_d13C_SH': _pick_hemi(data.BB_d13C_SH_MC, global_sigs['bb_d13C'], k, tl),
+        'mic_d13C_NH': _pick_hemi(data.Mic_d13C_NH_MC, global_sigs['mic_d13C'], k, tl),
+        'mic_d13C_SH': _pick_hemi(data.Mic_d13C_SH_MC, global_sigs['mic_d13C'], k, tl),
+    }
+    return result
+
+
 def sample_atm_d13C(data: LoadedData, k: int, target_length: int) -> np.ndarray:
     """Return sampled global δ¹³C time series (length target_length+1)."""
     tl1 = target_length + 1
@@ -731,44 +804,6 @@ def sample_atm_dD_hemi(data: LoadedData, k: int, target_length: int):
         return dD_glob - DD_IH_OFFSET, dD_glob + DD_IH_OFFSET
 
 
-def sample_source_signatures_hemi(rng, data: LoadedData, k: int, target_length: int):
-    """Sample hemispheric δD source signatures for MC iteration k.
-
-    Uses actual NH/SH MC iterations when available; falls back to global.
-
-    Returns dict with keys:
-        ff_dD_NH, ff_dD_SH, bb_dD_NH, bb_dD_SH, mic_dD_NH, mic_dD_SH
-        ff_d13C, bb_d13C, mic_d13C  (global — δ¹³C unchanged)
-    """
-    tl = target_length
-    # Get global signatures first (includes δ¹³C)
-    global_sigs = sample_source_signatures(rng, data, k, tl)
-
-    # δD: use hemispheric MC if available, else duplicate global
-    def _pick_hemi(mc_mat, global_arr, k, tl):
-        if mc_mat is not None:
-            col = min(k, mc_mat.shape[1] - 1)
-            # Source sig MC covers 1998–2021 (24 rows); model starts 1999 → skip row 0
-            arr = mc_mat[1:tl+1, col].copy()
-            return pad_to_length(arr, tl)
-        return global_arr
-
-    result = {
-        'ff_d13C': global_sigs['ff_d13C'],
-        'bb_d13C': global_sigs['bb_d13C'],
-        'mic_d13C': global_sigs['mic_d13C'],
-        'ff_dD_NH': _pick_hemi(data.FF_dD_NH_MC, global_sigs['ff_dD'], k, tl),
-        'ff_dD_SH': _pick_hemi(data.FF_dD_SH_MC, global_sigs['ff_dD'], k, tl),
-        'bb_dD_NH': _pick_hemi(data.BB_dD_NH_MC, global_sigs['bb_dD'], k, tl),
-        'bb_dD_SH': _pick_hemi(data.BB_dD_SH_MC, global_sigs['bb_dD'], k, tl),
-        'mic_dD_NH': _pick_hemi(data.Mic_dD_NH_MC, global_sigs['mic_dD'], k, tl),
-        'mic_dD_SH': _pick_hemi(data.Mic_dD_SH_MC, global_sigs['mic_dD'], k, tl),
-        # Also keep global for backward compat
-        'ff_dD': global_sigs['ff_dD'],
-        'bb_dD': global_sigs['bb_dD'],
-        'mic_dD': global_sigs['mic_dD'],
-    }
-    return result
 # ============================================================================
 # TREND ANALYSIS HELPERS
 # ============================================================================

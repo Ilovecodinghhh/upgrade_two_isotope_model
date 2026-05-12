@@ -229,6 +229,13 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
         f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
         f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
         f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+        # Hemispheric δ¹³C source signatures
+        f13_bb_NH = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+        f13_ff_NH = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+        f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+        f13_bb_SH = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+        f13_ff_SH = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+        f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
         
         if mode == "dual":
             # Also compute δD — use real hemispheric data
@@ -259,7 +266,7 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
                 # NH
                 A_nh = np.array([
                     [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j]],
                     [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]],
                 ])
                 B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
@@ -274,7 +281,7 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
                 # SH
                 A_sh = np.array([
                     [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j]],
                     [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]],
                 ])
                 B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
@@ -290,10 +297,10 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
             for j in range(n):
                 # NH
                 S_rem_nh = S_NH[j] - BB_hemi_NH
-                rhs_nh = S_NH[j] * d13C_src_NH[j] - BB_hemi_NH * f13_bb[j]
-                denom = f13_ff[j] - f13_mic[j]
-                if abs(denom) > 1e-15:
-                    FF_val = (rhs_nh - S_rem_nh * f13_mic[j]) / denom
+                rhs_nh = S_NH[j] * d13C_src_NH[j] - BB_hemi_NH * f13_bb_NH[j]
+                denom_nh = f13_ff_NH[j] - f13_mic_NH[j]
+                if abs(denom_nh) > 1e-15:
+                    FF_val = (rhs_nh - S_rem_nh * f13_mic_NH[j]) / denom_nh
                     Mic_val = S_rem_nh - FF_val
                 else:
                     FF_val = np.nan; Mic_val = np.nan
@@ -301,9 +308,10 @@ def run_two_box(mode="dual", n_iter=1000, seed=42):
                 
                 # SH
                 S_rem_sh = S_SH[j] - BB_hemi_SH
-                rhs_sh = S_SH[j] * d13C_src_SH[j] - BB_hemi_SH * f13_bb[j]
-                if abs(denom) > 1e-15:
-                    FF_val = (rhs_sh - S_rem_sh * f13_mic[j]) / denom
+                rhs_sh = S_SH[j] * d13C_src_SH[j] - BB_hemi_SH * f13_bb_SH[j]
+                denom_sh = f13_ff_SH[j] - f13_mic_SH[j]
+                if abs(denom_sh) > 1e-15:
+                    FF_val = (rhs_sh - S_rem_sh * f13_mic_SH[j]) / denom_sh
                     Mic_val = S_rem_sh - FF_val
                 else:
                     FF_val = np.nan; Mic_val = np.nan

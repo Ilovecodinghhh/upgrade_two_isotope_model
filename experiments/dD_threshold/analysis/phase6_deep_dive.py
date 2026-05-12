@@ -125,6 +125,13 @@ def run_twobox(data, multiplier, n_iter, seed, mode="dual",
         f13_bb  = delta_to_fraction_d13C(sigs['bb_d13C'])
         f13_ff  = delta_to_fraction_d13C(sigs['ff_d13C'])
         f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+        # Hemispheric d13C source signatures
+        f13_bb_NH  = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+        f13_ff_NH  = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+        f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+        f13_bb_SH  = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+        f13_ff_SH  = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+        f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
 
         if mode == "dual":
             dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
@@ -150,7 +157,7 @@ def run_twobox(data, multiplier, n_iter, seed, mode="dual",
 
             for j in range(n):
                 A_nh = np.array([[1,1,1],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j]],
                     [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]]])
                 B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
                 try:
@@ -163,7 +170,7 @@ def run_twobox(data, multiplier, n_iter, seed, mode="dual",
                 except: pass
 
                 A_sh = np.array([[1,1,1],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
+                    [f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j]],
                     [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]]])
                 B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
                 try:
@@ -177,16 +184,22 @@ def run_twobox(data, multiplier, n_iter, seed, mode="dual",
 
         else:  # d13C_only
             for j in range(n):
-                denom = f13_ff[j] - f13_mic[j]
-                if abs(denom) < 1e-15:
-                    FF_NH[j,k] = np.nan; FF_SH[j,k] = np.nan
-                    continue
-                S_rem = S_NH[j] - BB_hemi_NH
-                rhs = S_NH[j]*d13C_src_NH[j] - BB_hemi_NH*f13_bb[j]
-                FF_NH[j,k] = (rhs - S_rem*f13_mic[j]) / denom
-                S_rem = S_SH[j] - BB_hemi_SH
-                rhs = S_SH[j]*d13C_src_SH[j] - BB_hemi_SH*f13_bb[j]
-                FF_SH[j,k] = (rhs - S_rem*f13_mic[j]) / denom
+                # NH
+                denom_nh = f13_ff_NH[j] - f13_mic_NH[j]
+                if abs(denom_nh) < 1e-15:
+                    FF_NH[j,k] = np.nan
+                else:
+                    S_rem = S_NH[j] - BB_hemi_NH
+                    rhs = S_NH[j]*d13C_src_NH[j] - BB_hemi_NH*f13_bb_NH[j]
+                    FF_NH[j,k] = (rhs - S_rem*f13_mic_NH[j]) / denom_nh
+                # SH
+                denom_sh = f13_ff_SH[j] - f13_mic_SH[j]
+                if abs(denom_sh) < 1e-15:
+                    FF_SH[j,k] = np.nan
+                else:
+                    S_rem = S_SH[j] - BB_hemi_SH
+                    rhs = S_SH[j]*d13C_src_SH[j] - BB_hemi_SH*f13_bb_SH[j]
+                    FF_SH[j,k] = (rhs - S_rem*f13_mic_SH[j]) / denom_sh
 
     return {
         'FF_NH': FF_NH, 'FF_SH': FF_SH, 'FF_G': FF_NH + FF_SH,
