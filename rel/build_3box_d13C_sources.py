@@ -118,6 +118,66 @@ def load_C3C4():
 
 
 # ============================================================================
+# WETLAND δ¹³C LOADING (isotem per-year files or Oh 2022 fallback)
+# ============================================================================
+
+def load_wetland_d13C():
+    """Load isotem wetland δ¹³C spatial maps (per-year NC4 files).
+    Falls back to Oh 2022 global time series if unavailable.
+    Returns (grid, unc_grid) each (24, 180, 360)."""
+    isotem_dir = SCRIPT_DIR / "data" / "isotem_wetland_d13C-CH4"
+    if isotem_dir.is_dir():
+        result = np.full((N_YEARS, 180, 360), np.nan)
+        unc_result = np.full((N_YEARS, 180, 360), np.nan)
+        last_valid = None
+        
+        for yr_idx, year in enumerate(YEARS):
+            fpath = isotem_dir / f"isotem_wetland_d13C-CH4_{year}.nc4"
+            if fpath.exists():
+                wf = nc.Dataset(str(fpath), 'r')
+                d13c = wf.variables['wetland_d13C-CH4'][:]  # (12, 720, 360) = (month, lon, lat)
+                wf.close()
+                d13c = np.ma.filled(d13c, fill_value=np.nan)
+                ann = np.nanmean(d13c, axis=0)  # (720, 360)
+                ann_std = np.nanstd(d13c, axis=0)
+                ann_ll = ann.T     # (360, 720), lat 90N→89.5S
+                std_ll = ann_std.T
+                ann_1deg = np.nanmean(ann_ll.reshape(180, 2, 360, 2), axis=(1, 3))
+                std_1deg = np.nanmean(std_ll.reshape(180, 2, 360, 2), axis=(1, 3))
+                # Keep NaN for cells with no wetlands — emission-weighting handles this
+                result[yr_idx] = ann_1deg
+                unc_result[yr_idx] = std_1deg
+                last_valid = yr_idx
+            elif last_valid is not None:
+                result[yr_idx] = result[last_valid]
+                unc_result[yr_idx] = unc_result[last_valid]
+        
+        first_valid = next((i for i in range(N_YEARS) if not np.all(np.isnan(result[i]))), 0)
+        for i in range(first_valid):
+            result[i] = result[first_valid]
+            unc_result[i] = unc_result[first_valid]
+        
+        nh_mean = np.nanmean(result[:, :90, :])
+        sh_mean = np.nanmean(result[:, 90:, :])
+        print(f"  Using isotem wetland δ¹³C spatial maps")
+        print(f"    NH mean: {nh_mean:.2f}‰, SH mean: {sh_mean:.2f}‰, gap: {nh_mean - sh_mean:.2f}‰")
+        return result, unc_result
+    
+    oh_path = DATA / "Oh_2022_Wetlands.xlsx"
+    if oh_path.exists():
+        oh = pd.read_excel(oh_path).values
+        wetland_d13C_ts = oh[:, 1]
+        print(f"  Using Oh 2022 wetland δ¹³C global means: {np.mean(wetland_d13C_ts):.1f}‰")
+        result = np.zeros((N_YEARS, 180, 360))
+        unc = np.full((N_YEARS, 180, 360), 0.7)
+        for yr in range(N_YEARS):
+            result[yr, :, :] = wetland_d13C_ts[yr]
+        return result, unc
+    print("  WARNING: No wetland δ¹³C data, using -61.0‰")
+    return np.full((N_YEARS, 180, 360), -61.0), np.full((N_YEARS, 180, 360), 1.0)
+
+
+# ============================================================================
 # HELPER: 3-box emission-weighted mean
 # ============================================================================
 
@@ -356,9 +416,14 @@ def compute_ff_d13C_3box(fos_ann):
 # 3. Mic δ¹³C — 3-BOX MC
 # ============================================================================
 
-def compute_mic_d13C_3box(C4exp, mic_ann):
-    """Microbial δ¹³C: subcategory mass balance per box (simplified)."""
-    print("Computing Mic δ¹³C 3-box MC (simplified)...")
+def compute_mic_d13C_3box(C4exp, mic_ann, wetland_d13C_grid=None, wetland_d13C_unc_grid=None):
+    """Microbial δ¹³C: subcategory mass balance per box.
+    Uses isotem spatial wetland δ¹³C if provided."""
+    use_isotem = wetland_d13C_grid is not None
+    if use_isotem:
+        print("Computing Mic δ¹³C 3-box MC (with isotem spatial wetland δ¹³C)...")
+    else:
+        print("Computing Mic δ¹³C 3-box MC (simplified)...")
 
     C3_RUM_D13C = -66.64; C3_RUM_STD = 3.39
     C4_RUM_D13C = -54.96; C4_RUM_STD = 3.43
@@ -366,15 +431,19 @@ def compute_mic_d13C_3box(C4exp, mic_ann):
     RICE_D13C = -59.9; RICE_STD = 4.5
     TERMITE_D13C = -65.2; TERMITE_STD = 7.6
 
-    # Wetland δ¹³C from Oh 2022
-    oh_path = DATA / "Oh_2022_Wetlands.xlsx"
-    if oh_path.exists():
-        oh = pd.read_excel(oh_path).values
-        wetland_d13C_ts = oh[:, 1]
-        wetland_d13C_unc = 0.7
+    # Wetland δ¹³C — spatial (isotem) or global (Oh 2022)
+    if use_isotem:
+        wetland_d13C_ts = None
+        wetland_d13C_unc = None
     else:
-        wetland_d13C_ts = np.full(N_YEARS, -61.5)
-        wetland_d13C_unc = 1.0
+        oh_path = DATA / "Oh_2022_Wetlands.xlsx"
+        if oh_path.exists():
+            oh = pd.read_excel(oh_path).values
+            wetland_d13C_ts = oh[:, 1]
+            wetland_d13C_unc = 0.7
+        else:
+            wetland_d13C_ts = np.full(N_YEARS, -61.5)
+            wetland_d13C_unc = 1.0
 
     # Ruminant δ¹³C from Chang 2019
     chang_path = DATA / "Chang_2019_ruminants.xlsx"
@@ -404,7 +473,8 @@ def compute_mic_d13C_3box(C4exp, mic_ann):
         waste_d13C = WASTE_D13C + np.random.normal() * WASTE_STD
         rice_d13C = RICE_D13C + np.random.normal() * RICE_STD
         termite_d13C = TERMITE_D13C + np.random.normal() * TERMITE_STD
-        wetland_pert = np.random.normal() * wetland_d13C_unc
+        if not use_isotem:
+            wetland_pert = np.random.normal() * wetland_d13C_unc
         rum_pert = np.random.normal() * rum_d13C_unc
         prop_pert = np.random.normal(loc=1, scale=0.1, size=5)
         suess = SUESS_TREND + np.random.normal() * SUESS_TREND_UNC
@@ -426,7 +496,27 @@ def compute_mic_d13C_3box(C4exp, mic_ann):
                     c4_h = c4_defaults[box_name]
 
                 rum_d13C_h = (1 - c4_h) * c3_rum + c4_h * c4_rum
-                wet_d13C_h = wetland_d13C_ts[yr] + wetland_pert
+
+                # Wetland δ¹³C — spatial (isotem) or global (Oh 2022)
+                if use_isotem:
+                    wet_grid = wetland_d13C_grid[yr, box_slice, :]
+                    unc_grid = wetland_d13C_unc_grid[yr, box_slice, :]
+                    valid = ~np.isnan(wet_grid)
+                    if em_total > 0 and valid.any():
+                        w = em_h * valid
+                        w_sum = w.sum()
+                        if w_sum > 0:
+                            wet_d13C_h = (wet_grid[valid] * em_h[valid]).sum() / w_sum
+                            wet_unc_h = np.sqrt((unc_grid[valid]**2 * em_h[valid]).sum()) / w_sum
+                        else:
+                            wet_d13C_h = np.nanmean(wet_grid)
+                            wet_unc_h = np.nanmean(unc_grid)
+                    else:
+                        wet_d13C_h = np.nanmean(wet_grid) if valid.any() else -61.0
+                        wet_unc_h = np.nanmean(unc_grid) if valid.any() else 1.0
+                    wet_d13C_h += np.random.normal() * wet_unc_h
+                else:
+                    wet_d13C_h = wetland_d13C_ts[yr] + wetland_pert
 
                 waste_s = waste_d13C + yr_offset * suess
                 rice_s = rice_d13C + yr_offset * suess
@@ -608,7 +698,8 @@ def main():
     ff_res = compute_ff_d13C_3box(fos_ann)
 
     print("\n[5/7] Mic δ¹³C (3-box)...")
-    mic_res = compute_mic_d13C_3box(C4exp, mic_ann)
+    wetland_grid, wetland_unc_grid = load_wetland_d13C()
+    mic_res = compute_mic_d13C_3box(C4exp, mic_ann, wetland_grid, wetland_unc_grid)
 
     print("\n[6/7] Atmospheric δ¹³C (3-box)...")
     atm_result, atm_mc = build_3box_atmospheric_d13C()
