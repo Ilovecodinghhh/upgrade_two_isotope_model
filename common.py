@@ -153,6 +153,44 @@ SINK_FRACTIONS_GLOBAL = {'OH': 0.835, 'Cl': 0.035, 'Strat': 0.070, 'Soil': 0.060
 SINK_FRACTIONS_NH = {'OH': 0.825, 'Cl': 0.040, 'Strat': 0.070, 'Soil': 0.065}
 SINK_FRACTIONS_SH = {'OH': 0.850, 'Cl': 0.028, 'Strat': 0.070, 'Soil': 0.052}
 
+# Three-box sink fractions (NHext / Trop / SHext)
+# NHext >30°N: more soil, less OH than tropics
+# Trop 30°S–30°N: dominant OH, less soil
+# SHext <30°S: less Cl, more strat
+SINK_FRACTIONS_NHEXT = {'OH': 0.810, 'Cl': 0.040, 'Strat': 0.080, 'Soil': 0.070}
+SINK_FRACTIONS_TROP  = {'OH': 0.860, 'Cl': 0.035, 'Strat': 0.055, 'Soil': 0.050}
+SINK_FRACTIONS_SHEXT = {'OH': 0.840, 'Cl': 0.025, 'Strat': 0.080, 'Soil': 0.055}
+
+# Three-box lifetime ratios (relative to global τ)
+# OH peaks in tropics → shorter lifetime; extratropics longer
+LIFETIME_RATIO_NHEXT = 1.05
+LIFETIME_RATIO_TROP  = 0.90
+LIFETIME_RATIO_SHEXT = 1.08
+
+# BB split across 3 boxes (GFED4 latitude fractions)
+BB_NHEXT_FRACTION = 0.30  # Boreal fires
+BB_TROP_FRACTION  = 0.55  # Tropical fires dominate
+BB_SHEXT_FRACTION = 0.15  # Southern Africa/Australia
+
+# Three-box CH₄ concentration fractions (fraction of global mean per box)
+# Based on NOAA latitudinal gradient: NH enriched, SH depleted
+CH4_NHEXT_OFFSET = 30.0   # ppb above global mean
+CH4_TROP_OFFSET  = 10.0   # ppb above global mean
+CH4_SHEXT_OFFSET = -25.0  # ppb below global mean
+
+# Three-box atmospheric mass fraction (proportional to surface area)
+# NHext (30–90°N): ~25%, Trop (30°S–30°N): ~50%, SHext (30–90°S): ~25%
+PT_NHEXT = PT * 0.25
+PT_TROP  = PT * 0.50
+PT_SHEXT = PT * 0.25
+
+# Interhemispheric exchange times for 3-box
+# NHext↔Trop exchange is faster than Trop↔SHext (ITCZ barrier)
+TAU_EX_NT_MEAN = 0.8   # years (NHext ↔ Trop)
+TAU_EX_NT_STD  = 0.1
+TAU_EX_TS_MEAN = 1.2   # years (Trop ↔ SHext)
+TAU_EX_TS_STD  = 0.1
+
 
 def compute_bulk_KIE(kies: dict, sink_fracs: dict):
     """Compute weighted-mean KIE for ¹³C and D from individual sink KIEs.
@@ -374,23 +412,47 @@ class LoadedData:
     BB_annual: np.ndarray = field(default_factory=lambda: np.array([]))
     BB_global_mean: float = 0.0
 
+    # Three-box fields
+    CH4_NHext: Optional[np.ndarray] = None
+    CH4_Trop: Optional[np.ndarray] = None
+    CH4_SHext: Optional[np.ndarray] = None
+    c13_NHext: Optional[np.ndarray] = None
+    c13_Trop: Optional[np.ndarray] = None
+    c13_SHext: Optional[np.ndarray] = None
+    dD_NHext: Optional[np.ndarray] = None
+    dD_Trop: Optional[np.ndarray] = None
+    dD_SHext: Optional[np.ndarray] = None
+    # 3-box δD source signature MC matrices
+    FF_dD_NHext_MC: Optional[np.ndarray] = None
+    FF_dD_Trop_MC: Optional[np.ndarray] = None
+    FF_dD_SHext_MC: Optional[np.ndarray] = None
+    Mic_dD_NHext_MC: Optional[np.ndarray] = None
+    Mic_dD_Trop_MC: Optional[np.ndarray] = None
+    Mic_dD_SHext_MC: Optional[np.ndarray] = None
+    BB_dD_NHext_MC: Optional[np.ndarray] = None
+    BB_dD_Trop_MC: Optional[np.ndarray] = None
+    BB_dD_SHext_MC: Optional[np.ndarray] = None
+
     # Model dimensions
     n_years: int = 0
     model_years: np.ndarray = field(default_factory=lambda: np.array([]))
 
 
-def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
+def load_data(base_dir: Path, two_box: bool = False, three_box: bool = False) -> LoadedData:
     """Load all observational and source-signature data.
 
     Parameters
     ----------
     base_dir : Path to the repository root
     two_box : if True, also compute NH/SH CH₄ and δ¹³C splits
+    three_box : if True, also compute NHext/Trop/SHext splits (implies two_box=True)
 
     Returns
     -------
     LoadedData instance
     """
+    if three_box:
+        two_box = True
     data_dir, src_dir = _resolve_data_dirs(base_dir)
     d = LoadedData()
 
@@ -634,6 +696,76 @@ def load_data(base_dir: Path, two_box: bool = False) -> LoadedData:
     else:
         d.BB_annual = np.full(d.n_years, d.BB_global_mean)
 
+    # =================================================================
+    # THREE-BOX DATA (NHext / Trop / SHext)
+    # =================================================================
+    if three_box:
+        # CH₄ concentrations per box (offset from global mean)
+        d.CH4_NHext = d.CH4_global + CH4_NHEXT_OFFSET
+        d.CH4_Trop  = d.CH4_global + CH4_TROP_OFFSET
+        d.CH4_SHext = d.CH4_global + CH4_SHEXT_OFFSET
+
+        # δ¹³C per box: approximate from NH/SH
+        # NHext is slightly more depleted than NH, Trop near global, SHext similar to SH
+        if d.c13_NH is not None and d.c13_SH is not None:
+            # Use measured NH/SH as anchors with interpolation
+            d.c13_NHext = d.c13_NH - 0.05    # NHext slightly more negative than NH mean
+            d.c13_Trop  = 0.6 * d.c13_NH + 0.4 * d.c13_SH  # tropics: weighted
+            d.c13_SHext = d.c13_SH + 0.03    # SHext slightly less negative than SH mean
+        else:
+            d.c13_NHext = d.c13_global - 0.1
+            d.c13_Trop  = d.c13_global
+            d.c13_SHext = d.c13_global + 0.1
+
+        # δD atmospheric: use ThreeBox_atm_dD_annual.csv (2005–2024)
+        dD_3box_file = data_dir / "ThreeBox_atm_dD_annual.csv"
+        if dD_3box_file.exists():
+            dD_3box = pd.read_csv(dD_3box_file)
+            # Align to model years (1999–2021): front-pad with first value
+            dD_years = dD_3box['year'].values
+            dD_nhext = dD_3box['NHext'].values
+            dD_trop  = dD_3box['Trop'].values
+            dD_shext = dD_3box['SHext'].values
+
+            # Build full tl+1 length arrays (1999–2022 = 24 points)
+            full_nhext = np.full(tl + 1, dD_nhext[0])
+            full_trop  = np.full(tl + 1, dD_trop[0])
+            full_shext = np.full(tl + 1, dD_shext[0])
+            for i, yr in enumerate(dD_years):
+                idx = int(yr) - 1999
+                if 0 <= idx < tl + 1:
+                    full_nhext[idx] = dD_nhext[i]
+                    full_trop[idx]  = dD_trop[i]
+                    full_shext[idx] = dD_shext[i]
+            # Forward-fill remaining NaN / first-value entries
+            for arr in [full_nhext, full_trop, full_shext]:
+                for i in range(1, len(arr)):
+                    if arr[i] == arr[0] and i > 0 and int(1999 + i) < int(dD_years[0]):
+                        arr[i] = arr[max(0, i-1)]  # keep first value for pre-obs years
+
+            d.dD_NHext = full_nhext
+            d.dD_Trop  = full_trop
+            d.dD_SHext = full_shext
+
+        # δD source signature MC (NHext / Trop / SHext)
+        _three_box_src = {
+            'FF_dD_NHext_MC': 'FF_dD_NHext_MC.csv',
+            'FF_dD_Trop_MC':  'FF_dD_Trop_MC.csv',
+            'FF_dD_SHext_MC': 'FF_dD_SHext_MC.csv',
+            'Mic_dD_NHext_MC': 'Mic_dD_NHext_MC.csv',
+            'Mic_dD_Trop_MC':  'Mic_dD_Trop_MC.csv',
+            'Mic_dD_SHext_MC': 'Mic_dD_SHext_MC.csv',
+            'BB_dD_NHext_MC': 'BB_dD_NHext_MC.csv',
+            'BB_dD_Trop_MC':  'BB_dD_Trop_MC.csv',
+            'BB_dD_SHext_MC': 'BB_dD_SHext_MC.csv',
+        }
+        for attr, fname in _three_box_src.items():
+            fpath = data_dir / fname
+            if fpath.exists():
+                _df = pd.read_csv(fpath)
+                _mat = _df.iloc[:, 1:].to_numpy(dtype=np.float64)
+                setattr(d, attr, _mat)
+
     return d
 
 
@@ -769,6 +901,48 @@ def sample_source_signatures_hemi(rng, data: LoadedData, k: int, target_length: 
         'mic_dD': global_sigs['mic_dD'],
     }
     return result
+
+
+def sample_source_signatures_three_box(rng, data: LoadedData, k: int, target_length: int):
+    """Sample 3-box δD source signatures for MC iteration k.
+
+    Returns dict with keys:
+        ff_d13C, bb_d13C, mic_d13C  (global — δ¹³C shared across boxes)
+        ff_dD_NHext, ff_dD_Trop, ff_dD_SHext
+        bb_dD_NHext, bb_dD_Trop, bb_dD_SHext
+        mic_dD_NHext, mic_dD_Trop, mic_dD_SHext
+        ff_dD, bb_dD, mic_dD  (global fallback)
+    """
+    tl = target_length
+    global_sigs = sample_source_signatures(rng, data, k, tl)
+
+    def _pick_box(mc_mat, global_arr, k, tl):
+        if mc_mat is not None:
+            col = min(k, mc_mat.shape[1] - 1)
+            arr = mc_mat[1:tl+1, col].copy()  # skip row 0 (1998), model starts 1999
+            return pad_to_length(arr, tl)
+        return global_arr
+
+    result = {
+        'ff_d13C': global_sigs['ff_d13C'],
+        'bb_d13C': global_sigs['bb_d13C'],
+        'mic_d13C': global_sigs['mic_d13C'],
+        'ff_dD_NHext': _pick_box(data.FF_dD_NHext_MC, global_sigs['ff_dD'], k, tl),
+        'ff_dD_Trop':  _pick_box(data.FF_dD_Trop_MC,  global_sigs['ff_dD'], k, tl),
+        'ff_dD_SHext': _pick_box(data.FF_dD_SHext_MC, global_sigs['ff_dD'], k, tl),
+        'bb_dD_NHext': _pick_box(data.BB_dD_NHext_MC, global_sigs['bb_dD'], k, tl),
+        'bb_dD_Trop':  _pick_box(data.BB_dD_Trop_MC,  global_sigs['bb_dD'], k, tl),
+        'bb_dD_SHext': _pick_box(data.BB_dD_SHext_MC, global_sigs['bb_dD'], k, tl),
+        'mic_dD_NHext': _pick_box(data.Mic_dD_NHext_MC, global_sigs['mic_dD'], k, tl),
+        'mic_dD_Trop':  _pick_box(data.Mic_dD_Trop_MC,  global_sigs['mic_dD'], k, tl),
+        'mic_dD_SHext': _pick_box(data.Mic_dD_SHext_MC, global_sigs['mic_dD'], k, tl),
+        'ff_dD': global_sigs['ff_dD'],
+        'bb_dD': global_sigs['bb_dD'],
+        'mic_dD': global_sigs['mic_dD'],
+    }
+    return result
+
+
 # ============================================================================
 # TREND ANALYSIS HELPERS
 # ============================================================================
