@@ -1,71 +1,87 @@
 # plan.md — Future Work for `experiments/dD_threshold`
 
-## Current State (2026-05-12)
+## Current State (2026-05-12, v4)
 
-All 6 phases complete with three data upgrades + deep-dive analysis.
+Fully hemispheric model with both δ¹³C and δD source signatures.
 
 Key results:
-- **Exact crossover:** σ(Mic δD) = **32.0‰** (improvement = 0%)
-- **10% criterion:** σ(Mic δD) = **29.4‰**
-- **Baseline improvement:** 56.6% (CI = 44.0 vs 101.3 Tg/yr)
-- **NH drives the threshold:** 82% improvement in NH, only 7% in SH at baseline
-- **Bootstrap-confirmed:** 55 ± 2%, P(>30%) = 100%
+- **Baseline improvement:** 45.1% (CI = 57.6 vs 105.1 Tg/yr)
+- **Threshold:** σ(Mic δD) ≈ 35‰ (multiplier ~4×)
+- **NH drives the improvement** (82% NH, 7% SH from Phase 6 deep dive)
+- **Robust** across all KIE (×3) and lifetime (×3) configurations
+
+### Hemispheric source signature gaps
+
+| Isotope | FF gap | BB gap | Mic gap |
+|---------|--------|--------|---------|
+| δD | −7‰ | −24‰ | −13‰ |
+| δ¹³C | +4.5‰ | −2.4‰ | ~0‰ |
+
+δD has 5–10× larger gaps → explains why δD adds hemispheric info that δ¹³C cannot.
 
 ---
 
 ## Completed Steps
 
-### Data & Loading
-- [x] `common.py`: Dasgupta calibration, hemispheric atm δD loading, NaN gap-fill (2020–2023)
-- [x] `common.py`: `sample_atm_dD_hemi()` for real NH/SH atmospheric δD
-- [x] `common.py`: `sample_source_signatures_hemi()` for hemisphere-specific δD source signatures
-- [x] `common.py`: Load `{FF,Mic,BB}_dD_{NH,SH}_MC.csv` hemispheric source signature files
+### Data generation
+- [x] Hemispheric δD source signatures (from `rel/build_hemispheric_dD_sources.py`)
+- [x] Hemispheric δ¹³C source signatures (from `rel/build_hemispheric_d13C_sources.py`)
+  - FF: country-level ONG + coal δ¹³C × EDGAR emissions, assigned to NH/SH
+  - BB: C3/C4 vegetation maps × CTCH4 pyrogenic flux, hemisphere-split
+  - Mic: subcategory mass balance (wetlands, ruminants, rice, etc.) with Oh 2022 + Still 2003
 
-### Analysis Phases
-- [x] Phase 1 (baseline): CI = 42.3 Tg/yr, +56.2%
-- [x] Phase 2 (DFS): 2-box ΔDFS = +1.39
-- [x] Phase 3 (threshold sweep): coarse grid, threshold at 5× (~41‰)
-- [x] Phase 3b (Thanwerdas): confirmed uncertainty spec kills δD
-- [x] Phase 5 (sensitivity): robust across all KIE + lifetime variants
-- [x] **Phase 6A (fine grid)**: exact crossover at 3.88× (σ = 32.0‰); 10% at 3.57× (σ = 29.4‰)
-- [x] **Phase 6B (hemispheric breakdown)**: NH = 82% improvement, SH = 7%; threshold driven by NH
-- [x] **Phase 6C (bootstrap)**: 55.1 ± 1.7%, P(>0) = 100%, P(>30%) = 100%
-- [x] **Phase 6D (year range)**: pre-2005 padding has <2% effect
-- [x] **Phase 6E (bound diagnostics)**: bounds active ~100% (expected for constrained LSQ)
+### Loading & integration
+- [x] `common.py`: loads all 12 hemispheric MC CSV files (6 δD + 6 δ¹³C)
+- [x] `common.py`: `sample_source_signatures_hemi()` returns 18 keys (6 global + 6 dD hemi + 6 d13C hemi)
+- [x] All analysis scripts: NH A-matrix uses NH δ¹³C + NH δD; SH uses SH versions
+- [x] δ¹³C-only mode also uses hemispheric δ¹³C for consistent comparison
 
-### Figures & Documentation
-- [x] Updated `fig_comprehensive.py` → 6-panel + 4-panel figures
-- [x] Updated `RESULT.md` with all Phase 6 numbers
-- [x] Added hemispheric source signature gap panel (Panel E)
-- [x] Added data version comparison panel (Panel F)
+### Analysis phases
+- [x] Phase 1 baseline: CI = 55.6 Tg/yr, +45.2%
+- [x] Phase 2 DFS: ΔDFS = +1.39 (unchanged by source sig changes)
+- [x] Phase 3 threshold: crossover between 3× (+26.1%) and 5× (−37.2%)
+- [x] Phase 3b Thanwerdas: +45.1% ours vs −138.5% theirs
+- [x] Phase 5 sensitivity: threshold at 5× for all 6 configs
+- [x] Phase 6 deep dive: exact crossover, hemispheric breakdown, bootstrap, year-range
+
+---
+
+## Version History
+
+| Version | δD atm | δD src | δ¹³C src | Dual CI | Improvement | Threshold |
+|---------|--------|--------|----------|---------|-------------|-----------|
+| v1 | Umezawa, ±6‰ | Global | Global | 46.6 | +52% | ~25‰ |
+| v2 | Dasgupta, real hemi | Global | Global | 37.8 | +60.8% | ~41‰ |
+| v3 | Dasgupta, real hemi | Hemi | Global | 43.5 | +57.0% | ~41‰ |
+| **v4** | Dasgupta, real hemi | **Hemi** | **Hemi** | **57.6** | **+45.1%** | **~35‰** |
 
 ---
 
 ## Open Questions / Remaining Work
 
-### Data & Model Extensions
+### High Priority (for publication)
 
-- [ ] **3-box model**: `ThreeBox_atm_dD_annual.csv` and `ThreeBox_dD_sources_summary.csv` exist with NHext/Trop/SHext breakdown. Could test whether finer spatial resolution further improves constraint or just adds noise
-- [ ] **Semi-hemispheric data**: `SemiHemMean_dD_dei_DasguptaCal_noBUDS.csv` (PN/TN/TS/PS) could enable 4-box, but sub-annual resolution and many NaN gaps make this challenging
-- [ ] **δ¹³C hemispheric source signatures**: currently δ¹³C uses global sigs. If hemispheric δ¹³C data becomes available, add to `sample_source_signatures_hemi()`
-- [ ] **2020–2023 gap**: hemispheric atm δD filled with global + offset; replace when station data arrives
+- [ ] **Re-run Phase 6 deep dive with v4 data**: Phase 6 results (exact crossover, hemispheric breakdown, bootstrap) are from v3. Need to re-run with the updated hemispheric δ¹³C to get final numbers
+- [ ] **Update figures**: `fig_comprehensive.py` needs to be re-run with v4 results
+- [ ] **Paper Table 1**: Update all numbers to v4 values
 
-### Analysis Refinements
+### Model extensions
 
-- [ ] **Per-source threshold**: current analysis inflates all 3 source δD uncertainties simultaneously. Could inflate Mic alone (dominant) vs FF+BB alone to test which source's uncertainty matters most
-- [ ] **Time-varying threshold**: does the crossover shift over the study period? (e.g., is δD more useful post-2010 when emissions changed faster?)
-- [ ] **Optimal weighting (W matrix)**: currently W_NH = diag(100,1,0.5) and W_SH = diag(200,1,0.5). Could optimize these weights or test sensitivity
-- [ ] **Posterior residual analysis**: quantify how much residual scatter exists after LSQ inversion; flag systematic biases
+- [ ] **3-box model**: ThreeBox data exists (NHext/Trop/SHext). Could test finer spatial resolution
+- [ ] **Semi-hemispheric (4-box)**: SemiHemMean δD data available but has NaN gaps
+- [ ] **Microbial d13C spatial variation**: Currently Mic δ¹³C shows ~0 hemispheric gap. If wetland d13C spatial map (isotem) becomes available, could improve this
 
-### For Publication
+### Sensitivity extensions
 
-- [ ] **Table 1**: Fine-grid threshold numbers (Phase 6A) are now the definitive values — update manuscript
-- [ ] **Key narrative elements**:
-  - The NH drives the improvement (82% vs 7%) — this is new and publishable
-  - The exact crossover is σ = 32‰, not the coarse ~41‰
-  - Bootstrap gives ± 2% uncertainty on the improvement itself
-- [ ] **Supplementary figure**: year-by-year CI breakdown for NH vs SH
-- [ ] **Robustness table**: summarize all 6 sensitivity dimensions (KIE ×3, lifetime ×3, year range ×3, bootstrap) in one table
+- [ ] **Per-source threshold**: Inflate Mic δD alone vs FF+BB alone to isolate which source's uncertainty matters
+- [ ] **Time-varying threshold**: Does crossover shift over the study period?
+- [ ] **W matrix optimization**: Current weights are fixed; could test sensitivity or optimize
+
+### Data improvements
+
+- [ ] **2020–2023 atmospheric δD gap**: Currently gap-filled; replace when station data arrives
+- [ ] **Luo 2023 C4 map**: Currently using Still 2003 (static); Luo is time-varying and higher-res
+- [ ] **Prior emission subcategory files**: Would improve Mic δ¹³C hemispheric calculation
 
 ---
 
@@ -74,33 +90,18 @@ Key results:
 ```bash
 cd upgrade_two_isotope_model
 
-# Core phases (~25 min total):
+# Build hemispheric source signatures (if data changes):
+python3 rel/build_hemispheric_dD_sources.py    # ~5 min
+python3 rel/build_hemispheric_d13C_sources.py  # ~15 min
+
+# Core phases:
 python3 experiments/dD_threshold/analysis/phase1_baseline.py     # ~3 min
 python3 experiments/dD_threshold/analysis/phase2_dfs.py          # ~10 sec
 python3 experiments/dD_threshold/analysis/phase3_threshold.py    # ~15 min
 python3 experiments/dD_threshold/analysis/phase3b_thanwerdas.py  # ~3 min
 python3 experiments/dD_threshold/analysis/phase5_sensitivity.py  # ~20 min
-
-# Deep dive (~30 min):
 python3 experiments/dD_threshold/analysis/phase6_deep_dive.py    # ~30 min
 
-# Figures (fast, reads saved JSON):
+# Figures:
 python3 experiments/dD_threshold/figures/fig_comprehensive.py    # ~5 sec
 ```
-
----
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `common.py` | Shared loading, sampling, KIE, lifetime functions |
-| `analysis/phase1_baseline.py` | 1-box/2-box baseline comparison |
-| `analysis/phase2_dfs.py` | DFS information content |
-| `analysis/phase3_threshold.py` | Coarse threshold sweep (8 multipliers) |
-| `analysis/phase3b_thanwerdas.py` | Thanwerdas uncertainty replication |
-| `analysis/phase5_sensitivity.py` | KIE + lifetime robustness |
-| `analysis/phase6_deep_dive.py` | Fine grid + hemi breakdown + bootstrap + year-range |
-| `figures/fig_comprehensive.py` | 4-panel and 6-panel publication figures |
-| `RESULT.md` | Complete results summary |
-| `plan.md` | This file |
