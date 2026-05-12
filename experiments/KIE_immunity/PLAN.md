@@ -148,3 +148,8 @@ The current variance decomposition has no uncertainty on the percentages.
 - [x] v2 variance decomposition (3-config comparison)
 - [x] v2 Basu comparison (+ residual analysis)
 - [x] common.py: `sample_atm_dD_hemi()`, `sample_source_sigs_hemi()`
+- [x] Phase 5: Lifetime sensitivity — **✓ robustly negative (all 6 configs)**
+- [x] Phase 6: OH-D KIE sensitivity — **✓ robustly negative (1.294–1.327)**
+- [x] Phase 7: Cl fraction sensitivity — **✓ negative + Cl-KIE-Sig tradeoff discovered**
+- [x] Phase 8: Combined robustness matrix — **✓✓ 18/18 cells robustly negative**
+- [x] Phase 9: Bootstrap CIs — **✓ Sig% [31,52] statistically > offset [0,0]**
