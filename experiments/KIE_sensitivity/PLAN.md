@@ -265,15 +265,18 @@ All output goes to `results/` and `figures/` subdirectories.
 ## Execution Order
 
 ```
-Phase 1 → Phase 2 → Phase 3 → Phase 4
-   │          │          │          │
-   │          │          │          └─ Depends on Phase 1–3 for comparison
-   │          │          └─ Depends on Phase 1 + Phase 2 outputs
-   │          └─ Independent of Phase 1 (but similar structure)
-   └─ Independent (baseline)
+Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 4b → Phase 5 → Phase 6
+                                                                  │
+                                          ┌───────────────────────┼───────────────────────┐
+                                          ▼                       ▼                       ▼
+                                   Phase 6b              Phase 6c                Phase 7 / 8
+                                (threshold sweep)    (OSSE recovery)        (time-varying KIE,
+                                                                            fine thresholds,
+                                                                            temporal stability)
 ```
 
-Phases 1 and 2 can run in parallel. Phase 3 requires both. Phase 4 is an extension.
+Phase 7 (time-varying OH-¹³C KIE) and Phase 8 (fine-resolution sweep +
+temporal stability) extend Phase 6 / 6b and are independent of each other.
 
 ---
 
@@ -292,9 +295,94 @@ python phase2_dual_isotope.py
 # Phase 3: comparison (requires Phase 1 + 2 outputs)
 python phase3_comparison.py
 
-# Phase 4: two-box extension
+# Phase 4 / 4b: two-box extension
 python phase4_two_box.py
+python phase4b_two_box_fixed.py
+
+# Phase 5: weight + Cl sweep
+python phase5_weight_Cl_sweep.py
+
+# Phase 6 family: agreement framework
+python phase6_agreement.py
+python phase6b_threshold_sweep.py
+python phase6c_OSSE.py
+
+# Phase 7: time-varying OH-¹³C KIE
+python phase7_timevarying_OH.py
+
+# Phase 8: fine threshold sweep + temporal stability
+python phase8_fine_thresholds.py
 ```
+
+---
+
+## Phase 7: Time-Varying OH-¹³C KIE
+
+### Task 7.1 — `phase7_timevarying_OH.py`
+
+**Goal:** Test whether the agreement-rate discriminant from Phase 6b
+collapses if the *bulk* OH-¹³C KIE drifts year-by-year (e.g. because of
+the [OH] / temperature changes implied by He 2026 Science).
+
+**Scenarios (each compared at threshold = 100 Tg/yr):**
+1. `const_saueressig` — fixed 1.0039 (baseline)
+2. `const_cantrell` — fixed 1.0054 (baseline)
+3. `drift_saueressig` — linear 1.0039 (1999) → 1.00465 (2022)
+4. `drift_cantrell` — linear 1.0054 (1999) → 1.00465 (2022)
+5. `convergent` — Saueressig → midpoint (most aggressive damping case)
+
+**For each scenario** compute: overall agreement rate, per-year rate,
+95% bootstrap CI, n_good iterations, KSR. Then run discriminant tests
+on three pairs (constant baseline, symmetric drift, convergent vs Cantrell).
+
+**Output:**
+- `results/phase7_timevarying_OH/summary.json` — full scenario+discriminant data
+- `figures/fig12_timevarying_OH.png` — 1×3: trajectories | per-year rates | discriminant bars
+
+### Implementation notes
+- Vary `oh13c_trajectory[j]` *inside* the year-loop; sample all other KIEs
+  per iteration as in Phase 6b.
+- Reuse the same `seed=42` so cross-scenario comparisons are paired.
+- Bootstrap (n_boot=2000) over the flattened (years × iterations) agreement
+  matrix, restricted to valid entries.
+
+---
+
+## Phase 8: Fine Threshold Sweep + Temporal Stability
+
+### Task 8a — `phase8_fine_thresholds.py` (Part 1)
+
+**Goal:** Resolve the threshold-vs-discriminant curve at 10 Tg/yr resolution
+(Phase 6b only sampled 7 thresholds with non-uniform spacing). Bootstrap
+the discriminant difference at every threshold; locate (a) the threshold
+maximising KSR, (b) the threshold maximising the discriminant, and (c)
+the contiguous range over which the difference is statistically significant.
+
+### Task 8b — `phase8_fine_thresholds.py` (Part 2)
+
+**Goal:** Test temporal stability of the agreement-rate discriminant.
+Split 1999–2022 into three 8-year epochs and recompute the
+Cantrell–Saueressig difference for each. If the discriminant survives in
+all three (with non-overlapping bootstrap CIs), the signal is *not* an
+artifact of a particular atmospheric regime.
+
+**Epochs:**
+- 1999–2006 — pre-renewed-growth plateau
+- 2007–2014 — renewed growth phase (post-2007 inflection)
+- 2015–2022 — post-2014 acceleration
+
+**Output:**
+- `results/phase8_fine_thresholds/summary.json`
+- `figures/fig13_fine_threshold.png` — 1×3: rates | discriminant ± CI | KSR
+- `figures/fig14_temporal_stability.png` — 1×2: rates by epoch | discriminant by epoch
+
+### Implementation notes
+- Threshold grid: `list(range(30, 221, 10))` (20 values, 30..220).
+- For each threshold, bootstrap `n_boot=2000` to get a 95% CI on
+  Δ = rate(Cantrell) − rate(Saueressig); the threshold is "significant"
+  when that CI is fully above zero.
+- Save MC arrays internally and slice them by epoch mask — no need to
+  re-run the inversions per epoch.
 
 ---
 

@@ -14,6 +14,8 @@ The choice of model structure is itself the first-order sensitivity test.
 | `2x2_two` | Separate 2×2 per hemisphere | NH/SH 2-box | Fixed (CarbonTracker × GFED NH/SH split) | Analytic formula |
 | `3x3_one` | Simultaneous 3×3 (δ¹³C + δD coupled) | Global 1-box | Free variable (solved) | `np.linalg.solve` |
 | `3x3_two` | Simultaneous 3×3 per hemisphere | NH/SH 2-box | Free variable (solved) | Bounded LS (`scipy.optimize.lsq_linear`) |
+| `2x2_three` | Separate 2×2 per latitude band | NHext/Trop/SHext 3-box | Fixed (CarbonTracker × GFED 3-box split) | Analytic formula |
+| `3x3_three` | Simultaneous 3×3 per latitude band | NHext/Trop/SHext 3-box | Free variable (solved) | Bounded LS per box (box-specific weights) |
 
 **Key structural trade-offs:**
 - 2×2 models are well-conditioned but require external BB → cannot independently test BB trends.

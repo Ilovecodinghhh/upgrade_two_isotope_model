@@ -31,7 +31,8 @@ sys.path.insert(0, str(REPO_ROOT))
 from common import (
     load_data, sample_KIE, compute_bulk_KIE, compute_lifetime,
     delta_to_fraction_d13C, delta_to_fraction_dD,
-    sample_source_signatures, sample_atm_d13C, sample_atm_dD,
+    sample_source_signatures, sample_source_signatures_hemi,
+    sample_atm_d13C, sample_atm_dD, sample_atm_dD_hemi,
     smooth_5yr,
     SINK_FRACTIONS_NH, SINK_FRACTIONS_SH,
     PT_HEMI, LIFETIME_RATIO_NH, LIFETIME_RATIO_SH,
@@ -50,6 +51,8 @@ def apply_thanwerdas_uncertainties(sigs, rng):
     
     Our baseline MC has: Mic σ≈8‰, FF σ≈0.7‰, BB σ≈7‰
     Thanwerdas has:       Mic σ≈110‰, FF σ≈37‰, BB σ≈70‰
+    
+    Handles both global and hemispheric keys.
     """
     sigs_new = dict(sigs)
     
@@ -63,11 +66,25 @@ def apply_thanwerdas_uncertainties(sigs, rng):
     ff_dD_sigma = 37.0
     bb_dD_sigma = 70.0
     
-    # Draw new values from Thanwerdas-width distributions
+    # Draw single perturbations (coherent across time)
+    mic_pert = rng.normal(0, mic_dD_sigma)
+    ff_pert = rng.normal(0, ff_dD_sigma)
+    bb_pert = rng.normal(0, bb_dD_sigma)
+    
+    # Apply to global keys
     n = len(sigs['mic_dD'])
-    sigs_new['mic_dD'] = np.full(n, mic_dD_mean) + rng.normal(0, mic_dD_sigma, size=1)[0]
-    sigs_new['ff_dD'] = np.full(n, ff_dD_mean) + rng.normal(0, ff_dD_sigma, size=1)[0]
-    sigs_new['bb_dD'] = np.full(n, bb_dD_mean) + rng.normal(0, bb_dD_sigma, size=1)[0]
+    sigs_new['mic_dD'] = np.full(n, mic_dD_mean) + mic_pert
+    sigs_new['ff_dD'] = np.full(n, ff_dD_mean) + ff_pert
+    sigs_new['bb_dD'] = np.full(n, bb_dD_mean) + bb_pert
+    
+    # Apply same perturbation to hemispheric keys if present
+    for hemi in ('NH', 'SH'):
+        for src, mean_val, pert in [('mic_dD', mic_dD_mean, mic_pert),
+                                     ('ff_dD', ff_dD_mean, ff_pert),
+                                     ('bb_dD', bb_dD_mean, bb_pert)]:
+            key = f'{src}_{hemi}'
+            if key in sigs:
+                sigs_new[key] = np.full(n, mean_val) + pert
     
     return sigs_new
 
@@ -130,7 +147,7 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
             d13C_src_NH[j] = (n13_NH1-n13_NH + n13_NH*a13_NH/tau_NH[j] - ex13_NH)/S_NH[j]
             d13C_src_SH[j] = (n13_SH1-n13_SH + n13_SH*a13_SH/tau_SH[j] - ex13_SH)/S_SH[j]
         
-        sigs = sample_source_signatures(rng, data, k, n)
+        sigs = sample_source_signatures_hemi(rng, data, k, n)
         
         # Apply Thanwerdas uncertainties if requested
         if uncertainty == "thanwerdas":
@@ -139,11 +156,16 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
         f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
         f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
         f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
+        # Hemispheric d13C source signatures
+        f13_bb_NH = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
+        f13_ff_NH = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
+        f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
+        f13_bb_SH = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
+        f13_ff_SH = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
+        f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
         
         if mode == "dual":
-            dD_glob = sample_atm_dD(data, k, n)
-            dD_NH_MC = dD_glob - DD_IH_OFFSET
-            dD_SH_MC = dD_glob + DD_IH_OFFSET
+            dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
             fD_NH_atm = delta_to_fraction_dD(dD_NH_MC)
             fD_SH_atm = delta_to_fraction_dD(dD_SH_MC)
             
@@ -157,47 +179,59 @@ def run_twobox(data, mode="dual", uncertainty="ours", n_iter=500, seed=42):
                 dD_src_NH[j] = (nD_NH1-nD_NH + nD_NH*aD_NH/tau_NH[j] - exD_NH)/S_NH[j]
                 dD_src_SH[j] = (nD_SH1-nD_SH + nD_SH*aD_SH/tau_SH[j] - exD_SH)/S_SH[j]
             
-            fD_bb = delta_to_fraction_dD(sigs['bb_dD'])
-            fD_ff = delta_to_fraction_dD(sigs['ff_dD'])
-            fD_mic = delta_to_fraction_dD(sigs['mic_dD'])
+            # Hemispheric δD source signatures
+            fD_bb_NH = delta_to_fraction_dD(sigs['bb_dD_NH'])
+            fD_ff_NH = delta_to_fraction_dD(sigs['ff_dD_NH'])
+            fD_mic_NH = delta_to_fraction_dD(sigs['mic_dD_NH'])
+            fD_bb_SH = delta_to_fraction_dD(sigs['bb_dD_SH'])
+            fD_ff_SH = delta_to_fraction_dD(sigs['ff_dD_SH'])
+            fD_mic_SH = delta_to_fraction_dD(sigs['mic_dD_SH'])
             
             for j in range(n):
-                A = np.array([
+                A_nh = np.array([
                     [1.0, 1.0, 1.0],
-                    [f13_bb[j], f13_ff[j], f13_mic[j]],
-                    [fD_bb[j], fD_ff[j], fD_mic[j]],
+                    [f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j]],
+                    [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]],
                 ])
                 B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
                 try:
-                    res = lsq_linear(W_NH@A, W_NH@B_nh, bounds=(0, S_NH[j]*1.5))
+                    res = lsq_linear(W_NH@A_nh, W_NH@B_nh, bounds=(0, S_NH[j]*1.5))
                     FF_G[j,k] += res.x[1]
                     Mic_G[j,k] += res.x[2]
                 except: pass
                 
+                A_sh = np.array([
+                    [1.0, 1.0, 1.0],
+                    [f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j]],
+                    [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]],
+                ])
                 B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
                 try:
-                    res = lsq_linear(W_SH@A, W_SH@B_sh, bounds=(0, S_SH[j]*1.5))
+                    res = lsq_linear(W_SH@A_sh, W_SH@B_sh, bounds=(0, S_SH[j]*1.5))
                     FF_G[j,k] += res.x[1]
                     Mic_G[j,k] += res.x[2]
                 except: pass
         
         else:  # d13C_only
             for j in range(n):
-                denom = f13_ff[j] - f13_mic[j]
-                if abs(denom) < 1e-15: continue
                 # NH
-                S_rem = S_NH[j] - BB_hemi_NH
-                rhs = S_NH[j]*d13C_src_NH[j] - BB_hemi_NH*f13_bb[j]
-                FF_G[j,k] += (rhs - S_rem*f13_mic[j]) / denom
-                Mic_G[j,k] += S_rem - FF_G[j,k]  # wrong — need to track
-                # Fix: redo properly
-                ff_nh = (rhs - S_rem*f13_mic[j]) / denom
-                mic_nh = S_rem - ff_nh
+                denom_nh = f13_ff_NH[j] - f13_mic_NH[j]
+                if abs(denom_nh) < 1e-15:
+                    ff_nh = np.nan; mic_nh = np.nan
+                else:
+                    S_rem = S_NH[j] - BB_hemi_NH
+                    rhs = S_NH[j]*d13C_src_NH[j] - BB_hemi_NH*f13_bb_NH[j]
+                    ff_nh = (rhs - S_rem*f13_mic_NH[j]) / denom_nh
+                    mic_nh = S_rem - ff_nh
                 # SH
-                S_rem = S_SH[j] - BB_hemi_SH
-                rhs = S_SH[j]*d13C_src_SH[j] - BB_hemi_SH*f13_bb[j]
-                ff_sh = (rhs - S_rem*f13_mic[j]) / denom
-                mic_sh = S_rem - ff_sh
+                denom_sh = f13_ff_SH[j] - f13_mic_SH[j]
+                if abs(denom_sh) < 1e-15:
+                    ff_sh = np.nan; mic_sh = np.nan
+                else:
+                    S_rem = S_SH[j] - BB_hemi_SH
+                    rhs = S_SH[j]*d13C_src_SH[j] - BB_hemi_SH*f13_bb_SH[j]
+                    ff_sh = (rhs - S_rem*f13_mic_SH[j]) / denom_sh
+                    mic_sh = S_rem - ff_sh
                 FF_G[j,k] = ff_nh + ff_sh
                 Mic_G[j,k] = mic_nh + mic_sh
     
