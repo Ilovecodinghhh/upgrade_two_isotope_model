@@ -1,0 +1,13 @@
+{
+  "NH_FF_slope_median": 1.036339354169057,
+  "SH_FF_slope_median": 0.8235424844680725,
+  "Global_FF_slope_median": 2.1027080177854653,
+  "Onebox_FF_slope_median": -0.8222398980033037,
+  "NH_FF_pct_positive": 75.2,
+  "Global_FF_pct_negative": 10.8,
+  "SH_Mic_slope_median": 0.5161163043883354,
+  "SH_Mic_pct_positive": 69.69999999999999,
+  "aliasing_detected": false,
+  "hypothesis_supported": false,
+  "onebox_vs_twobox_FF_divergence": 2.924947915788769
+}
