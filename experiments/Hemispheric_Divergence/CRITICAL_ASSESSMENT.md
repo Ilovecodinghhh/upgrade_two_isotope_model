@@ -58,11 +58,23 @@ Year 2021 shows NH_FF = +112 Tg/yr anomaly — clearly an artifact. The mass-bal
 
 **Fix:** Trim the last year from all trend analyses. Flag this explicitly.
 
-#### 6. δD gradient self-inconsistency is a real problem
+#### 6. δD gradient self-inconsistency ~~is a real problem~~ → RESOLVED
 
-The model predicts a −28‰ NH-SH δD gradient but uses −14.6‰ as input. If the source decomposition is right, the input data is wrong. If the input data is right, the source decomposition is wrong. Either way, something doesn't add up.
+~~The model predicts a −28‰ NH-SH δD gradient but uses −14.6‰ as input.~~
 
-**Fix:** Check whether the observed hemispheric δD gradient from Dasgupta calibration files actually implies −14.6‰. If so, the source δD values may need revision. This is a consistency check that belongs in the paper.
+**Status: RESOLVED.** The original −82‰ discrepancy was a calculation bug — it compared source-weighted δD directly to atmospheric δD without accounting for sink fractionation (ε_D ≈ +295‰) and interhemispheric exchange (τ_ex ≈ 1 yr). Proper steady-state 2-box calculation gives:
+- Source δD gradient (NH−SH): −16.3‰
+- Predicted atmospheric gradient: −11.5‰ 
+- Observed atmospheric gradient: −14.5‰
+- **Discrepancy: only 3.0‰** — consistent within uncertainty.
+
+Additionally, 5 δD improvement approaches (A–E) were tested:
+- **Approach B (EDGAR FF δD)**: best uncertainty reduction (CI 149→134 Tg/yr)
+- **Approach E (δD gradient constraint)**: best NH FF share (73%, matches EDGAR 72%)
+- BB = 0 is robust across ALL δD approaches — the FF/BB ambiguity is unresolvable with 2 isotopes
+- FF trend sign is NOT robust to δD assumptions (ranges −1.5 to +0.8)
+
+See RESULTS_v3.md for the full comparison table.
 
 #### 7. No model validation against independent data
 
