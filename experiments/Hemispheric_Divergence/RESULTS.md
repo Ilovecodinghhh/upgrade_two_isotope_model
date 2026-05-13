@@ -122,5 +122,65 @@ experiments/Hemispheric_Divergence/
     ├── onebox_reference/
     ├── trend_analysis.csv
     ├── aliasing_test.json
-    └── robustness_table.csv
+    ├── robustness_table.csv
+    ├── exchange_rate_sensitivity.csv
+    ├── reconciliation.json
+    ├── reconciliation_comparison.csv
+    ├── dD_gradient_prediction.json
+    ├── dD_gradient_timeseries.csv
+    ├── post2019_analysis.json
+    └── three_box_framework.json
+
+---
+
+## Phase 3: Literature Reconciliation
+
+### Aliasing bias
+
+**2-box minus 1-box Global FF trend: +2.92 Tg/yr²**
+
+This is the "hidden signal" that 1-box models miss. The 2-box attributes ~3 Tg/yr² more FF growth because it can better separate FF from BB using hemispheric signature differences.
+
+### BB: The discriminator
+
+- 2-box BB trend: **−0.43** Tg/yr² (declining)
+- 1-box BB trend: **+0.99** Tg/yr² (increasing)
+- GFED fire data: declining trend (van der Werf et al.)
+- **→ GFED supports the 2-box partition over the 1-box**
+
+---
+
+## Phase 4.2: δD Gradient Prediction (Novel)
+
+**Predicted NH-SH δD gradient: −28.4‰ [−38.4, −8.2‰]**
+
+- Source δD gradient (NH−SH): −28.9‰
+- Model input assumption was ±3‰ offset (6‰ total gradient)
+
+**⚠ Self-inconsistency** — model uses 6‰ input but predicts −28‰. Testable with future IRMS/TILDAS network expansion.
+
+---
+
+## Phase 6.1: Post-2019 Acceleration
+
+- **SH_Mic post-2019 enhancement: +19.2 Tg/yr** — consistent with Chandra 2024
+- **No clear COVID signal** in NH_FF (within noise)
+- **2021 edge effects** — discard (end-of-data artifact)
+
+---
+
+## Phase 6.2: Three-Box Extension
+
+**Not yet feasible** — limited by tropical δD observations. Timeline: 5-10 years.
+
+---
+
+## Summary
+
+1. **Source aliasing** explains the 1-box vs 3D disagreement
+2. **NH_FF positive** in all configurations tested
+3. **BB is the discriminator:** GFED supports 2-box over 1-box
+4. **δD gradient prediction** of −28‰ is testable but self-inconsistent
+5. **Post-2019 SH_Mic** of ~19 Tg/yr matches tropical wetland surge
+6. **3-box extension** not yet feasible but would resolve tropical signal
 ```
