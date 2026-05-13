@@ -390,13 +390,14 @@ Zhao, Y., Saunois, M., Bousquet, P., et al. (2023). Reconciling the bottom-up an
 
 | Figure | File | Caption |
 |--------|------|---------|
-| Fig. 1 | `figures/figM1_schematic_v2.png` | Agreement Filter schematic with keep/reject paths |
+| Fig. 1 | `figures/figM1_schematic_v3.png` | Agreement Filter schematic with keep/reject paths (teal/coral palette) |
 | Fig. 2 | `figures/fig6_weight_sweep.png` | WLS weight sweep: monotonic worsening (the step function) |
-| Fig. 3 | `figures/figM6_KSR_summary_v2.png` | KSR summary bar chart with N=5000 bootstrap CIs |
-| Fig. 4 | `figures/figM7_forest_plot.png` | Forest plot: Cantrell vs. Saueressig full-record + epoch stability |
+| Fig. 3 | `figures/figM6_KSR_summary_v3.png` | KSR summary bar chart with N=5000 bootstrap CIs |
+| Fig. 4 | `figures/figM7_forest_plot_v2.png` | Forest plot: Cantrell vs. Saueressig full-record + epoch stability |
 | Fig. 5 | `figures/fig12_timevarying_OH.png` | Time-varying KIE robustness test (Phase 7) |
 | Fig. 6 | `figures/fig8_agreement_framework.png` | Agreement framework 4-panel (promoted from supplementary) |
 | Fig. 7 | `figures/fig16_cl_sensitivity.png` | Cl fraction sensitivity of the agreement-filter discriminant |
+| Fig. 8 | `figures/figM8_before_after_timeseries.png` | Before/after FF emission time series: unfiltered vs. filtered (T=90) |
 | Fig. S1 | `figures/fig1_KSR_summary.png` | KSR summary histograms (Phase 3: 1-box comparison) |
 | Fig. S2 | `figures/phase1_d13C_only_trends.png` | Baseline δ¹³C-only trends |
 | Fig. S3 | `figures/phase2_dual_isotope_trends.png` | WLS dual-isotope trends |
@@ -405,3 +406,4 @@ Zhao, Y., Saunois, M., Bousquet, P., et al. (2023). Reconciling the bottom-up an
 | Fig. S6 | `figures/fig13_fine_threshold.png` | Fine threshold sweep (Phase 8a) |
 | Fig. S7 | `figures/fig15_high_n.png` | N=5000 results: rates, discriminant CIs, KSR CIs |
 | Fig. S8 | `figures/fig17_year_agree_sweep.png` | Year-agreement fraction sweep |
+| Fig. S9 | `figures/fig14_temporal_stability_v3.png` | Temporal stability with significance markers (teal/coral palette) |

@@ -26,8 +26,8 @@ All items from `EditorialAssessment_v1.md` addressed.
 | figM6 KSR summary: update N=5000 + gray T=200 | ✅ Done | `figM6_KSR_summary_v2.png` — corrected values + CIs + T=200 grayed |
 | Fig 14: add significance markers | ✅ Done | `fig14_temporal_stability_v2.png` — *** brackets |
 | Forest plot (Cantrell vs Saueressig) | ✅ Done | **NEW** `figM7_forest_plot.png` — 2-panel: full record + epoch stability |
-| Before/after FF time series | ⏳ Not done | Lower priority; would require additional script to extract filtered vs unfiltered median+CI curves |
-| Color swap (Cantrell=blue) | ⏳ Not done | Cosmetic; deferring to final production |
+| Before/after FF time series | ✅ Done | `figM8_before_after_timeseries.png` — unfiltered vs filtered median ± 90% CI |
+| Color swap (Cantrell=teal, Saueressig=coral) | ✅ Done | v3 versions of schematic, KSR summary, forest plot, temporal stability |
 | Figure lineup restructure | ✅ Done | Updated figure table in MANUSCRIPT_DRAFT.md |
 
 ## Narrative Corrections Applied
