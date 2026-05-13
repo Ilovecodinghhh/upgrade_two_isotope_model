@@ -1,0 +1,89 @@
+{
+  "B4_posterior": {
+    "total_source_range": [
+      548.5023842384455,
+      651.9130845618815
+    ],
+    "ff_fraction_NH_2010": 0.12626681695144232,
+    "ff_fraction_SH_2010": 0.5257047926855012,
+    "nh_share_of_ff": 0.549956756129941,
+    "edgar_nh_share": 0.72,
+    "cv_ff": 0.4118360830580449,
+    "cv_mic": 0.08871164623801904
+  },
+  "B5_dD_consistency": {
+    "observed_dD_gradient_mean": -14.463898681214033,
+    "observed_dD_gradient_std": 2.021361486707858,
+    "predicted_dD_gradient_median": -82.08541781490801,
+    "predicted_dD_gradient_90ci": [
+      -104.36686420675035,
+      -36.04884255387307
+    ],
+    "discrepancy": -67.62151913369398
+  },
+  "C6_information": {
+    "fisher_info_global": 2.448950675088426e-17,
+    "fisher_info_nh": 2.225656966924538e-17,
+    "fisher_info_sh": 2.621051940287122e-17,
+    "fisher_info_2box_combined": 5.520722472422636e-34,
+    "info_gain_ratio": 2.2543216278634504e-17,
+    "effective_rank_global": 1.0,
+    "effective_rank_nh": 1.0
+  },
+  "C7_edgar": {
+    "model_ff_2010": 110.48924279221262,
+    "model_ff_90ci": [
+      44.10267501469879,
+      189.53634885392006
+    ],
+    "edgar_ff_2010": 110.0,
+    "model_nh_fraction": 0.5498313125986583,
+    "edgar_nh_fraction": 0.72,
+    "model_ff_trend": -1.3251110919286602,
+    "edgar_ff_trend": 2.1,
+    "model_mic_2010": 392.8339080632132,
+    "model_bb_2010": 68.32409843539872
+  },
+  "C8_W_sensitivity": {
+    "v1_original": {
+      "ff_2010_median": 63.33000253276316,
+      "ff_trend_median": -2.8149914754668472,
+      "ff_trend_90ci": [
+        -4.798836003491601,
+        -0.05664651696204564
+      ]
+    },
+    "mass_heavy": {
+      "ff_2010_median": 68.48288880143053,
+      "ff_trend_median": -2.8839015943572077,
+      "ff_trend_90ci": [
+        -4.740205047889904,
+        -0.060960442822832375
+      ]
+    },
+    "isotope_heavy": {
+      "ff_2010_median": 64.12652477144803,
+      "ff_trend_median": -2.853741923607603,
+      "ff_trend_90ci": [
+        -4.877939315347768,
+        -0.1933146548649193
+      ]
+    },
+    "equal": {
+      "ff_2010_median": 65.41558304715545,
+      "ff_trend_median": -2.8141918030851194,
+      "ff_trend_90ci": [
+        -4.815624337236339,
+        -0.12159208075974831
+      ]
+    },
+    "uncertainty_based": {
+      "ff_2010_median": 101.40091946598422,
+      "ff_trend_median": -2.128365339161413,
+      "ff_trend_90ci": [
+        -3.693430398733726,
+        -0.05421731111699919
+      ]
+    }
+  }
+}
