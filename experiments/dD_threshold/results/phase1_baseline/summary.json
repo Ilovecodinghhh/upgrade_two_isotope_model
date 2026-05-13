@@ -10,15 +10,15 @@
     "FF_95CI_width_2007_2022": 104.06504808181224
   },
   "twobox_dual": {
-    "FF_mean": 69.28011323289596,
-    "FF_95CI_width_mean": 55.60878142695489,
-    "FF_95CI_width_2007_2022": 59.13566933404153
+    "FF_mean": 59.79750533031316,
+    "FF_95CI_width_mean": 60.65582300752085,
+    "FF_95CI_width_2007_2022": 63.9192434093972
   },
   "twobox_d13C_only": {
-    "FF_mean": 184.29742355947934,
-    "FF_95CI_width_mean": 101.52205183453528,
-    "FF_95CI_width_2007_2022": 106.55574446801386
+    "FF_mean": 130.98051216036885,
+    "FF_95CI_width_mean": 124.45210402838761,
+    "FF_95CI_width_2007_2022": 130.88753665372528
   },
   "onebox_improvement_pct": -98.5,
-  "twobox_improvement_pct": 45.2
+  "twobox_improvement_pct": 51.3
 }

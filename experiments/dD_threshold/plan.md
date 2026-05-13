@@ -1,21 +1,22 @@
 # plan.md — Future Work for `experiments/dD_threshold`
 
-## Current State (2026-05-12, v4)
+## Current State (2026-05-13, v5)
 
-Fully hemispheric model with both δ¹³C and δD source signatures.
+Fully hemispheric model with Luo 2024 time-varying C4 vegetation map.
 
 Key results:
-- **Baseline improvement:** 45.1% (CI = 57.6 vs 105.1 Tg/yr)
-- **Threshold:** σ(Mic δD) ≈ 35‰ (multiplier ~4×)
-- **NH drives the improvement** (82% NH, 7% SH from Phase 6 deep dive)
+- **Baseline improvement:** 53.0% (CI = 62.6 vs 133.1 Tg/yr)
+- **Threshold:** σ(Mic δD) ≈ 37‰ (multiplier ~4.5×)
+- **NH drives the improvement** (73% NH, 15% SH from Phase 6 deep dive)
 - **Robust** across all KIE (×3) and lifetime (×3) configurations
+- **Bootstrap:** 51.2 ± 1.3%, P(>0%)=100%, P(>30%)=100%
 
 ### Hemispheric source signature gaps
 
 | Isotope | FF gap | BB gap | Mic gap |
 |---------|--------|--------|---------|
 | δD | −7‰ | −24‰ | −13‰ |
-| δ¹³C | +4.5‰ | −2.4‰ | ~0‰ |
+| δ¹³C | +4.6‰ | −1.9‰ | ~0‰ |
 
 δD has 5–10× larger gaps → explains why δD adds hemispheric info that δ¹³C cannot.
 
@@ -48,12 +49,13 @@ Key results:
 
 ## Version History
 
-| Version | δD atm | δD src | δ¹³C src | Dual CI | Improvement | Threshold |
-|---------|--------|--------|----------|---------|-------------|-----------|
-| v1 | Umezawa, ±6‰ | Global | Global | 46.6 | +52% | ~25‰ |
-| v2 | Dasgupta, real hemi | Global | Global | 37.8 | +60.8% | ~41‰ |
-| v3 | Dasgupta, real hemi | Hemi | Global | 43.5 | +57.0% | ~41‰ |
-| **v4** | Dasgupta, real hemi | **Hemi** | **Hemi** | **57.6** | **+45.1%** | **~35‰** |
+| Version | δD atm | δD src | δ¹³C src | C4 map | Dual CI | Improvement | Threshold |
+|---------|--------|--------|----------|--------|---------|-------------|-----------|
+| v1 | Umezawa, ±6‰ | Global | Global | Still 2003 | 46.6 | +52% | ~25‰ |
+| v2 | Dasgupta, real hemi | Global | Global | Still 2003 | 37.8 | +60.8% | ~41‰ |
+| v3 | Dasgupta, real hemi | Hemi | Global | Still 2003 | 43.5 | +57.0% | ~41‰ |
+| v4 | Dasgupta, real hemi | Hemi | Hemi | Still 2003 | 57.6 | +45.1% | ~35‰ |
+| **v5** | Dasgupta, real hemi | **Hemi** | **Hemi** | **Luo 2024** | **62.6** | **+53.0%** | **~37‰** |
 
 ---
 
@@ -61,7 +63,7 @@ Key results:
 
 ### High Priority (for publication)
 
-- [x] **Re-run Phase 6 deep dive with v4 data**: Exact crossover at 3.82× (σ=31.5‰), 10% threshold at 3.53× (σ=29.1‰). Bootstrap: 44.7±1.6%, P(>0)=100%, P(>30%)=100%
+- [x] **Re-run Phase 6 deep dive with v5 data**: Exact crossover at 4.53× (σ=37.4‰), 10% threshold at 4.09× (σ=33.8‰). Bootstrap: 51.2±1.3%, P(>0)=100%, P(>30%)=100%
 - [x] **Update figures**: `fig_comprehensive.py` re-run with Phase 6 fine-grid data, v4 version comparison, exact crossover annotation
 - [x] **Paper Table 1**: Updated in RESULT.md with all v4 Phase 6 numbers
 
@@ -80,7 +82,7 @@ Key results:
 ### Data improvements
 
 - [ ] **2020–2023 atmospheric δD gap**: Currently gap-filled; replace when station data arrives
-- [ ] **Luo 2023 C4 map**: Currently using Still 2003 (static); Luo is time-varying and higher-res
+- [x] **Luo 2023 C4 map**: Now using Luo 2024 time-varying C4 map (v5). BB δ¹³C shifts ~0.2–1‰ more negative.
 - [ ] **Prior emission subcategory files**: Would improve Mic δ¹³C hemispheric calculation
 
 ---
