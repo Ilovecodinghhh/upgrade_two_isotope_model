@@ -107,6 +107,9 @@ Critically, the $\delta\mathrm{D}$ inversion is solved **independently** of the 
 
 ### 2.4 The Agreement Filter
 
+![Agreement Filter Schematic](figures/figM1_schematic_v3.png)
+*Figure 1. Schematic of the Dual-Isotope Agreement Filter. Atmospheric observations and Monte Carlo–sampled parameters feed two independent isotopic inversions (δ¹³C and δD). Each iteration's fossil-fuel estimates are compared: iterations where |FF¹³ᶜ − FFᴰ| < T are retained (green "YES" path); discordant iterations are rejected (red "NO" path). The asymmetric retention rates — 70.8% for Cantrell vs. 35.3% for Saueressig (at T = 90 Tg/yr) — constitute the KIE discriminant.*
+
 For each Monte Carlo iteration $k$ and year $j$, we compute an **agreement indicator**:
 
 $$
@@ -139,6 +142,9 @@ An alternative approach couples $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ i
 - The δD equation's large source-signature uncertainties ($\sigma_{\delta\mathrm{D}_{\mathrm{FF}}}$ $\approx$ 50‰, $\sigma_{\delta\mathrm{D}_{\mathrm{Mic}}}$ $\approx$ 30‰) destabilize the WLS, pulling FF estimates toward physically unrealistic values.
 
 This negative result motivates the Agreement Filter: $\delta\mathrm{D}$ is useful as a **consistency check**, not as a **hard algebraic constraint**.
+
+![Weight Sweep](figures/fig6_weight_sweep.png)
+*Figure 2. WLS δD weight sweep (Phase 5). KSR is plotted against the δD weight w_D for each of three model configurations. All curves remain below KSR = 1 at every weight tested, demonstrating that coupled WLS cannot reduce KIE sensitivity regardless of how the δD constraint is down-weighted. The step-function transition from "δ¹³C-only" (w_D = 0) to "coupled" (w_D > 0) is visually striking: adding any amount of δD coupling makes the result worse.*
 
 ### 2.7 Monte Carlo Setup
 
@@ -180,12 +186,18 @@ Table 1 summarizes the KIE sensitivity under different model configurations.
 
 The coupled WLS consistently **amplifies** KIE sensitivity (KSR < 1) regardless of the δD weight, hemispheric resolution, or Cl-sink fraction. This occurs because the large uncertainty in $\delta\mathrm{D}$ source signatures allows the solver to accommodate the wrong KIE by shifting FF to unphysical values — effectively importing the $^{13}$C KIE error into the joint solution rather than averaging it out.
 
+![KSR Summary](figures/figM6_KSR_summary_v3.png)
+*Figure 3. KIE Sensitivity Ratio (KSR) across all dual-isotope methods tested (N = 5000, with bootstrap 95% CIs). Bars show the ratio of δ¹³C-only KIE sensitivity to dual-isotope KIE sensitivity for fossil fuel emission trends; KSR > 1 (green shading) indicates reduced sensitivity, KSR < 1 (red shading) indicates amplification. WLS coupling amplifies KIE sensitivity by 4–5× (red bars, KSR = 0.20–0.24). The agreement filter achieves KSR = 1.12 [1.02, 1.24] at the headline threshold T = 90 Tg/yr. The gray bar (T = 200) shows negligible benefit from a lenient threshold. Error bars show bootstrap 95% CIs; the T = 50 bar has a wide CI [0.93, 4.89] due to small surviving sample size (n = 48).*
+
 ### 3.2 The Agreement Filter — Core Result (Phase 6)
 
 ![Agreement Framework](figures/fig8_agreement_framework.png)
 *Figure 6. The Agreement Filter concept. (a) Schematic: each iteration solves $\delta^{13}\mathrm{C}$ and $\delta\mathrm{D}$ independently; iterations where $|\mathrm{FF}^{(C)} - \mathrm{FF}^{(D)}| < \tau$ pass the filter. (b) Per-year agreement rate for Saueressig (blue) and Cantrell (red) KIE assumptions, $\tau$ = 100 Tg/yr.*
 
 When the Agreement Filter retains only internally consistent iterations, it preferentially removes those where the assumed OH-$^{13}$C KIE produces a $\delta^{13}\mathrm{C}$-derived FF estimate that is incompatible with the $\delta\mathrm{D}$-derived estimate. Because the OH-D KIE ($\alpha_D$) is an independent quantity (measured by Saueressig et al., 2001, with no Cantrell analog), the δD inversion is not contaminated by the $^{13}$C KIE controversy — it serves as a genuinely independent cross-check.
+
+![Before/After Time Series](figures/figM8_before_after_timeseries.png)
+*Figure 8. Effect of the agreement filter on fossil-fuel CH₄ emission estimates. (a) Unfiltered ensemble: median ± 90% CI for Cantrell (teal) and Saueressig (coral) KIE assumptions. The ~18 Tg/yr systematic offset between the two KIE values is visible throughout the record. (b) Filtered ensemble (T = 90 Tg/yr): the filter retains 51.7% of Cantrell iterations but only 10.0% of Saueressig iterations, demonstrating the asymmetric rejection that underlies the agreement-rate discriminant. The mean KIE offset persists after filtering, confirming that the filter diagnoses rather than eliminates KIE sensitivity.*
 
 ### 3.3 The Agreement Rate as a KIE Discriminant (Phases 6b, 8a)
 
@@ -209,7 +221,13 @@ The discriminant is statistically significant (non-overlapping bootstrap 95% CIs
 | Default | 3.5% | 35.3% | 70.8% | **35.5** | ✅ |
 | High Cl | 6.5% | 71.5% | 90.6% | **19.1** | ✅ |
 
+![Cl Sensitivity](figures/fig16_cl_sensitivity.png)
+*Figure 7. Sensitivity of the agreement-rate discriminant to the tropospheric Cl sink fraction. Left: agreement rates for Cantrell (teal) and Saueressig (coral) under three Cl assumptions. Right: discriminant Δ with bootstrap 95% CIs. The discriminant remains statistically significant across the full plausible range (0.6–6.5% Cl), though it compresses at high Cl because Cl's large δD KIE (α = 1.52) makes the δD constraint more permissive.*
+
 **Physical interpretation:** An inversion using the correct OH-$^{13}$C KIE will more frequently produce a FF estimate that is consistent with the independent $\delta\mathrm{D}$-derived estimate, because both isotope systems are responding to the same true source partition. The 35.5 pp gap indicates that the real atmosphere is **substantially more internally consistent** with Cantrell's $\alpha$ = 1.0054 than with Saueressig's $\alpha$ = 1.0039.
+
+![Forest Plot](figures/figM7_forest_plot_v2.png)
+*Figure 4. The agreement-rate discriminant. (a) Full-record comparison (1999–2022, N = 5000): Cantrell (teal, 70.8%) vs. Saueressig (coral, 35.3%) at T = 90 Tg/yr. The purple bracket shows the 35.5 pp discriminant with bootstrap 95% CI [35.3, 35.8]. (b) Epoch stability (T = 100 Tg/yr): the discriminant is statistically significant (*** p < 0.001) across all three atmospheric regimes — the pre-growth plateau (1999–2006), renewed-growth phase (2007–2014), and post-2014 acceleration (2015–2022).*
 
 ### 3.4 Robustness Test I: Time-Varying KIE (Phase 7)
 
