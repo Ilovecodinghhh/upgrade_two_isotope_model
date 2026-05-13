@@ -1,0 +1,21 @@
+{
+  "diagnostics": {
+    "solver_failures": 0,
+    "bound_hits": 16561,
+    "total_solves": 18400,
+    "failure_rate_pct": 0.0,
+    "bound_hit_rate_pct": 90.00543478260869
+  },
+  "trend_step": {
+    "median": -0.9555914243743082,
+    "5pct": -16.271944271979727,
+    "95pct": 14.210822896353745
+  },
+  "trend_regression": {
+    "slope_median": 0.5367477176379648,
+    "slope_5pct": -0.6944720018221167,
+    "slope_95pct": 1.5019062158529424,
+    "pvalue_median": 0.10449988910175248,
+    "pct_significant": 42.5
+  }
+}

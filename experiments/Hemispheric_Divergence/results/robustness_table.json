@@ -1,0 +1,12 @@
+[
+  {
+    "config": "default",
+    "NH_FF_slope": 0.9795955234109661,
+    "NH_FF_pct_pos": 75.0,
+    "NH_FF_p5": -1.0423281269728562,
+    "NH_FF_p95": 3.1131897417462953,
+    "SH_Mic_slope": 0.5236156456204895,
+    "SH_Mic_pct_pos": 71.5,
+    "Global_FF_slope": 2.1156107393924284,
+    "Global_FF_pct_neg": 9.0,
+    "pattern_holds": 

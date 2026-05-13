@@ -59,8 +59,8 @@ def run_at_fixed_kie(data, mode, oh_13c_kie, n_iter=400, seed=42,
         'OH_13C': oh_13c_kie,
         'OH_D': 0.5*(1.294+1.327),
         'Cl_13C': 1.066, 'Cl_D': 1.520,
-        'Strat_13C': 1.003, 'Strat_D': 1.050,
-        'Soil_13C': 1.0201, 'Soil_D': 1.103,
+        'Strat_13C': 1.003, 'Strat_D': 1.179,
+        'Soil_13C': 1.0201, 'Soil_D': 1.083,
     }
     K13_NH, KD_NH = compute_bulk_KIE(kies, SINK_FRACTIONS_NH)
     K13_SH, KD_SH = compute_bulk_KIE(kies, SINK_FRACTIONS_SH)
@@ -219,8 +219,8 @@ def compute_residuals(data, mode, oh_13c_kie, n_iter=400, seed=42,
         'OH_13C': oh_13c_kie,
         'OH_D': 0.5*(1.294+1.327),
         'Cl_13C': 1.066, 'Cl_D': 1.520,
-        'Strat_13C': 1.003, 'Strat_D': 1.050,
-        'Soil_13C': 1.0201, 'Soil_D': 1.103,
+        'Strat_13C': 1.003, 'Strat_D': 1.179,
+        'Soil_13C': 1.0201, 'Soil_D': 1.083,
     }
     K13_NH, KD_NH = compute_bulk_KIE(kies, SINK_FRACTIONS_NH)
     K13_SH, KD_SH = compute_bulk_KIE(kies, SINK_FRACTIONS_SH)

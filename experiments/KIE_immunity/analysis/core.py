@@ -3,13 +3,13 @@
 """
 core.py — Shared 2-box engine for KIE_immunity phases 5–13.
 =============================================================
-Provides a flexible `run_2box_flex()` that accepts overrides for:
-  - tau_mode / tau_fixed
-  - OH_D KIE (fixed value)
-  - Cl sink fraction
-  - tau_ex (interhemispheric exchange)
-  - KIE mode
-All downstream scripts import from here.
+v4: Addresses Manuscript_Review_V1.0.md issues:
+  - A2: W matrix is now a parameter (default unchanged for reproducibility)
+  - A3/B6: fix_kie uses KIE_FIXED from common.py (single source of truth)
+  - B4: Added compute_trend_regression() for linear trend + p-value
+  - B7: Added solver failure/bound-hit tracking
+  - C4: Exception handling improved (no silent pass)
+  - BB scaling parameter for sensitivity tests (B2)
 """
 
 import sys
@@ -17,6 +17,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.optimize import lsq_linear
+from scipy.stats import linregress
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(REPO_ROOT))
@@ -35,6 +36,9 @@ from common import (
 OUT_DIR = Path(__file__).resolve().parent.parent / "results"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+# Default W matrix — kept for backward compatibility
+W_DEFAULT = np.diag([100.0, 1.0, 0.5])
+
 
 def _make_sink_fractions(cl_frac=None):
     """Return (NH, SH) sink fraction dicts, optionally overriding Cl fraction."""
@@ -44,7 +48,6 @@ def _make_sink_fractions(cl_frac=None):
     def _adjust(base, new_cl):
         old_cl = base['Cl']
         delta = new_cl - old_cl
-        # Redistribute from OH (dominant sink)
         return {
             'OH': base['OH'] - delta,
             'Cl': new_cl,
@@ -60,12 +63,33 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
                   oh_d_fixed=None,
                   cl_frac=None,
                   tau_ex_fixed=None,
-                  fix_kie=False, fix_sigs=False):
+                  fix_kie=False, fix_sigs=False,
+                  W=None,
+                  bb_scale=1.0,
+                  track_diagnostics=False):
     """
     Flexible 2-box dual real-hemi-dD model.
 
-    Returns FF_G array (n_years × n_iter).
+    Parameters
+    ----------
+    W : ndarray (3,3) or None
+        Weight matrix for the 3×3 least-squares solver.
+        Default: diag(100, 1, 0.5).
+    bb_scale : float
+        Multiplicative scaling factor for prescribed BB emissions.
+        Default: 1.0 (no perturbation).
+    track_diagnostics : bool
+        If True, return (FF_G, diagnostics_dict) instead of just FF_G.
+
+    Returns
+    -------
+    FF_G : ndarray (n_years, n_iter)
+    diagnostics : dict (only if track_diagnostics=True)
+        Keys: 'solver_failures', 'bound_hits', 'total_solves'
     """
+    if W is None:
+        W = W_DEFAULT
+
     rng = np.random.default_rng(seed)
     n = data.n_years
     years = data.model_years
@@ -77,13 +101,17 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
     tau_NH = tau_global * LIFETIME_RATIO_NH
     tau_SH = tau_global * LIFETIME_RATIO_SH
 
-    BB_NH = data.BB_global_mean * BB_NH_FRACTION
-    BB_SH = data.BB_global_mean * BB_SH_FRACTION
+    BB_NH = data.BB_global_mean * BB_NH_FRACTION * bb_scale
+    BB_SH = data.BB_global_mean * BB_SH_FRACTION * bb_scale
 
     sf_NH, sf_SH = _make_sink_fractions(cl_frac)
 
     FF_G = np.zeros((n, n_iter))
-    W = np.diag([100.0, 1.0, 0.5])
+
+    # Diagnostics
+    solver_failures = 0
+    bound_hits = 0
+    total_solves = 0
 
     if fix_kie:
         kie_base = dict(KIE_FIXED)
@@ -183,6 +211,7 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
                  f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j],
                  fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]),
             ]:
+                total_solves += 1
                 A = np.array([
                     [1.0, 1.0, 1.0],
                     [f13_bb_h, f13_ff_h, f13_mic_h],
@@ -192,14 +221,30 @@ def run_2box_flex(data, n_iter=400, seed=42, *,
                 try:
                     res = lsq_linear(W@A, W@B, bounds=(0, S*1.5))
                     FF_G[j, k] += res.x[1]
-                except:
-                    pass
+                    # Track bound hits
+                    if any(res.x <= 1e-6) or any(res.x >= S*1.5 - 1e-6):
+                        bound_hits += 1
+                except Exception:
+                    solver_failures += 1
+
+    if track_diagnostics:
+        diag = {
+            'solver_failures': solver_failures,
+            'bound_hits': bound_hits,
+            'total_solves': total_solves,
+            'failure_rate_pct': solver_failures / max(1, total_solves) * 100,
+            'bound_hit_rate_pct': bound_hits / max(1, total_solves) * 100,
+        }
+        return FF_G, diag
 
     return FF_G
 
 
 def compute_trend(FF, years):
-    """Post-2007 ΔFF: mean(2010–2018) − mean(2000–2006), per MC iteration."""
+    """Post-2007 ΔFF: mean(2010–2018) − mean(2000–2006), per MC iteration.
+    
+    Note: 2007–2009 excluded as transition years.
+    """
     FF_s = smooth_5yr(FF)
     yrs = np.array(years)
     pre = np.where((yrs >= 2000) & (yrs <= 2006))[0]
@@ -207,8 +252,44 @@ def compute_trend(FF, years):
     return np.nanmean(FF_s[post], axis=0) - np.nanmean(FF_s[pre], axis=0)
 
 
+def compute_trend_regression(FF, years):
+    """Linear regression slope of FF over 2000–2020, per MC iteration.
+    
+    Returns dict with slope (Tg/yr²), p-value, and CI for each iteration's
+    median statistics.
+    """
+    FF_s = smooth_5yr(FF)
+    yrs = np.array(years)
+    mask = (yrs >= 2000) & (yrs <= 2020)
+    idx = np.where(mask)[0]
+    x = yrs[mask]
+    
+    n_iter = FF_s.shape[1]
+    slopes = np.zeros(n_iter)
+    pvalues = np.zeros(n_iter)
+    
+    for k in range(n_iter):
+        y = FF_s[idx, k]
+        valid = ~np.isnan(y)
+        if valid.sum() < 5:
+            slopes[k] = np.nan
+            pvalues[k] = np.nan
+            continue
+        res = linregress(x[valid], y[valid])
+        slopes[k] = res.slope
+        pvalues[k] = res.pvalue
+    
+    return {
+        'slope_median': float(np.nanmedian(slopes)),
+        'slope_5pct': float(np.nanpercentile(slopes, 5)),
+        'slope_95pct': float(np.nanpercentile(slopes, 95)),
+        'pvalue_median': float(np.nanmedian(pvalues)),
+        'pct_significant': float(np.nanmean(pvalues < 0.05) * 100),
+    }
+
+
 def trend_stats(FF, years):
-    """Return (median, lo5, hi95) of ΔFF trend."""
+    """Return (median, lo5, hi95) of ΔFF trend (step-change metric)."""
     deltas = compute_trend(FF, years)
     return float(np.median(deltas)), float(np.percentile(deltas, 5)), float(np.percentile(deltas, 95))
 

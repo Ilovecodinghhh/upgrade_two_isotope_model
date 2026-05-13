@@ -6,27 +6,27 @@
     "kie_spread": 0.681461564672972
   },
   "dual_offset": {
-    "trend_saueressig": -2.4638800966234413,
-    "trend_cantrell": -1.5781420233507149,
-    "kie_spread": 0.8857380732727265
+    "trend_saueressig": -3.7080791334715606,
+    "trend_cantrell": -2.8986964514068028,
+    "kie_spread": 0.8093826820647578
   },
   "dual_real_hemi": {
-    "trend_saueressig": 6.280742943438398,
-    "trend_cantrell": -0.6007496707310231,
-    "kie_spread": 6.881492614169421
+    "trend_saueressig": 2.9259396985058927,
+    "trend_cantrell": -5.625887117537909,
+    "kie_spread": 8.551826816043802
   },
   "dual_offset_residuals": {
-    "saueressig_mean_residual": 1.0201014600455213e-07,
-    "cantrell_mean_residual": 1.4540880803874315e-07,
-    "saueressig_mean_boundhits": 1.717608695652174,
-    "cantrell_mean_boundhits": 1.7029347826086956,
+    "saueressig_mean_residual": 1.0997436264096728e-07,
+    "cantrell_mean_residual": 1.35638546207069e-07,
+    "saueressig_mean_boundhits": 1.730217391304348,
+    "cantrell_mean_boundhits": 1.7878260869565217,
     "preferred": "Saueressig"
   },
   "dual_real_hemi_residuals": {
-    "saueressig_mean_residual": 6.643249205804991e-07,
-    "cantrell_mean_residual": 8.557888607869943e-07,
-    "saueressig_mean_boundhits": 1.801413043478261,
-    "cantrell_mean_boundhits": 1.8128260869565218,
+    "saueressig_mean_residual": 5.924972803262836e-07,
+    "cantrell_mean_residual": 8.432846623537094e-07,
+    "saueressig_mean_boundhits": 1.7779347826086958,
+    "cantrell_mean_boundhits": 1.8223913043478261,
     "preferred": "Saueressig"
   }
 }

@@ -1,0 +1,70 @@
+{
+  "title": "3-Box Dual-Isotope Methane Source Attribution",
+  "boxes": {
+    "NHext": {
+      "lat_range": "30\u00b0N\u201390\u00b0N",
+      "mass_fraction": 0.25,
+      "dominant_sources": "FF (industry, gas), boreal wetlands, ruminants",
+      "monitoring": "NOAA flask network, AGAGE, Greenland stations"
+    },
+    "Trop": {
+      "lat_range": "30\u00b0S\u201330\u00b0N",
+      "mass_fraction": 0.5,
+      "dominant_sources": "tropical wetlands, rice, livestock, tropical BB",
+      "monitoring": "Sparse! Mauna Loa, Cape Grim edge, Ascension Island"
+    },
+    "SHext": {
+      "lat_range": "90\u00b0S\u201330\u00b0S",
+      "mass_fraction": 0.25,
+      "dominant_sources": "minimal local sources, clean background",
+      "monitoring": "South Pole, Cape Grim"
+    }
+  },
+  "exchange_rates": {
+    "NHext_Trop": {
+      "tau_yr": 0.8,
+      "note": "Faster (Hadley cell + eddies)"
+    },
+    "Trop_SHext": {
+      "tau_yr": 1.2,
+      "note": "Slower (ITCZ barrier)"
+    },
+    "NHext_SHext": {
+      "tau_yr": "\u221e",
+      "note": "No direct exchange (via Trop only)"
+    }
+  },
+  "equations": "\n        Mass balance for each box i \u2208 {NHext, Trop, SHext}:\n\n        dM_i/dt = S_i - M_i/\u03c4_i + \u03a3_j (M_j - M_i)/\u03c4_{ij}\n\n        where:\n          M_i = CH\u2084 mass in box i\n          S_i = total source in box i (= BB_i + FF_i + Mic_i)\n          \u03c4_i = chemical lifetime in box i\n          \u03c4_{ij} = exchange time between boxes i and j\n\n        Isotope mass balance (for \u00b9\u00b3CH\u2084):\n          d(R_i\u00b7M_i)/dt = R_src_i\u00b7S_i - \u03b1_i\u00b7R_i\u00b7M_i/\u03c4_i + \u03a3_j (R_j\u00b7M_j - R_i\u00b7M_i)/\u03c4_{ij}\n\n        Same for CH\u2083D (\u03b4D).\n\n        System: 9 unknowns (3 sources \u00d7 3 boxes)\n                9 equations (3 mass + 3 \u03b4\u00b9\u00b3C + 3 \u03b4D)\n        \n        \u2192 Exactly determined! (vs. 2-box: 6 unknowns, 6 equations)\n        \u2192 Each box needs: CH\u2084 concentration, \u03b4\u00b9\u00b3C, \u03b4D (3 observables)\n        ",
+  "data_requirements": {
+    "CH4_zonal": {
+      "status": "AVAILABLE",
+      "source": "NOAA GML flask + in-situ, zonal means available",
+      "uncertainty": "\u00b12 ppb for annual zonal means"
+    },
+    "d13C_zonal": {
+      "status": "PARTIALLY AVAILABLE",
+      "source": "NOAA INSTAAR, sparse in tropics",
+      "issue": "Tropical \u03b4\u00b9\u00b3C is interpolated from NH/SH stations, not independent",
+      "uncertainty": "\u00b10.05\u2030 at well-sampled sites, \u00b10.2\u2030 in tropics"
+    },
+    "dD_zonal": {
+      "status": "NOT AVAILABLE for 3 zones",
+      "source": "Only a few sites globally (ALT, MLO, CGO, SPO)",
+      "issue": "Cannot independently constrain 3 zonal \u03b4D values",
+      "uncertainty": "\u00b13\u2030 per station, but too few stations for tropical mean"
+    },
+    "source_signatures_zonal": {
+      "status": "PARTIALLY AVAILABLE",
+      "source": "Regional inventories, process studies",
+      "issue": "Tropical source sigs less well-characterized than NH"
+    }
+  },
+  "feasibility_assessment": {
+    "verdict": "NOT YET FEASIBLE for full implementation",
+    "limiting_factor": "Tropical \u03b4D observations",
+    "timeline": "Feasible within 5-10 years if IRMS/TILDAS network expands",
+    "workaround": "Could use satellite-derived CH\u2084 + \u03b4\u00b9\u00b3C (GOSAT) with modeled \u03b4D priors",
+    "advantage_over_2box": "Separates tropical wetland signal from NH industrial + SH background. Current 2-box lumps tropical into NH+SH, losing the dominant signal."
+  },
+  "key_question": "Would the 3-box resolve the tropical wetland surge that drives post-2019 acceleration? The 2-box lumps tropical sources into NH and SH equally, but most tropical wetland emissions are near-equatorial. A 3-box could independently estimate the tropical microbial trend."
+}

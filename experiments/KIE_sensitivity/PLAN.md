@@ -386,7 +386,56 @@ artifact of a particular atmospheric regime.
 
 ---
 
-## Dependencies
+## Phase 9: Editorial Assessment Fixes
+
+### Task 9a — `phase9_editorial_fixes.py` (High-N + KSR bootstrap)
+
+**Goal:** Increase MC iterations from N=1000 to N=5000. Compute bootstrap 95% CIs
+on both the discriminant and the KSR at key thresholds (50, 90, 100, 150 Tg/yr).
+
+### Task 9b — `phase9_editorial_fixes.py` (Cl sensitivity)
+
+**Goal:** Test whether the agreement-filter discriminant (35.5 pp at T=90) survives
+under Thanwerdas low-Cl (0.6%) and high-Cl (6.5%) scenarios. Phase 5 only tested
+Cl sensitivity for the WLS approach.
+
+### Task 9c — `phase9_editorial_fixes.py` (Year-agree sweep)
+
+**Goal:** Sweep the 80% year-agreement parameter across {60%, 70%, 80%, 90%, 95%}
+to verify discriminant insensitivity.
+
+**Output:**
+- `results/phase9_editorial_fixes/high_n_summary.json`
+- `results/phase9_editorial_fixes/cl_sensitivity.json`
+- `results/phase9_editorial_fixes/year_agreement_sweep.json`
+- `figures/fig15_high_n.png`, `fig16_cl_sensitivity.png`, `fig17_year_agree_sweep.png`
+
+### Implementation notes
+- Single script (`phase9_editorial_fixes.py`) with three task functions.
+- Reuses run_inversions() with parameterised `cl_fraction` and `n_iter`.
+- For Cl override: adjusts OH fraction to keep sink fractions summing to 1.
+- Bootstrap KSR uses 2000 bootstrap samples of MC iteration indices.
+
+---
+
+## Execution Order
+
+```
+Phase 1 → Phase 2 → Phase 3 → Phase 4 → Phase 4b → Phase 5 → Phase 6
+                                                                  │
+                                          ┌───────────────────────┼───────────────────────┐
+                                          ▼                       ▼                       ▼
+                                   Phase 6b              Phase 6c                Phase 7 / 8
+                                (threshold sweep)    (OSSE recovery)        (time-varying KIE,
+                                                                            fine thresholds,
+                                                                            temporal stability)
+                                          │
+                                          ▼
+                                    Phase 9
+                              (editorial fixes:
+                               N=5000, Cl sweep,
+                               year-agree sweep)
+```
 
 ```
 numpy

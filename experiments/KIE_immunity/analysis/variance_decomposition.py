@@ -75,11 +75,9 @@ def run_2box(data, mode, n_iter, seed,
     
     # Pre-compute fixed values if needed
     if fix_kie:
-        kie_fixed = {'OH_13C': 0.5*(1.0039+1.0054),
-                     'OH_D': 0.5*(1.294+1.327),
-                     'Cl_13C': 1.066, 'Cl_D': 1.520,
-                     'Strat_13C': 1.003, 'Strat_D': 1.050,
-                     'Soil_13C': 1.0201, 'Soil_D': 1.103}
+        # Use KIE_FIXED from common.py — single source of truth
+        from common import KIE_FIXED
+        kie_fixed = dict(KIE_FIXED)
     if fix_sigs:
         rng_tmp = np.random.default_rng(0)
         if use_real_hemi_dD:
