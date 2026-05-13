@@ -14,9 +14,11 @@
 
 ### Phase B (Validation) ✓
 4. ✅ **Posterior predictive check**: Total source = 549→652 Tg/yr (matches CarbonTracker)
-5. ✅ **δD gradient consistency**: Model predicts −82‰ vs observed −14.5‰ — **67‰ discrepancy confirmed**
-   - Root cause: source δD signatures (FF=-194, Mic=-321, BB=-225) when weighted by hemispheric partitioning produce too large a gradient
-   - This is a limitation of the input source signature dataset
+5. ✅ **δD gradient consistency**: CORRECTED — earlier -82‰ report was a bug (compared source δD to atmospheric δD without accounting for sink fractionation + IH exchange)
+   - Proper steady-state 2-box calculation: source gradient = −16.3‰ → atmospheric gradient = **−11.5‰**
+   - Observed atmospheric gradient: **−14.5‰**
+   - Discrepancy: **only 3.0‰** — consistent within uncertainty
+   - The δD signatures ARE self-consistent when sink fractionation (ε_D ≈ +295‰) and IH exchange (τ_ex ≈ 1 yr) are properly accounted for
 
 ### Phase C (Narrative) ✓  
 6. ✅ **Information-theoretic analysis**: 
@@ -82,8 +84,11 @@ is susceptible to this issue unless they rescale or use delta-space formulations
 
 ## Remaining Issues (Acknowledged, Not Fixable in Scope)
 
-1. **δD gradient discrepancy** (−82‰ predicted vs −14.5‰ observed): Likely requires
-   revised hemispheric source δD values. Current literature values may be biased.
+1. **δD source signatures have ~70‰ MC uncertainty**: This is honest but limits δD constraining power.
+   Possible improvements: (A) constrain Mic δD via source-water δD maps (GNIP/OIPC), 
+   (B) use EDGAR subcategory-weighted FF δD, (C) add C3/C4 dependence to BB δD,
+   (D) Bayesian inversion with informative δD priors,
+   (E) use observed NH-SH δD gradient as a 7th constraint equation.
    
 2. **NH FF share = 55-59%** vs EDGAR 72%: The model under-attributes FF to NH.
    This may reflect the coarse 2-box spatial resolution.
