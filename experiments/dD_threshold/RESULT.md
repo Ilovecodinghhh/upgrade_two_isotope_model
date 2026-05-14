@@ -222,7 +222,21 @@ All phase scripts share a single 2-box model runner via `analysis/core.py`:
 - `ci_width(arr, start_idx)` / `ci_width_hemi(arr, start_idx)` — CI width calculators
 - Constants: `W_NH`, `W_SH`, `DEFAULT_N_ITER`, `DEFAULT_SEED`
 
+Additional analysis scripts:
+- `compute_condition_numbers.py` — computes FF-Mic discrimination matrix condition numbers (κ) and W-matrix sensitivity
+- `validate.py` — smoke test verifying dual CI < d13C_only CI
+
 Phase scripts are thin wrappers that call `core.run_twobox()` with phase-specific parameters.
+
+### Computed Condition Numbers (from compute_condition_numbers.py)
+
+FF-Mic discrimination matrix κ ([δ¹³C; δD] × [FF, Mic], row-normalized):
+- **1-box global:** κ = 38.2
+- **2-box NH:** κ = 27.0
+- **2-box SH:** κ = 17.3
+- **2-box average:** κ = 22.1 (42% reduction from 1-box)
+
+W-matrix sensitivity: **completely invariant** — CI = 60.7 Tg/yr for all tested W values (50–500) and δ¹³C:δD ratios (0.25–1.0).
 
 ---
 

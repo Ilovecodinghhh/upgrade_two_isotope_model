@@ -1,0 +1,32 @@
+{
+  "condition_numbers": {
+    "onebox_dual": 181770.8,
+    "twobox_NH": 169597.7,
+    "twobox_SH": 165690.7,
+    "twobox_avg": 167644.2,
+    "reduction_pct": 8.0
+  },
+  "w_matrix_sensitivity": {
+    "50": {
+      "dual_ci": 60.7,
+      "improvement": 53.5,
+      "threshold_approx": 4.0
+    },
+    "100": {
+      "dual_ci": 60.7,
+      "improvement": 53.5,
+      "threshold_approx": 4.0
+    },
+    "200": {
+      "dual_ci": 60.7,
+      "improvement": 53.5,
+      "threshold_approx": 4.0
+    },
+    "500": {
+      "dual_ci": 60.7,
+      "improvement": 53.5,
+      "threshold_approx": 4.0
+    }
+  },
+  "ref_ci": 130.6
+}
