@@ -232,29 +232,23 @@ This suggests that future 3-D inverse modeling studies incorporating δD-CH₄ s
 
 The failure of the one-box dual-isotope model and success of the two-box model reveals a fundamental insight: **δD's primary value lies in hemispheric discrimination, not global source separation.**
 
-At the global level, the three source categories occupy distinct but overlapping regions in δ¹³C-δD space. The condition number of the global source-signature matrix is high (poorly conditioned), (κ = 14.3), meaning that small observational errors propagate into large emission uncertainties—hence the one-box failure. In the two-box decomposition, the per-hemisphere condition number drops to κ = 6.7, a 53% reduction that directly translates to improved inversion stability. However, when the problem is decomposed into hemispheres, δD provides *additional spatial information* that δ¹³C cannot. The δD NH-SH gradient for biomass burning (24‰) is an order of magnitude larger than the δ¹³C gradient (1.9‰), effectively creating a new axis of discrimination.
+At the global level, the three source categories occupy distinct but overlapping regions in δ¹³C-δD space. The condition number of the global source-signature matrix is κ = 14.3, meaning that small observational errors propagate into large emission uncertainties—hence the one-box failure. In the two-box decomposition, κ drops to 6.7 (53% reduction), and δD provides *additional spatial information* that δ¹³C cannot. The δD NH-SH gradient for biomass burning (24‰) is an order of magnitude larger than the δ¹³C gradient (1.9‰), effectively creating a new axis of discrimination.
 
 This mechanism aligns with the analysis of Naus et al. (35), who showed that two-box models can extract meaningful constraints from hemispheric gradients despite simplifying assumptions about interhemispheric mixing. It also suggests that three-box (NHext/Trop/SHext) or higher-resolution models may extract even more value from δD, as tropical versus extratropical δD contrasts are particularly large.
 
-### 4.3 Implications for the post-2006 CH₄ growth debate
+### 4.3 Implications for post-2006 CH₄ growth
 
-The dual-isotope two-box model yields mean FF emissions of 86 ± 15 Tg yr⁻¹ (mean ± 1σ of annual values) over 2007–2021, with no statistically significant trend (0.3 ± 0.8 Tg yr⁻² ). Microbial emissions increase by 12.8 ± 3.4 Tg yr⁻¹ over the same period, accounting for >95% of the total emission increase. These findings are consistent with the conclusions of Riddell-Young et al. (11), Basu et al. (7), and Chandra et al. (8), and with the most recent TROPOMI-based attribution by He et al. (34) who identified tropical microbial emissions as the dominant driver of 2019–2024 CH₄ growth.
+The dual-isotope two-box model yields mean FF emissions of 86 ± 15 Tg yr⁻¹ (1σ) over 2007–2021, with no statistically significant trend (0.3 ± 0.8 Tg yr⁻²). Microbial emissions increase by 12.8 ± 3.4 Tg yr⁻¹ over the same period, accounting for >95% of the total emission increase. These findings align with the majority of isotope-enabled studies (7, 8, 11, 18) and with the most recent TROPOMI-based attribution by He et al. (34), who identified tropical microbial emissions as the dominant driver of 2019–2024 CH₄ growth.
 
-### 4.4 Implications for the CH₄ budget debate
+The narrower CI on FF emissions (±15 Tg yr⁻¹ vs. ±33 Tg yr⁻¹ from δ¹³C alone) resolves two persistent ambiguities. First, the δ¹³C-only model cannot distinguish between stable and moderately increasing FF emissions; the dual-isotope constraint limits the FF trend to 0.3 ± 0.8 Tg yr⁻², ruling out increases larger than ~2 Tg yr⁻¹ yr⁻¹ at 95% confidence—inconsistent with substantial FF increases inferred by some 3-D inversions without isotopic constraints (6, 9). Second, Worden et al. (36) showed that a ~3.7 Tg yr⁻¹ decrease in BB emissions after 2007 could reconcile isotopic and ethane-based evidence; our tighter FF constraint makes this reconciliation more robust.
 
-The dual-isotope constraint consistently supports a microbial-dominated explanation for post-2006 CH₄ growth, aligning with the majority of isotope-enabled studies (7, 8, 11, 18, 27). Our narrower confidence intervals on FF emissions (±15 Tg yr⁻¹ vs. ±33 Tg yr⁻¹ from δ¹³C alone) help resolve two persistent ambiguities:
-
-**Fossil fuel trend:** The δ¹³C-only model cannot definitively distinguish between stable and moderately increasing FF emissions (e.g., +5 Tg yr⁻¹ per decade). The dual-isotope model constrains the FF trend to 0.3 ± 0.8 Tg yr⁻², ruling out increases larger than ~2 Tg yr⁻¹ per year at 95% confidence. This is inconsistent with the substantial FF increases inferred by some 3-D inversions without isotopic constraints (6, 9, 27), but consistent with Chandra et al. (8) who found decreasing fossil fuel emissions over 1990–2020 when using both concentration and isotopic data.
-
-**Biomass burning role:** Worden et al. (36) demonstrated that a ~3.7 Tg yr⁻¹ decrease in BB emissions after 2007 could reconcile the isotopic and ethane-based evidence. Our model, which prescribes BB from CarbonTracker-CH₄ (24), implicitly accounts for this decrease. The tighter FF constraint from δD makes the reconciliation more robust by reducing the range of plausible FF increases that could alternatively explain the data.
-
-### 4.5 The Luo 2024 C₃/C₄ map and δ¹³C discrimination
+### 4.4 The Luo 2024 C₃/C₄ map and δ¹³C discrimination
 
 Our latest data version (v5) incorporates the Luo et al. (27) time-varying C₃/C₄ vegetation distribution, replacing the static Still & Berry (37) map used in previous studies. This update has an instructive effect: it shifts BB δ¹³C ~0.9‰ more negative in the tropics (more C₃-like), reducing the FF-BB δ¹³C separation and widening the δ¹³C-only CI from 105 to 133 Tg yr⁻¹. However, the dual-isotope CI barely changes (57.6 → 62.6 Tg yr⁻¹) because δD is independent of the C₃/C₄ distribution.
 
 The net effect is that δD's *relative* value *increased* with more realistic vegetation data (improvement: 45% → 53%). This underscores a general principle: as δ¹³C-based discrimination weakens—whether from C₃/C₄ changes, shale gas trends, or sink uncertainties—the *marginal value of δD increases*. This has practical implications for future methane monitoring: continued shifts in energy systems (coal-to-gas transitions, shale gas expansion) may progressively erode δ¹³C discrimination (16, 20), making δD increasingly important.
 
-### 4.6 Requirements for δD measurement networks
+### 4.5 Requirements for δD measurement networks
 
 Our threshold analysis establishes concrete uncertainty requirements for δD-CH₄ to be useful in source attribution:
 
@@ -264,7 +258,7 @@ Our threshold analysis establishes concrete uncertainty requirements for δD-CH�
 
 These benchmarks apply to the *emission-weighted, hemispheric-mean* source-signature uncertainty—not to individual measurement precision (which is typically 2–3‰ for IRMS). The dominant source of σ(Mic δD) is spatial heterogeneity and the regression models used to extrapolate from temperature to isotopic signature (32), not measurement uncertainty per se.
 
-### 4.7 Limitations
+### 4.6 Limitations
 
 Our analysis uses a two-box model that simplifies atmospheric transport and assumes well-mixed hemispheric boxes. Naus et al. (35) showed that two-box models can introduce biases in interhemispheric gradient interpretation, particularly for species with heterogeneous source distributions. However, our comparative framework—where both δ¹³C-only and dual-isotope models share the same two-box simplifications—measures the *marginal information from δD* under identical transport assumptions, making the improvement estimate less sensitive to box-model biases than absolute emission estimates.
 
@@ -278,17 +272,17 @@ Finally, we do not consider potential trends in δD source signatures, which cou
 
 ## 5. Conclusions
 
-We demonstrate that δD-CH₄ reduces uncertainty on fossil fuel methane emissions by ~53% in a hemispheric mass balance framework, but only when source-signature uncertainties are properly characterized. A sharp threshold exists at σ(Mic δD) ≈ 37‰: below this, δD helps; above, it hurts. Current observational constraints (~8‰) are comfortably within this threshold.
+We resolve the apparent contradiction between studies finding δD-CH₄ useful (11, 23) and those finding it negligible (19): the critical variable is source-signature uncertainty specification, not the tracer itself. A sharp threshold exists at σ(Mic δD) ≈ 37‰—a 4.5× margin above current observational constraints (~8‰)—below which δD reduces fossil fuel emission uncertainty by ~53%.
 
-The contradiction in the literature is fully resolved: Thanwerdas et al. (19) prescribed δD source-signature uncertainties (~128‰) that are ~3.5× above the threshold, inevitably rendering δD uninformative in their framework. This is not a limitation of δD-CH₄ as a tracer, but of the uncertainty characterization applied.
+Thanwerdas et al. (19) prescribed uncertainties (~128‰) that are 3.5× above this threshold, inevitably rendering δD uninformative. This is not a failure of δD-CH₄, but of overly conservative prior specification. The threshold is robust across nine KIE × lifetime configurations, five data versions, and full W-matrix sensitivity tests.
 
-Three actionable implications emerge:
+Three recommendations follow:
 
-1. **For modelers:** Future inversions assimilating δD-CH₄ should use emission-weighted, spatially resolved source-signature uncertainties, targeting σ < 37‰ for microbial δD. Uniform conservative priors will waste the information content of δD observations.
+1. **Inversions assimilating δD-CH₄** should adopt emission-weighted, spatially resolved source-signature uncertainties (σ < 37‰), not uniform conservative priors.
 
-2. **For measurement networks:** Current δD-CH₄ measurement precision (~2–3‰ IRMS) is more than adequate. The limiting factor is not measurement precision but the spatial characterization of source signatures—particularly wetland δD, which depends on temperature-isotope regressions (32). Expanding the δD-CH₄ monitoring network is scientifically justified.
+2. **Measurement network expansion** is scientifically justified: current IRMS precision (~2–3‰) is near-optimal, and the limiting factor is spatial characterization of wetland δD source signatures (32), not instrumental precision.
 
-3. **For the CH₄ budget:** Dual-isotope constraints consistently support a microbial-dominated driver of post-2006 CH₄ growth with stable fossil fuel emissions, with tighter uncertainty bounds than δ¹³C alone. As energy transitions continue to narrow δ¹³C source-signature separations, δD will become increasingly valuable.
+3. **For the CH₄ budget:** dual-isotope constraints tighten FF emission uncertainty from ±33 to ±15 Tg yr⁻¹, confirming stable fossil fuel emissions and microbial-dominated post-2006 growth. As energy transitions erode δ¹³C discrimination (16, 20), δD's marginal value will increase.
 
 ---
 
@@ -460,4 +454,4 @@ The dual CI varies by <3 Tg yr⁻¹ across a 10× range of mass balance weights,
 
 ---
 
-*Manuscript word count: ~6,800 (main text, excluding references and SI)*
+*Manuscript word count: ~6,500 (main text, excluding references and SI)*
