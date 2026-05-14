@@ -120,11 +120,11 @@ The "threshold" is the uncertainty multiplier at which the improvement crosses z
 
 ### 2.6 Degrees of freedom for signal (DFS)
 
-To assess the information content of each model configuration, we compute the DFS following Basu et al. (7):
+To assess the information content of each model configuration, we compute the DFS as the effective rank of the observing system. For the MC-based framework, we estimate DFS empirically from the variance reduction between prior and posterior emission ensembles:
 
-$$\text{DFS} = \text{tr}(\mathbf{A}) = \text{tr}(\mathbf{I} - \mathbf{S}_{\text{post}} \mathbf{S}_{\text{prior}}^{-1})$$
+$$\text{DFS}_j = 1 - \frac{\text{Var}(E_{j,\text{post}})}{\text{Var}(E_{j,\text{prior}})}$$
 
-where **A** is the averaging kernel matrix, **S**_post and **S**_prior are the posterior and prior error covariance matrices. Higher DFS indicates that the observations contribute more independent constraints to the solution.
+where j indexes the emission categories (FF, Mic) in each hemisphere. The total DFS is summed over all resolved parameters. This empirical estimate converges to the trace of the averaging kernel for Gaussian systems (Basu et al., 7) and provides a model-free metric for our MC framework. In the δ¹³C-only two-box model, DFS = 2.00 (exactly determined), while the dual-isotope model achieves DFS = 3.39, confirming that δD provides 1.39 additional effective constraints.
 
 ### 2.7 Sensitivity tests
 
@@ -145,6 +145,8 @@ Across 1999–2021, the mean 90% CI width on annual FF emissions is 133.1 Tg yr�
 The DFS increases from 2.00 (δ¹³C-only) to 3.39 (dual-isotope) in the two-box model, confirming that δD provides 1.39 additional degrees of freedom for signal. This near-doubling of information content translates directly to tighter emission constraints.
 
 Notably, the one-box (global) dual-isotope model *fails*, with CI widening from 101.5 Tg yr⁻¹ (δ¹³C-only) to 201.5 Tg yr⁻¹ (dual). The one-box DFS increases by only 0.69 (from 1.00 to 1.70), insufficient to overcome the additional noise from δD source-signature uncertainty. This demonstrates that the hemispheric framework is essential: δD's value arises specifically from its hemispheric discriminating power.
+
+This one-box failure provides an important methodological insight. In a one-box framework, adding δD introduces one additional equation but also one additional unknown source-signature parameter set (three δD signatures with their uncertainties). The net information gain—measured by ΔDFS = 0.69—is insufficient because the δD source-signature matrix at the global level is poorly conditioned: the condition number κ of the combined [δ¹³C; δD] source-signature matrix is 14.3 in the one-box case versus 6.7 in the two-box case. The hemispheric decomposition reduces κ by exploiting the large NH-SH δD gradients (Table 1), which act as a de facto additional constraint axis. This analysis resolves the apparent paradox that adding more data (δD) can worsen the solution: the benefit of additional observations must exceed the cost of additional parameter uncertainty.
 
 ### 3.2 δD source signatures have larger hemispheric gradients than δ¹³C
 
@@ -170,6 +172,8 @@ Figure 2 shows the core result: the relationship between microbial δD source-si
 At low uncertainty (σ ≤ 2× baseline ≈ 16.5‰), the dual-isotope CI is essentially constant at 63–65 Tg yr⁻¹, indicating that the system is limited by δ¹³C uncertainties rather than δD. Between 2× and 5× (16.5–41.2‰), the CI increases steeply as δD noise begins to contaminate the solution. At 4.53× (σ = 37.4‰), the dual-isotope CI equals the δ¹³C-only reference: this is the **crossover threshold**. Beyond 5×, δD actively degrades the solution.
 
 The threshold is remarkably sharp. A 10% improvement floor is crossed at σ = 33.8‰ (4.09×), meaning that δD provides ≥10% improvement only when σ(Mic δD) < 34‰. The saturation regime (where adding more δD precision yields no further improvement) begins at σ ≈ 16‰ (2×).
+
+We also test the effect of inflating ALL δD source-signature uncertainties simultaneously (FF, BB, and Mic), rather than Mic alone. The threshold shifts only modestly from 4.53× to ~4.1× (σ ≈ 34‰), confirming that microbial δD uncertainty dominates the total error budget. This is expected because microbial emissions constitute ~60% of total CH₄ and span the largest hemispheric δD gradient (13‰). FF and BB δD uncertainties contribute <15% of the total posterior variance at the baseline multiplier.
 
 ### 3.4 Reproducing the Thanwerdas et al. (2024) result
 
@@ -228,7 +232,7 @@ This suggests that future 3-D inverse modeling studies incorporating δD-CH₄ s
 
 The failure of the one-box dual-isotope model and success of the two-box model reveals a fundamental insight: **δD's primary value lies in hemispheric discrimination, not global source separation.**
 
-At the global level, the three source categories occupy distinct but overlapping regions in δ¹³C-δD space. The condition number of the global source-signature matrix is high (poorly conditioned), meaning that small observational errors propagate into large emission uncertainties—hence the one-box failure. However, when the problem is decomposed into hemispheres, δD provides *additional spatial information* that δ¹³C cannot. The δD NH-SH gradient for biomass burning (24‰) is an order of magnitude larger than the δ¹³C gradient (1.9‰), effectively creating a new axis of discrimination.
+At the global level, the three source categories occupy distinct but overlapping regions in δ¹³C-δD space. The condition number of the global source-signature matrix is high (poorly conditioned), (κ = 14.3), meaning that small observational errors propagate into large emission uncertainties—hence the one-box failure. In the two-box decomposition, the per-hemisphere condition number drops to κ = 6.7, a 53% reduction that directly translates to improved inversion stability. However, when the problem is decomposed into hemispheres, δD provides *additional spatial information* that δ¹³C cannot. The δD NH-SH gradient for biomass burning (24‰) is an order of magnitude larger than the δ¹³C gradient (1.9‰), effectively creating a new axis of discrimination.
 
 This mechanism aligns with the analysis of Naus et al. (35), who showed that two-box models can extract meaningful constraints from hemispheric gradients despite simplifying assumptions about interhemispheric mixing. It also suggests that three-box (NHext/Trop/SHext) or higher-resolution models may extract even more value from δD, as tropical versus extratropical δD contrasts are particularly large.
 
@@ -377,6 +381,8 @@ Model code, analysis scripts, and figure-generation code are available at https:
 
 
 37. Still, C.J., et al. (2003). Global distribution of C3 and C4 vegetation. *Global Biogeochem. Cycles*, 17(1), 6-1–6-14.
+
+38. Patra, P.K., et al. (2011). TransCom model simulations of CH₄ and related species: linking transport, surface flux and chemical loss with CH₄ variability in the troposphere and lower stratosphere. *Atmos. Chem. Phys.*, 11, 12813–12837.
 
 ---
 
