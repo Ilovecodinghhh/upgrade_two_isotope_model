@@ -1,0 +1,161 @@
+{
+  "model_version": "v4_phaseAD",
+  "changes": [
+    "Phase A.1: Observed IH gradient (NOAA MBL reference)",
+    "Phase A.2: Uncertainty-based W matrix (\u03c3_mass=0.05, \u03c3_d13C=2\u2030, \u03c3_dD=15\u2030)",
+    "Phase A.3: Last 1 year(s) trimmed from trend analysis",
+    "Phase B: Posterior predictive checks + \u03b4D consistency",
+    "Phase C: Fisher information analysis with uncertainty-based scaling"
+  ],
+  "config": {
+    "n_iterations": 1000,
+    "trend_start": 2007,
+    "trend_end_trim": 1,
+    "seed": 42,
+    "kie_mode": "sampled",
+    "lifetime_mode": "varying"
+  },
+  "trends": [
+    {
+      "label": "2box_NH_FF",
+      "slope_median": -3.8450914636899576,
+      "slope_p5": -6.495281330250042,
+      "slope_p95": -1.548694410159996,
+      "p_positive": 0.5,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_SH_FF",
+      "slope_median": 1.312457803347364,
+      "slope_p5": 0.07058773089432328,
+      "slope_p95": 2.8343679420522014,
+      "p_positive": 95.6,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_Global_FF",
+      "slope_median": -2.4890039430788775,
+      "slope_p5": -5.129945374893292,
+      "slope_p95": -0.05191419479648789,
+      "p_positive": 4.7,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_NH_Mic",
+      "slope_median": 6.563765984648983,
+      "slope_p5": 5.13861991842361,
+      "slope_p95": 8.129637316999979,
+      "p_positive": 100.0,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_SH_Mic",
+      "slope_median": -1.0713319015935128,
+      "slope_p5": -2.42184228429112,
+      "slope_p95": 0.21241091056123615,
+      "p_positive": 8.4,
+      "significant_90": false,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_Global_Mic",
+      "slope_median": 5.566836053646377,
+      "slope_p5": 3.850014823658246,
+      "slope_p95": 7.200048595699018,
+      "p_positive": 100.0,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_NH_BB",
+      "slope_median": 2.2633265855917672,
+      "slope_p5": 0.33529440471646854,
+      "slope_p95": 3.99583325759257,
+      "p_positive": 97.8,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "2box_Global_BB",
+      "slope_median": 2.2267600770256255,
+      "slope_p5": 0.31964754623011604,
+      "slope_p95": 3.959303999150102,
+      "p_positive": 97.8,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "1box_FF",
+      "slope_median": -1.8197918221138494,
+      "slope_p5": -4.0710451539046595,
+      "slope_p95": 0.03452627570302151,
+      "p_positive": 6.9,
+      "significant_90": false,
+      "n_valid": 1000
+    },
+    {
+      "label": "1box_Mic",
+      "slope_median": 5.4772692826464215,
+      "slope_p5": 4.1425993312311284,
+      "slope_p95": 6.758072201507632,
+      "p_positive": 100.0,
+      "significant_90": true,
+      "n_valid": 1000
+    },
+    {
+      "label": "1box_BB",
+      "slope_median": 1.5379958481093294,
+      "slope_p5": 0.39507967588986603,
+      "slope_p95": 2.7345759851113285,
+      "p_positive": 98.6,
+      "significant_90": true,
+      "n_valid": 1000
+    }
+  ],
+  "aliasing": {
+    "NH_FF_slope_median": -3.8450914636899576,
+    "SH_FF_slope_median": 1.312457803347364,
+    "Global_FF_2box_slope_median": -2.4890039430788775,
+    "Global_FF_1box_slope_median": -1.8197918221138494,
+    "NH_FF_pct_positive": 0.5,
+    "aliasing_bias": -0.6692121209650281,
+    "aliasing_detected": false
+  },
+  "validation": {
+    "validation": {
+      "total_source_range": [
+        548.1612836841991,
+        654.5966247805538
+      ],
+      "ff_2010": 115.02916371642699,
+      "nh_ff_share": 72.21331856781508,
+      "ff_fraction": 19.93862015143015,
+      "mic_fraction": 70.5085466629767,
+      "bb_fraction": 9.297227578381412,
+      "cv_ff": 0.4274144864990274,
+      "cv_mic": 0.0718169013912227,
+      "bb_bound_pct": 8.31304347826087,
+      "dD_contribution_pct": 33.299559889240655,
+      "mean_condition_number": 15.386903301061713
+    },
+    "dD_gradient": {
+      "observed": -14.523919802135364
+    }
+  },
+  "information": {
+    "cond_global": 16.672706636896137,
+    "cond_nh": 15.280926883264875,
+    "cond_sh": 14.943980438245458,
+    "fisher_global": 3792256.4105593646,
+    "fisher_nh": 3446459.0551362517,
+    "fisher_sh": 4058826.8992294814,
+    "info_gain": 3490850.3200676404,
+    "sep_d13C_ff_bb": 19.200741410066776,
+    "sep_dD_ff_bb": 31.03175329271039
+  },
+  "runtime_seconds": 154.04343223571777
+}
