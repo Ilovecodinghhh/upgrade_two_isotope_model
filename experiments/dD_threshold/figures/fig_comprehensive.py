@@ -53,9 +53,15 @@ def main():
     # Load hemispheric source summary
     src_summary = pd.read_csv(REPO_ROOT / "rel" / "data" / "Hemispheric_dD_sources_summary.csv")
 
-    # ── Figure setup: 3 rows × 2 cols ──
-    fig, axes = plt.subplots(3, 2, figsize=(11, 12), dpi=150)
-    plt.rcParams.update({'font.size': 9})
+    # ── Figure setup: 3 rows × 2 cols (180mm × 220mm, Nature full-page) ──
+    plt.rcParams.update({
+        'font.size': 9,
+        'font.family': 'sans-serif',
+        'axes.linewidth': 0.8,
+        'xtick.major.width': 0.6,
+        'ytick.major.width': 0.6,
+    })
+    fig, axes = plt.subplots(3, 2, figsize=(180/25.4, 220/25.4), dpi=300)
 
     c_blue = '#2171b5'
     c_red = '#e34a33'
@@ -127,6 +133,16 @@ def main():
 
     ax.text(12, 38, 'δD helps', fontsize=8, color=c_green, ha='center', fontstyle='italic')
     ax.text(80, -80, 'δD hurts', fontsize=8, color=c_red, ha='center', fontstyle='italic')
+
+    # Thanwerdas reference line
+    ax.axvline(15.6 * 8.25, color=c_red, lw=1.5, ls='--', alpha=0.5)
+    ax.text(15.6 * 8.25 + 3, -150, 'T24', fontsize=7, color=c_red, rotation=90, va='bottom')
+
+    # Current precision annotation
+    ax.annotate('Current\nprecision', xy=(8.25, improve_vals[1] if len(improve_vals) > 1 else 50),
+                xytext=(25, 55), fontsize=7, ha='center', color=c_blue,
+                arrowprops=dict(arrowstyle='->', color=c_blue, lw=0.8))
+
     ax.annotate(f'Threshold\n~{thresh_sigma:.0f}‰', xy=(thresh_sigma, 0),
                 xytext=(thresh_sigma + 20, 25),
                 fontsize=7.5, ha='center', color=c_red,
