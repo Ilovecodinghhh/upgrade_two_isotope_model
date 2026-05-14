@@ -59,6 +59,22 @@ Key results:
 
 ---
 
+## Code Quality (2026-05-14 Refactoring)
+
+### Completed
+- [x] **Extracted `analysis/core.py`** — shared 2-box model runner (254 lines), eliminating ~686 lines of duplicated code across phase1/3/5/6
+- [x] **Refactored all phase scripts** to import from `core.py` instead of inline runners
+- [x] **Fixed phase5 stale reference bug** — `d13C_ref` was hardcoded at 101.3 (from v1–v3); now computed dynamically
+- [x] **Updated fig_comprehensive.py Panel F** — now includes v5 (+ Luo 2024 C4), 5 versions instead of 4
+- [x] **Added `analysis/validate.py`** — smoke test verifying dual CI < d13C_only CI, values finite/positive
+- [x] **Removed dead `year_idx` parameter** from `inflate_dD_uncertainty` (was accepted but never used in phase3)
+
+### Remaining minor
+- [ ] `ci_width` and `ci_width_hemi` in core.py are functionally identical — could merge
+- [ ] MC iteration counts differ across phases (1000/500/300/500) — by design for speed, but could standardize
+
+---
+
 ## Open Questions / Remaining Work
 
 ### High Priority (for publication)
@@ -66,6 +82,7 @@ Key results:
 - [x] **Re-run Phase 6 deep dive with v5 data**: Exact crossover at 4.53× (σ=37.4‰), 10% threshold at 4.09× (σ=33.8‰). Bootstrap: 51.2±1.3%, P(>0)=100%, P(>30%)=100%
 - [x] **Update figures**: `fig_comprehensive.py` re-run with Phase 6 fine-grid data, v4 version comparison, exact crossover annotation
 - [x] **Paper Table 1**: Updated in RESULT.md with all v4 Phase 6 numbers
+- [x] **Code refactoring**: Deduplicated 2-box runner into shared core.py module
 
 ### Model extensions
 
@@ -95,6 +112,9 @@ cd upgrade_two_isotope_model
 # Build hemispheric source signatures (if data changes):
 python3 rel/build_hemispheric_dD_sources.py    # ~5 min
 python3 rel/build_hemispheric_d13C_sources.py  # ~15 min
+
+# Validate shared core module:
+python3 experiments/dD_threshold/analysis/validate.py  # ~20 sec, should print PASS
 
 # Core phases:
 python3 experiments/dD_threshold/analysis/phase1_baseline.py     # ~3 min

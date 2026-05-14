@@ -188,6 +188,8 @@ The ~53% improvement with current δD precision (σ ≈ 8‰) resolves the liter
 ```
 experiments/dD_threshold/
 ├── analysis/
+│   ├── core.py                  # Shared 2-box model runner (all phases import from here)
+│   ├── validate.py              # Smoke test: verifies core.py produces valid results
 │   ├── phase1_baseline.py
 │   ├── phase2_dfs.py
 │   ├── phase3_threshold.py
@@ -195,7 +197,7 @@ experiments/dD_threshold/
 │   ├── phase5_sensitivity.py
 │   └── phase6_deep_dive.py
 ├── figures/
-│   ├── fig_comprehensive.py
+│   ├── fig_comprehensive.py     # 6-panel figure (Panel F includes v1–v5)
 │   ├── fig_threshold.py
 │   ├── fig_comprehensive_6panel.{png,pdf}
 │   ├── fig_comprehensive_4panel.{png,pdf}
@@ -208,8 +210,19 @@ experiments/dD_threshold/
 │   ├── phase5_sensitivity/
 │   └── phase6_deep_dive/
 ├── plan.md
-└── RESULT.md
+├── RESULT.md
+└── draft_v1.md
 ```
+
+### Code Architecture (refactored 2026-05-14)
+
+All phase scripts share a single 2-box model runner via `analysis/core.py`:
+- `run_twobox(data, multiplier, n_iter, seed, mode, kie_mode, lifetime_mode, ...)` — unified runner
+- `inflate_dD_uncertainty(sigs, rng, multiplier)` — δD inflation helper
+- `ci_width(arr, start_idx)` / `ci_width_hemi(arr, start_idx)` — CI width calculators
+- Constants: `W_NH`, `W_SH`, `DEFAULT_N_ITER`, `DEFAULT_SEED`
+
+Phase scripts are thin wrappers that call `core.run_twobox()` with phase-specific parameters.
 
 ---
 

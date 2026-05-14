@@ -292,7 +292,7 @@ All atmospheric observations, source-signature datasets, and model code are avai
 
 ### Code Availability
 
-Model code, analysis scripts, and figure-generation code are available at https://github.com/Ilovecodinghhh/upgrade_two_isotope_model.
+Model code, analysis scripts, and figure-generation code are available at https://github.com/Ilovecodinghhh/upgrade_two_isotope_model. The shared two-box model runner (`experiments/dD_threshold/analysis/core.py`) provides the unified Monte Carlo engine used by all analysis phases. A validation script (`validate.py`) verifies reproducibility of core results.
 
 ---
 
