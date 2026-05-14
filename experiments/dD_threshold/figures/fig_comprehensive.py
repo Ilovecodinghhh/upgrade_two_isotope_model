@@ -233,11 +233,11 @@ def main():
     # ═══ Panel F: Version comparison (v1–v4) ═══
     ax = axes[2, 1]
 
-    versions = ['v1\n(Umezawa/\nglobal)', 'v2\n(Dasgupta/\nglobal)', 'v3\n(+ hemi\nδD src)', 'v4\n(+ hemi\nδ¹³C src)']
-    baseline_ci = [46.6, 37.8, 43.5, 57.6]
-    improvements_v = [52, 60.8, 57.0, 45.1]
+    versions = ['v1\n(Umezawa/\nglobal)', 'v2\n(Dasgupta/\nglobal)', 'v3\n(+ hemi\nδD src)', 'v4\n(+ hemi\nδ¹³C src)', 'v5\n(+ Luo\n2024 C4)']
+    baseline_ci = [46.6, 37.8, 43.5, 57.6, 62.6]
+    improvements_v = [52, 60.8, 57.0, 45.1, 53.0]
 
-    x = np.arange(4)
+    x = np.arange(5)
     # Dual bars: CI width + improvement
     ax2 = ax.twinx()
     bars_ci = ax.bar(x - 0.15, baseline_ci, 0.3, label='Dual CI width', color=c_blue, alpha=0.8)

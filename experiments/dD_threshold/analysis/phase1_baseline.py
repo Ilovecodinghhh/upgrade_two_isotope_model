@@ -145,191 +145,49 @@ def run_one_box(mode="dual", n_iter=1000, seed=42):
     return years, BB_comp, FF_comp, Mic_comp, SumSource, tau
 
 
+
 def run_two_box(mode="dual", n_iter=1000, seed=42):
-    """Run 2-box (NH/SH) model in 'dual' or 'd13C_only' mode.
+    """Run 2-box (NH/SH) model in 'dual' or 'd13C_only' mode."""
+    from core import run_twobox as _run_twobox
     
-    In d13C_only: solve 2×2 per hemisphere (mass + δ¹³C, BB fixed).
-    In dual: solve 3×3 per hemisphere (mass + δ¹³C + δD, BB free, bounded LS).
-    """
     print(f"\n{'='*60}")
     print(f"TWO-BOX MODEL — mode={mode}, N={n_iter}")
     print(f"{'='*60}")
     
-    cfg = ModelConfig(n_iterations=n_iter, kie_mode="sampled",
-                      lifetime_mode="varying", seed=seed)
     data = load_data(BASE_DIR, two_box=True)
-    n = data.n_years
     years = data.model_years
-    rng = np.random.default_rng(seed)
     
-    CH4_NH, CH4_SH = data.CH4_NH, data.CH4_SH
-    c13_NH, c13_SH = data.c13_NH, data.c13_SH
-    c13_glob = data.c13_global
+    result = _run_twobox(data, 1.0, n_iter, seed, mode=mode)
     
-    tau_global = compute_lifetime(years, cfg.lifetime_mode, cfg.tau_fixed)
+    # Phase1 expects BB always present and S_NH/S_SH in output
+    if 'BB_G' not in result:
+        from common import BB_NH_FRACTION, BB_SH_FRACTION
+        n = data.n_years
+        BB_hemi_NH = data.BB_global_mean * BB_NH_FRACTION
+        BB_hemi_SH = data.BB_global_mean * BB_SH_FRACTION
+        result['BB_NH'] = np.full((n, n_iter), BB_hemi_NH)
+        result['BB_SH'] = np.full((n, n_iter), BB_hemi_SH)
+        result['BB_G'] = result['BB_NH'] + result['BB_SH']
+    
+    # Compute S_NH, S_SH for compatibility (recompute from data)
+    from common import compute_lifetime, LIFETIME_RATIO_NH, LIFETIME_RATIO_SH, PT_HEMI, TAU_EX_MEAN
+    n = data.n_years
+    tau_global = compute_lifetime(years, "varying", 9.0)
     tau_NH = tau_global * LIFETIME_RATIO_NH
     tau_SH = tau_global * LIFETIME_RATIO_SH
-    
-    NI = n_iter
-    FF_NH_comp = np.zeros((n, NI)); Mic_NH_comp = np.zeros((n, NI)); BB_NH_comp = np.zeros((n, NI))
-    FF_SH_comp = np.zeros((n, NI)); Mic_SH_comp = np.zeros((n, NI)); BB_SH_comp = np.zeros((n, NI))
-    
-    # BB split
-    from common import BB_NH_FRACTION, BB_SH_FRACTION
-    BB_hemi_NH = data.BB_global_mean * BB_NH_FRACTION
-    BB_hemi_SH = data.BB_global_mean * BB_SH_FRACTION
-    
-    W_NH = np.diag([100.0, 1.0, 0.5])
-    W_SH = np.diag([200.0, 1.0, 0.5])
-    
-    for k in range(NI):
-        if (k+1) % 200 == 0:
-            print(f"  iter {k+1}/{NI}")
-        
-        tau_ex = max(0.5, rng.normal(TAU_EX_MEAN, TAU_EX_STD))
-        kies = sample_KIE(rng, cfg.kie_mode)
-        K13_NH, KD_NH = compute_bulk_KIE(kies, SINK_FRACTIONS_NH)
-        K13_SH, KD_SH = compute_bulk_KIE(kies, SINK_FRACTIONS_SH)
-        a13_NH = 1.0 / K13_NH; aD_NH = 1.0 / KD_NH
-        a13_SH = 1.0 / K13_SH; aD_SH = 1.0 / KD_SH
-        
-        # Total source per hemisphere
-        S_NH = np.zeros(n); S_SH = np.zeros(n)
-        for i in range(n):
-            M_NH = CH4_NH[i] * PT_HEMI; M_NH1 = CH4_NH[i+1] * PT_HEMI
-            M_SH = CH4_SH[i] * PT_HEMI; M_SH1 = CH4_SH[i+1] * PT_HEMI
-            ex_NH = (M_SH - M_NH) / tau_ex
-            ex_SH = (M_NH - M_SH) / tau_ex
-            S_NH[i] = (M_NH1 - M_NH) + M_NH / tau_NH[i] - ex_NH
-            S_SH[i] = (M_SH1 - M_SH) + M_SH / tau_SH[i] - ex_SH
-        
-        # Atmospheric δ¹³C
-        d13C_glob_MC = sample_atm_d13C(data, k, n)
-        nc = min(len(c13_glob), n+1)
-        d13C_off = d13C_glob_MC[:nc] - c13_glob[:nc]
-        d13C_NH_MC = c13_NH[:nc] + d13C_off
-        d13C_SH_MC = c13_SH[:nc] + d13C_off
-        
-        f13_NH_atm = delta_to_fraction_d13C(d13C_NH_MC)
-        f13_SH_atm = delta_to_fraction_d13C(d13C_SH_MC)
-        
-        # δ¹³C source fractions
-        d13C_src_NH = np.zeros(n); d13C_src_SH = np.zeros(n)
-        for j in range(n):
-            n13_NH = f13_NH_atm[j] * CH4_NH[j] * PT_HEMI
-            n13_NH1 = f13_NH_atm[j+1] * CH4_NH[j+1] * PT_HEMI
-            n13_SH = f13_SH_atm[j] * CH4_SH[j] * PT_HEMI
-            n13_SH1 = f13_SH_atm[j+1] * CH4_SH[j+1] * PT_HEMI
-            ex13_NH = (n13_SH - n13_NH) / tau_ex
-            ex13_SH = (n13_NH - n13_SH) / tau_ex
-            d13C_src_NH[j] = (n13_NH1 - n13_NH + n13_NH * a13_NH / tau_NH[j] - ex13_NH) / S_NH[j]
-            d13C_src_SH[j] = (n13_SH1 - n13_SH + n13_SH * a13_SH / tau_SH[j] - ex13_SH) / S_SH[j]
-        
-        sigs = sample_source_signatures_hemi(rng, data, k, n)
-        f13_bb = delta_to_fraction_d13C(sigs['bb_d13C'])
-        f13_ff = delta_to_fraction_d13C(sigs['ff_d13C'])
-        f13_mic = delta_to_fraction_d13C(sigs['mic_d13C'])
-        # Hemispheric δ¹³C source signatures
-        f13_bb_NH = delta_to_fraction_d13C(sigs['bb_d13C_NH'])
-        f13_ff_NH = delta_to_fraction_d13C(sigs['ff_d13C_NH'])
-        f13_mic_NH = delta_to_fraction_d13C(sigs['mic_d13C_NH'])
-        f13_bb_SH = delta_to_fraction_d13C(sigs['bb_d13C_SH'])
-        f13_ff_SH = delta_to_fraction_d13C(sigs['ff_d13C_SH'])
-        f13_mic_SH = delta_to_fraction_d13C(sigs['mic_d13C_SH'])
-        
-        if mode == "dual":
-            # Also compute δD — use real hemispheric data
-            dD_NH_MC, dD_SH_MC = sample_atm_dD_hemi(data, k, n)
-            fD_NH_atm = delta_to_fraction_dD(dD_NH_MC)
-            fD_SH_atm = delta_to_fraction_dD(dD_SH_MC)
-            
-            dD_src_NH = np.zeros(n); dD_src_SH = np.zeros(n)
-            for j in range(n):
-                nD_NH = fD_NH_atm[j] * CH4_NH[j] * PT_HEMI
-                nD_NH1 = fD_NH_atm[j+1] * CH4_NH[j+1] * PT_HEMI
-                nD_SH = fD_SH_atm[j] * CH4_SH[j] * PT_HEMI
-                nD_SH1 = fD_SH_atm[j+1] * CH4_SH[j+1] * PT_HEMI
-                exD_NH = (nD_SH - nD_NH) / tau_ex
-                exD_SH = (nD_NH - nD_SH) / tau_ex
-                dD_src_NH[j] = (nD_NH1 - nD_NH + nD_NH * aD_NH / tau_NH[j] - exD_NH) / S_NH[j]
-                dD_src_SH[j] = (nD_SH1 - nD_SH + nD_SH * aD_SH / tau_SH[j] - exD_SH) / S_SH[j]
-            
-            # Hemispheric δD source signatures
-            fD_bb_NH = delta_to_fraction_dD(sigs['bb_dD_NH'])
-            fD_ff_NH = delta_to_fraction_dD(sigs['ff_dD_NH'])
-            fD_mic_NH = delta_to_fraction_dD(sigs['mic_dD_NH'])
-            fD_bb_SH = delta_to_fraction_dD(sigs['bb_dD_SH'])
-            fD_ff_SH = delta_to_fraction_dD(sigs['ff_dD_SH'])
-            fD_mic_SH = delta_to_fraction_dD(sigs['mic_dD_SH'])
-            
-            for j in range(n):
-                # NH
-                A_nh = np.array([
-                    [1.0, 1.0, 1.0],
-                    [f13_bb_NH[j], f13_ff_NH[j], f13_mic_NH[j]],
-                    [fD_bb_NH[j], fD_ff_NH[j], fD_mic_NH[j]],
-                ])
-                B_nh = np.array([S_NH[j], S_NH[j]*d13C_src_NH[j], S_NH[j]*dD_src_NH[j]])
-                A_w = W_NH @ A_nh; B_w = W_NH @ B_nh
-                try:
-                    res = lsq_linear(A_w, B_w, bounds=(0, S_NH[j]*1.5))
-                    x = res.x
-                except:
-                    x = np.array([np.nan, np.nan, np.nan])
-                BB_NH_comp[j,k] = x[0]; FF_NH_comp[j,k] = x[1]; Mic_NH_comp[j,k] = x[2]
-                
-                # SH
-                A_sh = np.array([
-                    [1.0, 1.0, 1.0],
-                    [f13_bb_SH[j], f13_ff_SH[j], f13_mic_SH[j]],
-                    [fD_bb_SH[j], fD_ff_SH[j], fD_mic_SH[j]],
-                ])
-                B_sh = np.array([S_SH[j], S_SH[j]*d13C_src_SH[j], S_SH[j]*dD_src_SH[j]])
-                A_w = W_SH @ A_sh; B_w = W_SH @ B_sh
-                try:
-                    res = lsq_linear(A_w, B_w, bounds=(0, S_SH[j]*1.5))
-                    x = res.x
-                except:
-                    x = np.array([np.nan, np.nan, np.nan])
-                BB_SH_comp[j,k] = x[0]; FF_SH_comp[j,k] = x[1]; Mic_SH_comp[j,k] = x[2]
-        
-        else:  # d13C_only — 2×2 per hemisphere with BB fixed
-            for j in range(n):
-                # NH
-                S_rem_nh = S_NH[j] - BB_hemi_NH
-                rhs_nh = S_NH[j] * d13C_src_NH[j] - BB_hemi_NH * f13_bb_NH[j]
-                denom_nh = f13_ff_NH[j] - f13_mic_NH[j]
-                if abs(denom_nh) > 1e-15:
-                    FF_val = (rhs_nh - S_rem_nh * f13_mic_NH[j]) / denom_nh
-                    Mic_val = S_rem_nh - FF_val
-                else:
-                    FF_val = np.nan; Mic_val = np.nan
-                BB_NH_comp[j,k] = BB_hemi_NH; FF_NH_comp[j,k] = FF_val; Mic_NH_comp[j,k] = Mic_val
-                
-                # SH
-                S_rem_sh = S_SH[j] - BB_hemi_SH
-                rhs_sh = S_SH[j] * d13C_src_SH[j] - BB_hemi_SH * f13_bb_SH[j]
-                denom_sh = f13_ff_SH[j] - f13_mic_SH[j]
-                if abs(denom_sh) > 1e-15:
-                    FF_val = (rhs_sh - S_rem_sh * f13_mic_SH[j]) / denom_sh
-                    Mic_val = S_rem_sh - FF_val
-                else:
-                    FF_val = np.nan; Mic_val = np.nan
-                BB_SH_comp[j,k] = BB_hemi_SH; FF_SH_comp[j,k] = FF_val; Mic_SH_comp[j,k] = Mic_val
+    CH4_NH, CH4_SH = data.CH4_NH, data.CH4_SH
+    S_NH = np.zeros(n); S_SH = np.zeros(n)
+    for i in range(n):
+        M_NH = CH4_NH[i]*PT_HEMI; M_NH1 = CH4_NH[i+1]*PT_HEMI
+        M_SH = CH4_SH[i]*PT_HEMI; M_SH1 = CH4_SH[i+1]*PT_HEMI
+        ex_NH = (M_SH-M_NH)/TAU_EX_MEAN; ex_SH = (M_NH-M_SH)/TAU_EX_MEAN
+        S_NH[i] = (M_NH1-M_NH) + M_NH/tau_NH[i] - ex_NH
+        S_SH[i] = (M_SH1-M_SH) + M_SH/tau_SH[i] - ex_SH
+    result['S_NH'] = S_NH
+    result['S_SH'] = S_SH
     
     print("  Done!")
-    # Global = NH + SH
-    FF_G = FF_NH_comp + FF_SH_comp
-    Mic_G = Mic_NH_comp + Mic_SH_comp
-    BB_G = BB_NH_comp + BB_SH_comp
-    
-    return years, {
-        'FF_NH': FF_NH_comp, 'Mic_NH': Mic_NH_comp, 'BB_NH': BB_NH_comp,
-        'FF_SH': FF_SH_comp, 'Mic_SH': Mic_SH_comp, 'BB_SH': BB_SH_comp,
-        'FF_G': FF_G, 'Mic_G': Mic_G, 'BB_G': BB_G,
-        'S_NH': S_NH, 'S_SH': S_SH,
-    }
-
+    return years, result
 
 def main():
     N = 1000
