@@ -97,3 +97,34 @@ The WLS-related phases (2, 3, 4b, 5) show quantitative differences from RESULTS.
 **Most likely cause:** The `sample_source_signatures()` function or δD MC data loading in `common.py` may have been updated after RESULTS.md was written, changing the MC draws for the WLS solver (which is highly sensitive to source-signature perturbations). Phases 6–9 (agreement filter) are unaffected because they solve isotopes independently.
 
 **Recommendation:** Update RESULTS.md Phases 2–5 numbers with the new rerun values. The story doesn't change — WLS fails regardless.
+
+---
+
+## ⚠️ RETRACTED: N=1000 vs N=5000 KSR Comparison Figures (removed in commit following ee37b69)
+
+The following figures were generated on 2026-05-16 and **immediately retracted** because they contained a methodological error:
+
+- `fig13_N1000_vs_N5000.png`
+- `fig13_fine_threshold_N5000.png`
+- `fig14_temporal_stability_N5000.png`
+- `figM6_KSR_N1000_vs_N5000.png`
+- `results/phase8_fine_thresholds/summary_N5000.json`
+
+### What went wrong
+
+Phase 8 was re-run with N=5000 iterations but the **baseline spread** (numerator of KSR) remained hardcoded at 1.9823 from the original Phase 1 N=1000 run. The filtered spread (denominator) was computed from the N=5000 run. This numerator/denominator mismatch made KSR drop below 1.0 at most thresholds, which was **an artifact**, not a real finding.
+
+### Correct behavior
+
+When baseline and filtered spreads are computed from the **same N** (as Phase 6b does at N=1000 and Phase 9 does at N=5000), KSR is always ≥ 1 because filtering always shrinks the spread at least slightly. The real N-dependence is:
+
+| N | KSR at T=90 | Baseline spread | Filtered spread |
+|---|------------|----------------|----------------|
+| 1,000 (Phase 8) | ~2.6 | 1.98 | 0.76 |
+| 5,000 (Phase 9) | ~1.12 | 2.33 | 2.08 |
+
+Both are legitimate — but the N=1000 KSR is inflated by small-sample noise in the filtered mean trends (few surviving Saueressig iterations). The N=5000 KSR of 1.12 is more reliable but modest.
+
+### Lesson
+
+**KSR is sensitive to sample size and baseline definition.** The discriminant (35.5 pp at T=90) is the robust metric — stable across N, thresholds, and time periods.
