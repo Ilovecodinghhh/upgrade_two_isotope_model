@@ -1,275 +1,248 @@
-# importance-KIE: Relative Importance of OH-¹³C vs OH-D KIE in One-Box Methane Source Partitioning
+# importance-KIE: Relative Importance of OH-¹³C vs OH-D KIE in One-Box Dual-Isotope Source Partitioning
 
 ## 1. Introduction
 
-The kinetic isotope effect (KIE) for the OH sink is the most contested parameter in methane isotope inversions. For ¹³C, two laboratory values — Saueressig et al. (2001) at 1.0039 and Cantrell et al. (1990) at 1.0054 — bracket a range that determines whether post-2007 fossil fuel emissions are rising or falling. For D/H, three measurements cluster at 1.29–1.31, a much smaller relative spread.
+The hydroxyl radical (OH) is the dominant CH₄ sink (~84% of total loss), and the kinetic isotope effects (KIE) for the CH₄ + OH reaction — separately for ¹³C/¹²C and D/H — are critical but contested parameters. In the ¹³C system, two laboratory values bracket a range that has dominated the methane budget debate for two decades. In the D/H system, three measurements cluster within ~1.5% relative spread.
 
-This report analyzes the **relative sensitivity** of a one-box (and two-box) methane source inversion to the OH-¹³C and OH-D KIE uncertainties, comparing these against other sources of noise in the system: source signature uncertainty, atmospheric observation uncertainty, and lifetime uncertainty. Evidence is drawn from the repository's experiment results (`experiments/KIE_immunity/`, `experiments/dD_threshold/`, `experiments/KIE_sensitivity/`) and cross-referenced with literature in `ImportantReferences/`.
+**This report quantifies how OH-¹³C and OH-D KIE uncertainties actually propagate into fossil-fuel (FF) emission estimates** using a newly conducted one-box dual-isotope (3×3) experiment with 7000 Monte Carlo inversions.
 
----
-
-## 2. The OH-¹³C KIE Controversy
-
-### 2.1 The Two Competing Values
-
-| Study | KIE^C_OH | ε_OH (‰) | Repository source |
-|-------|:--------:|:---------:|-------------------|
-| Saueressig et al. (2001) | 1.0039 | 3.9 | `common.py` line 104; `Thanwerdas2024ACP` |
-| Cantrell et al. (1990) | 1.0054 | 5.4 | `common.py` line 104; `Fujita2025JGR_SI` Table S4 footnote f |
-
-The difference **Δε = 1.5‰** may appear small, but it is large relative to the atmospheric signal. The total δ¹³C shift from source composition to atmospheric composition is only ~6‰ (sources ~−53.6‰, atmosphere ~−47.3‰; see `rel/data/d13C_dei_compiled.txt`). A 1.5‰ uncertainty in the sink fractionation represents **25% of the total source-to-atmosphere fractionation shift**.
-
-### 2.2 Impact on Source Partitioning
-
-From `experiments/KIE_immunity/` (phase results in JSON files, verified in `REVISION_RESPONSE.md`):
-
-- **Saueressig KIE → FF trend = +2.9 Tg yr⁻¹** (rising fossil fuel emissions)
-- **Cantrell KIE → FF trend = −5.6 Tg yr⁻¹** (declining fossil fuel emissions)
-
-The KIE choice **determines the sign** of the inferred FF emission trend. This is the single most consequential parameter uncertainty in the δ¹³C-based methane budget.
-
-### 2.3 Thanwerdas et al. (2024) Perspective
-
-From `Thanwerdas2024ACP` (line ~65):
-
-> "Saueressig et al. (2001) indicate that their data is of considerably higher experimental precision... we prefer to allocate computational time to a sensitivity inversion testing a different OH field rather than testing a different OH fractionation coefficient."
-
-This pragmatic choice reveals a key tension: while the measurement precision argument favors Saueressig, the community remains divided.
+Key finding: **OH-D KIE dominates the FF uncertainty spread (28% of variance), while OH-¹³C KIE controls the FF level (17 Tg/yr shift) but not the spread (<1% of variance).**
 
 ---
 
-## 3. The OH-D KIE: A Narrower Uncertainty
+## 2. The OH KIE Parameters
 
-### 3.1 Experimental Range
+### 2.1 OH-¹³C KIE: The Saueressig–Cantrell Controversy
 
-Three consistent measurements: Gierczak (1.292), Saueressig (1.294), Joelsson (1.311). See `KIE-D-OH.md` for full details.
+| Study | KIE^C_OH | ε_OH = (α−1)×1000 |
+|-------|:--------:|:------------------:|
+| Saueressig et al. (2001) | **1.0039** | 3.9‰ |
+| Cantrell et al. (1990) | **1.0054** | 5.4‰ |
 
-- **Range: 1.292–1.311 → Δ(KIE^D_OH) = 0.019**
-- **Relative range: 0.019 / 1.30 = 1.5%**
+**Δε = 1.5‰** — a 38% relative difference in fractionation factor.
 
-For comparison, OH-¹³C:
-- **Range: 1.0039–1.0054 → Δ(KIE^C_OH) = 0.0015**
-- **Relative range: 0.0015 / 1.0047 = 0.15%** in α, but **Δε / ε_mean = 1.5 / 4.65 = 32%** in the fractionation factor
+This repository samples OH-¹³C as U(1.0039, 1.0054) (`common.py` line 104).
 
-### 3.2 Why the OH-D Range Matters Less
+### 2.2 OH-D KIE: Tighter Constraint, Larger Absolute Fractionation
 
-The D/H system has a fundamentally different error budget geometry than ¹³C:
+| Study | KIE^D_OH |
+|-------|:--------:|
+| Gierczak et al. (1997) | **1.292** |
+| Saueressig et al. (2001) | **1.294** |
+| Joelsson et al. (2016) | **1.311** |
 
-1. **Larger absolute fractionation**: ε^D_OH ≈ 294‰ vs ε^C_OH ≈ 4.65‰. The uncertainty of ±19‰ (from the KIE range) is only **6.5%** of the fractionation factor.
+This repository samples OH-D as U(1.294, 1.327) (`common.py` line 105).
 
-2. **Source-to-atmosphere shift dwarfs KIE uncertainty**: The δD shift from source (~−310‰ for microbial) to atmosphere (~−80‰) is ~230‰. The KIE^D_OH uncertainty of ±19‰ is ~8% of this budget.
-
-3. **Source signature spread dominates**: Microbial δD ≈ −310‰, fossil δD ≈ −190‰, BB δD ≈ −220‰. The source-to-source spread (~120‰) easily absorbs KIE perturbations.
-
-In contrast, for ¹³C: microbial δ¹³C ≈ −60‰, fossil δ¹³C ≈ −44‰, BB δ¹³C ≈ −25‰. The KIE uncertainty of 1.5‰ is a substantial fraction of the ~16‰ FF-Mic separation.
+The absolute fractionation is ~60× larger for D (ε_D ≈ 300‰ vs ε_C ≈ 5‰), meaning OH-D has far more leverage on the δD mass balance.
 
 ---
 
-## 4. Quantitative Noise Comparison from Repository Data
+## 3. Experiment Design
 
-### 4.1 Atmospheric Observation Uncertainty
+**Location:** `experiments/OH_KIE_importance/`
+
+We ran the one-box 3×3 dual-isotope model (`3x3_one.py` architecture) under **7 KIE configurations**, each with 1000 MC iterations, time-varying lifetime, and identical random seeds:
+
+| Config | OH-¹³C | OH-D | Other KIE | Purpose |
+|--------|:------:|:----:|:---------:|---------|
+| ALL_SAMPLED | sampled | sampled | sampled | Baseline |
+| FIX_OH13C | **fixed** (1.00465) | sampled | sampled | Remove OH-¹³C uncertainty |
+| FIX_OHD | sampled | **fixed** (1.3105) | sampled | Remove OH-D uncertainty |
+| FIX_BOTH_OH | **fixed** | **fixed** | sampled | Remove all OH uncertainty |
+| ALL_KIE_FIXED | **fixed** | **fixed** | **fixed** | Remove all KIE uncertainty |
+| OH13C_SAUERESSIG | **fixed** (1.0039) | sampled | sampled | Saueressig endpoint |
+| OH13C_CANTRELL | **fixed** (1.0054) | sampled | sampled | Cantrell endpoint |
+
+All configs sample source signatures and atmospheric observations identically. Differences in σ(FF) are attributable solely to the KIE treatment.
+
+---
+
+## 4. Results
+
+### 4.1 Summary Table
+
+| Config | σ(FF) [Tg/yr] | Mean FF [Tg/yr] | ΔFF trend [Tg/yr] | Nonphysical % |
+|--------|:--------------:|:----------------:|:------------------:|:-------------:|
+| ALL_SAMPLED | **61.9** | 46.3 | +1.9 ± 14.8 | 25.6% |
+| FIX_OH13C | 62.0 | 45.8 | +1.9 ± 14.9 | 25.5% |
+| FIX_OHD | **52.4** | 44.9 | +1.8 ± 14.6 | 23.6% |
+| FIX_BOTH_OH | 53.0 | 45.5 | +1.8 ± 14.6 | 22.9% |
+| ALL_KIE_FIXED | **52.1** | 45.4 | +1.8 ± 14.6 | 22.9% |
+| OH13C_SAUERESSIG | 62.0 | **37.1** | +1.2 ± 14.9 | 28.8% |
+| OH13C_CANTRELL | 62.1 | **54.4** | +2.5 ± 14.9 | 23.4% |
+
+*Source: `experiments/OH_KIE_importance/results/summary.json`*
+
+### 4.2 Variance Attribution
+
+Using the σ² reduction method (baseline variance minus config variance, divided by baseline):
+
+| Component | σ² reduction | % of baseline σ² |
+|-----------|:------------:|:-----------------:|
+| **OH-D KIE** | **1087** | **28.4%** |
+| OH-¹³C KIE | −16 | **< 1%** (noise) |
+| Both OH combined | 1027 | 26.8% |
+| All 8 KIE parameters | 1113 | **29.0%** |
+| Non-OH KIE (Cl, Strat, Soil) | 86 | 2.2% |
+| Source signatures + data noise | 2719 | **71.0%** |
+
+**OH-D alone accounts for 28.4% of FF variance** — nearly all of the KIE-attributable uncertainty. OH-¹³C contributes effectively nothing to the spread.
+
+![Variance attribution bar chart](figures/fig1_variance_attribution.png)
+*Figure 1: σ(FF) under each KIE configuration. Fixing OH-D reduces σ by 9.5 Tg/yr (61.9 → 52.4). Fixing OH-¹³C changes nothing.*
+
+### 4.3 OH-¹³C: Level Shift, Not Spread
+
+While OH-¹³C doesn't affect the *uncertainty*, it controls the *level*:
+
+| OH-¹³C value | Mean FF [Tg/yr] |
+|:------------:|:----------------:|
+| Saueressig (1.0039) | **37.1** |
+| Midpoint (1.00465) | 45.8 |
+| Cantrell (1.0054) | **54.4** |
+
+**ΔFF = 17.3 Tg/yr** between the two endpoints — a systematic shift without changing the spread.
+
+This occurs because in the 3×3 system, the ¹³C row determines the *position* of the FF–Mic partition (more fractionation → more apparent fossil contribution), while the D row provides the *constraint power* that resolves the three-source system.
+
+![OH-13C level shift](figures/fig2_oh13c_level_shift.png)
+*Figure 2: (a) FF time series under Saueressig vs Cantrell KIE — parallel tracks separated by ~17 Tg/yr with identical spread. (b) Mean FF ± σ for the three OH-¹³C values.*
+
+### 4.4 Variance Decomposition Pie Chart
+
+![Variance decomposition](figures/fig3_variance_decomposition.png)
+*Figure 3: (a) Pie chart of σ²(FF) attribution. OH-D dominates the KIE contribution. Source signatures and data noise account for 71%. (b) Cumulative σ reduction by progressively fixing KIE parameters.*
+
+### 4.5 FF Time Series Comparison
+
+![FF time series comparison](figures/fig4_ff_timeseries_comparison.png)
+*Figure 4: FF emissions (smoothed, ±1σ bands) under four configurations. The orange band (fix OH-D) is visibly narrower than the blue baseline. Fixing additional KIE parameters beyond OH-D gives minimal further reduction.*
+
+---
+
+## 5. Why OH-D Dominates in the One-Box 3×3
+
+### 5.1 The Condition Number Argument
+
+The 3×3 system solves:
+
+```
+[ 1         1         1      ] [BB ]   [S_total          ]
+[ f13_BB    f13_FF    f13_Mic] [FF ] = [S_total × f13_src]
+[ fD_BB     fD_FF     fD_Mic ] [Mic]   [S_total × fD_src ]
+```
+
+The δD row entries (fD) are ~100× smaller in absolute scale than the mass balance row, making the matrix ill-conditioned (mean κ ≈ 10⁴–10⁵ from `3x3_one.py` quality monitor). Because the D row is the *weakest constraint*, any perturbation to the D-system KIE (which changes fD_src) directly destabilizes the solution. OH-D KIE uncertainty thus propagates as *spread*.
+
+In contrast, OH-¹³C KIE perturbs the ¹³C row, which is intermediate in scale between mass balance and D. This row is better conditioned, so KIE perturbations shift the entire solution (level) without inflating the spread.
+
+### 5.2 Fractionation Budget Comparison
+
+| System | Source-to-atm shift | KIE^OH uncertainty (Δε) | Δε / shift |
+|--------|:-------------------:|:-----------------------:|:----------:|
+| ¹³C | ~6‰ | 1.5‰ | **25%** |
+| D | ~230‰ | ~33‰ | **14%** |
+
+Despite OH-¹³C having a larger *relative* KIE uncertainty (25% vs 14% of the fractionation budget), the one-box 3×3 system is more sensitive to OH-D because the δD row is the binding constraint in the ill-conditioned matrix.
+
+### 5.3 Comparison with Two-Box Results
+
+The `KIE_immunity` experiment (two-box, WLS formulation) found KIE accounts for ~25% of FF variance, with OH-¹³C driving the Saueressig/Cantrell sign-change controversy. The difference from our one-box result arises because:
+
+1. **The two-box uses a WLS formulation** (not a direct 3×3 solve), where the W matrix explicitly weights δ¹³C vs δD constraints
+2. **Hemispheric resolution** introduces additional δ¹³C sensitivity through the NH–SH gradient
+3. **The two-box solves FF and Mic only** (BB is prescribed), changing the problem dimensionality
+
+In the one-box 3×3, the δD row carries more relative weight because all three sources are free, and the δD row provides the decisive third equation.
+
+---
+
+## 6. Source Signature Context
+
+From `rel/data/*_MC.csv` (1000 MC iterations, hemispheric):
+
+| Source | δ¹³C MC std (‰) | δD MC std (‰) |
+|--------|:----------------:|:--------------:|
+| Fossil fuel (NH) | 2.4 | 5.6 |
+| Fossil fuel (SH) | 2.7 | 8.1 |
+| Microbial (NH) | 1.1 | 7.8 |
+| Microbial (SH) | 1.1 | 7.3 |
+| BB (NH) | 2.7 | 8.2 |
+| BB (SH) | 2.4 | 7.1 |
+
+Source signature uncertainties are 3–7× larger for δD than δ¹³C, contributing to the 71% "source sigs + data noise" share of FF variance.
+
+---
+
+## 7. Atmospheric Data Noise
 
 From `rel/data/` MC ensembles:
 
-| Observable | Period | Annual MC std | Annual signal (trend) | SNR per year |
-|-----------|--------|:------------:|:--------------------:|:------------:|
-| δ¹³C (global) | 2000–2023 | 0.006–0.021‰ | −0.025‰/yr (full) / −0.035‰/yr (2005–2023) | ~2–6 |
-| δD (global) | 2005–2023 | 0.41–0.92‰ | −0.30‰/yr | ~0.3–0.7 |
-| CH₄ (global) | 1984–2023 | ~2 ppb | ~5–10 ppb/yr | ~3–5 |
+| Observable | Annual MC std | Trend (2005–2023) | SNR/yr |
+|-----------|:------------:|:-----------------:|:------:|
+| δ¹³C (global) | 0.006–0.021‰ | −0.035‰/yr | ~2–6 |
+| δD (global) | 0.41–0.92‰ | −0.30‰/yr | ~0.3–0.7 |
 
-**Source files:**
-- δ¹³C: `rel/data/d13C_dei_compiled.txt` (1000 MC iterations, 1999–2023)
-- δD: `rel/data/GlobMean_dD_dei_DasguptaCal_noBUDS.csv` (2005–2023)
-- CH₄: `rel/data/GML_CH4_AnnualMean.xlsx` (1984–2023)
-
-**Key observation**: δ¹³C has ~50–100× smaller measurement noise than δD, but δD has an ~8.5× steeper trend in the overlapping period. The per-year signal-to-noise ratio (SNR) is actually **worse for δD** (~0.5 vs ~4 for δ¹³C), meaning δD requires multi-year averaging or MC aggregation to extract meaningful signals.
-
-### 4.2 Source Signature Uncertainty
-
-From `rel/data/*_MC.csv` files (1000 MC iterations, hemispheric):
-
-| Source | Isotope | Hemisphere | Mean (‰) | MC std (‰) |
-|--------|---------|:----------:|:---------:|:-----------:|
-| Fossil fuel | δ¹³C | NH | −43.4 | 2.4 |
-| Fossil fuel | δ¹³C | SH | −48.0 | 2.7 |
-| Fossil fuel | δD | NH | −193.1 | 5.6 |
-| Fossil fuel | δD | SH | −189.6 | 8.1 |
-| Microbial | δ¹³C | NH | −59.9 | 1.1 |
-| Microbial | δ¹³C | SH | −59.7 | 1.1 |
-| Microbial | δD | NH | −316.9 | 7.8 |
-| Microbial | δD | SH | −304.9 | 7.3 |
-| BB | δ¹³C | NH | −26.0 | 2.7 |
-| BB | δ¹³C | SH | −24.2 | 2.4 |
-| BB | δD | NH | −236.7 | 8.2 |
-| BB | δD | SH | −210.3 | 7.1 |
-
-**Key observations:**
-- δD source signatures have ~3–4× larger absolute uncertainty than δ¹³C (e.g., Mic δD: 7.5‰ vs Mic δ¹³C: 1.1‰)
-- But relative to source separation: δ¹³C FF−Mic = 16.5‰ with ~2.6‰ combined uncertainty (16%); δD FF−Mic = 124‰ with ~9.6‰ combined uncertainty (8%)
-- **δD has better relative precision for source discrimination**, despite larger absolute errors
-
-### 4.3 KIE Parameter Uncertainty
-
-From `common.py` (lines 103–126):
-
-| Parameter | Distribution | Range | Δε (‰) |
-|-----------|:----------:|:-----:|:-------:|
-| OH_¹³C | U(1.0039, 1.0054) | 0.0015 | 1.5 |
-| OH_D | U(1.294, 1.327) | 0.033 | 33 |
-| Cl_¹³C | N(1.066, 0.002) | ~0.004 (1σ) | 4.0 |
-| Cl_D | N(1.52, 0.02) | ~0.04 (1σ) | 40 |
-| Strat_¹³C | N(1.003, 0.001) | ~0.002 | 2.0 |
-| Strat_D | N(1.179, 0.01) | ~0.02 | 20 |
-| Soil_¹³C | N(1.0201, 0.003) | ~0.006 | 6.0 |
-| Soil_D | N(1.083, 0.01) | ~0.02 | 20 |
+δD has ~50× larger measurement noise than δ¹³C, consistent with the finding that the D-system is the binding constraint in the one-box inversion.
 
 ---
 
-## 5. Variance Decomposition: What Drives FF Uncertainty?
+## 8. Summary: The Dual Role of OH KIE
 
-### 5.1 From the KIE_immunity Experiment
+![Dual-role summary](figures/fig5_dual_role_summary.png)
+*Figure 5: OH-D KIE controls FF spread (uncertainty); OH-¹³C KIE controls FF level (systematic bias).*
 
-The `KIE_immunity` experiment (`experiments/KIE_immunity/`) performed a formal variance decomposition by selectively freezing parameter groups. Results from `phase9_bootstrap.json` and `basu_comparison_v2.json` (verified in `REVISION_RESPONSE.md` Table, A1):
+| Property | OH-D KIE | OH-¹³C KIE |
+|----------|:--------:|:-----------:|
+| **Experimental range** | U(1.294, 1.327) | U(1.0039, 1.0054) |
+| **Fractionation (ε)** | ~300‰ | ~5‰ |
+| **Effect on σ(FF)** | **28% of variance** | **< 1%** |
+| **Effect on mean FF** | < 2 Tg/yr | **17 Tg/yr** |
+| **Nature of impact** | Spread (stochastic) | Level shift (systematic) |
+| **Reducible by averaging?** | No (drives width) | No (drives bias) |
 
-| Variance component | % of FF trend variance | 95% CI |
-|--------------------|:---------------------:|:------:|
-| **Source signatures** | **47.6%** | [37.7, 56.2] |
-| **KIE (all sinks)** | **24.9%** | [12.2, 33.8] |
-| **Lifetime** | **0.8%** | [0.1, 1.5] |
-| Residual / interactions | 27.4% | — |
+### Key Takeaways
 
-**Source signatures dominate**, contributing nearly half the variance. The KIE contributes ~25%, and lifetime is negligible (<1%).
+1. **OH-D KIE is the dominant KIE uncertainty source** in the one-box 3×3 inversion, contributing 28% of FF variance — nearly all of the KIE-attributable uncertainty.
 
-### 5.2 KIE Spread: Dual-Isotope vs Single-Isotope
+2. **OH-¹³C KIE shifts the FF level by 17 Tg/yr** (Saueressig: 37 vs Cantrell: 54 Tg/yr) but does not change the spread. This makes it a *systematic bias*, not a *random uncertainty*.
 
-From `basu_comparison_v2.json` (`REVISION_RESPONSE.md` Table, A1):
+3. **Source signatures and data noise dominate** at 71% of variance, consistent with the two-box `KIE_immunity` finding of ~48% for source signatures alone.
 
-| Configuration | KIE-driven FF spread (Tg/yr) |
-|--------------|:---------------------------:|
-| δ¹³C only (hemispheric) | 13.0 |
-| δ¹³C + δD (dual-isotope, hemispheric) | 8.6 |
-| **Reduction** | **34%** |
+4. **Non-OH KIE parameters** (Cl, Strat, Soil) contribute only ~2% combined.
 
-Adding δD reduces the KIE-driven spread from 13.0 to 8.6 Tg/yr — a meaningful but incomplete reduction. The **KIE still determines the sign** of the FF trend:
-
-- Saueressig → ΔFF = **+2.9** Tg/yr (rising)
-- Cantrell → ΔFF = **−5.6** Tg/yr (falling)
-
-### 5.3 W Matrix Sensitivity
-
-From `phase14_W_sensitivity.json` (`REVISION_RESPONSE.md`, A2):
-
-- KIE% varies from 24.6% to 25.5% across 6 W configurations → **KIE importance is robust to weighting**
-- σ(FF) varies from 15.4 to 19.3 Tg/yr → moderate sensitivity
-- FF trend sign can flip depending on W → evidence that δ¹³C and δD partially **disagree** about the FF trend direction
+5. **The one-box 3×3 amplifies OH-D importance** relative to the two-box WLS framework because the D row is the weakest constraint in the ill-conditioned 3×3 matrix. This geometry-dependence means KIE importance is model-architecture-dependent — an important caveat for cross-study comparisons.
 
 ---
 
-## 6. Why OH-¹³C KIE Matters More Than OH-D KIE
+## 9. Figures
 
-### 6.1 Fractionation Leverage Argument
-
-Consider a one-box isotope mass balance. The atmospheric δ value is shifted from the source-weighted mean by the sink KIE:
-
-δ_atm ≈ δ_source + ε_sink (simplified)
-
-For ¹³C:
-- ε^C_sink ≈ 6‰ (from δ_source ≈ −53.6 to δ_atm ≈ −47.3)
-- KIE uncertainty Δε^C ≈ 1.5‰ → **25% of the total fractionation**
-
-For D:
-- ε^D_sink ≈ 230‰ (from δ_source ≈ −310 to δ_atm ≈ −80)
-- KIE^D_OH uncertainty Δε^D_OH ≈ 19‰ → **8% of the total fractionation**
-- Sink-weighted total KIE^D uncertainty ≈ ±12‰ → **5%** of total fractionation
-
-The ¹³C system operates with **much less headroom**: a small KIE shift consumes a large fraction of the available fractionation budget, strongly perturbing the inferred source mix. The D system has ~40× more fractionation dynamic range, so KIE uncertainties are proportionally less damaging.
-
-### 6.2 Propagation to Source Attribution
-
-In the ¹³C mass balance for a two-source (FF+Mic) system:
-
-FF/Mic ratio ∝ (δ_atm − ε_sink − δ_Mic) / (δ_FF − δ_Mic)
-
-The denominator (δ_FF − δ_Mic ≈ 16.5‰ for ¹³C) is small relative to Δε of 1.5‰, so the numerator is highly sensitive to KIE choice.
-
-For D:
-
-FF/Mic ratio ∝ (δD_atm − ε^D_sink − δD_Mic) / (δD_FF − δD_Mic)
-
-The denominator (δD_FF − δD_Mic ≈ 124‰) is large relative to any plausible KIE^D uncertainty, making the source ratio insensitive to KIE^D.
-
-### 6.3 From the KIE_sensitivity Experiment
-
-The `KIE_sensitivity` experiment (`experiments/KIE_sensitivity/`) directly tested whether solving δ¹³C and δD independently and checking agreement could discriminate between OH-¹³C KIE values. Key findings from `RESULTS.md` and phase scripts:
-
-- **WLS coupling makes KIE sensitivity worse** (KSR ≈ 0.2) — Phases 1–5 showed no optimal W_dD that improves discrimination
-- **Root cause**: shifted δ¹³C row contradicts unshifted δD row → WLS distributes the conflict across both unknowns
-- **Agreement filter approach**: solving isotopes independently and filtering by FF consistency shows **35.5 pp agreement-rate discriminant** — Cantrell KIE produces more internally consistent solutions
-- This discriminant is **stable across epochs** (Phase 8) and survives time-varying KIE trajectories (Phase 7)
+| Figure | Description | File |
+|--------|-------------|------|
+| Fig. 1 | σ(FF) bar chart by KIE config | `figures/fig1_variance_attribution.png` |
+| Fig. 2 | OH-¹³C level shift (Saueressig vs Cantrell) | `figures/fig2_oh13c_level_shift.png` |
+| Fig. 3 | Variance decomposition pie + cumulative reduction | `figures/fig3_variance_decomposition.png` |
+| Fig. 4 | FF time series under 4 configs | `figures/fig4_ff_timeseries_comparison.png` |
+| Fig. 5 | Dual-role summary diagram | `figures/fig5_dual_role_summary.png` |
 
 ---
 
-## 7. Comparison with Other System Noise
-
-### 7.1 Hierarchy of Uncertainty Sources
-
-Combining the experimental data analysis with the variance decomposition:
-
-| Uncertainty source | Impact on FF trend (Tg/yr) | % of variance | Reducible? |
-|-------------------|:--------------------------:|:-------------:|:----------:|
-| Source signatures | dominant | 48% | Yes (more measurements) |
-| OH-¹³C KIE | ΔFF ≈ 8.5 Tg/yr (KIE spread) | 25% | No (needs new lab work) |
-| δD observation noise | σ ≈ 0.5–0.9‰/yr | ~10%* | Yes (more stations) |
-| OH-D KIE | minor vs OH-¹³C | <5%* | Already well-constrained |
-| δ¹³C observation noise | σ ≈ 0.01‰/yr | <2%* | Already small |
-| Lifetime | negligible | <1% | N/A |
-
-*Estimated from the KIE_immunity variance decomposition residual and the source-signature sensitivity tests.
-
-### 7.2 The δD Threshold Result
-
-From `experiments/dD_threshold/` (draft.md, §3):
-
-- δD improves FF uncertainty **only when** microbial δD source-signature uncertainty σ(Mic δD) < 37‰
-- Current observational precision (~8‰ from sitesdata) provides a **4.5× safety margin**
-- Thanwerdas et al. (2024) used σ ≈ 128‰ (3.5× above threshold) → found δD "useless"
-- δD's value is **hemispheric**: one-box dual-isotope fails, two-box succeeds (53% CI reduction)
-
-This means δD's contribution is primarily through **source signature discrimination** (where its large source-to-source separation matters), not through KIE^D uncertainty reduction.
-
----
-
-## 8. Conclusions
-
-1. **OH-¹³C KIE is the dominant KIE uncertainty**: It accounts for ~25% of FF emission trend variance and determines the sign of the post-2007 FF trend. This is an irreducible uncertainty floor until new laboratory measurements or atmospheric constraints can resolve the Saueressig-Cantrell controversy.
-
-2. **OH-D KIE is well-constrained**: The three consistent measurements (1.29–1.31) span only 1.5% relative variation. This uncertainty propagates weakly through the D-system budget because the large δD source-to-atmosphere fractionation (~230‰) dwarfs the KIE uncertainty.
-
-3. **Source signatures are the largest uncertainty**: At 48% of variance, improving source signature knowledge (especially hemispheric microbial δ¹³C and δD) would yield the greatest reduction in FF emission uncertainty.
-
-4. **δD helps through source discrimination, not KIE refinement**: Adding δD reduces KIE-driven FF spread by 34% (13.0 → 8.6 Tg/yr), but its primary value is in the hemispheric two-box framework where δD source signatures have 5–10× larger NH-SH gradients than δ¹³C (from `dD_threshold` experiment findings).
-
-5. **Lifetime is negligible**: <1% of variance, confirming that atmospheric chemistry lifetime uncertainty is not a meaningful contributor to source partitioning error.
-
----
-
-## 9. References (Local Repository Files)
+## 10. References (Local Repository Files)
 
 | Source | Path |
 |--------|------|
-| KIE_immunity results | `experiments/KIE_immunity/REVISION_RESPONSE.md` |
-| KIE_immunity manuscript | `experiments/KIE_immunity/MANUSCRIPT_DUAL_ISOTOPE.md` |
-| dD_threshold results | `experiments/dD_threshold/draft.md` |
-| KIE_sensitivity results | `experiments/KIE_sensitivity/RESULTS.md` |
-| Hemispheric_Divergence | `experiments/Hemispheric_Divergence/MANUSCRIPT.md` |
+| Experiment code | `experiments/OH_KIE_importance/run_experiment.py` |
+| Figure generation | `experiments/OH_KIE_importance/make_figures.py` |
+| Results JSON | `experiments/OH_KIE_importance/results/summary.json` |
+| Time series CSVs | `experiments/OH_KIE_importance/results/*_timeseries.csv` |
 | KIE distributions | `common.py` lines 103–126 |
+| 3×3 one-box model | `3x3_one.py` |
+| KIE_immunity experiment | `experiments/KIE_immunity/` |
+| dD_threshold experiment | `experiments/dD_threshold/` |
 | δ¹³C MC data | `rel/data/d13C_dei_compiled.txt` |
 | δD global data | `rel/data/GlobMean_dD_dei_DasguptaCal_noBUDS.csv` |
-| CH₄ data | `rel/data/GML_CH4_AnnualMean.xlsx` |
-| Source signature MC files | `rel/data/{FF,Mic,BB}_{d13C,dD}_{NH,SH}_MC.csv` |
+| Source signature MC | `rel/data/{FF,Mic,BB}_{d13C,dD}_{NH,SH}_MC.csv` |
 | Thanwerdas et al. (2024) | `ImportantReferences/Thanwerdas2024ACP/` |
 | Fujita et al. (2025) SI | `ImportantReferences/Fujita2025JGR_SI/` |
 | Riddell-Young et al. (2025) | `ImportantReferences/Riddell-Young2025PNAS/` |
-| Basu et al. (2022) | `ImportantReferences/Basu2022ACP/` |
-| KIE survey | `KIE_Used_Previous_Study.md` |
 
