@@ -1,0 +1,14 @@
+{
+  "version": "v4-post-review",
+  "timestamp": "2026-05-13T14:03:55Z",
+  "phases": 15,
+  "changes": [
+    "A3/B6: Fixed Strat_D (1.050\u21921.179) and Soil_D (1.103\u21921.083) in variance_decomposition.py and compare_basu2022.py",
+    "A2: Added phase14_W_sensitivity.py",
+    "B2: Added phase15_BB_sensitivity.py",
+    "B4: Added compute_trend_regression() to core.py",
+    "B5: Added phase16_convergence.py and phase17_seed_sensitivity.py",
+    "B7/C4: Added solver diagnostics tracking to core.py + phase18_diagnostics.py",
+    "core.py: W matrix now parameterized, bb_scale added"
+  ]
+}

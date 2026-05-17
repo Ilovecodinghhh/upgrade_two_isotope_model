@@ -1,0 +1,18 @@
+{
+  "KSR_agree_FF": 2.2686924493844907,
+  "KSR_agree_Mic": 2.2686924493844884,
+  "spread_c13_FF": 1.9823457360625483,
+  "spread_agree_FF": 0.8737833709458371,
+  "spread_c13_Mic": 1.9823457360625625,
+  "spread_agree_Mic": 0.8737833709458442,
+  "agreement_rates": {
+    "A_saueressig": 0.44447826086956527,
+    "B_cantrell": 0.6981739130434782,
+    "C_sampled": 0.5775217391304348
+  },
+  "n_good_iters": {
+    "A_saueressig": 299,
+    "B_cantrell": 590,
+    "C_sampled": 443
+  }
+}

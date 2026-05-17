@@ -1,0 +1,98 @@
+[
+  {
+    "config": "default",
+    "NH_FF_slope": 0.9795955234109661,
+    "NH_FF_pct_pos": 75.0,
+    "NH_FF_p5": -1.0423281269728562,
+    "NH_FF_p95": 3.1131897417462953,
+    "SH_Mic_slope": 0.5236156456204895,
+    "SH_Mic_pct_pos": 71.5,
+    "Global_FF_slope": 2.1156107393924284,
+    "Global_FF_pct_neg": 9.0,
+    "pattern_holds": true
+  },
+  {
+    "config": "fixed_tau9",
+    "NH_FF_slope": 0.9496286736809529,
+    "NH_FF_pct_pos": 74.5,
+    "NH_FF_p5": -1.0752998190572036,
+    "NH_FF_p95": 3.1116061744663344,
+    "SH_Mic_slope": 0.28722820481221223,
+    "SH_Mic_pct_pos": 60.25,
+    "Global_FF_slope": 1.8586239094848724,
+    "Global_FF_pct_neg": 13.750000000000002,
+    "pattern_holds": true
+  },
+  {
+    "config": "cantrell",
+    "NH_FF_slope": 0.784788308934582,
+    "NH_FF_pct_pos": 71.5,
+    "NH_FF_p5": -1.1879716051955178,
+    "NH_FF_p95": 2.9081797332118584,
+    "SH_Mic_slope": 0.8276112591687551,
+    "SH_Mic_pct_pos": 85.25,
+    "Global_FF_slope": 1.494544007542515,
+    "Global_FF_pct_neg": 16.0,
+    "pattern_holds": true
+  },
+  {
+    "config": "saueressig",
+    "NH_FF_slope": 1.2584771445667675,
+    "NH_FF_pct_pos": 81.25,
+    "NH_FF_p5": -0.9908815643429543,
+    "NH_FF_p95": 3.5233123638159336,
+    "SH_Mic_slope": 0.17984259573129135,
+    "SH_Mic_pct_pos": 56.49999999999999,
+    "Global_FF_slope": 2.6167172945596326,
+    "Global_FF_pct_neg": 3.5000000000000004,
+    "pattern_holds": false
+  },
+  {
+    "config": "low_Cl_0.6pct",
+    "NH_FF_slope": 1.48532513985433,
+    "NH_FF_pct_pos": 84.0,
+    "NH_FF_p5": -0.8362637045155544,
+    "NH_FF_p95": 3.8162812333667424,
+    "SH_Mic_slope": -0.05930060034344771,
+    "SH_Mic_pct_pos": 47.5,
+    "Global_FF_slope": 3.0431922498106365,
+    "Global_FF_pct_neg": 1.7500000000000002,
+    "pattern_holds": false
+  },
+  {
+    "config": "high_Cl_6.5pct",
+    "NH_FF_slope": 0.6118502296220814,
+    "NH_FF_pct_pos": 68.75,
+    "NH_FF_p5": -1.22732644514376,
+    "NH_FF_p95": 2.534485156350221,
+    "SH_Mic_slope": 1.3115571860122264,
+    "SH_Mic_pct_pos": 100.0,
+    "Global_FF_slope": 0.7641570347660123,
+    "Global_FF_pct_neg": 28.499999999999996,
+    "pattern_holds": true
+  },
+  {
+    "config": "fast_ex_0.8",
+    "NH_FF_slope": 1.4601826075021476,
+    "NH_FF_pct_pos": 82.25,
+    "NH_FF_p5": -0.9458801741800217,
+    "NH_FF_p95": 3.816666171916127,
+    "SH_Mic_slope": 0.557036144180922,
+    "SH_Mic_pct_pos": 79.75,
+    "Global_FF_slope": 2.083380825357075,
+    "Global_FF_pct_neg": 9.75,
+    "pattern_holds": true
+  },
+  {
+    "config": "slow_ex_1.3",
+    "NH_FF_slope": 0.5006024890757568,
+    "NH_FF_pct_pos": 68.0,
+    "NH_FF_p5": -1.2606390726439292,
+    "NH_FF_p95": 2.545067818479069,
+    "SH_Mic_slope": 0.5193487065715177,
+    "SH_Mic_pct_pos": 68.0,
+    "Global_FF_slope": 1.690376502499188,
+    "Global_FF_pct_neg": 13.25,
+    "pattern_holds": true
+  }
+]

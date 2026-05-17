@@ -1,0 +1,11 @@
+{
+  "predicted_dD_gradient_median": -28.448209242660653,
+  "predicted_dD_gradient_p5": -38.3540851154806,
+  "predicted_dD_gradient_p95": -8.18173308824886,
+  "source_dD_gradient": -28.89170924266068,
+  "sink_epsilon_NH": 294.8875,
+  "sink_epsilon_SH": 295.331,
+  "gradient_trend_per_yr": 0.1947029178433976,
+  "model_input_offset": 6.0,
+  "testable_prediction": "The NH-SH \u03b4D-CH\u2084 gradient should be -28\u2030 [-38, -8\u2030, 90% CI]. This can be tested as the IRMS/TILDAS monitoring network expands."
+}

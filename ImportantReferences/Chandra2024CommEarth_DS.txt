@@ -1,0 +1,15 @@
+The NOAA-GML and CU-INSTAAR ground-based CH4 and δ13C-CH4
+observations are available from the NOAA GML FTP server (https://gml.
+noaa.gov/dv/data), subject to their fair use policies. Atmospheric CH4 and
+δ13C-CH4 data at NAL and SYO provided by Tohoku University (TU),
+/National Institute of Polar Research (NIPR) are publicly available at the
+WDCGG website (https://gaw.kishou.go.jp/search/station). Emission
+inventoriesusedinthisstudyarepubliclyavailable,EDGARv6:https://data.
+jrc.ec.europa.eu/dataset/97a67d67-c62e-4826-b873-9d972c4f670b,
+GAINSv4: http://gains.iiasa.ac.at/models/gains_models4.html for public
+access to emission inventories by major world regions. See also Supplement
+dataset of Höglund-Isaksson et al.4. For access to global gridded CH4
+inventory data, please contact L.H.I. (hoglund@iiasa.ac.at). All data used in
+this study are available at https://doi.org/10.5281/zenodo.1053174994.The
+Four-dimensionalmodelsimulationdataareavailablefreelyfromtheleader
+authors.

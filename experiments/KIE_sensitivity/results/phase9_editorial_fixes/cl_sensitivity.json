@@ -1,0 +1,41 @@
+{
+  "Thanwerdas_low": {
+    "cl_fraction": 0.006,
+    "rate_S": 0.08610434782608696,
+    "rate_C": 0.3702521739130435,
+    "n_good_S": 50,
+    "n_good_C": 599,
+    "discriminant_pp": 28.414782608695653,
+    "discriminant_CI_pp": [
+      28.162608695652175,
+      28.662630434782603
+    ],
+    "significant": true
+  },
+  "Default": {
+    "cl_fraction": 0.035,
+    "rate_S": 0.3525217391304348,
+    "rate_C": 0.7079043478260869,
+    "n_good_S": 502,
+    "n_good_C": 2583,
+    "discriminant_pp": 35.538260869565214,
+    "discriminant_CI_pp": [
+      35.25815217391305,
+      35.82695652173913
+    ],
+    "significant": true
+  },
+  "High_Cl": {
+    "cl_fraction": 0.065,
+    "rate_S": 0.7149478260869565,
+    "rate_C": 0.9062347826086956,
+    "n_good_S": 2642,
+    "n_good_C": 4577,
+    "discriminant_pp": 19.12869565217391,
+    "discriminant_CI_pp": [
+      18.90691304347826,
+      19.3591304347826
+    ],
+    "significant": true
+  }
+}
