@@ -87,7 +87,78 @@ python3 3x3_one.py --kie sampled --lifetime time_varying
 
 ## Experiments
 
-Each experiment under `experiments/` is a self-contained analysis with its own `figures/`, `results/`, `analysis/` subdirectories and manuscript/results markdown files. Key scripts in `KIE_sensitivity/` run as a multi-phase pipeline (`phase1_*.py` through `phase10_*.py`, `make_manuscript_figs.py`).
+Each experiment under `experiments/` is a self-contained analysis with its own `figures/`, `results/`, `analysis/` subdirectories and manuscript/results markdown files.
+
+### 1. `dD_threshold/` — When Does δD Help? (Target: PNAS)
+
+**Question:** At what microbial δD source-signature uncertainty does adding δD improve (or degrade) methane source attribution vs δ¹³C-only?
+
+**Core result:** A sharp threshold exists at **σ(Mic δD) ≈ 37‰**. Below it, δD halves FF emission uncertainty (53% CI reduction); above it, δD actively degrades the solution. Current observational precision (~8‰) is well within the threshold — a 4.5× safety margin.
+
+**Key findings:**
+- Resolves the Riddell-Young (2025) vs Thanwerdas (2024) contradiction: Thanwerdas used σ≈128‰ (3.5× above threshold), inevitably finding δD useless
+- δD's value is hemispheric: one-box dual-isotope *fails* (CI widens), two-box *succeeds* (53% improvement) because δD source signatures have 5–10× larger NH-SH gradients than δ¹³C
+- Robust across 9 KIE×lifetime configs, 5 data versions (v1–v5), all year ranges
+- Full draft manuscript in `draft.md`; shared model runner in `analysis/core.py` (all phases import from it)
+
+**Status:** v5 complete (Luo 2024 C4 map). 6 analysis phases + comprehensive figures done. Code refactored into shared `core.py`.
+
+### 2. `Hemispheric_Divergence/` — NH vs SH Microbial Trends (Target: ACP)
+
+**Question:** Does hemispheric resolution reveal spatial structure in CH₄ growth that one-box models miss?
+
+**Core result:** Post-2006 CH₄ growth is driven by **asymmetric hemispheric microbial trends**: NH microbial emissions increase at +6.6 Tg/yr² (100% of MC positive), while SH microbial emissions are stable (−1.1 Tg/yr²). This rules out globally symmetric mechanisms (e.g., uniform OH decline).
+
+**Key findings:**
+- NH drives >73% of the dual-isotope improvement; SH contributes a steady ~15%
+- FF absolute levels corrected from ~50 → ~115 Tg/yr (now matches EDGAR) after Phase A fixes: observed IH gradient + uncertainty-based W matrix
+- δD contributes 33% to cost function with proper weighting (was ~2% with old W)
+- Global FF trend: −2.49 Tg/yr² (declining), driven by NH; contradicts some 3D inversions
+- Validated against EDGAR: FF(2010) = 115 Tg/yr (EDGAR: 110), NH FF share = 72% (EDGAR: 72%)
+
+**Status:** v4 results complete. Manuscript draft v3 in `MANUSCRIPT.md`. Critical assessment identifies remaining limitations (prescribed BB, noisy FF temporal CV, 3D inversion discrepancy).
+
+### 3. `KIE_immunity/` — Dual-Isotope KIE Sensitivity & Variance Decomposition (Target: ACP)
+
+**Question:** Does adding δD reduce sensitivity to the OH-¹³C KIE controversy (Saueressig 1.0039 vs Cantrell 1.0054)?
+
+**Core result:** δD reduces FF trend uncertainty by **38%** (σ: 31→19.2 Tg/yr) and KIE-driven spread by **34%** (13.0→8.6 Tg/yr). But the KIE still determines the **sign** of the post-2007 FF trend (Saueressig: +2.9; Cantrell: −5.6 Tg/yr) — it is an irreducible uncertainty floor.
+
+**Key findings:**
+- Variance decomposition: Source signatures dominate (48%), KIE = 25%, lifetime < 1%, residual = 27%
+- Earlier "KIE immunity" finding was an artifact of global-mean source signatures; hemispheric heterogeneity (v3→v4) restored KIE sensitivity
+- Extensive structural tests: W matrix sensitivity, BB perturbation, MC convergence, solver diagnostics, EDGAR validation
+- 18 analysis phases (phase5–phase18) with JSON result files as single source of truth
+- Revision response addresses all 28 reviewer comments
+
+**Status:** Manuscript revision 1 complete in `MANUSCRIPT_DUAL_ISOTOPE.md`. All numbers verified against JSON ground truth. `analysis/run_all.py` reproduces everything.
+
+### 4. `KIE_sensitivity/` — Agreement Filter as KIE Discriminant (Multi-Phase Pipeline)
+
+**Question:** Can the δ¹³C-δD agreement rate discriminate between the competing OH-¹³C KIE values?
+
+**Core result:** WLS coupling of δ¹³C+δD makes KIE sensitivity **5× worse** (KSR ≈ 0.2). But solving the two isotopes *independently* and filtering by consistency reveals a **35.5 pp agreement-rate discriminant** — Cantrell's KIE produces more internally consistent δ¹³C/δD solutions than Saueressig's.
+
+**Key findings:**
+- Phases 1–5: WLS coupling always degrades KIE sensitivity (no optimal weight exists; even w_dD=0.01 amplifies spread 4×)
+- Root cause: shifted δ¹³C row contradicts unshifted δD row → WLS distributes the conflict across both unknowns
+- Phase 6–6c: Agreement filter framework — solve isotopes independently, keep iterations where FF estimates agree within threshold
+- Phase 7: Discriminant survives time-varying KIE trajectories
+- Phase 8: Stable across three independent 8-year epochs (1999–2006, 2007–2014, 2015–2022)
+- Phase 9 correction: KSR=2.5–3.2 at N=1000 was inflated; at N=5000, KSR stabilizes at 1.12 — filter's value is as a discriminant, not sensitivity reducer
+- `make_manuscript_figs.py` generates all publication figures
+
+**Status:** Phases 1–9 complete. RESULTS.md has full per-phase tables. All phase scripts in top-level directory; results in `results/` subdirectories.
+
+### Cross-Experiment Relationships
+
+The four experiments share the same 2-box model infrastructure and data but answer distinct questions:
+- **dD_threshold** asks: *under what uncertainty does δD help?* (answer: σ < 37‰)
+- **Hemispheric_Divergence** asks: *what does 2-box reveal that 1-box misses?* (answer: NH microbial drives growth)
+- **KIE_immunity** asks: *does δD reduce KIE sensitivity?* (answer: partially — 34% reduction, but KIE still determines FF trend sign)
+- **KIE_sensitivity** asks: *can δ¹³C-δD agreement discriminate between KIE values?* (answer: yes — Cantrell is more internally consistent)
+
+Common data: `rel/data/` MC CSVs, `common.py` / `models/core.py` model engine. Each experiment has its own `analysis/core.py` for experiment-specific shared code.
 
 ## Code Conventions
 
