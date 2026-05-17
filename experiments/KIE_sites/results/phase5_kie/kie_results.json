@@ -1,0 +1,55 @@
+{
+  "approach1_sh_direct": {
+    "method": "Direct SH constraint (CGO + SPO)",
+    "sites_used": [
+      "CGO",
+      "SPO"
+    ],
+    "R_sh_weighted": 0.026429918698149066,
+    "R_sh_sigma": 0.008464473837361463,
+    "alpha_13c_oh_median": 1.0034210701020654,
+    "alpha_13c_oh_ci95": [
+      0.9975309063100616,
+      1.009245827230962
+    ],
+    "n_mc": 50000
+  },
+  "approach2_source_corrected": {
+    "method": "Source-corrected (all clean sites, non-circular)",
+    "sites_used": [
+      "ALT",
+      "ZEP",
+      "BRW",
+      "CBA",
+      "MHD",
+      "KUM",
+      "CGO",
+      "SPO"
+    ],
+    "alpha_13c_oh_median": 1.016173493414505,
+    "alpha_13c_oh_ci95": [
+      1.0026110003837236,
+      1.0311778158276224
+    ],
+    "n_mc": 50000,
+    "source_signature_assumptions": {
+      "d13C_source": -62.0,
+      "d13C_source_sigma": 5.0,
+      "dD_source": -310.0,
+      "dD_source_sigma": 30.0
+    }
+  },
+  "approach3_latitude_gradient": {
+    "method": "Latitude gradient extrapolation",
+    "intercept_R": 0.04374842073999805,
+    "slope_per_degree": 0.0002770525584682448,
+    "alpha_at_equator": 1.0092085526530161,
+    "n_sites": 8,
+    "note": "Intercept provides a rough lower bound on R_sink, but assumes zero source seasonality at equator which is not strictly true."
+  },
+  "reference_values": {
+    "saueressig_alpha_13c": 1.0039,
+    "cantrell_alpha_13c": 1.0054,
+    "alpha_D_oh": 1.294
+  }
+}
