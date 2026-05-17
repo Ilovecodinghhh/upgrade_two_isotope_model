@@ -1,0 +1,236 @@
+site_code,site_name,country,latitude,longitude,elevation_m,labs,n_observations,year_start,year_end,data_source
+AAO,"Airborne Aerosol Observatory, Bondville, Illinois",United States,40.05,-88.37,230.0,NOAA,3890,2006.4,2009.7,Basu2022_ObsPack
+ABP,"Arembepe, Bahia",Brazil,-12.77,-38.17,1.0,NOAA; IPEN,418,2006.8,2010.0,Basu2022_ObsPack
+ABT,"Abbotsford, British Columbia",Canada,49.0114,-122.3353,60.0,EC,24166,2014.2,2017.7,Basu2022_ObsPack
+ACG,Alaska Coast Guard,United States,57.7366,-152.5042,6.0,NOAA,1748,2009.3,2017.8,Basu2022_ObsPack
+ACT,Atmospheric Carbon and Transport - America,United States,38.17509841918945,-91.02359771728516,,NOAA,1499,2016.4,2019.6,Basu2022_ObsPack
+AGP,"Arctic Gas and Aerosol Sampling Program, AGASP",N/A,71.69999694824219,-148.3800048828125,,NOAA,212,1992.2,1992.3,Basu2022_ObsPack
+ALF,Alta Floresta,Brazil,-8.92,-56.79,,IPEN,1504,2010.1,2017.0,Basu2022_ObsPack
+ALK,Alaska,United States,65.31500244140625,-148.635009765625,,TU,64,2006.6,2006.6,Basu2022_ObsPack
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,200.0,MPI-BGC; EC; NOAA,118206,1985.4,2020.7,Basu2022_ObsPack
+AMS,Amsterdam Island,France,-37.7983,77.5378,55.0,LSCE; NOAA,6949,1983.0,2017.2,Basu2022_ObsPack
+AMT,"Argyle, Maine",United States,45.0345,-68.6821,53.0,NOAA,2815,2003.7,2019.9,Basu2022_ObsPack
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,KMA; NOAA,71031,2000.6,2019.9,Basu2022_ObsPack
+AOA,Aircraft Observation of Atmospheric trace gases by JMA,Japan,28.095500946044922,149.06900024414062,,JMA,1818,2011.1,2017.4,Basu2022_ObsPack
+AOC,Atlantic Ocean Cruise,N/A,-5.0,-23.8799991607666,0.0,NOAA,240,2004.4,2005.1,Basu2022_ObsPack
+ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,NOAA,6025,1983.4,2020.0,Basu2022_ObsPack
+ASK,Assekrem,Algeria,23.2625,5.6322,2710.0,NOAA,2041,1995.7,2019.8,Basu2022_ObsPack
+AVI,"St. Croix, Virgin Islands",United States,17.75,-64.75,3.0,NOAA,848,1983.4,1990.7,Basu2022_ObsPack
+AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,NOAA,2014,1983.4,2020.0,Basu2022_ObsPack
+AZV,Azovo,Russia,54.705,73.0292,110.0,NIES,37762,2009.8,2018.0,Basu2022_ObsPack
+BAL,Baltic Sea,Poland,55.35,17.22,3.0,NOAA,3491,1992.7,2011.5,Basu2022_ObsPack
+BAO,"Boulder Atmospheric Observatory, Colorado",United States,40.05,-105.004,1584.0,NOAA,7884,2007.6,2016.5,Basu2022_ObsPack
+BCK,"Behchoko, Northwest Territories",Canada,62.7981,-115.9194,160.0,EC,46857,2010.8,2017.4,Basu2022_ObsPack
+BGI,"Bradgate, Iowa",United States,42.82,-94.41,355.1,NOAA,364,2004.7,2005.9,Basu2022_ObsPack
+BGU,Begur,Spain,41.97,3.23,11.0,LSCE,593,2000.1,2017.4,Basu2022_ObsPack
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,NIWA; NOAA,1920,1999.8,2019.5,Basu2022_ObsPack
+BIK,Bialystok,Poland,53.2,22.75,183.0,MPI-BGC,626,2005.9,2016.9,Basu2022_ObsPack
+BIR,Birkenes Observatory,Norway,58.3886,8.2519,215.0,NILU,8401,2016.0,2017.0,Basu2022_ObsPack
+BKT,Bukit Kototabang,Indonesia,-0.202,100.318,845.0,EMPA; NOAA,24785,2004.0,2020.0,Basu2022_ObsPack
+BME,"St. Davids Head, Bermuda",United Kingdom,32.368,-64.6476,12.0,NOAA,1543,1989.1,2010.1,Basu2022_ObsPack
+BMW,"Tudor Hill, Bermuda",United Kingdom,32.2647,-64.8788,30.0,NOAA,2414,1989.4,2020.0,Basu2022_ObsPack
+BNE,"Beaver Crossing, Nebraska",United States,40.8,-97.18,465.9,NOAA,1118,2004.7,2011.4,Basu2022_ObsPack
+BRA,Bratt's Lake Saskatchewan,Canada,50.2017,-104.7113,595.0,EC,50068,2009.8,2017.4,Basu2022_ObsPack
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,NOAA,270912,1983.3,2020.1,Basu2022_ObsPack
+BRZ,Berezorechka,Russia,56.15,84.3333,168.0,NIES,130694,2008.3,2018.0,Basu2022_ObsPack
+BSC,"Black Sea, Constanta",Romania,44.1776,28.6647,0.0,NOAA,1703,1994.8,2012.0,Basu2022_ObsPack
+BWD,"Brentwood, Maryland",United States,38.9343,-76.9556,16.8,NOAA,25,2018.7,2019.7,Basu2022_ObsPack
+CAR,"Briggsdale, Colorado",United States,40.6347,-104.3269,1488.0,NOAA,10337,1992.9,2020.1,Basu2022_ObsPack
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,NOAA,6097,1983.4,2020.0,Basu2022_ObsPack
+CBW,Cabauw,Netherlands,51.9703,4.9264,0.0,ECN,184575,2005.0,2013.4,Basu2022_ObsPack
+CBY,"Cambridge Bay, Nunavut Territory",Canada,69.1284,-105.0577,35.0,EC,37779,2013.0,2017.7,Basu2022_ObsPack
+CDL,"Candle Lake, Saskatchewan",Canada,53.9871,-105.1179,600.0,EC,31526,2002.5,2008.0,Basu2022_ObsPack
+CEA,CONTRAIL (Comprehensive Observation Network for TRace gases by AIrLiner),,63.560001373291016,83.97000122070312,,NIES,887,2012.3,2018.9,Basu2022_ObsPack
+CFA,"Cape Ferguson, Queensland",Australia,-19.28,147.057,2.0,CSIRO,674,2000.0,2016.9,Basu2022_ObsPack
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,AGAGE; NOAA,190418,1984.3,2019.7,Basu2022_ObsPack
+CHL,"Churchill, Manitoba",Canada,58.7379,-93.8194,29.0,EC,36502,2007.3,2017.3,Basu2022_ObsPack
+CHM,"Chibougamau, Quebec",Canada,49.6925,-74.3432,393.0,EC,24019,2007.6,2011.3,Basu2022_ObsPack
+CHR,Christmas Island,Republic of Kiribati,1.7,-157.1518,0.0,NOAA,2397,1984.2,2019.8,Basu2022_ObsPack
+CHS,Cherskii,Russia,68.5135,161.5313,30.0,NOAA,109083,2008.6,2016.1,Basu2022_ObsPack
+CIB,Centro de Investigacion de la Baja Atmosfera (CIBA),Spain,41.81,-4.93,845.0,NOAA,995,2009.3,2019.9,Basu2022_ObsPack
+CMA,"Offshore Cape May, New Jersey",United States,38.83,-74.32,0.0,NOAA,2824,2005.6,2020.0,Basu2022_ObsPack
+CMN,Mt. Cimone Station,Italy,44.1936,10.6999,2165.0,UNIURB,78681,2008.5,2018.0,Basu2022_ObsPack
+CMO,"Cape Meares, Oregon",United States,45.478,-123.9689,30.0,NOAA,1063,1983.3,1998.2,Basu2022_ObsPack
+COB,COBRA,N/A,45.0,-90.9800033569336,,NOAA,652,1999.4,2003.5,Basu2022_ObsPack
+COI,Cape Ochi-ishi,Japan,43.1603,145.4974,45.0,NIES,136493,2000.0,2016.0,Basu2022_ObsPack
+CON,CONTRAIL (Comprehensive Observation Network for TRace gases by AIrLiner),,3.819999933242798,146.08999633789062,,NIES,2400,2005.9,2017.9,Basu2022_ObsPack
+COS,Cosmos,Peru,-12.12,-75.33,4600.0,NOAA,2,1984.6,1984.6,Basu2022_ObsPack
+CPS,"Chapais,Quebec",Canada,49.8223,-74.9753,391.0,EC,44244,2012.0,2017.4,Basu2022_ObsPack
+CPT,Cape Point,South Africa,-34.3523,18.4891,230.0,SAWS; NOAA,115088,2000.0,2019.9,Basu2022_ObsPack
+CRI,Cape Rama,India,15.08,73.83,60.0,CSIRO,230,2000.0,2013.0,Basu2022_ObsPack
+CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA,198991,2011.2,2020.1,Basu2022_ObsPack
+CRZ,Crozet Island,France,-46.4337,51.8478,197.0,NOAA,2066,1991.2,2019.8,Basu2022_ObsPack
+CVO,Cape Verde Observatory,Cabo Verde,16.864,-24.8675,10.0,MPI-BGC,1207,2007.2,2017.3,Basu2022_ObsPack
+CYA,"Casey, Antarctica",Australia,-66.283,110.517,47.0,CSIRO,679,2000.0,2017.0,Basu2022_ObsPack
+DEM,Demyanskoe,Russia,59.7914,70.8711,63.0,NIES,126901,2005.6,2018.0,Basu2022_ObsPack
+DEU,Deuselbach,Germany,49.77,7.05,480.0,UBA,33820,2000.0,2004.6,Basu2022_ObsPack
+DND,"Dahlen, North Dakota",United States,47.5,-99.24,472.44,NOAA,2192,2004.7,2016.9,Basu2022_ObsPack
+DRP,Drake Passage,N/A,-59.0,-64.69,0.0,NOAA,642,2003.3,2019.9,Basu2022_ObsPack
+DSI,Dongsha Island,Taiwan,20.6992,116.7297,3.0,NOAA,881,2010.2,2020.0,Basu2022_ObsPack
+EGB,"Egbert, Ontario",Canada,44.231,-79.7838,251.0,EC,86187,2005.2,2017.0,Basu2022_ObsPack
+EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,NOAA,1866,1994.0,2019.9,Basu2022_ObsPack
+ESP,"Estevan Point,  British Columbia",Canada,49.383,-126.5441,7.0,EC; NOAA,68521,2000.0,2019.9,Basu2022_ObsPack
+EST,"Esther, Alberta",Canada,51.6707,-110.206,707.0,EC,62329,2010.1,2017.4,Basu2022_ObsPack
+ETL,"East Trout Lake, Saskatchewan",Canada,54.3541,-104.9868,493.0,EC; NOAA,93836,2005.7,2020.1,Basu2022_ObsPack
+FAM,FAAM Aircraft,United Kingdom,52.17914962768555,1.0945000648498535,,NOAA,22,2014.5,2015.4,Basu2022_ObsPack
+FKL,"Finokalia, Crete",Greece,35.3378,25.6694,150.0,LSCE,29968,2000.5,2018.1,Basu2022_ObsPack
+FNE,"Fort Nelson, British Columbia",Canada,58.8412,-122.5737,361.0,EC,14431,2014.5,2017.4,Basu2022_ObsPack
+FSD,Fraserdale,Canada,49.8752,-81.57,210.0,EC,124100,2000.0,2017.4,Basu2022_ObsPack
+FTL,Fortaleza,Brazil,-3.52,-38.28,3.0,NOAA,162,2000.9,2003.2,Basu2022_ObsPack
+FWI,"Fairchild, Wisconsin",United States,44.66,-90.96,334.3,NOAA,381,2004.7,2005.9,Basu2022_ObsPack
+GIF,Gif sur Yvette,France,48.71,2.1475,160.0,LSCE,51250,2004.7,2013.0,Basu2022_ObsPack
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,NOAA,5067,1983.3,2020.0,Basu2022_ObsPack
+GOZ,"Dwejra Point, Gozo",Malta,36.048,14.889,1.0,NOAA,310,1993.8,1999.1,Basu2022_ObsPack
+GPA,Gunn Point,Australia,-12.2488,131.0453,25.0,CSIRO,89,2010.6,2015.8,Basu2022_ObsPack
+GSN,"Gosan, Cheju Island",Republic of Korea,33.28,126.15,72.0,NIER,64961,2002.1,2011.4,Basu2022_ObsPack
+HAA,"Molokai Island, Hawaii",United States,21.23,-158.95,3.0,NOAA,2628,1999.4,2008.3,Basu2022_ObsPack
+HAT,Hateruma Island,Japan,24.05,123.8,10.0,NIES,134193,2000.0,2016.0,Basu2022_ObsPack
+HBA,"Halley Station, Antarctica",United Kingdom,-75.605,-26.21,30.0,NOAA,2600,1983.0,2019.0,Basu2022_ObsPack
+HFM,"Harvard Forest, Massachusetts",United States,42.5378,-72.1714,340.0,NOAA,1746,1999.9,2016.6,Basu2022_ObsPack
+HIL,"Homer, Illinois",United States,40.07,-87.91,201.5,NOAA,3426,2004.7,2020.1,Basu2022_ObsPack
+HIP,HIPPO (HIAPER Pole-to-Pole Observations),United States,14.744649887084961,-154.69915771484375,,NOAA,1416,2009.0,2011.7,Basu2022_ObsPack
+HLE,Hanle,India,32.78,78.96,4517.0,LSCE,321,2000.9,2016.3,Basu2022_ObsPack
+HNP,"Hanlan's Point, Ontario",Canada,43.6122,-79.3887,87.0,EC,17762,2014.5,2017.3,Basu2022_ObsPack
+HOW,"Howland, Maine",United States,42.2,-68.13,,NOAA,32,1997.0,1997.5,Basu2022_ObsPack
+HPB,Hohenpeissenberg,Germany,47.8011,11.0245,936.0,DWD; NOAA,35699,2006.3,2019.9,Basu2022_ObsPack
+HSU,Humboldt State University,United States,41.0588,-124.75,0.0,NOAA,172,2008.4,2017.4,Basu2022_ObsPack
+HUN,Hegyhatsal,Hungary,46.95,16.65,248.0,ELTE; NOAA,40833,1993.2,2019.9,Basu2022_ObsPack
+ICE,"Storhofdi, Vestmannaeyjar",Iceland,63.3998,-20.2884,118.0,NOAA,2438,1992.8,2019.9,Basu2022_ObsPack
+IGR,Igrim,Russia,63.1903,64.4156,9.0,NIES,107699,2005.3,2013.6,Basu2022_ObsPack
+INU,"Inuvik,Northwest Territories",Canada,68.3178,-133.5342,113.0,EC,44455,2012.1,2017.5,Basu2022_ObsPack
+INX,INFLUX (Indianapolis Flux Experiment),United States,39.5805,-86.4207,,NOAA,2625,2010.8,2019.8,Basu2022_ObsPack
+IPR,Ispra,Italy,45.807,8.63,223.0,IES,57560,2007.8,2017.0,Basu2022_ObsPack
+ITN,"Grifton, North Carolina",United States,35.365,-77.393,8.0,NOAA,1181,1992.6,1999.4,Basu2022_ObsPack
+IZO,"Izana, Tenerife, Canary Islands",Spain,28.309,-16.499,2372.9,AEMET; NOAA,130535,1991.9,2019.9,Basu2022_ObsPack
+JFJ,Jungfraujoch,Switzerland,46.55,7.987,3570.0,EMPA; MPI-BGC,100978,2005.1,2018.0,Basu2022_ObsPack
+KAS,"Kasprowy Wierch, High Tatra",Poland,49.2325,19.9818,1989.0,AGH,24909,2009.1,2013.0,Basu2022_ObsPack
+KCO,Kaashidhoo,Republic of Maldives,4.97,73.47,1.0,NOAA,89,1998.2,1999.5,Basu2022_ObsPack
+KEY,"Key Biscayne, Florida",United States,25.6654,-80.158,1.0,NOAA,2869,1983.8,2019.9,Basu2022_ObsPack
+KJO,Kjölnes,Norway,70.8531,29.2358,5.0,MPI-BGC,94,2014.8,2016.1,Basu2022_ObsPack
+KMP,Kumpula,Finland,60.2039,24.9608,26.0,FMI,64738,2010.1,2018.0,Basu2022_ObsPack
+KOR,Akademik Korolev,N/A,-1.600000023841858,160.0,,NOAA,99,1987.4,1987.6,Basu2022_ObsPack
+KPA,"Kitt Peak, Arizona",United States,32.0,-112.0,2083.0,NOAA,68,1983.3,1989.8,Basu2022_ObsPack
+KRS,Karasevoe,Russia,58.2456,82.4244,76.0,NIES,135853,2004.7,2018.0,Basu2022_ObsPack
+KUM,"Cape Kumukahi, Hawaii",United States,19.7371,-155.0116,0.3,NOAA,8279,1983.3,2020.0,Basu2022_ObsPack
+KZD,Sary Taukum,Kazakhstan,44.0839,76.8712,595.0,NOAA,1129,1997.8,2009.6,Basu2022_ObsPack
+KZM,Plateau Assy,Kazakhstan,43.25,77.88,2519.0,NOAA,1125,1997.8,2009.6,Basu2022_ObsPack
+LAC,LA Megacities,United States,34.0,-118.2,100.0,NOAA,753,2014.8,2017.8,Basu2022_ObsPack
+LAU,Lauder,New Zealand,-45.04,169.68,370.0,NIWA,1245,2007.0,2018.0,Basu2022_ObsPack
+LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,NOAA,204017,1994.9,2020.1,Basu2022_ObsPack
+LEW,"Lewisburg, Pennsylvania",United States,40.9447,-76.8789,161.0,NOAA,851,2013.2,2020.1,Basu2022_ObsPack
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,EC; NOAA,76266,2007.3,2017.4,Basu2022_ObsPack
+LLE,Long Lines Expedition,N/A,-39.02000045776367,1.0,,NOAA,39,1983.8,1984.1,Basu2022_ObsPack
+LLN,Lulin,Taiwan,23.47,120.87,2862.0,NOAA,1382,2006.6,2020.0,Basu2022_ObsPack
+LMP,Lampedusa,Italy,35.52,12.62,45.0,ENEA; NOAA,32702,2000.0,2019.9,Basu2022_ObsPack
+LPO,Ile Grande,France,48.8036,-3.5839,10.0,LSCE,272,2004.9,2013.7,Basu2022_ObsPack
+MAA,"Mawson Station, Antarctica",Australia,-67.617,62.867,32.0,CSIRO,765,2000.0,2017.0,Basu2022_ObsPack
+MBC,"Mould Bay, Northwest Territories",Canada,76.247,-119.3533,30.0,NOAA,1992,1983.3,1997.4,Basu2022_ObsPack
+MBO,Mt. Bachelor Observatory,United States,43.9775,-121.6861,2731.0,NOAA,1714,2011.8,2020.1,Basu2022_ObsPack
+MCI,Mid Continent Intensive,United States,40.25,-87.08999633789062,,NOAA,184,2007.4,2009.0,Basu2022_ObsPack
+MCM,"McMurdo Station, Antarctica",United States,-77.83,166.6,11.0,NOAA,89,1985.9,1987.8,Basu2022_ObsPack
+MDM,Madonie Mountains,Italy,37.88,14.03,1650.0,ENEA,400,2005.2,2017.9,Basu2022_ObsPack
+MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,NOAA,889,2009.0,2019.9,Basu2022_ObsPack
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,AGAGE; LSCE; NOAA,218940,1991.4,2020.0,Basu2022_ObsPack
+MID,"Sand Island, Midway",United States,28.21,-177.38,11.0,NOAA,3461,1985.3,2020.0,Basu2022_ObsPack
+MKN,Mt. Kenya,Kenya,-0.0622,37.2972,3644.0,NOAA,315,2004.0,2011.5,Basu2022_ObsPack
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,NOAA,277734,1983.3,2020.1,Basu2022_ObsPack
+MNM,Minamitorishima,Japan,24.28,153.98,8.0,JMA,137341,2000.0,2018.0,Basu2022_ObsPack
+MQA,Macquarie Island,Australia,-54.483,158.967,6.0,CSIRO,771,2000.0,2017.0,Basu2022_ObsPack
+MRC,Marcellus Pennsylvania,United States,41.4662,-76.4188,592.0,NOAA,784,2015.4,2020.0,Basu2022_ObsPack
+MSH,"Mashpee, Massachusetts",United States,41.6568,-70.4973,32.3,NOAA,348,2016.4,2020.0,Basu2022_ObsPack
+MVY,"Marthas Vineyard, Massachusetts",United States,41.325,-70.5667,0.0,NOAA,210,2007.7,2011.2,Basu2022_ObsPack
+MWO,Mt. Wilson Observatory,United States,34.2246,-118.0586,1728.0,NOAA,3788,2010.3,2020.1,Basu2022_ObsPack
+NAT,Farol De Mae Luiza Lighthouse,Brazil,-5.7952,-35.1853,50.0,NOAA,770,2010.7,2020.0,Basu2022_ObsPack
+NEB,"NE Baltimore, Maryland",United States,39.3154,-76.583,44.0,NOAA,48,2018.3,2019.6,Basu2022_ObsPack
+NGL,Neuglobsow,Germany,53.17,13.03,65.0,UBA,116056,2000.0,2014.0,Basu2022_ObsPack
+NGM,Western Pacific Ocean,N/A,0.0,152.0,,TU,629,2006.2,2012.7,Basu2022_ObsPack
+NHA,"Offshore Portsmouth, New Hampshire (Isles of Shoals)",United States,42.95,-70.63,0.0,NOAA,3789,2003.7,2020.1,Basu2022_ObsPack
+NMB,Gobabeb,Namibia,-23.58,15.03,456.0,MPI-BGC; NOAA,1531,1997.0,2019.7,Basu2022_ObsPack
+NOV,Novosibirsk,Russia,55.0,83.0,0.0,NIES,2524,2000.1,2016.0,Basu2022_ObsPack
+NOY,Noyabrsk,Russia,63.4292,75.78,108.0,NIES,84296,2005.8,2018.0,Basu2022_ObsPack
+NSA,"North Slope, Alaska",United States,70.17970275878906,-150.59689331054688,,NOAA,379,2015.3,2016.6,Basu2022_ObsPack
+NWB,NW Baltimore,United States,39.3445,-76.6851,135.0,NOAA,54,2018.3,2019.6,Basu2022_ObsPack
+NWF,"Niwot Ridge Forest, Colorado",United States,40.03,-105.55,3050.0,NOAA,893,2006.1,2009.9,Basu2022_ObsPack
+NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,NOAA,7369,1983.4,2020.1,Basu2022_ObsPack
+NYA,"Ny-Alesund, Svalbard",Norway and Sweden,78.917,11.933,40.0,NIPR,947,2000.0,2020.0,Basu2022_ObsPack
+NZL,Kaitorete Spit,New Zealand,-43.83,172.63,3.0,NOAA,182,1983.4,1985.3,Basu2022_ObsPack
+OBN,Obninsk,Russia,55.11,36.6,183.0,NOAA,455,2004.0,2009.3,Basu2022_ObsPack
+OIL,"Oglesby, Illinois",United States,41.28,-88.94,192.6,NOAA,424,2004.7,2005.9,Basu2022_ObsPack
+OPW,"Olympic Peninsula, Washington",United States,48.2997,-124.6276,486.0,NOAA,310,1984.8,1990.4,Basu2022_ObsPack
+ORL,Orleans,France,47.83,2.5,175.0,LSCE,2156,2000.0,2017.6,Basu2022_ObsPack
+OXK,Ochsenkopf,Germany,50.0301,11.8084,1022.0,MPI-BGC; NOAA,3016,2003.1,2019.4,Basu2022_ObsPack
+PAL,"Pallas-Sammaltunturi, GAW Station",Finland,67.9733,24.1157,565.0,FMI; NOAA,111998,2002.0,2019.9,Basu2022_ObsPack
+PCO,"Pico, Azores",Portugal,38.47,-28.4,2225.0,NOAA,12,2010.6,2011.5,Basu2022_ObsPack
+PDI,Pha Din,Vietnam,21.5731,103.5157,1466.0,EMPA,15978,2014.1,2016.9,Basu2022_ObsPack
+PDM,Pic Du Midi,France,42.9372,0.1411,2877.0,LSCE,30897,2001.4,2018.0,Basu2022_ObsPack
+PFA,"Poker Flat, Alaska",United States,64.9,-148.76,210.0,NOAA,4799,1999.5,2020.1,Basu2022_ObsPack
+PIP,off the Pacific coast of Sendai,Japan,37.81,141.35,0.0,TU,2044,2000.1,2010.6,Basu2022_ObsPack
+POC,Pacific Ocean,N/A,0.0,-147.1699981689453,0.0,NIWA; NOAA,13761,1987.0,2017.5,Basu2022_ObsPack
+PRS,Plateau Rosa Station,Italy,45.93,7.7,3480.0,RSE,67249,2005.0,2017.0,Basu2022_ObsPack
+PSA,"Palmer Station, Antarctica",United States,-64.92,-64.0,10.0,NOAA,3520,1983.0,2019.8,Basu2022_ObsPack
+PTA,"Point Arena, California",United States,38.9546,-123.7408,17.0,NOAA,995,1999.0,2011.4,Basu2022_ObsPack
+PUY,Puy de Dome,France,45.7719,2.9658,1465.0,LSCE,50727,2001.6,2018.1,Basu2022_ObsPack
+RBA,"Roof Butte, Arizona",United States,36.4614,-109.0956,2982.0,IPEN,1536,2010.0,2016.4,Basu2022_ObsPack
+RPB,Ragged Point,Barbados,13.165,-59.432,15.0,AGAGE; NOAA,161876,1987.9,2020.1,Basu2022_ObsPack
+RTA,Rarotonga,Cook Islands,-21.25,-159.83,3.0,NOAA,3527,2000.3,2020.1,Basu2022_ObsPack
+RYO,Ryori,Japan,39.03,141.82,260.0,JMA,137326,2000.0,2018.0,Basu2022_ObsPack
+S2K,"Safari 2000, Southern Africian Regional Science",South Africa,-24.260000228881836,28.5,-999.0,NOAA,183,2000.6,2000.7,Basu2022_ObsPack
+SAN,Santarem,Brazil,-2.85,-54.95,78.0,NOAA; IPEN,3812,2000.9,2015.3,Basu2022_ObsPack
+SCA,"Offshore Charleston, South Carolina",United States,32.77,-79.55,0.0,NOAA,3446,2003.6,2020.0,Basu2022_ObsPack
+SCS,South China Sea,N/A,12.0,111.0,0.0,NOAA,3268,1991.5,1998.8,Basu2022_ObsPack
+SCT,"Beech Island, South Carolina",United States,33.4057,-81.8334,115.2,NOAA,108197,2008.6,2020.1,Basu2022_ObsPack
+SDZ,Shangdianzi,Peoples Republic of China,40.65,117.117,293.0,NOAA,592,2009.7,2015.7,Basu2022_ObsPack
+SEY,Mahe Island,Seychelles,-4.6824,55.5325,2.0,NOAA,3505,1983.4,2019.9,Basu2022_ObsPack
+SGI,"Bird Island, South Georgia",United Kingdom,-54.0,-38.05,30.0,NOAA,143,1989.1,1992.6,Basu2022_ObsPack
+SGP,"Southern Great Plains, Oklahoma",United States,36.607,-97.489,314.0,NOAA,9722,1998.2,2020.1,Basu2022_ObsPack
+SHM,"Shemya Island, Alaska",United States,52.7112,174.126,23.0,NOAA,3126,1985.7,2020.0,Basu2022_ObsPack
+SIO,"La Jolla, California",United States,32.83,-117.27,14.0,NOAA,41,1984.1,1986.7,Basu2022_ObsPack
+SIS,Shetland Islands,Scotland,60.089,-1.255,30.0,MPI-BGC; CSIRO,2077,2000.0,2017.7,Basu2022_ObsPack
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,AGAGE; NOAA,173902,1983.3,2020.0,Basu2022_ObsPack
+SOD,Sodankyla,Finland,67.3618,26.6382,179.0,FMI,46209,2012.0,2018.0,Basu2022_ObsPack
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,NOAA,4940,1983.1,2019.9,Basu2022_ObsPack
+SSL,"Schauinsland, Baden-Wuerttemberg",Germany,47.92,7.92,1205.0,UBA,101225,2000.0,2014.0,Basu2022_ObsPack
+STM,Ocean Station M,Norway,66.0,2.0,0.0,NOAA,4780,1983.3,2009.9,Basu2022_ObsPack
+STR,"Sutro Tower, San Francisco, California",United States,37.7553,-122.4517,254.0,NOAA,6567,2007.8,2020.1,Basu2022_ObsPack
+SUM,Summit,Greenland,72.5962,-38.422,3209.54,NOAA,1922,1997.5,2019.6,Basu2022_ObsPack
+SUR,Surgut,Russia,61.2,73.2,40.0,NIES,1354,2000.1,2015.9,Basu2022_ObsPack
+SYO,"Syowa Station, Antarctica",Japan,-69.0125,39.59,14.0,NOAA,1471,1986.1,2019.1,Basu2022_ObsPack
+TAB,Tabatinga,Brazil,-5.95,-70.07,,IPEN,495,2010.0,2012.9,Basu2022_ObsPack
+TAC,Tacolneston,United Kingdom,52.5177,1.1386,56.0,NOAA,108,2014.4,2016.0,Basu2022_ObsPack
+TAO,"Toronto Atmospheric Observatory, University of Toronto, Ontario",Canada,43.66,-79.4,100.0,EC,16843,2013.8,2016.0,Basu2022_ObsPack
+TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,NOAA,3787,1990.9,2020.0,Basu2022_ObsPack
+TDA,over Japan between Sendai and Fukuoka,Japan,36.224998474121094,135.92498779296875,-99.99,TU,2690,2000.0,2010.6,Basu2022_ObsPack
+TEF,Tefe,Brazil,-3.6,-66.5,,IPEN,400,2013.1,2015.2,Basu2022_ObsPack
+TER,Teriberka,Russia,69.2,35.1,40.0,MGO,654,2003.1,2017.0,Basu2022_ObsPack
+TGC,"Offshore Corpus Christi, Texas",United States,27.73,-96.86,0.0,NOAA,2777,2003.7,2020.0,Basu2022_ObsPack
+THD,"Trinidad Head, California",United States,41.0541,-124.151,107.0,AGAGE; NOAA,180080,2000.0,2020.0,Basu2022_ObsPack
+TIK,Hydrometeorological Observatory of Tiksi,Russia,71.5965,128.8887,19.0,MGO; FMI; NOAA,57215,2010.7,2018.7,Basu2022_ObsPack
+TLL,El Tololo,Chile,-30.1725,-70.7992,2220.0,EMPA,18255,2013.3,2015.8,Basu2022_ObsPack
+TMD,"Thurmont, Maryland",United States,39.5768,-77.4881,561.0,NOAA,102,2017.6,2019.7,Basu2022_ObsPack
+TOM,Atmospheric Tomography Mission (ATom),United States,15.423807144165039,-114.43854522705078,,NOAA,589,2016.6,2017.1,Basu2022_ObsPack
+TPD,"Turkey Point, Ontario",Canada,42.6354,-80.5577,231.0,EC,38996,2012.8,2017.4,Basu2022_ObsPack
+TPI,Taiping Island,Taiwan,10.3786,114.3711,4.0,NOAA,54,2019.4,2019.9,Basu2022_ObsPack
+TRM,Tromelin Island,France,-15.88,54.52,8.0,LSCE,130,2000.0,2007.3,Basu2022_ObsPack
+TRN,Trainou,France,47.9647,2.1125,131.0,LSCE,91644,2006.7,2012.3,Basu2022_ObsPack
+TTA,Tall Tower Angus,United Kingdom,56.5551,-2.9858,400.0,UOB,44137,2006.0,2012.8,Basu2022_ObsPack
+ULB,Ulaanbaatar,Mongolia,47.4,106.0,1350.0,NOAA,556,2004.2,2009.2,Basu2022_ObsPack
+USH,Ushuaia,Argentina,-54.8484,-68.3106,12.0,NOAA,1348,1994.7,2019.7,Basu2022_ObsPack
+UTA,"Wendover, Utah",United States,39.9018,-113.7181,1327.0,NOAA,2827,1993.3,2020.0,Basu2022_ObsPack
+UTO,Uto,Finland,59.7839,21.3672,8.0,FMI,43800,2012.2,2018.0,Basu2022_ObsPack
+UUM,Ulaan Uul,Mongolia,44.4516,111.0956,1007.0,NOAA,2701,1992.0,2019.9,Basu2022_ObsPack
+VGN,Vaganovo,Russia,54.4972,62.3247,192.0,NIES,58739,2008.4,2018.0,Basu2022_ObsPack
+VKV,Voeikov,Russia,59.95,30.7,70.0,MGO,26250,2008.3,2013.0,Basu2022_ObsPack
+WBI,"West Branch, Iowa",United States,41.7248,-91.3529,241.7,NOAA,6769,2004.7,2020.1,Basu2022_ObsPack
+WGC,"Walnut Grove, California",United States,38.265,-121.4911,0.0,NOAA,305565,2007.7,2020.1,Basu2022_ObsPack
+WIS,"Weizmann Institute of Science at the Arava Institute, Ketura",Israel,29.9646,35.0605,151.0,NOAA,2418,1995.9,2020.0,Basu2022_ObsPack
+WKT,"Moody, Texas",United States,31.3149,-97.3269,251.0,NOAA,4429,2001.1,2020.1,Basu2022_ObsPack
+WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,NOAA,3090,1990.6,2019.9,Basu2022_ObsPack
+WPC,Western Pacific Cruise,N/A,2.4100000858306885,149.91000366210938,0.0,NOAA,593,2004.3,2013.4,Basu2022_ObsPack
+WSA,"Sable Island, Nova Scotia",Canada,43.9322,-60.0093,5.0,EC,80469,2000.0,2017.4,Basu2022_ObsPack
+YAK,Yakutsk,Russia,62.0886,129.3558,264.0,NIES,31016,2007.7,2013.9,Basu2022_ObsPack
+YON,Yonagunijima,Japan,24.47,123.02,30.0,JMA,137608,2000.0,2018.0,Basu2022_ObsPack
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NILU; NOAA,102948,1994.1,2020.0,Basu2022_ObsPack
+ZGT,Zingst,Germany,54.43,12.73,1.0,UBA,23729,2000.0,2003.1,Basu2022_ObsPack
+ZOT,"Zotino, Siberia",Russia,60.75,89.38,111.0,MPI-BGC,1498,2006.8,2017.2,Basu2022_ObsPack
+ZSF,Zugspitze / Schneefernerhaus,Germany,47.42,10.98,2656.0,UBA,115768,2002.0,2018.0,Basu2022_ObsPack
+comment,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NOAA,222779,1983,2024,NOAA_GML_2025
