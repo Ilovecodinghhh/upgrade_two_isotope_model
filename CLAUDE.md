@@ -17,8 +17,6 @@ Methane dual-isotope (δ¹³C + δD) box model suite for source partitioning of 
 ├── 3x3_one.py                 # Simultaneous δ¹³C+δD, global 1-box (3×3 solve)
 ├── 3x3_two.py                 # Simultaneous δ¹³C+δD, NH/SH 2-box
 ├── 3x3_three.py               # Simultaneous δ¹³C+δD, NHext/Trop/SHext 3-box
-├── Output_2x2_{one,two,three}/ # Model outputs (config.json, results.csv, results.png)
-├── Output_3x3_{one,two,three}/
 ├── rel/                       # Input data files (observations, source signatures, MC samples)
 │   ├── data/                  # CSV/XLSX data: CH₄, δ¹³C, δD, CarbonTracker BB, source sigs
 │   ├── build_*_sources.py     # Scripts to build regional source signature inputs
@@ -26,15 +24,19 @@ Methane dual-isotope (δ¹³C + δD) box model suite for source partitioning of 
 ├── experiments/               # Focused analysis experiments
 │   ├── dD_threshold/          # δD detection threshold analysis
 │   ├── Hemispheric_Divergence/ # NH vs SH isotope divergence study
-│   ├── KIE_sensitivity/       # KIE parameter sensitivity tests
-│   └── KIE_immunity/          # KIE immunity analysis
+│   ├── KIE_immunity/          # KIE immunity analysis (dual-isotope manuscript + review)
+│   └── KIE_sensitivity/       # KIE parameter sensitivity tests (multi-phase analysis pipeline)
 ├── sitesdata/                 # Site-level measurement data (δD, δ¹³C, CH₄ ppb)
 │   ├── isotope_dD/            # 35 stations, Riddell-Young 2025
 │   ├── isotope_d13C/          # 25 stations, NOAA/INSTAAR 2023
-│   └── methane_ppb/           # 91 stations, NOAA GML 2025
+│   ├── methane_ppb/           # 91 stations, NOAA GML 2025
+│   └── DATA_COLLECTION_REPORT.md
 ├── ImportantReferences/       # Reference papers and their supplement datasets
-├── Old_files_before_organize/ # Legacy scripts (kept for reference)
-└── md_files/                  # Analysis notes and summaries
+├── Old_files_before_organize/ # Legacy scripts and notes (reference only, paths may be stale)
+├── dD_Gap_Fixed.md            # Documentation: hemispheric δD data gap fix (2020–2023)
+├── KIE_Used_Previous_Study.md # Survey of OH-¹³C KIE values across 16 publications
+├── Primary_Annual_Database.md # Data sources, processing, citations for the model inputs
+└── .gitignore                 # Ignores __pycache__/, Output/, .DS_Store, Excel temp files
 ```
 
 ## Model Variant Naming Convention
@@ -60,7 +62,7 @@ python3 2x2_one.py
 # Run with custom config via command-line args (see --help)
 python3 3x3_one.py --kie sampled --lifetime time_varying
 
-# Output goes to Output_{variant}/ as config.json, results.csv, results.png
+# Output goes to Output/ (gitignored) as config.json, results.csv, results.png
 ```
 
 ## Dependencies
@@ -83,6 +85,10 @@ python3 3x3_one.py --kie sampled --lifetime time_varying
 - `sites` — site-level data collection and organization
 - `three-box` — three-box model development
 
+## Experiments
+
+Each experiment under `experiments/` is a self-contained analysis with its own `figures/`, `results/`, `analysis/` subdirectories and manuscript/results markdown files. Key scripts in `KIE_sensitivity/` run as a multi-phase pipeline (`phase1_*.py` through `phase10_*.py`, `make_manuscript_figs.py`).
+
 ## Code Conventions
 
 - All isotope values in permil (‰); δ¹³C vs VPDB, δD vs VSMOW
@@ -90,3 +96,7 @@ python3 3x3_one.py --kie sampled --lifetime time_varying
 - Monte Carlo: 1000 iterations standard for uncertainty propagation
 - Results smoothed with 5-year running mean where noted
 - Constants: C13Std = 0.011113, DStd = 0.00015576
+
+## Notes on Old_files_before_organize/
+
+Contains legacy versioned scripts (v1.0 through v4.0) and past analysis notes. Paths inside may be stale. Consult only when you need historical context on earlier model iterations. The README.txt inside has guidance.
