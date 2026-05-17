@@ -190,6 +190,45 @@ experiments/KIE_sites/
 - **Moderate result:** Ratios are consistent at tropical MBL sites but diverge at high latitudes (implying source contamination). Tropical-only estimate constrains the ratio but with large uncertainty.
 - **Negative result:** Ratios scatter widely with no coherent pattern, or phase offsets are large everywhere, meaning source seasonality dominates and the OH signal can't be isolated from seasonal cycles alone. This is still publishable — it quantifies the source-contamination problem.
 
+## Two-Agent Workflow
+
+Each phase is executed through a **coder → reviewer** loop:
+
+### Roles
+
+**Coder agent:**
+- Writes the analysis script for the current phase
+- Runs it and verifies it produces output without errors
+- Commits code + results to the branch
+
+**Reviewer agent:**
+- Reviews the code for **clarity** (readability, comments, naming, structure, scientific correctness of implementation)
+- Gives a score from 1–10
+- If score **≥ 9**: phase is complete, move to the next phase
+- If score **< 9**: provides specific feedback; coder revises and resubmits
+
+### Loop
+
+```
+For each phase:
+  1. Coder writes + runs the script
+  2. Reviewer scores clarity (1–10) with line-specific feedback
+  3. If score < 9 → Coder revises → back to step 2
+  4. If score ≥ 9 → Commit, push, advance to next phase
+```
+
+### Review Criteria (clarity, scored 1–10)
+
+| Aspect | Weight | What to look for |
+|--------|--------|-----------------|
+| Code readability | 25% | Clear variable names, logical flow, no magic numbers |
+| Comments & docstrings | 25% | Functions documented, scientific reasoning explained inline |
+| Output quality | 20% | Figures labeled, axes titled, units shown, legends present |
+| Scientific correctness | 20% | Equations match plan, data handling is sound |
+| Structure | 10% | Imports organized, functions factored, no copy-paste blocks |
+
+---
+
 ## Relationship to Other Experiments
 
 - **KIE_sensitivity:** That experiment showed the OH-¹³C KIE drives a 35.5 pp discriminant in agreement-filter analysis and determines the FF trend sign. This experiment attempts to resolve the controversy from the **observational side** rather than the model side.
