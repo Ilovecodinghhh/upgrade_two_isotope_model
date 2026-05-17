@@ -330,6 +330,7 @@ From `rel/data/` MC ensembles:
 | Fig. 7 | 2×2 Saueressig vs Cantrell — δ¹³C and δD panels | `figures/fig7_2x2_saueressig_cantrell.png` |
 | Fig. 8 | Grand comparison: variance attribution across architectures | `figures/fig8_grand_comparison.png` |
 | Fig. 9 | OH-¹³C level shift comparison across architectures | `figures/fig9_level_shift_comparison.png` |
+| Fig. 10 | Cross-isotope contamination proof (heatmap + bar) | `figures/fig10_cross_contamination.png` |
 
 ---
 
@@ -341,6 +342,8 @@ From `rel/data/` MC ensembles:
 | 2×2 experiment code | `experiments/OH_KIE_importance/run_2x2_experiment.py` |
 | 3×3 figure generation | `experiments/OH_KIE_importance/make_figures.py` |
 | 2×2 figure generation | `experiments/OH_KIE_importance/make_2x2_figures.py` |
+| All figures (unified) | `experiments/OH_KIE_importance/make_all_figures.py` |
+| Experiment results | `experiments/OH_KIE_importance/RESULTS.md` |
 | 3×3 results JSON | `experiments/OH_KIE_importance/results/summary.json` |
 | 2×2 results JSON | `experiments/OH_KIE_importance/results/2x2_summary.json` |
 | Time series CSVs | `experiments/OH_KIE_importance/results/*_timeseries.csv` |
