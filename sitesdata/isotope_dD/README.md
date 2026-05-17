@@ -4,94 +4,136 @@
 
 | Metric | Value |
 |--------|-------|
-| **Total sites** | 18 |
-| **Northern Hemisphere** | 11 |
-| **Southern Hemisphere** | 7 |
-| **Earliest data** | 1988 |
-| **Latest data** | 2024 |
-| **Total approximate observations** | ~5,010 |
+| **Total station entries** | 35 |
+| **Unique physical locations** | 27 |
+| **MBL (Marine Boundary Layer) sites** | 23 |
+| **Northern Hemisphere** | 24 |
+| **Southern Hemisphere** | 11 |
+| **Earliest data** | 1988.6 (IMAU Neumayer, 1988) |
+| **Latest data** | 2024.9 |
+| **Total raw observations** | 7,691 |
+| **Labs contributing** | 4 (INSTAAR, MPI-BGC, IMAU, TU/NIPR) |
 
-## ⚠️ Important Note on δD Data Availability
+## Data Source
 
-**δD-CH₄ measurements are far sparser than CH₄ and δ¹³C measurements.** Only four laboratories worldwide have produced marine boundary layer (MBL) δD-CH₄ time series:
+All δD-CH₄ station data come from the **Riddell-Young et al. (2025) `dD_GlobMean` package**, which is the supplementary data for:
 
-1. **INSTAAR** (CU-Boulder / NOAA) — 10 MBL sites, 2005–2009
-2. **MPI-BGC** (Max Planck, Jena) — 6 MBL sites, 2010–2024
-3. **IMAU** (Utrecht University) — 5 MBL sites, 1988–2024 (longest record)
-4. **TU/NIPR** (Tohoku U. / Nat. Inst. Polar Research) — 2 MBL sites, 1995–2023
+> **Riddell-Young, B., et al. (2025).** Microbial driver of 2006–2023 CH₄ growth indicated by trends in atmospheric δD-CH₄ and δ¹³C-CH₄. *Proceedings of the National Academy of Sciences (PNAS)*.
 
-These data have been recently harmonized by **Riddell-Young et al. (2025, PNAS)** and **Dasgupta et al. (2025, EGUsphere)** to produce the first comprehensive global δD-CH₄ record.
+This package harmonizes δD-CH₄ measurements from four independent laboratories worldwide:
 
-## Data Sources & References
+| Lab | Full Name | # Stations | Period | Reference |
+|-----|-----------|------------|--------|-----------|
+| **INSTAAR** | Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML | 16 | 2004–2010 | Michel et al. (2023); White et al. (2023) |
+| **MPI-BGC** | Max Planck Institute for Biogeochemistry, Jena | 11 | 2010–2024 | Moossen et al. (unpublished) |
+| **IMAU** | Utrecht University, Institute for Marine and Atmospheric Research | 6 | 1988–2024 | Röckmann et al.; longest δD record |
+| **TU/NIPR** | Tohoku University / National Institute of Polar Research | 2 | 1995–2023 | Morimoto & Fujita |
 
-1. **Riddell-Young et al. (2025)** — Primary reference for the harmonized global δD-CH₄ record.
-   - *Citation:* Riddell-Young, B., et al. (2025). Microbial driver of 2006–2023 CH₄ growth indicated by trends in atmospheric δD-CH₄ and δ¹³C-CH₄. *PNAS*.
-   - *Data package:* `Riddell-Young_2025_dD_GlobMean` (includes station-level MC data)
-   - ⚠️ **Raw station-level δD data is NOT publicly available in a standard download portal** — it was compiled by the authors from individual lab datasets.
+### Inter-Laboratory Calibration
 
-2. **Dasgupta et al. (2025)** — Harmonisation of methane isotope ratio measurements from different laboratories using atmospheric samples.
-   - *Citation:* Dasgupta, B., et al. (2025). Harmonisation of methane isotope ratio measurements from different laboratories. *EGUsphere* [preprint]. https://doi.org/10.5194/egusphere-2025-2439
-   - This paper provides the inter-laboratory calibration offsets used to harmonize δD data.
+All data are harmonized to the **MPI scale** using Dasgupta et al. (2025) calibration offsets (applied in the pipeline):
 
-3. **Fujita et al. (2025)** — Used δD-CH₄ data in global CH₄ budget modeling.
-   - *Data:* Supplementary Dataset S1 includes simulated global δD-CH₄ from posterior scenarios.
+| Lab | Scale Adjustment (‰) | Uncertainty (‰) |
+|-----|----------------------|-----------------|
+| INSTAAR | +1.8 (Dasgupta) | ±1.6 |
+| MPI-BGC | 0.0 (reference) | 0.0 |
+| IMAU | +0.5 (Dasgupta) | ±2.2 |
+| TU/NIPR | 0.0 | ±1.6 |
 
-4. **Umezawa et al. (2018)** — Inter-laboratory comparison of δD measurements.
-   - *Citation:* Umezawa, T., et al. (2018). *Atmos. Meas. Tech.*, 11, 1059–1078.
+> **Dasgupta, B., et al. (2025).** Harmonisation of methane isotope ratio measurements from different laboratories using atmospheric samples. *EGUsphere* [preprint]. https://doi.org/10.5194/egusphere-2025-2439
 
-## Site Details
+## Station Details
 
-| Site | Location | Lat | Lon | Labs | Period | ~N obs |
-|------|----------|-----|-----|------|--------|--------|
-| ALT | Alert, Nunavut | 82.5 | -62.5 | INSTAAR; MPI-BGC | 2005–2024 | ~520 |
-| NYA | Ny-Ålesund, Svalbard | 78.9 | 11.9 | IMAU; TU/NIPR | 1988–2024 | ~800 |
-| ZEP | Ny-Ålesund, Svalbard (Zeppelin | 78.9 | 11.9 | MPI-BGC; IMAU | 2006–2024 | ~600 |
-| BRW | Barrow (Utqiaġvik), Alaska | 71.3 | -156.6 | INSTAAR | 2005–2009 | ~120 |
-| CBA | Cold Bay, Alaska | 55.2 | -162.7 | INSTAAR | 2005–2009 | ~80 |
-| MHD | Mace Head, Ireland | 53.3 | -9.9 | INSTAAR; IMAU | 2005–2024 | ~300 |
-| JFJ | Jungfraujoch, Switzerland | 46.5 | 8.0 | MPI-BGC | 2012–2017 | ~150 |
-| NWR | Niwot Ridge, Colorado | 40.0 | -105.6 | INSTAAR | 2005–2009 | ~120 |
-| KUM | Cape Kumukahi, Hawaii | 19.7 | -155.0 | INSTAAR | 2005–2009 | ~100 |
-| MLO | Mauna Loa, Hawaii | 19.5 | -155.6 | INSTAAR | 2005–2009 | ~120 |
-| CVO | Cape Verde Observatory | 16.9 | -24.9 | MPI-BGC | 2011–2017 | ~300 |
-| SMO | Tutuila, American Samoa | -14.2 | -170.6 | INSTAAR | 2005–2009 | ~100 |
-| NMB | Gobabeb, Namibia | -23.6 | 15.0 | MPI-BGC | 2013–2017 | ~200 |
-| AMS | Amsterdam Island | -37.8 | 77.5 | IMAU | 2006–2024 | ~200 |
-| CGO | Cape Grim, Tasmania | -40.7 | 144.7 | INSTAAR | 2005–2009 | ~100 |
-| SYO | Syowa Station, Antarctica | -69.0 | 39.6 | TU/NIPR | 1995–2023 | ~500 |
-| GVN | Neumayer Station, Antarctica | -70.7 | -8.2 | MPI-BGC; IMAU | 2006–2024 | ~600 |
-| SPO | South Pole, Antarctica | -90.0 | -24.8 | INSTAAR | 2005–2009 | ~100 |
+### MBL (Marine Boundary Layer) Sites — Used for Global Mean Construction
 
-## Inter-Laboratory Calibration
+| Site ID | Location | Country | Lat | Lon | Lab | Period | N obs |
+|---------|----------|---------|-----|-----|-----|--------|-------|
+| alt | Alert, Nunavut | Canada | 82.5 | -62.5 | INSTAAR | 2005–2010 | 237 |
+| altMPI | Alert | Canada | 82.5 | -62.5 | MPI-BGC | 2011–2025 | 337 |
+| vrsMPI | Villum Research Station, Stati | Greenland | 81.6 | -16.6 | MPI-BGC | 2020–2024 | 142 |
+| nyaNIPR | nyvolesund station | Norway | 78.9 | 11.9 | TU/NIPR | 2006–2024 | 800 |
+| zep | Ny-Alesund, Svalbard | Norway | 78.9 | 11.9 | INSTAAR | 2008–2010 | 35 |
+| zepIMAU | Ny-Alesund, Svalbard | Norway | 78.9 | 11.9 | IMAU | 2013–2024 | 600 |
+| brw | Barrow Atmospheric Baseline Ob | United States | 71.3 | -156.6 | INSTAAR | 2005–2010 | 106 |
+| brwIMAU | Barrow Atmospheric Baseline Ob | United States | 71.3 | -156.6 | IMAU | 2022–2024 | 127 |
+| sisMPI | Shetland Islands | United Kingdom | 59.9 | -1.3 | MPI-BGC | 2011–2025 | 646 |
+| cba | Cold Bay, Alaska | United States | 55.2 | -162.7 | INSTAAR | 2005–2010 | 155 |
+| mhd | Mace Head, County Galway | Ireland | 53.3 | -9.9 | INSTAAR | 2005–2010 | 83 |
+| kum | Cape Kumukahi, Hawaii | United States | 19.6 | -154.9 | INSTAAR | 2005–2010 | 120 |
+| cvoMPI | Cape Verde Atmospheric Observa | Cape Verde | 16.9 | -24.9 | MPI-BGC | 2011–2025 | 575 |
+| asc | Ascension Island | United Kingdom | -8.0 | -14.4 | INSTAAR | 2005–2010 | 192 |
+| smo | Tutuila | American Samoa | -14.2 | -170.6 | INSTAAR | 2005–2010 | 115 |
+| smoIMAU | Tutuila | American Samoa | -14.2 | -170.6 | IMAU | 2022–2024 | 104 |
+| namMPI | Gobabeb station | Namibia | -23.6 | 15.1 | MPI-BGC | 2013–2022 | 307 |
+| cgo | Cape Grim, Tasmania | Australia | -40.7 | 144.7 | INSTAAR | 2005–2009 | 69 |
+| cgoIMAU | Cape Grim, Tasmania | Australia | -40.7 | 144.7 | IMAU | 2023–2024 | 59 |
+| syoNIPR | Syowa station | Antarctica | -69.0 | 39.6 | TU/NIPR | 1995–2023 | 162 |
+| gvnMPI | Neumayer Station | Antarctica | -70.7 | -8.3 | MPI-BGC | 2018–2024 | 245 |
+| gvnIMAU | Neumayer Station | Antarctica | -70.7 | -8.3 | IMAU | 1989–2020 | 163 |
+| spo | South Pole | Antarctica | -90.0 | -24.8 | INSTAAR | 2005–2010 | 144 |
 
-All δD data are harmonized to the **MPI scale** using offsets from Umezawa et al. (2018) and Dasgupta et al. (2025):
+### Non-MBL Sites (continental/elevated, not used in global mean)
 
-| Lab | MPI Offset (Umezawa) | MPI Offset (Dasgupta) |
-|-----|---------------------|----------------------|
-| INSTAAR | −11.5 ± 1.5‰ | −10.9 ± 2.2‰ |
-| MPI-BGC | = (reference) | = (reference) |
-| IMAU | +4.2 ± 1.2‰ | +2.4 ± 1.6‰ |
-| TU/NIPR | −8.9 ± 1.3‰ | −10.8 ± 1.6‰ |
+| Site ID | Location | Country | Lat | Lon | Lab | Period | N obs |
+|---------|----------|---------|-----|-----|-----|--------|-------|
+| kjnMPI | kjolnes | Norway | 70.8 | 29.2 | MPI-BGC | 2015–2021 | 176 |
+| zotMPI | Zotino Tall Tower Observatory, | Russia | 60.8 | 89.3 | MPI-BGC | 2010–2022 | 633 |
+| bal | Baltic Sea | Poland | 55.4 | 17.2 | INSTAAR | 2005–2010 | 221 |
+| bikMPI | Bialystok | Poland | 53.2 | 23.0 | MPI-BGC | 2013–2021 | 151 |
+| oxkMPI | Ochsenkopf | Germany | 50.0 | 11.8 | MPI-BGC | 2013–2019 | 243 |
+| jfjMPI | Jungfraujoch | Switzerland | 46.5 | 8.0 | MPI-BGC | 2013–2025 | 253 |
+| lef | Park Falls, Wisconsin | United States | 46.0 | -90.3 | INSTAAR | 2005–2008 | 75 |
+| bsc | Black Sea, Constanta | Romania | 44.2 | 28.7 | INSTAAR | 2005–2008 | 64 |
+| azr | Terceira Island, Azores | Portugal | 38.8 | -27.4 | INSTAAR | 2005–2010 | 71 |
+| mlo | Mauna Loa, Hawaii | United States | 19.5 | -155.6 | INSTAAR | 2005–2010 | 202 |
+| mloIMAU | Mauna Loa, Hawaii | United States | 19.5 | -155.6 | IMAU | 2023–2024 | 58 |
+| ato | Amazonas | Brazil | -2.1 | -59.0 | INSTAAR | 2022–2023 | 21 |
+
+## Data Files in This Directory
+
+### Raw Observations (`raw_observations/`)
+- **35 files**, one per station, named `{site_id}_01D0_dat.txt`
+- Format: two columns — `decimal_year` and `δD_permil` (‰ VSMOW)
+- These are the individual flask measurements before any smoothing
+
+### Smoothed Curves (`smoothed_curves/`)
+- **35 `_curves_rsd.txt` files** — Best-fit smoothed curve + trend + residual
+  - Columns: `decimal_date`, `smoothed_curve`, `trend`, `residual_std_dev`
+- **Note**: The full Monte Carlo smoothed curves (1000 iterations per station, `*_smoothedMC.txt`) are in the original package at:
+  `ImportantReferences/Riddell-Young2025PNAS_DS/Riddell-Young_2025_dD_GlobMean/Riddell-Young_2025_dD_GlobMean/output/`
+
+### Global/Hemispheric Means
+- `glob_ann_dD.xlsx` — Published annual global mean δD-CH₄
+- `GlobMean_dD_dei_DasguptaCal_noBUDS.csv` — Global mean time series (Dasgupta calibration)
+- `GlobMean_dD_iterations_DasguptaCal_noBUDS.xlsx` — MC iterations for global mean
+- `HemMean_dD_annual_DasguptaCal_noBUDS.csv` — NH/SH annual means
+- `HemMean_dD_dei_DasguptaCal_noBUDS.csv` — NH/SH weekly means
+
+### Metadata
+- `siteinfo_all_ch4h2.txt` — Station metadata (site|name|country|lat|lon|elev|intake_ht|utc2lst|n/a|mbl_flag)
+- `dD_sites_inventory.csv` — Full inventory CSV with all fields
 
 ## Spatial Coverage
 
-The δD network is heavily weighted toward **high latitudes**:
-- **Arctic**: ALT, BRW, NYA/ZEP (all >70°N)
-- **Northern midlatitudes**: MHD, NWR, CBA, JFJ
-- **Subtropics**: MLO, KUM, CVO
-- **Southern midlatitudes**: CGO, AMS
-- **Antarctic**: SPO, GVN, SYO
+The δD-CH₄ network covers:
+- **High Arctic (70–83°N)**: ALT, BRW, NYA/ZEP, KJN, VRS, SIS (6 locations)
+- **Northern midlatitudes (30–70°N)**: MHD, BAL, BIK, OXK, JFJ, LEF, CBA, AZR, BSC, ZOT (10 locations)
+- **Subtropics/Tropics (30°S–30°N)**: KUM, MLO, CVO, ASC, ATO, SMO (6 locations)
+- **Southern midlatitudes (30–70°S)**: CGO, NAM (2 locations)
+- **Antarctic (>60°S)**: GVN, SYO, SPO (3 locations)
 
-**⚠️ Gap: Very few tropical δD-CH₄ sites exist**, which is a key limitation for understanding tropical methane sources.
+**⚠️ Key gap**: Limited tropical coverage, especially over continental tropics (only ATO/Amazonas, recently started 2021).
 
-## Notes
+## Full Citations
 
-- δD values are reported in **‰ VSMOW** (Vienna Standard Mean Ocean Water)
-- δD is sensitive to both source water isotopic composition and atmospheric oxidation (KIE)
-- Complementary to δ¹³C for distinguishing microbial vs. thermogenic sources
-- **Raw station data availability**: Contact individual labs (MPI, IMAU, NIPR, INSTAAR) for access
-- The harmonized global mean time series is available in the repository under `rel/data/`
+1. **Riddell-Young, B., Englund Michel, S., Lan, X., Tans, P., Röckmann, T., Dasgupta, B., Oh, Y., Bruhwiler, L., Fujita, R., Umezawa, T., Morimoto, S., and Miller, J. (2025).** Microbial driver of 2006–2023 CH₄ growth indicated by trends in atmospheric δD-CH₄ and δ¹³C-CH₄. *PNAS*.
+
+2. **Dasgupta, B., et al. (2025).** Harmonisation of methane isotope ratio measurements from different laboratories using atmospheric samples. *EGUsphere* [preprint]. https://doi.org/10.5194/egusphere-2025-2439
+
+3. **Umezawa, T., et al. (2018).** Interlaboratory comparison of δ¹³C and δD measurements of atmospheric CH₄ for combined use of data sets from different laboratories. *Atmospheric Measurement Techniques*, 11, 1207–1231.
+
+4. **Michel, S.E., Clark, J.R., Vaughn, B.H., et al. (2023).** INSTAAR Stable Isotopic Composition of Atmospheric Methane. NOAA GML Carbon Cycle Cooperative Global Air Sampling Network. https://doi.org/10.15138/G3PM-4F05
 
 ## Map
 
-See `dD_sites_map.png` for the spatial distribution of all sites.
+See `dD_sites_map.png` for the spatial distribution of all sites, color-coded by laboratory.

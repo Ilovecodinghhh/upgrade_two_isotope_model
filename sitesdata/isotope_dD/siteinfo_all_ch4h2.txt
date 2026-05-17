@@ -1,0 +1,37 @@
+alt | Alert, Nunavut | Canada | 82.45 | -62.51 | 185.0 | 0 | 5 | n/a | 1
+altMPI | Alert | Canada | 82.45 | -62.51 | 200.0 | 5.0 | 4 | n/a | 1
+asc | Ascension Island | United Kingdom | -7.97 | -14.4 | 85.0 | 0 | 1 | n/a | 1
+ato | Amazonas | Brazil | -2.14 | -58.99 | 120.0 | 321.0 | 3 | n/a | 0
+azr | Terceira Island, Azores | Portugal | 38.77 | -27.38 | 19.0 | 0 | 1 | n/a | 0
+bal | Baltic Sea | Poland | 55.35 | 17.22 | 3.0 | 0 | -1 | n/a | 0
+bikMPI | Bialystok | Poland | 53.23 | 23.03 | 183.0 | 300.0 | -2 | n/a | 0
+brw | Barrow Atmospheric Baseline Observatory | United States | 71.32 | -156.61 | 11.0 | 0 | 9 | n/a | 1
+brwIMAU | Barrow Atmospheric Baseline Observatory | United States | 71.32 | -156.61 | 11.0 | 0 | 9 | n/a | 1
+bsc | Black Sea, Constanta | Romania | 44.18 | 28.66 | 0.0 | 0 | -2 | n/a | 0
+cba | Cold Bay, Alaska | United States | 55.21 | -162.72 | 21.34 | 0 | 9 | n/a | 1
+cgo | Cape Grim, Tasmania | Australia | -40.68 | 144.69 | 94.0 | 0 | -10 | n/a | 1
+cgoIMAU | Cape Grim, Tasmania | Australia | -40.68 | 144.69 | 94.0 | 0 | -10 | n/a | 1
+cvoMPI | Cape Verde Atmospheric Observatory | Cape Verde | 16.86 | -24.87 | 10.0 | 30.0 | 1 | n/a | 1
+gvnMPI | Neumayer Station | Antarctica | -70.67 | -8.27 | 40.0 | 4.0 | 0 | n/a | 1
+gvnIMAU | Neumayer Station | Antarctica | -70.67 | -8.27 | 40.0 | 4.0 | 0 | n/a | 1
+jfjMPI | Jungfraujoch | Switzerland | 46.55 | 7.99 | 3578.0 | 0.0 | -2 | n/a | 0
+kjnMPI | kjolnes | Norway | 70.85 | 29.23 | 10.0 | 0.0 | -2 | n/a | 0
+kum | Cape Kumukahi, Hawaii | United States | 19.56 | -154.89 | 8.0 | 0 | 10 | n/a | 1
+lef | Park Falls, Wisconsin | United States | 45.95 | -90.27 | 472.0 | 0 | 6 | n/a | 0
+mhd | Mace Head, County Galway | Ireland | 53.33 | -9.90 | 5.0 | 0 | 0 | n/a | 1
+mlo | Mauna Loa, Hawaii | United States | 19.54 | -155.58 | 3397.0 | 0 | 10 | n/a | 0
+mloIMAU | Mauna Loa, Hawaii | United States | 19.54 | -155.58 | 3397.0 | 0 | 10 | n/a | 0
+namMPI | Gobabeb station | Namibia | -23.56 | 15.05 | 410.0 | 21.0 | -2 | n/a | 1
+nyaNIPR | nyvolesund station | Norway | 78.92 | 11.92 | 0.0 | 3.0 | 0 | n/a | 1
+oxkMPI | Ochsenkopf | Germany | 50.03 | 11.81 | 1022 | 163 | -2 | n/a | 0
+sisMPI | Shetland Islands | United Kingdom | 59.85 | -1.27 | 20.0 | 5.0 | 1 | n/a | 1
+smo | Tutuila | American Samoa | -14.25 | -170.56 | 42.0 | 0 | 11 | n/a | 1
+smoIMAU | Tutuila | American Samoa | -14.25 | -170.56 | 42.0 | 0 | 11 | n/a | 1
+spo | South Pole | Antarctica | -89.98 | -24.8 | 2810.0 | 0 | -12 | n/a | 1
+syoNIPR | Syowa station | Antarctica | -69.01 | 39.58 | 29.1 | 8.0 | 0 | n/a | 1
+vrsMPI | Villum Research Station, Station Nord | Greenland | 81.58 | -16.64 | 24.0 | 10.0 | 1 | n/a | 1
+zep | Ny-Alesund, Svalbard | Norway | 78.91 | 11.89 | 474 | 0 | -1 | n/a | 1
+zepIMAU | Ny-Alesund, Svalbard | Norway | 78.91 | 11.89 | 474 | 0 | -1 | n/a | 1
+zotMPI | Zotino Tall Tower Observatory, Siberia | Russia | 60.8 | 89.35 | 114.0 | 300.0 | -7 | n/a | 0
+
+
