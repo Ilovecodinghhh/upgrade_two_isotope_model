@@ -1,0 +1,109 @@
+# number_of_header_lines: 46
+# comment:  
+# comment:  ************ USE OF GML DATA ****************
+# comment:  
+# comment: These data are made freely available to the public and the scientific
+# comment: community in the belief that their wide dissemination will lead to
+# comment: greater understanding and new scientific insights. To ensure that GML
+# comment: receives fair credit for their work please include relevant citation
+# comment: text in publications. We encourage users to contact the data providers,
+# comment: who can provide detailed information about the measurements and
+# comment: scientific insight.  In cases where the data are central to a
+# comment: publication, coauthorship for data providers may be appropriate.
+# comment: 
+# comment: 
+# comment: Please see accompanying README file, if available, for citation text.
+# comment:  
+# comment: Every effort is made to produce the most accurate and precise
+# comment: measurements possible.  However, we reserve the right to make
+# comment: corrections to the data based on recalibration of standard gases
+# comment: or for other reasons deemed scientifically justified.
+# comment: 
+# comment: We are not responsible for results and conclusions based on use
+# comment: of these data without regard to this warning.
+# comment: 
+# contact_parameter: CH4 CCGG (Individual Flasks)
+# contact_name: Xin Lan
+# contact_telephone: (999) 999-9999
+# contact_email: xin.lan@noaa.gov
+# comment: 
+# comment:  ************ RECIPROCITY AGREEMENT ***************
+# comment: 
+# comment:
+# comment:  ************ DATA DESCRIPTION ***************
+# comment:
+# description_site-code: tpi
+# description_project-abbr: ccg_surface
+# description_strategy-abbr: flask
+# description_analysis-constraints: flag:..%
+# description_creation-time: 2025-08-15 10:17:50
+# comment:
+# comment:  ************ DATA DOCUMENTATION ***************
+# comment:
+# comment: Please refer to the species-specific README file in the
+# comment: appropriate directory folder at https://gml.noaa.gov/aftp/data/trace_gases/.
+# comment:
+# data_fields: site year month value
+TPI 2019  5  1854.58
+TPI 2019  6  1844.36
+TPI 2019  7  1857.79
+TPI 2019  8  1863.51
+TPI 2019  9  1866.76
+TPI 2019 10  1904.17
+TPI 2019 11  1927.38
+TPI 2019 12  1923.77
+TPI 2020  1  1935.63
+TPI 2020  2  1929.31
+TPI 2020  3  1908.90
+TPI 2020  4  1908.89
+TPI 2020  5  1886.87
+TPI 2020  6  1856.79
+TPI 2020  7  1857.25
+TPI 2020  8  1865.84
+TPI 2020  9  1872.20
+TPI 2020 10  1899.17
+TPI 2020 11  1926.88
+TPI 2020 12  1931.28
+TPI 2021  1  1949.34
+TPI 2021  2  1952.46
+TPI 2021  3  1936.48
+TPI 2021  4  1940.78
+TPI 2021  5  1912.87
+TPI 2021  6  1878.29
+TPI 2021  7  1880.97
+TPI 2021  8  1874.98
+TPI 2021  9  1892.33
+TPI 2021 10  1934.59
+TPI 2021 11  1952.66
+TPI 2021 12  1962.71
+TPI 2022  1  1967.54
+TPI 2022  2  1956.39
+TPI 2022  3  1946.55
+TPI 2022  4  1932.17
+TPI 2022  5  1905.86
+TPI 2022  6  1892.45
+TPI 2022  7  1904.92
+TPI 2022  8  1902.66
+TPI 2022  9  1894.41
+TPI 2022 10  1912.92
+TPI 2022 11  1945.56
+TPI 2022 12  1985.36
+TPI 2023  4  1960.67
+TPI 2023  5  1925.57
+TPI 2023  6  1904.19
+TPI 2023  7  1912.77
+TPI 2023  8  1908.06
+TPI 2023  9  1909.16
+TPI 2023 10  1939.07
+TPI 2023 11  1966.30
+TPI 2023 12  1988.16
+TPI 2024  1  2005.02
+TPI 2024  2  1990.17
+TPI 2024  3  1972.75
+TPI 2024  4  1951.43
+TPI 2024  5  1921.51
+TPI 2024  6  1909.09
+TPI 2024  7  1919.66
+TPI 2024  8  1915.80
+TPI 2024  9  1908.98
+TPI 2024 10  1938.64

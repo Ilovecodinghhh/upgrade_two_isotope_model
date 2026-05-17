@@ -1,0 +1,580 @@
+# header_lines : 190
+#
+# ------------------------------------------------------------->>>>
+# DATA SET NAME
+#
+# dataset_name: ch4c13_bhd_surface-flask_7_sil_event
+#
+# ------------------------------------------------------------->>>>
+# DESCRIPTION
+#
+# dataset_description: Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1998-2022.
+#
+# ------------------------------------------------------------->>>>
+# CITATION
+#
+# dataset_citation: Michel, S.E., Clark, J.R., Vaughn, B.H., Crotwell, M., Madronich, M., Moglia, E., Neff, D., Mund, J. (2023), University of Colorado, Institute of Arctic and Alpine Research (INSTAAR). Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global  Air Sampling Network, 1998-2022 Version: 2023-09-21  https://doi.org/10.15138/9p89-1x02
+#
+# ------------------------------------------------------------->>>>
+# FAIR USE POLICY
+#
+# dataset_fair_use: These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, coauthorship for data providers may be appropriate. 
+#
+# ------------------------------------------------------------->>>>
+# WARNING
+#
+# dataset_warning: Every effort is made to produce the most accurate and precise measurements possible.  However, we reserve the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  We are not responsible for results and conclusions based on use of these data without regard to this warning.
+#
+# ------------------------------------------------------------->>>>
+# GLOBAL ATTRIBUTES
+#
+# site_code : BHD
+# site_name : Baring Head Station
+# site_country : New Zealand
+# site_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/NWZE0001.GIF
+# site_latitude : -41.4083
+# site_longitude : 174.871
+# site_elevation : 85.0
+# site_elevation_unit : masl
+# site_position_comment : This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.
+# site_utc2lst : 12.0
+# site_utc2lst_comment : Add 'site_utc2lst' hours to convert a time stamp in UTC (Coordinated Universal Time) to LST (Local Standard Time).
+# dataset_creation_date : 2023-09-21T15:04:06.843113
+# dataset_num : 6
+# dataset_name : ch4c13_bhd_surface-flask_7_sil_event
+# dataset_parameter : ch4c13
+# dataset_parameter_name : Carbon-13/Carbon-12 in Methane
+# dataset_parameter_industrial_name : Carbon-13/Carbon-12 in Methane
+# dataset_project : surface-flask
+# dataset_platform : fixed
+# dataset_selection : event
+# dataset_selection_tag : event
+# dataset_comment : For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4c13/flask/README_ch4c13_surface-flask_sil.html
+# dataset_calibration_scale : VPDB
+# dataset_start_date : 2009-03-22T23:37:00Z
+# dataset_stop_date : 2022-12-21T01:28:00Z
+# dataset_usage_description : Please cite the product's citation when using data from this dataset. Relevant literature references for this dataset are listed below for convenience.
+# dataset_provider_license : These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).
+# dataset_reference_total_listed : 2
+# dataset_reference_1_name : Vaughn, B.H., J. Miller, D. F. Ferretti, J. W. C. White 2004: Stable isotope measurements of atmospheric CO2 and CH4. Handbook of Stable Isotope Analytical Techniques, vol 1, ch.14, Elsiever, 1248 p.
+# dataset_reference_2_name : Miller, J. B., K. A. Mack, R. Dissly, J. W. C. White, E. J. Dlugokencky, and P. P. Tans 2002: Development of analytical methods and measurements of 13C/12C in atmospheric CH4 from the NOAA Climate Monitoring and Diagnostics Laboratory Global Air Sampling Network. J Geophys. Res., v107, NO. D13.
+# dataset_contribution : These data are provided by INSTAAR-SIL AND NOAA. Principal investigators include Sylvia Englund Michel (INSTAAR-SIL) AND Reid Clark (INSTAAR-SIL) AND Bruce Vaughn (INSTAAR-SIL). Key partners include Gordon Brailsford (NIWA).
+# lab_total_listed : 2
+# lab_1_number : 7
+# lab_1_abbr : INSTAAR-SIL
+# lab_1_name : INSTAAR Stable Isotope Laboratory
+# lab_1_address1 : University of Colorado
+# lab_1_address2 : 4001 Discovery Dr
+# lab_1_address3 : Boulder, CO 80303
+# lab_1_country : United States
+# lab_1_url : http://instaar.colorado.edu
+# lab_1_parameter : Lab has contributed measurements for: ch4c13, ch4c13
+# lab_1_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_1_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/instaar_medium.png
+# lab_1_ongoing_atmospheric_air_comparison : T
+# lab_2_number : 1
+# lab_2_abbr : NOAA
+# lab_2_name : NOAA Global Monitoring Laboratory
+# lab_2_address1 : 325 Broadway
+# lab_2_address2 : NOAA R/GML-1
+# lab_2_address3 : Boulder, CO 80305-3328
+# lab_2_country : United States
+# lab_2_url : https://gml.noaa.gov/ccgg/
+# lab_2_parameter : Lab has contributed measurements for: ch4c13
+# lab_2_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_2_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/noaa_medium.png
+# provider_total_listed : 3
+# provider_1_name : Sylvia Englund Michel
+# provider_1_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_1_address2 : Campus Box 450
+# provider_1_address3 : University of Colorado, Boulder, CO
+# provider_1_country : United States
+# provider_1_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_1_email : Sylvia.Englund@Colorado.EDU
+# provider_1_tel : (303) 492-5495
+# provider_1_parameter : Provider has contributed measurements for: ch4c13
+# provider_2_name : Reid Clark
+# provider_2_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_2_address2 : Campus Box 450
+# provider_2_address3 : University of Colorado, Boulder, CO
+# provider_2_country : United States
+# provider_2_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_2_email : Justin.Reid.Clark@colorado.edu
+# provider_2_parameter : Provider has contributed measurements for: ch4c13
+# provider_3_name : Bruce Vaughn
+# provider_3_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_3_address2 : Campus Box 450
+# provider_3_address3 : University of Colorado, Boulder, CO
+# provider_3_country : United States
+# provider_3_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_3_email : bruce.vaughn@colorado.edu
+# provider_3_tel : (303) 492-7985
+# provider_3_parameter : Provider has contributed measurements for: ch4c13
+# partner_total_listed : 1
+# partner_1_name : Gordon Brailsford
+# partner_1_abbr : NIWA
+# partner_1_address1 : National Institute of Water & Atmospheric Research
+# partner_1_address2 : 301 Evans Bay Parade
+# partner_1_address3 : Greta Point, Wellington
+# partner_1_country : New Zealand
+# partner_1_url : http://www.niwa.co.nz/
+# partner_1_parameter : Partner of measurements for: ch4c13
+# partner_1_affiliation : National Institute of Water & Atmospheric Research
+# partner_1_email : Gordon.Brailsford@niwa.co.nz
+# partner_1_tel : +64-4-386-0393
+# ------------------------------------------------------------->>>>
+# VARIABLE ATTRIBUTES
+#
+# site_code:long_name : site_name_abbreviation.
+# site_code:comment : Site code is an abbreviation for the sampling site name.
+# time_components:_FillValue : -9
+# time_components:long_name : integer_components_of_UTC_date/time
+# time_components:order : year, month, day, hour, minute, second
+# time_components:comment : Calendar time components as integers. Times and dates are UTC. Time-averaged values are reported at the start of the averaging interval.
+# datetime:long_name : air_sample_date_and_time_in_UTC
+# datetime:comment : Air sample date and time in UTC ISO 8601 format. Time-averaged values are reported at the start of the averaging interval.
+# time_decimal:_FillValue : -999.999
+# time_decimal:long_name : sample_decimal_year_in_UTC
+# time_decimal:comment : decimal year in UTC. Time-averaged values are reported at the start of the averaging interval.
+# air_sample_container_id:long_name : Air_Sample_Container_ID
+# air_sample_container_id:comment : ID of air sample container. See provider_comment if available.
+# value:_FillValue : -999.999
+# value:long_name : measured_stable_carbon_isotope_delta_value
+# value:units : per mil
+# value:comment : Isotope ratios are reported as delta values where d13C = [(13C/12Csample/(13C/12Cstandard)-1] x 1000. Delta values are reported in units of per mil.
+# value:scale_comment : VPDB
+# value_unc:_FillValue : -999.999
+# value_unc:long_name : estimated_uncertainty_in_reported_value
+# value_unc:units : per mil
+# value_unc:comment : This is the estimated uncertainty of the reported value. See provider_comment if available.
+# latitude:_FillValue : -999.999
+# latitude:standard_name : latitude
+# latitude:long_name : sample_latitude_in_decimal_degrees
+# latitude:units : degrees_north
+# latitude:comment : Latitude at which air sample was collected.
+# longitude:_FillValue : -999.999
+# longitude:standard_name : longitude
+# longitude:long_name : sample_longitude_in_decimal_degrees
+# longitude:units : degrees_east
+# longitude:comment : Longitude at which air sample was collected using a range of -180 degrees to +180 degrees.
+# altitude:_FillValue : -999.999
+# altitude:standard_name : altitude
+# altitude:long_name : sample_altitude_in_meters_above_sea_level
+# altitude:units : m
+# altitude:comment : Altitude (in meters above sea level). See provider_comment if available.
+# altitude:provider_comment : Altitude for this dataset is the sum of surface elevation (masl) and sample intake height (magl).
+# elevation:_FillValue : -999.999
+# elevation:standard_name : elevation
+# elevation:long_name : surface_elevation_in_meters_above_sea_level
+# elevation:units : m
+# elevation:comment : Surface elevation in meters above sea level. See provider_comment if available.
+# intake_height:_FillValue : -999.999
+# intake_height:long_name : sample_intake_height_in_meters_above_ground_level
+# intake_height:units : m
+# intake_height:comment : Sample intake height in meters above ground level (magl). See provider_comment if available.
+# method:long_name : air_sample_collection_method
+# method:comment : Air sample collection method. See provider_comment if available.
+# method:provider_comment : A single-character code is used to identify the sample collection method. The codes are: P - Sample collected using a portable, battery powered pumping unit. Two flasks are connected in series, flushed with air, and then pressurized to 1.2 - 1.5 times ambient pressure. D - Similar to P but the air passes through a condenser cooled to about 5 deg C to partially dry the sample. G - Similar to D but with a gold-plated condenser. T - Evacuated flask filled by opening an O-ring sealed stopcock. S - Flasks filled at NOAA GML observatories by sampling air from the in situ CO2 measurement air intake system. N - Before 1981, flasks filled using a hand-held aspirator bulb. After 1981, flasks filled using a pump different from those used in method P, D, or G. F - Five liter evacuated flasks filled by opening a ground glass, greased stopcock
+# event_number:long_name : Unique_Air_Sample_Event_Number
+# event_number:comment : Identifies each discrete air sample collected at some time and location with a unique sample event number.  The event number (reported as a string) can be used to relate measurements of different trace gases and isotopes from the same sample.
+# instrument:long_name : instrument_ID_to_detect_atmospheric_parameter
+# instrument:comment : Instrument ID used to detect atmospheric parameter. See provider_comment if available.
+# analysis_datetime:long_name : air_sample_measurement_date_and_time_in_LT
+# analysis_datetime:comment : Air sample measurement date and time in LT. See provider_comment if available.
+# qcflag:long_name : quality_control_flag
+# qcflag:comment : This quality control flag is provided by the contributing PIs. See provider_comment if available.
+# qcflag:provider_comment : This is the NOAA 3-character quality control flag.  Column 1 is the REJECTION flag. An alphanumeric other than a period (.) in the FIRST column indicates a sample with obvious problems during collection or analysis. This measurement should not be interpreted. Column 2 is the SELECTION flag. An alphanumeric other than a period (.) in the SECOND column indicates a sample that is likely valid but does not meet selection criteria determined by the goals of a particular investigation. For example, it might not have been obtained during 'background' conditions.  Column 3 is the INFORMATION flag. An alphanumeric other than a period (.) in the THIRD column provides additional information about the collection or analysis of the sample. A P in the 3rd column of the QC flag indicates the measurement result is preliminary and has not yet been carefully examined by the PI.  The P flag is removed once the quality of the measurement has been determined.
+#
+# VARIABLE ORDER
+#
+site_code year month day hour minute second datetime time_decimal air_sample_container_id value value_unc latitude longitude altitude elevation intake_height method event_number instrument analysis_datetime qcflag
+BHD 2009 3 22 23 37 0 2009-03-22T23:37:00Z 2009.2218740487062 5017-99 -46.97 0.043 -41.4083 174.871 90.0 80.0 10.0 N 283167 i1 2010-04-05T00:06:00 ..j
+BHD 2009 3 22 23 37 0 2009-03-22T23:37:00Z 2009.2218740487062 5018-99 -46.956 0.043 -41.4083 174.871 90.0 80.0 10.0 N 283168 i1 2010-04-05T00:23:00 ...
+BHD 2009 4 1 0 36 0 2009-04-01T00:36:00Z 2009.2466438356164 5007-99 -46.785 0.055 -41.4083 174.871 90.0 80.0 10.0 N 283165 i1 2010-01-22T19:59:00 .Xj
+BHD 2009 4 1 0 36 0 2009-04-01T00:36:00Z 2009.2466438356164 5007-99 -46.894 -999.999 -41.4083 174.871 90.0 80.0 10.0 N 283165 i1 2010-01-23T05:22:00 ..j
+BHD 2009 4 1 0 36 0 2009-04-01T00:36:00Z 2009.2466438356164 5008-99 -46.793 0.055 -41.4083 174.871 90.0 80.0 10.0 N 283166 i1 2010-01-22T20:19:00 .X.
+BHD 2009 4 1 0 36 0 2009-04-01T00:36:00Z 2009.2466438356164 5008-99 -46.89 -999.999 -41.4083 174.871 90.0 80.0 10.0 N 283166 i1 2010-01-23T05:42:00 ...
+BHD 2009 4 20 2 40 0 2009-04-20T02:40:00Z 2009.2989345509893 3409-99 -47.278 0.046 -41.4083 174.871 90.0 80.0 10.0 N 283175 i1 2010-04-02T23:00:00 ..j
+BHD 2009 4 20 2 40 0 2009-04-20T02:40:00Z 2009.2989345509893 3409-99 -47.018 0.042 -41.4083 174.871 90.0 80.0 10.0 N 283175 i1 2010-04-04T02:26:00 !.j
+BHD 2009 4 20 2 40 0 2009-04-20T02:40:00Z 2009.2989345509893 3410-99 -47.35 0.046 -41.4083 174.871 90.0 80.0 10.0 N 283176 i1 2010-04-02T23:18:00 .X.
+BHD 2009 4 20 2 40 0 2009-04-20T02:40:00Z 2009.2989345509893 3410-99 -46.908 0.042 -41.4083 174.871 90.0 80.0 10.0 N 283176 i1 2010-04-04T02:44:00 ...
+BHD 2009 4 30 1 32 0 2009-04-30T01:32:00Z 2009.326202435312 4537-99 -47.176 0.046 -41.4083 174.871 90.0 80.0 10.0 N 283169 i1 2010-04-02T23:35:00 ..j
+BHD 2009 4 30 1 32 0 2009-04-30T01:32:00Z 2009.326202435312 4537-99 -47.057 0.042 -41.4083 174.871 90.0 80.0 10.0 N 283169 i1 2010-04-04T01:51:00 !.j
+BHD 2009 4 30 1 32 0 2009-04-30T01:32:00Z 2009.326202435312 4538-99 -47.225 0.046 -41.4083 174.871 90.0 80.0 10.0 N 283170 i1 2010-04-02T23:53:00 ...
+BHD 2009 4 30 1 32 0 2009-04-30T01:32:00Z 2009.326202435312 4538-99 -47.035 0.042 -41.4083 174.871 90.0 80.0 10.0 N 283170 i1 2010-04-04T02:08:00 !..
+BHD 2009 5 19 23 1 0 2009-05-19T23:01:00Z 2009.3807096651446 2701-99 -47.031 0.043 -41.4083 174.871 90.0 80.0 10.0 N 283163 i1 2010-04-04T22:20:00 ..j
+BHD 2009 5 19 23 1 0 2009-05-19T23:01:00Z 2009.3807096651446 2702-99 -47.01 0.043 -41.4083 174.871 90.0 80.0 10.0 N 283164 i1 2010-04-04T22:37:00 ...
+BHD 2009 6 10 23 3 0 2009-06-10T23:03:00Z 2009.4409874429223 2451-99 -47.745 0.046 -41.4083 174.871 90.0 80.0 10.0 N 283171 i1 2010-04-02T22:25:00 -..
+BHD 2009 6 10 23 3 0 2009-06-10T23:03:00Z 2009.4409874429223 2451-99 -47.239 0.042 -41.4083 174.871 90.0 80.0 10.0 N 283171 i1 2010-04-04T03:02:00 ...
+BHD 2009 6 10 23 3 0 2009-06-10T23:03:00Z 2009.4409874429223 2452-99 -47.25 0.046 -41.4083 174.871 90.0 80.0 10.0 N 283172 i1 2010-04-02T22:42:00 +..
+BHD 2009 6 10 23 3 0 2009-06-10T23:03:00Z 2009.4409874429223 2452-99 -47.209 0.042 -41.4083 174.871 90.0 80.0 10.0 N 283172 i1 2010-04-04T03:19:00 ...
+BHD 2009 6 16 7 52 0 2009-06-16T07:52:00Z 2009.455692541857 2727-99 -47.13 0.039 -41.4083 174.871 90.0 80.0 10.0 N 283173 i1 2010-01-07T18:53:00 n..
+BHD 2009 6 16 7 52 0 2009-06-16T07:52:00Z 2009.455692541857 2728-99 -47.007 0.039 -41.4083 174.871 90.0 80.0 10.0 N 283174 i1 2010-01-07T19:14:00 ...
+BHD 2009 7 8 3 49 0 2009-07-08T03:49:00Z 2009.5155041856926 397-99 -47.029 0.04 -41.4083 174.871 90.0 80.0 10.0 N 287612 i1 2010-02-22T22:05:00 ..j
+BHD 2009 7 8 3 49 0 2009-07-08T03:49:00Z 2009.5155041856926 398-99 -47.016 0.04 -41.4083 174.871 90.0 80.0 10.0 N 287613 i1 2010-02-22T22:23:00 ...
+BHD 2009 7 17 0 29 0 2009-07-17T00:29:00Z 2009.5397812024353 401-99 -47.107 0.046 -41.4083 174.871 90.0 80.0 10.0 N 287614 i1 2010-02-05T15:55:00 ..j
+BHD 2009 7 17 0 29 0 2009-07-17T00:29:00Z 2009.5397812024353 402-99 -47.043 0.046 -41.4083 174.871 90.0 80.0 10.0 N 287615 i1 2010-02-05T16:13:00 ...
+BHD 2009 8 5 23 30 0 2009-08-05T23:30:00Z 2009.5944634703196 4235-99 -47.15 0.056 -41.4083 174.871 90.0 80.0 10.0 N 287620 i1 2010-01-21T06:36:00 ..j
+BHD 2009 8 5 23 30 0 2009-08-05T23:30:00Z 2009.5944634703196 4236-99 -47.146 0.056 -41.4083 174.871 90.0 80.0 10.0 N 287621 i1 2010-01-21T06:56:00 ...
+BHD 2009 8 18 23 46 0 2009-08-18T23:46:00Z 2009.6301103500762 3355-99 -47.093 0.04 -41.4083 174.871 90.0 80.0 10.0 N 287622 i1 2010-02-22T17:09:00 ..j
+BHD 2009 8 18 23 46 0 2009-08-18T23:46:00Z 2009.6301103500762 3356-99 -47.121 0.04 -41.4083 174.871 90.0 80.0 10.0 N 287623 i1 2010-02-22T17:27:00 ...
+BHD 2009 9 15 6 9 0 2009-09-15T06:09:00Z 2009.7048116438357 3110-99 -47.132 0.079 -41.4083 174.871 90.0 80.0 10.0 N 294123 i1 2010-10-18T18:40:00 ..S
+BHD 2009 9 24 1 18 0 2009-09-24T01:18:00Z 2009.7289155251142 1806-99 -47.181 0.079 -41.4083 174.871 90.0 80.0 10.0 N 294125 i1 2010-10-18T18:57:00 ..S
+BHD 2009 10 19 20 36 0 2009-10-19T20:36:00Z 2009.7996118721462 1610-99 -47.184 0.079 -41.4083 174.871 90.0 80.0 10.0 N 294119 i1 2010-10-18T18:06:00 ..S
+BHD 2009 10 29 14 37 0 2009-10-29T14:37:00Z 2009.8263261035008 1466-99 -47.16 0.079 -41.4083 174.871 90.0 80.0 10.0 N 294121 i1 2010-10-18T18:23:00 ..S
+BHD 2010 3 8 23 32 0 2010-03-08T23:32:00Z 2010.1835083713852 2119-99 -47.209 -999.999 -41.4083 174.871 90.0 80.0 10.0 N 300733 i1 2010-10-19T14:26:00 .xo
+BHD 2010 3 8 23 32 0 2010-03-08T23:32:00Z 2010.1835083713852 2120-99 -47.129 -999.999 -41.4083 174.871 90.0 80.0 10.0 N 300734 i1 2010-10-19T14:44:00 .xo
+BHD 2010 3 17 5 44 0 2010-03-17T05:44:00Z 2010.2061339421614 3113-99 -46.866 -999.999 -41.4083 174.871 90.0 80.0 10.0 N 300735 i1 2010-10-19T13:52:00 ..o
+BHD 2010 3 17 5 44 0 2010-03-17T05:44:00Z 2010.2061339421614 3114-99 -46.806 -999.999 -41.4083 174.871 90.0 80.0 10.0 N 300736 i1 2010-10-19T14:09:00 ..o
+BHD 2010 4 4 5 20 0 2010-04-04T05:20:00Z 2010.255403348554 4035-99 -46.881 3.163 -41.4083 174.871 90.0 80.0 10.0 N 300693 i1 2010-12-06T15:21:00 ...
+BHD 2010 4 4 5 20 0 2010-04-04T05:20:00Z 2010.255403348554 4036-99 -46.955 3.163 -41.4083 174.871 90.0 80.0 10.0 N 300694 i1 2010-12-06T15:36:00 ...
+BHD 2010 4 16 1 16 0 2010-04-16T01:16:00Z 2010.2878158295282 143-99 -47.055 0.088 -41.4083 174.871 90.0 80.0 10.0 N 300695 i1 2010-11-30T22:08:00 D..
+BHD 2010 4 16 1 16 0 2010-04-16T01:16:00Z 2010.2878158295282 144-99 -46.913 0.088 -41.4083 174.871 90.0 80.0 10.0 N 300696 i1 2010-11-30T22:23:00 D..
+BHD 2010 5 4 0 28 0 2010-05-04T00:28:00Z 2010.3370395738204 399-99 -47.062 0.061 -41.4083 174.871 90.0 80.0 10.0 N 312008 i1 2011-02-16T15:13:00 ..j
+BHD 2010 5 4 0 28 0 2010-05-04T00:28:00Z 2010.3370395738204 400-99 -47.145 0.061 -41.4083 174.871 90.0 80.0 10.0 N 312009 i1 2011-02-16T15:27:00 ...
+BHD 2010 5 19 23 21 0 2010-05-19T23:21:00Z 2010.380747716895 3703-99 -47.078 0.061 -41.4083 174.871 90.0 80.0 10.0 N 312010 i1 2011-02-16T15:42:00 ..j
+BHD 2010 5 19 23 21 0 2010-05-19T23:21:00Z 2010.380747716895 3704-99 -47.101 0.061 -41.4083 174.871 90.0 80.0 10.0 N 312011 i1 2011-02-16T15:57:00 ...
+BHD 2010 6 15 0 29 0 2010-06-15T00:29:00Z 2010.4521099695587 3477-99 -47.213 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312021 i1 2011-02-14T22:46:00 ...
+BHD 2010 6 15 0 29 0 2010-06-15T00:29:00Z 2010.4521099695587 3478-99 -47.197 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312020 i1 2011-02-14T23:01:00 ..j
+BHD 2010 7 6 21 26 0 2010-07-06T21:26:00Z 2010.5120357686453 1359-99 -47.204 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312025 i1 2011-02-14T22:16:00 ..j
+BHD 2010 7 6 21 26 0 2010-07-06T21:26:00Z 2010.5120357686453 1360-99 -47.153 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312024 i1 2011-02-14T22:31:00 ...
+BHD 2010 7 19 23 38 0 2010-07-19T23:38:00Z 2010.547903348554 1519-99 -47.205 0.101 -41.4083 174.871 90.0 80.0 10.0 N 312028 i1 2011-02-10T23:43:00 L.j
+BHD 2010 7 19 23 38 0 2010-07-19T23:38:00Z 2010.547903348554 1520-99 -47.149 0.101 -41.4083 174.871 90.0 80.0 10.0 N 312029 i1 2011-02-10T23:58:00 L..
+BHD 2010 8 5 3 57 0 2010-08-05T03:57:00Z 2010.5922317351599 2827-99 -47.407 0.101 -41.4083 174.871 90.0 80.0 10.0 N 312030 i1 2011-02-10T23:13:00 L.j
+BHD 2010 8 5 3 57 0 2010-08-05T03:57:00Z 2010.5922317351599 2828-99 -47.398 0.101 -41.4083 174.871 90.0 80.0 10.0 N 312031 i1 2011-02-10T23:28:00 L..
+BHD 2010 8 24 1 1 0 2010-08-24T01:01:00Z 2010.643951674277 965-99 -47.166 0.07 -41.4083 174.871 90.0 80.0 10.0 N 312012 i1 2011-02-15T18:43:00 ..j
+BHD 2010 8 24 1 1 0 2010-08-24T01:01:00Z 2010.643951674277 966-99 -47.075 0.07 -41.4083 174.871 90.0 80.0 10.0 N 312013 i1 2011-02-15T18:58:00 ...
+BHD 2010 8 30 8 2 0 2010-08-30T08:02:00Z 2010.6611910197869 1787-99 -47.413 0.07 -41.4083 174.871 90.0 80.0 10.0 N 312014 i1 2011-02-16T01:55:00 A.j
+BHD 2010 8 30 8 2 0 2010-08-30T08:02:00Z 2010.6611910197869 1788-99 -47.437 0.07 -41.4083 174.871 90.0 80.0 10.0 N 312015 i1 2011-02-16T02:10:00 A..
+BHD 2010 9 14 22 14 0 2010-09-14T22:14:00Z 2010.7039079147642 3471-99 -47.148 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312026 i1 2011-02-14T18:03:00 D.j
+BHD 2010 9 14 22 14 0 2010-09-14T22:14:00Z 2010.7039079147642 3472-99 -47.221 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312027 i1 2011-02-14T18:18:00 D..
+BHD 2010 10 11 2 50 0 2010-10-11T02:50:00Z 2010.7756659056317 3435-99 -47.059 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312022 i1 2011-02-14T18:33:00 D.j
+BHD 2010 10 11 2 50 0 2010-10-11T02:50:00Z 2010.7756659056317 3436-99 -47.074 0.055 -41.4083 174.871 90.0 80.0 10.0 N 312023 i1 2011-02-14T18:47:00 D..
+BHD 2010 11 20 14 59 0 2010-11-20T14:59:00Z 2010.8866419330288 747-99 -47.059 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319984 i1 2011-08-01T20:42:00 ..j
+BHD 2010 11 20 14 59 0 2010-11-20T14:59:00Z 2010.8866419330288 748-99 -47.077 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319985 i1 2011-08-01T20:56:00 ...
+BHD 2010 12 8 3 30 0 2010-12-08T03:30:00Z 2010.9346461187215 3819-99 -46.983 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319987 i1 2011-07-26T19:34:00 ...
+BHD 2010 12 8 3 30 0 2010-12-08T03:30:00Z 2010.9346461187215 3820-99 -46.913 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319986 i1 2011-07-26T19:48:00 ...
+BHD 2011 1 10 0 31 0 2011-01-10T00:31:00Z 2011.0247165144597 2353-99 -47.021 0.068 -41.4083 174.871 90.0 80.0 10.0 N 320010 i1 2011-07-19T15:16:00 ..j
+BHD 2011 1 10 0 31 0 2011-01-10T00:31:00Z 2011.0247165144597 2354-99 -46.989 0.068 -41.4083 174.871 90.0 80.0 10.0 N 320011 i1 2011-07-19T15:31:00 ...
+BHD 2011 2 7 7 25 0 2011-02-07T07:25:00Z 2011.1022165144598 3865-99 -47.076 0.068 -41.4083 174.871 90.0 80.0 10.0 N 320008 i1 2011-07-19T15:45:00 ...
+BHD 2011 2 7 7 25 0 2011-02-07T07:25:00Z 2011.1022165144598 3866-99 -47.051 0.068 -41.4083 174.871 90.0 80.0 10.0 N 320009 i1 2011-07-19T16:00:00 ...
+BHD 2011 3 7 6 23 0 2011-03-07T06:23:00Z 2011.1788108828007 1341-99 -46.88 0.066 -41.4083 174.871 90.0 80.0 10.0 N 320006 i1 2011-07-20T22:44:00 ...
+BHD 2011 3 7 6 23 0 2011-03-07T06:23:00Z 2011.1788108828007 1342-99 -46.989 0.066 -41.4083 174.871 90.0 80.0 10.0 N 320007 i1 2011-07-20T22:59:00 ...
+BHD 2011 3 22 23 55 0 2011-03-22T23:55:00Z 2011.2219082952815 371-99 -47.056 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319990 i1 2011-08-01T22:10:00 ..j
+BHD 2011 3 22 23 55 0 2011-03-22T23:55:00Z 2011.2219082952815 372-99 -46.95 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319991 i1 2011-08-01T22:24:00 ...
+BHD 2011 4 6 1 20 0 2011-04-06T01:20:00Z 2011.2604261796043 381-99 -47.056 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319988 i1 2011-08-01T21:40:00 ..j
+BHD 2011 4 6 1 20 0 2011-04-06T01:20:00Z 2011.2604261796043 382-99 -47.144 0.097 -41.4083 174.871 90.0 80.0 10.0 N 319989 i1 2011-08-01T21:55:00 ...
+BHD 2011 5 6 21 12 0 2011-05-06T21:12:00Z 2011.344885844749 6233-66 -47.574 0.053 -41.4083 174.871 90.0 80.0 10.0 N 328782 i1 2012-11-14T01:25:00 n.j
+BHD 2011 5 6 21 12 0 2011-05-06T21:12:00Z 2011.344885844749 6234-66 -47.509 0.053 -41.4083 174.871 90.0 80.0 10.0 N 328783 i1 2012-11-14T01:40:00 n..
+BHD 2011 5 17 16 38 0 2011-05-17T16:38:00Z 2011.37450152207 2187-99 -47.348 0.07 -41.4083 174.871 90.0 80.0 10.0 N 328784 i1 2013-03-25T19:56:00 ..j
+BHD 2011 5 17 16 38 0 2011-05-17T16:38:00Z 2011.37450152207 2188-99 -47.242 0.07 -41.4083 174.871 90.0 80.0 10.0 N 328785 i1 2013-03-25T20:12:00 ...
+BHD 2011 6 1 2 15 0 2011-06-01T02:15:00Z 2011.413955479452 5027-99 -47.225 0.066 -41.4083 174.871 90.0 80.0 10.0 N 328790 i1 2012-11-20T14:46:00 ..j
+BHD 2011 6 1 2 15 0 2011-06-01T02:15:00Z 2011.413955479452 5028-99 -47.088 0.066 -41.4083 174.871 90.0 80.0 10.0 N 328791 i1 2012-11-20T15:01:00 ...
+BHD 2011 6 21 0 10 0 2011-06-21T00:10:00Z 2011.4685121765601 2871-99 -47.192 0.066 -41.4083 174.871 90.0 80.0 10.0 N 328793 i1 2012-11-20T14:16:00 ..j
+BHD 2011 6 21 0 10 0 2011-06-21T00:10:00Z 2011.4685121765601 2872-99 -47.247 0.066 -41.4083 174.871 90.0 80.0 10.0 N 328792 i1 2012-11-20T14:31:00 ...
+BHD 2011 7 15 4 20 0 2011-07-15T04:20:00Z 2011.5347412480974 3943-99 -47.165 0.053 -41.4083 174.871 90.0 80.0 10.0 N 328786 i1 2012-11-13T20:06:00 ...
+BHD 2011 7 15 4 20 0 2011-07-15T04:20:00Z 2011.5347412480974 3944-99 -47.132 0.053 -41.4083 174.871 90.0 80.0 10.0 N 328787 i1 2012-11-13T20:21:00 ...
+BHD 2011 7 25 2 51 0 2011-07-25T02:51:00Z 2011.561969178082 4599-99 -47.221 0.096 -41.4083 174.871 90.0 80.0 10.0 N 328788 i1 2012-02-13T16:18:00 ...
+BHD 2011 7 25 2 51 0 2011-07-25T02:51:00Z 2011.561969178082 4600-99 -47.275 0.096 -41.4083 174.871 90.0 80.0 10.0 N 328789 i1 2012-02-13T16:32:00 ...
+BHD 2011 9 13 21 32 0 2011-09-13T21:32:00Z 2011.701088280061 1083-99 -47.215 0.068 -41.4083 174.871 90.0 80.0 10.0 N 328794 i1 2013-04-01T17:14:00 ..j
+BHD 2011 9 13 21 32 0 2011-09-13T21:32:00Z 2011.701088280061 1084-99 -47.199 0.068 -41.4083 174.871 90.0 80.0 10.0 N 328795 i1 2013-04-01T17:30:00 ...
+BHD 2011 10 5 0 42 0 2011-10-05T00:42:00Z 2011.7589840182648 4065-99 -47.212 0.068 -41.4083 174.871 90.0 80.0 10.0 N 328796 i1 2013-04-02T00:01:00 ..j
+BHD 2011 10 5 0 42 0 2011-10-05T00:42:00Z 2011.7589840182648 4066-99 -47.283 0.068 -41.4083 174.871 90.0 80.0 10.0 N 328797 i1 2013-04-02T00:17:00 ...
+BHD 2011 11 10 4 26 0 2011-11-10T04:26:00Z 2011.8580403348553 2013-99 -47.079 0.062 -41.4083 174.871 90.0 80.0 10.0 N 332460 i1 2012-12-31T22:40:00 ...
+BHD 2011 11 10 4 26 0 2011-11-10T04:26:00Z 2011.8580403348553 2014-99 -47.044 0.062 -41.4083 174.871 90.0 80.0 10.0 N 332461 i1 2012-12-31T22:55:00 ...
+BHD 2011 12 16 5 56 0 2011-12-16T05:56:00Z 2011.9568417047185 4383-99 -47.067 0.053 -41.4083 174.871 90.0 80.0 10.0 N 332462 i1 2012-11-13T19:36:00 ...
+BHD 2011 12 16 5 56 0 2011-12-16T05:56:00Z 2011.9568417047185 4384-99 -47.061 0.053 -41.4083 174.871 90.0 80.0 10.0 N 332463 i1 2012-11-13T19:51:00 ...
+BHD 2012 1 5 1 40 0 2012-01-05T01:40:00Z 2012.0111187006678 1959-99 -47.127 0.076 -41.4083 174.871 90.0 80.0 10.0 N 332466 i1 2013-04-04T20:32:00 ..j
+BHD 2012 1 5 1 40 0 2012-01-05T01:40:00Z 2012.0111187006678 1960-99 -47.182 0.076 -41.4083 174.871 90.0 80.0 10.0 N 332467 i1 2013-04-04T20:48:00 ...
+BHD 2012 1 16 0 31 0 2012-01-16T00:31:00Z 2012.0410424256224 3273-99 -46.73 0.102 -41.4083 174.871 90.0 80.0 10.0 N 332464 i1 2013-04-13T00:06:00 .Xj
+BHD 2012 1 16 0 31 0 2012-01-16T00:31:00Z 2012.0410424256224 3274-99 -46.764 0.102 -41.4083 174.871 90.0 80.0 10.0 N 332465 i1 2013-04-13T00:22:00 .X.
+BHD 2012 2 25 5 52 0 2012-02-25T05:52:00Z 2012.1509411050395 1183-99 -47.127 0.06 -41.4083 174.871 90.0 80.0 10.0 N 337940 i1 2012-12-21T09:44:00 ..j
+BHD 2012 2 25 5 52 0 2012-02-25T05:52:00Z 2012.1509411050395 1184-99 -47.047 0.06 -41.4083 174.871 90.0 80.0 10.0 N 337941 i1 2012-12-21T09:59:00 ...
+BHD 2012 3 4 4 9 0 2012-03-04T04:09:00Z 2012.17260359745 1205-99 -47.102 0.039 -41.4083 174.871 90.0 80.0 10.0 N 337944 i1 2013-01-10T20:04:00 +..
+BHD 2012 3 4 4 9 0 2012-03-04T04:09:00Z 2012.17260359745 1206-99 -47.264 0.039 -41.4083 174.871 90.0 80.0 10.0 N 337945 i1 2013-01-10T20:19:00 -..
+BHD 2012 4 4 1 28 0 2012-04-04T01:28:00Z 2012.2569975713418 5275-99 -47.049 0.063 -41.4083 174.871 90.0 80.0 10.0 N 337958 i1 2012-12-28T14:50:00 ..j
+BHD 2012 4 4 1 28 0 2012-04-04T01:28:00Z 2012.2569975713418 5276-99 -47.039 0.063 -41.4083 174.871 90.0 80.0 10.0 N 337959 i1 2012-12-28T15:05:00 ...
+BHD 2012 5 28 21 16 0 2012-05-28T21:16:00Z 2012.4067926533091 2225-99 -47.209 0.06 -41.4083 174.871 90.0 80.0 10.0 N 337946 i1 2012-12-21T10:15:00 ..j
+BHD 2012 5 28 21 16 0 2012-05-28T21:16:00Z 2012.4067926533091 2226-99 -47.224 0.06 -41.4083 174.871 90.0 80.0 10.0 N 337947 i1 2012-12-21T10:30:00 ...
+BHD 2012 5 30 22 16 0 2012-05-30T22:16:00Z 2012.412370977535 103-99 -47.153 0.062 -41.4083 174.871 90.0 80.0 10.0 N 344579 i1 2012-12-20T13:53:00 ...
+BHD 2012 5 30 22 16 0 2012-05-30T22:16:00Z 2012.412370977535 104-99 -47.138 0.062 -41.4083 174.871 90.0 80.0 10.0 N 344580 i1 2012-12-20T14:08:00 ...
+BHD 2012 6 7 0 12 0 2012-06-07T00:12:00Z 2012.4317167577412 5391-99 -47.187 0.062 -41.4083 174.871 90.0 80.0 10.0 N 344581 i1 2012-12-20T14:23:00 ..j
+BHD 2012 6 7 0 12 0 2012-06-07T00:12:00Z 2012.4317167577412 5392-99 -47.295 0.062 -41.4083 174.871 90.0 80.0 10.0 N 344582 i1 2012-12-20T14:38:00 ...
+BHD 2012 6 13 20 57 0 2012-06-13T20:57:00Z 2012.4504724499088 4537-99 -47.046 0.041 -41.4083 174.871 90.0 80.0 10.0 N 344553 i1 2012-12-17T05:39:00 ..j
+BHD 2012 6 13 20 57 0 2012-06-13T20:57:00Z 2012.4504724499088 4538-99 -47.106 0.041 -41.4083 174.871 90.0 80.0 10.0 N 344554 i1 2012-12-17T05:55:00 ...
+BHD 2012 7 17 19 23 0 2012-07-17T19:23:00Z 2012.5431902701882 4851-99 -47.13 0.041 -41.4083 174.871 90.0 80.0 10.0 N 344555 i1 2012-12-17T06:10:00 ...
+BHD 2012 7 17 19 23 0 2012-07-17T19:23:00Z 2012.5431902701882 4852-99 -47.108 0.041 -41.4083 174.871 90.0 80.0 10.0 N 344556 i1 2012-12-17T06:25:00 ...
+BHD 2012 8 22 2 30 0 2012-08-22T02:30:00Z 2012.639628870674 3293-99 -47.478 0.112 -41.4083 174.871 90.0 80.0 10.0 N 344573 i1 2013-04-19T04:10:00 P.j
+BHD 2012 8 22 2 30 0 2012-08-22T02:30:00Z 2012.639628870674 3294-99 -47.49 0.112 -41.4083 174.871 90.0 80.0 10.0 N 344574 i1 2013-04-19T04:26:00 ...
+BHD 2012 9 12 0 59 0 2012-09-12T00:59:00Z 2012.6968332574377 3795-99 -47.208 0.062 -41.4083 174.871 90.0 80.0 10.0 N 344583 i1 2012-12-20T13:23:00 ..j
+BHD 2012 9 12 0 59 0 2012-09-12T00:59:00Z 2012.6968332574377 3796-99 -47.166 0.062 -41.4083 174.871 90.0 80.0 10.0 N 344584 i1 2012-12-20T13:38:00 ...
+BHD 2012 9 27 3 50 0 2012-09-27T03:50:00Z 2012.7381413175472 4445-99 -47.162 0.041 -41.4083 174.871 90.0 80.0 10.0 N 344557 i1 2012-12-17T06:40:00 ..j
+BHD 2012 9 27 3 50 0 2012-09-27T03:50:00Z 2012.7381413175472 4446-99 -47.081 0.041 -41.4083 174.871 90.0 80.0 10.0 N 344558 i1 2012-12-17T06:55:00 .X.
+BHD 2012 10 29 1 1 0 2012-10-29T01:01:00Z 2012.8252523527626 4773-99 -47.568 0.112 -41.4083 174.871 90.0 80.0 10.0 N 344559 i1 2013-04-19T04:42:00 ..j
+BHD 2012 10 29 1 1 0 2012-10-29T01:01:00Z 2012.8252523527626 4774-99 -47.45 0.112 -41.4083 174.871 90.0 80.0 10.0 N 344560 i1 2013-04-19T04:59:00 ...
+BHD 2012 11 29 4 40 0 2012-11-29T04:40:00Z 2012.9103673345476 6397-66 -47.334 0.098 -41.4083 174.871 90.0 80.0 10.0 N 351045 i1 2013-08-22T19:27:00 -..
+BHD 2012 11 29 4 40 0 2012-11-29T04:40:00Z 2012.9103673345476 6398-66 -47.034 0.098 -41.4083 174.871 90.0 80.0 10.0 N 351046 i1 2013-08-22T19:45:00 +.j
+BHD 2013 1 15 5 13 0 2013-01-15T05:13:00Z 2013.038951674277 4819-99 -47.06 0.121 -41.4083 174.871 90.0 80.0 10.0 N 351043 i1 2013-08-26T22:31:00 H.j
+BHD 2013 1 15 5 13 0 2013-01-15T05:13:00Z 2013.038951674277 4820-99 -46.949 0.121 -41.4083 174.871 90.0 80.0 10.0 N 351044 i1 2013-08-26T22:49:00 H..
+BHD 2013 2 5 1 13 0 2013-02-05T01:13:00Z 2013.0960292998477 2169-99 -45.587 0.112 -41.4083 174.871 90.0 80.0 10.0 N 351041 i1 2013-08-23T17:55:00 D.j
+BHD 2013 2 5 1 13 0 2013-02-05T01:13:00Z 2013.0960292998477 2170-99 -45.354 0.112 -41.4083 174.871 90.0 80.0 10.0 N 351042 i1 2013-08-23T18:13:00 D..
+BHD 2013 3 26 1 46 0 2013-03-26T01:46:00Z 2013.2303386605784 6193-66 -47.072 0.127 -41.4083 174.871 90.0 80.0 10.0 N 354917 i1 2013-09-20T20:57:00 -.j
+BHD 2013 3 26 1 46 0 2013-03-26T01:46:00Z 2013.2303386605784 6194-66 -46.553 0.127 -41.4083 174.871 90.0 80.0 10.0 N 354918 i1 2013-09-23T10:35:00 +..
+BHD 2013 4 18 0 9 0 2013-04-18T00:09:00Z 2013.293167808219 533-99 -46.272 0.127 -41.4083 174.871 90.0 80.0 10.0 N 354919 i1 2013-09-23T10:16:00 +.j
+BHD 2013 4 18 0 9 0 2013-04-18T00:09:00Z 2013.293167808219 534-99 -47.088 0.127 -41.4083 174.871 90.0 80.0 10.0 N 354920 i1 2013-09-20T20:22:00 -..
+BHD 2013 5 23 1 47 0 2013-05-23T01:47:00Z 2013.389244672755 971-99 -47.229 0.072 -41.4083 174.871 90.0 80.0 10.0 N 354915 i1 2013-10-26T00:44:00 ..j
+BHD 2013 5 23 1 47 0 2013-05-23T01:47:00Z 2013.389244672755 972-99 -47.206 0.072 -41.4083 174.871 90.0 80.0 10.0 N 354916 i1 2013-10-26T01:02:00 ...
+BHD 2013 6 14 0 12 0 2013-06-14T00:12:00Z 2013.4493378995435 2429-99 -47.141 0.129 -41.4083 174.871 90.0 80.0 10.0 N 354913 i1 2013-10-17T23:14:00 ..j
+BHD 2013 6 14 0 12 0 2013-06-14T00:12:00Z 2013.4493378995435 2430-99 -47.088 0.129 -41.4083 174.871 90.0 80.0 10.0 N 354914 i1 2013-10-17T23:31:00 ...
+BHD 2013 6 28 3 27 0 2013-06-28T03:27:00Z 2013.4880650684931 1000-99 -47.229 0.09 -41.4083 174.871 90.0 80.0 10.0 N 366210 i1 2014-08-11T15:34:00 -..
+BHD 2013 6 28 3 27 0 2013-06-28T03:27:00Z 2013.4880650684931 2137-99 -47.067 0.09 -41.4083 174.871 90.0 80.0 10.0 N 366211 i1 2014-08-11T15:16:00 +.j
+BHD 2013 8 11 18 26 0 2013-08-11T18:26:00Z 2013.6103234398781 1158-99 -47.226 0.103 -41.4083 174.871 90.0 80.0 10.0 N 366225 i1 2014-07-22T21:35:00 ..S
+BHD 2013 8 28 21 12 0 2013-08-28T21:12:00Z 2013.6572146118722 5155-99 -47.123 0.101 -41.4083 174.871 90.0 80.0 10.0 N 366222 i1 2014-07-23T16:08:00 ..j
+BHD 2013 8 28 21 12 0 2013-08-28T21:12:00Z 2013.6572146118722 5156-99 -47.154 0.101 -41.4083 174.871 90.0 80.0 10.0 N 366223 i1 2014-07-23T16:26:00 ...
+BHD 2013 9 17 1 8 0 2013-09-17T01:08:00Z 2013.7097184170473 2523-99 -47.219 0.101 -41.4083 174.871 90.0 80.0 10.0 N 366246 i1 2014-07-23T21:34:00 ..j
+BHD 2013 9 17 1 8 0 2013-09-17T01:08:00Z 2013.7097184170473 2524-99 -47.246 0.101 -41.4083 174.871 90.0 80.0 10.0 N 366247 i1 2014-07-23T21:52:00 ...
+BHD 2013 11 26 22 14 0 2013-11-26T22:14:00Z 2013.903907914764 3133-99 -47.17 0.066 -41.4083 174.871 90.0 80.0 10.0 N 366206 i1 2014-08-08T05:34:00 ..j
+BHD 2013 11 26 22 14 0 2013-11-26T22:14:00Z 2013.903907914764 3134-99 -47.038 0.066 -41.4083 174.871 90.0 80.0 10.0 N 366207 i1 2014-08-08T05:52:00 ...
+BHD 2014 1 27 1 5 0 2014-01-27T01:05:00Z 2014.0713565449012 1543-99 -46.966 0.09 -41.4083 174.871 90.0 80.0 10.0 N 366212 i1 2014-08-11T14:40:00 ..j
+BHD 2014 1 27 1 5 0 2014-01-27T01:05:00Z 2014.0713565449012 1544-99 -47.031 0.09 -41.4083 174.871 90.0 80.0 10.0 N 366213 i1 2014-08-11T14:58:00 ...
+BHD 2014 2 25 2 7 0 2014-02-25T02:07:00Z 2014.1509265601217 5067-99 -46.963 0.103 -41.4083 174.871 90.0 80.0 10.0 N 366208 i1 2014-07-22T22:29:00 +.j
+BHD 2014 2 25 2 7 0 2014-02-25T02:07:00Z 2014.1509265601217 5068-99 -47.192 0.103 -41.4083 174.871 90.0 80.0 10.0 N 366209 i1 2014-07-22T22:47:00 -..
+BHD 2014 3 5 0 2 0 2014-03-05T00:02:00Z 2014.172606544901 1373-99 -47.377 34.053 -41.4083 174.871 90.0 80.0 10.0 N 367990 i1 2014-08-26T17:50:00 L.j
+BHD 2014 3 5 0 2 0 2014-03-05T00:02:00Z 2014.172606544901 1374-99 -47.212 34.053 -41.4083 174.871 90.0 80.0 10.0 N 367991 i1 2014-08-26T18:08:00 L..
+BHD 2014 3 26 23 51 0 2014-03-26T23:51:00Z 2014.232859589041 4017-99 -47.114 0.069 -41.4083 174.871 90.0 80.0 10.0 N 367994 i1 2014-08-25T14:54:00 ...
+BHD 2014 3 26 23 51 0 2014-03-26T23:51:00Z 2014.232859589041 4018-99 -47.138 0.069 -41.4083 174.871 90.0 80.0 10.0 N 367995 i1 2014-08-25T15:12:00 ...
+BHD 2014 4 8 0 47 0 2014-04-08T00:47:00Z 2014.265842846271 2609-99 -47.331 0.069 -41.4083 174.871 90.0 80.0 10.0 N 367988 i1 2014-08-25T20:19:00 ..j
+BHD 2014 4 8 0 47 0 2014-04-08T00:47:00Z 2014.265842846271 2610-99 -47.217 0.069 -41.4083 174.871 90.0 80.0 10.0 N 367989 i1 2014-08-25T20:37:00 ...
+BHD 2014 4 29 0 46 0 2014-04-29T00:46:00Z 2014.3233751902587 3279-99 -47.383 0.069 -41.4083 174.871 90.0 80.0 10.0 N 367992 i1 2014-08-25T19:43:00 ..j
+BHD 2014 4 29 0 46 0 2014-04-29T00:46:00Z 2014.3233751902587 3280-99 -47.37 0.069 -41.4083 174.871 90.0 80.0 10.0 N 367993 i1 2014-08-25T20:01:00 ...
+BHD 2014 5 26 4 58 0 2014-05-26T04:58:00Z 2014.3978272450533 2121-99 -47.019 0.07 -41.4083 174.871 90.0 80.0 10.0 N 374372 i1 2014-10-21T21:54:00 ..j
+BHD 2014 5 26 4 58 0 2014-05-26T04:58:00Z 2014.3978272450533 2122-99 -47.035 0.07 -41.4083 174.871 90.0 80.0 10.0 N 374373 i1 2014-10-21T22:12:00 ...
+BHD 2014 6 21 12 58 0 2014-06-21T12:58:00Z 2014.4699733637747 895-99 -47.126 0.07 -41.4083 174.871 90.0 80.0 10.0 N 374395 i1 2014-10-21T21:18:00 ..j
+BHD 2014 6 21 12 58 0 2014-06-21T12:58:00Z 2014.4699733637747 896-99 -47.151 0.07 -41.4083 174.871 90.0 80.0 10.0 N 374396 i1 2014-10-21T21:36:00 ...
+BHD 2014 7 17 22 11 0 2014-07-17T22:11:00Z 2014.542258371385 2437-99 -47.298 0.066 -41.4083 174.871 90.0 80.0 10.0 N 374524 i1 2014-12-22T23:16:00 ...
+BHD 2014 7 17 22 11 0 2014-07-17T22:11:00Z 2014.542258371385 2438-99 -47.226 0.066 -41.4083 174.871 90.0 80.0 10.0 N 374525 i1 2014-12-22T23:35:00 ...
+BHD 2014 8 12 15 2 0 2014-08-12T15:02:00Z 2014.6126750380517 4245-99 -47.366 0.073 -41.4083 174.871 90.0 80.0 10.0 N 381446 i1 2015-03-05T00:02:00 ..j
+BHD 2014 8 12 15 2 0 2014-08-12T15:02:00Z 2014.6126750380517 4246-99 -47.353 0.073 -41.4083 174.871 90.0 80.0 10.0 N 381447 i1 2015-03-05T00:21:00 ...
+BHD 2014 8 25 1 48 0 2014-08-25T01:48:00Z 2014.646780821918 2469-99 -47.224 0.066 -41.4083 174.871 90.0 80.0 10.0 N 374526 i1 2014-12-22T22:38:00 ..j
+BHD 2014 8 25 1 48 0 2014-08-25T01:48:00Z 2014.646780821918 2470-99 -47.17 0.066 -41.4083 174.871 90.0 80.0 10.0 N 374527 i1 2014-12-22T22:57:00 ...
+BHD 2014 9 22 1 10 0 2014-09-22T01:10:00Z 2014.7234208523591 5239-99 -47.07 0.074 -41.4083 174.871 90.0 80.0 10.0 N 381444 i1 2015-03-05T22:48:00 ..j
+BHD 2014 9 22 1 10 0 2014-09-22T01:10:00Z 2014.7234208523591 5240-99 -47.21 0.074 -41.4083 174.871 90.0 80.0 10.0 N 381445 i1 2015-03-05T23:07:00 ...
+BHD 2014 11 4 23 1 0 2014-11-04T23:01:00Z 2014.8437233637746 2041-99 -47.125 0.074 -41.4083 174.871 90.0 80.0 10.0 N 381440 i1 2015-03-05T21:32:00 +.j
+BHD 2014 11 4 23 1 0 2014-11-04T23:01:00Z 2014.8437233637746 2042-99 -47.279 0.074 -41.4083 174.871 90.0 80.0 10.0 N 381441 i1 2015-03-05T21:51:00 -..
+BHD 2014 12 10 0 7 0 2014-12-10T00:07:00Z 2014.93973934551 4239-99 -47.157 0.074 -41.4083 174.871 90.0 80.0 10.0 N 381442 i1 2015-03-05T22:10:00 ..j
+BHD 2014 12 10 0 7 0 2014-12-10T00:07:00Z 2014.93973934551 4240-99 -47.233 0.074 -41.4083 174.871 90.0 80.0 10.0 N 381443 i1 2015-03-05T22:29:00 ...
+BHD 2015 2 25 23 44 0 2015-02-25T23:44:00Z 2015.1533942161338 4857-99 -47.071 0.041 -41.4083 174.871 95.0 85.0 10.0 N 399482 i1 2016-03-15T19:32:00 A.j
+BHD 2015 2 25 23 44 0 2015-02-25T23:44:00Z 2015.1533942161338 4858-99 -47.032 0.041 -41.4083 174.871 95.0 85.0 10.0 N 399483 i1 2016-03-15T19:51:00 A..
+BHD 2015 3 18 2 4 0 2015-03-18T02:04:00Z 2015.2084550989346 4625-99 -47.165 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399484 i1 2016-04-12T11:14:00 ..j
+BHD 2015 3 18 2 4 0 2015-03-18T02:04:00Z 2015.2084550989346 4626-99 -47.164 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399485 i1 2016-04-12T11:33:00 ...
+BHD 2015 4 28 0 21 0 2015-04-28T00:21:00Z 2015.3205878995434 595-99 -47.215 0.041 -41.4083 174.871 95.0 85.0 10.0 N 399478 i1 2016-03-15T18:52:00 A.j
+BHD 2015 4 28 0 21 0 2015-04-28T00:21:00Z 2015.3205878995434 596-99 -47.062 0.041 -41.4083 174.871 95.0 85.0 10.0 N 399479 i1 2016-03-15T19:12:00 A..
+BHD 2015 6 23 1 10 0 2015-06-23T01:10:00Z 2015.474105783866 2507-99 -47.144 0.041 -41.4083 174.871 95.0 85.0 10.0 N 399480 i1 2016-03-15T18:13:00 A.j
+BHD 2015 6 23 1 10 0 2015-06-23T01:10:00Z 2015.474105783866 2508-99 -47.152 0.041 -41.4083 174.871 95.0 85.0 10.0 N 399481 i1 2016-03-15T18:33:00 A..
+BHD 2015 7 10 0 17 0 2015-07-10T00:17:00Z 2015.5205802891933 5379-99 -47.29 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399486 i1 2016-04-14T12:48:00 ..j
+BHD 2015 7 10 0 17 0 2015-07-10T00:17:00Z 2015.5205802891933 5380-99 -47.309 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399487 i1 2016-04-14T13:06:00 ...
+BHD 2015 7 22 2 32 0 2015-07-22T02:32:00Z 2015.553713850837 4889-99 -47.11 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399488 i1 2016-04-12T11:51:00 ..j
+BHD 2015 7 22 2 32 0 2015-07-22T02:32:00Z 2015.553713850837 4890-99 -47.091 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399489 i1 2016-04-12T12:09:00 ...
+BHD 2015 9 3 1 30 0 2015-09-03T01:30:00Z 2015.671404109589 1331-99 -47.248 0.042 -41.4083 174.871 95.0 85.0 10.0 N 399447 i1 2016-04-29T23:20:00 ..j
+BHD 2015 9 3 1 30 0 2015-09-03T01:30:00Z 2015.671404109589 1332-99 -47.166 0.042 -41.4083 174.871 95.0 85.0 10.0 N 399448 i1 2016-04-29T23:38:00 ...
+BHD 2015 10 8 0 14 0 2015-10-08T00:14:00Z 2015.7671499238966 115-99 -47.133 0.039 -41.4083 174.871 95.0 85.0 10.0 N 399433 i1 2016-04-14T00:52:00 ..j
+BHD 2015 10 8 0 14 0 2015-10-08T00:14:00Z 2015.7671499238966 116-99 -47.141 0.039 -41.4083 174.871 95.0 85.0 10.0 N 399434 i1 2016-04-14T01:11:00 ...
+BHD 2015 10 21 23 53 0 2015-10-21T23:53:00Z 2015.8054661339422 5401-99 -47.143 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399445 i1 2016-04-18T14:09:00 ..j
+BHD 2015 10 21 23 53 0 2015-10-21T23:53:00Z 2015.8054661339422 5402-99 -47.155 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399446 i1 2016-04-18T14:27:00 ...
+BHD 2015 11 12 1 54 0 2015-11-12T01:54:00Z 2015.8632305936073 143-99 -47.333 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399443 i1 2016-04-12T16:35:00 -.j
+BHD 2015 11 12 1 54 0 2015-11-12T01:54:00Z 2015.8632305936073 144-99 -47.143 0.038 -41.4083 174.871 95.0 85.0 10.0 N 399444 i1 2016-04-12T16:53:00 +..
+BHD 2015 12 17 0 15 0 2015-12-17T00:15:00Z 2015.9589326484017 5051-99 -47.141 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 405819 i1 2016-07-21T15:47:00 ..o
+BHD 2015 12 17 0 15 0 2015-12-17T00:15:00Z 2015.9589326484017 5052-99 -47.178 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 405820 i1 2016-07-21T16:08:00 ..o
+BHD 2016 1 28 1 28 0 2016-01-28T01:28:00Z 2016.0739374620523 1775-99 -47.127 0.033 -41.4083 174.871 95.0 85.0 10.0 N 405821 i1 2016-07-22T19:24:00 ..j
+BHD 2016 1 28 1 28 0 2016-01-28T01:28:00Z 2016.0739374620523 1776-99 -47.15 0.033 -41.4083 174.871 95.0 85.0 10.0 N 405822 i1 2016-07-22T19:45:00 ...
+BHD 2016 2 29 23 55 0 2016-02-29T23:55:00Z 2016.1639249392836 2366-99 -47.09 0.094 -41.4083 174.871 95.0 85.0 10.0 N 405818 i1 2016-06-24T08:35:00 ...
+BHD 2016 2 29 23 55 0 2016-02-29T23:55:00Z 2016.1639249392836 4203-99 -47.149 0.094 -41.4083 174.871 95.0 85.0 10.0 N 405817 i1 2016-06-24T08:14:00 ..j
+BHD 2016 3 16 1 5 0 2016-03-16T01:05:00Z 2016.2050413630843 5399-99 -47.018 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415194 i1 2016-12-13T15:11:00 ..o
+BHD 2016 3 16 1 5 0 2016-03-16T01:05:00Z 2016.2050413630843 5400-99 -47.061 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415195 i1 2016-12-13T15:32:00 ..o
+BHD 2016 5 16 23 38 0 2016-05-16T23:38:00Z 2016.3742751973284 4175-99 -47.185 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415190 i1 2016-12-13T15:54:00 ..o
+BHD 2016 5 16 23 38 0 2016-05-16T23:38:00Z 2016.3742751973284 4176-99 -47.161 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415191 i1 2016-12-13T16:15:00 ..o
+BHD 2016 5 31 1 38 0 2016-05-31T01:38:00Z 2016.4127542501517 2541-99 -47.1 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415188 i1 2016-10-25T22:40:00 ..o
+BHD 2016 5 31 1 38 0 2016-05-31T01:38:00Z 2016.4127542501517 2542-99 -47.163 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415189 i1 2016-10-25T23:01:00 ..o
+BHD 2016 6 30 2 0 0 2016-06-30T02:00:00Z 2016.4947632058288 5379-99 -47.127 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415192 i1 2016-10-25T21:58:00 ..o
+BHD 2016 6 30 2 0 0 2016-06-30T02:00:00Z 2016.4947632058288 5380-99 -47.175 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 415193 i1 2016-10-25T22:19:00 ..o
+BHD 2016 8 4 2 30 0 2016-08-04T02:30:00Z 2016.590448542805 4701-99 -47.17 0.052 -41.4083 174.871 95.0 85.0 10.0 N 415196 i1 2016-10-26T22:30:00 ..j
+BHD 2016 8 4 2 30 0 2016-08-04T02:30:00Z 2016.590448542805 4702-99 -47.184 0.052 -41.4083 174.871 95.0 85.0 10.0 N 415197 i1 2016-10-26T22:51:00 ...
+BHD 2016 9 8 2 20 0 2016-09-08T02:20:00Z 2016.6860579842137 1859-99 -47.264 0.057 -41.4083 174.871 95.0 85.0 10.0 N 422203 i1 2017-05-09T07:02:00 ..j
+BHD 2016 9 8 2 20 0 2016-09-08T02:20:00Z 2016.6860579842137 1859-99 -47.112 0.061 -41.4083 174.871 95.0 85.0 10.0 N 422203 i1 2017-05-13T12:29:00 -.j
+BHD 2016 9 8 2 20 0 2016-09-08T02:20:00Z 2016.6860579842137 1860-99 -47.22 0.057 -41.4083 174.871 95.0 85.0 10.0 N 422204 i1 2017-05-09T07:22:00 ...
+BHD 2016 9 8 2 20 0 2016-09-08T02:20:00Z 2016.6860579842137 1860-99 -46.337 0.061 -41.4083 174.871 95.0 85.0 10.0 N 422204 i1 2017-05-13T12:52:00 +..
+BHD 2016 9 22 3 40 0 2016-09-22T03:40:00Z 2016.7244611414694 175-99 -47.152 0.047 -41.4083 174.871 95.0 85.0 10.0 N 415186 i1 2016-11-01T22:24:00 ..j
+BHD 2016 9 22 3 40 0 2016-09-22T03:40:00Z 2016.7244611414694 176-99 -47.185 0.047 -41.4083 174.871 95.0 85.0 10.0 N 415187 i1 2016-11-01T22:45:00 ...
+BHD 2017 1 20 0 34 0 2017-01-20T00:34:00Z 2017.0521194824962 1252-99 -47.114 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 422202 i1 2017-04-28T23:13:00 ..o
+BHD 2017 1 20 0 34 0 2017-01-20T00:34:00Z 2017.0521194824962 327-99 -47.122 -999.999 -41.4083 174.871 95.0 85.0 10.0 N 422201 i1 2017-04-28T22:54:00 ..o
+BHD 2017 2 9 3 17 0 2017-02-09T03:17:00Z 2017.1072241248098 1991-99 -47.089 0.057 -41.4083 174.871 95.0 85.0 10.0 N 422205 i1 2017-05-09T07:43:00 ..j
+BHD 2017 2 9 3 17 0 2017-02-09T03:17:00Z 2017.1072241248098 1991-99 -47.274 0.061 -41.4083 174.871 95.0 85.0 10.0 N 422205 i1 2017-05-13T13:15:00 ..j
+BHD 2017 2 9 3 17 0 2017-02-09T03:17:00Z 2017.1072241248098 1992-99 -47.107 0.057 -41.4083 174.871 95.0 85.0 10.0 N 422206 i1 2017-05-09T08:03:00 ...
+BHD 2017 2 9 3 17 0 2017-02-09T03:17:00Z 2017.1072241248098 1992-99 -47.228 0.061 -41.4083 174.871 95.0 85.0 10.0 N 422206 i1 2017-05-13T13:37:00 ...
+BHD 2017 2 23 2 40 0 2017-02-23T02:40:00Z 2017.145509893455 2565-99 -47.178 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429488 i1 2017-09-19T18:17:00 ..j
+BHD 2017 2 23 2 40 0 2017-02-23T02:40:00Z 2017.145509893455 933-99 -47.098 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429487 i1 2017-09-19T17:54:00 ...
+BHD 2017 3 7 2 35 0 2017-03-07T02:35:00Z 2017.1783770928462 2585-99 -47.126 0.036 -41.4083 174.871 95.0 85.0 10.0 N 429485 i1 2017-09-21T17:35:00 ...
+BHD 2017 3 7 2 35 0 2017-03-07T02:35:00Z 2017.1783770928462 99-99 -47.135 0.036 -41.4083 174.871 95.0 85.0 10.0 N 429486 i1 2017-09-21T17:57:00 ..j
+BHD 2017 3 23 2 19 0 2017-03-23T02:19:00Z 2017.2221822678844 533-99 -47.227 0.036 -41.4083 174.871 95.0 85.0 10.0 N 430028 i1 2017-09-14T19:59:00 ..j
+BHD 2017 3 23 2 19 0 2017-03-23T02:19:00Z 2017.2221822678844 534-99 -47.156 0.036 -41.4083 174.871 95.0 85.0 10.0 N 430029 i1 2017-09-14T20:21:00 ...
+BHD 2017 4 7 2 1 0 2017-04-07T02:01:00Z 2017.2632439117199 3819-99 -47.161 0.036 -41.4083 174.871 95.0 85.0 10.0 N 430027 i1 2017-09-14T21:07:00 ..j
+BHD 2017 4 7 2 1 0 2017-04-07T02:01:00Z 2017.2632439117199 3820-99 -47.251 0.036 -41.4083 174.871 95.0 85.0 10.0 N 430026 i1 2017-09-14T20:44:00 ...
+BHD 2017 5 19 20 2 0 2017-05-19T20:02:00Z 2017.3803691019787 129-99 -47.179 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429483 i1 2017-09-18T17:16:00 ..j
+BHD 2017 5 19 20 2 0 2017-05-19T20:02:00Z 2017.3803691019787 130-99 -47.159 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429484 i1 2017-09-18T17:39:00 ...
+BHD 2017 5 19 20 2 0 2017-05-19T20:02:00Z 2017.3803691019787 130-99 -47.449 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429484 i1 2017-09-18T18:02:00 !..
+BHD 2017 6 13 23 0 0 2017-06-13T23:00:00Z 2017.449200913242 3032-99 -47.228 0.036 -41.4083 174.871 95.0 85.0 10.0 N 429482 i1 2017-09-13T19:58:00 ..j
+BHD 2017 6 13 23 0 0 2017-06-13T23:00:00Z 2017.449200913242 5685-99 -47.238 0.036 -41.4083 174.871 95.0 85.0 10.0 N 429481 i1 2017-09-13T19:35:00 ...
+BHD 2017 7 27 23 46 0 2017-07-27T23:46:00Z 2017.5698363774734 675-99 -47.257 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429479 i1 2017-09-18T15:46:00 ..j
+BHD 2017 7 27 23 46 0 2017-07-27T23:46:00Z 2017.5698363774734 676-99 -47.232 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429480 i1 2017-09-18T16:08:00 ...
+BHD 2017 8 3 1 24 0 2017-08-03T01:24:00Z 2017.5864611872146 1507-99 -47.277 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429477 i1 2017-09-19T20:10:00 ..j
+BHD 2017 8 3 1 24 0 2017-08-03T01:24:00Z 2017.5864611872146 1508-99 -47.211 0.037 -41.4083 174.871 95.0 85.0 10.0 N 429478 i1 2017-09-19T20:33:00 ...
+BHD 2017 8 17 0 29 0 2017-08-17T00:29:00Z 2017.6247127092847 2239-99 -47.26 0.055 -41.4083 174.871 95.0 85.0 10.0 N 439565 i1 2018-04-04T12:42:00 ..r
+BHD 2017 8 17 0 29 0 2017-08-17T00:29:00Z 2017.6247127092847 3031-99 -47.303 0.053 -41.4083 174.871 95.0 85.0 10.0 N 439566 i1 2018-04-04T13:04:00 ..r
+BHD 2017 8 22 1 44 0 2017-08-22T01:44:00Z 2017.6385540334854 2936-99 -47.339 0.113 -41.4083 174.871 95.0 85.0 10.0 N 439567 i1 2018-03-14T18:06:00 ..r
+BHD 2017 8 22 1 44 0 2017-08-22T01:44:00Z 2017.6385540334854 5686-99 -47.265 0.051 -41.4083 174.871 95.0 85.0 10.0 N 439568 i1 2018-03-14T17:45:00 ..r
+BHD 2017 9 5 22 48 0 2017-09-05T22:48:00Z 2017.6793150684932 2935-99 -47.333 0.076 -41.4083 174.871 95.0 85.0 10.0 N 439231 i1 2018-03-08T06:39:00 ..r
+BHD 2017 9 5 22 48 0 2017-09-05T22:48:00Z 2017.6793150684932 4042-99 -47.437 0.081 -41.4083 174.871 95.0 85.0 10.0 N 439230 i1 2018-03-08T06:18:00 ..r
+BHD 2017 9 28 0 42 0 2017-09-28T00:42:00Z 2017.739805936073 2240-99 -47.142 0.046 -41.4083 174.871 95.0 85.0 10.0 N 439232 i1 2018-03-07T20:11:00 ..r
+BHD 2017 9 28 0 42 0 2017-09-28T00:42:00Z 2017.739805936073 4041-99 -47.202 0.059 -41.4083 174.871 95.0 85.0 10.0 N 439233 i1 2018-03-07T19:50:00 ..r
+BHD 2017 10 5 2 42 0 2017-10-05T02:42:00Z 2017.759212328767 1205-99 -47.198 0.068 -41.4083 174.871 95.0 85.0 10.0 N 439212 i1 2018-03-07T09:54:00 ..r
+BHD 2017 10 5 2 42 0 2017-10-05T02:42:00Z 2017.759212328767 1232-99 -47.13 0.066 -41.4083 174.871 95.0 85.0 10.0 N 439213 i1 2018-03-07T10:15:00 ..r
+BHD 2017 10 17 23 11 0 2017-10-17T23:11:00Z 2017.7944273211567 1766-99 -47.278 0.071 -41.4083 174.871 95.0 85.0 10.0 N 439211 i1 2018-03-07T09:32:00 ..r
+BHD 2017 10 17 23 11 0 2017-10-17T23:11:00Z 2017.7944273211567 3353-99 -47.284 0.066 -41.4083 174.871 95.0 85.0 10.0 N 439210 i1 2018-03-07T09:10:00 ..r
+BHD 2017 11 13 0 30 0 2017-11-13T00:30:00Z 2017.865810502283 4017-99 -47.251 0.047 -41.4083 174.871 95.0 85.0 10.0 N 439208 i1 2018-03-09T04:08:00 ..r
+BHD 2017 11 13 0 30 0 2017-11-13T00:30:00Z 2017.865810502283 4018-99 -47.236 0.047 -41.4083 174.871 95.0 85.0 10.0 N 439209 i1 2018-03-09T04:30:00 ..r
+BHD 2018 2 14 23 47 0 2018-02-14T23:47:00Z 2018.1232629375952 4815-99 -47.178 0.122 -41.4083 174.871 95.0 85.0 10.0 N 445109 i1 2018-07-18T13:32:00 ..r
+BHD 2018 2 14 23 47 0 2018-02-14T23:47:00Z 2018.1232629375952 4816-99 -47.236 0.047 -41.4083 174.871 95.0 85.0 10.0 N 445110 i1 2018-07-18T13:55:00 ..r
+BHD 2018 2 21 22 8 0 2018-02-21T22:08:00Z 2018.1422526636225 2591-99 -47.296 0.112 -41.4083 174.871 95.0 85.0 10.0 N 445101 i1 2018-07-12T16:57:00 ..r
+BHD 2018 2 21 22 8 0 2018-02-21T22:08:00Z 2018.1422526636225 2592-99 -47.382 0.047 -41.4083 174.871 95.0 85.0 10.0 N 445102 i1 2018-07-12T17:19:00 ..r
+BHD 2018 3 22 22 46 0 2018-03-22T22:46:00Z 2018.2217770167429 175-99 -47.175 0.176 -41.4083 174.871 95.0 85.0 10.0 N 445103 i1 2018-07-03T19:40:00 ..R
+BHD 2018 3 22 22 46 0 2018-03-22T22:46:00Z 2018.2217770167429 176-99 -47.276 0.125 -41.4083 174.871 95.0 85.0 10.0 N 445104 i1 2018-07-03T20:02:00 ..R
+BHD 2018 4 12 23 47 0 2018-04-12T23:47:00Z 2018.2794273211568 3375-99 -47.324 0.069 -41.4083 174.871 95.0 85.0 10.0 N 445105 i1 2018-07-12T21:57:00 ..r
+BHD 2018 4 12 23 47 0 2018-04-12T23:47:00Z 2018.2794273211568 3376-99 -47.274 0.047 -41.4083 174.871 95.0 85.0 10.0 N 445106 i1 2018-07-12T22:18:00 ..r
+BHD 2018 5 10 3 4 0 2018-05-10T03:04:00Z 2018.3537747336377 2149-99 -46.972 0.134 -41.4083 174.871 95.0 85.0 10.0 N 449015 i1 2018-11-08T03:18:00 .xR
+BHD 2018 5 10 3 4 0 2018-05-10T03:04:00Z 2018.3537747336377 2150-99 -46.891 0.057 -41.4083 174.871 95.0 85.0 10.0 N 449014 i1 2018-11-08T03:39:00 .xr
+BHD 2018 5 24 1 21 0 2018-05-24T01:21:00Z 2018.3919349315067 5239-99 -47.218 0.156 -41.4083 174.871 95.0 85.0 10.0 N 449016 i1 2018-11-14T22:46:00 -.R
+BHD 2018 5 24 1 21 0 2018-05-24T01:21:00Z 2018.3919349315067 5240-99 -47.064 0.213 -41.4083 174.871 95.0 85.0 10.0 N 449017 i1 2018-11-14T23:08:00 +.R
+BHD 2018 5 28 2 29 0 2018-05-28T02:29:00Z 2018.4030232115676 141-99 -47.226 0.124 -41.4083 174.871 95.0 85.0 10.0 N 449054 i1 2018-11-15T20:17:00 ..r
+BHD 2018 5 28 2 29 0 2018-05-28T02:29:00Z 2018.4030232115676 142-99 -47.131 0.129 -41.4083 174.871 95.0 85.0 10.0 N 449055 i1 2018-11-15T20:39:00 ..r
+BHD 2018 6 6 2 49 0 2018-06-06T02:49:00Z 2018.4277187975647 1405-99 -47.305 0.139 -41.4083 174.871 95.0 85.0 10.0 N 449056 i1 2018-11-16T19:15:00 ..R
+BHD 2018 6 6 2 49 0 2018-06-06T02:49:00Z 2018.4277187975647 1406-99 -47.278 0.05 -41.4083 174.871 95.0 85.0 10.0 N 449057 i1 2018-11-16T19:37:00 ..r
+BHD 2018 6 20 23 50 0 2018-06-20T23:50:00Z 2018.4684741248097 195-99 -47.175 0.134 -41.4083 174.871 95.0 85.0 10.0 N 449012 i1 2018-11-13T21:36:00 ..r
+BHD 2018 6 20 23 50 0 2018-06-20T23:50:00Z 2018.4684741248097 196-99 -47.17 0.2 -41.4083 174.871 95.0 85.0 10.0 N 449013 i1 2018-11-13T21:57:00 ..R
+BHD 2018 7 12 2 28 0 2018-07-12T02:28:00Z 2018.5263089802131 5473-99 -47.264 0.151 -41.4083 174.871 95.0 85.0 10.0 N 449010 i1 2018-11-14T01:52:00 ..R
+BHD 2018 7 12 2 28 0 2018-07-12T02:28:00Z 2018.5263089802131 5474-99 -47.202 0.191 -41.4083 174.871 95.0 85.0 10.0 N 449011 i1 2018-11-14T02:14:00 ..R
+BHD 2018 8 9 2 25 0 2018-08-09T02:25:00Z 2018.6030156012177 5379-99 -47.926 0.142 -41.4083 174.871 95.0 85.0 10.0 N 456707 i1 2019-04-25T11:49:00 D.R
+BHD 2018 8 9 2 25 0 2018-08-09T02:25:00Z 2018.6030156012177 5380-99 -47.509 0.066 -41.4083 174.871 95.0 85.0 10.0 N 456708 i1 2019-04-25T12:10:00 D.r
+BHD 2018 9 13 1 15 0 2018-09-13T01:15:00Z 2018.6987728310503 123-99 -47.403 0.17 -41.4083 174.871 95.0 85.0 10.0 N 456709 i1 2019-07-19T18:33:00 ..R
+BHD 2018 9 13 1 15 0 2018-09-13T01:15:00Z 2018.6987728310503 124-99 -47.35 0.059 -41.4083 174.871 95.0 85.0 10.0 N 456710 i1 2019-07-19T18:54:00 ..r
+BHD 2018 10 11 0 0 0 2018-10-11T00:00:00Z 2018.7753424657535 1565-99 -47.435 0.09 -41.4083 174.871 95.0 85.0 10.0 N 456727 i1 2019-04-25T18:50:00 D.r
+BHD 2018 10 11 0 0 0 2018-10-11T00:00:00Z 2018.7753424657535 1566-99 -47.496 0.084 -41.4083 174.871 95.0 85.0 10.0 N 456728 i1 2019-04-25T19:12:00 D.r
+BHD 2018 11 1 0 58 0 2018-11-01T00:58:00Z 2018.832987062405 1871-99 -46.986 0.084 -41.4083 174.871 95.0 85.0 10.0 N 456711 i1 2019-04-26T03:37:00 D.r
+BHD 2018 11 1 0 58 0 2018-11-01T00:58:00Z 2018.832987062405 1872-99 -46.889 0.083 -41.4083 174.871 95.0 85.0 10.0 N 456712 i1 2019-04-26T03:58:00 D.r
+BHD 2018 11 29 1 31 0 2018-11-29T01:31:00Z 2018.9097621765602 5447-99 -46.927 0.133 -41.4083 174.871 95.0 85.0 10.0 N 456713 i1 2019-04-26T04:20:00 D.r
+BHD 2018 11 29 1 31 0 2018-11-29T01:31:00Z 2018.9097621765602 5448-99 -47.142 0.094 -41.4083 174.871 95.0 85.0 10.0 N 456714 i1 2019-04-26T04:41:00 D.r
+BHD 2018 12 6 1 3 0 2018-12-06T01:03:00Z 2018.9288869863014 1579-99 -47.373 0.196 -41.4083 174.871 95.0 85.0 10.0 N 456737 i1 2019-09-11T19:23:00 ..R
+BHD 2018 12 6 1 3 0 2018-12-06T01:03:00Z 2018.9288869863014 1580-99 -47.383 0.109 -41.4083 174.871 95.0 85.0 10.0 N 456738 i1 2019-09-11T19:46:00 ..r
+BHD 2018 12 20 3 1 0 2018-12-20T03:01:00Z 2018.967467656012 67-99 -47.321 0.18 -41.4083 174.871 95.0 85.0 10.0 N 456735 i1 2019-07-19T19:57:00 ..R
+BHD 2018 12 20 3 1 0 2018-12-20T03:01:00Z 2018.967467656012 68-99 -47.281 0.056 -41.4083 174.871 95.0 85.0 10.0 N 456736 i1 2019-07-19T20:18:00 ..r
+BHD 2019 1 24 0 23 0 2019-01-24T00:23:00Z 2019.063057458143 129-99 -47.401 0.188 -41.4083 174.871 95.0 85.0 10.0 N 463939 i1 2019-10-22T05:02:00 !.R
+BHD 2019 1 24 0 23 0 2019-01-24T00:23:00Z 2019.063057458143 130-99 -47.43 0.245 -41.4083 174.871 95.0 85.0 10.0 N 463940 i1 2019-10-22T05:24:00 !.R
+BHD 2019 2 6 23 16 0 2019-02-06T23:16:00Z 2019.101286149163 367-99 -47.257 0.062 -41.4083 174.871 95.0 85.0 10.0 N 464243 i1 2019-10-20T22:45:00 !.r
+BHD 2019 2 6 23 16 0 2019-02-06T23:16:00Z 2019.101286149163 368-99 -47.374 0.085 -41.4083 174.871 95.0 85.0 10.0 N 464244 i1 2019-10-20T23:06:00 !.r
+BHD 2019 3 28 0 50 0 2019-03-28T00:50:00Z 2019.235711567732 5561-99 -47.325 0.06 -41.4083 174.871 95.0 85.0 10.0 N 463925 i1 2019-10-21T05:04:00 !.r
+BHD 2019 3 28 0 50 0 2019-03-28T00:50:00Z 2019.235711567732 5562-99 -47.466 0.107 -41.4083 174.871 95.0 85.0 10.0 N 463926 i1 2019-10-21T05:26:00 !.R
+BHD 2019 4 17 23 52 0 2019-04-17T23:52:00Z 2019.2931354642315 5079-99 -47.328 0.082 -41.4083 174.871 95.0 85.0 10.0 N 470406 i1 2020-06-28T17:50:00 -.r
+BHD 2019 4 17 23 52 0 2019-04-17T23:52:00Z 2019.2931354642315 5080-99 -47.092 0.146 -41.4083 174.871 95.0 85.0 10.0 N 470407 i1 2020-06-28T18:12:00 +.R
+BHD 2019 6 6 3 14 0 2019-06-06T03:14:00Z 2019.4277663622527 635-99 -47.281 0.058 -41.4083 174.871 95.0 85.0 10.0 N 463923 i1 2019-10-20T15:42:00 !.r
+BHD 2019 6 6 3 14 0 2019-06-06T03:14:00Z 2019.4277663622527 636-99 -47.395 0.056 -41.4083 174.871 95.0 85.0 10.0 N 463924 i1 2019-10-20T16:04:00 !.r
+BHD 2019 7 4 2 46 0 2019-07-04T02:46:00Z 2019.5044254185693 5667-99 -47.46 0.059 -41.4083 174.871 95.0 85.0 10.0 N 463921 i1 2019-10-21T02:58:00 !.r
+BHD 2019 7 4 2 46 0 2019-07-04T02:46:00Z 2019.5044254185693 5668-99 -47.333 0.066 -41.4083 174.871 95.0 85.0 10.0 N 463922 i1 2019-10-21T03:19:00 !.r
+BHD 2019 7 31 23 45 0 2019-07-31T23:45:00Z 2019.5807933789954 1677-99 -47.32 0.092 -41.4083 174.871 95.0 85.0 10.0 N 470408 i1 2020-06-29T06:05:00 ..r
+BHD 2019 7 31 23 45 0 2019-07-31T23:45:00Z 2019.5807933789954 1678-99 -47.362 0.049 -41.4083 174.871 95.0 85.0 10.0 N 470409 i1 2020-06-29T06:27:00 ..r
+BHD 2019 8 22 1 10 0 2019-08-22T01:10:00Z 2019.63848934551 563-99 -47.437 0.064 -41.4083 174.871 95.0 85.0 10.0 N 470404 i1 2020-05-23T08:15:00 -.r
+BHD 2019 8 22 1 10 0 2019-08-22T01:10:00Z 2019.63848934551 564-99 -47.311 0.113 -41.4083 174.871 95.0 85.0 10.0 N 470405 i1 2020-05-23T08:37:00 +.r
+BHD 2019 9 20 1 8 0 2019-09-20T01:08:00Z 2019.7179375951293 5391-99 -47.147 0.108 -41.4083 174.871 95.0 85.0 10.0 N 470402 i1 2020-06-25T06:56:00 -.R
+BHD 2019 9 20 1 8 0 2019-09-20T01:08:00Z 2019.7179375951293 5392-99 -47.021 0.145 -41.4083 174.871 95.0 85.0 10.0 N 470403 i1 2020-06-25T07:18:00 +.R
+BHD 2019 10 22 23 4 0 2019-10-22T23:04:00Z 2019.808112633181 2355-99 -47.402 0.06 -41.4083 174.871 95.0 85.0 10.0 N 470422 i1 2020-06-15T09:59:00 -.r
+BHD 2019 10 22 23 4 0 2019-10-22T23:04:00Z 2019.808112633181 2356-99 -47.045 0.161 -41.4083 174.871 95.0 85.0 10.0 N 470423 i1 2020-06-15T10:21:00 +.R
+BHD 2019 11 21 2 25 0 2019-11-21T02:25:00Z 2019.887947108067 3555-99 -47.571 0.163 -41.4083 174.871 95.0 85.0 10.0 N 470424 i1 2020-04-26T17:11:00 ..R
+BHD 2019 11 29 4 2 0 2019-11-29T04:02:00Z 2019.9100494672755 3216-99 -47.16 0.117 -41.4083 174.871 95.0 85.0 10.0 N 470329 i1 2020-06-18T11:31:00 .Xr
+BHD 2019 11 29 4 2 0 2019-11-29T04:02:00Z 2019.9100494672755 4010-99 -47.273 0.124 -41.4083 174.871 95.0 85.0 10.0 N 470330 i1 2020-06-18T11:53:00 ..r
+BHD 2019 12 9 2 39 0 2019-12-09T02:39:00Z 2019.9372888127855 3317-99 -47.127 0.148 -41.4083 174.871 95.0 85.0 10.0 N 470327 i1 2020-07-01T01:16:00 +.R
+BHD 2019 12 9 2 39 0 2019-12-09T02:39:00Z 2019.9372888127855 3853-99 -47.321 0.051 -41.4083 174.871 95.0 85.0 10.0 N 470328 i1 2020-07-01T01:37:00 -.r
+BHD 2020 2 13 0 30 0 2020-02-13T00:30:00Z 2020.1175432604737 4236-99 -47.268 0.087 -41.4083 174.871 95.0 85.0 10.0 N 481891 i1 2021-02-07T01:48:00 ..j
+BHD 2020 2 13 0 30 0 2020-02-13T00:30:00Z 2020.1175432604737 5511-99 -47.269 0.087 -41.4083 174.871 95.0 85.0 10.0 N 481890 i1 2021-02-07T01:28:00 ...
+BHD 2020 3 12 1 55 0 2020-03-12T01:55:00Z 2020.1942072707955 4203-99 -47.374 0.037 -41.4083 174.871 95.0 85.0 10.0 N 481820 i1 2021-01-26T16:23:00 ..j
+BHD 2020 3 12 1 55 0 2020-03-12T01:55:00Z 2020.1942072707955 726-99 -47.353 0.037 -41.4083 174.871 95.0 85.0 10.0 N 481821 i1 2021-01-26T16:43:00 ...
+BHD 2020 4 29 0 2 0 2020-04-29T00:02:00Z 2020.3251404068003 5681-99 -47.575 0.076 -41.4083 174.871 95.0 85.0 10.0 N 481886 i1 2021-01-31T21:20:00 .xS
+BHD 2020 6 4 23 27 0 2020-06-04T23:27:00Z 2020.4261668943534 5551-99 -47.331 0.087 -41.4083 174.871 95.0 85.0 10.0 N 481888 i1 2021-02-07T00:08:00 ..j
+BHD 2020 6 4 23 27 0 2020-06-04T23:27:00Z 2020.4261668943534 5552-99 -47.352 0.087 -41.4083 174.871 95.0 85.0 10.0 N 481889 i1 2021-02-07T00:28:00 ...
+BHD 2020 7 2 0 11 0 2020-07-02T00:11:00Z 2020.500020871281 114-99 -47.362 0.079 -41.4083 174.871 95.0 85.0 10.0 N 481822 i1 2021-02-03T21:49:00 A.j
+BHD 2020 7 2 0 11 0 2020-07-02T00:11:00Z 2020.500020871281 3470-99 -47.312 0.079 -41.4083 174.871 95.0 85.0 10.0 N 481823 i1 2021-02-03T22:09:00 A..
+BHD 2020 7 22 0 34 0 2020-07-22T00:34:00Z 2020.5547093199757 5457-99 -47.469 0.074 -41.4083 174.871 95.0 85.0 10.0 N 481826 i1 2021-01-27T16:56:00 -..
+BHD 2020 7 22 0 34 0 2020-07-22T00:34:00Z 2020.5547093199757 5457-99 -47.184 0.074 -41.4083 174.871 95.0 85.0 10.0 N 481826 i1 2021-01-30T03:53:00 T..
+BHD 2020 7 22 0 34 0 2020-07-22T00:34:00Z 2020.5547093199757 756-99 -47.153 0.074 -41.4083 174.871 95.0 85.0 10.0 N 481827 i1 2021-01-27T17:16:00 +.j
+BHD 2020 7 22 0 34 0 2020-07-22T00:34:00Z 2020.5547093199757 756-99 -47.186 0.074 -41.4083 174.871 95.0 85.0 10.0 N 481827 i1 2021-01-30T04:13:00 T.j
+BHD 2020 8 14 2 59 0 2020-08-14T02:59:00Z 2020.6178259714632 3366-99 -47.436 0.038 -41.4083 174.871 95.0 85.0 10.0 N 481518 i1 2021-02-20T01:08:00 ...
+BHD 2020 8 14 2 59 0 2020-08-14T02:59:00Z 2020.6178259714632 5705-99 -47.405 0.038 -41.4083 174.871 95.0 85.0 10.0 N 481519 i1 2021-02-20T01:28:00 ..j
+BHD 2020 9 2 1 40 0 2020-09-02T01:40:00Z 2020.6695886460232 3783-99 -47.379 0.043 -41.4083 174.871 95.0 85.0 10.0 N 489447 i1 2021-06-08T16:53:00 ..j
+BHD 2020 9 2 1 40 0 2020-09-02T01:40:00Z 2020.6695886460232 4026-99 -47.417 0.043 -41.4083 174.871 95.0 85.0 10.0 N 489448 i1 2021-06-08T17:14:00 ...
+BHD 2020 10 15 1 20 0 2020-10-15T01:20:00Z 2020.787037037037 3784-99 -47.422 0.035 -41.4083 174.871 95.0 85.0 10.0 N 489450 i1 2021-05-28T20:17:00 ...
+BHD 2020 10 15 1 20 0 2020-10-15T01:20:00Z 2020.787037037037 4025-99 -47.368 0.035 -41.4083 174.871 95.0 85.0 10.0 N 489449 i1 2021-05-28T19:57:00 ..j
+BHD 2020 11 9 0 32 0 2020-11-09T00:32:00Z 2020.8552519732848 24-99 -47.519 0.038 -41.4083 174.871 95.0 85.0 10.0 N 489445 i1 2021-05-27T13:39:00 -.j
+BHD 2020 11 9 0 32 0 2020-11-09T00:32:00Z 2020.8552519732848 3956-99 -47.34 0.038 -41.4083 174.871 95.0 85.0 10.0 N 489446 i1 2021-05-27T13:59:00 +..
+BHD 2021 1 22 1 47 0 2021-01-22T01:47:00Z 2021.0577378234398 25-99 -47.385 0.038 -41.4083 174.871 95.0 85.0 10.0 N 489443 i1 2021-05-27T12:19:00 ..j
+BHD 2021 1 22 1 47 0 2021-01-22T01:47:00Z 2021.0577378234398 355-99 -47.352 0.038 -41.4083 174.871 95.0 85.0 10.0 N 489444 i1 2021-05-27T12:39:00 ...
+BHD 2021 2 4 1 24 0 2021-02-04T01:24:00Z 2021.0933105022832 3290-99 -47.301 0.035 -41.4083 174.871 95.0 85.0 10.0 N 489453 i1 2021-05-28T16:36:00 ...
+BHD 2021 2 4 1 24 0 2021-02-04T01:24:00Z 2021.0933105022832 3955-99 -47.378 0.035 -41.4083 174.871 95.0 85.0 10.0 N 489454 i1 2021-05-28T16:56:00 ..j
+BHD 2021 3 11 0 25 0 2021-03-11T00:25:00Z 2021.1890886605784 1682-99 -47.286 0.043 -41.4083 174.871 95.0 85.0 10.0 N 489452 i1 2021-06-08T22:35:00 D.j
+BHD 2021 3 11 0 25 0 2021-03-11T00:25:00Z 2021.1890886605784 1682-99 -47.306 0.043 -41.4083 174.871 95.0 85.0 10.0 N 489452 i1 2021-06-09T15:42:00 ..j
+BHD 2021 3 11 0 25 0 2021-03-11T00:25:00Z 2021.1890886605784 3023-99 -47.259 0.043 -41.4083 174.871 95.0 85.0 10.0 N 489451 i1 2021-06-08T22:15:00 D..
+BHD 2021 3 11 0 25 0 2021-03-11T00:25:00Z 2021.1890886605784 3023-99 -47.289 0.043 -41.4083 174.871 95.0 85.0 10.0 N 489451 i1 2021-06-09T15:22:00 ...
+BHD 2021 3 25 0 54 0 2021-03-25T00:54:00Z 2021.2275 106-99 -47.593 0.045 -41.4083 174.871 95.0 85.0 10.0 N 496949 i1 2022-03-22T16:41:00 .x.
+BHD 2021 3 25 0 54 0 2021-03-25T00:54:00Z 2021.2275 1153-99 -47.59 0.045 -41.4083 174.871 95.0 85.0 10.0 N 496950 i1 2022-03-22T16:20:00 .xj
+BHD 2021 4 8 2 26 0 2021-04-08T02:26:00Z 2021.2660312024352 2169-99 -47.667 0.079 -41.4083 174.871 95.0 85.0 10.0 N 497150 i1 2022-02-25T21:10:00 .xj
+BHD 2021 4 8 2 26 0 2021-04-08T02:26:00Z 2021.2660312024352 232-99 -47.606 0.079 -41.4083 174.871 95.0 85.0 10.0 N 497151 i1 2022-02-25T20:48:00 .x.
+BHD 2021 8 3 1 8 0 2021-08-03T01:08:00Z 2021.5864307458144 2553-99 -47.432 0.044 -41.4083 174.871 95.0 85.0 10.0 N 496951 i1 2022-03-21T00:53:00 ..j
+BHD 2021 8 3 1 8 0 2021-08-03T01:08:00Z 2021.5864307458144 4378-99 -47.465 0.044 -41.4083 174.871 95.0 85.0 10.0 N 496952 i1 2022-03-21T01:14:00 ...
+BHD 2021 8 9 2 10 0 2021-08-09T02:10:00Z 2021.602987062405 23-99 -47.504 0.079 -41.4083 174.871 95.0 85.0 10.0 N 497148 i1 2022-02-25T13:27:00 ..j
+BHD 2021 8 9 2 10 0 2021-08-09T02:10:00Z 2021.602987062405 4849-99 -47.451 0.079 -41.4083 174.871 95.0 85.0 10.0 N 497149 i1 2022-02-25T13:49:00 ...
+BHD 2021 9 16 3 33 0 2021-09-16T03:33:00Z 2021.70725456621 3912-99 -47.623 0.044 -41.4083 174.871 95.0 85.0 10.0 N 496947 i1 2022-03-20T16:15:00 ...
+BHD 2021 9 16 3 33 0 2021-09-16T03:33:00Z 2021.70725456621 5880-99 -47.511 0.044 -41.4083 174.871 95.0 85.0 10.0 N 496948 i1 2022-03-20T16:37:00 ..j
+BHD 2021 10 13 23 29 0 2021-10-13T23:29:00Z 2021.7835026636226 3911-99 -47.651 0.045 -41.4083 174.871 95.0 85.0 10.0 N 496945 i1 2022-03-21T15:34:00 ...
+BHD 2021 10 13 23 29 0 2021-10-13T23:29:00Z 2021.7835026636226 5879-99 -47.628 0.045 -41.4083 174.871 95.0 85.0 10.0 N 496946 i1 2022-03-21T15:55:00 ...
+BHD 2021 12 9 1 12 0 2021-12-09T01:12:00Z 2021.9371232876713 2226-99 -47.201 0.08 -41.4083 174.871 95.0 85.0 10.0 N 507608 i1 2022-10-23T05:19:00 D..
+BHD 2021 12 9 1 12 0 2021-12-09T01:12:00Z 2021.9371232876713 2226-99 -46.929 0.076 -41.4083 174.871 95.0 85.0 10.0 N 507608 i1 2022-10-24T02:42:00 T..
+BHD 2021 12 9 1 12 0 2021-12-09T01:12:00Z 2021.9371232876713 5552-99 -47.184 0.08 -41.4083 174.871 95.0 85.0 10.0 N 507609 i1 2022-10-23T04:57:00 D.j
+BHD 2021 12 9 1 12 0 2021-12-09T01:12:00Z 2021.9371232876713 5552-99 -47.662 0.076 -41.4083 174.871 95.0 85.0 10.0 N 507609 i1 2022-10-24T02:20:00 T.j
+BHD 2022 2 23 22 59 0 2022-02-23T22:59:00Z 2022.1478291476408 1845-99 -47.265 0.061 -41.4083 174.871 95.0 85.0 10.0 N 507600 i1 2022-11-03T01:30:00 +.B
+BHD 2022 2 23 22 59 0 2022-02-23T22:59:00Z 2022.1478291476408 5392-99 -47.448 0.061 -41.4083 174.871 95.0 85.0 10.0 N 507601 i1 2022-11-03T01:52:00 -..
+BHD 2022 3 2 0 33 0 2022-03-02T00:33:00Z 2022.164446347032 1547-99 -47.331 0.062 -41.4083 174.871 95.0 85.0 10.0 N 507597 i1 2022-11-02T07:39:00 +..
+BHD 2022 3 2 0 33 0 2022-03-02T00:33:00Z 2022.164446347032 5776-99 -47.539 0.062 -41.4083 174.871 95.0 85.0 10.0 N 507596 i1 2022-11-02T07:17:00 -.B
+BHD 2022 3 16 23 28 0 2022-03-16T23:28:00Z 2022.205418569254 1756-99 -47.489 0.067 -41.4083 174.871 95.0 85.0 10.0 N 507598 i1 2022-10-31T16:51:00 ..B
+BHD 2022 3 16 23 28 0 2022-03-16T23:28:00Z 2022.205418569254 3635-99 -47.509 0.067 -41.4083 174.871 95.0 85.0 10.0 N 507599 i1 2022-10-31T17:13:00 ...
+BHD 2022 4 7 0 32 0 2022-04-07T00:32:00Z 2022.2630745814308 1992-99 -47.39 0.067 -41.4083 174.871 95.0 85.0 10.0 N 507594 i1 2022-11-01T02:37:00 ...
+BHD 2022 4 7 0 32 0 2022-04-07T00:32:00Z 2022.2630745814308 850-99 -47.508 0.067 -41.4083 174.871 95.0 85.0 10.0 N 507595 i1 2022-11-01T02:15:00 ..B
+BHD 2022 4 13 1 15 0 2022-04-13T01:15:00Z 2022.2795947488585 2083-99 -47.439 0.061 -41.4083 174.871 95.0 85.0 10.0 N 507606 i1 2022-11-02T20:04:00 ...
+BHD 2022 4 13 1 15 0 2022-04-13T01:15:00Z 2022.2795947488585 4450-99 -47.432 0.061 -41.4083 174.871 95.0 85.0 10.0 N 507607 i1 2022-11-02T19:42:00 ..B
+BHD 2022 4 28 2 33 0 2022-04-28T02:33:00Z 2022.320839041096 303-99 -47.483 0.115 -41.4083 174.871 95.0 85.0 10.0 N 512697 i1 2023-03-02T07:55:00 !.B
+BHD 2022 4 28 2 33 0 2022-04-28T02:33:00Z 2022.320839041096 303-99 -47.649 0.114 -41.4083 174.871 95.0 85.0 10.0 N 512697 i1 2023-03-03T04:17:00 ..C
+BHD 2022 4 28 2 33 0 2022-04-28T02:33:00Z 2022.320839041096 5472-99 -47.496 0.115 -41.4083 174.871 95.0 85.0 10.0 N 512698 i1 2023-03-02T08:16:00 !..
+BHD 2022 4 28 2 33 0 2022-04-28T02:33:00Z 2022.320839041096 5472-99 -47.647 0.114 -41.4083 174.871 95.0 85.0 10.0 N 512698 i1 2023-03-03T04:38:00 ...
+BHD 2022 6 21 1 11 0 2022-06-21T01:11:00Z 2022.4686282343987 3726-99 -47.125 0.117 -41.4083 174.871 95.0 85.0 10.0 N 512699 i1 2023-03-03T18:34:00 D.B
+BHD 2022 6 21 1 11 0 2022-06-21T01:11:00Z 2022.4686282343987 3726-99 -47.765 0.097 -41.4083 174.871 95.0 85.0 10.0 N 512699 i1 2023-04-24T13:25:00 ..B
+BHD 2022 6 21 1 11 0 2022-06-21T01:11:00Z 2022.4686282343987 4517-99 -47.172 0.117 -41.4083 174.871 95.0 85.0 10.0 N 512700 i1 2023-03-03T18:55:00 D..
+BHD 2022 6 21 1 11 0 2022-06-21T01:11:00Z 2022.4686282343987 4517-99 -47.698 0.097 -41.4083 174.871 95.0 85.0 10.0 N 512700 i1 2023-04-24T13:46:00 ...
+BHD 2022 8 11 2 58 0 2022-08-11T02:58:00Z 2022.6085578386605 2968-99 -47.573 0.115 -41.4083 174.871 95.0 85.0 10.0 N 512701 i1 2023-03-01T22:34:00 D..
+BHD 2022 8 11 2 58 0 2022-08-11T02:58:00Z 2022.6085578386605 2968-99 -47.844 0.114 -41.4083 174.871 95.0 85.0 10.0 N 512701 i1 2023-03-02T19:38:00 ...
+BHD 2022 8 11 2 58 0 2022-08-11T02:58:00Z 2022.6085578386605 4767-99 -47.531 0.115 -41.4083 174.871 95.0 85.0 10.0 N 512702 i1 2023-03-01T22:13:00 D.B
+BHD 2022 8 11 2 58 0 2022-08-11T02:58:00Z 2022.6085578386605 4767-99 -47.847 0.114 -41.4083 174.871 95.0 85.0 10.0 N 512702 i1 2023-03-02T19:17:00 ..C
+BHD 2022 9 14 0 42 0 2022-09-14T00:42:00Z 2022.7014497716896 1060-99 -47.58 0.098 -41.4083 174.871 95.0 85.0 10.0 N 512695 i1 2023-04-26T06:02:00 ..B
+BHD 2022 9 14 0 42 0 2022-09-14T00:42:00Z 2022.7014497716896 5833-99 -47.621 0.098 -41.4083 174.871 95.0 85.0 10.0 N 512696 i1 2023-04-26T06:23:00 ...
+BHD 2022 10 5 23 39 0 2022-10-05T23:39:00Z 2022.7616038812785 1059-99 -47.575 0.056 -41.4083 174.871 95.0 85.0 10.0 N 521467 i1 2023-08-17T02:09:00 +.j
+BHD 2022 10 5 23 39 0 2022-10-05T23:39:00Z 2022.7616038812785 5834-99 -47.736 0.056 -41.4083 174.871 95.0 85.0 10.0 N 521466 i1 2023-08-17T01:48:00 -..
+BHD 2022 11 9 22 34 0 2022-11-09T22:34:00Z 2022.8573706240486 2905-99 -47.575 0.075 -41.4083 174.871 95.0 85.0 10.0 N 515644 i1 2023-05-17T18:28:00 ...
+BHD 2022 11 9 22 34 0 2022-11-09T22:34:00Z 2022.8573706240486 2906-99 -47.584 0.075 -41.4083 174.871 95.0 85.0 10.0 N 515645 i1 2023-05-17T18:50:00 ...
+BHD 2022 12 1 1 28 0 2022-12-01T01:28:00Z 2022.9152359208524 3485-99 -47.547 0.071 -41.4083 174.871 95.0 85.0 10.0 N 515646 i1 2023-05-16T19:04:00 ...
+BHD 2022 12 1 1 28 0 2022-12-01T01:28:00Z 2022.9152359208524 3486-99 -47.623 0.071 -41.4083 174.871 95.0 85.0 10.0 N 515647 i1 2023-05-16T19:26:00 ...
+BHD 2022 12 21 1 28 0 2022-12-21T01:28:00Z 2022.9700304414002 187-99 -47.533 0.071 -41.4083 174.871 95.0 85.0 10.0 N 515642 i1 2023-05-17T05:23:00 ...
+BHD 2022 12 21 1 28 0 2022-12-21T01:28:00Z 2022.9700304414002 188-99 -47.602 0.071 -41.4083 174.871 95.0 85.0 10.0 N 515643 i1 2023-05-17T05:44:00 ...

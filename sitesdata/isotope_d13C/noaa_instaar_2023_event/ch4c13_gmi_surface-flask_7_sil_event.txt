@@ -1,0 +1,736 @@
+# header_lines : 184
+#
+# ------------------------------------------------------------->>>>
+# DATA SET NAME
+#
+# dataset_name: ch4c13_gmi_surface-flask_7_sil_event
+#
+# ------------------------------------------------------------->>>>
+# DESCRIPTION
+#
+# dataset_description: Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1998-2022.
+#
+# ------------------------------------------------------------->>>>
+# CITATION
+#
+# dataset_citation: Michel, S.E., Clark, J.R., Vaughn, B.H., Crotwell, M., Madronich, M., Moglia, E., Neff, D., Mund, J. (2023), University of Colorado, Institute of Arctic and Alpine Research (INSTAAR). Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global  Air Sampling Network, 1998-2022 Version: 2023-09-21  https://doi.org/10.15138/9p89-1x02
+#
+# ------------------------------------------------------------->>>>
+# FAIR USE POLICY
+#
+# dataset_fair_use: These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, coauthorship for data providers may be appropriate. 
+#
+# ------------------------------------------------------------->>>>
+# WARNING
+#
+# dataset_warning: Every effort is made to produce the most accurate and precise measurements possible.  However, we reserve the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  We are not responsible for results and conclusions based on use of these data without regard to this warning.
+#
+# ------------------------------------------------------------->>>>
+# GLOBAL ATTRIBUTES
+#
+# site_code : GMI
+# site_name : Mariana Islands
+# site_country : Guam
+# site_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/GUAM0001.GIF
+# site_latitude : 13.386
+# site_longitude : 144.656
+# site_elevation : 0.0
+# site_elevation_unit : masl
+# site_position_comment : This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.
+# site_utc2lst : 10.0
+# site_utc2lst_comment : Add 'site_utc2lst' hours to convert a time stamp in UTC (Coordinated Universal Time) to LST (Local Standard Time).
+# dataset_creation_date : 2023-09-21T15:04:06.843113
+# dataset_num : 11
+# dataset_name : ch4c13_gmi_surface-flask_7_sil_event
+# dataset_parameter : ch4c13
+# dataset_parameter_name : Carbon-13/Carbon-12 in Methane
+# dataset_parameter_industrial_name : Carbon-13/Carbon-12 in Methane
+# dataset_project : surface-flask
+# dataset_platform : fixed
+# dataset_selection : event
+# dataset_selection_tag : event
+# dataset_comment : For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4c13/flask/README_ch4c13_surface-flask_sil.html
+# dataset_calibration_scale : VPDB
+# dataset_start_date : 2016-01-20T06:38:00Z
+# dataset_stop_date : 2022-12-23T06:00:00Z
+# dataset_usage_description : Please cite the product's citation when using data from this dataset.
+# dataset_provider_license : These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).
+# dataset_reference_total_listed : 0
+# dataset_contribution : These data are provided by INSTAAR-SIL AND NOAA. Principal investigators include Sylvia Englund Michel (INSTAAR-SIL) AND Reid Clark (INSTAAR-SIL) AND Bruce Vaughn (INSTAAR-SIL). Key partners include Terry Donaldson (UOGML).
+# lab_total_listed : 2
+# lab_1_number : 7
+# lab_1_abbr : INSTAAR-SIL
+# lab_1_name : INSTAAR Stable Isotope Laboratory
+# lab_1_address1 : University of Colorado
+# lab_1_address2 : 4001 Discovery Dr
+# lab_1_address3 : Boulder, CO 80303
+# lab_1_country : United States
+# lab_1_url : http://instaar.colorado.edu
+# lab_1_parameter : Lab has contributed measurements for: ch4c13, ch4c13
+# lab_1_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_1_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/instaar_medium.png
+# lab_1_ongoing_atmospheric_air_comparison : T
+# lab_2_number : 1
+# lab_2_abbr : NOAA
+# lab_2_name : NOAA Global Monitoring Laboratory
+# lab_2_address1 : 325 Broadway
+# lab_2_address2 : NOAA R/GML-1
+# lab_2_address3 : Boulder, CO 80305-3328
+# lab_2_country : United States
+# lab_2_url : https://gml.noaa.gov/ccgg/
+# lab_2_parameter : Lab has contributed measurements for: ch4c13
+# lab_2_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_2_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/noaa_medium.png
+# provider_total_listed : 3
+# provider_1_name : Sylvia Englund Michel
+# provider_1_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_1_address2 : Campus Box 450
+# provider_1_address3 : University of Colorado, Boulder, CO
+# provider_1_country : United States
+# provider_1_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_1_email : Sylvia.Englund@Colorado.EDU
+# provider_1_tel : (303) 492-5495
+# provider_1_parameter : Provider has contributed measurements for: ch4c13
+# provider_2_name : Reid Clark
+# provider_2_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_2_address2 : Campus Box 450
+# provider_2_address3 : University of Colorado, Boulder, CO
+# provider_2_country : United States
+# provider_2_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_2_email : Justin.Reid.Clark@colorado.edu
+# provider_2_parameter : Provider has contributed measurements for: ch4c13
+# provider_3_name : Bruce Vaughn
+# provider_3_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_3_address2 : Campus Box 450
+# provider_3_address3 : University of Colorado, Boulder, CO
+# provider_3_country : United States
+# provider_3_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_3_email : bruce.vaughn@colorado.edu
+# provider_3_tel : (303) 492-7985
+# provider_3_parameter : Provider has contributed measurements for: ch4c13
+# partner_total_listed : 1
+# partner_1_name : Terry Donaldson
+# partner_1_abbr : UOGML
+# partner_1_country : Guam
+# partner_1_url : http://www.uog.edu/marinelab
+# partner_1_parameter : Partner of measurements for: ch4c13
+# partner_1_affiliation : University of Guam/Marine Laboratory
+# partner_1_email : donaldsn@uguam.uog.edu
+# ------------------------------------------------------------->>>>
+# VARIABLE ATTRIBUTES
+#
+# site_code:long_name : site_name_abbreviation.
+# site_code:comment : Site code is an abbreviation for the sampling site name.
+# time_components:_FillValue : -9
+# time_components:long_name : integer_components_of_UTC_date/time
+# time_components:order : year, month, day, hour, minute, second
+# time_components:comment : Calendar time components as integers. Times and dates are UTC. Time-averaged values are reported at the start of the averaging interval.
+# datetime:long_name : air_sample_date_and_time_in_UTC
+# datetime:comment : Air sample date and time in UTC ISO 8601 format. Time-averaged values are reported at the start of the averaging interval.
+# time_decimal:_FillValue : -999.999
+# time_decimal:long_name : sample_decimal_year_in_UTC
+# time_decimal:comment : decimal year in UTC. Time-averaged values are reported at the start of the averaging interval.
+# air_sample_container_id:long_name : Air_Sample_Container_ID
+# air_sample_container_id:comment : ID of air sample container. See provider_comment if available.
+# value:_FillValue : -999.999
+# value:long_name : measured_stable_carbon_isotope_delta_value
+# value:units : per mil
+# value:comment : Isotope ratios are reported as delta values where d13C = [(13C/12Csample/(13C/12Cstandard)-1] x 1000. Delta values are reported in units of per mil.
+# value:scale_comment : VPDB
+# value_unc:_FillValue : -999.999
+# value_unc:long_name : estimated_uncertainty_in_reported_value
+# value_unc:units : per mil
+# value_unc:comment : This is the estimated uncertainty of the reported value. See provider_comment if available.
+# latitude:_FillValue : -999.999
+# latitude:standard_name : latitude
+# latitude:long_name : sample_latitude_in_decimal_degrees
+# latitude:units : degrees_north
+# latitude:comment : Latitude at which air sample was collected.
+# longitude:_FillValue : -999.999
+# longitude:standard_name : longitude
+# longitude:long_name : sample_longitude_in_decimal_degrees
+# longitude:units : degrees_east
+# longitude:comment : Longitude at which air sample was collected using a range of -180 degrees to +180 degrees.
+# altitude:_FillValue : -999.999
+# altitude:standard_name : altitude
+# altitude:long_name : sample_altitude_in_meters_above_sea_level
+# altitude:units : m
+# altitude:comment : Altitude (in meters above sea level). See provider_comment if available.
+# altitude:provider_comment : Altitude for this dataset is the sum of surface elevation (masl) and sample intake height (magl).
+# elevation:_FillValue : -999.999
+# elevation:standard_name : elevation
+# elevation:long_name : surface_elevation_in_meters_above_sea_level
+# elevation:units : m
+# elevation:comment : Surface elevation in meters above sea level. See provider_comment if available.
+# intake_height:_FillValue : -999.999
+# intake_height:long_name : sample_intake_height_in_meters_above_ground_level
+# intake_height:units : m
+# intake_height:comment : Sample intake height in meters above ground level (magl). See provider_comment if available.
+# method:long_name : air_sample_collection_method
+# method:comment : Air sample collection method. See provider_comment if available.
+# method:provider_comment : A single-character code is used to identify the sample collection method. The codes are: P - Sample collected using a portable, battery powered pumping unit. Two flasks are connected in series, flushed with air, and then pressurized to 1.2 - 1.5 times ambient pressure. D - Similar to P but the air passes through a condenser cooled to about 5 deg C to partially dry the sample. G - Similar to D but with a gold-plated condenser. T - Evacuated flask filled by opening an O-ring sealed stopcock. S - Flasks filled at NOAA GML observatories by sampling air from the in situ CO2 measurement air intake system. N - Before 1981, flasks filled using a hand-held aspirator bulb. After 1981, flasks filled using a pump different from those used in method P, D, or G. F - Five liter evacuated flasks filled by opening a ground glass, greased stopcock
+# event_number:long_name : Unique_Air_Sample_Event_Number
+# event_number:comment : Identifies each discrete air sample collected at some time and location with a unique sample event number.  The event number (reported as a string) can be used to relate measurements of different trace gases and isotopes from the same sample.
+# instrument:long_name : instrument_ID_to_detect_atmospheric_parameter
+# instrument:comment : Instrument ID used to detect atmospheric parameter. See provider_comment if available.
+# analysis_datetime:long_name : air_sample_measurement_date_and_time_in_LT
+# analysis_datetime:comment : Air sample measurement date and time in LT. See provider_comment if available.
+# qcflag:long_name : quality_control_flag
+# qcflag:comment : This quality control flag is provided by the contributing PIs. See provider_comment if available.
+# qcflag:provider_comment : This is the NOAA 3-character quality control flag.  Column 1 is the REJECTION flag. An alphanumeric other than a period (.) in the FIRST column indicates a sample with obvious problems during collection or analysis. This measurement should not be interpreted. Column 2 is the SELECTION flag. An alphanumeric other than a period (.) in the SECOND column indicates a sample that is likely valid but does not meet selection criteria determined by the goals of a particular investigation. For example, it might not have been obtained during 'background' conditions.  Column 3 is the INFORMATION flag. An alphanumeric other than a period (.) in the THIRD column provides additional information about the collection or analysis of the sample. A P in the 3rd column of the QC flag indicates the measurement result is preliminary and has not yet been carefully examined by the PI.  The P flag is removed once the quality of the measurement has been determined.
+#
+# VARIABLE ORDER
+#
+site_code year month day hour minute second datetime time_decimal air_sample_container_id value value_unc latitude longitude altitude elevation intake_height method event_number instrument analysis_datetime qcflag
+GMI 2016 1 20 6 38 0 2016-01-20T06:38:00Z 2016.0526677292046 3147-99 -47.36 0.094 13.386 144.656 5.0 0.0 5.0 D 405785 i1 2016-06-23T18:47:00 ...
+GMI 2016 1 20 6 38 0 2016-01-20T06:38:00Z 2016.0526677292046 3148-99 -47.423 0.094 13.386 144.656 5.0 0.0 5.0 D 405786 i1 2016-06-23T19:09:00 ...
+GMI 2016 1 22 6 45 0 2016-01-22T06:45:00Z 2016.0581454918033 3401-99 -47.347 0.095 13.386 144.656 5.0 0.0 5.0 D 405783 i1 2016-06-23T10:01:00 ...
+GMI 2016 1 22 6 45 0 2016-01-22T06:45:00Z 2016.0581454918033 3402-99 -47.291 0.095 13.386 144.656 5.0 0.0 5.0 D 405784 i1 2016-06-23T10:22:00 ...
+GMI 2016 5 31 6 45 0 2016-05-31T06:45:00Z 2016.4133367486338 1193-99 -47.218 0.032 13.386 144.656 5.0 0.0 5.0 D 408835 i1 2016-08-23T19:22:00 ...
+GMI 2016 5 31 6 45 0 2016-05-31T06:45:00Z 2016.4133367486338 1194-99 -47.217 0.032 13.386 144.656 5.0 0.0 5.0 D 408836 i1 2016-08-23T19:44:00 ...
+GMI 2016 6 2 6 30 0 2016-06-02T06:30:00Z 2016.4187727686704 3647-99 -47.263 0.038 13.386 144.656 5.0 0.0 5.0 D 408837 i1 2016-09-23T23:05:00 ...
+GMI 2016 6 2 6 30 0 2016-06-02T06:30:00Z 2016.4187727686704 3648-99 -47.252 0.038 13.386 144.656 5.0 0.0 5.0 D 408838 i1 2016-09-23T23:26:00 ...
+GMI 2016 10 11 23 58 0 2016-10-11T23:58:00Z 2016.7786847298119 2197-99 -47.327 0.053 13.386 144.656 5.0 0.0 5.0 D 418642 i1 2017-01-18T07:00:00 ...
+GMI 2016 10 11 23 58 0 2016-10-11T23:58:00Z 2016.7786847298119 2198-99 -47.379 0.053 13.386 144.656 5.0 0.0 5.0 D 418643 i1 2017-01-18T07:21:00 ...
+GMI 2016 10 13 23 30 0 2016-10-13T23:30:00Z 2016.7840960837887 2889-99 -47.362 0.053 13.386 144.656 5.0 0.0 5.0 D 418640 i1 2017-01-18T06:17:00 ...
+GMI 2016 10 13 23 30 0 2016-10-13T23:30:00Z 2016.7840960837887 2890-99 -47.497 0.053 13.386 144.656 5.0 0.0 5.0 D 418641 i1 2017-01-18T06:39:00 ...
+GMI 2016 10 19 1 46 0 2016-10-19T01:46:00Z 2016.7980153309047 721-99 -47.256 0.064 13.386 144.656 5.0 0.0 5.0 D 418686 i1 2017-03-01T18:25:00 ...
+GMI 2016 10 19 1 46 0 2016-10-19T01:46:00Z 2016.7980153309047 722-99 -47.226 0.064 13.386 144.656 5.0 0.0 5.0 D 418687 i1 2017-03-01T18:46:00 ...
+GMI 2016 10 31 0 38 0 2016-10-31T00:38:00Z 2016.8306731936855 61-99 -47.274 0.065 13.386 144.656 5.0 0.0 5.0 D 418684 i1 2017-02-28T23:41:00 ...
+GMI 2016 10 31 0 38 0 2016-10-31T00:38:00Z 2016.8306731936855 62-99 -47.306 0.065 13.386 144.656 5.0 0.0 5.0 D 418685 i1 2017-03-01T00:02:00 ...
+GMI 2016 11 8 0 14 0 2016-11-08T00:14:00Z 2016.852485579842 3943-99 -47.45 0.065 13.386 144.656 5.0 0.0 5.0 D 418660 i1 2017-02-28T13:05:00 ...
+GMI 2016 11 8 0 14 0 2016-11-08T00:14:00Z 2016.852485579842 3944-99 -47.534 0.065 13.386 144.656 5.0 0.0 5.0 D 418661 i1 2017-02-28T13:27:00 ...
+GMI 2016 11 8 15 19 0 2016-11-08T15:19:00Z 2016.8542027170613 2727-99 -47.452 0.065 13.386 144.656 5.0 0.0 5.0 D 418662 i1 2017-02-28T22:59:00 ...
+GMI 2016 11 8 15 19 0 2016-11-08T15:19:00Z 2016.8542027170613 2728-99 -47.573 0.065 13.386 144.656 5.0 0.0 5.0 D 418663 i1 2017-02-28T23:20:00 ...
+GMI 2016 12 27 6 45 0 2016-12-27T06:45:00Z 2016.9871072404371 525-99 -47.208 0.04 13.386 144.656 5.0 0.0 5.0 D 420032 i1 2017-03-18T04:34:00 +..
+GMI 2016 12 27 6 45 0 2016-12-27T06:45:00Z 2016.9871072404371 526-99 -47.394 0.04 13.386 144.656 5.0 0.0 5.0 D 420033 i1 2017-03-18T04:56:00 -..
+GMI 2016 12 29 6 15 0 2016-12-29T06:15:00Z 2016.9925147996357 3954-99 -47.415 0.064 13.386 144.656 5.0 0.0 5.0 D 420035 i1 2017-04-07T22:41:00 ..S
+GMI 2017 1 4 22 33 0 2017-01-04T22:33:00Z 2017.0107933789955 1529-99 -47.401 0.041 13.386 144.656 5.0 0.0 5.0 D 420030 i1 2017-03-21T06:12:00 ...
+GMI 2017 1 4 22 33 0 2017-01-04T22:33:00Z 2017.0107933789955 1530-99 -47.391 0.041 13.386 144.656 5.0 0.0 5.0 D 420031 i1 2017-03-21T06:33:00 ...
+GMI 2017 1 5 23 37 0 2017-01-05T23:37:00Z 2017.0136548706241 2649-99 -47.404 0.035 13.386 144.656 5.0 0.0 5.0 D 419479 i1 2017-03-16T20:09:00 A..
+GMI 2017 1 5 23 37 0 2017-01-05T23:37:00Z 2017.0136548706241 2650-99 -47.366 0.035 13.386 144.656 5.0 0.0 5.0 D 419480 i1 2017-03-16T20:30:00 A..
+GMI 2017 1 26 2 49 0 2017-01-26T02:49:00Z 2017.0688146879756 3305-99 -47.447 0.042 13.386 144.656 5.0 0.0 5.0 D 420157 i1 2017-03-22T06:32:00 ...
+GMI 2017 1 26 2 49 0 2017-01-26T02:49:00Z 2017.0688146879756 3306-99 -47.323 0.042 13.386 144.656 5.0 0.0 5.0 D 420158 i1 2017-03-22T06:54:00 ...
+GMI 2017 1 27 3 12 0 2017-01-27T03:12:00Z 2017.071598173516 513-99 -47.364 0.041 13.386 144.656 5.0 0.0 5.0 D 420159 i1 2017-03-22T19:35:00 ...
+GMI 2017 1 27 3 12 0 2017-01-27T03:12:00Z 2017.071598173516 514-99 -47.491 0.041 13.386 144.656 5.0 0.0 5.0 D 420160 i1 2017-03-22T19:56:00 ...
+GMI 2017 2 1 6 41 0 2017-02-01T06:41:00Z 2017.0856944444445 2775-99 -47.281 0.065 13.386 144.656 5.0 0.0 5.0 D 421187 i1 2017-04-07T06:48:00 ...
+GMI 2017 2 1 6 41 0 2017-02-01T06:41:00Z 2017.0856944444445 2776-99 -47.357 0.065 13.386 144.656 5.0 0.0 5.0 D 421188 i1 2017-04-07T07:09:00 ...
+GMI 2017 2 3 6 23 0 2017-02-03T06:23:00Z 2017.091139649924 4549-99 -47.307 0.065 13.386 144.656 5.0 0.0 5.0 D 421189 i1 2017-04-07T04:40:00 ...
+GMI 2017 2 3 6 23 0 2017-02-03T06:23:00Z 2017.091139649924 4550-99 -47.377 0.065 13.386 144.656 5.0 0.0 5.0 D 421190 i1 2017-04-07T05:01:00 ...
+GMI 2017 2 13 23 40 0 2017-02-13T23:40:00Z 2017.1205098934552 4185-99 -47.587 0.057 13.386 144.656 5.0 0.0 5.0 D 421183 i1 2017-04-03T16:40:00 ...
+GMI 2017 2 13 23 40 0 2017-02-13T23:40:00Z 2017.1205098934552 4186-99 -47.451 0.057 13.386 144.656 5.0 0.0 5.0 D 421184 i1 2017-04-03T17:01:00 ...
+GMI 2017 2 15 3 33 0 2017-02-15T03:33:00Z 2017.1236929223744 4941-99 -47.543 0.057 13.386 144.656 5.0 0.0 5.0 D 421185 i1 2017-04-03T19:30:00 ...
+GMI 2017 2 15 3 33 0 2017-02-15T03:33:00Z 2017.1236929223744 4942-99 -47.532 0.057 13.386 144.656 5.0 0.0 5.0 D 421186 i1 2017-04-03T19:51:00 ...
+GMI 2017 2 20 5 19 0 2017-02-20T05:19:00Z 2017.1375932267883 1229-99 -47.44 0.058 13.386 144.656 5.0 0.0 5.0 D 422220 i1 2017-05-04T16:50:00 ...
+GMI 2017 2 20 5 19 0 2017-02-20T05:19:00Z 2017.1375932267883 1230-99 -47.408 0.058 13.386 144.656 5.0 0.0 5.0 D 422221 i1 2017-05-04T17:10:00 ...
+GMI 2017 2 22 22 56 0 2017-02-22T22:56:00Z 2017.145083713851 1837-99 -47.383 0.057 13.386 144.656 5.0 0.0 5.0 D 422022 i1 2017-05-03T23:17:00 ...
+GMI 2017 2 22 22 56 0 2017-02-22T22:56:00Z 2017.145083713851 1838-99 -47.304 0.057 13.386 144.656 5.0 0.0 5.0 D 422023 i1 2017-05-03T23:37:00 ...
+GMI 2017 3 8 6 35 0 2017-03-08T06:35:00Z 2017.1815734398783 5117-99 -47.341 0.058 13.386 144.656 5.0 0.0 5.0 D 423282 i1 2017-05-04T19:29:00 ...
+GMI 2017 3 8 6 35 0 2017-03-08T06:35:00Z 2017.1815734398783 5118-99 -47.345 0.058 13.386 144.656 5.0 0.0 5.0 D 423283 i1 2017-05-04T19:49:00 ...
+GMI 2017 3 21 3 18 0 2017-03-21T03:18:00Z 2017.2168150684931 3577-99 -47.242 0.057 13.386 144.656 5.0 0.0 5.0 D 423284 i1 2017-05-03T19:58:00 ...
+GMI 2017 3 21 3 18 0 2017-03-21T03:18:00Z 2017.2168150684931 3578-99 -47.31 0.057 13.386 144.656 5.0 0.0 5.0 D 423285 i1 2017-05-03T20:18:00 ...
+GMI 2017 3 28 0 37 0 2017-03-28T00:37:00Z 2017.2356868340944 3261-99 -47.255 0.041 13.386 144.656 5.0 0.0 5.0 D 423591 i1 2017-05-23T05:03:00 ...
+GMI 2017 3 28 0 37 0 2017-03-28T00:37:00Z 2017.2356868340944 3262-99 -47.326 0.041 13.386 144.656 5.0 0.0 5.0 D 423592 i1 2017-05-23T05:26:00 ...
+GMI 2017 3 29 2 0 0 2017-03-29T02:00:00Z 2017.2385844748858 419-99 -47.285 0.041 13.386 144.656 5.0 0.0 5.0 D 423594 i1 2017-05-23T05:48:00 ...
+GMI 2017 3 29 2 0 0 2017-03-29T02:00:00Z 2017.2385844748858 420-99 -47.334 0.041 13.386 144.656 5.0 0.0 5.0 D 423593 i1 2017-05-23T06:11:00 ...
+GMI 2017 4 4 6 26 0 2017-04-04T06:26:00Z 2017.2555289193303 5475-99 -47.328 0.039 13.386 144.656 5.0 0.0 5.0 D 424496 i1 2017-05-24T17:43:00 ...
+GMI 2017 4 4 6 26 0 2017-04-04T06:26:00Z 2017.2555289193303 5476-99 -47.246 0.039 13.386 144.656 5.0 0.0 5.0 D 424497 i1 2017-05-24T18:05:00 ...
+GMI 2017 4 7 6 53 0 2017-04-07T06:53:00Z 2017.2637994672755 3215-99 -47.346 0.039 13.386 144.656 5.0 0.0 5.0 D 424498 i1 2017-05-24T19:58:00 ...
+GMI 2017 4 7 6 53 0 2017-04-07T06:53:00Z 2017.2637994672755 3216-99 -47.239 0.039 13.386 144.656 5.0 0.0 5.0 D 424499 i1 2017-05-24T20:20:00 ...
+GMI 2017 5 1 6 23 0 2017-05-01T06:23:00Z 2017.3294958143074 2121-99 -47.264 0.035 13.386 144.656 5.0 0.0 5.0 D 425305 i1 2017-06-05T17:16:00 ...
+GMI 2017 5 1 6 23 0 2017-05-01T06:23:00Z 2017.3294958143074 2122-99 -47.332 0.035 13.386 144.656 5.0 0.0 5.0 D 425306 i1 2017-06-05T17:38:00 ...
+GMI 2017 5 3 6 45 0 2017-05-03T06:45:00Z 2017.3350171232876 4531-99 -47.226 0.035 13.386 144.656 5.0 0.0 5.0 D 425307 i1 2017-06-06T03:44:00 ...
+GMI 2017 5 3 6 45 0 2017-05-03T06:45:00Z 2017.3350171232876 4532-99 -47.278 0.035 13.386 144.656 5.0 0.0 5.0 D 425308 i1 2017-06-06T04:06:00 ...
+GMI 2017 5 9 6 15 0 2017-05-09T06:15:00Z 2017.3513984018264 2195-99 -47.327 0.039 13.386 144.656 5.0 0.0 5.0 D 426597 i1 2017-07-06T22:20:00 ...
+GMI 2017 5 9 6 15 0 2017-05-09T06:15:00Z 2017.3513984018264 2196-99 -47.312 0.039 13.386 144.656 5.0 0.0 5.0 D 426598 i1 2017-07-06T22:42:00 ...
+GMI 2017 5 12 6 58 0 2017-05-12T06:58:00Z 2017.359699391172 3137-99 -47.239 0.039 13.386 144.656 5.0 0.0 5.0 D 426595 i1 2017-07-06T21:35:00 ...
+GMI 2017 5 12 6 58 0 2017-05-12T06:58:00Z 2017.359699391172 3138-99 -47.283 0.039 13.386 144.656 5.0 0.0 5.0 D 426596 i1 2017-07-06T21:58:00 ...
+GMI 2017 6 13 6 43 0 2017-06-13T06:43:00Z 2017.447342085236 17-99 -47.22 0.05 13.386 144.656 5.0 0.0 5.0 D 427989 i1 2017-08-21T15:09:00 ...
+GMI 2017 6 13 6 43 0 2017-06-13T06:43:00Z 2017.447342085236 18-99 -47.238 0.05 13.386 144.656 5.0 0.0 5.0 D 427990 i1 2017-08-21T15:31:00 ...
+GMI 2017 6 15 5 41 0 2017-06-15T05:41:00Z 2017.4527035768645 5625-99 -47.206 0.043 13.386 144.656 5.0 0.0 5.0 D 427992 i1 2017-08-18T03:41:00 ...
+GMI 2017 6 15 5 41 0 2017-06-15T05:41:00Z 2017.4527035768645 5626-99 -47.193 0.043 13.386 144.656 5.0 0.0 5.0 D 427991 i1 2017-08-18T04:04:00 ...
+GMI 2017 6 26 6 15 0 2017-06-26T06:15:00Z 2017.4829052511416 5177-99 -47.242 0.05 13.386 144.656 5.0 0.0 5.0 D 427987 i1 2017-08-21T13:38:00 ...
+GMI 2017 6 26 6 15 0 2017-06-26T06:15:00Z 2017.4829052511416 5178-99 -47.267 0.05 13.386 144.656 5.0 0.0 5.0 D 427988 i1 2017-08-21T14:01:00 ...
+GMI 2017 6 28 5 56 0 2017-06-28T05:56:00Z 2017.4883485540336 5527-99 -47.188 0.05 13.386 144.656 5.0 0.0 5.0 D 427985 i1 2017-08-21T14:23:00 ...
+GMI 2017 6 28 5 56 0 2017-06-28T05:56:00Z 2017.4883485540336 5528-99 -47.187 0.05 13.386 144.656 5.0 0.0 5.0 D 427986 i1 2017-08-21T14:46:00 ...
+GMI 2018 1 30 6 45 0 2018-01-30T06:45:00Z 2018.0802226027397 5391-99 -47.588 0.047 13.386 144.656 5.0 0.0 5.0 D 438897 i1 2018-04-06T18:33:00 ..r
+GMI 2018 1 30 6 45 0 2018-01-30T06:45:00Z 2018.0802226027397 5392-99 -47.545 0.049 13.386 144.656 5.0 0.0 5.0 D 438898 i1 2018-04-06T18:11:00 ..r
+GMI 2018 2 1 6 29 0 2018-02-01T06:29:00Z 2018.0856716133942 2197-99 -47.326 0.054 13.386 144.656 5.0 0.0 5.0 D 438895 i1 2018-04-05T03:42:00 ..r
+GMI 2018 2 1 6 29 0 2018-02-01T06:29:00Z 2018.0856716133942 2198-99 -47.404 0.054 13.386 144.656 5.0 0.0 5.0 D 438896 i1 2018-04-05T04:03:00 ..r
+GMI 2018 2 15 7 0 0 2018-02-15T07:00:00Z 2018.1240867579909 2045-99 -47.406 0.07 13.386 144.656 5.0 0.0 5.0 D 439511 i1 2018-03-07T08:27:00 ..r
+GMI 2018 2 15 7 0 0 2018-02-15T07:00:00Z 2018.1240867579909 2046-99 -47.368 0.068 13.386 144.656 5.0 0.0 5.0 D 439512 i1 2018-03-07T08:49:00 ..r
+GMI 2018 2 20 6 24 0 2018-02-20T06:24:00Z 2018.137716894977 3885-99 -47.58 0.05 13.386 144.656 5.0 0.0 5.0 D 439624 i1 2018-04-12T19:46:00 ..r
+GMI 2018 2 20 6 24 0 2018-02-20T06:24:00Z 2018.137716894977 3886-99 -47.497 0.05 13.386 144.656 5.0 0.0 5.0 D 439625 i1 2018-04-12T20:08:00 ..r
+GMI 2018 2 23 6 15 0 2018-02-23T06:15:00Z 2018.1459189497716 2889-99 -47.465 0.048 13.386 144.656 5.0 0.0 5.0 D 439602 i1 2018-04-07T07:50:00 ..r
+GMI 2018 2 23 6 15 0 2018-02-23T06:15:00Z 2018.1459189497716 2890-99 -47.558 0.049 13.386 144.656 5.0 0.0 5.0 D 439603 i1 2018-04-07T08:12:00 ..r
+GMI 2018 3 1 6 15 0 2018-03-01T06:15:00Z 2018.162357305936 3463-99 -47.401 0.049 13.386 144.656 5.0 0.0 5.0 D 440349 i1 2018-03-29T02:15:00 ..r
+GMI 2018 3 1 6 15 0 2018-03-01T06:15:00Z 2018.162357305936 3464-99 -47.342 0.048 13.386 144.656 5.0 0.0 5.0 D 440350 i1 2018-03-29T02:36:00 ..r
+GMI 2018 3 14 6 31 0 2018-03-14T06:31:00Z 2018.1980041856925 5361-99 -47.39 0.049 13.386 144.656 5.0 0.0 5.0 D 440666 i1 2018-04-09T17:54:00 ..r
+GMI 2018 3 14 6 31 0 2018-03-14T06:31:00Z 2018.1980041856925 5362-99 -47.459 0.051 13.386 144.656 5.0 0.0 5.0 D 440667 i1 2018-04-09T18:16:00 ..r
+GMI 2018 3 16 7 15 0 2018-03-16T07:15:00Z 2018.2035673515982 4185-99 -47.916 0.049 13.386 144.656 5.0 0.0 5.0 D 440664 i1 2018-04-12T19:03:00 -.r
+GMI 2018 3 16 7 15 0 2018-03-16T07:15:00Z 2018.2035673515982 4186-99 -47.697 0.049 13.386 144.656 5.0 0.0 5.0 D 440665 i1 2018-04-12T19:25:00 +.r
+GMI 2018 3 20 6 51 0 2018-03-20T06:51:00Z 2018.2144805936073 2651-99 -46.931 0.048 13.386 144.656 5.0 0.0 5.0 D 440678 i1 2018-04-10T23:10:00 D.r
+GMI 2018 3 20 6 51 0 2018-03-20T06:51:00Z 2018.2144805936073 2652-99 -46.934 0.048 13.386 144.656 5.0 0.0 5.0 D 440679 i1 2018-04-10T23:31:00 D.r
+GMI 2018 3 23 6 15 0 2018-03-23T06:15:00Z 2018.2226312785388 4986-99 -47.277 0.06 13.386 144.656 5.0 0.0 5.0 D 440677 i1 2018-04-11T23:40:00 ..r
+GMI 2018 3 26 4 10 0 2018-03-26T04:10:00Z 2018.2306126331812 635-99 -48.156 0.077 13.386 144.656 5.0 0.0 5.0 D 441389 i1 2018-04-30T17:26:00 +.r
+GMI 2018 3 26 4 10 0 2018-03-26T04:10:00Z 2018.2306126331812 636-99 -48.63 0.071 13.386 144.656 5.0 0.0 5.0 D 441390 i1 2018-04-30T17:48:00 -.r
+GMI 2018 4 5 1 0 0 2018-04-05T01:00:00Z 2018.2576484018264 1529-99 -47.184 0.061 13.386 144.656 5.0 0.0 5.0 D 441392 i1 2018-05-01T07:06:00 D.r
+GMI 2018 4 5 1 0 0 2018-04-05T01:00:00Z 2018.2576484018264 1530-99 -47.209 0.049 13.386 144.656 5.0 0.0 5.0 D 441391 i1 2018-05-01T06:45:00 D.r
+GMI 2018 4 9 7 0 0 2018-04-09T07:00:00Z 2018.2692922374429 229-99 -47.401 0.048 13.386 144.656 5.0 0.0 5.0 D 441950 i1 2018-05-04T17:29:00 ..r
+GMI 2018 4 9 7 0 0 2018-04-09T07:00:00Z 2018.2692922374429 230-99 -47.411 0.049 13.386 144.656 5.0 0.0 5.0 D 441951 i1 2018-05-04T17:51:00 ..r
+GMI 2018 4 12 5 30 0 2018-04-12T05:30:00Z 2018.2773401826485 5451-99 -47.277 0.052 13.386 144.656 5.0 0.0 5.0 D 441952 i1 2018-05-07T21:41:00 A.r
+GMI 2018 4 12 5 30 0 2018-04-12T05:30:00Z 2018.2773401826485 5452-99 -47.332 0.053 13.386 144.656 5.0 0.0 5.0 D 441953 i1 2018-05-07T22:02:00 A.r
+GMI 2018 4 17 5 30 0 2018-04-17T05:30:00Z 2018.2910388127855 3487-99 -47.347 0.061 13.386 144.656 5.0 0.0 5.0 D 442888 i1 2018-05-17T18:19:00 ..r
+GMI 2018 4 17 5 30 0 2018-04-17T05:30:00Z 2018.2910388127855 3488-99 -47.434 0.058 13.386 144.656 5.0 0.0 5.0 D 442889 i1 2018-05-17T18:40:00 ..r
+GMI 2018 4 19 5 15 0 2018-04-19T05:15:00Z 2018.2964897260274 3923-99 -47.37 0.066 13.386 144.656 5.0 0.0 5.0 D 442886 i1 2018-05-15T00:32:00 ..r
+GMI 2018 4 19 5 15 0 2018-04-19T05:15:00Z 2018.2964897260274 3924-99 -47.404 0.068 13.386 144.656 5.0 0.0 5.0 D 442887 i1 2018-05-15T00:10:00 ..r
+GMI 2018 4 25 3 0 0 2018-04-25T03:00:00Z 2018.3126712328767 4599-99 -47.397 0.067 13.386 144.656 5.0 0.0 5.0 D 442892 i1 2018-05-17T16:09:00 ..r
+GMI 2018 4 25 3 0 0 2018-04-25T03:00:00Z 2018.3126712328767 4600-99 -47.435 0.072 13.386 144.656 5.0 0.0 5.0 D 442893 i1 2018-05-17T16:30:00 ..r
+GMI 2018 4 26 21 30 0 2018-04-26T21:30:00Z 2018.3175228310502 3413-99 -47.315 0.048 13.386 144.656 5.0 0.0 5.0 D 442890 i1 2018-05-15T16:55:00 ..r
+GMI 2018 4 26 21 30 0 2018-04-26T21:30:00Z 2018.3175228310502 3414-99 -47.312 0.048 13.386 144.656 5.0 0.0 5.0 D 442891 i1 2018-05-15T17:17:00 ..r
+GMI 2018 5 2 7 30 0 2018-05-02T07:30:00Z 2018.3323630136986 1947-99 -47.342 0.054 13.386 144.656 5.0 0.0 5.0 D 443028 i1 2018-05-25T19:40:00 ..r
+GMI 2018 5 2 7 30 0 2018-05-02T07:30:00Z 2018.3323630136986 1948-99 -47.413 0.05 13.386 144.656 5.0 0.0 5.0 D 443029 i1 2018-05-25T20:01:00 ..r
+GMI 2018 5 4 5 0 0 2018-05-04T05:00:00Z 2018.3375570776257 4017-99 -47.333 0.053 13.386 144.656 5.0 0.0 5.0 D 443026 i1 2018-05-25T15:21:00 ..r
+GMI 2018 5 4 5 0 0 2018-05-04T05:00:00Z 2018.3375570776257 4018-99 -47.44 0.059 13.386 144.656 5.0 0.0 5.0 D 443027 i1 2018-05-25T15:43:00 ..r
+GMI 2018 5 13 5 30 0 2018-05-13T05:30:00Z 2018.3622716894977 3467-99 -47.373 0.071 13.386 144.656 5.0 0.0 5.0 D 443834 i1 2018-06-05T12:42:00 ..r
+GMI 2018 5 13 5 30 0 2018-05-13T05:30:00Z 2018.3622716894977 3468-99 -47.452 0.07 13.386 144.656 5.0 0.0 5.0 D 443835 i1 2018-06-05T13:04:00 ..r
+GMI 2018 5 15 22 0 0 2018-05-15T22:00:00Z 2018.3696347031964 847-99 -47.288 0.081 13.386 144.656 5.0 0.0 5.0 D 444149 i1 2018-06-08T15:27:00 ..r
+GMI 2018 5 15 22 0 0 2018-05-15T22:00:00Z 2018.3696347031964 848-99 -47.188 0.07 13.386 144.656 5.0 0.0 5.0 D 444150 i1 2018-06-08T15:49:00 ..r
+GMI 2018 5 18 6 30 0 2018-05-18T06:30:00Z 2018.3760844748858 2551-99 -47.375 0.085 13.386 144.656 5.0 0.0 5.0 D 444151 i1 2018-06-08T16:53:00 ..r
+GMI 2018 5 18 6 30 0 2018-05-18T06:30:00Z 2018.3760844748858 2552-99 -47.372 0.08 13.386 144.656 5.0 0.0 5.0 D 444152 i1 2018-06-08T17:15:00 ..r
+GMI 2018 5 23 6 20 0 2018-05-23T06:20:00Z 2018.3897640791477 2507-99 -47.342 0.092 13.386 144.656 5.0 0.0 5.0 D 444830 i1 2018-06-27T14:27:00 ..r
+GMI 2018 5 23 6 20 0 2018-05-23T06:20:00Z 2018.3897640791477 2508-99 -47.346 0.086 13.386 144.656 5.0 0.0 5.0 D 444831 i1 2018-06-27T14:49:00 ..r
+GMI 2018 5 25 6 30 0 2018-05-25T06:30:00Z 2018.3952625570776 2121-99 -47.334 0.113 13.386 144.656 5.0 0.0 5.0 D 444828 i1 2018-07-05T15:12:00 ..R
+GMI 2018 5 25 6 30 0 2018-05-25T06:30:00Z 2018.3952625570776 2122-99 -47.344 0.081 13.386 144.656 5.0 0.0 5.0 D 444829 i1 2018-07-05T15:34:00 ..r
+GMI 2018 5 30 7 0 0 2018-05-30T07:00:00Z 2018.4090182648401 4855-99 -47.264 0.087 13.386 144.656 5.0 0.0 5.0 D 445093 i1 2018-06-27T20:12:00 ..r
+GMI 2018 5 30 7 0 0 2018-05-30T07:00:00Z 2018.4090182648401 4856-99 -47.256 0.091 13.386 144.656 5.0 0.0 5.0 D 445094 i1 2018-06-27T20:34:00 ..r
+GMI 2018 6 1 23 30 0 2018-06-01T23:30:00Z 2018.416381278539 533-99 -47.628 0.085 13.386 144.656 5.0 0.0 5.0 D 445091 i1 2018-07-03T14:39:00 -.r
+GMI 2018 6 1 23 30 0 2018-06-01T23:30:00Z 2018.416381278539 534-99 -47.248 0.099 13.386 144.656 5.0 0.0 5.0 D 445092 i1 2018-06-28T16:31:00 ..r
+GMI 2018 6 1 23 30 0 2018-06-01T23:30:00Z 2018.416381278539 534-99 -47.421 0.118 13.386 144.656 5.0 0.0 5.0 D 445092 i1 2018-07-03T15:00:00 +.R
+GMI 2018 6 8 6 45 0 2018-06-08T06:45:00Z 2018.433647260274 4787-99 -47.426 0.078 13.386 144.656 5.0 0.0 5.0 D 445496 i1 2018-07-06T14:50:00 ..r
+GMI 2018 6 8 6 45 0 2018-06-08T06:45:00Z 2018.433647260274 4788-99 -47.429 0.084 13.386 144.656 5.0 0.0 5.0 D 445497 i1 2018-07-06T15:12:00 ..r
+GMI 2018 7 10 21 33 0 2018-07-10T21:33:00Z 2018.5230079908677 2091-99 -47.352 0.12 13.386 144.656 5.0 0.0 5.0 D 446573 i1 2018-07-30T23:36:00 ..r
+GMI 2018 7 10 21 33 0 2018-07-10T21:33:00Z 2018.5230079908677 2092-99 -47.307 0.112 13.386 144.656 5.0 0.0 5.0 D 446574 i1 2018-07-30T23:58:00 ..r
+GMI 2018 7 13 22 0 0 2018-07-13T22:00:00Z 2018.5312785388128 4933-99 -47.201 0.115 13.386 144.656 5.0 0.0 5.0 D 446575 i1 2018-07-31T03:13:00 ..r
+GMI 2018 7 13 22 0 0 2018-07-13T22:00:00Z 2018.5312785388128 4934-99 -47.192 0.124 13.386 144.656 5.0 0.0 5.0 D 446576 i1 2018-07-31T03:35:00 ..r
+GMI 2018 7 20 5 30 0 2018-07-20T05:30:00Z 2018.5485730593607 3099-99 -47.293 0.126 13.386 144.656 5.0 0.0 5.0 D 446857 i1 2018-08-14T15:09:00 ..R
+GMI 2018 7 20 5 30 0 2018-07-20T05:30:00Z 2018.5485730593607 3100-99 -47.247 0.138 13.386 144.656 5.0 0.0 5.0 D 446858 i1 2018-08-14T15:31:00 ..R
+GMI 2018 7 23 22 0 0 2018-07-23T22:00:00Z 2018.5586757990868 4031-99 -47.648 0.138 13.386 144.656 5.0 0.0 5.0 D 447064 i1 2018-08-16T16:41:00 D.R
+GMI 2018 7 23 22 0 0 2018-07-23T22:00:00Z 2018.5586757990868 4032-99 -47.559 0.129 13.386 144.656 5.0 0.0 5.0 D 447065 i1 2018-08-16T17:02:00 D.R
+GMI 2018 7 26 5 30 0 2018-07-26T05:30:00Z 2018.565011415525 4803-99 -47.358 0.162 13.386 144.656 5.0 0.0 5.0 D 447062 i1 2018-08-21T15:26:00 ..R
+GMI 2018 7 26 5 30 0 2018-07-26T05:30:00Z 2018.565011415525 4804-99 -47.363 0.172 13.386 144.656 5.0 0.0 5.0 D 447063 i1 2018-08-21T15:48:00 ..R
+GMI 2018 7 30 21 45 0 2018-07-30T21:45:00Z 2018.5778253424658 5605-99 -47.438 0.136 13.386 144.656 5.0 0.0 5.0 D 447589 i1 2018-08-24T20:39:00 ..R
+GMI 2018 7 30 21 45 0 2018-07-30T21:45:00Z 2018.5778253424658 5606-99 -47.404 0.134 13.386 144.656 5.0 0.0 5.0 D 447590 i1 2018-08-24T21:00:00 ..R
+GMI 2018 8 1 6 0 0 2018-08-01T06:00:00Z 2018.581506849315 4443-99 -47.418 0.153 13.386 144.656 5.0 0.0 5.0 D 447575 i1 2018-08-25T07:27:00 ..R
+GMI 2018 8 1 6 0 0 2018-08-01T06:00:00Z 2018.581506849315 4444-99 -47.327 0.143 13.386 144.656 5.0 0.0 5.0 D 447576 i1 2018-08-25T07:48:00 ..R
+GMI 2018 8 7 5 30 0 2018-08-07T05:30:00Z 2018.5978881278538 3763-99 -47.579 0.131 13.386 144.656 5.0 0.0 5.0 D 448076 i1 2018-11-07T18:03:00 -.R
+GMI 2018 8 7 5 30 0 2018-08-07T05:30:00Z 2018.5978881278538 3764-99 -47.367 0.133 13.386 144.656 5.0 0.0 5.0 D 448077 i1 2018-11-07T18:24:00 +.R
+GMI 2018 8 24 6 0 0 2018-08-24T06:00:00Z 2018.6445205479451 1071-99 -47.129 0.127 13.386 144.656 5.0 0.0 5.0 D 448631 i1 2018-11-08T18:54:00 -.R
+GMI 2018 8 24 6 0 0 2018-08-24T06:00:00Z 2018.6445205479451 1072-99 -47.005 0.218 13.386 144.656 5.0 0.0 5.0 D 448632 i1 2018-11-08T19:16:00 +.R
+GMI 2018 9 4 5 30 0 2018-09-04T05:30:00Z 2018.674600456621 2367-99 -47.416 0.151 13.386 144.656 5.0 0.0 5.0 D 449314 i1 2018-10-04T17:56:00 ..R
+GMI 2018 9 4 5 30 0 2018-09-04T05:30:00Z 2018.674600456621 2368-99 -47.319 0.155 13.386 144.656 5.0 0.0 5.0 D 449315 i1 2018-10-04T18:18:00 ..R
+GMI 2018 9 6 5 30 0 2018-09-06T05:30:00Z 2018.680079908676 2363-99 -46.883 0.142 13.386 144.656 5.0 0.0 5.0 D 449310 i1 2018-09-28T17:52:00 A.R
+GMI 2018 9 6 5 30 0 2018-09-06T05:30:00Z 2018.680079908676 2364-99 -47.606 0.174 13.386 144.656 5.0 0.0 5.0 D 449311 i1 2018-09-28T18:14:00 A.R
+GMI 2018 9 12 6 0 0 2018-09-12T06:00:00Z 2018.6965753424658 1713-99 -47.299 0.152 13.386 144.656 5.0 0.0 5.0 D 449316 i1 2018-10-05T19:24:00 ..R
+GMI 2018 9 14 6 30 0 2018-09-14T06:30:00Z 2018.7021118721461 3629-99 -46.548 0.111 13.386 144.656 5.0 0.0 5.0 D 449318 i1 2018-11-08T01:09:00 !.r
+GMI 2018 9 14 6 30 0 2018-09-14T06:30:00Z 2018.7021118721461 3630-99 -46.566 0.118 13.386 144.656 5.0 0.0 5.0 D 449319 i1 2018-11-08T01:31:00 !.R
+GMI 2018 9 17 6 0 0 2018-09-17T06:00:00Z 2018.7102739726026 1797-99 -47.349 0.109 13.386 144.656 5.0 0.0 5.0 D 449586 i1 2018-11-09T19:31:00 ..R
+GMI 2018 9 17 6 0 0 2018-09-17T06:00:00Z 2018.7102739726026 1798-99 -47.375 0.113 13.386 144.656 5.0 0.0 5.0 D 449587 i1 2018-11-09T19:52:00 ..R
+GMI 2018 9 19 7 30 0 2018-09-19T07:30:00Z 2018.7159246575343 419-99 -47.229 0.12 13.386 144.656 5.0 0.0 5.0 D 449584 i1 2018-11-16T21:24:00 ..r
+GMI 2018 9 19 7 30 0 2018-09-19T07:30:00Z 2018.7159246575343 420-99 -47.267 0.111 13.386 144.656 5.0 0.0 5.0 D 449585 i1 2018-11-16T21:45:00 ..r
+GMI 2018 9 26 6 30 0 2018-09-26T06:30:00Z 2018.7349885844749 5625-99 -47.33 0.126 13.386 144.656 5.0 0.0 5.0 D 449948 i1 2018-11-09T21:39:00 ..R
+GMI 2018 9 26 6 30 0 2018-09-26T06:30:00Z 2018.7349885844749 5626-99 -47.349 0.123 13.386 144.656 5.0 0.0 5.0 D 449949 i1 2018-11-09T22:00:00 ..R
+GMI 2018 9 28 4 30 0 2018-09-28T04:30:00Z 2018.7402397260273 4531-99 -47.33 0.133 13.386 144.656 5.0 0.0 5.0 D 449935 i1 2018-11-19T02:26:00 ..R
+GMI 2018 9 28 4 30 0 2018-09-28T04:30:00Z 2018.7402397260273 4532-99 -47.334 0.124 13.386 144.656 5.0 0.0 5.0 D 449936 i1 2018-11-19T02:47:00 ..R
+GMI 2018 10 1 22 0 0 2018-10-01T22:00:00Z 2018.7504566210046 853-99 -47.395 0.119 13.386 144.656 5.0 0.0 5.0 D 449939 i1 2018-11-08T22:28:00 ..r
+GMI 2018 10 4 7 0 0 2018-10-04T07:00:00Z 2018.7569634703195 3223-99 -47.446 0.125 13.386 144.656 5.0 0.0 5.0 D 449937 i1 2018-11-18T21:27:00 ..R
+GMI 2018 10 4 7 0 0 2018-10-04T07:00:00Z 2018.7569634703195 3224-99 -47.541 0.135 13.386 144.656 5.0 0.0 5.0 D 449938 i1 2018-11-18T21:48:00 ..R
+GMI 2018 10 10 6 0 0 2018-10-10T06:00:00Z 2018.7732876712328 43-99 -47.507 0.153 13.386 144.656 5.0 0.0 5.0 D 450456 i1 2018-11-13T06:49:00 ..R
+GMI 2018 10 10 6 0 0 2018-10-10T06:00:00Z 2018.7732876712328 44-99 -47.422 0.155 13.386 144.656 5.0 0.0 5.0 D 450457 i1 2018-11-13T07:10:00 ..R
+GMI 2018 10 12 7 30 0 2018-10-12T07:30:00Z 2018.7789383561644 5231-99 -47.449 0.116 13.386 144.656 5.0 0.0 5.0 D 450454 i1 2018-11-09T23:47:00 ..R
+GMI 2018 10 12 7 30 0 2018-10-12T07:30:00Z 2018.7789383561644 5231-99 -47.474 0.152 13.386 144.656 5.0 0.0 5.0 D 450454 i1 2018-11-14T21:21:00 ..R
+GMI 2018 10 12 7 30 0 2018-10-12T07:30:00Z 2018.7789383561644 5232-99 -47.527 0.129 13.386 144.656 5.0 0.0 5.0 D 450455 i1 2018-11-10T00:09:00 ..R
+GMI 2018 10 12 7 30 0 2018-10-12T07:30:00Z 2018.7789383561644 5232-99 -47.419 0.175 13.386 144.656 5.0 0.0 5.0 D 450455 i1 2018-11-14T21:42:00 ..R
+GMI 2018 10 18 5 30 0 2018-10-18T05:30:00Z 2018.7951484018265 779-99 -47.369 0.284 13.386 144.656 5.0 0.0 5.0 D 450726 i1 2019-01-08T03:21:00 -.R
+GMI 2018 10 18 5 30 0 2018-10-18T05:30:00Z 2018.7951484018265 780-99 -47.213 0.299 13.386 144.656 5.0 0.0 5.0 D 450727 i1 2019-01-08T03:42:00 +.R
+GMI 2018 10 23 6 30 0 2018-10-23T06:30:00Z 2018.8089611872147 5605-99 -47.396 0.153 13.386 144.656 5.0 0.0 5.0 D 451101 i1 2018-11-19T05:17:00 -.R
+GMI 2018 10 23 6 30 0 2018-10-23T06:30:00Z 2018.8089611872147 5606-99 -47.233 0.144 13.386 144.656 5.0 0.0 5.0 D 451102 i1 2018-11-19T05:38:00 +.R
+GMI 2018 10 26 4 30 0 2018-10-26T04:30:00Z 2018.8169520547945 3855-99 -47.713 0.114 13.386 144.656 5.0 0.0 5.0 D 451099 i1 2018-11-18T17:32:00 .Xr
+GMI 2018 10 26 4 30 0 2018-10-26T04:30:00Z 2018.8169520547945 3856-99 -47.658 0.115 13.386 144.656 5.0 0.0 5.0 D 451100 i1 2018-11-18T17:53:00 .XR
+GMI 2018 10 30 5 30 0 2018-10-30T05:30:00Z 2018.8280251141553 5387-99 -47.438 0.156 13.386 144.656 5.0 0.0 5.0 D 451423 i1 2018-11-29T04:38:00 ..R
+GMI 2018 10 30 5 30 0 2018-10-30T05:30:00Z 2018.8280251141553 5388-99 -47.349 0.152 13.386 144.656 5.0 0.0 5.0 D 451424 i1 2018-11-29T04:59:00 ..R
+GMI 2018 11 2 3 30 0 2018-11-02T03:30:00Z 2018.8360159817353 2877-99 -47.764 0.579 13.386 144.656 5.0 0.0 5.0 D 451421 i1 2018-12-01T02:14:00 A.R
+GMI 2018 11 2 3 30 0 2018-11-02T03:30:00Z 2018.8360159817353 2878-99 -48.458 0.579 13.386 144.656 5.0 0.0 5.0 D 451422 i1 2018-12-01T02:35:00 A.R
+GMI 2018 11 7 5 30 0 2018-11-07T05:30:00Z 2018.8499429223743 5481-99 -47.697 0.185 13.386 144.656 5.0 0.0 5.0 D 452011 i1 2019-12-12T03:36:00 .XR
+GMI 2018 11 7 5 30 0 2018-11-07T05:30:00Z 2018.8499429223743 5482-99 -47.57 0.183 13.386 144.656 5.0 0.0 5.0 D 452010 i1 2019-12-12T03:57:00 ..R
+GMI 2018 11 9 6 30 0 2018-11-09T06:30:00Z 2018.8555365296804 1679-99 -47.503 0.151 13.386 144.656 5.0 0.0 5.0 D 452008 i1 2019-07-25T21:18:00 ..R
+GMI 2018 11 9 6 30 0 2018-11-09T06:30:00Z 2018.8555365296804 1680-99 -47.508 0.145 13.386 144.656 5.0 0.0 5.0 D 452009 i1 2019-07-25T20:55:00 ..R
+GMI 2018 11 14 7 0 0 2018-11-14T07:00:00Z 2018.869292237443 5007-99 -47.342 0.292 13.386 144.656 5.0 0.0 5.0 D 451873 i1 2019-09-15T08:00:00 ..R
+GMI 2018 11 14 7 0 0 2018-11-14T07:00:00Z 2018.869292237443 5007-99 -47.333 0.297 13.386 144.656 5.0 0.0 5.0 D 451873 i1 2019-09-16T00:06:00 ..R
+GMI 2018 11 14 7 0 0 2018-11-14T07:00:00Z 2018.869292237443 5008-99 -47.305 0.288 13.386 144.656 5.0 0.0 5.0 D 451874 i1 2019-09-15T08:00:00 ..R
+GMI 2018 11 14 7 0 0 2018-11-14T07:00:00Z 2018.869292237443 5008-99 -47.296 0.293 13.386 144.656 5.0 0.0 5.0 D 451874 i1 2019-09-16T00:29:00 ..R
+GMI 2018 11 17 6 0 0 2018-11-17T06:00:00Z 2018.877397260274 3293-99 -47.586 0.145 13.386 144.656 5.0 0.0 5.0 D 451871 i1 2019-12-15T19:21:00 +.R
+GMI 2018 11 17 6 0 0 2018-11-17T06:00:00Z 2018.877397260274 3294-99 -47.786 0.144 13.386 144.656 5.0 0.0 5.0 D 451872 i1 2019-12-15T19:42:00 -.R
+GMI 2018 12 13 1 40 0 2018-12-13T01:40:00Z 2018.9481354642314 5715-99 -47.379 0.072 13.386 144.656 5.0 0.0 5.0 D 453458 i1 2019-04-16T21:00:00 A.r
+GMI 2018 12 13 1 40 0 2018-12-13T01:40:00Z 2018.9481354642314 5716-99 -47.665 0.069 13.386 144.656 5.0 0.0 5.0 D 453459 i1 2019-04-16T21:20:00 A.r
+GMI 2018 12 14 21 30 0 2018-12-14T21:30:00Z 2018.9531392694064 1703-99 -47.488 0.135 13.386 144.656 5.0 0.0 5.0 D 452975 i1 2019-07-25T18:37:00 ..R
+GMI 2018 12 14 21 30 0 2018-12-14T21:30:00Z 2018.9531392694064 1704-99 -47.427 0.147 13.386 144.656 5.0 0.0 5.0 D 452976 i1 2019-07-25T19:00:00 ..R
+GMI 2019 1 8 5 40 0 2019-01-08T05:40:00Z 2019.0198249619482 2289-99 -47.435 0.167 13.386 144.656 5.0 0.0 5.0 D 453592 i1 2019-03-06T05:16:00 A.r
+GMI 2019 1 8 5 40 0 2019-01-08T05:40:00Z 2019.0198249619482 2290-99 -47.324 0.292 13.386 144.656 5.0 0.0 5.0 D 453593 i1 2019-03-06T05:37:00 A.R
+GMI 2019 1 11 6 27 0 2019-01-11T06:27:00Z 2019.028133561644 3885-99 -47.41 0.165 13.386 144.656 5.0 0.0 5.0 D 453610 i1 2019-03-06T03:34:00 A.r
+GMI 2019 1 11 6 27 0 2019-01-11T06:27:00Z 2019.028133561644 3886-99 -47.4 0.163 13.386 144.656 5.0 0.0 5.0 D 453611 i1 2019-03-06T03:14:00 A.r
+GMI 2019 2 14 21 30 0 2019-02-14T21:30:00Z 2019.123002283105 4505-99 -47.995 0.063 13.386 144.656 5.0 0.0 5.0 D 454959 i1 2019-04-27T08:17:00 D.r
+GMI 2019 2 14 21 30 0 2019-02-14T21:30:00Z 2019.123002283105 4506-99 -47.514 0.065 13.386 144.656 5.0 0.0 5.0 D 454960 i1 2019-04-27T08:38:00 D.r
+GMI 2019 2 20 5 30 0 2019-02-20T05:30:00Z 2019.1376141552512 2947-99 -47.266 0.327 13.386 144.656 5.0 0.0 5.0 D 455709 i1 2019-10-08T11:19:00 !.R
+GMI 2019 2 20 5 30 0 2019-02-20T05:30:00Z 2019.1376141552512 2948-99 -47.293 0.329 13.386 144.656 5.0 0.0 5.0 D 455710 i1 2019-10-08T10:55:00 !.R
+GMI 2019 2 24 21 30 0 2019-02-24T21:30:00Z 2019.150399543379 1609-99 -47.524 0.067 13.386 144.656 5.0 0.0 5.0 D 455711 i1 2019-04-27T06:31:00 D.r
+GMI 2019 2 24 21 30 0 2019-02-24T21:30:00Z 2019.150399543379 1610-99 -47.554 0.066 13.386 144.656 5.0 0.0 5.0 D 455712 i1 2019-04-27T06:10:00 D.r
+GMI 2019 2 28 7 30 0 2019-02-28T07:30:00Z 2019.1597602739726 4029-99 -47.385 0.194 13.386 144.656 5.0 0.0 5.0 D 455715 i1 2019-09-14T05:23:00 ..R
+GMI 2019 2 28 7 30 0 2019-02-28T07:30:00Z 2019.1597602739726 4029-99 -47.42 0.179 13.386 144.656 5.0 0.0 5.0 D 455715 i1 2019-09-15T17:11:00 ..R
+GMI 2019 2 28 7 30 0 2019-02-28T07:30:00Z 2019.1597602739726 4030-99 -47.48 0.207 13.386 144.656 5.0 0.0 5.0 D 455716 i1 2019-09-14T05:46:00 ..R
+GMI 2019 2 28 7 30 0 2019-02-28T07:30:00Z 2019.1597602739726 4030-99 -47.439 0.178 13.386 144.656 5.0 0.0 5.0 D 455716 i1 2019-09-15T17:34:00 ..R
+GMI 2019 3 3 2 0 0 2019-03-03T02:00:00Z 2019.1673515981736 2423-99 -47.367 0.065 13.386 144.656 5.0 0.0 5.0 D 455713 i1 2019-04-27T05:27:00 D.r
+GMI 2019 3 3 2 0 0 2019-03-03T02:00:00Z 2019.1673515981736 2424-99 -47.582 0.065 13.386 144.656 5.0 0.0 5.0 D 455714 i1 2019-04-27T05:48:00 D.r
+GMI 2019 3 6 7 0 0 2019-03-06T07:00:00Z 2019.1761415525114 2127-99 -47.382 0.206 13.386 144.656 5.0 0.0 5.0 D 455831 i1 2019-09-14T07:31:00 ..R
+GMI 2019 3 6 7 0 0 2019-03-06T07:00:00Z 2019.1761415525114 2128-99 -47.353 0.206 13.386 144.656 5.0 0.0 5.0 D 455832 i1 2019-09-14T07:57:00 ..R
+GMI 2019 3 7 21 30 0 2019-03-07T21:30:00Z 2019.1805365296805 4311-99 -47.624 0.213 13.386 144.656 5.0 0.0 5.0 D 455902 i1 2019-04-28T15:15:00 A.r
+GMI 2019 3 7 21 30 0 2019-03-07T21:30:00Z 2019.1805365296805 4312-99 -47.816 0.212 13.386 144.656 5.0 0.0 5.0 D 455903 i1 2019-04-28T15:35:00 A.r
+GMI 2019 3 20 10 37 0 2019-03-20T10:37:00Z 2019.2149105783867 2931-99 -47.398 0.207 13.386 144.656 5.0 0.0 5.0 D 456641 i1 2019-09-13T18:16:00 ..R
+GMI 2019 3 20 10 37 0 2019-03-20T10:37:00Z 2019.2149105783867 2932-99 -47.536 0.205 13.386 144.656 5.0 0.0 5.0 D 456642 i1 2019-09-13T18:39:00 ..R
+GMI 2019 3 21 3 37 0 2019-03-21T03:37:00Z 2019.216851217656 3575-99 -47.364 0.213 13.386 144.656 5.0 0.0 5.0 D 456639 i1 2019-09-13T20:49:00 ..R
+GMI 2019 3 21 3 37 0 2019-03-21T03:37:00Z 2019.216851217656 3576-99 -47.335 0.205 13.386 144.656 5.0 0.0 5.0 D 456640 i1 2019-09-13T21:14:00 ..R
+GMI 2019 4 1 1 23 0 2019-04-01T01:23:00Z 2019.2467332572298 2133-99 -47.294 0.15 13.386 144.656 5.0 0.0 5.0 D 459951 i1 2019-08-20T04:25:00 ..R
+GMI 2019 4 1 1 23 0 2019-04-01T01:23:00Z 2019.2467332572298 2134-99 -47.296 0.153 13.386 144.656 5.0 0.0 5.0 D 459952 i1 2019-08-20T04:48:00 ..R
+GMI 2019 4 3 5 13 0 2019-04-03T05:13:00Z 2019.252650304414 5487-99 -47.372 0.225 13.386 144.656 5.0 0.0 5.0 D 459953 i1 2019-09-06T20:19:00 ..R
+GMI 2019 4 3 5 13 0 2019-04-03T05:13:00Z 2019.252650304414 5488-99 -47.28 0.224 13.386 144.656 5.0 0.0 5.0 D 459954 i1 2019-09-06T20:42:00 ..R
+GMI 2019 4 9 3 41 0 2019-04-09T03:41:00Z 2019.2689136225267 5239-99 -47.321 0.16 13.386 144.656 5.0 0.0 5.0 D 459831 i1 2019-08-20T03:39:00 ..R
+GMI 2019 4 9 3 41 0 2019-04-09T03:41:00Z 2019.2689136225267 5240-99 -47.284 0.154 13.386 144.656 5.0 0.0 5.0 D 459832 i1 2019-08-20T04:02:00 ..R
+GMI 2019 4 11 0 47 0 2019-04-11T00:47:00Z 2019.274062024353 4999-99 -47.4 0.157 13.386 144.656 5.0 0.0 5.0 D 459833 i1 2019-08-19T22:16:00 ..R
+GMI 2019 4 11 0 47 0 2019-04-11T00:47:00Z 2019.274062024353 5000-99 -47.352 0.157 13.386 144.656 5.0 0.0 5.0 D 459834 i1 2019-08-19T22:39:00 ..R
+GMI 2019 4 15 0 43 0 2019-04-15T00:43:00Z 2019.2850133181125 269-99 -47.426 0.135 13.386 144.656 5.0 0.0 5.0 D 459827 i1 2019-08-21T15:34:00 ..R
+GMI 2019 4 15 0 43 0 2019-04-15T00:43:00Z 2019.2850133181125 270-99 -47.385 0.144 13.386 144.656 5.0 0.0 5.0 D 459828 i1 2019-08-21T15:58:00 ..R
+GMI 2019 4 17 0 6 0 2019-04-17T00:06:00Z 2019.2904223744292 5555-99 -47.21 0.199 13.386 144.656 5.0 0.0 5.0 D 459829 i1 2019-08-08T19:23:00 ..R
+GMI 2019 4 17 0 6 0 2019-04-17T00:06:00Z 2019.2904223744292 5556-99 -47.272 0.196 13.386 144.656 5.0 0.0 5.0 D 459830 i1 2019-08-08T19:46:00 ..R
+GMI 2019 4 24 0 57 0 2019-04-24T00:57:00Z 2019.3096974885846 1489-99 -47.33 0.175 13.386 144.656 5.0 0.0 5.0 D 459957 i1 2019-08-27T21:21:00 -.R
+GMI 2019 4 24 0 57 0 2019-04-24T00:57:00Z 2019.3096974885846 1490-99 -46.941 0.19 13.386 144.656 5.0 0.0 5.0 D 459958 i1 2019-08-27T21:44:00 +.R
+GMI 2019 4 26 5 38 0 2019-04-26T05:38:00Z 2019.315711567732 5237-99 -47.352 0.247 13.386 144.656 5.0 0.0 5.0 D 459955 i1 2019-07-24T08:11:00 ..R
+GMI 2019 4 26 5 38 0 2019-04-26T05:38:00Z 2019.315711567732 5238-99 -47.302 0.232 13.386 144.656 5.0 0.0 5.0 D 459956 i1 2019-07-24T08:34:00 ..R
+GMI 2019 4 29 2 9 0 2019-04-29T02:09:00Z 2019.3235331050228 3477-99 -47.346 0.145 13.386 144.656 5.0 0.0 5.0 D 459823 i1 2019-08-21T17:07:00 ..R
+GMI 2019 4 29 2 9 0 2019-04-29T02:09:00Z 2019.3235331050228 3478-99 -47.367 0.146 13.386 144.656 5.0 0.0 5.0 D 459824 i1 2019-08-21T17:30:00 ..R
+GMI 2019 4 30 22 53 0 2019-04-30T22:53:00Z 2019.3286396499238 1051-99 -47.194 0.216 13.386 144.656 5.0 0.0 5.0 D 459825 i1 2019-09-06T23:25:00 ..R
+GMI 2019 4 30 22 53 0 2019-04-30T22:53:00Z 2019.3286396499238 1052-99 -47.204 0.219 13.386 144.656 5.0 0.0 5.0 D 459826 i1 2019-09-06T23:48:00 ..R
+GMI 2019 5 9 0 7 0 2019-05-09T00:07:00Z 2019.3506982496194 779-99 -47.375 0.16 13.386 144.656 5.0 0.0 5.0 D 459821 i1 2019-08-15T19:10:00 ..R
+GMI 2019 5 9 0 7 0 2019-05-09T00:07:00Z 2019.3506982496194 780-99 -47.488 0.161 13.386 144.656 5.0 0.0 5.0 D 459822 i1 2019-08-15T19:33:00 ..R
+GMI 2019 5 13 1 23 0 2019-05-13T01:23:00Z 2019.3618017503804 5387-99 -47.411 0.168 13.386 144.656 5.0 0.0 5.0 D 459819 i1 2019-08-15T21:29:00 -.R
+GMI 2019 5 13 1 23 0 2019-05-13T01:23:00Z 2019.3618017503804 5388-99 -47.241 0.176 13.386 144.656 5.0 0.0 5.0 D 459820 i1 2019-08-15T21:52:00 +.R
+GMI 2019 5 15 0 50 0 2019-05-15T00:50:00Z 2019.3672184170473 3471-99 -47.175 0.182 13.386 144.656 5.0 0.0 5.0 D 460194 i1 2019-07-28T18:16:00 D.R
+GMI 2019 5 15 0 50 0 2019-05-15T00:50:00Z 2019.3672184170473 3472-99 -47.089 0.182 13.386 144.656 5.0 0.0 5.0 D 460195 i1 2019-07-28T18:40:00 D.R
+GMI 2019 5 17 4 45 0 2019-05-17T04:45:00Z 2019.373144977169 3787-99 -47.267 0.195 13.386 144.656 5.0 0.0 5.0 D 460196 i1 2019-10-08T18:54:00 !.R
+GMI 2019 5 17 4 45 0 2019-05-17T04:45:00Z 2019.373144977169 3788-99 -47.242 0.184 13.386 144.656 5.0 0.0 5.0 D 460197 i1 2019-10-08T19:17:00 !.R
+GMI 2019 5 20 5 6 0 2019-05-20T05:06:00Z 2019.381404109589 2169-99 -47.246 0.206 13.386 144.656 5.0 0.0 5.0 D 460200 i1 2019-08-10T14:02:00 ..R
+GMI 2019 5 20 5 6 0 2019-05-20T05:06:00Z 2019.381404109589 2170-99 -47.285 0.191 13.386 144.656 5.0 0.0 5.0 D 460201 i1 2019-08-10T14:25:00 ..R
+GMI 2019 5 30 1 42 0 2019-05-30T01:42:00Z 2019.4084132420091 3375-99 -47.271 0.205 13.386 144.656 5.0 0.0 5.0 D 460198 i1 2019-07-30T08:29:00 ..R
+GMI 2019 5 30 1 42 0 2019-05-30T01:42:00Z 2019.4084132420091 3376-99 -47.217 0.209 13.386 144.656 5.0 0.0 5.0 D 460199 i1 2019-07-30T08:52:00 ..R
+GMI 2019 6 3 4 42 0 2019-06-03T04:42:00Z 2019.4197146118722 1331-99 -47.294 0.16 13.386 144.656 5.0 0.0 5.0 D 460104 i1 2019-08-26T21:41:00 -.R
+GMI 2019 6 3 4 42 0 2019-06-03T04:42:00Z 2019.4197146118722 1332-99 -46.897 0.09 13.386 144.656 5.0 0.0 5.0 D 460105 i1 2019-08-26T22:04:00 +.r
+GMI 2019 6 5 5 7 0 2019-06-05T05:07:00Z 2019.425241628615 2963-99 -47.38 0.2 13.386 144.656 5.0 0.0 5.0 D 460102 i1 2019-09-11T22:28:00 ..R
+GMI 2019 6 5 5 7 0 2019-06-05T05:07:00Z 2019.425241628615 2964-99 -47.32 0.215 13.386 144.656 5.0 0.0 5.0 D 460103 i1 2019-09-13T21:38:00 ..R
+GMI 2019 6 10 18 30 0 2019-06-10T18:30:00Z 2019.4404680365296 4785-99 -47.263 0.147 13.386 144.656 5.0 0.0 5.0 D 460578 i1 2019-07-25T10:57:00 ..R
+GMI 2019 6 10 18 30 0 2019-06-10T18:30:00Z 2019.4404680365296 4786-99 -47.303 0.143 13.386 144.656 5.0 0.0 5.0 D 460579 i1 2019-07-25T11:20:00 ..R
+GMI 2019 6 12 18 0 0 2019-06-12T18:00:00Z 2019.445890410959 5123-99 -47.243 0.188 13.386 144.656 5.0 0.0 5.0 D 460576 i1 2019-08-09T04:39:00 ..R
+GMI 2019 6 12 18 0 0 2019-06-12T18:00:00Z 2019.445890410959 5124-99 -47.384 0.196 13.386 144.656 5.0 0.0 5.0 D 460577 i1 2019-08-09T05:02:00 ..R
+GMI 2019 6 17 19 0 0 2019-06-17T19:00:00Z 2019.459703196347 3691-99 -47.241 0.184 13.386 144.656 5.0 0.0 5.0 D 460758 i1 2019-08-08T22:28:00 ..R
+GMI 2019 6 17 19 0 0 2019-06-17T19:00:00Z 2019.459703196347 3692-99 -47.335 0.189 13.386 144.656 5.0 0.0 5.0 D 460759 i1 2019-08-08T22:51:00 ..R
+GMI 2019 6 19 18 0 0 2019-06-19T18:00:00Z 2019.4650684931507 5509-99 -47.212 0.189 13.386 144.656 5.0 0.0 5.0 D 460744 i1 2019-08-02T01:55:00 ..R
+GMI 2019 6 19 18 0 0 2019-06-19T18:00:00Z 2019.4650684931507 5510-99 -47.289 0.203 13.386 144.656 5.0 0.0 5.0 D 460745 i1 2019-08-02T02:19:00 ..R
+GMI 2019 6 26 5 30 0 2019-06-26T05:30:00Z 2019.4828196347032 1871-99 -47.246 0.16 13.386 144.656 5.0 0.0 5.0 D 462185 i1 2019-08-14T05:46:00 ..R
+GMI 2019 6 26 5 30 0 2019-06-26T05:30:00Z 2019.4828196347032 1872-99 -47.257 0.157 13.386 144.656 5.0 0.0 5.0 D 462186 i1 2019-08-14T06:09:00 ..R
+GMI 2019 6 28 6 30 0 2019-06-28T06:30:00Z 2019.488413242009 3463-99 -47.245 0.169 13.386 144.656 5.0 0.0 5.0 D 462187 i1 2019-08-16T23:24:00 D.R
+GMI 2019 6 28 6 30 0 2019-06-28T06:30:00Z 2019.488413242009 3464-99 -47.278 0.176 13.386 144.656 5.0 0.0 5.0 D 462188 i1 2019-08-16T23:48:00 D.R
+GMI 2019 7 2 6 30 0 2019-07-02T06:30:00Z 2019.4993721461187 2889-99 -47.22 0.183 13.386 144.656 5.0 0.0 5.0 D 462069 i1 2019-08-07T09:26:00 ..R
+GMI 2019 7 2 6 30 0 2019-07-02T06:30:00Z 2019.4993721461187 2890-99 -47.256 0.176 13.386 144.656 5.0 0.0 5.0 D 462070 i1 2019-08-07T09:50:00 ..R
+GMI 2019 7 5 7 0 0 2019-07-05T07:00:00Z 2019.5076484018264 1161-99 -47.492 0.171 13.386 144.656 5.0 0.0 5.0 D 462071 i1 2019-08-06T21:06:00 ..R
+GMI 2019 7 5 7 0 0 2019-07-05T07:00:00Z 2019.5076484018264 1162-99 -47.51 0.182 13.386 144.656 5.0 0.0 5.0 D 462072 i1 2019-08-06T21:29:00 ..R
+GMI 2019 7 9 22 30 0 2019-07-09T22:30:00Z 2019.5203767123287 2861-99 -47.244 0.164 13.386 144.656 5.0 0.0 5.0 D 462191 i1 2019-08-17T00:57:00 D.R
+GMI 2019 7 9 22 30 0 2019-07-09T22:30:00Z 2019.5203767123287 2862-99 -47.212 0.158 13.386 144.656 5.0 0.0 5.0 D 462192 i1 2019-08-17T01:20:00 D.R
+GMI 2019 7 15 22 0 0 2019-07-15T22:00:00Z 2019.5367579908675 5411-99 -47.23 0.109 13.386 144.656 5.0 0.0 5.0 D 462947 i1 2019-09-05T16:05:00 ..R
+GMI 2019 7 15 22 0 0 2019-07-15T22:00:00Z 2019.5367579908675 5412-99 -47.233 0.111 13.386 144.656 5.0 0.0 5.0 D 462948 i1 2019-09-05T16:28:00 ..R
+GMI 2019 7 18 6 30 0 2019-07-18T06:30:00Z 2019.5432077625571 2841-99 -47.283 0.107 13.386 144.656 5.0 0.0 5.0 D 462929 i1 2019-08-20T17:48:00 ..R
+GMI 2019 7 18 6 30 0 2019-07-18T06:30:00Z 2019.5432077625571 2842-99 -47.354 0.104 13.386 144.656 5.0 0.0 5.0 D 462930 i1 2019-08-20T18:11:00 ..R
+GMI 2019 7 24 21 30 0 2019-07-24T21:30:00Z 2019.5613584474886 1987-99 -47.248 0.103 13.386 144.656 5.0 0.0 5.0 D 462967 i1 2019-09-06T00:12:00 ..R
+GMI 2019 7 24 21 30 0 2019-07-24T21:30:00Z 2019.5613584474886 5778-99 -47.187 0.112 13.386 144.656 5.0 0.0 5.0 D 462968 i1 2019-09-06T00:35:00 ..R
+GMI 2019 7 27 5 30 0 2019-07-27T05:30:00Z 2019.5677511415524 5775-99 -47.248 0.114 13.386 144.656 5.0 0.0 5.0 D 462965 i1 2019-09-06T04:51:00 +.R
+GMI 2019 7 27 5 30 0 2019-07-27T05:30:00Z 2019.5677511415524 5777-99 -47.42 0.12 13.386 144.656 5.0 0.0 5.0 D 462966 i1 2019-09-06T05:15:00 -.R
+GMI 2019 7 29 17 30 0 2019-07-29T17:30:00Z 2019.574600456621 5269-99 -47.402 0.193 13.386 144.656 5.0 0.0 5.0 D 464811 i1 2019-11-20T09:13:00 ..R
+GMI 2019 7 29 17 30 0 2019-07-29T17:30:00Z 2019.574600456621 5270-99 -47.431 0.197 13.386 144.656 5.0 0.0 5.0 D 464812 i1 2019-11-20T09:35:00 ..R
+GMI 2019 8 16 6 0 0 2019-08-16T06:00:00Z 2019.622602739726 67-99 -47.564 0.14 13.386 144.656 5.0 0.0 5.0 D 464339 i1 2019-12-03T22:05:00 !.R
+GMI 2019 8 16 6 0 0 2019-08-16T06:00:00Z 2019.622602739726 68-99 -47.586 0.141 13.386 144.656 5.0 0.0 5.0 D 464340 i1 2019-12-03T22:26:00 !.R
+GMI 2019 8 23 21 30 0 2019-08-23T21:30:00Z 2019.6435502283105 5641-99 -47.554 0.169 13.386 144.656 5.0 0.0 5.0 D 464337 i1 2019-12-30T22:25:00 ..R
+GMI 2019 8 23 21 30 0 2019-08-23T21:30:00Z 2019.6435502283105 5642-99 -47.522 0.169 13.386 144.656 5.0 0.0 5.0 D 464338 i1 2019-12-30T22:46:00 ..R
+GMI 2019 8 28 3 30 0 2019-08-28T03:30:00Z 2019.655194063927 2683-99 -47.654 0.203 13.386 144.656 5.0 0.0 5.0 D 465361 i1 2019-12-02T17:16:00 !.R
+GMI 2019 8 28 3 30 0 2019-08-28T03:30:00Z 2019.655194063927 2684-99 -47.469 0.155 13.386 144.656 5.0 0.0 5.0 D 465362 i1 2019-12-02T17:37:00 !.R
+GMI 2019 8 29 23 0 0 2019-08-29T23:00:00Z 2019.6601598173515 229-99 -47.776 0.131 13.386 144.656 5.0 0.0 5.0 D 465359 i1 2019-11-19T00:14:00 ..r
+GMI 2019 8 29 23 0 0 2019-08-29T23:00:00Z 2019.6601598173515 230-99 -47.831 0.138 13.386 144.656 5.0 0.0 5.0 D 465360 i1 2019-11-19T00:34:00 ..r
+GMI 2019 9 4 5 30 0 2019-09-04T05:30:00Z 2019.674600456621 1983-99 -47.634 0.163 13.386 144.656 5.0 0.0 5.0 D 465700 i1 2019-12-07T02:49:00 !.R
+GMI 2019 9 4 5 30 0 2019-09-04T05:30:00Z 2019.674600456621 1984-99 -47.58 0.166 13.386 144.656 5.0 0.0 5.0 D 465701 i1 2019-12-07T03:10:00 !.R
+GMI 2019 9 6 4 30 0 2019-09-06T04:30:00Z 2019.6799657534248 679-99 -47.993 0.218 13.386 144.656 5.0 0.0 5.0 D 465698 i1 2019-12-05T06:51:00 !.R
+GMI 2019 9 6 4 30 0 2019-09-06T04:30:00Z 2019.6799657534248 679-99 -47.753 0.181 13.386 144.656 5.0 0.0 5.0 D 465698 i1 2019-12-07T00:43:00 !.R
+GMI 2019 9 6 4 30 0 2019-09-06T04:30:00Z 2019.6799657534248 680-99 -47.949 0.18 13.386 144.656 5.0 0.0 5.0 D 465699 i1 2019-12-07T01:04:00 !.R
+GMI 2019 9 10 22 0 0 2019-09-10T22:00:00Z 2019.6929223744291 5691-99 -47.603 0.165 13.386 144.656 5.0 0.0 5.0 D 465760 i1 2019-12-07T04:14:00 !.R
+GMI 2019 9 10 22 0 0 2019-09-10T22:00:00Z 2019.6929223744291 5692-99 -47.663 0.165 13.386 144.656 5.0 0.0 5.0 D 465761 i1 2019-12-07T04:35:00 !.R
+GMI 2019 9 13 5 30 0 2019-09-13T05:30:00Z 2019.6992579908676 1965-99 -47.801 0.168 13.386 144.656 5.0 0.0 5.0 D 465756 i1 2019-12-06T21:12:00 !.R
+GMI 2019 9 13 5 30 0 2019-09-13T05:30:00Z 2019.6992579908676 1966-99 -47.793 0.171 13.386 144.656 5.0 0.0 5.0 D 465757 i1 2019-12-06T21:33:00 !.R
+GMI 2019 9 18 5 0 0 2019-09-18T05:00:00Z 2019.712899543379 3529-99 -47.718 0.152 13.386 144.656 5.0 0.0 5.0 D 466642 i1 2019-12-16T17:35:00 ..R
+GMI 2019 9 18 5 0 0 2019-09-18T05:00:00Z 2019.712899543379 3530-99 -47.729 0.158 13.386 144.656 5.0 0.0 5.0 D 466643 i1 2019-12-16T17:56:00 ..R
+GMI 2019 9 20 5 30 0 2019-09-20T05:30:00Z 2019.7184360730594 5367-99 -47.745 0.156 13.386 144.656 5.0 0.0 5.0 D 466640 i1 2019-12-03T01:00:00 !.R
+GMI 2019 9 20 5 30 0 2019-09-20T05:30:00Z 2019.7184360730594 5368-99 -47.77 0.15 13.386 144.656 5.0 0.0 5.0 D 466641 i1 2019-12-03T01:22:00 !.R
+GMI 2019 9 25 22 0 0 2019-09-25T22:00:00Z 2019.7340182648402 4043-99 -47.387 0.121 13.386 144.656 5.0 0.0 5.0 D 466634 i1 2019-12-14T04:51:00 .XR
+GMI 2019 9 25 22 0 0 2019-09-25T22:00:00Z 2019.7340182648402 4044-99 -47.4 0.121 13.386 144.656 5.0 0.0 5.0 D 466635 i1 2019-12-14T05:13:00 ..R
+GMI 2019 10 1 6 0 0 2019-10-01T06:00:00Z 2019.7486301369863 3485-99 -47.718 0.234 13.386 144.656 5.0 0.0 5.0 D 466759 i1 2019-12-05T21:37:00 !.o
+GMI 2019 10 1 6 0 0 2019-10-01T06:00:00Z 2019.7486301369863 3486-99 -47.54 0.163 13.386 144.656 5.0 0.0 5.0 D 466760 i1 2019-12-05T21:58:00 !.o
+GMI 2019 10 8 22 0 0 2019-10-08T22:00:00Z 2019.7696347031963 2923-99 -47.673 0.118 13.386 144.656 5.0 0.0 5.0 D 466772 i1 2020-01-02T14:35:00 ..R
+GMI 2019 10 8 22 0 0 2019-10-08T22:00:00Z 2019.7696347031963 2924-99 -47.76 0.118 13.386 144.656 5.0 0.0 5.0 D 466773 i1 2020-01-02T14:56:00 ..R
+GMI 2019 10 11 6 0 0 2019-10-11T06:00:00Z 2019.7760273972603 39-99 -47.649 0.174 13.386 144.656 5.0 0.0 5.0 D 466774 i1 2019-12-18T02:27:00 ..R
+GMI 2019 10 11 6 0 0 2019-10-11T06:00:00Z 2019.7760273972603 40-99 -47.689 0.173 13.386 144.656 5.0 0.0 5.0 D 466775 i1 2019-12-18T02:48:00 ..R
+GMI 2019 10 15 22 0 0 2019-10-15T22:00:00Z 2019.788812785388 2217-99 -47.656 0.195 13.386 144.656 5.0 0.0 5.0 D 466778 i1 2019-12-19T14:44:00 +.R
+GMI 2019 10 15 22 0 0 2019-10-15T22:00:00Z 2019.788812785388 2218-99 -47.826 0.197 13.386 144.656 5.0 0.0 5.0 D 466779 i1 2019-12-19T15:05:00 -.R
+GMI 2019 10 18 22 0 0 2019-10-18T22:00:00Z 2019.7970319634703 2877-99 -47.73 0.199 13.386 144.656 5.0 0.0 5.0 D 466776 i1 2019-12-20T01:21:00 -.R
+GMI 2019 10 18 22 0 0 2019-10-18T22:00:00Z 2019.7970319634703 2878-99 -47.57 0.195 13.386 144.656 5.0 0.0 5.0 D 466777 i1 2019-12-20T01:42:00 +.R
+GMI 2019 10 31 2 43 0 2019-10-31T02:43:00Z 2019.830447108067 595-99 -48.0 0.167 13.386 144.656 5.0 0.0 5.0 D 467822 i1 2019-12-17T17:17:00 !.R
+GMI 2019 10 31 2 43 0 2019-10-31T02:43:00Z 2019.830447108067 596-99 -47.895 0.168 13.386 144.656 5.0 0.0 5.0 D 467823 i1 2019-12-17T17:38:00 !.R
+GMI 2019 11 7 3 19 0 2019-11-07T03:19:00Z 2019.8496936834094 3401-99 -47.891 0.139 13.386 144.656 5.0 0.0 5.0 D 467820 i1 2020-01-03T18:10:00 D.R
+GMI 2019 11 7 3 19 0 2019-11-07T03:19:00Z 2019.8496936834094 3402-99 -48.001 0.141 13.386 144.656 5.0 0.0 5.0 D 467821 i1 2020-01-03T18:31:00 D.R
+GMI 2019 11 12 1 7 0 2019-11-12T01:07:00Z 2019.863141171994 2225-99 -47.56 0.157 13.386 144.656 5.0 0.0 5.0 D 467794 i1 2019-12-17T01:20:00 ..R
+GMI 2019 11 12 1 7 0 2019-11-12T01:07:00Z 2019.863141171994 2226-99 -47.516 0.152 13.386 144.656 5.0 0.0 5.0 D 467795 i1 2019-12-17T01:41:00 ..R
+GMI 2019 11 14 4 2 0 2019-11-14T04:02:00Z 2019.8689535768644 121-99 -47.845 0.115 13.386 144.656 5.0 0.0 5.0 D 467824 i1 2020-01-03T03:21:00 ..R
+GMI 2019 11 14 4 2 0 2019-11-14T04:02:00Z 2019.8689535768644 122-99 -47.841 0.118 13.386 144.656 5.0 0.0 5.0 D 467825 i1 2020-01-03T03:42:00 ..R
+GMI 2019 11 18 6 17 0 2019-11-18T06:17:00Z 2019.8801693302892 2127-99 -47.718 0.138 13.386 144.656 5.0 0.0 5.0 D 468263 i1 2020-01-06T14:18:00 ..R
+GMI 2019 11 18 6 17 0 2019-11-18T06:17:00Z 2019.8801693302892 2128-99 -47.864 0.137 13.386 144.656 5.0 0.0 5.0 D 468264 i1 2020-01-06T14:39:00 ..R
+GMI 2019 11 20 23 0 0 2019-11-20T23:00:00Z 2019.8875570776256 1999-99 -47.694 0.131 13.386 144.656 5.0 0.0 5.0 D 468265 i1 2020-01-09T18:23:00 ..R
+GMI 2019 11 20 23 0 0 2019-11-20T23:00:00Z 2019.8875570776256 2000-99 -47.726 0.129 13.386 144.656 5.0 0.0 5.0 D 468266 i1 2020-01-09T18:44:00 ..R
+GMI 2019 11 29 2 43 0 2019-11-29T02:43:00Z 2019.9098991628614 5169-99 -47.641 0.135 13.386 144.656 5.0 0.0 5.0 D 468269 i1 2020-01-10T06:23:00 -.R
+GMI 2019 11 29 2 43 0 2019-11-29T02:43:00Z 2019.9098991628614 5170-99 -47.424 0.134 13.386 144.656 5.0 0.0 5.0 D 468270 i1 2020-01-10T06:44:00 +.R
+GMI 2019 12 2 0 11 0 2019-12-02T00:11:00Z 2019.9178291476408 2105-99 -47.812 0.144 13.386 144.656 5.0 0.0 5.0 D 468267 i1 2020-01-07T05:49:00 ..R
+GMI 2019 12 2 0 11 0 2019-12-02T00:11:00Z 2019.9178291476408 2106-99 -47.733 0.145 13.386 144.656 5.0 0.0 5.0 D 468268 i1 2020-01-07T06:10:00 ..R
+GMI 2019 12 4 22 50 0 2019-12-04T22:50:00Z 2019.9258942161339 793-99 -47.88 0.108 13.386 144.656 5.0 0.0 5.0 D 469028 i1 2020-05-01T16:21:00 A.r
+GMI 2019 12 4 22 50 0 2019-12-04T22:50:00Z 2019.9258942161339 793-99 -47.522 0.093 13.386 144.656 5.0 0.0 5.0 D 469028 i1 2020-05-29T01:31:00 +.r
+GMI 2019 12 4 22 50 0 2019-12-04T22:50:00Z 2019.9258942161339 794-99 -47.811 0.108 13.386 144.656 5.0 0.0 5.0 D 469029 i1 2020-05-01T16:40:00 A.r
+GMI 2019 12 4 22 50 0 2019-12-04T22:50:00Z 2019.9258942161339 794-99 -48.676 0.095 13.386 144.656 5.0 0.0 5.0 D 469029 i1 2020-05-29T01:53:00 -.r
+GMI 2019 12 9 23 1 0 2019-12-09T23:01:00Z 2019.9396137747337 1943-99 -47.623 0.158 13.386 144.656 5.0 0.0 5.0 D 469026 i1 2020-04-20T03:59:00 ..R
+GMI 2019 12 9 23 1 0 2019-12-09T23:01:00Z 2019.9396137747337 1944-99 -47.685 0.162 13.386 144.656 5.0 0.0 5.0 D 469027 i1 2020-04-20T04:19:00 ..R
+GMI 2019 12 13 1 46 0 2019-12-13T01:46:00Z 2019.9481468797565 3275-99 -47.462 0.129 13.386 144.656 5.0 0.0 5.0 D 469020 i1 2020-04-30T05:04:00 +.r
+GMI 2019 12 13 1 46 0 2019-12-13T01:46:00Z 2019.9481468797565 3276-99 -47.912 0.127 13.386 144.656 5.0 0.0 5.0 D 469021 i1 2020-04-30T05:24:00 -.r
+GMI 2019 12 16 2 35 0 2019-12-16T02:35:00Z 2019.956459284627 1157-99 -47.711 0.159 13.386 144.656 5.0 0.0 5.0 D 469018 i1 2020-04-19T19:44:00 ..R
+GMI 2019 12 16 2 35 0 2019-12-16T02:35:00Z 2019.956459284627 1158-99 -47.74 0.159 13.386 144.656 5.0 0.0 5.0 D 469019 i1 2020-04-19T20:04:00 ..R
+GMI 2019 12 18 1 22 0 2019-12-18T01:22:00Z 2019.961799847793 297-99 -47.5 0.136 13.386 144.656 5.0 0.0 5.0 D 469641 i1 2020-04-23T05:32:00 D.R
+GMI 2019 12 18 1 22 0 2019-12-18T01:22:00Z 2019.961799847793 297-99 -47.82 0.13 13.386 144.656 5.0 0.0 5.0 D 469641 i1 2020-04-26T03:46:00 ..R
+GMI 2019 12 18 1 22 0 2019-12-18T01:22:00Z 2019.961799847793 298-99 -47.747 0.142 13.386 144.656 5.0 0.0 5.0 D 469642 i1 2020-04-23T05:52:00 D.R
+GMI 2019 12 18 1 22 0 2019-12-18T01:22:00Z 2019.961799847793 298-99 -47.82 0.131 13.386 144.656 5.0 0.0 5.0 D 469642 i1 2020-04-26T04:06:00 ..R
+GMI 2019 12 20 6 0 0 2019-12-20T06:00:00Z 2019.967808219178 5475-99 -47.618 0.14 13.386 144.656 5.0 0.0 5.0 D 469639 i1 2020-04-23T01:31:00 D.R
+GMI 2019 12 20 6 0 0 2019-12-20T06:00:00Z 2019.967808219178 5475-99 -47.784 0.132 13.386 144.656 5.0 0.0 5.0 D 469639 i1 2020-04-26T00:27:00 ..R
+GMI 2019 12 20 6 0 0 2019-12-20T06:00:00Z 2019.967808219178 5476-99 -47.605 0.144 13.386 144.656 5.0 0.0 5.0 D 469640 i1 2020-04-23T01:51:00 D.R
+GMI 2019 12 20 6 0 0 2019-12-20T06:00:00Z 2019.967808219178 5476-99 -47.73 0.132 13.386 144.656 5.0 0.0 5.0 D 469640 i1 2020-04-26T00:47:00 ..R
+GMI 2019 12 26 8 15 0 2019-12-26T08:15:00Z 2019.9845034246575 2963-99 -47.811 0.136 13.386 144.656 5.0 0.0 5.0 D 469851 i1 2020-04-22T17:15:00 A.R
+GMI 2019 12 26 8 15 0 2019-12-26T08:15:00Z 2019.9845034246575 2963-99 -47.701 0.123 13.386 144.656 5.0 0.0 5.0 D 469851 i1 2020-04-25T19:51:00 A.R
+GMI 2019 12 26 8 15 0 2019-12-26T08:15:00Z 2019.9845034246575 2964-99 -47.846 0.135 13.386 144.656 5.0 0.0 5.0 D 469852 i1 2020-04-22T17:35:00 A.R
+GMI 2019 12 26 8 15 0 2019-12-26T08:15:00Z 2019.9845034246575 2964-99 -47.749 0.122 13.386 144.656 5.0 0.0 5.0 D 469852 i1 2020-04-25T20:11:00 A.R
+GMI 2019 12 28 7 0 0 2019-12-28T07:00:00Z 2019.9898401826483 315-99 -47.756 0.14 13.386 144.656 5.0 0.0 5.0 D 469849 i1 2020-04-27T04:42:00 ..r
+GMI 2019 12 28 7 0 0 2019-12-28T07:00:00Z 2019.9898401826483 316-99 -47.731 0.137 13.386 144.656 5.0 0.0 5.0 D 469850 i1 2020-04-27T05:02:00 ..r
+GMI 2019 12 30 6 0 0 2019-12-30T06:00:00Z 2019.9952054794521 171-99 -47.642 0.093 13.386 144.656 5.0 0.0 5.0 D 469848 i1 2020-05-23T09:21:00 -.r
+GMI 2019 12 30 6 0 0 2019-12-30T06:00:00Z 2019.9952054794521 5353-99 -47.467 0.093 13.386 144.656 5.0 0.0 5.0 D 469847 i1 2020-05-23T08:59:00 +.r
+GMI 2020 1 2 0 30 0 2020-01-02T00:30:00Z 2020.002789162113 3806-99 -47.745 0.115 13.386 144.656 5.0 0.0 5.0 D 469846 i1 2020-04-25T18:13:00 A.r
+GMI 2020 1 2 0 30 0 2020-01-02T00:30:00Z 2020.002789162113 558-99 -47.769 0.112 13.386 144.656 5.0 0.0 5.0 D 469845 i1 2020-04-25T17:54:00 A.r
+GMI 2020 1 16 4 50 0 2020-01-16T04:50:00Z 2020.041533849423 872-99 -47.513 0.089 13.386 144.656 5.0 0.0 5.0 D 470549 i1 2020-06-11T22:45:00 ..r
+GMI 2020 1 16 4 59 0 2020-01-16T04:59:00Z 2020.041550925926 429-99 -47.48 0.095 13.386 144.656 5.0 0.0 5.0 D 470548 i1 2020-06-11T22:24:00 ..r
+GMI 2020 1 19 6 15 0 2020-01-19T06:15:00Z 2020.049891848816 2968-99 -47.482 0.086 13.386 144.656 5.0 0.0 5.0 D 470547 i1 2020-06-12T02:22:00 ..r
+GMI 2020 1 19 6 15 0 2020-01-19T06:15:00Z 2020.049891848816 964-99 -47.474 0.085 13.386 144.656 5.0 0.0 5.0 D 470546 i1 2020-06-12T02:01:00 ..r
+GMI 2020 1 28 2 48 0 2020-01-28T02:48:00Z 2020.0740892531876 1965-99 -47.269 0.226 13.386 144.656 5.0 0.0 5.0 D 470552 i1 2020-06-09T05:19:00 ..R
+GMI 2020 1 28 2 48 0 2020-01-28T02:48:00Z 2020.0740892531876 1966-99 -47.209 0.236 13.386 144.656 5.0 0.0 5.0 D 470553 i1 2020-06-09T05:41:00 P.R
+GMI 2020 2 3 5 32 0 2020-02-03T05:32:00Z 2020.0907938676382 3719-99 -47.444 0.109 13.386 144.656 5.0 0.0 5.0 D 471508 i1 2020-06-18T10:47:00 ..r
+GMI 2020 2 3 5 32 0 2020-02-03T05:32:00Z 2020.0907938676382 3720-99 -47.481 0.103 13.386 144.656 5.0 0.0 5.0 D 471509 i1 2020-06-18T11:09:00 ..r
+GMI 2020 2 5 1 56 0 2020-02-05T01:56:00Z 2020.0958485124468 4997-99 -47.3 0.13 13.386 144.656 5.0 0.0 5.0 D 471506 i1 2020-07-01T04:09:00 ..R
+GMI 2020 2 5 1 56 0 2020-02-05T01:56:00Z 2020.0958485124468 4998-99 -47.279 0.127 13.386 144.656 5.0 0.0 5.0 D 471507 i1 2020-07-01T04:31:00 ..R
+GMI 2020 2 11 15 16 0 2020-02-11T15:16:00Z 2020.1137598664238 3421-99 -47.494 0.124 13.386 144.656 5.0 0.0 5.0 D 471238 i1 2020-07-01T07:46:00 ..R
+GMI 2020 2 11 15 16 0 2020-02-11T15:16:00Z 2020.1137598664238 3422-99 -47.394 0.122 13.386 144.656 5.0 0.0 5.0 D 471239 i1 2020-07-01T08:08:00 ..R
+GMI 2020 2 13 23 24 0 2020-02-13T23:24:00Z 2020.120150273224 2375-99 -47.418 0.093 13.386 144.656 5.0 0.0 5.0 D 471236 i1 2020-06-25T05:29:00 ..r
+GMI 2020 2 13 23 24 0 2020-02-13T23:24:00Z 2020.120150273224 2376-99 -47.384 0.099 13.386 144.656 5.0 0.0 5.0 D 471237 i1 2020-06-25T05:51:00 ..r
+GMI 2020 2 20 2 18 0 2020-02-20T02:18:00Z 2020.1368738615665 4117-99 -47.539 0.112 13.386 144.656 5.0 0.0 5.0 D 471763 i1 2020-06-13T22:19:00 ..r
+GMI 2020 2 20 2 18 0 2020-02-20T02:18:00Z 2020.1368738615665 4118-99 -47.514 0.104 13.386 144.656 5.0 0.0 5.0 D 471764 i1 2020-06-13T22:41:00 ..r
+GMI 2020 2 24 6 0 0 2020-02-24T06:00:00Z 2020.1482240437158 5163-99 -47.448 0.13 13.386 144.656 5.0 0.0 5.0 D 471761 i1 2020-04-18T18:59:00 +.R
+GMI 2020 2 24 6 0 0 2020-02-24T06:00:00Z 2020.1482240437158 5164-99 -47.608 0.128 13.386 144.656 5.0 0.0 5.0 D 471762 i1 2020-04-18T19:19:00 -.R
+GMI 2020 2 25 23 54 0 2020-02-25T23:54:00Z 2020.1529940801456 2541-99 -47.442 0.1 13.386 144.656 5.0 0.0 5.0 D 471731 i1 2020-06-13T11:17:00 ..r
+GMI 2020 2 25 23 54 0 2020-02-25T23:54:00Z 2020.1529940801456 2542-99 -47.45 0.097 13.386 144.656 5.0 0.0 5.0 D 471732 i1 2020-06-13T11:39:00 ..r
+GMI 2020 2 28 1 43 0 2020-02-28T01:43:00Z 2020.158665376442 4819-99 -47.297 0.121 13.386 144.656 5.0 0.0 5.0 D 471729 i1 2020-06-28T17:07:00 ..r
+GMI 2020 2 28 1 43 0 2020-02-28T01:43:00Z 2020.158665376442 4820-99 -47.368 0.122 13.386 144.656 5.0 0.0 5.0 D 471730 i1 2020-06-28T17:29:00 ..r
+GMI 2020 3 3 2 58 0 2020-03-03T02:58:00Z 2020.16973664238 2785-99 -47.617 0.139 13.386 144.656 5.0 0.0 5.0 D 472294 i1 2020-04-27T20:14:00 A.r
+GMI 2020 3 3 2 58 0 2020-03-03T02:58:00Z 2020.16973664238 2786-99 -47.697 0.144 13.386 144.656 5.0 0.0 5.0 D 472295 i1 2020-04-27T20:34:00 A.R
+GMI 2020 3 5 4 21 0 2020-03-05T04:21:00Z 2020.1753586065574 3453-99 -47.399 0.097 13.386 144.656 5.0 0.0 5.0 D 472292 i1 2020-06-07T10:03:00 ..r
+GMI 2020 3 5 4 21 0 2020-03-05T04:21:00Z 2020.1753586065574 3454-99 -47.416 0.1 13.386 144.656 5.0 0.0 5.0 D 472293 i1 2020-06-07T10:24:00 ..r
+GMI 2020 3 11 4 37 0 2020-03-11T04:37:00Z 2020.1917824074073 5829-99 -47.322 0.122 13.386 144.656 5.0 0.0 5.0 D 472290 i1 2020-06-01T08:07:00 ..r
+GMI 2020 3 11 4 37 0 2020-03-11T04:37:00Z 2020.1917824074073 5830-99 -47.392 0.119 13.386 144.656 5.0 0.0 5.0 D 472291 i1 2020-06-01T08:29:00 ..r
+GMI 2020 6 26 1 39 0 2020-06-26T01:39:00Z 2020.483794398907 4059-99 -47.336 0.048 13.386 144.656 5.0 0.0 5.0 D 477247 i1 2020-11-14T11:56:00 ..r
+GMI 2020 6 26 1 39 0 2020-06-26T01:39:00Z 2020.483794398907 4060-99 -47.332 0.048 13.386 144.656 5.0 0.0 5.0 D 477248 i1 2020-11-14T12:19:00 ..r
+GMI 2020 7 1 22 50 0 2020-07-01T22:50:00Z 2020.4998671827566 5239-99 -47.323 0.107 13.386 144.656 5.0 0.0 5.0 D 477099 i1 2020-09-20T16:27:00 A.R
+GMI 2020 7 1 22 50 0 2020-07-01T22:50:00Z 2020.4998671827566 5240-99 -47.423 0.101 13.386 144.656 5.0 0.0 5.0 D 477100 i1 2020-09-20T16:50:00 A.R
+GMI 2020 7 8 3 24 0 2020-07-08T03:24:00Z 2020.5167805100182 3017-99 -47.407 0.048 13.386 144.656 5.0 0.0 5.0 D 477503 i1 2020-12-21T18:58:00 ..r
+GMI 2020 7 8 3 24 0 2020-07-08T03:24:00Z 2020.5167805100182 3018-99 -47.417 0.048 13.386 144.656 5.0 0.0 5.0 D 477504 i1 2020-12-21T19:18:00 ..r
+GMI 2020 7 10 1 50 0 2020-07-10T01:50:00Z 2020.5220666363084 2551-99 -47.397 0.05 13.386 144.656 5.0 0.0 5.0 D 477501 i1 2020-12-22T19:02:00 ..r
+GMI 2020 7 10 1 50 0 2020-07-10T01:50:00Z 2020.5220666363084 2552-99 -47.343 0.05 13.386 144.656 5.0 0.0 5.0 D 477502 i1 2020-12-22T19:22:00 ..r
+GMI 2020 7 15 0 40 0 2020-07-15T00:40:00Z 2020.5355950212509 3133-99 -47.275 0.095 13.386 144.656 5.0 0.0 5.0 D 478012 i1 2020-09-21T08:23:00 A.r
+GMI 2020 7 15 0 40 0 2020-07-15T00:40:00Z 2020.5355950212509 3133-99 -158.333 7.254 13.386 144.656 5.0 0.0 5.0 D 478012 i1 2020-09-25T16:30:00 D.r
+GMI 2020 7 15 0 40 0 2020-07-15T00:40:00Z 2020.5355950212509 3134-99 -162.282 7.254 13.386 144.656 5.0 0.0 5.0 D 478013 i1 2020-09-25T16:56:00 D.r
+GMI 2020 7 20 5 24 0 2020-07-20T05:24:00Z 2020.5497950819672 1953-99 -47.38 0.102 13.386 144.656 5.0 0.0 5.0 D 478010 i1 2020-09-20T19:33:00 A.R
+GMI 2020 7 20 5 24 0 2020-07-20T05:24:00Z 2020.5497950819672 1954-99 -47.43 0.098 13.386 144.656 5.0 0.0 5.0 D 478011 i1 2020-09-20T19:56:00 A.r
+GMI 2020 7 27 1 59 0 2020-07-27T01:59:00Z 2020.568531800243 1523-99 -47.423 0.049 13.386 144.656 5.0 0.0 5.0 D 478509 i1 2020-12-09T09:17:00 ..r
+GMI 2020 7 27 1 59 0 2020-07-27T01:59:00Z 2020.568531800243 1523-99 -47.367 0.055 13.386 144.656 5.0 0.0 5.0 D 478509 i1 2020-12-20T23:02:00 ..r
+GMI 2020 7 27 1 59 0 2020-07-27T01:59:00Z 2020.568531800243 1524-99 -47.388 0.047 13.386 144.656 5.0 0.0 5.0 D 478510 i1 2020-12-09T09:40:00 ..r
+GMI 2020 7 27 1 59 0 2020-07-27T01:59:00Z 2020.568531800243 1524-99 -47.446 0.054 13.386 144.656 5.0 0.0 5.0 D 478510 i1 2020-12-20T23:22:00 ..r
+GMI 2020 8 3 1 23 0 2020-08-03T01:23:00Z 2020.587589177292 533-99 -47.606 0.047 13.386 144.656 5.0 0.0 5.0 D 478507 i1 2020-12-09T00:08:00 ..r
+GMI 2020 8 3 1 23 0 2020-08-03T01:23:00Z 2020.587589177292 533-99 -47.467 0.053 13.386 144.656 5.0 0.0 5.0 D 478507 i1 2020-12-09T19:47:00 ..r
+GMI 2020 8 3 1 23 0 2020-08-03T01:23:00Z 2020.587589177292 534-99 -47.476 0.047 13.386 144.656 5.0 0.0 5.0 D 478508 i1 2020-12-09T00:31:00 ..r
+GMI 2020 8 3 1 23 0 2020-08-03T01:23:00Z 2020.587589177292 534-99 -47.44 0.049 13.386 144.656 5.0 0.0 5.0 D 478508 i1 2020-12-09T20:10:00 ..r
+GMI 2020 8 5 1 54 0 2020-08-05T01:54:00Z 2020.5931124772314 5537-99 -47.269 0.06 13.386 144.656 5.0 0.0 5.0 D 478673 i1 2020-12-23T19:53:00 D.r
+GMI 2020 8 5 1 54 0 2020-08-05T01:54:00Z 2020.5931124772314 5537-99 -47.457 0.046 13.386 144.656 5.0 0.0 5.0 D 478673 i1 2021-01-06T21:31:00 ...
+GMI 2020 8 5 1 54 0 2020-08-05T01:54:00Z 2020.5931124772314 5538-99 -47.316 0.06 13.386 144.656 5.0 0.0 5.0 D 478674 i1 2020-12-23T20:13:00 D.r
+GMI 2020 8 5 1 54 0 2020-08-05T01:54:00Z 2020.5931124772314 5538-99 -47.419 0.046 13.386 144.656 5.0 0.0 5.0 D 478674 i1 2021-01-06T21:51:00 ...
+GMI 2020 8 7 1 9 0 2020-08-07T01:09:00Z 2020.5984915755919 3375-99 -47.452 0.039 13.386 144.656 5.0 0.0 5.0 D 478675 i1 2021-01-13T20:45:00 ...
+GMI 2020 8 7 1 9 0 2020-08-07T01:09:00Z 2020.5984915755919 3376-99 -47.359 0.039 13.386 144.656 5.0 0.0 5.0 D 478676 i1 2021-01-13T21:05:00 ...
+GMI 2020 8 9 19 4 0 2020-08-09T19:04:00Z 2020.6059957498483 2877-99 -47.469 0.057 13.386 144.656 5.0 0.0 5.0 D 478965 i1 2021-01-07T21:14:00 A..
+GMI 2020 8 9 19 4 0 2020-08-09T19:04:00Z 2020.6059957498483 2877-99 -47.447 0.045 13.386 144.656 5.0 0.0 5.0 D 478965 i1 2021-01-08T19:02:00 ...
+GMI 2020 8 9 19 4 0 2020-08-09T19:04:00Z 2020.6059957498483 2878-99 -45.258 0.057 13.386 144.656 5.0 0.0 5.0 D 478966 i1 2021-01-07T21:34:00 A..
+GMI 2020 8 9 19 4 0 2020-08-09T19:04:00Z 2020.6059957498483 2878-99 -47.393 0.045 13.386 144.656 5.0 0.0 5.0 D 478966 i1 2021-01-08T19:22:00 ...
+GMI 2020 8 12 2 2 0 2020-08-12T02:02:00Z 2020.612253339405 5367-99 -47.434 0.05 13.386 144.656 5.0 0.0 5.0 D 478963 i1 2020-12-08T11:47:00 ..r
+GMI 2020 8 12 2 2 0 2020-08-12T02:02:00Z 2020.612253339405 5368-99 -47.418 0.049 13.386 144.656 5.0 0.0 5.0 D 478964 i1 2020-12-08T12:10:00 ..r
+GMI 2020 8 14 2 40 0 2020-08-14T02:40:00Z 2020.6177899210686 2127-99 -47.523 0.051 13.386 144.656 5.0 0.0 5.0 D 482503 i1 2020-12-11T05:31:00 ..r
+GMI 2020 8 14 2 40 0 2020-08-14T02:40:00Z 2020.6177899210686 2128-99 -47.507 0.05 13.386 144.656 5.0 0.0 5.0 D 482504 i1 2020-12-11T05:53:00 ..r
+GMI 2020 11 12 2 18 0 2020-11-12T02:18:00Z 2020.8636498178507 5555-99 -47.743 0.052 13.386 144.656 5.0 0.0 5.0 D 482355 i1 2021-02-15T18:06:00 ...
+GMI 2020 11 12 2 18 0 2020-11-12T02:18:00Z 2020.8636498178507 5556-99 -47.686 0.052 13.386 144.656 5.0 0.0 5.0 D 482356 i1 2021-02-15T18:26:00 ...
+GMI 2020 11 24 6 20 0 2020-11-24T06:20:00Z 2020.896895871281 1201-99 -47.608 0.043 13.386 144.656 5.0 0.0 5.0 D 483170 i1 2021-02-23T02:14:00 ...
+GMI 2020 11 24 6 20 0 2020-11-24T06:20:00Z 2020.896895871281 1202-99 -47.631 0.043 13.386 144.656 5.0 0.0 5.0 D 483171 i1 2021-02-23T02:34:00 ...
+GMI 2020 11 30 6 43 0 2020-11-30T06:43:00Z 2020.9133329538554 5121-99 -47.751 0.057 13.386 144.656 5.0 0.0 5.0 D 483168 i1 2021-03-24T16:26:00 ...
+GMI 2020 11 30 6 43 0 2020-11-30T06:43:00Z 2020.9133329538554 5122-99 -47.64 0.057 13.386 144.656 5.0 0.0 5.0 D 483169 i1 2021-03-24T16:46:00 ...
+GMI 2020 12 2 6 45 0 2020-12-02T06:45:00Z 2020.9188012295083 1677-99 -47.601 0.038 13.386 144.656 5.0 0.0 5.0 D 483174 i1 2021-02-20T03:09:00 ...
+GMI 2020 12 2 6 45 0 2020-12-02T06:45:00Z 2020.9188012295083 1678-99 -47.61 0.038 13.386 144.656 5.0 0.0 5.0 D 483175 i1 2021-02-20T03:29:00 ...
+GMI 2020 12 4 3 57 0 2020-12-04T03:57:00Z 2020.9239469489983 3671-99 -47.6 0.042 13.386 144.656 5.0 0.0 5.0 D 483172 i1 2021-02-17T23:15:00 ...
+GMI 2020 12 4 3 57 0 2020-12-04T03:57:00Z 2020.9239469489983 3672-99 -47.649 0.042 13.386 144.656 5.0 0.0 5.0 D 483173 i1 2021-02-17T23:35:00 ...
+GMI 2020 12 7 6 7 0 2020-12-07T06:07:00Z 2020.9323903309046 3531-99 -47.744 0.042 13.386 144.656 5.0 0.0 5.0 D 483785 i1 2021-02-17T14:53:00 ...
+GMI 2020 12 7 6 7 0 2020-12-07T06:07:00Z 2020.9323903309046 3532-99 -47.674 0.042 13.386 144.656 5.0 0.0 5.0 D 483786 i1 2021-02-17T15:14:00 ...
+GMI 2020 12 10 6 43 0 2020-12-10T06:43:00Z 2020.940655358227 1983-99 -47.652 0.038 13.386 144.656 5.0 0.0 5.0 D 483783 i1 2021-02-19T16:24:00 ...
+GMI 2020 12 10 6 43 0 2020-12-10T06:43:00Z 2020.940655358227 1984-99 -47.65 0.038 13.386 144.656 5.0 0.0 5.0 D 483784 i1 2021-02-19T16:44:00 ...
+GMI 2020 12 16 6 0 0 2020-12-16T06:00:00Z 2020.9569672131147 258-99 -47.53 0.043 13.386 144.656 5.0 0.0 5.0 D 483757 i1 2021-02-22T17:33:00 ...
+GMI 2020 12 16 6 0 0 2020-12-16T06:00:00Z 2020.9569672131147 4744-99 -47.55 0.043 13.386 144.656 5.0 0.0 5.0 D 483758 i1 2021-02-22T17:53:00 ...
+GMI 2020 12 18 0 44 0 2020-12-18T00:44:00Z 2020.9618321190042 3857-99 -47.574 0.061 13.386 144.656 5.0 0.0 5.0 D 483756 i1 2021-02-13T08:42:00 ...
+GMI 2020 12 18 0 44 0 2020-12-18T00:44:00Z 2020.9618321190042 5077-99 -47.656 0.061 13.386 144.656 5.0 0.0 5.0 D 483755 i1 2021-02-13T09:02:00 ...
+GMI 2021 1 4 2 53 0 2021-01-04T02:53:00Z 2021.008548325723 229-99 -47.601 0.059 13.386 144.656 5.0 0.0 5.0 D 485665 i1 2021-03-09T03:01:00 ...
+GMI 2021 1 4 2 53 0 2021-01-04T02:53:00Z 2021.008548325723 230-99 -47.559 0.059 13.386 144.656 5.0 0.0 5.0 D 485666 i1 2021-03-09T03:21:00 ...
+GMI 2021 1 6 6 25 0 2021-01-06T06:25:00Z 2021.0144311263318 3133-99 -47.602 0.059 13.386 144.656 5.0 0.0 5.0 D 485663 i1 2021-03-09T05:42:00 ...
+GMI 2021 1 6 6 25 0 2021-01-06T06:25:00Z 2021.0144311263318 3134-99 -47.652 0.059 13.386 144.656 5.0 0.0 5.0 D 485664 i1 2021-03-09T06:02:00 ...
+GMI 2021 3 3 6 7 0 2021-03-03T06:07:00Z 2021.1678215372908 207-99 -47.711 0.035 13.386 144.656 5.0 0.0 5.0 D 487518 i1 2021-05-07T01:22:00 -..
+GMI 2021 3 3 6 7 0 2021-03-03T06:07:00Z 2021.1678215372908 2578-99 -47.456 0.035 13.386 144.656 5.0 0.0 5.0 D 487519 i1 2021-05-07T01:42:00 +..
+GMI 2021 3 5 5 30 0 2021-03-05T05:30:00Z 2021.1732305936073 5691-99 -47.575 0.035 13.386 144.656 5.0 0.0 5.0 D 487521 i1 2021-05-06T18:19:00 ...
+GMI 2021 3 5 5 30 0 2021-03-05T05:30:00Z 2021.1732305936073 6-99 -47.574 0.035 13.386 144.656 5.0 0.0 5.0 D 487520 i1 2021-05-06T17:59:00 ...
+GMI 2021 3 15 6 30 0 2021-03-15T06:30:00Z 2021.2007420091325 513-99 -47.545 0.03 13.386 144.656 5.0 0.0 5.0 D 487492 i1 2021-04-29T21:26:00 ...
+GMI 2021 3 15 6 30 0 2021-03-15T06:30:00Z 2021.2007420091325 514-99 -47.606 0.03 13.386 144.656 5.0 0.0 5.0 D 487493 i1 2021-04-29T21:46:00 ...
+GMI 2021 3 17 6 19 0 2021-03-17T06:19:00Z 2021.2062005327246 1429-99 -47.561 0.03 13.386 144.656 5.0 0.0 5.0 D 487490 i1 2021-04-29T20:05:00 ...
+GMI 2021 3 17 6 19 0 2021-03-17T06:19:00Z 2021.2062005327246 1430-99 -47.562 0.03 13.386 144.656 5.0 0.0 5.0 D 487491 i1 2021-04-29T20:25:00 ...
+GMI 2021 3 30 6 34 0 2021-03-30T06:34:00Z 2021.2418455098934 1481-99 -47.281 0.035 13.386 144.656 5.0 0.0 5.0 D 488561 i1 2021-05-20T02:48:00 .X.
+GMI 2021 3 30 6 34 0 2021-03-30T06:34:00Z 2021.2418455098934 21-99 -47.248 0.035 13.386 144.656 5.0 0.0 5.0 D 488560 i1 2021-05-20T02:28:00 .X.
+GMI 2021 4 1 5 18 0 2021-04-01T05:18:00Z 2021.2471803652968 1728-99 -47.541 0.035 13.386 144.656 5.0 0.0 5.0 D 488558 i1 2021-05-19T18:25:00 ...
+GMI 2021 4 1 5 18 0 2021-04-01T05:18:00Z 2021.2471803652968 2546-99 -47.566 0.035 13.386 144.656 5.0 0.0 5.0 D 488559 i1 2021-05-19T18:45:00 ...
+GMI 2021 4 7 5 51 0 2021-04-07T05:51:00Z 2021.2636815068493 43-99 -47.569 0.037 13.386 144.656 5.0 0.0 5.0 D 488562 i1 2021-05-21T03:02:00 ...
+GMI 2021 4 7 5 51 0 2021-04-07T05:51:00Z 2021.2636815068493 44-99 -47.521 0.037 13.386 144.656 5.0 0.0 5.0 D 488563 i1 2021-05-21T03:22:00 ...
+GMI 2021 4 9 6 30 0 2021-04-09T06:30:00Z 2021.2692351598173 1377-99 -47.494 0.038 13.386 144.656 5.0 0.0 5.0 D 488528 i1 2021-05-21T16:04:00 ...
+GMI 2021 4 9 6 30 0 2021-04-09T06:30:00Z 2021.2692351598173 1378-99 -47.597 0.038 13.386 144.656 5.0 0.0 5.0 D 488529 i1 2021-05-21T16:24:00 ...
+GMI 2021 4 20 5 37 0 2021-04-20T05:37:00Z 2021.2992713089802 5239-99 -47.74 0.049 13.386 144.656 5.0 0.0 5.0 D 489296 i1 2021-06-25T02:56:00 ...
+GMI 2021 4 20 5 37 0 2021-04-20T05:37:00Z 2021.2992713089802 5240-99 -47.708 0.049 13.386 144.656 5.0 0.0 5.0 D 489297 i1 2021-06-25T03:16:00 ...
+GMI 2021 4 22 5 38 0 2021-04-22T05:38:00Z 2021.3047526636226 5735-99 -47.55 0.043 13.386 144.656 5.0 0.0 5.0 D 489298 i1 2021-06-09T14:41:00 ...
+GMI 2021 4 22 5 38 0 2021-04-22T05:38:00Z 2021.3047526636226 5736-99 -47.492 0.043 13.386 144.656 5.0 0.0 5.0 D 489299 i1 2021-06-09T15:02:00 ...
+GMI 2021 5 5 5 31 0 2021-05-05T05:31:00Z 2021.340355783866 1045-99 -47.519 0.043 13.386 144.656 5.0 0.0 5.0 D 489473 i1 2021-06-08T14:13:00 ...
+GMI 2021 5 5 5 31 0 2021-05-05T05:31:00Z 2021.340355783866 1046-99 -47.525 0.043 13.386 144.656 5.0 0.0 5.0 D 489474 i1 2021-06-08T14:33:00 ...
+GMI 2021 5 7 6 12 0 2021-05-07T06:12:00Z 2021.3459132420091 3605-99 -47.411 0.039 13.386 144.656 5.0 0.0 5.0 D 489471 i1 2021-06-02T17:14:00 ...
+GMI 2021 5 7 6 12 0 2021-05-07T06:12:00Z 2021.3459132420091 3606-99 -47.524 0.039 13.386 144.656 5.0 0.0 5.0 D 489472 i1 2021-06-02T17:34:00 ...
+GMI 2021 5 13 6 26 0 2021-05-13T06:26:00Z 2021.3623782343989 3-99 -47.523 0.086 13.386 144.656 5.0 0.0 5.0 D 490207 i1 2021-09-20T17:44:00 ...
+GMI 2021 5 13 6 26 0 2021-05-13T06:26:00Z 2021.3623782343989 4939-99 -47.628 0.086 13.386 144.656 5.0 0.0 5.0 D 490208 i1 2021-09-20T18:07:00 ...
+GMI 2021 5 15 6 20 0 2021-05-15T06:20:00Z 2021.3678462709286 764-99 -47.514 0.061 13.386 144.656 5.0 0.0 5.0 D 490206 i1 2021-09-28T22:52:00 ..S
+GMI 2021 5 19 6 25 0 2021-05-19T06:25:00Z 2021.3788146879756 2133-99 -47.387 0.09 13.386 144.656 5.0 0.0 5.0 D 490202 i1 2021-09-16T21:47:00 ...
+GMI 2021 5 19 6 25 0 2021-05-19T06:25:00Z 2021.3788146879756 2134-99 -47.416 0.09 13.386 144.656 5.0 0.0 5.0 D 490203 i1 2021-09-16T22:10:00 ...
+GMI 2021 5 21 6 20 0 2021-05-21T06:20:00Z 2021.384284627093 2637-99 -47.58 0.086 13.386 144.656 5.0 0.0 5.0 D 490204 i1 2021-09-19T18:56:00 ...
+GMI 2021 5 21 6 20 0 2021-05-21T06:20:00Z 2021.384284627093 2638-99 -47.602 0.086 13.386 144.656 5.0 0.0 5.0 D 490205 i1 2021-09-19T19:19:00 ...
+GMI 2021 8 10 6 18 0 2021-08-10T06:18:00Z 2021.606198630137 5747-99 -47.611 0.09 13.386 144.656 5.0 0.0 5.0 D 493027 i1 2021-09-17T07:54:00 ...
+GMI 2021 8 10 6 18 0 2021-08-10T06:18:00Z 2021.606198630137 5748-99 -47.521 0.09 13.386 144.656 5.0 0.0 5.0 D 493028 i1 2021-09-17T08:18:00 ...
+GMI 2021 8 17 6 30 0 2021-08-17T06:30:00Z 2021.625399543379 2841-99 -47.494 0.062 13.386 144.656 5.0 0.0 5.0 D 493759 i1 2021-10-30T00:32:00 ...
+GMI 2021 8 17 6 30 0 2021-08-17T06:30:00Z 2021.625399543379 2842-99 -47.478 0.062 13.386 144.656 5.0 0.0 5.0 D 493760 i1 2021-10-30T00:55:00 ...
+GMI 2021 8 19 6 30 0 2021-08-19T06:30:00Z 2021.6308789954337 5565-99 -47.501 0.055 13.386 144.656 5.0 0.0 5.0 D 493745 i1 2021-10-22T05:12:00 ...
+GMI 2021 8 19 6 30 0 2021-08-19T06:30:00Z 2021.6308789954337 5566-99 -47.441 0.055 13.386 144.656 5.0 0.0 5.0 D 493746 i1 2021-10-22T05:34:00 ...
+GMI 2021 8 25 6 15 0 2021-08-25T06:15:00Z 2021.6472888127853 199-99 -47.54 0.055 13.386 144.656 5.0 0.0 5.0 D 493811 i1 2021-10-21T16:14:00 ...
+GMI 2021 8 25 6 15 0 2021-08-25T06:15:00Z 2021.6472888127853 200-99 -47.603 0.055 13.386 144.656 5.0 0.0 5.0 D 493812 i1 2021-10-21T16:36:00 ...
+GMI 2021 9 7 6 11 0 2021-09-07T06:11:00Z 2021.6828976407915 2047-99 -47.717 0.046 13.386 144.656 5.0 0.0 5.0 D 494689 i1 2022-03-16T20:44:00 D..
+GMI 2021 9 7 6 11 0 2021-09-07T06:11:00Z 2021.6828976407915 2048-99 -47.709 0.046 13.386 144.656 5.0 0.0 5.0 D 494690 i1 2022-03-16T21:06:00 D..
+GMI 2021 9 9 6 21 0 2021-09-09T06:21:00Z 2021.6883961187214 4543-99 -47.633 0.113 13.386 144.656 5.0 0.0 5.0 D 494691 i1 2022-03-13T08:30:00 L..
+GMI 2021 9 9 6 21 0 2021-09-09T06:21:00Z 2021.6883961187214 4544-99 -47.486 0.113 13.386 144.656 5.0 0.0 5.0 D 494692 i1 2022-03-13T08:52:00 L..
+GMI 2021 9 16 6 47 0 2021-09-16T06:47:00Z 2021.7076236681887 2179-99 -47.701 0.064 13.386 144.656 5.0 0.0 5.0 D 496750 i1 2022-03-16T00:33:00 ...
+GMI 2021 9 16 6 47 0 2021-09-16T06:47:00Z 2021.7076236681887 2180-99 -47.629 0.064 13.386 144.656 5.0 0.0 5.0 D 496751 i1 2022-03-16T00:55:00 ...
+GMI 2022 1 11 5 30 0 2022-01-11T05:30:00Z 2022.0280251141553 4523-99 -47.626 0.072 13.386 144.656 5.0 0.0 5.0 D 499667 i1 2022-04-25T16:39:00 ...
+GMI 2022 1 11 5 30 0 2022-01-11T05:30:00Z 2022.0280251141553 4524-99 -47.663 0.072 13.386 144.656 5.0 0.0 5.0 D 499668 i1 2022-04-25T17:00:00 ...
+GMI 2022 1 13 6 30 0 2022-01-13T06:30:00Z 2022.0336187214612 5749-99 -47.711 0.085 13.386 144.656 5.0 0.0 5.0 D 499669 i1 2022-04-12T21:10:00 A..
+GMI 2022 1 13 6 30 0 2022-01-13T06:30:00Z 2022.0336187214612 5749-99 -47.616 0.082 13.386 144.656 5.0 0.0 5.0 D 499669 i1 2022-04-13T22:27:00 +..
+GMI 2022 1 13 6 30 0 2022-01-13T06:30:00Z 2022.0336187214612 5750-99 -47.924 0.085 13.386 144.656 5.0 0.0 5.0 D 499670 i1 2022-04-12T21:32:00 A..
+GMI 2022 1 13 6 30 0 2022-01-13T06:30:00Z 2022.0336187214612 5750-99 -47.79 0.082 13.386 144.656 5.0 0.0 5.0 D 499670 i1 2022-04-13T22:48:00 -..
+GMI 2022 1 18 6 0 0 2022-01-18T06:00:00Z 2022.0472602739726 3105-99 -47.711 0.056 13.386 144.656 5.0 0.0 5.0 D 499921 i1 2022-03-30T00:39:00 D..
+GMI 2022 1 18 6 0 0 2022-01-18T06:00:00Z 2022.0472602739726 3105-99 -47.719 0.058 13.386 144.656 5.0 0.0 5.0 D 499921 i1 2022-03-31T01:27:00 ...
+GMI 2022 1 18 6 0 0 2022-01-18T06:00:00Z 2022.0472602739726 3106-99 -47.797 0.056 13.386 144.656 5.0 0.0 5.0 D 499922 i1 2022-03-30T01:01:00 D..
+GMI 2022 1 18 6 0 0 2022-01-18T06:00:00Z 2022.0472602739726 3106-99 -47.694 0.058 13.386 144.656 5.0 0.0 5.0 D 499922 i1 2022-03-31T01:49:00 ...
+GMI 2022 1 20 2 20 0 2022-01-20T02:20:00Z 2022.0523211567731 935-99 -47.536 0.072 13.386 144.656 5.0 0.0 5.0 D 499665 i1 2022-04-26T02:46:00 +..
+GMI 2022 1 20 2 20 0 2022-01-20T02:20:00Z 2022.0523211567731 936-99 -47.779 0.072 13.386 144.656 5.0 0.0 5.0 D 499666 i1 2022-04-26T03:08:00 -..
+GMI 2022 1 25 21 41 0 2022-01-25T21:41:00Z 2022.0682286910198 269-99 -47.794 0.064 13.386 144.656 5.0 0.0 5.0 D 501698 i1 2022-06-24T20:46:00 D..
+GMI 2022 1 25 21 41 0 2022-01-25T21:41:00Z 2022.0682286910198 269-99 -47.711 0.069 13.386 144.656 5.0 0.0 5.0 D 501698 i1 2022-07-05T19:56:00 A..
+GMI 2022 1 25 21 41 0 2022-01-25T21:41:00Z 2022.0682286910198 269-99 -47.637 0.086 13.386 144.656 5.0 0.0 5.0 D 501698 i1 2022-07-06T22:34:00 A..
+GMI 2022 1 25 21 41 0 2022-01-25T21:41:00Z 2022.0682286910198 270-99 -47.819 0.064 13.386 144.656 5.0 0.0 5.0 D 501699 i1 2022-06-24T21:07:00 D..
+GMI 2022 1 25 21 41 0 2022-01-25T21:41:00Z 2022.0682286910198 270-99 -47.725 0.069 13.386 144.656 5.0 0.0 5.0 D 501699 i1 2022-07-05T20:18:00 A..
+GMI 2022 1 25 21 41 0 2022-01-25T21:41:00Z 2022.0682286910198 270-99 -47.498 0.086 13.386 144.656 5.0 0.0 5.0 D 501699 i1 2022-07-06T22:56:00 A..
+GMI 2022 1 28 5 38 0 2022-01-28T05:38:00Z 2022.0746156773212 2039-99 -48.017 0.05 13.386 144.656 5.0 0.0 5.0 D 501700 i1 2022-06-09T11:55:00 A..
+GMI 2022 1 28 5 38 0 2022-01-28T05:38:00Z 2022.0746156773212 2040-99 -47.846 0.05 13.386 144.656 5.0 0.0 5.0 D 501701 i1 2022-06-09T12:17:00 A..
+GMI 2022 2 1 6 15 0 2022-02-01T06:15:00Z 2022.0856449771688 1333-99 -47.932 0.065 13.386 144.656 5.0 0.0 5.0 D 501912 i1 2022-05-18T23:12:00 C..
+GMI 2022 2 1 6 15 0 2022-02-01T06:15:00Z 2022.0856449771688 1334-99 -47.963 0.065 13.386 144.656 5.0 0.0 5.0 D 501913 i1 2022-05-18T23:34:00 C..
+GMI 2022 2 22 5 30 0 2022-02-22T05:30:00Z 2022.143093607306 4901-99 -47.833 0.051 13.386 144.656 5.0 0.0 5.0 D 501744 i1 2022-05-24T03:09:00 !..
+GMI 2022 2 22 5 30 0 2022-02-22T05:30:00Z 2022.143093607306 4901-99 -47.548 0.051 13.386 144.656 5.0 0.0 5.0 D 501744 i1 2022-06-03T04:56:00 ...
+GMI 2022 2 22 5 30 0 2022-02-22T05:30:00Z 2022.143093607306 4902-99 -47.868 0.051 13.386 144.656 5.0 0.0 5.0 D 501745 i1 2022-05-24T03:30:00 !..
+GMI 2022 2 22 5 30 0 2022-02-22T05:30:00Z 2022.143093607306 4902-99 -47.586 0.051 13.386 144.656 5.0 0.0 5.0 D 501745 i1 2022-06-03T05:18:00 ...
+GMI 2022 2 24 6 0 0 2022-02-24T06:00:00Z 2022.1486301369864 3889-99 -47.615 0.051 13.386 144.656 5.0 0.0 5.0 D 501742 i1 2022-05-23T18:50:00 !..
+GMI 2022 2 24 6 0 0 2022-02-24T06:00:00Z 2022.1486301369864 3889-99 -47.611 0.051 13.386 144.656 5.0 0.0 5.0 D 501742 i1 2022-06-02T18:49:00 ...
+GMI 2022 2 24 6 0 0 2022-02-24T06:00:00Z 2022.1486301369864 3890-99 -47.538 0.051 13.386 144.656 5.0 0.0 5.0 D 501743 i1 2022-05-23T19:12:00 !..
+GMI 2022 2 24 6 0 0 2022-02-24T06:00:00Z 2022.1486301369864 3890-99 -47.65 0.051 13.386 144.656 5.0 0.0 5.0 D 501743 i1 2022-06-02T19:11:00 ...
+GMI 2022 3 2 15 30 0 2022-03-02T15:30:00Z 2022.1661529680366 2049-99 -47.6 0.051 13.386 144.656 5.0 0.0 5.0 D 501716 i1 2022-05-20T16:45:00 ...
+GMI 2022 3 2 15 30 0 2022-03-02T15:30:00Z 2022.1661529680366 2050-99 -47.665 0.051 13.386 144.656 5.0 0.0 5.0 D 501717 i1 2022-05-20T17:07:00 ...
+GMI 2022 3 4 6 11 0 2022-03-04T06:11:00Z 2022.1705688736681 3649-99 -47.657 0.066 13.386 144.656 5.0 0.0 5.0 D 501714 i1 2022-06-08T07:41:00 D..
+GMI 2022 3 4 6 11 0 2022-03-04T06:11:00Z 2022.1705688736681 3650-99 -47.657 0.066 13.386 144.656 5.0 0.0 5.0 D 501715 i1 2022-06-08T08:03:00 D..
+GMI 2022 3 16 5 37 0 2022-03-16T05:37:00Z 2022.2033808980214 2356-99 -47.584 0.076 13.386 144.656 5.0 0.0 5.0 D 502910 i1 2022-07-15T15:21:00 ...
+GMI 2022 3 16 5 37 0 2022-03-16T05:37:00Z 2022.2033808980214 291-99 -47.49 0.076 13.386 144.656 5.0 0.0 5.0 D 502909 i1 2022-07-15T15:00:00 ...
+GMI 2022 3 23 6 0 0 2022-03-23T06:00:00Z 2022.222602739726 5117-99 -47.807 0.078 13.386 144.656 5.0 0.0 5.0 D 502907 i1 2022-07-14T00:05:00 D..
+GMI 2022 3 23 6 0 0 2022-03-23T06:00:00Z 2022.222602739726 5117-99 -47.721 0.089 13.386 144.656 5.0 0.0 5.0 D 502907 i1 2022-07-15T00:55:00 ...
+GMI 2022 3 23 6 0 0 2022-03-23T06:00:00Z 2022.222602739726 5118-99 -48.083 0.078 13.386 144.656 5.0 0.0 5.0 D 502908 i1 2022-07-14T00:26:00 D..
+GMI 2022 3 23 6 0 0 2022-03-23T06:00:00Z 2022.222602739726 5118-99 -47.684 0.089 13.386 144.656 5.0 0.0 5.0 D 502908 i1 2022-07-15T01:16:00 ...
+GMI 2022 3 25 5 0 0 2022-03-25T05:00:00Z 2022.2279680365298 2863-99 -47.755 0.059 13.386 144.656 5.0 0.0 5.0 D 502905 i1 2022-07-12T15:48:00 D..
+GMI 2022 3 25 5 0 0 2022-03-25T05:00:00Z 2022.2279680365298 2863-99 -47.878 0.078 13.386 144.656 5.0 0.0 5.0 D 502905 i1 2022-07-13T14:41:00 ...
+GMI 2022 3 25 5 0 0 2022-03-25T05:00:00Z 2022.2279680365298 2863-99 -47.543 0.089 13.386 144.656 5.0 0.0 5.0 D 502905 i1 2022-07-14T15:32:00 D..
+GMI 2022 3 25 5 0 0 2022-03-25T05:00:00Z 2022.2279680365298 2864-99 -47.801 0.059 13.386 144.656 5.0 0.0 5.0 D 502906 i1 2022-07-12T16:10:00 D..
+GMI 2022 3 25 5 0 0 2022-03-25T05:00:00Z 2022.2279680365298 2864-99 -47.842 0.078 13.386 144.656 5.0 0.0 5.0 D 502906 i1 2022-07-13T15:02:00 ...
+GMI 2022 3 25 5 0 0 2022-03-25T05:00:00Z 2022.2279680365298 2864-99 -47.576 0.089 13.386 144.656 5.0 0.0 5.0 D 502906 i1 2022-07-14T15:54:00 D..
+GMI 2022 4 15 6 9 0 2022-04-15T06:09:00Z 2022.2856335616439 5831-99 -47.661 0.072 13.386 144.656 5.0 0.0 5.0 D 504596 i1 2022-08-03T17:25:00 ...
+GMI 2022 4 15 6 9 0 2022-04-15T06:09:00Z 2022.2856335616439 5832-99 -47.693 0.072 13.386 144.656 5.0 0.0 5.0 D 504597 i1 2022-08-03T17:47:00 ...
+GMI 2022 4 20 6 0 0 2022-04-20T06:00:00Z 2022.2993150684931 2925-99 -47.46 0.076 13.386 144.656 5.0 0.0 5.0 D 504771 i1 2022-08-02T22:42:00 ...
+GMI 2022 4 20 6 0 0 2022-04-20T06:00:00Z 2022.2993150684931 2926-99 -47.452 0.076 13.386 144.656 5.0 0.0 5.0 D 504772 i1 2022-08-02T23:04:00 ...
+GMI 2022 4 22 6 15 0 2022-04-22T06:15:00Z 2022.3048230593608 3223-99 -47.642 0.056 13.386 144.656 5.0 0.0 5.0 D 504769 i1 2022-08-06T06:00:00 ...
+GMI 2022 4 22 6 15 0 2022-04-22T06:15:00Z 2022.3048230593608 3224-99 -47.627 0.056 13.386 144.656 5.0 0.0 5.0 D 504770 i1 2022-08-06T06:22:00 ...
+GMI 2022 4 27 6 30 0 2022-04-27T06:30:00Z 2022.3185502283104 2127-99 -47.565 0.072 13.386 144.656 5.0 0.0 5.0 D 504590 i1 2022-08-03T21:00:00 ...
+GMI 2022 4 27 6 30 0 2022-04-27T06:30:00Z 2022.3185502283104 2128-99 -47.64 0.072 13.386 144.656 5.0 0.0 5.0 D 504591 i1 2022-08-03T21:22:00 ...
+GMI 2022 5 6 6 15 0 2022-05-06T06:15:00Z 2022.3431792237443 5543-99 -47.438 0.061 13.386 144.656 5.0 0.0 5.0 D 504765 i1 2022-08-09T02:53:00 ...
+GMI 2022 5 6 6 15 0 2022-05-06T06:15:00Z 2022.3431792237443 5544-99 -47.54 0.061 13.386 144.656 5.0 0.0 5.0 D 504766 i1 2022-08-09T03:15:00 ...
+GMI 2022 12 14 6 0 0 2022-12-14T06:00:00Z 2022.9513698630137 5925-99 -47.746 0.067 13.386 144.656 5.0 0.0 5.0 D 513601 i1 2023-05-10T00:25:00 ...
+GMI 2022 12 14 6 0 0 2022-12-14T06:00:00Z 2022.9513698630137 5926-99 -47.778 0.067 13.386 144.656 5.0 0.0 5.0 D 513602 i1 2023-05-10T00:46:00 ...
+GMI 2022 12 16 6 15 0 2022-12-16T06:15:00Z 2022.9568778538812 2785-99 -47.825 0.07 13.386 144.656 5.0 0.0 5.0 D 513603 i1 2023-05-11T14:06:00 ...
+GMI 2022 12 16 6 15 0 2022-12-16T06:15:00Z 2022.9568778538812 2786-99 -47.912 0.07 13.386 144.656 5.0 0.0 5.0 D 513604 i1 2023-05-11T14:27:00 ...
+GMI 2022 12 21 6 15 0 2022-12-21T06:15:00Z 2022.9705764840182 3138-99 -47.916 0.071 13.386 144.656 5.0 0.0 5.0 D 513480 i1 2023-05-16T20:30:00 ...
+GMI 2022 12 21 6 15 0 2022-12-21T06:15:00Z 2022.9705764840182 3447-99 -47.922 0.071 13.386 144.656 5.0 0.0 5.0 D 513481 i1 2023-05-16T20:51:00 ...
+GMI 2022 12 23 6 0 0 2022-12-23T06:00:00Z 2022.9760273972602 4496-99 -47.964 0.067 13.386 144.656 5.0 0.0 5.0 D 513478 i1 2023-05-09T13:44:00 ...
+GMI 2022 12 23 6 0 0 2022-12-23T06:00:00Z 2022.9760273972602 5663-99 -48.104 0.067 13.386 144.656 5.0 0.0 5.0 D 513479 i1 2023-05-09T14:06:00 ...

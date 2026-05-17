@@ -1,0 +1,237 @@
+# header_lines : 148
+#
+# ------------------------------------------------------------->>>>
+# DATA SET NAME
+#
+# dataset_name: ch4_mcm_surface-flask_1_ccgg_event
+#
+# ------------------------------------------------------------->>>>
+# DESCRIPTION
+#
+# dataset_description: Atmospheric Methane Dry Air Mole Fractions from the NOAA GML Global Greenhouse Gas Reference Network, Carbon Cycle Cooperative Global Air Sampling Network: 1983 - Present
+#
+# ------------------------------------------------------------->>>>
+# CITATION
+#
+# dataset_citation: Lan, X., G. Petron,  K. Baugh, A.M. Crotwell, M.J. Crotwell, S. DeVogel, M. Madronich, J. Mauss, T. Mefford, E. Moglia, S. Morris, J.W. Mund, A. Searle,  K.W. Thoning, S. Wolter  and J. Miller (2025), Atmospheric Methane Dry Air Mole Fractions from the NOAA GML Global Greenhouse Gas Reference Network, Carbon Cycle Cooperative Global Air Sampling Network: 1983 - Present , Version: 2025-08-15, https://doi.org/10.15138/VNCZ-M766
+#
+# ------------------------------------------------------------->>>>
+# FAIR USE POLICY
+#
+# dataset_fair_use: These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, coauthorship for data providers may be appropriate. 
+#
+# ------------------------------------------------------------->>>>
+# WARNING
+#
+# dataset_warning: Every effort is made to produce the most accurate and precise measurements possible.  However, we reserve the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  We are not responsible for results and conclusions based on use of these data without regard to this warning.
+#
+# ------------------------------------------------------------->>>>
+# GLOBAL ATTRIBUTES
+#
+# site_code : MCM
+# site_name : McMurdo Station, Antarctica
+# site_country : United States
+# site_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# site_latitude : -77.83
+# site_longitude : 166.6
+# site_elevation : 11.0
+# site_elevation_unit : masl
+# site_position_comment : This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.
+# site_utc2lst : 12.0
+# site_utc2lst_comment : Add 'site_utc2lst' hours to convert a time stamp in UTC (Coordinated Universal Time) to LST (Local Standard Time).
+# dataset_creation_date : 2025-08-15T13:48:06.496334
+# dataset_num : 133
+# dataset_name : ch4_mcm_surface-flask_1_ccgg_event
+# dataset_parameter : ch4
+# dataset_parameter_name : Methane
+# dataset_parameter_industrial_name : Methane
+# dataset_project : surface-flask
+# dataset_platform : fixed
+# dataset_selection : event
+# dataset_selection_tag : event
+# dataset_comment : For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html
+# dataset_calibration_scale : CH4_X2004A
+# dataset_start_date : 1985-12-04T04:30:00Z
+# dataset_stop_date : 1987-10-28T11:20:00Z
+# dataset_usage_description : Please cite the product's citation when using data from this dataset. Relevant literature references for this dataset are listed below for convenience.
+# dataset_provider_license : These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).
+# dataset_reference_total_listed : 1
+# dataset_reference_1_name : Dlugokencky, E. J., L. P. Steele, P. M. Lang and K. A. Masarie, (1994), The growth rate and distribution of atmospheric methane, Journal of Geophysical Research, 99, D8, 17, doi:10.1029/94JD01245.
+# dataset_contribution : These data are provided by NOAA. Principal investigators include Xin Lan (NOAA).
+# lab_total_listed : 1
+# lab_1_number : 1
+# lab_1_abbr : NOAA
+# lab_1_name : NOAA Global Monitoring Laboratory
+# lab_1_address1 : 325 Broadway
+# lab_1_address2 : NOAA R/GML-1
+# lab_1_address3 : Boulder, CO 80305-3328
+# lab_1_country : United States
+# lab_1_url : https://gml.noaa.gov/ccgg/
+# lab_1_parameter : Lab has contributed measurements for: ch4
+# lab_1_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_1_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/noaa_medium.png
+# lab_1_ongoing_atmospheric_air_comparison : T
+# provider_total_listed : 1
+# provider_1_name : Xin Lan
+# provider_1_address1 : NOAA GML
+# provider_1_address2 : 325 Broadway R/GML-1
+# provider_1_address3 : Boulder, CO 80305-3328
+# provider_1_country : United States
+# provider_1_affiliation : National Oceanic and Atmospheric Administration
+# provider_1_email : Xin.Lan@noaa.gov
+# provider_1_parameter : Provider has contributed measurements for: ch4
+# ------------------------------------------------------------->>>>
+# VARIABLE ATTRIBUTES
+#
+# site_code:long_name : site_name_abbreviation.
+# site_code:comment : Site code is an abbreviation for the sampling site name.
+# time_components:_FillValue : -9
+# time_components:long_name : integer_components_of_UTC_date/time
+# time_components:order : year, month, day, hour, minute, second
+# time_components:comment : Calendar time components as integers. Times and dates are UTC. Time-averaged values are reported at the start of the averaging interval.
+# datetime:long_name : air_sample_date_and_time_in_UTC
+# datetime:comment : Air sample date and time in UTC ISO 8601 format. Time-averaged values are reported at the start of the averaging interval.
+# time_decimal:_FillValue : -999.999
+# time_decimal:long_name : sample_decimal_year_in_UTC
+# time_decimal:comment : decimal year in UTC. Time-averaged values are reported at the start of the averaging interval.
+# air_sample_container_id:long_name : Air_Sample_Container_ID
+# air_sample_container_id:comment : ID of air sample container. See provider_comment if available.
+# value:_FillValue : -999.999
+# value:long_name : measured_mole_fraction_of_trace_gas_in_dry_air
+# value:units : nanomol mol-1
+# value:comment : Mole fraction reported in units of nanomol mol-1 (10-9 mol per mol of dry air); abbreviated as ppb (parts per billion).
+# value:scale_comment : CH4_X2004A
+# value_unc:_FillValue : -999.999
+# value_unc:long_name : estimated_uncertainty_in_reported_value
+# value_unc:units : nanomol mol-1
+# value_unc:comment : This is the estimated uncertainty of the reported value. See provider_comment if available.
+# latitude:_FillValue : -999.999
+# latitude:standard_name : latitude
+# latitude:long_name : sample_latitude_in_decimal_degrees
+# latitude:units : degrees_north
+# latitude:comment : Latitude at which air sample was collected.
+# longitude:_FillValue : -999.999
+# longitude:standard_name : longitude
+# longitude:long_name : sample_longitude_in_decimal_degrees
+# longitude:units : degrees_east
+# longitude:comment : Longitude at which air sample was collected using a range of -180 degrees to +180 degrees.
+# altitude:_FillValue : -999.999
+# altitude:standard_name : altitude
+# altitude:long_name : sample_altitude_in_meters_above_sea_level
+# altitude:units : m
+# altitude:comment : Altitude (in meters above sea level). See provider_comment if available.
+# altitude:provider_comment : Altitude for this dataset is the sum of surface elevation (masl) and sample intake height (magl).
+# elevation:_FillValue : -999.999
+# elevation:standard_name : elevation
+# elevation:long_name : surface_elevation_in_meters_above_sea_level
+# elevation:units : m
+# elevation:comment : Surface elevation in meters above sea level. See provider_comment if available.
+# intake_height:_FillValue : -999.999
+# intake_height:long_name : sample_intake_height_in_meters_above_ground_level
+# intake_height:units : m
+# intake_height:comment : Sample intake height in meters above ground level (magl). See provider_comment if available.
+# method:long_name : air_sample_collection_method
+# method:comment : Air sample collection method. See provider_comment if available.
+# method:provider_comment : A single-character code is used to identify the sample collection method. The codes are: P - Sample collected using a portable, battery powered pumping unit. Two flasks are connected in series, flushed with air, and then pressurized to 1.2 - 1.5 times ambient pressure. D - Similar to P but the air passes through a condenser cooled to about 5 deg C to partially dry the sample. G - Similar to D but with a gold-plated condenser. T - Evacuated flask filled by opening an O-ring sealed stopcock. S - Flasks filled at NOAA GML observatories by sampling air from the in situ CO2 measurement air intake system. N - Before 1981, flasks filled using a hand-held aspirator bulb. After 1981, flasks filled using a pump different from those used in method P, D, or G. F - Five liter evacuated flasks filled by opening a ground glass, greased stopcock
+# event_number:long_name : Unique_Air_Sample_Event_Number
+# event_number:comment : Identifies each discrete air sample collected at some time and location with a unique sample event number.  The event number (reported as a string) can be used to relate measurements of different trace gases and isotopes from the same sample.
+# instrument:long_name : instrument_ID_to_detect_atmospheric_parameter
+# instrument:comment : Instrument ID used to detect atmospheric parameter. See provider_comment if available.
+# analysis_datetime:long_name : air_sample_measurement_date_and_time_in_LT
+# analysis_datetime:comment : Air sample measurement date and time in LT. See provider_comment if available.
+# qcflag:long_name : quality_control_flag
+# qcflag:comment : This quality control flag is provided by the contributing PIs. See provider_comment if available.
+# qcflag:provider_comment : This is the NOAA 3-character quality control flag.  Column 1 is the REJECTION flag. An alphanumeric other than a period (.) in the FIRST column indicates a sample with obvious problems during collection or analysis. This measurement should not be interpreted. Column 2 is the SELECTION flag. An alphanumeric other than a period (.) in the SECOND column indicates a sample that is likely valid but does not meet selection criteria determined by the goals of a particular investigation. For example, it might not have been obtained during 'background' conditions.  Column 3 is the INFORMATION flag. An alphanumeric other than a period (.) in the THIRD column provides additional information about the collection or analysis of the sample. A P in the 3rd column of the QC flag indicates the measurement result is preliminary and has not yet been carefully examined by the PI.  The P flag is removed once the quality of the measurement has been determined.
+#
+# VARIABLE ORDER
+#
+site_code year month day hour minute second datetime time_decimal air_sample_container_id value value_unc latitude longitude altitude elevation intake_height method event_number instrument analysis_datetime qcflag
+MCM 1985 12 4 4 30 0 1985-12-04T04:30:00Z 1985.923801369863 424-85 1620.63 4.59 -77.83 166.6 14.0 11.0 3.0 P 75288 C4 1986-02-27T13:32:00 ...
+MCM 1985 12 4 4 30 0 1985-12-04T04:30:00Z 1985.923801369863 424-85 1616.06 4.59 -77.83 166.6 14.0 11.0 3.0 P 75288 C4 1986-02-27T14:13:00 ...
+MCM 1986 1 1 8 0 0 1986-01-01T08:00:00Z 1986.0009132420091 718-85 1604.11 4.59 -77.83 166.6 14.0 11.0 3.0 P 75290 C4 1986-02-14T13:28:00 ...
+MCM 1986 1 1 8 0 0 1986-01-01T08:00:00Z 1986.0009132420091 718-85 1598.25 4.59 -77.83 166.6 14.0 11.0 3.0 P 75290 C4 1986-02-14T14:08:00 ...
+MCM 1986 1 16 2 15 0 1986-01-16T02:15:00Z 1986.041352739726 1082-82 1615.47 4.59 -77.83 166.6 14.0 11.0 3.0 P 75292 C4 1986-04-01T16:28:00 ...
+MCM 1986 1 16 2 15 0 1986-01-16T02:15:00Z 1986.041352739726 1082-82 1607.9 4.59 -77.83 166.6 14.0 11.0 3.0 P 75292 C4 1986-04-01T17:09:00 ...
+MCM 1986 1 30 23 30 0 1986-01-30T23:30:00Z 1986.0821347031963 416-85 1599.27 4.59 -77.83 166.6 14.0 11.0 3.0 P 75294 C4 1986-04-01T16:08:00 ...
+MCM 1986 1 30 23 30 0 1986-01-30T23:30:00Z 1986.0821347031963 416-85 1599.27 4.59 -77.83 166.6 14.0 11.0 3.0 P 75294 C4 1986-04-01T16:48:00 ...
+MCM 1986 2 18 0 0 0 1986-02-18T00:00:00Z 1986.131506849315 908-83 1593.81 4.59 -77.83 166.6 14.0 11.0 3.0 P 75296 C4 1986-09-11T14:19:00 ...
+MCM 1986 2 18 0 0 0 1986-02-18T00:00:00Z 1986.131506849315 908-83 1588.43 4.59 -77.83 166.6 14.0 11.0 3.0 P 75296 C4 1986-09-11T14:48:00 ...
+MCM 1986 3 2 2 0 0 1986-03-02T02:00:00Z 1986.1646118721462 1830-82 1598.87 4.59 -77.83 166.6 14.0 11.0 3.0 P 75298 C4 1986-09-11T13:36:00 ...
+MCM 1986 3 2 2 0 0 1986-03-02T02:00:00Z 1986.1646118721462 1830-82 1598.81 4.59 -77.83 166.6 14.0 11.0 3.0 P 75298 C4 1986-09-11T14:05:00 ...
+MCM 1986 3 16 22 0 0 1986-03-16T22:00:00Z 1986.2052511415525 348-83 1597.07 4.59 -77.83 166.6 14.0 11.0 3.0 P 75300 C4 1986-09-11T13:22:00 ...
+MCM 1986 3 16 22 0 0 1986-03-16T22:00:00Z 1986.2052511415525 348-83 1595.8 4.59 -77.83 166.6 14.0 11.0 3.0 P 75300 C4 1986-09-11T13:50:00 ...
+MCM 1986 4 1 23 0 0 1986-04-01T23:00:00Z 1986.249200913242 702-85 1599.5 4.59 -77.83 166.6 14.0 11.0 3.0 P 75302 C4 1986-09-11T12:24:00 ...
+MCM 1986 4 1 23 0 0 1986-04-01T23:00:00Z 1986.249200913242 702-85 1602.6 4.59 -77.83 166.6 14.0 11.0 3.0 P 75302 C4 1986-09-11T12:53:00 ...
+MCM 1986 4 16 3 0 0 1986-04-16T03:00:00Z 1986.28801369863 904-83 1603.54 4.59 -77.83 166.6 14.0 11.0 3.0 P 75304 C4 1986-09-11T15:16:00 ...
+MCM 1986 4 16 3 0 0 1986-04-16T03:00:00Z 1986.28801369863 904-83 1603.19 4.59 -77.83 166.6 14.0 11.0 3.0 P 75304 C4 1986-09-11T15:45:00 ...
+MCM 1986 5 2 3 0 0 1986-05-02T03:00:00Z 1986.3318493150684 538-83 1611.12 4.59 -77.83 166.6 14.0 11.0 3.0 P 75306 C4 1986-09-11T15:31:00 ...
+MCM 1986 5 2 3 0 0 1986-05-02T03:00:00Z 1986.3318493150684 538-83 1601.98 4.59 -77.83 166.6 14.0 11.0 3.0 P 75306 C4 1986-09-11T15:59:00 ...
+MCM 1986 6 2 23 0 0 1986-06-02T23:00:00Z 1986.4190639269407 676-83 1610.43 4.59 -77.83 166.6 14.0 11.0 3.0 P 75310 C4 1986-09-11T14:33:00 ...
+MCM 1986 6 2 23 0 0 1986-06-02T23:00:00Z 1986.4190639269407 676-83 1610.84 4.59 -77.83 166.6 14.0 11.0 3.0 P 75310 C4 1986-09-11T15:02:00 ...
+MCM 1986 6 16 22 0 0 1986-06-16T22:00:00Z 1986.457305936073 1028-82 1614.92 4.59 -77.83 166.6 14.0 11.0 3.0 P 75312 C4 1986-09-11T17:11:00 ...
+MCM 1986 6 16 22 0 0 1986-06-16T22:00:00Z 1986.457305936073 1028-82 1609.37 4.59 -77.83 166.6 14.0 11.0 3.0 P 75312 C4 1986-09-11T17:40:00 ...
+MCM 1986 7 3 4 0 0 1986-07-03T04:00:00Z 1986.5018264840182 822-83 1628.49 4.59 -77.83 166.6 14.0 11.0 3.0 P 75314 C4 1986-09-11T16:28:00 ...
+MCM 1986 7 3 4 0 0 1986-07-03T04:00:00Z 1986.5018264840182 822-83 1619.31 4.59 -77.83 166.6 14.0 11.0 3.0 P 75314 C4 1986-09-11T16:57:00 ...
+MCM 1986 7 16 2 0 0 1986-07-16T02:00:00Z 1986.537214611872 34-83 1622.98 4.59 -77.83 166.6 14.0 11.0 3.0 P 75316 C4 1986-09-11T16:14:00 ...
+MCM 1986 7 16 2 0 0 1986-07-16T02:00:00Z 1986.537214611872 34-83 1629.73 4.59 -77.83 166.6 14.0 11.0 3.0 P 75316 C4 1986-09-11T16:42:00 ...
+MCM 1986 8 3 21 40 0 1986-08-03T21:40:00Z 1986.5887747336378 1680-82 1618.79 4.59 -77.83 166.6 14.0 11.0 3.0 P 75318 C4 1986-09-11T17:25:00 ...
+MCM 1986 8 3 21 40 0 1986-08-03T21:40:00Z 1986.5887747336378 1680-82 1626.43 4.59 -77.83 166.6 14.0 11.0 3.0 P 75318 C4 1986-09-11T17:54:00 ...
+MCM 1986 9 1 0 0 0 1986-09-01T00:00:00Z 1986.6657534246576 920-82 1640.03 4.59 -77.83 166.6 14.0 11.0 3.0 P 75320 C4 1987-01-09T11:58:00 ...
+MCM 1986 9 1 0 0 0 1986-09-01T00:00:00Z 1986.6657534246576 920-82 1635.95 4.59 -77.83 166.6 14.0 11.0 3.0 P 75320 C4 1987-01-09T12:26:00 ...
+MCM 1986 9 16 6 30 0 1986-09-16T06:30:00Z 1986.7075913242008 880-83 1630.84 4.59 -77.83 166.6 14.0 11.0 3.0 P 75322 C4 1987-01-09T10:45:00 ...
+MCM 1986 9 16 6 30 0 1986-09-16T06:30:00Z 1986.7075913242008 880-83 1632.5 4.59 -77.83 166.6 14.0 11.0 3.0 P 75322 C4 1987-01-09T11:14:00 ...
+MCM 1986 10 1 2 30 0 1986-10-01T02:30:00Z 1986.7482305936073 390-85 1631.41 4.59 -77.83 166.6 14.0 11.0 3.0 P 75324 C4 1987-01-09T11:43:00 ...
+MCM 1986 10 1 2 30 0 1986-10-01T02:30:00Z 1986.7482305936073 390-85 1635.03 4.59 -77.83 166.6 14.0 11.0 3.0 P 75324 C4 1987-01-09T12:12:00 ...
+MCM 1986 10 16 9 0 0 1986-10-16T09:00:00Z 1986.7900684931508 826-83 1633.14 4.59 -77.83 166.6 14.0 11.0 3.0 P 75326 C4 1987-01-09T13:54:00 ...
+MCM 1986 10 16 9 0 0 1986-10-16T09:00:00Z 1986.7900684931508 826-83 1632.09 4.59 -77.83 166.6 14.0 11.0 3.0 P 75326 C4 1987-01-09T14:23:00 ...
+MCM 1986 11 2 2 0 0 1986-11-02T02:00:00Z 1986.8358447488583 222-83 1636.08 4.59 -77.83 166.6 14.0 11.0 3.0 P 75328 C4 1987-01-09T12:56:00 ...
+MCM 1986 11 2 2 0 0 1986-11-02T02:00:00Z 1986.8358447488583 222-83 1633.82 4.59 -77.83 166.6 14.0 11.0 3.0 P 75328 C4 1987-01-09T13:25:00 ...
+MCM 1986 11 16 4 0 0 1986-11-16T04:00:00Z 1986.8744292237443 74-83 1625.3 4.59 -77.83 166.6 14.0 11.0 3.0 P 75330 C4 1987-01-09T12:42:00 ...
+MCM 1986 11 16 4 0 0 1986-11-16T04:00:00Z 1986.8744292237443 74-83 1627.37 4.59 -77.83 166.6 14.0 11.0 3.0 P 75330 C4 1987-01-09T13:10:00 ...
+MCM 1986 11 30 21 40 0 1986-11-30T21:40:00Z 1986.9148021308981 916-83 1626.8 4.59 -77.83 166.6 14.0 11.0 3.0 P 75332 C4 1987-04-20T17:07:00 ...
+MCM 1986 11 30 21 40 0 1986-11-30T21:40:00Z 1986.9148021308981 916-83 1631.45 4.59 -77.83 166.6 14.0 11.0 3.0 P 75332 C4 1987-04-20T17:35:00 ...
+MCM 1986 12 16 5 0 0 1986-12-16T05:00:00Z 1986.9567351598173 726-82 1625.66 4.59 -77.83 166.6 14.0 11.0 3.0 P 75334 C4 1987-04-20T16:52:00 ...
+MCM 1986 12 16 5 0 0 1986-12-16T05:00:00Z 1986.9567351598173 726-82 1619.35 4.59 -77.83 166.6 14.0 11.0 3.0 P 75334 C4 1987-04-20T17:21:00 ...
+MCM 1987 1 3 6 30 0 1987-01-03T06:30:00Z 1987.0062214611871 446-83 1624.44 4.59 -77.83 166.6 14.0 11.0 3.0 P 75336 C4 1987-04-20T18:47:00 ...
+MCM 1987 1 3 6 30 0 1987-01-03T06:30:00Z 1987.0062214611871 446-83 1618.89 4.59 -77.83 166.6 14.0 11.0 3.0 P 75336 C4 1987-04-20T19:19:00 ...
+MCM 1987 1 19 8 0 0 1987-01-19T08:00:00Z 1987.0502283105022 948-82 1615.82 4.59 -77.83 166.6 14.0 11.0 3.0 P 75338 C4 1987-04-20T17:50:00 ...
+MCM 1987 1 19 8 0 0 1987-01-19T08:00:00Z 1987.0502283105022 948-82 1617.09 4.59 -77.83 166.6 14.0 11.0 3.0 P 75338 C4 1987-04-20T18:18:00 ...
+MCM 1987 2 5 1 15 0 1987-02-05T01:15:00Z 1987.0960331050228 832-83 1613.65 4.59 -77.83 166.6 14.0 11.0 3.0 P 75340 C4 1987-04-20T18:04:00 ...
+MCM 1987 2 5 1 15 0 1987-02-05T01:15:00Z 1987.0960331050228 832-83 1608.17 4.59 -77.83 166.6 14.0 11.0 3.0 P 75340 C4 1987-04-20T18:33:00 ...
+MCM 1987 2 22 13 0 0 1987-02-22T13:00:00Z 1987.1439497716894 20-85 1607.67 4.59 -77.83 166.6 14.0 11.0 3.0 P 75342 C4 1987-10-06T13:19:00 ...
+MCM 1987 2 22 13 0 0 1987-02-22T13:00:00Z 1987.1439497716894 20-85 1611.53 4.59 -77.83 166.6 14.0 11.0 3.0 P 75342 C4 1987-10-06T13:47:00 ...
+MCM 1987 3 4 3 30 0 1987-03-04T03:30:00Z 1987.1702625570776 790-85 1611.26 4.59 -77.83 166.6 14.0 11.0 3.0 P 75344 C4 1987-10-06T13:33:00 ...
+MCM 1987 3 4 3 30 0 1987-03-04T03:30:00Z 1987.1702625570776 790-85 1608.66 4.59 -77.83 166.6 14.0 11.0 3.0 P 75344 C4 1987-10-06T14:02:00 ...
+MCM 1987 3 18 22 15 0 1987-03-18T22:15:00Z 1987.21075913242 904-83 1644.92 4.59 -77.83 166.6 14.0 11.0 3.0 P 75346 C4 1987-10-06T12:20:00 C..
+MCM 1987 3 18 22 15 0 1987-03-18T22:15:00Z 1987.21075913242 904-83 1651.59 4.59 -77.83 166.6 14.0 11.0 3.0 P 75346 C4 1987-10-06T12:49:00 C..
+MCM 1987 4 5 6 30 0 1987-04-05T06:30:00Z 1987.2582762557079 1152-82 1628.96 4.59 -77.83 166.6 14.0 11.0 3.0 P 75348 C4 1987-10-06T12:34:00 C..
+MCM 1987 4 5 6 30 0 1987-04-05T06:30:00Z 1987.2582762557079 1152-82 1633.17 4.59 -77.83 166.6 14.0 11.0 3.0 P 75348 C4 1987-10-06T13:03:00 C..
+MCM 1987 4 20 4 0 0 1987-04-20T04:00:00Z 1987.2990867579908 312-85 1614.6 4.59 -77.83 166.6 14.0 11.0 3.0 P 75350 C4 1987-10-06T14:21:00 ...
+MCM 1987 4 20 4 0 0 1987-04-20T04:00:00Z 1987.2990867579908 312-85 1670.8 4.59 -77.83 166.6 14.0 11.0 3.0 P 75350 C4 1987-10-06T14:50:00 C..
+MCM 1987 5 4 19 0 0 1987-05-04T19:00:00Z 1987.3391552511416 326-85 1625.98 4.59 -77.83 166.6 14.0 11.0 3.0 P 75352 C4 1987-10-06T15:34:00 ...
+MCM 1987 5 4 19 0 0 1987-05-04T19:00:00Z 1987.3391552511416 326-85 1622.82 4.59 -77.83 166.6 14.0 11.0 3.0 P 75352 C4 1987-10-06T16:04:00 ...
+MCM 1987 5 22 18 0 0 1987-05-22T18:00:00Z 1987.3883561643836 448-83 1643.28 4.59 -77.83 166.6 14.0 11.0 3.0 P 75354 C4 1987-10-06T15:20:00 C..
+MCM 1987 6 7 13 0 0 1987-06-07T13:00:00Z 1987.4316210045663 188-83 1634.65 4.59 -77.83 166.6 14.0 11.0 3.0 P 75356 C4 1987-10-06T14:35:00 C..
+MCM 1987 6 7 13 0 0 1987-06-07T13:00:00Z 1987.4316210045663 188-83 1638.84 4.59 -77.83 166.6 14.0 11.0 3.0 P 75356 C4 1987-10-06T15:04:00 C..
+MCM 1987 6 24 16 0 0 1987-06-24T16:00:00Z 1987.4785388127855 98-85 1638.75 4.59 -77.83 166.6 14.0 11.0 3.0 P 75358 C4 1987-12-11T15:22:00 ...
+MCM 1987 6 24 16 0 0 1987-06-24T16:00:00Z 1987.4785388127855 98-85 1636.26 4.59 -77.83 166.6 14.0 11.0 3.0 P 75358 C4 1987-12-11T15:51:00 ...
+MCM 1987 7 8 12 10 0 1987-07-08T12:10:00Z 1987.5164573820396 316-85 1640.83 4.59 -77.83 166.6 14.0 11.0 3.0 P 75360 C4 1987-12-11T16:33:00 C..
+MCM 1987 7 8 12 10 0 1987-07-08T12:10:00Z 1987.5164573820396 316-85 1647.67 4.59 -77.83 166.6 14.0 11.0 3.0 P 75360 C4 1987-12-11T17:01:00 C..
+MCM 1987 7 23 12 34 56 1987-07-23T12:34:56Z 1987.5576007102993 492-85 1636.71 4.59 -77.83 166.6 14.0 11.0 3.0 P 75362 C4 1987-12-11T16:47:00 ...
+MCM 1987 7 23 12 34 56 1987-07-23T12:34:56Z 1987.5576007102993 492-85 1640.52 4.59 -77.83 166.6 14.0 11.0 3.0 P 75362 C4 1987-12-11T17:16:00 ...
+MCM 1987 8 6 16 0 0 1987-08-06T16:00:00Z 1987.5963470319634 170-85 1641.06 4.59 -77.83 166.6 14.0 11.0 3.0 P 75364 C4 1987-12-11T17:33:00 C..
+MCM 1987 8 6 16 0 0 1987-08-06T16:00:00Z 1987.5963470319634 170-85 1639.63 4.59 -77.83 166.6 14.0 11.0 3.0 P 75364 C4 1987-12-11T18:02:00 C..
+MCM 1987 8 24 15 20 0 1987-08-24T15:20:00Z 1987.6455859969558 364-85 1649.75 4.59 -77.83 166.6 14.0 11.0 3.0 P 75366 C4 1987-12-11T18:35:00 C..
+MCM 1987 8 24 15 20 0 1987-08-24T15:20:00Z 1987.6455859969558 364-85 1648.47 4.59 -77.83 166.6 14.0 11.0 3.0 P 75366 C4 1987-12-11T19:04:00 C..
+MCM 1987 9 9 19 10 0 1987-09-09T19:10:00Z 1987.6898592085236 700-83 1653.38 4.59 -77.83 166.6 14.0 11.0 3.0 P 75368 C4 1987-12-11T17:47:00 C..
+MCM 1987 9 9 19 10 0 1987-09-09T19:10:00Z 1987.6898592085236 700-83 1657.78 4.59 -77.83 166.6 14.0 11.0 3.0 P 75368 C4 1987-12-11T18:16:00 C..
+MCM 1987 10 6 7 45 0 1987-10-06T07:45:00Z 1987.7625285388128 512-85 1647.89 4.59 -77.83 166.6 14.0 11.0 3.0 P 75370 C4 1987-12-11T20:39:00 ...
+MCM 1987 10 6 7 45 0 1987-10-06T07:45:00Z 1987.7625285388128 512-85 1639.57 4.59 -77.83 166.6 14.0 11.0 3.0 P 75370 C4 1987-12-11T21:08:00 ...
+MCM 1987 10 9 15 0 0 1987-10-09T15:00:00Z 1987.7715753424657 344-85 1640.22 4.59 -77.83 166.6 14.0 11.0 3.0 P 75372 C4 1987-12-11T19:53:00 ...
+MCM 1987 10 9 15 0 0 1987-10-09T15:00:00Z 1987.7715753424657 344-85 1640.04 4.59 -77.83 166.6 14.0 11.0 3.0 P 75372 C4 1987-12-11T20:22:00 ...
+MCM 1987 10 12 23 15 0 1987-10-12T23:15:00Z 1987.7807363013699 370-85 1647.04 4.59 -77.83 166.6 14.0 11.0 3.0 P 75374 C4 1987-12-11T19:39:00 ...
+MCM 1987 10 12 23 15 0 1987-10-12T23:15:00Z 1987.7807363013699 370-85 1643.69 4.59 -77.83 166.6 14.0 11.0 3.0 P 75374 C4 1987-12-11T20:07:00 ...
+MCM 1987 10 15 14 0 0 1987-10-15T14:00:00Z 1987.787899543379 322-85 1644.92 4.59 -77.83 166.6 14.0 11.0 3.0 P 75376 C4 1987-12-11T20:54:00 ...
+MCM 1987 10 15 14 0 0 1987-10-15T14:00:00Z 1987.787899543379 322-85 1648.92 4.59 -77.83 166.6 14.0 11.0 3.0 P 75376 C4 1987-12-11T21:22:00 ...
+MCM 1987 10 28 11 20 0 1987-10-28T11:20:00Z 1987.8232115677322 324-85 1651.01 4.59 -77.83 166.6 14.0 11.0 3.0 P 75378 C4 1987-12-11T18:49:00 C..
+MCM 1987 10 28 11 20 0 1987-10-28T11:20:00Z 1987.8232115677322 324-85 1648.03 4.59 -77.83 166.6 14.0 11.0 3.0 P 75378 C4 1987-12-11T19:18:00 C..

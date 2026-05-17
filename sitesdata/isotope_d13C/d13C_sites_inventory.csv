@@ -1,65 +1,26 @@
-site_code,site_name,country,latitude,longitude,elevation_m,labs,n_observations,year_start,year_end,data_source
-ACG,Alaska Coast Guard,United States,57.7366,-152.5042,6.0,NOAA/INSTAAR,809,2012.3,2017.8,Basu2022_ObsPack
-ACT,Atmospheric Carbon and Transport - America,United States,38.23569869995117,-91.06690216064453,,NOAA/INSTAAR,1367,2016.5,2019.6,Basu2022_ObsPack
-ALK,Alaska,United States,64.44999694824219,-148.66000366210938,,NIPR,63,2006.6,2006.6,Basu2022_ObsPack
-ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,NOAA/INSTAAR; MPI-BGC,3016,2000.6,2020.3,Basu2022_ObsPack
-AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,NOAA/INSTAAR,363,2013.9,2020.2,Basu2022_ObsPack
-ARH,"Arrival Heights, Antarctica",New Zealand,-77.833,166.66,184.0,NIWA,308,2000.5,2016.0,Basu2022_ObsPack
-ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,NOAA/INSTAAR,3174,2000.8,2020.3,Basu2022_ObsPack
-AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,NOAA/INSTAAR,939,2000.7,2020.2,Basu2022_ObsPack
-BAL,Baltic Sea,Poland,55.35,17.22,3.0,NOAA/INSTAAR,538,2008.3,2011.5,Basu2022_ObsPack
-BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,NOAA/INSTAAR; NIWA,561,2000.1,2019.9,Basu2022_ObsPack
-BIK,Bialystok,Poland,53.2,22.75,183.0,MPI-BGC,65,2012.5,2016.9,Basu2022_ObsPack
-BMW,"Tudor Hill, Bermuda",United Kingdom,32.2647,-64.8788,30.0,NOAA/INSTAAR,2,2018.6,2018.6,Basu2022_ObsPack
-BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,NOAA/INSTAAR,4174,1998.0,2020.4,Basu2022_ObsPack
-BSC,"Black Sea, Constanta",Romania,44.1776,28.6647,0.0,NOAA/INSTAAR,26,2003.8,2004.9,Basu2022_ObsPack
-CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,NOAA/INSTAAR,1897,2000.7,2020.4,Basu2022_ObsPack
-CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,NOAA/INSTAAR,1639,1998.0,2020.3,Basu2022_ObsPack
-CHR,Christmas Island,Republic of Kiribati,1.7,-157.1518,0.0,NOAA/INSTAAR,18,1999.0,1999.1,Basu2022_ObsPack
-CIB,Centro de Investigacion de la Baja Atmosfera (CIBA),Spain,41.81,-4.93,845.0,NOAA/INSTAAR,6,2016.3,2016.3,Basu2022_ObsPack
-CON,CONTRAIL (Comprehensive Observation Network for TRace gases by AIrLiner),,15.09000015258789,146.08999633789062,,TU,414,2006.9,2010.7,Basu2022_ObsPack
-CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA/INSTAAR,3752,2011.9,2019.6,Basu2022_ObsPack
-CVO,Cape Verde Observatory,Cabo Verde,16.864,-24.8675,10.0,MPI-BGC,574,2011.1,2017.3,Basu2022_ObsPack
-DRP,Drake Passage,N/A,-59.0,-64.69,0.0,NOAA/INSTAAR,10,2005.2,2005.2,Basu2022_ObsPack
-EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,NOAA/INSTAAR,207,2015.9,2019.7,Basu2022_ObsPack
-GMI,Mariana Islands,Guam,13.386,144.656,0.0,NOAA/INSTAAR,367,2016.1,2020.2,Basu2022_ObsPack
-HIP,HIPPO (HIAPER Pole-to-Pole Observations),United States,30.7189998626709,-151.9888916015625,,NOAA/INSTAAR,586,2011.4,2011.7,Basu2022_ObsPack
-HSU,Humboldt State University,United States,41.0588,-124.75,0.0,NOAA/INSTAAR,4,2016.3,2016.3,Basu2022_ObsPack
-INX,INFLUX (Indianapolis Flux Experiment),United States,39.5805,-86.4207,,NOAA/INSTAAR,275,2011.2,2015.8,Basu2022_ObsPack
-JFJ,Jungfraujoch,Switzerland,46.55,7.987,3570.0,MPI-BGC,144,2012.6,2017.6,Basu2022_ObsPack
-KCO,Kaashidhoo,Republic of Maldives,4.97,73.47,1.0,NOAA/INSTAAR,4,1999.0,1999.0,Basu2022_ObsPack
-KJO,Kjölnes,Norway,70.8531,29.2358,5.0,MPI-BGC,87,2014.8,2016.1,Basu2022_ObsPack
-KUM,"Cape Kumukahi, Hawaii",United States,19.7371,-155.0116,0.3,NOAA/INSTAAR,2117,1999.0,2020.4,Basu2022_ObsPack
-LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,NOAA/INSTAAR,1,2012.4,2012.4,Basu2022_ObsPack
-LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,NOAA/INSTAAR,419,2008.1,2013.2,Basu2022_ObsPack
-LLN,Lulin,Taiwan,23.47,120.87,2862.0,NOAA/INSTAAR,3,2016.3,2016.3,Basu2022_ObsPack
-MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,NOAA/INSTAAR,841,2009.0,2020.1,Basu2022_ObsPack
-MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,NOAA/INSTAAR,1532,1999.0,2020.4,Basu2022_ObsPack
-MID,"Sand Island, Midway",United States,28.21,-177.38,11.0,NOAA/INSTAAR,365,2016.0,2020.4,Basu2022_ObsPack
-MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,NOAA/INSTAAR,4058,1998.0,2020.4,Basu2022_ObsPack
-MRC,Marcellus Pennsylvania,United States,41.4662,-76.4188,592.0,NOAA/INSTAAR,680,2015.4,2019.8,Basu2022_ObsPack
-NGM,Western Pacific Ocean,N/A,0.0,150.39498901367188,,TU,466,2007.0,2011.7,Basu2022_ObsPack
-NMB,Gobabeb,Namibia,-23.58,15.03,456.0,MPI-BGC,332,2013.2,2017.3,Basu2022_ObsPack
-NSA,"North Slope, Alaska",United States,70.15620422363281,-150.0602569580078,,NOAA/INSTAAR,112,2016.6,2016.6,Basu2022_ObsPack
-NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,NOAA/INSTAAR,2055,1998.0,2020.4,Basu2022_ObsPack
-NYA,"Ny-Alesund, Svalbard",Norway and Sweden,78.917,11.933,40.0,NIPR,947,2000.0,2020.0,Basu2022_ObsPack
-OXK,Ochsenkopf,Germany,50.0301,11.8084,1022.0,MPI-BGC,266,2012.7,2017.5,Basu2022_ObsPack
-PFA,"Poker Flat, Alaska",United States,64.9,-148.76,210.0,NOAA/INSTAAR,1366,2012.0,2019.1,Basu2022_ObsPack
-POC,Pacific Ocean,N/A,-10.0,-156.85000610351562,0.0,NOAA/INSTAAR; NIWA,281,2000.7,2011.9,Basu2022_ObsPack
-PSA,"Palmer Station, Antarctica",United States,-64.92,-64.0,10.0,NOAA/INSTAAR,15,2001.0,2003.6,Basu2022_ObsPack
-SDZ,Shangdianzi,Peoples Republic of China,40.65,117.117,293.0,NOAA/INSTAAR,13,2011.8,2013.1,Basu2022_ObsPack
-SGP,"Southern Great Plains, Oklahoma",United States,36.607,-97.489,314.0,NOAA/INSTAAR,12,2015.5,2015.5,Basu2022_ObsPack
-SIS,Shetland Islands,Scotland,60.089,-1.255,30.0,MPI-BGC,518,2010.7,2017.5,Basu2022_ObsPack
-SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,NOAA/INSTAAR,3568,1998.0,2020.4,Basu2022_ObsPack
-SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,NOAA/INSTAAR,3215,1998.0,2020.1,Basu2022_ObsPack
-SUM,Summit,Greenland,72.5962,-38.422,3209.54,NOAA/INSTAAR,911,2010.3,2020.3,Basu2022_ObsPack
-SUR,Surgut,Russia,61.2,73.2,40.0,TU,63,2006.3,2009.4,Basu2022_ObsPack
-TAC,Tacolneston,United Kingdom,52.5177,1.1386,56.0,NOAA/INSTAAR,96,2014.4,2016.0,Basu2022_ObsPack
-TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,NOAA/INSTAAR,1406,2000.7,2020.2,Basu2022_ObsPack
-TOM,Atmospheric Tomography Mission (ATom),United States,15.560401916503906,-110.68102264404297,,NOAA/INSTAAR,586,2016.6,2017.1,Basu2022_ObsPack
-WGC,"Walnut Grove, California",United States,38.265,-121.4911,0.0,NOAA/INSTAAR,297,2008.0,2009.1,Basu2022_ObsPack
-WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,NOAA/INSTAAR,1948,2001.5,2020.1,Basu2022_ObsPack
-WPC,Western Pacific Cruise,N/A,2.5299999713897705,149.73001098632812,0.0,NOAA/INSTAAR,464,2005.9,2013.4,Basu2022_ObsPack
-ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NOAA/INSTAAR,1168,2001.8,2020.4,Basu2022_ObsPack
-ZOT,"Zotino, Siberia",Russia,60.75,89.38,111.0,MPI-BGC,866,2009.8,2017.2,Basu2022_ObsPack
-comment,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NOAA/INSTAAR,46251,1998,2022,NOAA_INSTAAR_2023
+site_code,site_name,country,latitude,longitude,elevation_m,n_observations,year_start,year_end,data_source,file
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,2999,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_alt_surface-flask_7_sil_event.txt
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,556,2013,2022,NOAA_INSTAAR_2023-09-21,ch4c13_amy_surface-flask_7_sil_event.txt
+ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,3647,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_asc_surface-flask_7_sil_event.txt
+AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,1163,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_azr_surface-flask_7_sil_event.txt
+BAL,Baltic Sea,Poland,55.35,17.22,3.0,535,2008,2011,NOAA_INSTAAR_2023-09-21,ch4c13_bal_surface-flask_7_sil_event.txt
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,390,2009,2022,NOAA_INSTAAR_2023-09-21,ch4c13_bhd_surface-flask_7_sil_event.txt
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,4304,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_brw_surface-flask_7_sil_event.txt
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,2354,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_cba_surface-flask_7_sil_event.txt
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,1929,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_cgo_surface-flask_7_sil_event.txt
+EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,203,2015,2019,NOAA_INSTAAR_2023-09-21,ch4c13_eic_surface-flask_7_sil_event.txt
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,552,2016,2022,NOAA_INSTAAR_2023-09-21,ch4c13_gmi_surface-flask_7_sil_event.txt
+KUM,"Cape Kumukahi, Hawaii",United States,19.5608,-154.8883,8.0,2657,1999,2022,NOAA_INSTAAR_2023-09-21,ch4c13_kum_surface-flask_7_sil_event.txt
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,416,2008,2013,NOAA_INSTAAR_2023-09-21,ch4c13_llb_surface-flask_7_sil_event.txt
+MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,999,2009,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mex_surface-flask_7_sil_event.txt
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,1758,1999,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mhd_surface-flask_7_sil_event.txt
+MID,"Sand Island, Midway",United States,28.2186,-177.3678,4.6,637,2015,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mid_surface-flask_7_sil_event.txt
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,4674,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mlo_surface-flask_7_sil_event.txt
+NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,2276,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_nwr_surface-flask_7_sil_event.txt
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,4067,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_smo_surface-flask_7_sil_event.txt
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,3669,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_spo_surface-flask_7_sil_event.txt
+SUM,Summit,Greenland,72.5962,-38.422,3209.54,1213,2010,2022,NOAA_INSTAAR_2023-09-21,ch4c13_sum_surface-flask_7_sil_event.txt
+TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,1600,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_tap_surface-flask_7_sil_event.txt
+WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,1753,2001,2022,NOAA_INSTAAR_2023-09-21,ch4c13_wlg_surface-flask_7_sil_event.txt
+WPC,Western Pacific Cruise,N/A,-1e+34,-1e+34,0.0,458,2005,2013,NOAA_INSTAAR_2023-09-21,ch4c13_wpc_shipboard-flask_7_sil_event.txt
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,1442,2001,2022,NOAA_INSTAAR_2023-09-21,ch4c13_zep_surface-flask_7_sil_event.txt
