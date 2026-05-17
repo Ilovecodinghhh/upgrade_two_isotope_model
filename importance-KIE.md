@@ -6,7 +6,7 @@ The hydroxyl radical (OH) is the dominant CH₄ sink (~84% of total loss), and t
 
 **This report quantifies how OH-¹³C and OH-D KIE uncertainties actually propagate into fossil-fuel (FF) emission estimates** using both a one-box dual-isotope (3×3) experiment and a one-box decoupled (2×2) experiment, each with 7000 Monte Carlo inversions.
 
-Key finding: **In the coupled 3×3, OH-D KIE dominates the FF uncertainty spread (28% of variance), while OH-¹³C KIE controls the FF level (17 Tg/yr shift). In the decoupled 2×2, each isotope is sensitive to its own OH KIE: OH-¹³C drives 18% of δ¹³C-derived FF variance, OH-D drives 27% of δD-derived FF variance. The Saueressig–Cantrell level shift is amplified to 38 Tg/yr in the δ¹³C-only inversion but vanishes entirely in the δD-only inversion.**
+Key finding: **In the coupled 3×3, OH-D KIE dominates the FF uncertainty spread (29% of variance), while OH-¹³C KIE controls the FF level (17 Tg/yr shift). In the decoupled 2×2, each isotope is sensitive exclusively to its own OH KIE: OH-¹³C drives 12% of δ¹³C-derived FF variance, OH-D drives 28% of δD-derived FF variance — with exactly zero cross-contamination. The Saueressig–Cantrell level shift is amplified to 37 Tg/yr in the δ¹³C-only inversion but vanishes entirely in the δD-only inversion.**
 
 ---
 
@@ -63,13 +63,13 @@ All configs sample source signatures and atmospheric observations identically. D
 
 | Config | σ(FF) [Tg/yr] | Mean FF [Tg/yr] | ΔFF trend [Tg/yr] | Nonphysical % |
 |--------|:--------------:|:----------------:|:------------------:|:-------------:|
-| ALL_SAMPLED | **61.9** | 46.3 | +1.9 ± 14.8 | 25.6% |
-| FIX_OH13C | 62.0 | 45.8 | +1.9 ± 14.9 | 25.5% |
-| FIX_OHD | **52.4** | 44.9 | +1.8 ± 14.6 | 23.6% |
-| FIX_BOTH_OH | 53.0 | 45.5 | +1.8 ± 14.6 | 22.9% |
+| ALL_SAMPLED | **62.7** | 46.5 | +1.9 ± 14.9 | 25.9% |
+| FIX_OH13C | 62.6 | 46.5 | +1.9 ± 14.9 | 25.7% |
+| FIX_OHD | **52.9** | 45.5 | +1.8 ± 14.7 | 23.1% |
+| FIX_BOTH_OH | 52.6 | 45.5 | +1.8 ± 14.6 | 22.9% |
 | ALL_KIE_FIXED | **52.1** | 45.4 | +1.8 ± 14.6 | 22.9% |
-| OH13C_SAUERESSIG | 62.0 | **37.1** | +1.2 ± 14.9 | 28.8% |
-| OH13C_CANTRELL | 62.1 | **54.4** | +2.5 ± 14.9 | 23.4% |
+| OH13C_SAUERESSIG | 62.6 | **37.9** | +1.2 ± 14.8 | 28.9% |
+| OH13C_CANTRELL | 62.7 | **55.0** | +2.5 ± 14.9 | 23.6% |
 
 *Source: `experiments/OH_KIE_importance/results/summary.json`*
 
@@ -79,14 +79,14 @@ Using the σ² reduction method (baseline variance minus config variance, divide
 
 | Component | σ² reduction | % of baseline σ² |
 |-----------|:------------:|:-----------------:|
-| **OH-D KIE** | **1087** | **28.4%** |
-| OH-¹³C KIE | −16 | **< 1%** (noise) |
-| Both OH combined | 1027 | 26.8% |
-| All 8 KIE parameters | 1113 | **29.0%** |
-| Non-OH KIE (Cl, Strat, Soil) | 86 | 2.2% |
-| Source signatures + data noise | 2719 | **71.0%** |
+| **OH-D KIE** | **1133** | **28.8%** |
+| OH-¹³C KIE | 9 | **0.2%** (noise) |
+| Both OH combined | 1162 | 29.5% |
+| All 8 KIE parameters | 1214 | **30.9%** |
+| Non-OH KIE (Cl, Strat, Soil) | 52 | 1.3% |
+| Source signatures + data noise | 2719 | **69.1%** |
 
-**OH-D alone accounts for 28.4% of FF variance** — nearly all of the KIE-attributable uncertainty. OH-¹³C contributes effectively nothing to the spread.
+**OH-D alone accounts for 28.8% of FF variance** — nearly all of the KIE-attributable uncertainty. OH-¹³C contributes effectively nothing to the spread.
 
 ![Variance attribution bar chart](figures/fig1_variance_attribution.png)
 *Figure 1: σ(FF) under each KIE configuration. Fixing OH-D reduces σ by 9.5 Tg/yr (61.9 → 52.4). Fixing OH-¹³C changes nothing.*
@@ -97,11 +97,11 @@ While OH-¹³C doesn't affect the *uncertainty*, it controls the *level*:
 
 | OH-¹³C value | Mean FF [Tg/yr] |
 |:------------:|:----------------:|
-| Saueressig (1.0039) | **37.1** |
-| Midpoint (1.00465) | 45.8 |
-| Cantrell (1.0054) | **54.4** |
+| Saueressig (1.0039) | **37.9** |
+| Midpoint (1.00465) | 46.5 |
+| Cantrell (1.0054) | **55.0** |
 
-**ΔFF = 17.3 Tg/yr** between the two endpoints — a systematic shift without changing the spread.
+**ΔFF = 17.1 Tg/yr** between the two endpoints — a systematic shift without changing the spread.
 
 This occurs because in the 3×3 system, the ¹³C row determines the *position* of the FF–Mic partition (more fractionation → more apparent fossil contribution), while the D row provides the *constraint power* that resolves the three-source system.
 
@@ -128,25 +128,25 @@ To disentangle how OH KIE propagates through each isotope system independently, 
 
 | Config | σ(FF) [Tg/yr] | Mean FF [Tg/yr] | ΔFF trend [Tg/yr] | Neg % |
 |--------|:--------------:|:----------------:|:------------------:|:-----:|
-| ALL_SAMPLED | **31.0** | 177.7 | +10.4 ± 4.2 | 0.0% |
-| FIX_OH13C | 28.1 | 178.1 | +10.4 ± 4.2 | 0.0% |
-| FIX_OHD | 29.4 | 178.4 | +10.4 ± 4.2 | 0.0% |
-| FIX_BOTH_OH | 28.1 | 177.9 | +10.4 ± 4.1 | 0.0% |
+| ALL_SAMPLED | **30.2** | 177.4 | +10.4 ± 4.2 | 0.0% |
+| FIX_OH13C | 28.4 | 177.6 | +10.4 ± 4.1 | 0.0% |
+| FIX_OHD | 30.2 | 177.4 | +10.4 ± 4.2 | 0.0% |
+| FIX_BOTH_OH | 28.4 | 177.6 | +10.4 ± 4.1 | 0.0% |
 | ALL_KIE_FIXED | **27.7** | 177.8 | +10.4 ± 4.1 | 0.0% |
-| OH13C_SAUERESSIG | 26.8 | **196.9** | +11.4 ± 4.1 | 0.0% |
-| OH13C_CANTRELL | 29.4 | **159.4** | +9.4 ± 4.2 | 0.0% |
+| OH13C_SAUERESSIG | 27.1 | **196.2** | +11.4 ± 4.1 | 0.0% |
+| OH13C_CANTRELL | 29.7 | **158.9** | +9.4 ± 4.2 | 0.0% |
 
 ### 5.2 Summary Table — δD-Derived FF
 
 | Config | σ(FF) [Tg/yr] | Mean FF [Tg/yr] | ΔFF trend [Tg/yr] | Neg % |
 |--------|:--------------:|:----------------:|:------------------:|:-----:|
-| ALL_SAMPLED | **39.1** | 88.8 | +5.0 ± 9.4 | 4.5% |
-| FIX_OH13C | 38.8 | 88.9 | +4.9 ± 9.6 | 4.5% |
-| FIX_OHD | **33.4** | 87.9 | +4.8 ± 9.5 | 3.1% |
-| FIX_BOTH_OH | 33.6 | 88.0 | +4.8 ± 9.5 | 3.2% |
-| ALL_KIE_FIXED | **33.4** | 87.9 | +4.9 ± 9.5 | 3.1% |
-| OH13C_SAUERESSIG | 38.8 | 88.9 | +4.9 ± 9.6 | 4.5% |
-| OH13C_CANTRELL | 38.8 | 88.9 | +4.9 ± 9.6 | 4.5% |
+| ALL_SAMPLED | **39.4** | 88.9 | +5.0 ± 9.5 | 4.5% |
+| FIX_OH13C | 39.4 | 88.9 | +5.0 ± 9.5 | 4.5% |
+| FIX_OHD | **33.6** | 87.9 | +4.8 ± 9.5 | 3.1% |
+| FIX_BOTH_OH | 33.6 | 87.9 | +4.8 ± 9.5 | 3.1% |
+| ALL_KIE_FIXED | **33.4** | 87.9 | +4.8 ± 9.5 | 3.1% |
+| OH13C_SAUERESSIG | 39.4 | 88.9 | +5.0 ± 9.5 | 4.5% |
+| OH13C_CANTRELL | 39.4 | 88.9 | +5.0 ± 9.5 | 4.5% |
 
 ### 5.3 Variance Attribution — 2×2
 
@@ -154,24 +154,24 @@ To disentangle how OH KIE propagates through each isotope system independently, 
 
 | Component | σ² reduction | % of baseline σ² |
 |-----------|:------------:|:-----------------:|
-| **OH-¹³C KIE** | 173 | **18.0%** |
-| OH-D KIE | 97 | 10.1% |
-| Both OH combined | 175 | 18.2% |
-| All 8 KIE parameters | 194 | **20.2%** |
-| Source signatures + data noise | 767 | **79.8%** |
+| **OH-¹³C KIE** | 109 | **11.9%** |
+| OH-D KIE | 0 | **0.0%** |
+| Both OH combined | 109 | 11.9% |
+| All 8 KIE parameters | 148 | **16.1%** |
+| Source signatures + data noise | 767 | **83.9%** |
 
 **δD inversion:**
 
 | Component | σ² reduction | % of baseline σ² |
 |-----------|:------------:|:-----------------:|
-| OH-¹³C KIE | 27 | **1.7%** |
-| **OH-D KIE** | 421 | **27.4%** |
-| Both OH combined | 400 | 26.1% |
-| All 8 KIE parameters | 419 | **27.3%** |
-| Source signatures + data noise | 1113 | **72.7%** |
+| OH-¹³C KIE | 0 | **0.0%** |
+| **OH-D KIE** | 428 | **27.5%** |
+| Both OH combined | 428 | 27.5% |
+| All 8 KIE parameters | 440 | **28.3%** |
+| Source signatures + data noise | 1114 | **71.7%** |
 
 ![2×2 variance attribution](figures/fig6_2x2_variance_attribution.png)
-*Figure 6: σ(FF) under each KIE config for the 2×2 inversion. Left: δ¹³C-derived FF shows OH-¹³C as primary KIE driver (18%). Right: δD-derived FF shows OH-D as dominant (27.4%).*
+*Figure 6: σ(FF) under each KIE config for the 2×2 inversion. Left: δ¹³C-derived FF shows OH-¹³C as sole KIE driver (12%). Right: δD-derived FF shows OH-D as sole driver (28%). Zero cross-isotope contamination.*
 
 ### 5.4 Saueressig vs Cantrell in 2×2
 
@@ -179,13 +179,13 @@ The OH-¹³C controversy produces starkly different impacts depending on which i
 
 | Isotope | Saueressig FF [Tg/yr] | Cantrell FF [Tg/yr] | **ΔFF** |
 |---------|:---------------------:|:-------------------:|:-------:|
-| **δ¹³C** | 196.9 | 159.4 | **37.5** |
+| **δ¹³C** | 196.2 | 158.9 | **37.3** |
 | **δD** | 88.9 | 88.9 | **0.0** |
 
-The δ¹³C inversion shows a massive **37.5 Tg/yr level shift** — more than double the 17 Tg shift in the 3×3 system (which dilutes it across three equations). The δD inversion is completely immune because OH-¹³C never enters the δD mass balance.
+The δ¹³C inversion shows a massive **37.3 Tg/yr level shift** — more than double the 17 Tg shift in the 3×3 system (which dilutes it across three equations). The δD inversion is completely immune because OH-¹³C never enters the δD mass balance.
 
 ![2×2 Saueressig vs Cantrell](figures/fig7_2x2_saueressig_cantrell.png)
-*Figure 7: (a) δ¹³C-derived FF under Saueressig vs Cantrell — 38 Tg/yr separation. (b) δD-derived FF — perfectly overlapping, zero sensitivity to OH-¹³C.*
+*Figure 7: (a) δ¹³C-derived FF under Saueressig vs Cantrell — 37 Tg/yr separation. (b) δD-derived FF — perfectly overlapping, zero sensitivity to OH-¹³C.*
 
 ### 5.5 Grand Comparison Across Architectures
 
@@ -197,15 +197,13 @@ The δ¹³C inversion shows a massive **37.5 Tg/yr level shift** — more than d
 
 ### 5.6 Key 2×2 Insights
 
-1. **Each isotope is sensitive to its own OH KIE** — OH-¹³C dominates δ¹³C variance (18%), OH-D dominates δD variance (27%). This is physically intuitive: in the decoupled 2×2 system, cross-isotope KIE contamination is minimal.
+1. **Each isotope is sensitive exclusively to its own OH KIE** — OH-¹³C accounts for 12% of δ¹³C variance and 0% of δD variance; OH-D accounts for 28% of δD variance and 0% of δ¹³C variance. There is zero cross-isotope contamination in the decoupled 2×2, as expected physically.
 
-2. **The δ¹³C-only inversion has an unexpectedly large OH-D sensitivity (10.1%)** — this arises because OH-D affects the bulk KIE calculation through the sink-weighted average, which feeds back into the source δ¹³C via the total fractionation budget. This cross-talk disappears in the δD system (OH-¹³C → δD: only 1.7%).
+2. **The Saueressig–Cantrell shift is amplified in δ¹³C-only** (37 Tg/yr vs 17 Tg in 3×3) because the 2×2 δ¹³C solve has no δD constraint to anchor the solution. The 3×3 dilutes the ¹³C bias across three equations.
 
-3. **The Saueressig–Cantrell shift is amplified in δ¹³C-only** (38 Tg/yr vs 17 Tg in 3×3) because the 2×2 δ¹³C solve has no δD constraint to anchor the solution. The 3×3 dilutes the ¹³C bias across three equations.
+3. **δD-derived FF is much lower than δ¹³C-derived FF** (89 vs 177 Tg/yr). This large discrepancy between isotope-specific estimates highlights a fundamental tension: the two isotope systems do not agree on FF magnitude in a one-box framework. The 3×3 compromise (47 Tg/yr) is even lower, suggesting the coupled system is pulled toward the δD constraint.
 
-4. **δD-derived FF is much lower than δ¹³C-derived FF** (89 vs 178 Tg/yr). This large discrepancy between isotope-specific estimates highlights a fundamental tension: the two isotope systems do not agree on FF magnitude in a one-box framework. The 3×3 compromise (46 Tg/yr) is even lower, suggesting the coupled system is pulled toward the δD constraint.
-
-5. **BB prescription eliminates ~25% of 3×3 nonphysical solutions** — the 2×2 δ¹³C gives 0% negative FF (vs 25.6% in 3×3), confirming that the ill-conditioning of the 3×3 matrix (not just KIE uncertainty) drives the nonphysical fraction.
+4. **BB prescription eliminates ~26% of 3×3 nonphysical solutions** — the 2×2 δ¹³C gives 0% negative FF (vs 26% in 3×3), confirming that the ill-conditioning of the 3×3 matrix (not just KIE uncertainty) drives the nonphysical fraction.
 
 *Source: `experiments/OH_KIE_importance/results/2x2_summary.json`*
 
@@ -248,9 +246,9 @@ In the one-box 3×3, the δD row carries more relative weight because all three 
 
 ### 6.4 Why the 2×2 Confirms the Physical Intuition
 
-The 2×2 results provide crucial validation: when isotopes are solved independently, each system is sensitive primarily to **its own** OH KIE. OH-¹³C accounts for 18% of δ¹³C-derived FF variance but only 1.7% of δD-derived FF variance. OH-D accounts for 27.4% of δD-derived FF variance but only 10.1% of δ¹³C-derived FF variance.
+The 2×2 results provide crucial validation: when isotopes are solved independently, each system is sensitive **exclusively** to its own OH KIE. OH-¹³C accounts for 12% of δ¹³C-derived FF variance and exactly 0% of δD-derived FF variance. OH-D accounts for 28% of δD-derived FF variance and exactly 0% of δ¹³C-derived FF variance.
 
-The asymmetry (10.1% cross-talk from OH-D into δ¹³C, but only 1.7% from OH-¹³C into δD) arises because OH-D has a larger absolute effect on the bulk sink fractionation. When OH-D varies by Δε_D ≈ 33‰ (weighted by f_OH = 0.835), this perturbs the total removal rate, which has second-order effects on the ¹³C mass balance through the total source magnitude. OH-¹³C's Δε_C ≈ 1.5‰ has negligible second-order effect on the D balance.
+This clean separation confirms that in the 3×3 coupled system, the apparent dominance of OH-D (29% vs 0.2% for OH-¹³C) arises not from cross-isotope physical coupling, but from the matrix algebra: the ill-conditioned δD row is the binding constraint that determines solution spread, so perturbing it (via OH-D) has outsized impact. OH-¹³C shifts the well-conditioned ¹³C row, which moves the solution level but not the spread.
 
 ---
 
@@ -293,29 +291,29 @@ From `rel/data/` MC ensembles:
 |----------|:--------:|:-----------:|
 | **Experimental range** | U(1.294, 1.327) | U(1.0039, 1.0054) |
 | **Fractionation (ε)** | ~300‰ | ~5‰ |
-| **3×3 effect on σ(FF)** | **28% of variance** | **< 1%** |
-| **3×3 effect on mean FF** | < 2 Tg/yr | **17 Tg/yr** |
-| **2×2 δ¹³C effect on σ(FF)** | 10% (cross-talk) | **18%** |
-| **2×2 δD effect on σ(FF)** | **27%** | < 2% |
-| **2×2 δ¹³C Saueressig→Cantrell ΔFF** | — | **38 Tg/yr** |
+| **3×3 effect on σ(FF)** | **29% of variance** | **0.2%** |
+| **3×3 effect on mean FF** | < 1 Tg/yr | **17 Tg/yr** |
+| **2×2 δ¹³C effect on σ(FF)** | **0.0%** | **12%** |
+| **2×2 δD effect on σ(FF)** | **28%** | **0.0%** |
+| **2×2 δ¹³C Saueressig→Cantrell ΔFF** | — | **37 Tg/yr** |
 | **2×2 δD Saueressig→Cantrell ΔFF** | — | **0 Tg/yr** |
 | **Nature of impact** | Spread (stochastic) | Level shift (systematic) |
 
 ### Key Takeaways
 
-1. **OH-D KIE is the dominant KIE uncertainty source** in the one-box 3×3 inversion (28% of variance) and in the δD-only 2×2 inversion (27%).
+1. **OH-D KIE is the dominant KIE uncertainty source** in the one-box 3×3 inversion (29% of variance) and in the δD-only 2×2 inversion (28%).
 
-2. **OH-¹³C KIE controls the FF level** — shifting it by 17 Tg/yr in the 3×3, and by a massive 38 Tg/yr in the δ¹³C-only 2×2. The δD inversion is completely immune to OH-¹³C (ΔFF = 0).
+2. **OH-¹³C KIE controls the FF level** — shifting it by 17 Tg/yr in the 3×3, and by a massive 37 Tg/yr in the δ¹³C-only 2×2. The δD inversion is completely immune to OH-¹³C (ΔFF = 0).
 
-3. **When isotopes are decoupled** (2×2), each is sensitive to its own OH KIE — confirming the physical intuition that cross-isotope KIE contamination requires coupled solving.
+3. **When isotopes are decoupled** (2×2), each is sensitive **exclusively** to its own OH KIE — OH-D contributes exactly 0% to δ¹³C variance, and OH-¹³C contributes exactly 0% to δD variance. There is no cross-isotope contamination.
 
-4. **Source signatures and data noise dominate** at 71–80% of variance across all architectures.
+4. **Source signatures and data noise dominate** at 69–84% of variance across all architectures.
 
-5. **Non-OH KIE parameters** (Cl, Strat, Soil) contribute only ~2% combined in all architectures.
+5. **Non-OH KIE parameters** (Cl, Strat, Soil) contribute only ~1–4% combined in all architectures.
 
 6. **KIE importance is model-architecture-dependent**: OH-D dominates in the 3×3 (ill-conditioned δD row is binding constraint), while OH-¹³C dominates in the 2×2 δ¹³C-only (direct pathway, no δD dilution). This means cross-study comparisons of "KIE sensitivity" must account for the inversion architecture.
 
-7. **The δ¹³C–δD FF discrepancy** (178 vs 89 Tg/yr in one-box) highlights the fundamental tension between isotope systems — the 3×3 result (46 Tg/yr) is a compromise weighted toward the more constraining isotope.
+7. **The δ¹³C–δD FF discrepancy** (177 vs 89 Tg/yr in one-box) highlights the fundamental tension between isotope systems — the 3×3 result (47 Tg/yr) is a compromise weighted toward the more constraining isotope.
 
 ---
 

@@ -44,16 +44,19 @@ NI = 1000
 SEED = 42
 
 
-def custom_sample_KIE(rng, freeze: dict) -> dict:
-    """Sample KIE, but override specific keys with fixed values from `freeze`."""
+def custom_sample_KIE(rng_kie, freeze: dict) -> dict:
+    """Sample KIE, always consuming 8 RNG draws to keep stream aligned.
+
+    Even when a key is frozen, we still draw from rng_kie (and discard)
+    so that downstream draws from the data RNG are never shifted.
+    """
     kies = {}
     for key, cfg in KIE_DISTRIBUTIONS.items():
-        if key in freeze:
-            kies[key] = freeze[key]
-        elif cfg['dist'] == 'uniform':
-            kies[key] = rng.uniform(cfg['low'], cfg['high'])
+        if cfg['dist'] == 'uniform':
+            drawn = rng_kie.uniform(cfg['low'], cfg['high'])
         elif cfg['dist'] == 'normal':
-            kies[key] = rng.normal(cfg['mean'], cfg['std'])
+            drawn = rng_kie.normal(cfg['mean'], cfg['std'])
+        kies[key] = freeze[key] if key in freeze else drawn
     return kies
 
 
@@ -64,7 +67,10 @@ def run_config(name: str, freeze: dict, data, seed=SEED) -> dict:
     print(f"  Frozen: {list(freeze.keys()) if freeze else 'none'}")
     print(f"{'='*60}")
 
+    # Use separate RNG streams: one for KIE, one for data/source signatures
+    # This ensures freezing a KIE parameter never shifts the data RNG stream
     rng = np.random.default_rng(seed)
+    rng_kie = np.random.default_rng(seed + 1000)
     n = data.n_years
     years = data.model_years
     CH4 = data.CH4_global
@@ -85,7 +91,7 @@ def run_config(name: str, freeze: dict, data, seed=SEED) -> dict:
         if (k+1) % 500 == 0:
             print(f"    iter {k+1}/{NI}")
 
-        kies = custom_sample_KIE(rng, freeze)
+        kies = custom_sample_KIE(rng_kie, freeze)
         KIE_13C, KIE_D = compute_bulk_KIE(kies, SINK_FRACTIONS_GLOBAL)
         KIE_13C_vals[k] = KIE_13C
         KIE_D_vals[k] = KIE_D
