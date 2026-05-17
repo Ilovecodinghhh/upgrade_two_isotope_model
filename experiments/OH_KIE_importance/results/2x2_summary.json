@@ -1,0 +1,120 @@
+{
+  "ALL_SAMPLED": {
+    "name": "ALL_SAMPLED",
+    "frozen_keys": [],
+    "sigma_ff_c13": 31.01,
+    "mean_ff_c13": 177.7,
+    "trend_ff_c13": 10.4,
+    "trend_ff_c13_std": 4.23,
+    "sigma_ff_dD": 39.15,
+    "mean_ff_dD": 88.8,
+    "trend_ff_dD": 4.99,
+    "trend_ff_dD_std": 9.43,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 4.5
+  },
+  "FIX_OH13C": {
+    "name": "FIX_OH13C",
+    "frozen_keys": [
+      "OH_13C"
+    ],
+    "sigma_ff_c13": 28.08,
+    "mean_ff_c13": 178.1,
+    "trend_ff_c13": 10.42,
+    "trend_ff_c13_std": 4.15,
+    "sigma_ff_dD": 38.81,
+    "mean_ff_dD": 88.9,
+    "trend_ff_dD": 4.9,
+    "trend_ff_dD_std": 9.59,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 4.5
+  },
+  "FIX_OHD": {
+    "name": "FIX_OHD",
+    "frozen_keys": [
+      "OH_D"
+    ],
+    "sigma_ff_c13": 29.41,
+    "mean_ff_c13": 178.4,
+    "trend_ff_c13": 10.43,
+    "trend_ff_c13_std": 4.16,
+    "sigma_ff_dD": 33.36,
+    "mean_ff_dD": 87.9,
+    "trend_ff_dD": 4.83,
+    "trend_ff_dD_std": 9.46,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 3.1
+  },
+  "FIX_BOTH_OH": {
+    "name": "FIX_BOTH_OH",
+    "frozen_keys": [
+      "OH_13C",
+      "OH_D"
+    ],
+    "sigma_ff_c13": 28.05,
+    "mean_ff_c13": 177.9,
+    "trend_ff_c13": 10.4,
+    "trend_ff_c13_std": 4.14,
+    "sigma_ff_dD": 33.59,
+    "mean_ff_dD": 88.0,
+    "trend_ff_dD": 4.84,
+    "trend_ff_dD_std": 9.46,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 3.2
+  },
+  "ALL_KIE_FIXED": {
+    "name": "ALL_KIE_FIXED",
+    "frozen_keys": [
+      "OH_13C",
+      "OH_D",
+      "Cl_13C",
+      "Cl_D",
+      "Strat_13C",
+      "Strat_D",
+      "Soil_13C",
+      "Soil_D"
+    ],
+    "sigma_ff_c13": 27.7,
+    "mean_ff_c13": 177.8,
+    "trend_ff_c13": 10.4,
+    "trend_ff_c13_std": 4.14,
+    "sigma_ff_dD": 33.37,
+    "mean_ff_dD": 87.9,
+    "trend_ff_dD": 4.85,
+    "trend_ff_dD_std": 9.46,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 3.1
+  },
+  "OH13C_SAUERESSIG": {
+    "name": "OH13C_SAUERESSIG",
+    "frozen_keys": [
+      "OH_13C"
+    ],
+    "sigma_ff_c13": 26.79,
+    "mean_ff_c13": 196.9,
+    "trend_ff_c13": 11.41,
+    "trend_ff_c13_std": 4.13,
+    "sigma_ff_dD": 38.81,
+    "mean_ff_dD": 88.9,
+    "trend_ff_dD": 4.9,
+    "trend_ff_dD_std": 9.59,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 4.5
+  },
+  "OH13C_CANTRELL": {
+    "name": "OH13C_CANTRELL",
+    "frozen_keys": [
+      "OH_13C"
+    ],
+    "sigma_ff_c13": 29.37,
+    "mean_ff_c13": 159.4,
+    "trend_ff_c13": 9.43,
+    "trend_ff_c13_std": 4.18,
+    "sigma_ff_dD": 38.81,
+    "mean_ff_dD": 88.9,
+    "trend_ff_dD": 4.9,
+    "trend_ff_dD_std": 9.59,
+    "neg_c13_pct": 0.0,
+    "neg_dD_pct": 4.5
+  }
+}
