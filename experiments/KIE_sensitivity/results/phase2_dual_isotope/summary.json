@@ -2,37 +2,37 @@
   {
     "label": "A_saueressig",
     "oh13c_mode": "saueressig",
-    "FF_trend_mean": 11.142784717875568,
-    "FF_trend_std": 32.44080849537395,
-    "FF_pct_positive": 57.49999999999999,
-    "Mic_trend_mean": 60.47419507075893,
-    "Mic_trend_std": 22.644670895286517,
-    "Mic_pct_positive": 99.0,
+    "FF_trend_mean": 1.653340812420915,
+    "FF_trend_std": 28.215291361451083,
+    "FF_pct_positive": 54.50000000000001,
+    "Mic_trend_mean": 69.42838814738454,
+    "Mic_trend_std": 19.807662833236687,
+    "Mic_pct_positive": 99.9,
     "neg_pct": 0.0,
-    "mean_residual": 1038468.1440612627
+    "mean_residual": 976811.4858653157
   },
   {
     "label": "B_cantrell",
     "oh13c_mode": "cantrell",
-    "FF_trend_mean": 21.214456238396846,
-    "FF_trend_std": 39.163279176531304,
-    "FF_pct_positive": 69.1,
-    "Mic_trend_mean": 54.257586560618975,
-    "Mic_trend_std": 27.148082405852787,
-    "Mic_pct_positive": 97.39999999999999,
+    "FF_trend_mean": 3.626464544074873,
+    "FF_trend_std": 32.62873785752638,
+    "FF_pct_positive": 53.1,
+    "Mic_trend_mean": 68.63725094861722,
+    "Mic_trend_std": 22.841571870712706,
+    "Mic_pct_positive": 99.9,
     "neg_pct": 0.0,
-    "mean_residual": 591337.9227715742
+    "mean_residual": 544200.2053733158
   },
   {
     "label": "C_sampled",
     "oh13c_mode": "sampled",
-    "FF_trend_mean": 15.903712156549004,
-    "FF_trend_std": 36.14177760844402,
-    "FF_pct_positive": 63.0,
-    "Mic_trend_mean": 57.554568436666116,
-    "Mic_trend_std": 25.111514970881114,
-    "Mic_pct_positive": 98.0,
+    "FF_trend_mean": 2.466686304006393,
+    "FF_trend_std": 30.710747163877347,
+    "FF_pct_positive": 54.6,
+    "Mic_trend_mean": 69.1488320890871,
+    "Mic_trend_std": 21.51646851858838,
+    "Mic_pct_positive": 99.9,
     "neg_pct": 0.0,
-    "mean_residual": 802014.5595770322
+    "mean_residual": 747488.3717513222
   }
 ]

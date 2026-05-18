@@ -97,10 +97,10 @@
     "cantrell": {
       "bias_unfilt": -17.82543646398712,
       "rmse_unfilt": 21.194667622936468,
-      "bias_filt": -17.373106297188137,
-      "rmse_filt": 20.807041779037895,
+      "bias_filt": -17.37264875259864,
+      "rmse_filt": 20.80676741087405,
       "n_good_iters": 392,
-      "agreement_rate": 0.39260869565217393
+      "agreement_rate": 0.39265217391304347
     }
   }
 }
