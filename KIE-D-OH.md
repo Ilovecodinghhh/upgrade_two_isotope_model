@@ -27,6 +27,14 @@ As summarized in `Fujita2025JGR_SI` (line 94):
 
 The DeMore (1993) value is widely regarded as an outlier. When used to compute a sink-weighted total KIE^D, it produces an anomalously low value of ~1.20 (`Fujita2025JGR_SI` line 94), far below the ~1.27–1.30 range obtained with the other three measurements.
 
+### Theoretical Context: Melissas & Truhlar (1993)
+
+Melissas & Truhlar (1993) calculated the D KIE for the **fully deuterated** reaction OH + ¹²CD₄ using ab initio variational transition state theory (IVTST/SCT). Their result at 293 K is k_H/k_D = **8.70** — but this is for CD₄, not the singly-deuterated CH₃D relevant to atmospheric applications. The CD₄ KIE is not directly convertible to the CH₃D KIE (the relationship involves symmetry factors, tunneling, and vibrational mode coupling).
+
+However, the paper provides important physical insight: it decomposes the D KIE into contributions from tunneling (η_tun = 1.15), translation (1.18), rotation (1.82), vibration (2.80), and potential energy (1.26) at 293 K. The D KIE is large because **all contributions are cumulatively normal** (> 1), unlike the ¹³C KIE where inverse vibrational/rotational terms nearly cancel the normal contributions. The significant tunneling contribution (15% at 293 K, rising at lower T) may partly explain the ~1.5% spread among experimental CH₃D measurements — different experimental conditions and temperature corrections propagate through this tunneling sensitivity.
+
+See `ImportantReferences/Melissas1993ACP/` for full paper.
+
 ### Full reference details
 
 - **Gierczak et al. (1997)**: "Rate Coefficients for the Reactions of Hydroxyl Radicals with Methane and Deuterated Methanes," *J. Phys. Chem. A*, 101(17), 3125–3134. doi:10.1021/jp963892r (`Fujita2025JGR_SI` line 194)

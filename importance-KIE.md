@@ -14,12 +14,15 @@ Key finding: **In the coupled 3×3, OH-D KIE dominates the FF uncertainty spread
 
 ### 2.1 OH-¹³C KIE: The Saueressig–Cantrell Controversy
 
-| Study | KIE^C_OH | ε_OH = (α−1)×1000 |
-|-------|:--------:|:------------------:|
-| Saueressig et al. (2001) | **1.0039** | 3.9‰ |
-| Cantrell et al. (1990) | **1.0054** | 5.4‰ |
+| Study | KIE^C_OH | ε_OH = (α−1)×1000 | Type |
+|-------|:--------:|:------------------:|:----:|
+| Cantrell et al. (1990) | **1.0054** | 5.4‰ | Experimental |
+| **Melissas & Truhlar (1993)** | **1.005** | 5.0‰ | **Theoretical (VTST)** |
+| Saueressig et al. (2001) | **1.0039** | 3.9‰ | Experimental |
 
-**Δε = 1.5‰** — a 38% relative difference in fractionation factor.
+**Δε = 1.5‰** — a 38% relative difference in fractionation factor between the two experimental values.
+
+**Theoretical support for Cantrell:** Melissas & Truhlar (1993) calculated k₁₂/k₁₃ using ab initio variational transition state theory (IVTST/SCT) at the MP-SAC2//MP2/adj-cc-pVTZ level. Their result — **1.005 at 273–353 K** — agrees excellently with Cantrell's experimental value and is temperature-independent across the entire atmospheric range. This provides independent first-principles evidence favoring the higher end of the KIE range, predating the Saueressig measurement by 8 years. Notably, Basu et al. (2022) stated "there is no independent evidence supporting one set of coefficients over another" — the Melissas & Truhlar calculation challenges this assessment.
 
 This repository samples OH-¹³C as U(1.0039, 1.0054) (`common.py` line 104).
 
@@ -225,7 +228,28 @@ The δD row entries (fD) are ~100× smaller in absolute scale than the mass bala
 
 In contrast, OH-¹³C KIE perturbs the ¹³C row, which is intermediate in scale between mass balance and D. This row is better conditioned, so KIE perturbations shift the entire solution (level) without inflating the spread.
 
-### 6.2 Fractionation Budget Comparison
+### 6.2 Molecular-Level Decomposition (Melissas & Truhlar 1993)
+
+Melissas & Truhlar (1993) decomposed the KIEs for OH + CH₄ into individual physical contributions using variational transition state theory. Their factorization at 293 K explains **why** the ¹³C and D KIEs differ so dramatically:
+
+| Factor | D KIE (OH+CD₄) | ¹³C KIE (OH+¹³CH₄) |
+|--------|:---------------:|:-------------------:|
+| Tunneling (η_tun) | 1.15 | 1.024 |
+| Translation (η_trans) | 1.18 | 1.047 |
+| Rotation (η_rot) | 1.82 | 0.971 |
+| Vibration (η_vib) | 2.80 | 0.903 |
+| Potential (η_pot) | 1.26 | 1.069 |
+| **Total KIE** | **8.70** | **1.005** |
+
+*Note: The D KIE here is for fully deuterated CD₄, not CH₃D used in atmospheric applications.*
+
+The ¹³C KIE is close to unity because **inverse vibrational and rotational contributions (< 1) nearly cancel the normal translational and tunneling contributions (> 1)**. The D KIE is large because all factors are cumulatively normal.
+
+Two implications for our variance decomposition:
+1. **The ¹³C KIE's near-unity value** means even small experimental disagreements (1.0039 vs 1.0054) represent a significant fraction of the total effect — explaining why the Saueressig–Cantrell choice produces a 17–37 Tg/yr level shift.
+2. **The D KIE's sensitivity to tunneling** (η_tun varies with theoretical treatment) may partly explain the ~1.5% spread among experimental D-KIE measurements, which drives the 29% variance contribution.
+
+### 6.3 Fractionation Budget Comparison
 
 | System | Source-to-atm shift | KIE^OH uncertainty (Δε) | Δε / shift |
 |--------|:-------------------:|:-----------------------:|:----------:|
@@ -234,7 +258,7 @@ In contrast, OH-¹³C KIE perturbs the ¹³C row, which is intermediate in scale
 
 Despite OH-¹³C having a larger *relative* KIE uncertainty (25% vs 14% of the fractionation budget), the one-box 3×3 system is more sensitive to OH-D because the δD row is the binding constraint in the ill-conditioned matrix.
 
-### 6.3 Comparison with Two-Box Results
+### 6.4 Comparison with Two-Box Results
 
 The `KIE_immunity` experiment (two-box, WLS formulation) found KIE accounts for ~25% of FF variance, with OH-¹³C driving the Saueressig/Cantrell sign-change controversy. The difference from our one-box result arises because:
 
@@ -244,7 +268,7 @@ The `KIE_immunity` experiment (two-box, WLS formulation) found KIE accounts for 
 
 In the one-box 3×3, the δD row carries more relative weight because all three sources are free, and the δD row provides the decisive third equation.
 
-### 6.4 Why the 2×2 Confirms the Physical Intuition
+### 6.5 Why the 2×2 Confirms the Physical Intuition
 
 The 2×2 results provide crucial validation: when isotopes are solved independently, each system is sensitive **exclusively** to its own OH KIE. OH-¹³C accounts for 12% of δ¹³C-derived FF variance and exactly 0% of δD-derived FF variance. OH-D accounts for 28% of δD-derived FF variance and exactly 0% of δ¹³C-derived FF variance.
 
@@ -358,4 +382,6 @@ From `rel/data/` MC ensembles:
 | Thanwerdas et al. (2024) | `ImportantReferences/Thanwerdas2024ACP/` |
 | Fujita et al. (2025) SI | `ImportantReferences/Fujita2025JGR_SI/` |
 | Riddell-Young et al. (2025) | `ImportantReferences/Riddell-Young2025PNAS/` |
+| Melissas & Truhlar (1993) | `ImportantReferences/Melissas1993ACP/` |
+| OH-¹³C KIE survey | `KIE_Used_Previous_Study.md` |
 

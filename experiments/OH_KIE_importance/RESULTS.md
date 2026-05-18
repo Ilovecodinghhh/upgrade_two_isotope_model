@@ -217,6 +217,8 @@ The δ¹³C-only inversion amplifies the Saueressig–Cantrell shift to **37.6 T
 
 5. **Source signatures dominate in all architectures** (69–84% of variance). KIE contributes 16–31%. Non-OH KIE (Cl, Strat, Soil) contributes only 1–4%. Lifetime was not varied in this experiment but contributes <1% based on the KIE_immunity experiment.
 
+6. **Theoretical evidence favors Cantrell.** Melissas & Truhlar (1993) calculated k₁₂/k₁₃ = 1.005 at 273–353 K using ab initio variational transition state theory (IVTST/SCT), in excellent agreement with Cantrell (1.0054) and notably higher than Saueressig (1.0039). If the Cantrell value is correct, the 3×3 FF estimate shifts to ~55 Tg/yr (vs ~38 Tg/yr for Saueressig). Their physical decomposition also explains why OH-D has ~60× larger fractionation than OH-¹³C: for ¹³C, inverse vibrational/rotational contributions nearly cancel the normal translational/tunneling terms, producing a KIE near unity; for D, all contributions are cumulatively normal. See `ImportantReferences/Melissas1993ACP/`.
+
 ---
 
 ## 6. Figure Inventory

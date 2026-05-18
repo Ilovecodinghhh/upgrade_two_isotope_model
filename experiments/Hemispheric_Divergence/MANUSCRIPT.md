@@ -117,7 +117,7 @@ Sink-specific KIEs are sampled from published laboratory measurements:
 | Stratospheric | N(1.012, 0.001) | N(1.179, 0.030) | 0.05 / 0.04 |
 | Soil uptake | N(1.018, 0.002) | N(1.083, 0.020) | 0.04 / 0.04 |
 
-The OH ¹³C KIE is sampled from a uniform distribution spanning the Cantrell et al. (1990) and Saueressig et al. (2001) values, as neither can be excluded on current evidence (Basu et al., 2022). This is a crucial choice, as the KIE value determines the sign of the post-2007 FF trend (Section 3.4).
+The OH ¹³C KIE is sampled from a uniform distribution spanning the Cantrell et al. (1990) and Saueressig et al. (2001) values, as neither can be excluded on current evidence (Basu et al., 2022), though Melissas & Truhlar (1993) calculated k₁₂/k₁₃ = 1.005 at 273–353 K using ab initio variational transition state theory, in excellent agreement with Cantrell and above Saueressig. This is a crucial choice, as the KIE value determines the sign of the post-2007 FF trend (Section 3.4).
 
 ### 2.7 Monte Carlo Protocol
 

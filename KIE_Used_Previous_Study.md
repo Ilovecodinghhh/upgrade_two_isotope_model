@@ -24,6 +24,12 @@ The two contested values:
 | **Worden et al. 2017 (Nature Comm)** | **ε = −6.8‰** (sink-weighted, fixed) | One-box δ¹³C model | Does not decompose into individual reaction KIEs. −6.8‰ is broadly consistent with **Saueressig**. |
 | **Fujita et al. 2025 (JGR)** | **Net KIE_C = 1.0065 [1.005–1.008]** | Bayesian inversion, CH₄ + δ¹³C + δD + Δ¹⁴C | Treats net sink KIE as a free Bayesian parameter. Prior range spans from slightly above Saueressig to slightly above Cantrell territory. |
 
+## Theoretical Calculations
+
+| Study | OH-¹³C KIE Calculated | Method | Notes |
+|-------|----------------------|--------|-------|
+| **Melissas & Truhlar 1993 (J. Chem. Phys.)** | **1.005 at 273–353 K** | Ab initio VTST (IVTST/SCT), MP-SAC2//MP2/adj-cc-pVTZ | Interpolated variational transition state theory with multidimensional tunneling. Calculated k₁₂/k₁₃ = 1.005 at all atmospheric temperatures (250–353 K), in "excellent agreement" with Cantrell et al. (1990). Temperature-independent. **Provides independent first-principles support for the Cantrell value.** Predates Saueressig (2001) by 8 years. Also showed that the ¹³C KIE's near-unity value arises from cancellation of inverse vibrational/rotational contributions against normal translational/tunneling contributions. See `ImportantReferences/Melissas1993ACP/`. |
+
 ## Studies That Do Not Use a ¹³C KIE (Concentration-Only or OH-Focused)
 
 | Study | Approach | Why KIE Is N/A |
@@ -47,6 +53,7 @@ Of the **11 studies that use a ¹³C KIE** in their isotope model:
 | **Net ε distribution (sidesteps the choice)** | 1 | Schwietzke 2016 |
 | **Explicitly test multiple values** | 3 | Chandra 2024, He 2026 (JGR), Yu 2026 |
 | **Treat as free Bayesian parameter** | 1 | Fujita 2025 |
+| **Theoretical support for Cantrell** | 1 | Melissas & Truhlar 1993 (ab initio VTST → 1.005) |
 
 ### Key Observations
 
@@ -54,4 +61,5 @@ Of the **11 studies that use a ¹³C KIE** in their isotope model:
 2. **Riddell-Young 2025 uses Cantrell**, not Saueressig — their SI Table S3 explicitly lists OH KIE = 1.0054 (corrected from earlier analysis).
 3. **Yu et al. 2026's third test value (1.0061)** is NOT Cantrell — it is the upper bound of the literature range from Gierczak et al. (1997). Despite testing three values, they adopt Saueressig (1.0039).
 4. **Schwietzke 2016 does not pick an OH KIE** — they use a net fractionation distribution from Miller (2005), effectively marginalizing over the uncertainty.
-5. **No study has used a systematic observational discriminant** to choose between the two values — they either pick one, test both without resolving the dispute, or marginalize over the uncertainty.
+5. **Melissas & Truhlar (1993) provide independent theoretical evidence favoring Cantrell.** Their ab initio variational transition state theory calculation yields k₁₂/k₁₃ = 1.005 at 273–353 K, in excellent agreement with Cantrell (1.0054) and notably higher than Saueressig (1.0039). This contradicts Basu et al.'s (2022) statement that "there is no independent evidence supporting one set of coefficients over another." The theoretical calculation predates Saueressig's measurement by 8 years.
+6. **No study has used a systematic observational discriminant** to choose between the two values — they either pick one, test both without resolving the dispute, or marginalize over the uncertainty.
