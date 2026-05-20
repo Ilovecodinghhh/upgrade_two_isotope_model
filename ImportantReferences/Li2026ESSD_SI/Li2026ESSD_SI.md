@@ -1,0 +1,113 @@
+# Global natural wetland methane emissions (2000-2025)
+
+5 Mengze Li¹, ², Robert B. Jackson²˒³, Marielle Saunois⁴, Philippe Ciais⁴, Ben Poulter⁵, Josep G. Canadell⁶, Prabir K. Patra⁷˒⁸, Hanqin Tian⁹˒¹⁰, Zhen Zhang¹¹, Etienne Fluet-Chouinard¹², Zutao Ouyang¹³, Ting Zhang¹, David J. Beerling¹⁴, Dmitry A. Belikov¹⁵, Philippe Bousquet⁴, Danilo Custodio⁴, Naveen Chandra⁷, Xinyu Dou², Nicola Gedney¹⁶, Peter O. Hopcroft¹⁷, Alison M. Hoyt², Kazuhito Ichii¹⁵˒¹⁸, Akihito Ito¹⁹, Atul K. Jain²⁰, Katherine Jensen²¹, Fortunat Joos²², Thomas Kleinen²³, Masayuki   
+10 Kondo⁸˒²⁴, Fa Li², Tingting Li²⁵, Xiangyu Liu²⁶, Shamil Maksyutov²⁷, Avni Malhotra²⁸, Adrien Martinez⁴, Kyle McDonald²¹, Joe R. Melton²⁹, Paul Miller³⁰, Jurek Müller²², Yosuke Niwa²⁷˒³¹, Shufen Pan⁹, Shushi Peng³², Changhui Peng³³˒³⁴, Zhangcai Qin³⁵, Peter Raymond³⁶, William Riley³⁷, Arjo Segers³⁸, Rona L. Thompson¹⁶,Aki Tsuruta³⁹, Xi Yi⁴, Kunxiaojia Yuan⁴⁰, Wenxin Zhang³⁰, Bo Zheng⁴¹˒⁴², Qing Zhu³⁷, Qiuan Zhu⁴³, Qianlai Zhuang²⁶
+
+1 Department of Geography, National University of Singapore, Singapore.
+
+2 Stanford Doerr School of Sustainability, Department of Earth System Science, Stanford, CA, USA.
+
+3 Department of Earth System Science, Woods Institute for the Environment, and Precourt Institute for Energy, Stanford University, Stanford, CA, USA.
+
+4 Laboratoire des Sciences du Climat et de l'Environnement (LSCE), CEA, CNRS, UVSQ, Université Paris Saclay, Gif-sur-Yvette, France.
+
+5 Spark Climate Solutions, San Francisco, CA, USA.
+
+6 Global Carbon Project, CSIRO Environment, ACT 2601, Australia.
+
+8 Seto Inland Sea Carbon Neutral Research Center (S-CNC), Hiroshima University, Higashi-Hiroshima, Hiroshima 739-   
+8529, Japan.
+
+45 23 Max Planck Institute for Meteorology, Hamburg, Germany.
+
+Development Program (IEDP), Graduate School of Innovation and Practice for Smart Society (SmaSo), Hiroshima University, Higashi-Hiroshima, Hiroshima 739-8529, Japan.
+
+25 Key Laboratory of Atmospheric Environment and Extreme Meteorology, Institute of Atmospheric Physics, Chinese Academy of Sciences, Beijing, China.
+
+26 Department of Earth, Atmospheric, and Planetary Sciences, Department of Agronomy, Purdue University, West Lafayette, IN, USA.
+
+27 Center for Global Environmental Research, National Institute for Environmental Studies, Tsukuba, Ibaraki, Japan.
+
+28 Biological Sciences Division, Pacific Northwest National Laboratory, Richland, WA, USA.
+
+29 Climate Research Division, Environment and Climate Change Canada, Victoria, BC, Canada.
+
+30 Department of Physical Geography and Ecosystem Science, Lund University, Sölvegatan 12, 223 62, Lund, Sweden.
+
+31 Meteorological Research Institute (MRI), Nagamine 1-1, Tsukuba, Ibaraki 305-0052, Japan.
+
+32 Sino-French Institute for Earth System Science, College of Urban and Environmental Sciences, Peking University, Beijing 100871, China
+
+33 Department of Biology Sciences, University of Quebec at Montreal, C.P. 8888, Succ. Centre-Ville, Montreal, QC H3C 3P8, Canada.
+
+34 College of Geographic Science, Hunan Normal University, Changsha 410081, China.
+
+35 School of Atmospheric Sciences, Sun Yat-sen University, and Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai), Zhuhai 519000, China.
+
+36 School of the Environment, Yale University, New Haven, CT, USA.
+
+37 Climate and Ecosystem Sciences Division, Lawrence Berkeley National Laboratory, Berkeley, CA, USA.
+
+38 TNO, Department of Climate Air & Sustainability, P.O. Box 80015, NL-3508-TA, Utrecht, the Netherlands.
+
+39 Finnish Meteorological Institute, P.O. Box 503, 00101, Helsinki, Finland.
+
+40 Department of Earth and Atmospheric Sciences, University of Houston, Houston, TX, USA.
+
+41 Institute of Environment and Ecology, Tsinghua Shenzhen International Graduate School, Tsinghua University, Shenzhen 518055, China.
+
+42 State Environmental Protection Key Laboratory of Sources and Control of Air Pollution Complex, Beijing 100084, China.
+
+43 College of Hydrology and Water Resources, Hohai University, Nanjing 210098, China.
+
+Correspondence to: Mengze Li (mengze@nus.edu.sg)
+
+Table S1. Bottom-up (BU) models used in this study.
+<table><tr><td rowspan=1 colspan=1>BU model</td><td rowspan=1 colspan=1>Wetland extent mode</td><td rowspan=1 colspan=1>e|Climate forcings used (each as an individual estimate)</td></tr><tr><td rowspan=1 colspan=1>CLASSIC</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>ELM-ECA</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>ISAM</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>JSBACH</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1> JULES</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>LPJ-MPI</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>LPJ-WSL</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>LPX-Berm</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>ORCHIDEE</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>SDGVM</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr><tr><td rowspan=1 colspan=1>VISIT</td><td rowspan=1 colspan=1>Prognostic</td><td rowspan=1 colspan=1>CRU; GSWP3-W5E5</td></tr></table>
+
+Table S2. Top-down (TD) atmospheric inversions used in this study.
+<table><tr><td rowspan=1 colspan=1>Run ID In</td><td rowspan=1 colspan=1>version system</td><td rowspan=1 colspan=1> Observation constrainttV</td><td rowspan=1 colspan=1>ariant label*</td></tr><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>CIF-LMDz</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv1</td></tr><tr><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>CIF-LMDz</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv2</td></tr><tr><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>CTE</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv1</td></tr><tr><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>CTE</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv2</td></tr><tr><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>MIROC4-ACTM</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv1</td></tr><tr><td rowspan=1 colspan=1>6</td><td rowspan=1 colspan=1>MIROC4-ACTM</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv2</td></tr><tr><td rowspan=1 colspan=1>7</td><td rowspan=1 colspan=1>NIES</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv1</td></tr><tr><td rowspan=1 colspan=1>8</td><td rowspan=1 colspan=1>NIES</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv2</td></tr><tr><td rowspan=1 colspan=1>9</td><td rowspan=1 colspan=1>NISMON-CH4</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv1</td></tr><tr><td rowspan=1 colspan=1>10</td><td rowspan=1 colspan=1>NISMON-CH4</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv2</td></tr><tr><td rowspan=1 colspan=1>11</td><td rowspan=1 colspan=1>PYVAR-LMDz</td><td rowspan=1 colspan=1>GOSAT</td><td rowspan=1 colspan=1>inv1</td></tr><tr><td rowspan=1 colspan=1>12</td><td rowspan=1 colspan=1>PYVAR-LMDz</td><td rowspan=1 colspan=1>SURF</td><td rowspan=1 colspan=1>inv2</td></tr><tr><td rowspan=1 colspan=1>13</td><td rowspan=1 colspan=1>NIES</td><td rowspan=1 colspan=1>GOSAT</td><td rowspan=1 colspan=1>inv1</td></tr></table>
+
+\*inv1 and inv2 are two inversion rounds differing in prior anthropogenic emission choices (EDGARD v6 vs GAINS for fossil fuel emissions) and in OH assumptions.
+
+Table S3. XGBoost hyperparameter configurations.
+<table><tr><td rowspan=1 colspan=1>ComboID</td><td rowspan=1 colspan=1>Learningrate</td><td rowspan=1 colspan=1> Max treedepth</td><td rowspan=1 colspan=1>Min childweight</td><td rowspan=1 colspan=1> Subsampleratio</td><td rowspan=1 colspan=1>Column subsample pertree</td><td rowspan=1 colspan=1>L2 regularization</td></tr><tr><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>0.10</td><td rowspan=1 colspan=1>6</td><td rowspan=1 colspan=1>0.00</td><td rowspan=1 colspan=1>0.98</td><td rowspan=1 colspan=1>0.98</td><td rowspan=1 colspan=1>1.0</td></tr><tr><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>0.10</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>0.25</td><td rowspan=1 colspan=1>0.95</td><td rowspan=1 colspan=1>0.95</td><td rowspan=1 colspan=1>1.0</td></tr><tr><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>0.07</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>0.50</td><td rowspan=1 colspan=1>0.90</td><td rowspan=1 colspan=1>0.90</td><td rowspan=1 colspan=1>1.5</td></tr><tr><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>0.07</td><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>0.50</td><td rowspan=1 colspan=1>0.90</td><td rowspan=1 colspan=1>0.90</td><td rowspan=1 colspan=1>1.5</td></tr><tr><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>0.05</td><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>1.00</td><td rowspan=1 colspan=1>0.85</td><td rowspan=1 colspan=1>0.85</td><td rowspan=1 colspan=1>2.0</td></tr><tr><td rowspan=1 colspan=1>6</td><td rowspan=1 colspan=1>0.05</td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>1.00</td><td rowspan=1 colspan=1>0.85</td><td rowspan=1 colspan=1>0.80</td><td rowspan=1 colspan=1>2.0</td></tr></table>
+
+![](images/be8e562dd7084c4dbcd3bbba34bbdfbddc9be5c6aa30ca71a00327c42ec08f21.jpg)  
+Figure S1. Reconstruction skills across regions by emission magnitude. Mean grid-cell $\mathtt { R } ^ { 2 }$ and RMSE on the test periods, summarized within emission percentile bins defined from grid-cell wetland CH4 emissions during 2000-2020 from GMB estimates. 0-10% denotes the highest emitting grid cells. Error bars indicate 95% CI.
+
+![](images/aa680e4afb5da27688077ac59302dc2f1cdb530d66a8355064e37d1fc06eabbe.jpg)  
+Figure S2. Reconstruction skills across 18 geographical regions. Mean grid-cell $\mathtt { R } ^ { 2 }$ and RMSE on the test periods, summarized within emission percentile bins defined from grid-cell wetland CH4 emissions during 2000-2020 from GMB estimates. 0-10% denotes the highest emitting grid cells. Error bars indicate 95% CI.
+
+![](images/de5c68ffa8531a9338bc2f5c1413bca32096189967bb1fd42a2dc0bfbe98fe7d.jpg)  
+Figure S3. Mean monthly $\mathtt { R } ^ { 2 }$ over test periods at five latitude bands. Dots and error bars indicate the mean and 95% CI.
+
+![](images/b67b637b1454b13dab9f8c717d5b97ebe00f14ed0037f69523d6f1dcc919bcdc.jpg)
+
+![](images/0d6cfd955e0e202f0fdc459c2f3d772bbc8ce0f7e34c17680bb3394080f4ddd5.jpg)
+
+![](images/866960190d249cc3b148c0db519e359c00886e8939aaee5ef2bc862c8a25207c.jpg)
+
+![](images/9a7e613bc60686efc8263bf49b955131dcaebe9c07a268b421094b7456c30963.jpg)
+
+![](images/b64847d464eeaf70739a9d060af54acd6c5ee571993e6a5ab1f22a6c71d2e4d9.jpg)  
+Figure S4. Mean monthly RMSE over test periods at five latitude bands. Dots and error bars indicate the mean and 95% CI.
+
+(a)Detrended global emissions (CH4\_GMB)  
+![](images/fe4d17e7b974a98c32c1402fbcab1d6c9a4c3598e94ba60db33cf7a4a75a93a3.jpg)
+
+(b)Detrended global emissions (CH4\_pred)  
+![](images/d6562eadbaa954164ee31eb9bc7e618626533682841a69baac7f3b6388ef9e6e.jpg)
+
+(c) Detrended emission difference (CH4\_pred-CH4\_GMB)  
+![](images/29160bbd124f51b73029f493fa046bec2374b3287d96fb5f7cbdde16beae3e1f.jpg)  
+Figure S5. Detrended anomaly comparison of global wetland $\mathrm { C H } _ { 4 }$ emissions from GMB models (CH4\_GMB) and predictions (CH4\_pred). Detrended anomalies are calculated by removing the best-fit linear trend from each time series for the period 2000-2020. Shaded areas indicate test periods used for out-of-sample evaluation.
+
+![](images/80b7cd560d5ad28ad89ac32e1d52554097219520f47afe4fad6ec3c4b231ded3.jpg)  
+Figure S6. Annual wetland CH4 emissions in five latitude bands. Annual mean emissions for global, 60- $9 0 ^ { \circ } \mathrm { N } , 3 0 \mathrm { - } 6 0 ^ { \circ } \mathrm { N } , 3 0 ^ { \circ } \mathrm { S } \mathrm { - } 3 0 ^ { \circ } \mathrm { N } .$ , and $9 0 { - } 3 0 ^ { \circ } \mathrm { S }$ from 2000-2025. Solid lines show model predictions of annual mean emissions and shaded areas indicate 95% CI. Dashed lines show GMB emission estimates.
+
+![](images/8df7c4232e2a20308c744c562d722c319059b396f4d701528c7354907c7526f4.jpg)  
+Figure S7. Monthly anomalies of wetland CH4 emissions at five latitude bands (2000-2025). For each band, anomalies are relative to the 2000-2025 linearly detrended seasonal climatology (least squares), using predicted wetland $\mathrm { C H } _ { 4 }$ emissions from the XGBoost models.
+
+![](images/3d5d0eea60f3f181231de1551133a7da0c61ff9d43f8bc6600fa57dde41023ee.jpg)  
+Figure S8. Annual wetland CH4 emissions for the remaining 12 regions. Same as Figure 6, but for the other 12 regions not included in Figure 6. Solid lines show model predictions of annual mean emissions and shaded areas indicate 95% CI. Dashed lines show GMB emission estimates (mean). Panel titles indicate the region code and region name, which correspond to the region definitions shown in Figure 4.
