@@ -1,0 +1,1131 @@
+{
+  "metadata": {
+    "description": "Site-specific \u03b4\u00b2H-CH\u2084 source signatures for KIE_sites experiment",
+    "primary_regression": "wetland_gs (Douglas 2021, wetlands, growing-season \u03b4\u00b2Hp)",
+    "oipc_source": "OIPC v3.1, Bowen & Revenaugh (2003)",
+    "date_built": "2026-05-20"
+  },
+  "sites": {
+    "ALT": {
+      "lat": 82.45,
+      "lon": -62.52,
+      "elev_m": 210.0,
+      "monthly_dD_precip": {
+        "Jan": -273.0,
+        "Feb": -287.0,
+        "Mar": -305.0,
+        "Apr": -250.0,
+        "May": -226.0,
+        "Jun": -185.0,
+        "Jul": -171.0,
+        "Aug": -176.0,
+        "Sep": -191.0,
+        "Oct": -252.0,
+        "Nov": -272.0,
+        "Dec": -286.0
+      },
+      "annual_mean_dD_precip": -239.5,
+      "growing_season_mean_dD_precip": -207.3,
+      "growing_season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -430.6,
+          "sigma": 27.8,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -207.3
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -424.6,
+          "sigma": 26.6,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -239.5
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -421.6,
+          "sigma": 28.0,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -239.5
+        },
+        "all_best": {
+          "predicted_dD_CH4": -403.2,
+          "sigma": 30.2,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -239.5
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -445.7,
+          "sigma": 36.1,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -239.5
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -430.6,
+        "sigma": 27.8,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -374.0,
+        "sigma": 10.0,
+        "band": ">60\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -374.0,
+        "sigma": 10.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "ZEP": {
+      "lat": 78.91,
+      "lon": 11.89,
+      "elev_m": 474.0,
+      "monthly_dD_precip": {
+        "Jan": -95.0,
+        "Feb": -95.0,
+        "Mar": -99.0,
+        "Apr": -90.0,
+        "May": -85.0,
+        "Jun": -89.0,
+        "Jul": -79.0,
+        "Aug": -79.0,
+        "Sep": -78.0,
+        "Oct": -87.0,
+        "Nov": -98.0,
+        "Dec": -91.0
+      },
+      "annual_mean_dD_precip": -88.8,
+      "growing_season_mean_dD_precip": -83.9,
+      "growing_season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -343.6,
+          "sigma": 24.0,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -83.9
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -338.0,
+          "sigma": 23.2,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -88.8
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -344.8,
+          "sigma": 24.8,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -88.8
+        },
+        "all_best": {
+          "predicted_dD_CH4": -336.9,
+          "sigma": 28.1,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -88.8
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -343.9,
+          "sigma": 28.4,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -88.8
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -343.6,
+        "sigma": 24.0,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -374.0,
+        "sigma": 10.0,
+        "band": ">60\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -374.0,
+        "sigma": 10.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "BRW": {
+      "lat": 71.32,
+      "lon": -156.61,
+      "elev_m": 11.0,
+      "monthly_dD_precip": {
+        "Jan": -191.0,
+        "Feb": -147.0,
+        "Mar": -213.0,
+        "Apr": -183.0,
+        "May": -178.0,
+        "Jun": -130.0,
+        "Jul": -120.0,
+        "Aug": -111.0,
+        "Sep": -115.0,
+        "Oct": -149.0,
+        "Nov": -174.0,
+        "Dec": -206.0
+      },
+      "annual_mean_dD_precip": -159.8,
+      "growing_season_mean_dD_precip": -140.9,
+      "growing_season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -383.8,
+          "sigma": 25.4,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -140.9
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -378.8,
+          "sigma": 24.5,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -159.8
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -381.0,
+          "sigma": 26.0,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -159.8
+        },
+        "all_best": {
+          "predicted_dD_CH4": -368.1,
+          "sigma": 28.9,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -159.8
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -391.9,
+          "sigma": 31.4,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -159.8
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -383.8,
+        "sigma": 25.4,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -374.0,
+        "sigma": 10.0,
+        "band": ">60\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -383.8,
+        "sigma": 25.4,
+        "source": "OIPC_regression"
+      }
+    },
+    "CBA": {
+      "lat": 55.21,
+      "lon": -162.72,
+      "elev_m": 25.0,
+      "monthly_dD_precip": {
+        "Jan": -105.0,
+        "Feb": -81.0,
+        "Mar": -76.0,
+        "Apr": -86.0,
+        "May": -61.0,
+        "Jun": -50.0,
+        "Jul": -44.0,
+        "Aug": -57.0,
+        "Sep": -49.0,
+        "Oct": -60.0,
+        "Nov": -82.0,
+        "Dec": -91.0
+      },
+      "annual_mean_dD_precip": -70.2,
+      "growing_season_mean_dD_precip": -58.1,
+      "growing_season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -325.5,
+          "sigma": 23.6,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -58.1
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -327.3,
+          "sigma": 23.0,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -70.2
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -335.3,
+          "sigma": 24.6,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -70.2
+        },
+        "all_best": {
+          "predicted_dD_CH4": -328.7,
+          "sigma": 28.0,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -70.2
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -331.4,
+          "sigma": 27.9,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -70.2
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -325.5,
+        "sigma": 23.6,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -324.0,
+        "sigma": 14.0,
+        "band": "30\u201360\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -325.5,
+        "sigma": 23.6,
+        "source": "OIPC_regression"
+      }
+    },
+    "MHD": {
+      "lat": 53.33,
+      "lon": -9.9,
+      "elev_m": 5.0,
+      "monthly_dD_precip": {
+        "Jan": -59.0,
+        "Feb": -61.0,
+        "Mar": -54.0,
+        "Apr": -50.0,
+        "May": -36.0,
+        "Jun": -27.0,
+        "Jul": -19.0,
+        "Aug": -16.0,
+        "Sep": -22.0,
+        "Oct": -41.0,
+        "Nov": -49.0,
+        "Dec": -54.0
+      },
+      "annual_mean_dD_precip": -40.7,
+      "growing_season_mean_dD_precip": -30.1,
+      "growing_season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -305.7,
+          "sigma": 23.3,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -30.1
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -310.3,
+          "sigma": 22.8,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -40.7
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -320.3,
+          "sigma": 24.4,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -40.7
+        },
+        "all_best": {
+          "predicted_dD_CH4": -315.7,
+          "sigma": 27.8,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -40.7
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -311.5,
+          "sigma": 27.3,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -40.7
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -305.7,
+        "sigma": 23.3,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -324.0,
+        "sigma": 14.0,
+        "band": "30\u201360\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -324.0,
+        "sigma": 14.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "AZR": {
+      "lat": 38.77,
+      "lon": -27.38,
+      "elev_m": 40.0,
+      "monthly_dD_precip": {
+        "Jan": -19.0,
+        "Feb": -18.0,
+        "Mar": -23.0,
+        "Apr": -6.0,
+        "May": -7.0,
+        "Jun": 6.0,
+        "Jul": 12.0,
+        "Aug": 7.0,
+        "Sep": 9.0,
+        "Oct": -11.0,
+        "Nov": -12.0,
+        "Dec": -12.0
+      },
+      "annual_mean_dD_precip": -6.2,
+      "growing_season_mean_dD_precip": 1.4,
+      "growing_season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -283.5,
+          "sigma": 23.2,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": 1.4
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -290.5,
+          "sigma": 22.6,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -6.2
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -302.7,
+          "sigma": 24.3,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -6.2
+        },
+        "all_best": {
+          "predicted_dD_CH4": -300.5,
+          "sigma": 27.8,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -6.2
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -288.2,
+          "sigma": 27.0,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -6.2
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -283.5,
+        "sigma": 23.2,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -324.0,
+        "sigma": 14.0,
+        "band": "30\u201360\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -324.0,
+        "sigma": 14.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "MLO": {
+      "lat": 19.54,
+      "lon": -155.58,
+      "elev_m": 3397.0,
+      "monthly_dD_precip": {
+        "Jan": -65.0,
+        "Feb": -71.0,
+        "Mar": -64.0,
+        "Apr": -54.0,
+        "May": -44.0,
+        "Jun": -38.0,
+        "Jul": -30.0,
+        "Aug": -30.0,
+        "Sep": -31.0,
+        "Oct": -44.0,
+        "Nov": -69.0,
+        "Dec": -62.0
+      },
+      "annual_mean_dD_precip": -50.2,
+      "growing_season_mean_dD_precip": -50.2,
+      "growing_season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -319.9,
+          "sigma": 23.5,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -50.2
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -315.8,
+          "sigma": 22.8,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -50.2
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -325.1,
+          "sigma": 24.4,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -50.2
+        },
+        "all_best": {
+          "predicted_dD_CH4": -319.9,
+          "sigma": 27.9,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -50.2
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -317.9,
+          "sigma": 27.4,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -50.2
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -319.9,
+        "sigma": 23.5,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "band": "<30\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "KUM": {
+      "lat": 19.56,
+      "lon": -154.82,
+      "elev_m": 3.0,
+      "monthly_dD_precip": {
+        "Jan": -11.0,
+        "Feb": -12.0,
+        "Mar": -15.0,
+        "Apr": -5.0,
+        "May": 3.0,
+        "Jun": 6.0,
+        "Jul": 4.0,
+        "Aug": 1.0,
+        "Sep": 6.0,
+        "Oct": 1.0,
+        "Nov": -9.0,
+        "Dec": -8.0
+      },
+      "annual_mean_dD_precip": -3.2,
+      "growing_season_mean_dD_precip": -3.2,
+      "growing_season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -286.8,
+          "sigma": 23.2,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -3.2
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -288.7,
+          "sigma": 22.6,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -3.2
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -301.1,
+          "sigma": 24.3,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -3.2
+        },
+        "all_best": {
+          "predicted_dD_CH4": -299.2,
+          "sigma": 27.8,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -3.2
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -286.2,
+          "sigma": 27.0,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -3.2
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -286.8,
+        "sigma": 23.2,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "band": "<30\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "ASC": {
+      "lat": -7.97,
+      "lon": -14.4,
+      "elev_m": 85.0,
+      "monthly_dD_precip": {
+        "Jan": 16.0,
+        "Feb": 16.0,
+        "Mar": 11.0,
+        "Apr": 8.0,
+        "May": 9.0,
+        "Jun": 9.0,
+        "Jul": 7.0,
+        "Aug": 7.0,
+        "Sep": 6.0,
+        "Oct": 11.0,
+        "Nov": 13.0,
+        "Dec": 14.0
+      },
+      "annual_mean_dD_precip": 10.6,
+      "growing_season_mean_dD_precip": 10.6,
+      "growing_season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -277.0,
+          "sigma": 23.2,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": 10.6
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -280.8,
+          "sigma": 22.6,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": 10.6
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -294.1,
+          "sigma": 24.3,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": 10.6
+        },
+        "all_best": {
+          "predicted_dD_CH4": -293.1,
+          "sigma": 27.8,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": 10.6
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -276.8,
+          "sigma": 27.0,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": 10.6
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -277.0,
+        "sigma": 23.2,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "band": "<30\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "SMO": {
+      "lat": -14.25,
+      "lon": -170.56,
+      "elev_m": 42.0,
+      "monthly_dD_precip": {
+        "Jan": -27.0,
+        "Feb": -34.0,
+        "Mar": -18.0,
+        "Apr": -25.0,
+        "May": -20.0,
+        "Jun": -17.0,
+        "Jul": -16.0,
+        "Aug": -11.0,
+        "Sep": -15.0,
+        "Oct": -19.0,
+        "Nov": -18.0,
+        "Dec": -35.0
+      },
+      "annual_mean_dD_precip": -21.2,
+      "growing_season_mean_dD_precip": -21.2,
+      "growing_season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -299.4,
+          "sigma": 23.3,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -21.2
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -299.1,
+          "sigma": 22.7,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -21.2
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -310.3,
+          "sigma": 24.3,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -21.2
+        },
+        "all_best": {
+          "predicted_dD_CH4": -307.1,
+          "sigma": 27.8,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -21.2
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -298.3,
+          "sigma": 27.1,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -21.2
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -299.4,
+        "sigma": 23.3,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "band": "<30\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "CGO": {
+      "lat": -40.68,
+      "lon": 144.69,
+      "elev_m": 94.0,
+      "monthly_dD_precip": {
+        "Jan": -1.0,
+        "Feb": -13.0,
+        "Mar": -10.0,
+        "Apr": -25.0,
+        "May": -37.0,
+        "Jun": -42.0,
+        "Jul": -44.0,
+        "Aug": -33.0,
+        "Sep": -35.0,
+        "Oct": -24.0,
+        "Nov": -16.0,
+        "Dec": -7.0
+      },
+      "annual_mean_dD_precip": -23.9,
+      "growing_season_mean_dD_precip": -13.7,
+      "growing_season_months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -294.2,
+          "sigma": 23.2,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -13.7
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -300.6,
+          "sigma": 22.7,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -23.9
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -311.7,
+          "sigma": 24.3,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -23.9
+        },
+        "all_best": {
+          "predicted_dD_CH4": -308.3,
+          "sigma": 27.8,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -23.9
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -300.1,
+          "sigma": 27.1,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -23.9
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -294.2,
+        "sigma": 23.2,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "band": "<30\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "source": "Douglas_zonal"
+      }
+    },
+    "SPO": {
+      "lat": -89.98,
+      "lon": -24.8,
+      "elev_m": 2810.0,
+      "monthly_dD_precip": {
+        "Jan": -354.0,
+        "Feb": -361.0,
+        "Mar": -404.0,
+        "Apr": -397.0,
+        "May": -418.0,
+        "Jun": -426.0,
+        "Jul": -424.0,
+        "Aug": -417.0,
+        "Sep": -428.0,
+        "Oct": -424.0,
+        "Nov": -405.0,
+        "Dec": -355.0
+      },
+      "annual_mean_dD_precip": -401.1,
+      "growing_season_mean_dD_precip": -385.7,
+      "growing_season_months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "predictions": {
+        "wetland_gs": {
+          "predicted_dD_CH4": -556.4,
+          "sigma": 36.8,
+          "regression_used": "Wetlands, growing-season \u03b4\u00b2Hp",
+          "dD_H2O_input": -385.7
+        },
+        "wetland_ann": {
+          "predicted_dD_CH4": -517.5,
+          "sigma": 32.5,
+          "regression_used": "Wetlands, annual \u03b4\u00b2Hp",
+          "dD_H2O_input": -401.1
+        },
+        "wetland_best": {
+          "predicted_dD_CH4": -504.1,
+          "sigma": 33.6,
+          "regression_used": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -401.1
+        },
+        "all_best": {
+          "predicted_dD_CH4": -474.3,
+          "sigma": 34.3,
+          "regression_used": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+          "dD_H2O_input": -401.1
+        },
+        "waldron1999": {
+          "predicted_dD_CH4": -554.7,
+          "sigma": 48.3,
+          "regression_used": "Waldron et al. (1999) global",
+          "dD_H2O_input": -401.1
+        }
+      },
+      "oipc_prediction": {
+        "dD_CH4": -556.4,
+        "sigma": 36.8,
+        "method": "wetland_gs"
+      },
+      "douglas_zonal": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "band": "<30\u00b0N"
+      },
+      "recommended": {
+        "dD_CH4": -301.0,
+        "sigma": 15.0,
+        "source": "Douglas_zonal"
+      }
+    }
+  },
+  "non_wetland_sources": {
+    "enteric_fermentation": {
+      "dD_CH4": -308,
+      "sigma": 28,
+      "flux_Tg": 111
+    },
+    "landfills": {
+      "dD_CH4": -297,
+      "sigma": 6,
+      "flux_Tg": 65
+    },
+    "coal_mining": {
+      "dD_CH4": -232,
+      "sigma": 5,
+      "flux_Tg": 42
+    },
+    "oil_and_gas": {
+      "dD_CH4": -189,
+      "sigma": 2,
+      "flux_Tg": 79
+    },
+    "biomass_burning": {
+      "dD_CH4": -211,
+      "sigma": 15,
+      "flux_Tg": 17
+    },
+    "termites": {
+      "dD_CH4": -343,
+      "sigma": 50,
+      "flux_Tg": 9
+    },
+    "permafrost": {
+      "dD_CH4": -374,
+      "sigma": 15,
+      "flux_Tg": 1
+    }
+  },
+  "regressions": {
+    "wetland_gs": {
+      "label": "Wetlands, growing-season \u03b4\u00b2Hp",
+      "slope": 0.705,
+      "slope_se": 0.074,
+      "intercept": -284.5,
+      "intercept_se": 6.1,
+      "R2": 0.633,
+      "RMSE": 22.4,
+      "n": 55
+    },
+    "wetland_ann": {
+      "label": "Wetlands, annual \u03b4\u00b2Hp",
+      "slope": 0.575,
+      "slope_se": 0.058,
+      "intercept": -286.9,
+      "intercept_se": 5.7,
+      "R2": 0.651,
+      "RMSE": 21.9,
+      "n": 55
+    },
+    "wetland_best": {
+      "label": "Wetlands, best-estimate \u03b4\u00b2H-H\u2082O",
+      "slope": 0.51,
+      "slope_se": 0.058,
+      "intercept": -299.5,
+      "intercept_se": 5.2,
+      "R2": 0.59,
+      "RMSE": 23.7,
+      "n": 55
+    },
+    "all_best": {
+      "label": "All freshwater, best-estimate \u03b4\u00b2H-H\u2082O",
+      "slope": 0.44,
+      "slope_se": 0.05,
+      "intercept": -297.8,
+      "intercept_se": 4.5,
+      "R2": 0.418,
+      "RMSE": 27.4,
+      "n": 129
+    },
+    "waldron1999": {
+      "label": "Waldron et al. (1999) global",
+      "slope": 0.675,
+      "slope_se": 0.1,
+      "intercept": -284.0,
+      "intercept_se": 6.0,
+      "R2": 0.5,
+      "RMSE": 26.3,
+      "n": 51
+    }
+  },
+  "douglas_zonal": {
+    "wetland": [
+      {
+        "band": "<30\u00b0N",
+        "lat_range": [
+          -90,
+          30
+        ],
+        "dD_CH4": -301,
+        "sigma": 15,
+        "flux_Tg": 115
+      },
+      {
+        "band": "30\u201360\u00b0N",
+        "lat_range": [
+          30,
+          60
+        ],
+        "dD_CH4": -324,
+        "sigma": 14,
+        "flux_Tg": 25
+      },
+      {
+        "band": ">60\u00b0N",
+        "lat_range": [
+          60,
+          90
+        ],
+        "dD_CH4": -374,
+        "sigma": 10,
+        "flux_Tg": 9
+      }
+    ],
+    "inland_water": [
+      {
+        "band": "<30\u00b0N",
+        "lat_range": [
+          -90,
+          30
+        ],
+        "dD_CH4": -301,
+        "sigma": 12,
+        "flux_Tg": 80
+      },
+      {
+        "band": "30\u201360\u00b0N",
+        "lat_range": [
+          30,
+          60
+        ],
+        "dD_CH4": -308,
+        "sigma": 18,
+        "flux_Tg": 64
+      },
+      {
+        "band": ">60\u00b0N",
+        "lat_range": [
+          60,
+          90
+        ],
+        "dD_CH4": -347,
+        "sigma": 9,
+        "flux_Tg": 16
+      }
+    ],
+    "rice": [
+      {
+        "band": "<30\u00b0N",
+        "lat_range": [
+          -90,
+          30
+        ],
+        "dD_CH4": -324,
+        "sigma": 8,
+        "flux_Tg": 19
+      },
+      {
+        "band": "30\u201360\u00b0N",
+        "lat_range": [
+          30,
+          60
+        ],
+        "dD_CH4": -325,
+        "sigma": 8,
+        "flux_Tg": 12
+      }
+    ]
+  }
+}
