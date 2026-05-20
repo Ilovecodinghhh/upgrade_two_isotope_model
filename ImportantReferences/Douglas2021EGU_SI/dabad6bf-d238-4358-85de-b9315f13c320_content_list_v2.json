@@ -1,0 +1,1097 @@
+[
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Supplement of"
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                200,
+                246,
+                224
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Geographic variability in freshwater methane hydrogen isotope ratios and its implications for global isotopic source signatures"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                84,
+                236,
+                911,
+                281
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Peter M. J. Douglas et al."
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                295,
+                266,
+                313
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Correspondence to: Peter M. J. Douglas (peter.douglas@mcgill.ca)"
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                325,
+                531,
+                343
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The copyright of individual parts of the supplement might differ from the article licence."
+                    }
+                ]
+            },
+            "bbox": [
+                83,
+                372,
+                668,
+                391
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "BY"
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                104,
+                161,
+                126
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "Supplement of Biogeosciences, 18, 3505–3527, 2021 https://doi.org/10.5194/bg-18-3505-2021-supplement © Author(s) 2021. CC BY 4.0 License."
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                56,
+                439,
+                103
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "EGU"
+                    }
+                ]
+            },
+            "bbox": [
+                593,
+                59,
+                913,
+                127
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Supplemental Text:"
+                    }
+                ]
+            },
+            "bbox": [
+                142,
+                102,
+                276,
+                117
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Details on isotopic vectors for biogeochemical variables:"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                142,
+                131,
+                539,
+                146
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Methanogenesis pathway: To characterize the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } , \\ \\delta ^ { 1 3 } \\mathrm { C - C O } _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _ { \\mathrm { { { d } \\alpha } } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "values of acetoclastic and hydrogenotrophic methanogenesis we used the center points of the fields for these two pathways in Figure 8 of Whiticar (1999). Specifically, for acetoclastic methanogenesis we used the following values: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\delta } = - 6 0 \\% \\mathbf { \\delta } 0 \\mathbf { \\delta } \\mathrm { ; ~ } \\delta ^ { 1 3 } \\mathbf { C } \\mathbf { - } \\mathbf { C O } _ { 2 } = - 1 8 \\% \\mathbf { \\delta } 0 \\mathbf { \\delta } \\mathrm { ; ~ }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\vec { a } } _ { \\mathrm { C } } = 1 . 0 4 4"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". For hydrogenotrophic methanogenesis we used the following values: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } = - 7 5 \\% \\mathrm { o } ; \\delta ^ { 1 3 } \\mathrm { C - C O } _ { 2 } = 0 \\% \\mathrm { o } ;"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _ { \\mathbf { C } } = 1 . 0 8 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". These values are approximate, as discussed in the text in section 3.4, but are frequently applied as end-member values for acetoclastic and hydrogenotrophic methanogenesis in environmental studies."
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                160,
+                856,
+                266
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "To characterize the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 , \\mathrm { W 0 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "value for acetoclastic and hydrogenotrophic methanogenesis we used the intercept of the freshwater "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and marine "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "fields of Figure 10 of Whiticar (1999) with a "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H } \\cdot"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "_ \\mathrm { H _ { 2 } O }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "value of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 \\text{‰}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Specifically, for acetoclastic methanogenesis we used a value of -330‰, and for hydrogenotrophic methanogenesis we used a value of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "- 2 3 0 \\text{‰}"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". These values are approximate, and as discussed in section 3.4 the role of methanogenesis pathway in controlling "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "has been questioned (Waldron et al., 1998;Waldron et al., 1999). However, these values represent the expected values under the paradigm that methanogenesis pathway does in fact control "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". As discussed in Sections 3.3 and 3.4, in reality differences in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 , \\mathrm { W 0 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "between pathways likely vary as a function of the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 2 } \\mathrm { H }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "of acetate, as well as differences in the kinetic isotope effect and enzymatic reversibility associated with these pathways."
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                266,
+                856,
+                404
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "equation_inline",
+                        "content": "C H _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "Oxidation: To characterize the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } , \\delta ^ { 1 3 } \\mathrm { C - C O } _ { 2 } ."
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _  \\mathrm { { { d } \\mathrm { { c } \\} } } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "values of oxidized "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "we used the center points of the field for methane oxidation in Figure 8 of Whiticar (1999). Specifically, we used the following values: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } = - 4 0 \\% ; \\delta ^ { 1 3 } \\mathrm { C - C O } _ { 2 } = - 2 5 \\% \\mathrm { o } ;"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { a } _ { \\mathrm { C } } = 1 . 0 1 6"
+                    },
+                    {
+                        "type": "text",
+                        "content": "These values are approximate, as discussed in the text in section 3.4, but are frequently applied as end-member values for oxidized "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in environmental studies. To characterize the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 , \\mathrm { W 0 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "value for oxidized methane we used the prediction shown in Figure 5 of Whiticar (1999), specifically using a value of -150‰. This value, and the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\bar { 8 } ^ { 1 3 } \\mathrm { C }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "value above, is consistent with model predictions of nearly complete, closed-system aerobic methane oxidation from Wang et al. (2016). The vectors shown in Figure 6 do not extend to this fully oxidized methane value in order to fit within the figure axes. Anaerobic "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "oxidation may have a different isotopic vector, but we did not consider this since aerobic CH4 oxidation is typically considered to be more prevalent in freshwater environments."
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                415,
+                856,
+                580
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Gas-phase diffusion: We estimated the effects of gas phase diffusion using the equations presented by Chanton (2005). We specifically calculated diffusive fractionation for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C O } _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in air. Gas-liquid diffusion isotopic fractionation is predicted to be much smaller by (Chanton, 2005), and we did not specifically calculate this. Diffusive fractionation for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C O } _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in air is most likely to be important for environments with plant-mediated gas transport. We calculated the isotopic composition of residual gas left following diffusive gas loss, and we did not calculate the effects of progressive Rayleigh fractionation. The vector for diffused gas would extend in the opposite direction. Specific values for residual gas affected by diffusive gas, starting with the values for acetoclastic methanogenesis reported above, transport are as follows: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C } \\mathrm { - } \\mathrm { C H } _ { 4 } = - 4 1 . 7 \\% \\mathrm { o } \\mathrm { o } ; \\delta ^ { 2 } \\mathrm { H } \\mathrm { - } \\mathrm { C H } _ { 4 , \\mathrm { W } 0 } = - 3 1 7 \\% \\mathrm { o } ; \\delta ^ { 1 3 } \\mathrm { C } \\mathrm { - } \\mathrm { C O } _ { 2 } = - 1 3 . 7 \\% \\mathrm { o } ;"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { a } _ { \\mathrm { C } } { = } 1 . 0 3 2"
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                593,
+                856,
+                727
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Enzymatic reversibility: The effect of enzymatic reversibility or thermodynamic favorability on "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "isotopic fractionation is an intriguing idea that is not yet well constrained. These hypothesized effects are based on experiments wherein "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\bar { \\delta } ^ { 1 3 } \\mathrm { C - } \\mathrm { \\bar { C } H } _ { 4 } , \\delta ^ { 1 3 } \\mathrm { C - } \\mathrm { C O } _ { 2 } ."
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _ { \\mathrm { { { d } \\alpha } } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "values co-varied with estimates of Gibbs free energy (ΔG) (Valentine et al., 2004;Penning et al., 2005) or wherein "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "co-varied with methane production rate (Valentine et al., 2004). These effects, at least for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H } _ { 4 } ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are also supported by isotopic modeling (Stolper et al., 2015), and co-variation of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _ { \\mathrm { Q H } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with clumped isotope measurements of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H _ { 4 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(Stolper et al., 2015; Douglas et al., 2017). Defining isotopic vectors for this variable is challenging because it has not been studied experimentally in terms of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 2 } \\mathrm { H - C H _ { 4 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "simultaneously. We use the experimental results of (Penning et al., 2005), specifically focusing on an experiment with a cellulose substrate, to define the changes in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 1 3 } \\mathrm { C - C H _ { 4 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(decrease of 27‰), "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 1 3 } \\mathrm { C - C O } _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(increase of 8‰), and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _ { \\mathrm { { { d } \\mathrm { { C } } } } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(increase of 0.04) values as the methanogenesis reaction ΔG shifts from being more favorable (-80 kJ/mol)"
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                739,
+                857,
+                909
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "2\r\n4\r\n21\r\n33\r\n43"
+                    }
+                ]
+            },
+            "bbox": [
+                93,
+                101,
+                120,
+                906
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "1 of 3"
+                    }
+                ]
+            },
+            "bbox": [
+                475,
+                938,
+                524,
+                953
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "to less favourable (-20 kJ/mol). These results are similar to changes in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { \\alpha } _ { \\mathrm { { { d } \\mathrm { { C } } } } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "as a function of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { H } _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "partial pressure, and therefore ΔG, observed by (Valentine et al., 2004), although in that study differences in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 1 3 } \\mathrm { C } ."
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C O } _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "were minimal. We define changes in "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 2 } \\mathrm { H - C H _ { 4 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "based on observed changes as a function of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { C H } _ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "production rate by (Valentine et al., 2004), specifically an increase of approximately 94‰ at low production rates (~250 µmol/hour) relative to high production rates (~700 µmol/hour). Since the carbon and hydrogen isotope effects were not observed in the same experiment, their correspondence is speculative, and requires further validation. We include this effect in Figure "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "^ { 6 , }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "despite its uncertainty, for the sake of discussing a comprehensive set of possible variables influencing "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathrm { H - C H _ { 4 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                92,
+                856,
+                212
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "It is important to note that the enzymatic reversibility effect has only been studied in terms of hydrogenotrophic methanogenesis, both experimentally (Valentine et al., 2004;Penning et al., 2005) and in models (Stolper et al., 2015). It is unclear whether it also applies, and whether it would have the same magnitude, in acetoclastic methanogenesis, "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "_ { \\mathrm { o r } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in environmental systems with multiple pathways of methanogenesis. As shown in Figure "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "^ { 6 , }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "the direction and magnitude of the proposed isotopic vectors for the enzymatic reversibility effect is similar to that inferred for changes in the pathway of methanogenesis, and given the uncertainty described above, at present these two variables cannot be differentiated on the basis of isotopic measurements in environmental systems."
+                    }
+                ]
+            },
+            "bbox": [
+                140,
+                210,
+                857,
+                328
+            ]
+        },
+        {
+            "type": "chart",
+            "content": {
+                "image_source": {
+                    "path": "images/792d28faf93f4626923626ccc6a7bc249fb3b4fa3b50bdfbc4959971a932bafc.jpg"
+                },
+                "content": "",
+                "chart_caption": [
+                    {
+                        "type": "text",
+                        "content": "Supplemental Figure S1: Boxplot of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 2 } \\mathbf { H } \\mathbf { \\mathrm { - C H } } _ { 4 , \\mathbf { W 0 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for sites differentiated by ecosystem type for sites with measured "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "{ \\mathfrak { s } } ^ { 2 } \\mathbf { H } \\mathbf { - } \\mathbf { H } _ { 2 } \\mathbf { O } ."
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Numbers in parentheses indicate the number of sites for each category. There are no rice paddy sites in the dataset with measured "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "{ \\delta } ^ { 2 } \\mathbf { H } \\mathbf { - } \\mathbf { H } _ { 2 } \\mathbf { O } ."
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Boxplot parameters are as in Fig. 7. Black points and error bars indicate the category mean and 95% confidence interval of the mean. Gray lines indicate the mean values across all categories and the dashed lines indicate the 95% confidence interval of this value. IW- Inland Waters; WL- Wetlands; S/M- Swamps and marshes. Asterisks indicate that inland waters and wetlands have significantly different distributions."
+                    }
+                ],
+                "chart_footnote": []
+            },
+            "bbox": [
+                148,
+                340,
+                598,
+                602
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "72\r\n 80 81"
+                    }
+                ]
+            },
+            "bbox": [
+                93,
+                588,
+                119,
+                739
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "61 71"
+                    }
+                ]
+            },
+            "bbox": [
+                93,
+                89,
+                120,
+                340
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "2 of 3"
+                    }
+                ]
+            },
+            "bbox": [
+                473,
+                938,
+                524,
+                953
+            ]
+        }
+    ],
+    [
+        {
+            "type": "chart",
+            "content": {
+                "image_source": {
+                    "path": "images/2f743ed4955cb6b97aa9af979da4cce9850555f229f9899f6af4a9954b120227.jpg"
+                },
+                "content": "",
+                "chart_caption": [
+                    {
+                        "type": "text",
+                        "content": "Supplemental Figure S2: Boxplot of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\ S ^ { 2 } \\mathbf { H } \\mathbf { \\mathrm { - C H } } _ { 4 , \\mathbf { W 0 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "for sites differentiated by sample type for sites with measured "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\delta ^ { 2 } \\mathbf { H } \\mathbf { - } \\mathbf { H } _ { 2 } \\mathbf { O } ."
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Numbers in parentheses indicate the number of sites for each category. Boxplot parameters are as in Fig. 7. Black points and error bars indicate the category mean and 95% confidence interval of the mean. Gray lines indicate the mean values across all categories and the dashed lines indicate the 95% confidence interval of this value. Asterisks indicate that dissolved and gas-phase "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathbf { C H _ { 4 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "samples from inland water sites have significantly different distributions."
+                    }
+                ],
+                "chart_footnote": []
+            },
+            "bbox": [
+                148,
+                88,
+                602,
+                349
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "References"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                142,
+                491,
+                225,
+                506
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "reference_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Chanton, J. P.: The effect of gas transport on the isotope signature of methane in wetlands, Org Geochem, 36, 753-768, 2005."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Douglas, P. M., Stolper, D. A., Eiler, J. M., Sessions, A. L., Lawson, M., Shuai, Y., Bishop, A., Podlaha, O."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "G., Ferreira, A. A., and Neto, E. V. S.: Methane clumped isotopes: progress and potential for a new isotopic tracer, Org Geochem, 113, 262-282, 2017."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Penning, H., Plugge, C. M., Galand, P. E., and Conrad, R.: Variation of carbon isotope fractionation in"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "hydrogenotrophic methanogenic microbial cultures and environmental samples at different energy status, Global Change Biol, 11, 2103-2113, 2005."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Stolper, D., Martini, A., Clog, M., Douglas, P., Shusta, S., Valentine, D., Sessions, A., and Eiler, J.:"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Distinguishing and understanding thermogenic and biogenic sources of methane using multiply substituted isotopologues, Geochim Cosmochim Ac, 161, 219-247, 2015."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Valentine, D. L., Chidthaisong, A., Rice, A., Reeburgh, W. S., and Tyler, S. C.: Carbon and hydrogen isotope fractionation by moderately thermophilic methanogens, Geochim Cosmochim Ac, 68, 1571-1590, 2004."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Waldron, S., Watson‐Craik, I. A., Hall, A. J., and Fallick, A. E.: The carbon and hydrogen stable isotope composition of bacteriogenic methane: a laboratory study using a landfill inoculum, Geomicrobiology Journal, 15, 157-169, 1998."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Waldron, S., Lansdown, J., Scott, E., Fallick, A., and Hall, A.: The global influence of the hydrogen iostope composition of water on that of bacteriogenic methane from shallow freshwater environments, Geochim Cosmochim Ac, 63, 2237-2245, 1999."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Wang, D. T., Welander, P. V., and Ono, S.: Fractionation of the methane isotopologues "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "^ { 1 3 } \\mathrm { C H } _ { 4 } , \\ ^ { 1 2 } \\mathrm { C H } _ { 3 } \\mathrm { D } ,"
+                            },
+                            {
+                                "type": "text",
+                                "content": ", and"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "13 CH3D during aerobic oxidation of methane by Methylococcus capsulatus (Bath), Geochim Cosmochim Ac, 192, 186-202, 2016."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Whiticar, M. J.: Carbon and hydrogen isotope systematics of bacterial formation and oxidation of methane, Chem Geol, 161, 291-314, 1999."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                142,
+                520,
+                839,
+                549
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "82\r\n 89 118"
+                    }
+                ]
+            },
+            "bbox": [
+                88,
+                335,
+                120,
+                900
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "3 of 3"
+                    }
+                ]
+            },
+            "bbox": [
+                473,
+                938,
+                524,
+                953
+            ]
+        }
+    ]
+]
