@@ -573,7 +573,14 @@ def main():
 # FIGURE 8: PHASOR VECTOR DIAGRAMS
 # ============================================================================
 def plot_phasor_diagrams(results):
-    """Fig 8: Phasor decomposition for 4 representative sites."""
+    """Fig 8: Phasor decomposition for 4 representative sites.
+
+    Each panel shows three vectors from origin:
+      green  = Z_obs   (observed)
+      red    = Z_src   (wetland source)
+      blue   = Z_sink  (corrected = obs − src), also shown from src tip to obs tip
+    Axes are auto-scaled per panel to fit all vectors.
+    """
     show_sites = ["BRW", "CBA", "CGO", "SPO"]
     available = [s for s in show_sites if s in results["sites"]]
     n = len(available)
@@ -594,42 +601,74 @@ def plot_phasor_diagrams(results):
             Z_src  = s[f"Z_src_{iso}"]
             Z_sink = s[f"Z_sink_{iso}"]
 
-            # Plot vectors: origin → source, source → observed (= sink vector at source tip)
-            # Or equivalently: origin → obs (green), origin → src (red), origin → sink (blue)
-            ox, oy = 0, 0
+            # Collect all endpoints to determine axis limits
+            all_x = [0, Z_obs[0], Z_src[0], Z_sink[0]]
+            all_y = [0, Z_obs[1], Z_src[1], Z_sink[1]]
+            pad_x = max(0.01, (max(all_x) - min(all_x)) * 0.25)
+            pad_y = max(0.01, (max(all_y) - min(all_y)) * 0.25)
 
-            # Observed (green)
-            ax.annotate("", xy=Z_obs, xytext=(ox, oy),
-                        arrowprops=dict(arrowstyle="->", color="green", lw=2))
-            # Source (red)
-            ax.annotate("", xy=Z_src, xytext=(ox, oy),
-                        arrowprops=dict(arrowstyle="->", color="red", lw=2, ls="--"))
-            # Sink = obs − src (blue): from src tip to obs tip
+            # ── Draw vectors as arrows ──
+            hw = 0.04   # relative head width
+
+            # Observed (green): origin → obs
+            ax.annotate("", xy=Z_obs, xytext=(0, 0),
+                        arrowprops=dict(arrowstyle="-|>", color="green", lw=2.5,
+                                        mutation_scale=15))
+            # Source (red dashed): origin → src
+            ax.annotate("", xy=Z_src, xytext=(0, 0),
+                        arrowprops=dict(arrowstyle="-|>", color="red", lw=2,
+                                        mutation_scale=15, linestyle="dashed"))
+            # Sink from origin (blue dotted): origin → sink
+            ax.annotate("", xy=Z_sink, xytext=(0, 0),
+                        arrowprops=dict(arrowstyle="-|>", color="C0", lw=1.5,
+                                        mutation_scale=12, linestyle="dotted"))
+            # Sink as vector addition (blue solid): src tip → obs tip
+            # This shows Z_obs = Z_src + Z_sink visually
             ax.annotate("", xy=Z_obs, xytext=Z_src,
-                        arrowprops=dict(arrowstyle="->", color="blue", lw=2.5))
-            # Also show sink from origin (for clarity)
-            ax.annotate("", xy=Z_sink, xytext=(ox, oy),
-                        arrowprops=dict(arrowstyle="->", color="blue", lw=1.5, ls=":"))
+                        arrowprops=dict(arrowstyle="-|>", color="C0", lw=2.5,
+                                        mutation_scale=15))
 
-            ax.plot(0, 0, "ko", ms=4)
+            # Dot labels at vector tips
+            ax.plot(*Z_obs,  "go", ms=5, zorder=5)
+            ax.plot(*Z_src,  "r^", ms=5, zorder=5)
+            ax.plot(*Z_sink, "bs", ms=5, zorder=5)
+            ax.plot(0, 0, "ko", ms=5, zorder=5)
 
-            # Labels
-            ax.set_xlabel("B (sin coeff, ‰)", fontsize=8)
-            ax.set_ylabel("C (cos coeff, ‰)", fontsize=8)
-            ax.set_title(f"{code} — {label}", fontsize=10)
-            ax.set_aspect("equal", adjustable="datalim")
-            ax.grid(True, alpha=0.3)
+            # Annotate amplitudes
+            A_obs  = np.sqrt(Z_obs[0]**2  + Z_obs[1]**2)
+            A_src  = np.sqrt(Z_src[0]**2  + Z_src[1]**2)
+            A_sink = np.sqrt(Z_sink[0]**2 + Z_sink[1]**2)
 
-            # Legend entries
+            ax.annotate(f"|obs|={A_obs:.3f}", xy=Z_obs, fontsize=6.5,
+                        textcoords="offset points", xytext=(5, 5), color="green")
+            if A_src > 1e-4:
+                ax.annotate(f"|src|={A_src:.3f}", xy=Z_src, fontsize=6.5,
+                            textcoords="offset points", xytext=(5, -10), color="red")
+            ax.annotate(f"|sink|={A_sink:.3f}", xy=Z_sink, fontsize=6.5,
+                        textcoords="offset points", xytext=(5, 5), color="C0")
+
+            # Axis setup — scale to data, NOT equal aspect
+            ax.set_xlim(min(all_x) - pad_x, max(all_x) + pad_x)
+            ax.set_ylim(min(all_y) - pad_y, max(all_y) + pad_y)
+            ax.axhline(0, color="gray", lw=0.5, zorder=0)
+            ax.axvline(0, color="gray", lw=0.5, zorder=0)
+            ax.set_xlabel("B  (sin coeff, ‰)", fontsize=8)
+            ax.set_ylabel("C  (cos coeff, ‰)", fontsize=8)
+            ax.set_title(f"{code} — {label}\n"
+                         f"R_obs={s['R_obs']:.4f} → R_corr={s['R_corrected']:.4f}",
+                         fontsize=9)
+            ax.grid(True, alpha=0.2)
+
+            # Legend (top-left panel only)
             if j == 0 and row == 0:
-                ax.plot([], [], "g-", lw=2, label="Observed")
-                ax.plot([], [], "r--", lw=2, label="Source (wetland)")
-                ax.plot([], [], "b-", lw=2.5, label="Sink (corrected)")
+                ax.plot([], [], "g-",  lw=2.5, label="Z_obs (observed)")
+                ax.plot([], [], "r--", lw=2,   label="Z_src (wetland source)")
+                ax.plot([], [], "b-",  lw=2.5, label="Z_sink (corrected)")
                 ax.legend(fontsize=7, loc="best")
 
     fig.suptitle("Fig 8: Phasor decomposition — vector subtraction of wetland source",
                  fontsize=12, fontweight="bold")
-    fig.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.tight_layout(rect=[0, 0, 1, 0.94])
     out = FIG_DIR / "fig8_phasor_decomposition.png"
     fig.savefig(out, dpi=300)
     plt.close(fig)
