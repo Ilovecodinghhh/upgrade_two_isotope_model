@@ -534,6 +534,10 @@ def write_result_md(approach1: dict, approach2: dict, approach3: dict) -> None:
 
     md = f"""# KIE_sites — RESULT
 
+> **NOTE:** This `RESULT.md` template is superseded by Phase 6
+> (`phase6_phasor.py`). It is kept for reference only. Phase 6 overwrites
+> `RESULT.md` with phasor-corrected results.
+
 ## Summary
 
 **Research question:** Can seasonal cycles of δ¹³C-CH₄ and δD-CH₄ at co-located

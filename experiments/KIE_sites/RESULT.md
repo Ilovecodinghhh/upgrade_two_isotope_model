@@ -6,9 +6,9 @@
 measurement sites constrain the OH kinetic isotope effect (KIE) for ¹³C?
 
 **Answer:** Yes. After removing wetland source contamination via phasor (vector)
-decomposition, the SH-site constraint gives **α¹³C_OH = 1.0043 [0.997, 1.014]**,
+decomposition, the SH-site constraint gives **α¹³C_OH = 1.0044 [0.997, 1.015]**,
 consistent with both the Saueressig (1.0039) and Cantrell (1.0054) laboratory
-values. The multi-site corrected constraint is **α = 1.0106 [0.999, 1.019]**,
+values. The multi-site corrected constraint is **α = 1.0113 [0.999, 1.026]**,
 still biased slightly high by residual NH source contamination, but a major
 improvement over the uncorrected value (1.0162).
 
@@ -50,17 +50,17 @@ R_corrected = |Z_sink(δ¹³C)| / |Z_sink(δD)|
 
 | Site | Lat | R_obs | R_corr | Δ | Sink peak (δ¹³C) | Sink peak (δD) | Phase diff |
 |------|-----|-------|--------|---|-------------------|----------------|------------|
-| ALT | +82.5° | 0.086 | 0.053 | −0.033 | Jun | Jun | 0.5 mo |
-| ZEP | +78.9° | 0.056 | 0.055 | −0.001 | Jun | Jun | 0.1 mo |
-| BRW | +71.3° | 0.139 | 0.060 | −0.080 | Jun | Jun | 0.5 mo |
-| CBA | +55.2° | 0.036 | 0.050 | +0.014 | Jun | Jun | 0.2 mo |
-| MHD | +53.3° | 0.090 | 0.063 | −0.027 | Jun | Jun | 0.2 mo |
-| KUM | +19.6° | 0.061 | 0.066 | +0.005 | May | May | 0.2 mo |
-| CGO | −40.7° | 0.028 | 0.032 | +0.004 | Jan | Jan | 0.1 mo |
-| SPO | −90.0° | 0.024 | 0.031 | +0.008 | Jan | Jan | 0.8 mo |
+| ALT | +82.5° | 0.086 | 0.050 | −0.036 | Jun | Jul | 0.6 mo |
+| ZEP | +78.9° | 0.056 | 0.056 | −0.000 | Jun | Jun | 0.0 mo |
+| BRW | +71.3° | 0.139 | 0.056 | −0.083 | Jun | Jul | 0.7 mo |
+| CBA | +55.2° | 0.036 | 0.049 | +0.013 | Jun | Jun | 0.1 mo |
+| MHD | +53.3° | 0.090 | 0.062 | −0.028 | Jun | Jul | 0.1 mo |
+| KUM | +19.6° | 0.061 | 0.065 | +0.004 | Jun | Jun | 0.2 mo |
+| CGO | −40.7° | 0.028 | 0.033 | +0.004 | Feb | Feb | 0.1 mo |
+| SPO | −90.0° | 0.024 | 0.031 | +0.007 | Jan | Feb | 0.7 mo |
 
 **Key observations:**
-1. NH high-lat corrections are large: BRW drops from 0.139 to 0.060
+1. NH high-lat corrections are large: BRW drops from 0.139 to 0.056
 2. SH corrections are tiny (as expected): CGO 0.028→0.032, SPO 0.024→0.031
 3. After correction, sink phases for δ¹³C and δD **agree within <1 month** at all sites — confirms the correction isolates a common OH-driven signal
 4. NH sites do NOT converge to the OH-only prediction (0.013–0.017), indicating residual contamination from non-wetland seasonal sources
@@ -69,18 +69,22 @@ R_corrected = |Z_sink(δ¹³C)| / |Z_sink(δD)|
 
 | Approach | α¹³C_OH | 95% CI | Sites |
 |----------|---------|--------|-------|
-| **Phase 6 SH-only (phasor)** | **1.0043** | **[0.997, 1.014]** | CGO, SPO |
-| Phase 6 all-site (phasor) | 1.0106 | [0.999, 1.019] | 8 clean sites |
+| **Phase 6 SH-only (phasor)** | **1.0044** | **[0.997, 1.015]** | CGO, SPO |
+| Phase 6 all-site (phasor, wide filter) | 1.0113 | [0.999, 1.026] | 8 clean sites |
+| Phase 6 all-site (legacy narrow filter) | 1.0103 | [0.999, 1.019] | 8 clean sites |
 | Phase 5 SH direct | 1.0034 | [0.998, 1.009] | CGO, SPO |
 | Phase 5 source-corrected | 1.0162 | [1.003, 1.031] | 8 clean sites |
 | Saueressig (2001) lab | 1.0039 | — | — |
 | Cantrell (1990) lab | 1.0054 | — | — |
 
 ### 4. Interpretation
-- The **SH phasor-corrected** value (α = 1.0043) is remarkably close to Saueressig (1.0039)
+- The **SH phasor-corrected** value (α = 1.0044) is remarkably close to Saueressig (1.0039)
   and consistent with Cantrell (1.0054) within uncertainty
 - Phasor correction substantially improves the **multi-site** constraint:
-  1.0162 → 1.0106 (all sites), moving in the right direction
+  1.0162 → 1.0113 (all sites), moving in the right direction
+- Widening the pooled alpha MC filter from 0.99–1.02 to 0.98–1.05 shifts the
+  all-site median by +0.0010 and the CI by [+0.0002, +0.0065], showing the
+  legacy filter clipped the right tail from NH-biased sites
 - The SH sites remain the cleanest constraint because they have negligible
   local source seasonality — the phasor correction is a small refinement
 - NH sites improve dramatically but retain residual bias, likely from
@@ -96,6 +100,21 @@ R_corrected = |Z_sink(δ¹³C)| / |Z_sink(δD)|
   - NH high-lat δD: 7.5 ‰ (large relative to obs 2.5 ‰)
   - SH δ¹³C: 0.024 ‰ (negligible)
   - SH δD: 0.35 ‰ (small relative to obs 2.5 ‰)
+
+### 6. Individual-year stability (Phase 7)
+- Annual harmonic fits were run separately for each site-year with at least 8
+  paired months during 2005-2010.
+- 9 sites have at least two usable individual-year fits.
+- 5 sites are flagged because year-to-year scatter exceeds the Phase 2
+  full-period uncertainty: ALT, ASC, CGO, SMO, SPO.
+- Stable examples: BRW, MHD, KUM, and MLO show yearly ratios broadly consistent
+  with their full-period Phase 2 uncertainty.
+- Median yearly scatter / Phase 2 sigma across sites with at least two usable
+  years is 1.53, so full-period harmonic uncertainty is likely optimistic for
+  some sparse or low-amplitude sites.
+- Interpretation: this does not overturn the SH-only KIE constraint, but it
+  strengthens the case for treating CGO/SPO uncertainty conservatively and for
+  not over-weighting the NH/tropical multi-site constraint.
 
 ## Data Quality
 - 12 co-located sites with both δ¹³C (NOAA/INSTAAR) and δD (Riddell-Young 2025)
@@ -126,6 +145,7 @@ R_corrected = |Z_sink(δ¹³C)| / |Z_sink(δD)|
 7. The linearized decomposition model assumes quasi-steady state
 
 ## Files
+- `analysis/phase7_yearly_stability.py` - Individual-year seasonal stability check
 - `analysis/phase1_data.py` — Data extraction and pairing
 - `analysis/phase2_harmonics.py` — Seasonal harmonic fitting
 - `analysis/phase3_synthesis.py` — Cross-site synthesis and classification

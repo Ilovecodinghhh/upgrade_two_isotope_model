@@ -141,9 +141,11 @@ CLEAN_SITES = ["ALT", "ZEP", "BRW", "CBA", "MHD", "KUM", "CGO", "SPO"]
 # Wetland file uses: Q(m) = Q̄ + B_Q·sin(2πm/12) + C_Q·cos(2πm/12)
 #                    where m = 0..11 (Jan=0, Dec=11)
 #
-# Both are equivalent: m/12 maps to the same fractional year.
-# So we can directly compare phasors in the same B+iC space.
-# No conversion needed — just use B_obs + i·C_obs and B_Q + i·C_Q directly.
+# The bases have the same annual frequency, but Phase 1 stores monthly isotope
+# means at month midpoints:
+# (month_index + 0.5) / 12, while wetland climatology coefficients are fit
+# against month_index / 12. Rotate wetland B_Q,C_Q into the Phase 2 midpoint
+# basis before phasor subtraction.
 
 
 # ============================================================================
@@ -178,6 +180,48 @@ def ci_to_sigma(ci_lo, ci_hi):
     return (ci_hi - ci_lo) / (2 * 1.96)
 
 
+def summarize_alpha_filters(alpha_samples):
+    """Compare legacy narrow and wider alpha filters for pooled MC samples."""
+    finite_alpha = np.asarray(alpha_samples)
+    finite_alpha = finite_alpha[np.isfinite(finite_alpha)]
+
+    def summarize_window(lo, hi):
+        filtered = finite_alpha[(finite_alpha > lo) & (finite_alpha < hi)]
+        if len(filtered) == 0:
+            return {
+                "filter": [lo, hi],
+                "alpha_13c_oh_median": np.nan,
+                "alpha_13c_oh_ci95": [np.nan, np.nan],
+                "n_samples": 0,
+                "n_excluded": int(len(finite_alpha)),
+            }
+        return {
+            "filter": [lo, hi],
+            "alpha_13c_oh_median": float(np.median(filtered)),
+            "alpha_13c_oh_ci95": [
+                float(np.percentile(filtered, 2.5)),
+                float(np.percentile(filtered, 97.5)),
+            ],
+            "n_samples": int(len(filtered)),
+            "n_excluded": int(len(finite_alpha) - len(filtered)),
+        }
+
+    narrow = summarize_window(0.99, 1.02)
+    wide = summarize_window(0.98, 1.05)
+    return {
+        "narrow": narrow,
+        "wide": wide,
+        "impact_wide_minus_narrow": {
+            "median": float(wide["alpha_13c_oh_median"] - narrow["alpha_13c_oh_median"]),
+            "ci95": [
+                float(wide["alpha_13c_oh_ci95"][0] - narrow["alpha_13c_oh_ci95"][0]),
+                float(wide["alpha_13c_oh_ci95"][1] - narrow["alpha_13c_oh_ci95"][1]),
+            ],
+            "n_samples": int(wide["n_samples"] - narrow["n_samples"]),
+        },
+    }
+
+
 def phasor_peak_month(B, C):
     """Convert harmonic B, C to peak month (0 = Jan, 6 = Jul).
 
@@ -190,6 +234,25 @@ def phasor_peak_month(B, C):
     phase = np.arctan2(C, B)
     peak_t = (0.25 - phase / (2 * np.pi)) % 1.0
     return peak_t * 12.0
+
+
+def convert_wetland_to_phase2_phasor(B_Q, C_Q):
+    """Rotate wetland month-index coefficients into Phase 2 midpoint time.
+
+    Wetland coefficients are fit against month_index / 12. Phase 2 monthly
+    isotope means are fit at (month_index + 0.5) / 12. For
+
+        Q = B_Q*sin(w*x) + C_Q*cos(w*x)
+
+    with x = month_index/12 and t = x + 0.5/12, the equivalent coefficients
+    in the Phase 2 basis are R(-pi/12) applied to (B_Q, C_Q).
+    """
+    delta = 2 * np.pi * 0.5 / 12.0
+    cos_d = np.cos(delta)
+    sin_d = np.sin(delta)
+    B_mid = B_Q * cos_d + C_Q * sin_d
+    C_mid = -B_Q * sin_d + C_Q * cos_d
+    return B_mid, C_mid
 
 
 # ============================================================================
@@ -236,9 +299,10 @@ def phasor_decompose(B_obs_13c, C_obs_13c,
     Z_obs_13c = complex(B_obs_13c, C_obs_13c)
     Z_obs_dD  = complex(B_obs_dD,  C_obs_dD)
 
-    # Fractional wetland seasonality phasor
+    # Fractional wetland seasonality phasor, converted to Phase 2 midpoint time.
     # Z_frac = (B_Q + i·C_Q) / Q_total
-    Z_frac = complex(B_Q, C_Q) / Q_total
+    B_Q_mid, C_Q_mid = convert_wetland_to_phase2_phasor(B_Q, C_Q)
+    Z_frac = complex(B_Q_mid, C_Q_mid) / Q_total
 
     # Source phasors  (‰)
     # Source pulls δ_atm toward δ_source → seasonal Δδ = (δ_src − δ_atm) × ΔS/S
@@ -331,57 +395,57 @@ def mc_phasor(B_obs_13c, C_obs_13c, amp_ci_13c, peak_ci_13c,
     sigma_phase_13c = ci_to_sigma(peak_ci_13c[0], peak_ci_13c[1]) * (2 * np.pi / 12)
     sigma_phase_dD  = ci_to_sigma(peak_ci_dD[0],  peak_ci_dD[1])  * (2 * np.pi / 12)
 
-    R_samples = np.zeros(n_mc)
-    alpha_samples = np.zeros(n_mc)
+    # Draw observed B, C with independent amplitude and phase perturbation.
+    a13 = np.maximum(rng.normal(A_obs_13c, sigma_amp_13c, n_mc), 1e-6)
+    p13 = phase_obs_13c + rng.normal(0, sigma_phase_13c, n_mc)
+    b13 = a13 * np.cos(p13)
+    c13 = a13 * np.sin(p13)
 
-    for i in range(n_mc):
-        # ── Draw observed B, C with independent amplitude & phase perturbation ──
-        a13 = max(rng.normal(A_obs_13c, sigma_amp_13c), 1e-6)
-        p13 = phase_obs_13c + rng.normal(0, sigma_phase_13c)
-        b13 = a13 * np.cos(p13)
-        c13 = a13 * np.sin(p13)
+    aD = np.maximum(rng.normal(A_obs_dD, sigma_amp_dD, n_mc), 1e-6)
+    pD = phase_obs_dD + rng.normal(0, sigma_phase_dD, n_mc)
+    bD = aD * np.cos(pD)
+    cD = aD * np.sin(pD)
 
-        aD = max(rng.normal(A_obs_dD, sigma_amp_dD), 1e-6)
-        pD = phase_obs_dD + rng.normal(0, sigma_phase_dD)
-        bD = aD * np.cos(pD)
-        cD = aD * np.sin(pD)
+    # Draw wetland parameters.
+    d13c_w = rng.normal(D13C_WETLAND, D13C_WETLAND_SIGMA, n_mc)
+    dD_w = rng.normal(dD_wetland, dD_sigma, n_mc)
+    q_tot = np.maximum(rng.normal(Q_TOTAL_TG_YR, Q_TOTAL_TG_YR_SIGMA, n_mc), 300.0) / 12.0
+    bq = B_Q * (1 + rng.normal(0, WETLAND_BC_FRAC_SIGMA, n_mc))
+    cq = C_Q * (1 + rng.normal(0, WETLAND_BC_FRAC_SIGMA, n_mc))
+    bq_mid, cq_mid = convert_wetland_to_phase2_phasor(bq, cq)
 
-        # ── Draw wetland parameters ──
-        d13c_w = rng.normal(D13C_WETLAND, D13C_WETLAND_SIGMA)
-        dD_w   = rng.normal(dD_wetland, dD_sigma)
-        q_tot  = max(rng.normal(Q_TOTAL_TG_YR, Q_TOTAL_TG_YR_SIGMA), 300.0) / 12.0
-        bq     = B_Q * (1 + rng.normal(0, WETLAND_BC_FRAC_SIGMA))
-        cq     = C_Q * (1 + rng.normal(0, WETLAND_BC_FRAC_SIGMA))
+    # Phasor decomposition.
+    Z_obs_13c = b13 + 1j * c13
+    Z_obs_dD = bD + 1j * cD
+    Z_frac = (bq_mid + 1j * cq_mid) / q_tot
+    Z_src_13c = (d13c_w - D13C_ATM) * Z_frac
+    Z_src_dD = (dD_w - DD_ATM) * Z_frac
+    Z_sink_13c = Z_obs_13c - Z_src_13c
+    Z_sink_dD = Z_obs_dD - Z_src_dD
 
-        # ── Phasor decomposition ──
-        Z_obs_13c = complex(b13, c13)
-        Z_obs_dD  = complex(bD, cD)
-        Z_frac    = complex(bq, cq) / q_tot
-        Z_src_13c = (d13c_w - D13C_ATM) * Z_frac
-        Z_src_dD  = (dD_w - DD_ATM) * Z_frac
-        Z_sink_13c = Z_obs_13c - Z_src_13c
-        Z_sink_dD  = Z_obs_dD  - Z_src_dD
+    A_sink_13c = np.abs(Z_sink_13c)
+    A_sink_dD = np.abs(Z_sink_dD)
 
-        A_sink_13c = abs(Z_sink_13c)
-        A_sink_dD  = abs(Z_sink_dD)
+    R_samples = np.divide(
+        A_sink_13c,
+        A_sink_dD,
+        out=np.full(n_mc, np.nan),
+        where=A_sink_dD > 1e-6,
+    )
 
-        R = A_sink_13c / A_sink_dD if A_sink_dD > 1e-6 else np.nan
-        R_samples[i] = R
+    # Draw non-OH KIE parameters.
+    f_oh = np.clip(rng.normal(F_OH, SIGMA_F_OH, n_mc), 0.5, 0.99)
+    f_cl = np.clip(rng.normal(F_CL, SIGMA_F_CL, n_mc), 0.0, 0.1)
+    f_soil = np.clip(rng.normal(F_SOIL, SIGMA_F_SOIL, n_mc), 0.0, 0.15)
+    f_strat = 1.0 - f_oh - f_cl - f_soil
+    alpha_d_oh = rng.normal(ALPHA_D_OH, SIGMA_ALPHA_D_OH, n_mc)
+    alpha_13c_cl = rng.normal(ALPHA_13C_CL, SIGMA_ALPHA_13C_CL, n_mc)
+    alpha_d_cl = rng.normal(ALPHA_D_CL, SIGMA_ALPHA_D_CL, n_mc)
 
-        # ── Draw non-OH KIE parameters ──
-        f_oh = np.clip(rng.normal(F_OH, SIGMA_F_OH), 0.5, 0.99)
-        f_cl = np.clip(rng.normal(F_CL, SIGMA_F_CL), 0.0, 0.1)
-        f_soil = np.clip(rng.normal(F_SOIL, SIGMA_F_SOIL), 0.0, 0.15)
-        f_strat = 1.0 - f_oh - f_cl - f_soil
-        alpha_d_oh = rng.normal(ALPHA_D_OH, SIGMA_ALPHA_D_OH)
-        alpha_13c_cl = rng.normal(ALPHA_13C_CL, SIGMA_ALPHA_13C_CL)
-        alpha_d_cl = rng.normal(ALPHA_D_CL, SIGMA_ALPHA_D_CL)
-
-        alpha_samples[i] = ratio_to_alpha_13c(
-            R, alpha_d_oh, f_oh, f_cl, f_soil, f_strat, alpha_13c_cl, alpha_d_cl)
+    alpha_samples = ratio_to_alpha_13c(
+        R_samples, alpha_d_oh, f_oh, f_cl, f_soil, f_strat, alpha_13c_cl, alpha_d_cl)
 
     return R_samples, alpha_samples
-
 
 # ============================================================================
 # MAIN ANALYSIS
@@ -519,17 +583,27 @@ def main():
         R_wm  = np.sum(w * R_arr) / np.sum(w)
         R_wm_sig = np.sqrt(1.0 / np.sum(w))
 
-        # Pool all alpha MC samples for combined constraint
-        all_alpha = np.concatenate(valid_alpha)
-        mask_all = np.isfinite(all_alpha) & (all_alpha > 0.99) & (all_alpha < 1.02)
-        all_alpha = all_alpha[mask_all]
+        # Pool all alpha MC samples for combined constraint. Report the legacy
+        # narrow filter and a wider conservative filter so tail clipping is visible.
+        alpha_filter_summary = summarize_alpha_filters(np.concatenate(valid_alpha))
+        alpha_wide = alpha_filter_summary["wide"]
+        alpha_narrow = alpha_filter_summary["narrow"]
+        alpha_impact = alpha_filter_summary["impact_wide_minus_narrow"]
 
-        a_wm_med = float(np.median(all_alpha))
-        a_wm_lo, a_wm_hi = float(np.percentile(all_alpha, 2.5)), float(np.percentile(all_alpha, 97.5))
+        a_wm_med = alpha_wide["alpha_13c_oh_median"]
+        a_wm_lo, a_wm_hi = alpha_wide["alpha_13c_oh_ci95"]
 
         print(f"  Sites used: {valid_codes}")
         print(f"  Weighted mean R_corrected = {R_wm:.4f} ± {R_wm_sig:.4f}")
-        print(f"  Pooled α_13C_OH = {a_wm_med:.4f}  [{a_wm_lo:.4f}, {a_wm_hi:.4f}] (95% CI)")
+        print(f"  Pooled α_13C_OH (wide filter 0.98-1.05) = "
+              f"{a_wm_med:.4f}  [{a_wm_lo:.4f}, {a_wm_hi:.4f}] (95% CI)")
+        print(f"  Legacy narrow filter 0.99-1.02 = "
+              f"{alpha_narrow['alpha_13c_oh_median']:.4f}  "
+              f"[{alpha_narrow['alpha_13c_oh_ci95'][0]:.4f}, "
+              f"{alpha_narrow['alpha_13c_oh_ci95'][1]:.4f}]")
+        print(f"  Wide-minus-narrow impact: median {alpha_impact['median']:+.4f}, "
+              f"CI [{alpha_impact['ci95'][0]:+.4f}, {alpha_impact['ci95'][1]:+.4f}], "
+              f"+{alpha_impact['n_samples']} samples")
         print(f"  Saueressig = {ALPHA_13C_SAUERESSIG:.4f}")
         print(f"  Cantrell   = {ALPHA_13C_CANTRELL:.4f}")
 
@@ -539,24 +613,31 @@ def main():
             "R_weighted_sigma": round(float(R_wm_sig), 6),
             "alpha_13c_oh_median": round(a_wm_med, 6),
             "alpha_13c_oh_ci95": [round(a_wm_lo, 6), round(a_wm_hi, 6)],
-            "n_pooled_samples": int(len(all_alpha)),
+            "n_pooled_samples": int(alpha_wide["n_samples"]),
+            "alpha_filter_used": "wide_0.98_1.05",
+            "alpha_filter_sensitivity": alpha_filter_summary,
         }
 
         # ── SH-only subset ──
         sh_codes = [c for c in valid_codes if c in ("CGO", "SPO")]
         if len(sh_codes) >= 1:
-            sh_alpha = np.concatenate([valid_alpha[valid_codes.index(c)] for c in sh_codes])
-            sh_mask = np.isfinite(sh_alpha) & (sh_alpha > 0.99) & (sh_alpha < 1.02)
-            sh_alpha = sh_alpha[sh_mask]
-            if len(sh_alpha) > 100:
+            sh_filter_summary = summarize_alpha_filters(
+                np.concatenate([valid_alpha[valid_codes.index(c)] for c in sh_codes])
+            )
+            sh_wide = sh_filter_summary["wide"]
+            if sh_wide["n_samples"] > 100:
                 results["multi_site_result"]["sh_only"] = {
                     "sites": sh_codes,
-                    "alpha_13c_oh_median": round(float(np.median(sh_alpha)), 6),
-                    "alpha_13c_oh_ci95": [round(float(np.percentile(sh_alpha, 2.5)), 6),
-                                           round(float(np.percentile(sh_alpha, 97.5)), 6)],
+                    "alpha_13c_oh_median": round(sh_wide["alpha_13c_oh_median"], 6),
+                    "alpha_13c_oh_ci95": [round(sh_wide["alpha_13c_oh_ci95"][0], 6),
+                                           round(sh_wide["alpha_13c_oh_ci95"][1], 6)],
+                    "alpha_filter_used": "wide_0.98_1.05",
+                    "alpha_filter_sensitivity": sh_filter_summary,
                 }
-                print(f"\n  SH-only ({sh_codes}): α = {np.median(sh_alpha):.4f} "
-                      f"[{np.percentile(sh_alpha, 2.5):.4f}, {np.percentile(sh_alpha, 97.5):.4f}]")
+                print(f"\n  SH-only ({sh_codes}, wide filter): α = "
+                      f"{sh_wide['alpha_13c_oh_median']:.4f} "
+                      f"[{sh_wide['alpha_13c_oh_ci95'][0]:.4f}, "
+                      f"{sh_wide['alpha_13c_oh_ci95'][1]:.4f}]")
 
     # ── Save ──
     with open(OUT_JSON, "w") as f:
@@ -803,6 +884,157 @@ def plot_alpha_constraint(results):
     fig.savefig(out, dpi=300)
     plt.close(fig)
     print(f"✓ Figure saved: {out}")
+
+
+def plot_phasor_diagrams(results):
+    """Fig 8: Polar phasor clocks for representative source correction sites."""
+    show_sites = ["BRW", "CBA", "CGO", "SPO"]
+    available = [s for s in show_sites if s in results["sites"]]
+    if not available:
+        return
+
+    month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+    def vector_amp_month(z):
+        B, C = z
+        return float(np.hypot(B, C)), phasor_peak_month(B, C)
+
+    def setup_clock(ax, rmax, title=None, show_rlabels=True):
+        ax.set_theta_zero_location("N")
+        ax.set_theta_direction(-1)
+        ax.set_xticks(np.linspace(0, 2 * np.pi, 12, endpoint=False))
+        ax.set_xticklabels(month_names, fontsize=7)
+        ax.set_ylim(0, rmax)
+        ax.set_rlabel_position(225)
+        if show_rlabels:
+            ax.tick_params(axis="y", labelsize=6, pad=0)
+        else:
+            ax.set_yticklabels([])
+        ax.grid(True, alpha=0.22, lw=0.7)
+        if title:
+            ax.set_title(title, fontsize=9.5, fontweight="bold", pad=16)
+
+    def draw_arrow(ax, month, amp, color, linestyle, linewidth, alpha=1.0):
+        theta = 2 * np.pi * month / 12.0
+        ax.annotate(
+            "",
+            xy=(theta, amp),
+            xytext=(theta, 0),
+            arrowprops=dict(
+                arrowstyle="-|>",
+                color=color,
+                lw=linewidth,
+                linestyle=linestyle,
+                mutation_scale=13,
+                alpha=alpha,
+                shrinkA=0,
+                shrinkB=0,
+            ),
+        )
+        ax.plot(theta, amp, "o", ms=4.5, color=color, alpha=alpha, zorder=5)
+
+    row_max = {}
+    for iso in ["13c", "dD"]:
+        amps = []
+        for code in available:
+            site = results["sites"][code]
+            for kind in ["obs", "src", "sink"]:
+                amp, _ = vector_amp_month(site[f"Z_{kind}_{iso}"])
+                amps.append(amp)
+        row_max[iso] = max(amps) * 1.18
+
+    fig, axes = plt.subplots(
+        2, len(available), figsize=(4.35 * len(available), 8.2),
+        subplot_kw={"projection": "polar"},
+    )
+    if len(available) == 1:
+        axes = axes.reshape(2, 1)
+
+    colors = {"obs": "#2ca02c", "src": "#d62728", "sink": "#1f77b4"}
+    styles = {"obs": "-", "src": "--", "sink": "-"}
+    widths = {"obs": 2.2, "src": 2.0, "sink": 2.6}
+
+    for j, code in enumerate(available):
+        site = results["sites"][code]
+        for row, iso, iso_label in [(0, "13c", "d13C"), (1, "dD", "dD")]:
+            ax = axes[row, j]
+            vectors = {}
+            for kind in ["obs", "src", "sink"]:
+                amp, month = vector_amp_month(site[f"Z_{kind}_{iso}"])
+                vectors[kind] = {"amp": amp, "month": month}
+
+            title = (
+                f"{code} - {iso_label}\n"
+                f"R {site['R_obs']:.3f} -> {site['R_corrected']:.3f}"
+                if row == 0 else iso_label
+            )
+            setup_clock(ax, row_max[iso], title=title, show_rlabels=(j == 0))
+
+            for kind in ["obs", "src", "sink"]:
+                draw_arrow(
+                    ax,
+                    vectors[kind]["month"],
+                    vectors[kind]["amp"],
+                    colors[kind],
+                    styles[kind],
+                    widths[kind],
+                    alpha=0.9 if kind == "src" else 1.0,
+                )
+
+            amp_text = "\n".join(
+                f"{kind} {vectors[kind]['amp']:.2f}" for kind in ["obs", "src", "sink"]
+            )
+            ax.text(
+                0.04, 0.04, amp_text,
+                transform=ax.transAxes,
+                fontsize=7,
+                ha="left",
+                va="bottom",
+                bbox=dict(facecolor="white", edgecolor="0.85", alpha=0.86, pad=2),
+            )
+
+            if code in ("CGO", "SPO"):
+                inset = ax.inset_axes([0.58, 0.02, 0.40, 0.40], projection="polar")
+                local_max = max(v["amp"] for v in vectors.values()) * 1.18
+                setup_clock(inset, local_max, show_rlabels=False)
+                inset.set_xticklabels([])
+                inset.set_title("zoom", fontsize=6.5, pad=1)
+                for kind in ["obs", "src", "sink"]:
+                    draw_arrow(
+                        inset,
+                        vectors[kind]["month"],
+                        vectors[kind]["amp"],
+                        colors[kind],
+                        styles[kind],
+                        1.4,
+                        alpha=0.9 if kind == "src" else 1.0,
+                    )
+
+    legend_elements = [
+        plt.Line2D([0], [0], color=colors["obs"], lw=2.2, label="Z_obs observed"),
+        plt.Line2D([0], [0], color=colors["src"], lw=2.0, ls="--", label="Z_src wetland"),
+        plt.Line2D([0], [0], color=colors["sink"], lw=2.6, label="Z_sink corrected"),
+    ]
+    fig.legend(
+        handles=legend_elements,
+        loc="lower center",
+        ncol=3,
+        fontsize=9,
+        framealpha=0.92,
+        bbox_to_anchor=(0.5, 0.015),
+    )
+
+    fig.suptitle(
+        "Fig 8: Phasor clocks - wetland source subtraction in amplitude/phase space",
+        fontsize=13,
+        fontweight="bold",
+    )
+    fig.tight_layout(rect=[0, 0.06, 1, 0.93])
+    out = FIG_DIR / "fig8_phasor_decomposition.png"
+    fig.savefig(out, dpi=300, bbox_inches="tight")
+    plt.close(fig)
+    print(f"鉁?Figure saved: {out}")
 
 
 if __name__ == "__main__":

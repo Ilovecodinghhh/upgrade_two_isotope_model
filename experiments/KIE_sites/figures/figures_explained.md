@@ -51,3 +51,17 @@ Two-panel figure. **(a)** The implied α\_13C\_OH if all seasonal variation were
 
 ### `fig5_kie_constraint.png`
 The final result figure, three panels. **(a)** Probability density of α\_13C\_OH from the **SH direct constraint** (blue, using CGO+SPO where sources are minimal): point estimate 1.0034, 95% CI [0.9975, 1.0092]. **(b)** PDF from the **source-corrected** approach using all clean sites after deconvolution (orange): point estimate 1.0162, 95% CI [1.0026, 1.0312]. **(c)** Summary comparison — both estimates shown as box-and-whisker alongside the Saueressig (green dashed, 1.0039) and Cantrell (orange dashed, 1.0054) lab values. The SH direct estimate favours Saueressig but cannot definitively exclude Cantrell; both lab values fall within the 95% CI.
+
+---
+
+## Phase 6: Phasor Source Correction
+
+### `fig8_phasor_decomposition.png`
+Polar "phasor clock" diagrams for BRW, CBA, CGO, and SPO. Angle is peak month and radius is seasonal amplitude, so the figure shows both timing and magnitude in the same visual grammar as Fig 11. Green arrows are observed phasors, red dashed arrows are wetland source phasors, and blue arrows are the corrected sink phasors. Rows separate d13C and dD. Each isotope row uses a common radius scale across sites to preserve the NH-vs-SH magnitude contrast; CGO and SPO include zoom insets because their vectors are much smaller than the NH corrections.
+
+---
+
+## Phase 7: Individual-Year Stability
+
+### `fig12_yearly_stability.png`
+Site-by-site yearly amplitude ratios from separate annual harmonic fits for 2005-2010, requiring at least 8 paired months per year. The dashed line is the full-period Phase 2 ratio and the grey band is its 95% CI. Point color gives paired-month coverage. Red panel titles flag sites where year-to-year scatter exceeds the full-period Phase 2 uncertainty, highlighting where the 5-year overlap may understate harmonic-fit uncertainty.
