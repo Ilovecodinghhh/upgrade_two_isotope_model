@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "method": "Standalone Phase 8 BB source phasor correction applied after Phase 6 wetland correction",
+    "phase6_input": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\experiments\\KIE_sites\\results\\phase6_phasor\\phasor_results.json",
+    "bb_seasonality_input": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\experiments\\KIE_sites\\data\\biomass_burning_seasonality.json",
+    "existing_phase_files_modified": false,
+    "q_total_Tg_month": 48.333333333333336
+  },
+  "bb_signatures": {
+    "NH_high": {
+      "region": "NHext",
+      "d13C": {
+        "mean": -26.6005384,
+        "sigma": 2.767399431687706,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_NHext_MC.csv"
+      },
+      "dD": {
+        "mean": -262.81567633333333,
+        "sigma": 9.857870317293346,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_NHext_MC.csv"
+      }
+    },
+    "NH_mid": {
+      "region": "NHext",
+      "d13C": {
+        "mean": -26.6005384,
+        "sigma": 2.767399431687706,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_NHext_MC.csv"
+      },
+      "dD": {
+        "mean": -262.81567633333333,
+        "sigma": 9.857870317293346,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_NHext_MC.csv"
+      }
+    },
+    "Tropics": {
+      "region": "Trop",
+      "d13C": {
+        "mean": -24.925181000000002,
+        "sigma": 2.5202076077251387,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_Trop_MC.csv"
+      },
+      "dD": {
+        "mean": -211.04554133333332,
+        "sigma": 7.494311332089931,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_Trop_MC.csv"
+      }
+    },
+    "SH_extra": {
+      "region": "SHext",
+      "d13C": {
+        "mean": -26.584540899999997,
+        "sigma": 2.7645231364855416,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_SHext_MC.csv"
+      },
+      "dD": {
+        "mean": -214.6344911666667,
+        "sigma": 7.26726934640896,
+        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_SHext_MC.csv"
+      }
+    }
+  },
+  "sites": {
+    "ALT": {
+      "band": "NH_high",
+      "bb_signature_region": "NHext",
+      "bb_d13C_mean": -26.6005384,
+      "bb_d13C_sigma": 2.767399431687706,
+      "bb_dD_mean": -262.81567633333333,
+      "bb_dD_sigma": 9.857870317293346,
+      "bb_Q_mean_Tg_month": 0.05861416628562568,
+      "bb_B_Q_Tg_month": -0.007978598255332536,
+      "bb_C_Q_Tg_month": -0.10530629700497526,
+      "bb_amplitude_Tg_month": 0.10560811625542829,
+      "bb_frac_amplitude": 1.8017507191145912,
+      "bb_peak_month": 6.14442576655406,
+      "R_obs": 0.085902,
+      "R_wetland_only": 0.050336,
+      "A_src_wetland_13c": 0.383014,
+      "A_src_wetland_dD": 7.503944,
+      "Z_src_bb_13c": [
+        -0.014972995239872005,
+        -0.042677889584585564
+      ],
+      "Z_src_bb_dD": [
+        0.12789995852229075,
+        0.3645563376091782
+      ],
+      "A_src_bb_13c": 0.04522823062919118,
+      "A_src_bb_dD": 0.386341458661921,
+      "peak_src_bb_13c": 6.644425766554061,
+      "peak_src_bb_dD": 0.6444257665540599,
+      "Z_sink_wetland_plus_bb_13c": [
+        0.027787231017895965,
+        -0.4459117218205643
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        -2.725940051127558,
+        -9.72035519044928
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.4467766711284535,
+      "A_sink_wetland_plus_bb_dD": 10.095348146093606,
+      "peak_sink_wetland_plus_bb_13c": 5.881139774591468,
+      "peak_sink_wetland_plus_bb_dD": 6.522180748583968,
+      "R_wetland_plus_bb": 0.04425569724421378,
+      "delta_R_vs_wetland_only": -0.006080302755786221,
+      "delta_A_src_13c_bb_minus_wetland": -0.33778576937080884,
+      "delta_A_src_dD_bb_minus_wetland": -7.117602541338079
+    },
+    "ZEP": {
+      "band": "NH_high",
+      "bb_signature_region": "NHext",
+      "bb_d13C_mean": -26.6005384,
+      "bb_d13C_sigma": 2.767399431687706,
+      "bb_dD_mean": -262.81567633333333,
+      "bb_dD_sigma": 9.857870317293346,
+      "bb_Q_mean_Tg_month": 0.05861416628562568,
+      "bb_B_Q_Tg_month": -0.007978598255332536,
+      "bb_C_Q_Tg_month": -0.10530629700497526,
+      "bb_amplitude_Tg_month": 0.10560811625542829,
+      "bb_frac_amplitude": 1.8017507191145912,
+      "bb_peak_month": 6.14442576655406,
+      "R_obs": 0.056143,
+      "R_wetland_only": 0.05595,
+      "A_src_wetland_13c": 0.383014,
+      "A_src_wetland_dD": 7.503944,
+      "Z_src_bb_13c": [
+        -0.014972995239872005,
+        -0.042677889584585564
+      ],
+      "Z_src_bb_dD": [
+        0.12789995852229075,
+        0.3645563376091782
+      ],
+      "A_src_bb_13c": 0.04522823062919118,
+      "A_src_bb_dD": 0.386341458661921,
+      "peak_src_bb_13c": 6.644425766554061,
+      "peak_src_bb_dD": 0.6444257665540599,
+      "Z_sink_wetland_plus_bb_13c": [
+        -0.017999427035802422,
+        -0.463475491899863
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        -0.41349417759863416,
+        -9.425787950399448
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.46382487100783754,
+      "A_sink_wetland_plus_bb_dD": 9.434853253803336,
+      "peak_sink_wetland_plus_bb_13c": 6.074133599957163,
+      "peak_sink_wetland_plus_bb_dD": 6.083728777919414,
+      "R_wetland_plus_bb": 0.04916079334046478,
+      "delta_R_vs_wetland_only": -0.006789206659535217,
+      "delta_A_src_13c_bb_minus_wetland": -0.33778576937080884,
+      "delta_A_src_dD_bb_minus_wetland": -7.117602541338079
+    },
+    "BRW": {
+      "band": "NH_high",
+      "bb_signature_region": "NHext",
+      "bb_d13C_mean": -26.6005384,
+      "bb_d13C_sigma": 2.767399431687706,
+      "bb_dD_mean": -262.81567633333333,
+      "bb_dD_sigma": 9.857870317293346,
+      "bb_Q_mean_Tg_month": 0.05861416628562568,
+      "bb_B_Q_Tg_month": -0.007978598255332536,
+      "bb_C_Q_Tg_month": -0.10530629700497526,
+      "bb_amplitude_Tg_month": 0.10560811625542829,
+      "bb_frac_amplitude": 1.8017507191145912,
+      "bb_peak_month": 6.14442576655406,
+      "R_obs": 0.139266,
+      "R_wetland_only": 0.056329,
+      "A_src_wetland_13c": 0.383014,
+      "A_src_wetland_dD": 7.759286,
+      "Z_src_bb_13c": [
+        -0.014972995239872005,
+        -0.042677889584585564
+      ],
+      "Z_src_bb_dD": [
+        0.12789995852229075,
+        0.3645563376091782
+      ],
+      "A_src_bb_13c": 0.04522823062919118,
+      "A_src_bb_dD": 0.386341458661921,
+      "peak_src_bb_13c": 6.644425766554061,
+      "peak_src_bb_dD": 0.6444257665540599,
+      "Z_sink_wetland_plus_bb_13c": [
+        0.07504349507798938,
+        -0.4594796601540572
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        -2.307727627609999,
+        -9.07413020707411
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.46556748624534355,
+      "A_sink_wetland_plus_bb_dD": 9.362982741528967,
+      "peak_sink_wetland_plus_bb_13c": 5.690806359490284,
+      "peak_sink_wetland_plus_bb_dD": 6.475631096372311,
+      "R_wetland_plus_bb": 0.04972427046995889,
+      "delta_R_vs_wetland_only": -0.006604729530041105,
+      "delta_A_src_13c_bb_minus_wetland": -0.33778576937080884,
+      "delta_A_src_dD_bb_minus_wetland": -7.37294454133808
+    },
+    "CBA": {
+      "band": "NH_mid",
+      "bb_signature_region": "NHext",
+      "bb_d13C_mean": -26.6005384,
+      "bb_d13C_sigma": 2.767399431687706,
+      "bb_dD_mean": -262.81567633333333,
+      "bb_dD_sigma": 9.857870317293346,
+      "bb_Q_mean_Tg_month": 0.16247690505812148,
+      "bb_B_Q_Tg_month": 0.07321904295091367,
+      "bb_C_Q_Tg_month": -0.15920092288104584,
+      "bb_amplitude_Tg_month": 0.17523116759533516,
+      "bb_frac_amplitude": 1.0784989259405895,
+      "bb_peak_month": 5.1767181596004805,
+      "R_obs": 0.035525,
+      "R_wetland_only": 0.048539,
+      "A_src_wetland_13c": 0.73545,
+      "A_src_wetland_dD": 11.982337,
+      "Z_src_bb_13c": [
+        0.012642346231709352,
+        -0.07397278045108499
+      ],
+      "Z_src_bb_dD": [
+        -0.107991456135258,
+        0.6318786188001998
+      ],
+      "A_src_bb_13c": 0.0750453274088856,
+      "A_src_bb_dD": 0.6410403602699767,
+      "peak_src_bb_13c": 5.676718159600481,
+      "peak_src_bb_dD": 11.67671815960048,
+      "Z_sink_wetland_plus_bb_13c": [
+        -0.14215622330076647,
+        -0.6783238904321465
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        -3.481598069504097,
+        -15.943462788299394
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.693059659880836,
+      "A_sink_wetland_plus_bb_dD": 16.319176780691546,
+      "peak_sink_wetland_plus_bb_13c": 6.394539041577249,
+      "peak_sink_wetland_plus_bb_dD": 6.410613005595011,
+      "R_wetland_plus_bb": 0.0424690331623129,
+      "delta_R_vs_wetland_only": -0.006069966837687096,
+      "delta_A_src_13c_bb_minus_wetland": -0.6604046725911145,
+      "delta_A_src_dD_bb_minus_wetland": -11.341296639730023
+    },
+    "MHD": {
+      "band": "NH_mid",
+      "bb_signature_region": "NHext",
+      "bb_d13C_mean": -26.6005384,
+      "bb_d13C_sigma": 2.767399431687706,
+      "bb_dD_mean": -262.81567633333333,
+      "bb_dD_sigma": 9.857870317293346,
+      "bb_Q_mean_Tg_month": 0.16247690505812148,
+      "bb_B_Q_Tg_month": 0.07321904295091367,
+      "bb_C_Q_Tg_month": -0.15920092288104584,
+      "bb_amplitude_Tg_month": 0.17523116759533516,
+      "bb_frac_amplitude": 1.0784989259405895,
+      "bb_peak_month": 5.1767181596004805,
+      "R_obs": 0.0902,
+      "R_wetland_only": 0.062216,
+      "A_src_wetland_13c": 0.73545,
+      "A_src_wetland_dD": 11.907292,
+      "Z_src_bb_13c": [
+        0.012642346231709352,
+        -0.07397278045108499
+      ],
+      "Z_src_bb_dD": [
+        -0.107991456135258,
+        0.6318786188001998
+      ],
+      "A_src_bb_13c": 0.0750453274088856,
+      "A_src_bb_dD": 0.6410403602699767,
+      "peak_src_bb_13c": 5.676718159600481,
+      "peak_src_bb_dD": 11.67671815960048,
+      "Z_sink_wetland_plus_bb_13c": [
+        -0.17181270267623672,
+        -0.7256436870956325
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        -3.374749432692347,
+        -13.264948245717063
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.7457066215494248,
+      "A_sink_wetland_plus_bb_dD": 13.687504728584006,
+      "peak_sink_wetland_plus_bb_13c": 6.44402574484047,
+      "peak_sink_wetland_plus_bb_dD": 6.475795445882507,
+      "R_wetland_plus_bb": 0.054480830241625006,
+      "delta_R_vs_wetland_only": -0.007735169758374995,
+      "delta_A_src_13c_bb_minus_wetland": -0.6604046725911145,
+      "delta_A_src_dD_bb_minus_wetland": -11.266251639730024
+    },
+    "KUM": {
+      "band": "Tropics",
+      "bb_signature_region": "Trop",
+      "bb_d13C_mean": -24.925181000000002,
+      "bb_d13C_sigma": 2.5202076077251387,
+      "bb_dD_mean": -211.04554133333332,
+      "bb_dD_sigma": 7.494311332089931,
+      "bb_Q_mean_Tg_month": 1.1820475489448985,
+      "bb_B_Q_Tg_month": -0.4050401837047519,
+      "bb_C_Q_Tg_month": -0.23818749908440096,
+      "bb_amplitude_Tg_month": 0.46988385281435313,
+      "bb_frac_amplitude": 0.3975168792776346,
+      "bb_peak_month": 7.9847320899263,
+      "R_obs": 0.060669,
+      "R_wetland_only": 0.065052,
+      "A_src_wetland_13c": 0.196273,
+      "A_src_wetland_dD": 2.870656,
+      "Z_src_bb_13c": [
+        -0.2096533973803409,
+        -0.05797670974753209
+      ],
+      "Z_src_bb_dD": [
+        1.1716842298387835,
+        0.32401285816460434
+      ],
+      "A_src_bb_13c": 0.2175220584360784,
+      "A_src_bb_dD": 1.2156596014957886,
+      "peak_src_bb_13c": 8.4847320899263,
+      "peak_src_bb_dD": 2.4847320899263003,
+      "Z_sink_wetland_plus_bb_13c": [
+        0.2856114695012351,
+        -0.23503727534648589
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        -0.34962933473213076,
+        -4.9039960178064845
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.36988705345409806,
+      "A_sink_wetland_plus_bb_dD": 4.916443594140697,
+      "peak_sink_wetland_plus_bb_13c": 4.31506243413447,
+      "peak_sink_wetland_plus_bb_dD": 6.1359330046364615,
+      "R_wetland_plus_bb": 0.07523467855807821,
+      "delta_R_vs_wetland_only": 0.01018267855807821,
+      "delta_A_src_13c_bb_minus_wetland": 0.02124905843607841,
+      "delta_A_src_dD_bb_minus_wetland": -1.6549963985042113
+    },
+    "CGO": {
+      "band": "SH_extra",
+      "bb_signature_region": "SHext",
+      "bb_d13C_mean": -26.584540899999997,
+      "bb_d13C_sigma": 2.7645231364855416,
+      "bb_dD_mean": -214.6344911666667,
+      "bb_dD_sigma": 7.26726934640896,
+      "bb_Q_mean_Tg_month": 0.03264631677636301,
+      "bb_B_Q_Tg_month": 0.007594489667617365,
+      "bb_C_Q_Tg_month": 0.006347267805575545,
+      "bb_amplitude_Tg_month": 0.009897680632716066,
+      "bb_frac_amplitude": 0.30317909063120735,
+      "bb_peak_month": 1.670401343814682,
+      "R_obs": 0.028218,
+      "R_wetland_only": 0.032576,
+      "A_src_wetland_13c": 0.023639,
+      "A_src_wetland_dD": 0.345741,
+      "Z_src_bb_13c": [
+        0.003848149756405539,
+        0.0017852688383932695
+      ],
+      "Z_src_bb_dD": [
+        -0.023895429179667995,
+        -0.01108578610369414
+      ],
+      "A_src_bb_13c": 0.0042421034137632785,
+      "A_src_bb_dD": 0.026341719556957303,
+      "peak_src_bb_13c": 2.1704013438146816,
+      "peak_src_bb_dD": 8.170401343814683,
+      "Z_sink_wetland_plus_bb_13c": [
+        0.05384124444064726,
+        0.07051444809833511
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        1.6326689313335598,
+        2.3507162722112573
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.08871959757308599,
+      "A_sink_wetland_plus_bb_dD": 2.8620752666169804,
+      "peak_sink_wetland_plus_bb_13c": 1.245450388195721,
+      "peak_sink_wetland_plus_bb_dD": 1.1593855055108793,
+      "R_wetland_plus_bb": 0.03099834536425522,
+      "delta_R_vs_wetland_only": -0.001577654635744781,
+      "delta_A_src_13c_bb_minus_wetland": -0.019396896586236723,
+      "delta_A_src_dD_bb_minus_wetland": -0.3193992804430427
+    },
+    "SPO": {
+      "band": "SH_extra",
+      "bb_signature_region": "SHext",
+      "bb_d13C_mean": -26.584540899999997,
+      "bb_d13C_sigma": 2.7645231364855416,
+      "bb_dD_mean": -214.6344911666667,
+      "bb_dD_sigma": 7.26726934640896,
+      "bb_Q_mean_Tg_month": 0.03264631677636301,
+      "bb_B_Q_Tg_month": 0.007594489667617365,
+      "bb_C_Q_Tg_month": 0.006347267805575545,
+      "bb_amplitude_Tg_month": 0.009897680632716066,
+      "bb_frac_amplitude": 0.30317909063120735,
+      "bb_peak_month": 1.670401343814682,
+      "R_obs": 0.023724,
+      "R_wetland_only": 0.030982,
+      "A_src_wetland_13c": 0.023639,
+      "A_src_wetland_dD": 0.345741,
+      "Z_src_bb_13c": [
+        0.003848149756405539,
+        0.0017852688383932695
+      ],
+      "Z_src_bb_dD": [
+        -0.023895429179667995,
+        -0.01108578610369414
+      ],
+      "A_src_bb_13c": 0.0042421034137632785,
+      "A_src_bb_dD": 0.026341719556957303,
+      "peak_src_bb_13c": 2.1704013438146816,
+      "peak_src_bb_dD": 8.170401343814683,
+      "Z_sink_wetland_plus_bb_13c": [
+        0.02222582067159415,
+        0.062476040826979
+      ],
+      "Z_sink_wetland_plus_bb_dD": [
+        1.5532673464880808,
+        1.6455441570814082
+      ],
+      "A_sink_wetland_plus_bb_13c": 0.06631170923705865,
+      "A_sink_wetland_plus_bb_dD": 2.2628422442960723,
+      "peak_sink_wetland_plus_bb_13c": 0.6527663533296102,
+      "peak_sink_wetland_plus_bb_dD": 1.444921148024374,
+      "R_wetland_plus_bb": 0.029304609901202802,
+      "delta_R_vs_wetland_only": -0.001677390098797197,
+      "delta_A_src_13c_bb_minus_wetland": -0.019396896586236723,
+      "delta_A_src_dD_bb_minus_wetland": -0.3193992804430427
+    }
+  }
+}
