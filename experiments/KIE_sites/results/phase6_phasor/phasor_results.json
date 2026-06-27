@@ -495,14 +495,28 @@
       "CGO",
       "SPO"
     ],
-    "R_weighted_mean": 0.046983,
-    "R_weighted_sigma": 0.005346,
-    "alpha_13c_oh_median": 1.011282,
-    "alpha_13c_oh_ci95": [
-      0.999189,
-      1.025728
+    "R_weighted_mean": 0.047257,
+    "R_weighted_ci95": [
+      0.025651,
+      0.074942
     ],
-    "n_pooled_samples": 399923,
+    "R_weighted_sigma": 0.012574,
+    "R_site_weights": {
+      "ALT": 0.185797,
+      "ZEP": 0.088957,
+      "BRW": 0.133825,
+      "CBA": 0.096419,
+      "MHD": 0.073733,
+      "KUM": 0.090956,
+      "CGO": 0.214275,
+      "SPO": 0.116038
+    },
+    "alpha_13c_oh_median": 1.010366,
+    "alpha_13c_oh_ci95": [
+      1.001794,
+      1.020702
+    ],
+    "n_combined_samples": 50000,
     "alpha_filter_used": "wide_0.98_1.05",
     "alpha_filter_sensitivity": {
       "narrow": {
@@ -510,46 +524,58 @@
           0.99,
           1.02
         ],
-        "alpha_13c_oh_median": 1.010309507312356,
+        "alpha_13c_oh_median": 1.0101676958614985,
         "alpha_13c_oh_ci95": [
-          0.99896810032993,
-          1.0191845208989336
+          1.0017469824846994,
+          1.0184515492972728
         ],
-        "n_samples": 355662,
-        "n_excluded": 44338
+        "n_samples": 48341,
+        "n_excluded": 1659
       },
       "wide": {
         "filter": [
           0.98,
           1.05
         ],
-        "alpha_13c_oh_median": 1.0112822090238247,
+        "alpha_13c_oh_median": 1.0103663371781129,
         "alpha_13c_oh_ci95": [
-          0.9991893164993396,
-          1.0257282849314115
+          1.0017944248132804,
+          1.0207019951571243
         ],
-        "n_samples": 399923,
-        "n_excluded": 77
+        "n_samples": 50000,
+        "n_excluded": 0
       },
       "impact_wide_minus_narrow": {
-        "median": 0.000972701711468682,
+        "median": 0.00019864131661440076,
         "ci95": [
-          0.00022121616940962152,
-          0.006543764032477917
+          4.744232858100439e-05,
+          0.0022504458598515686
         ],
-        "n_samples": 44261
+        "n_samples": 1659
       }
     },
+    "combination_method": "site corrected-ratio samples combined before alpha inversion",
     "sh_only": {
       "sites": [
         "CGO",
         "SPO"
       ],
-      "alpha_13c_oh_median": 1.004368,
-      "alpha_13c_oh_ci95": [
-        0.997155,
-        1.01537
+      "R_weighted_mean": 0.029806,
+      "R_weighted_ci95": [
+        0.011982,
+        0.061021
       ],
+      "R_weighted_sigma": 0.01251,
+      "R_site_weights": {
+        "CGO": 0.648702,
+        "SPO": 0.351298
+      },
+      "alpha_13c_oh_median": 1.004602,
+      "alpha_13c_oh_ci95": [
+        0.996936,
+        1.015783
+      ],
+      "n_combined_samples": 50000,
       "alpha_filter_used": "wide_0.98_1.05",
       "alpha_filter_sensitivity": {
         "narrow": {
@@ -557,36 +583,37 @@
             0.99,
             1.02
           ],
-          "alpha_13c_oh_median": 1.0043200226260542,
+          "alpha_13c_oh_median": 1.0045559714404408,
           "alpha_13c_oh_ci95": [
-            0.9971478248870431,
-            1.0142252342885025
+            0.9969297914202335,
+            1.014724354713942
           ],
-          "n_samples": 99021,
-          "n_excluded": 979
+          "n_samples": 49560,
+          "n_excluded": 440
         },
         "wide": {
           "filter": [
             0.98,
             1.05
           ],
-          "alpha_13c_oh_median": 1.0043676792299727,
+          "alpha_13c_oh_median": 1.004601938942029,
           "alpha_13c_oh_ci95": [
-            0.9971548504835048,
-            1.0153698490035497
+            0.9969363386531094,
+            1.0157832469636896
           ],
-          "n_samples": 99927,
-          "n_excluded": 73
+          "n_samples": 49994,
+          "n_excluded": 6
         },
         "impact_wide_minus_narrow": {
-          "median": 4.7656603918477813e-05,
+          "median": 4.5967501588251025e-05,
           "ci95": [
-            7.025596461707195e-06,
-            0.0011446147150471209
+            6.547232875853126e-06,
+            0.001058892249747645
           ],
-          "n_samples": 906
+          "n_samples": 434
         }
-      }
+      },
+      "combination_method": "site corrected-ratio samples combined before alpha inversion"
     }
   }
 }

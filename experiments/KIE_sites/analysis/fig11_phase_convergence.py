@@ -207,7 +207,7 @@ def main():
     fig.legend(handles=legend_elements, loc="lower center", ncol=4, fontsize=9,
                bbox_to_anchor=(0.5, -0.01), framealpha=0.9)
 
-    fig.suptitle("Fig 11: Phase convergence — wetland source correction aligns δ¹³C and δD peak months",
+    fig.suptitle("Wetland source correction aligns isotope peak months",
                  fontsize=13, fontweight="bold")
 
     out = FIG_DIR / "fig11_phase_convergence.png"

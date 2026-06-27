@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "GFED5 Beta monthly CH4 emissions",
-    "gfed_dir": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\ImportantReferences\\Riddell-Young2025PNAS_DS\\Riddell-Young_2025_MassBalancePackage\\Riddell-Young_2025_MassBalancePackage\\data\\GFED5_Beta",
+    "gfed_dir": "C:\\Users\\byf\\Documents\\kie sites\\ImportantReferences\\Riddell-Young2025PNAS_DS\\Riddell-Young_2025_MassBalancePackage\\Riddell-Young_2025_MassBalancePackage\\data\\GFED5_Beta",
     "variable": "CH4 (g CH4 m^-2 month^-1) multiplied by grid_area (m2)",
     "climatology_years": [
       2005,
@@ -12,7 +12,7 @@
       2010
     ],
     "harmonic": "Q(m) = Q_mean + B_Q*sin(2*pi*m/12) + C_Q*cos(2*pi*m/12), m=0..11",
-    "note": "Standalone Phase 8 input; existing wetland phase files are not modified.",
+    "note": "Standalone biomass-burning input; existing wetland-correction files are not modified.",
     "yearly_total_Tg": {
       "2005": {
         "NH_high": 1.1518272429330805,

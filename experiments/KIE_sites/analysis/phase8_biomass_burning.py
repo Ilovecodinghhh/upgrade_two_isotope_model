@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Phase 8: biomass-burning source phasor correction for KIE_sites.
+"""Biomass-burning source phasor correction for KIE_sites.
 
-This phase is standalone. It does not modify Phase 1-7; it reads existing
-Phase 6 wetland-only correction outputs, then writes new BB comparison outputs.
+This diagnostic reads the wetland-only phasor-correction outputs, then writes
+new biomass-burning comparison outputs without modifying the base correction.
 """
 
 from pathlib import Path
@@ -228,7 +228,7 @@ def build_bb_seasonality():
             "variable": "CH4 (g CH4 m^-2 month^-1) multiplied by grid_area (m2)",
             "climatology_years": list(CLIMATOLOGY_YEARS),
             "harmonic": "Q(m) = Q_mean + B_Q*sin(2*pi*m/12) + C_Q*cos(2*pi*m/12), m=0..11",
-            "note": "Standalone Phase 8 input; existing wetland phase files are not modified.",
+            "note": "Standalone biomass-burning input; existing wetland-correction files are not modified.",
             "yearly_total_Tg": yearly_totals,
         },
         "bands": bands,
@@ -275,7 +275,7 @@ def load_bb_signatures_by_band():
 
 
 def rotate_month_index_to_midpoint(B_Q, C_Q):
-    """Rotate month-index harmonic coefficients into Phase 2 midpoint basis."""
+    """Rotate month-index harmonic coefficients into the isotope midpoint basis."""
     delta = 2 * np.pi * 0.5 / 12.0
     cos_d = np.cos(delta)
     sin_d = np.sin(delta)
@@ -357,12 +357,12 @@ def apply_bb_to_wetland_corrected_decomposition(phase6_decomp, bb_src_13c, bb_sr
 
 
 def run_bb_correction(bb_seasonality):
-    """Apply BB correction on top of Phase 6 wetland-only results."""
+    """Apply BB correction on top of wetland-only results."""
     phase6 = load_json(PHASE6_JSON)
     signatures = load_bb_signatures_by_band()
     results = {
         "metadata": {
-            "method": "Standalone Phase 8 BB source phasor correction applied after Phase 6 wetland correction",
+            "method": "Standalone biomass-burning source phasor correction applied after wetland correction",
             "phase6_input": str(PHASE6_JSON),
             "bb_seasonality_input": str(OUT_DATA_JSON),
             "existing_phase_files_modified": False,
@@ -455,7 +455,7 @@ def plot_bb_seasonality(bb_seasonality):
         ax.plot(months, band["monthly_clim_Tg"], marker="o", label=band["label"])
     ax.set_xlabel("Month")
     ax.set_ylabel("GFED5 BB CH4 (Tg/month)")
-    ax.set_title("Fig 15: Biomass burning seasonal emissions by latitude band")
+    ax.set_title("Biomass-burning seasonal CH4 emissions by latitude band")
     ax.set_xticks(months)
     ax.legend(frameon=False, fontsize=8)
     fig.tight_layout()
@@ -484,7 +484,7 @@ def plot_source_phasor_comparison(results):
     axes[1].set_ylabel("A source dD (per mil)")
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(sites)
-    fig.suptitle("Fig 16: Wetland and biomass-burning source phasor amplitudes")
+    fig.suptitle("Wetland and biomass-burning source phasor amplitudes")
     fig.tight_layout()
     out = FIG_DIR / "fig16_bb_source_phasor_comparison.png"
     fig.savefig(out, dpi=300)
@@ -504,11 +504,11 @@ def plot_correction_comparison(results):
     ax.axhspan(
         band_lo,
         band_hi,
-        color="0.85",
-        alpha=0.45,
+        color="#b7e1b4",
+        alpha=0.42,
         zorder=0,
         label=(
-            "Saueressig-Cantrell band "
+            "Bulk-sink laboratory range "
             f"(R={band_lo:.4f}-{band_hi:.4f})"
         ),
     )
@@ -534,7 +534,7 @@ def plot_correction_comparison(results):
     ax.set_xticks(x)
     ax.set_xticklabels(sites)
     ax.set_ylabel("R = A(d13C) / A(dD)")
-    ax.set_title("Fig 17: Incremental effect of biomass-burning source correction")
+    ax.set_title("Wetland-only versus wetland-plus-biomass-burning correction")
     ax.legend(frameon=False)
     fig.tight_layout()
     out = FIG_DIR / "fig17_bb_correction_comparison.png"
@@ -545,7 +545,7 @@ def plot_correction_comparison(results):
 
 def main():
     print("=" * 70)
-    print("Phase 8: Biomass-burning source correction")
+    print("Biomass-burning source correction")
     print("=" * 70)
     bb_seasonality = build_bb_seasonality()
     results = run_bb_correction(bb_seasonality)

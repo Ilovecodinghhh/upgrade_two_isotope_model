@@ -1,0 +1,21 @@
+site,site_name,country,latitude,longitude,elevation_m,hemisphere,latitude_band,project,metadata_source_url
+ALT,"Alert, Nunavut",Canada,82.451,-62.507,185.0,NH,northern_mid_high,» Surface Flasks » HATS Flask Sampling » Aerosol Mobile and Cooperative Platforms,https://gml.noaa.gov/dv/site/
+AMY,Anmyeon-do,Republic of Korea,36.539,126.329,47.0,NH,northern_mid_high,» Surface Flasks » HATS Flask Sampling » Aerosol Mobile and Cooperative Platforms,https://gml.noaa.gov/dv/site/
+ASC,Ascension Island,United Kingdom,-7.967,-14.4,85.0,SH,tropical,» Surface Flasks,https://gml.noaa.gov/dv/site/
+BHD,Baring Head Station,New Zealand,-41.408,174.871,85.0,SH,southern_mid_high,» Surface Flasks,https://gml.noaa.gov/dv/site/
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.611,11.0,NH,northern_mid_high,» Surface Flasks » In Situ Observatory » HATS Flask Sampling » HATS In Situ Observatory » Aerosol Surface In-Situ » Radiation In-Situ Observatory » Surface Ozone » Dobson Total Ozone » Meteorology,https://gml.noaa.gov/dv/site/
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.3,NH,northern_mid_high,» Surface Flasks,https://gml.noaa.gov/dv/site/
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,SH,southern_mid_high,» Surface Flasks » HATS Flask Sampling » Aerosol Mobile and Cooperative Platforms,https://gml.noaa.gov/dv/site/
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,NH,tropical,» Surface Flasks,https://gml.noaa.gov/dv/site/
+KUM,"Cape Kumukahi, Hawaii",United States,19.561,-154.888,8.0,NH,tropical,» Surface Flasks » HATS Flask Sampling,https://gml.noaa.gov/dv/site/
+MEX,High Altitude Global Climate Observation Center,Mexico,18.984,-97.311,4464.0,NH,tropical,» Surface Flasks,https://gml.noaa.gov/dv/site/
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,NH,northern_mid_high,» Surface Flasks » HATS Flask Sampling,https://gml.noaa.gov/dv/site/
+MID,"Sand Island, Midway",United States,28.219,-177.368,4.6,NH,northern_mid_high,» Surface Flasks,https://gml.noaa.gov/dv/site/
+MLO,"Mauna Loa, Hawaii",United States,19.536,-155.576,3397.0,NH,tropical,» Surface Flasks » In Situ Observatory » HATS Flask Sampling » HATS In Situ Observatory » Aerosol Surface In-Situ » Radiation In-Situ Observatory » Surface Ozone » Dobson Total Ozone » Lidar » Meteorology » Dobson Umkehr Ozone » Spectral UV Irradiance,https://gml.noaa.gov/dv/site/
+NWR,"Niwot Ridge, Colorado",United States,40.053,-105.586,3523.0,NH,northern_mid_high,» Surface Flasks » HATS Flask Sampling » HATS In Situ Observatory » Surface Ozone » Aerosol Mobile and Cooperative Platforms* » Spectral UV Irradiance,https://gml.noaa.gov/dv/site/
+SMO,Tutuila,American Samoa,-14.247,-170.564,42.0,SH,tropical,» Surface Flasks » In Situ Observatory » HATS Flask Sampling » HATS In Situ Observatory » Aerosol Surface In-Situ* » Radiation In-Situ Observatory » Surface Ozone* » Dobson Total Ozone » Ozonesonde » Meteorology,https://gml.noaa.gov/dv/site/
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,SH,southern_mid_high,» Surface Flasks » In Situ Observatory » HATS Flask Sampling » HATS In Situ Observatory » Aerosol Surface In-Situ » Radiation In-Situ Observatory » Surface Ozone » Dobson Total Ozone » Ozonesonde » Meteorology » Spectral UV Irradiance,https://gml.noaa.gov/dv/site/
+SUM,Summit,Greenland,72.596,-38.422,3209.5,NH,northern_mid_high,» Surface Flasks » HATS Flask Sampling » HATS In Situ Observatory* » Aerosol Surface In-Situ » Surface Ozone » Ozonesonde* » Meteorology,https://gml.noaa.gov/dv/site/
+TAP,Tae-ahn Peninsula,Republic of Korea,36.738,126.133,16.0,NH,northern_mid_high,» Surface Flasks,https://gml.noaa.gov/dv/site/
+WLG,Mt. Waliguan,Peoples Republic of China,36.288,100.896,3810.0,NH,northern_mid_high,» Surface Flasks » Aerosol Mobile and Cooperative Platforms,https://gml.noaa.gov/dv/site/
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.907,11.888,474.0,NH,northern_mid_high,» Surface Flasks,https://gml.noaa.gov/dv/site/
