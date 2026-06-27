@@ -181,7 +181,7 @@ def ci_to_sigma(ci_lo, ci_hi):
 
 
 def summarize_alpha_filters(alpha_samples):
-    """Compare legacy narrow and wider alpha filters for pooled MC samples."""
+    """Compare legacy narrow and wider alpha filters for alpha MC samples."""
     finite_alpha = np.asarray(alpha_samples)
     finite_alpha = finite_alpha[np.isfinite(finite_alpha)]
 
@@ -219,6 +219,97 @@ def summarize_alpha_filters(alpha_samples):
             ],
             "n_samples": int(wide["n_samples"] - narrow["n_samples"]),
         },
+    }
+
+
+def combine_ratio_samples_by_site(site_codes, ratio_samples_by_site, ratio_sigmas_by_site):
+    """Combine per-site corrected-ratio samples before converting to alpha."""
+    arrays = []
+    sigmas = []
+    used_codes = []
+
+    for code in site_codes:
+        if code not in ratio_samples_by_site or code not in ratio_sigmas_by_site:
+            continue
+        arr = np.asarray(ratio_samples_by_site[code], dtype=float)
+        arr = arr[np.isfinite(arr) & (arr > 0) & (arr < 1)]
+        sigma = float(ratio_sigmas_by_site[code])
+        if len(arr) == 0 or not np.isfinite(sigma) or sigma <= 0:
+            continue
+        arrays.append(arr)
+        sigmas.append(sigma)
+        used_codes.append(code)
+
+    if not arrays:
+        raise ValueError("No valid ratio samples available for multi-site summary")
+
+    n = min(len(arr) for arr in arrays)
+    stacked = np.vstack([arr[:n] for arr in arrays])
+    sigmas = np.asarray(sigmas)
+    weights = 1.0 / sigmas**2
+    weights = weights / np.sum(weights)
+    combined = np.average(stacked, axis=0, weights=weights)
+    lo, hi = np.percentile(combined, [2.5, 97.5])
+
+    return {
+        "sites": used_codes,
+        "weights": weights.tolist(),
+        "R_weighted_samples": combined,
+        "R_weighted_mean": float(np.median(combined)),
+        "R_weighted_ci95": [float(lo), float(hi)],
+        "R_weighted_sigma": float(ci_to_sigma(lo, hi)),
+        "n_samples": int(n),
+    }
+
+
+def alpha_samples_from_ratio_samples(R_samples, include_sink_uncertainty=True, rng=None):
+    """Convert combined corrected-ratio samples to alpha samples."""
+    R_samples = np.asarray(R_samples, dtype=float)
+    if not include_sink_uncertainty:
+        return ratio_to_alpha_13c(R_samples)
+
+    if rng is None:
+        rng = np.random.default_rng(42)
+
+    n = len(R_samples)
+    f_oh = np.clip(rng.normal(F_OH, SIGMA_F_OH, n), 0.5, 0.99)
+    f_cl = np.clip(rng.normal(F_CL, SIGMA_F_CL, n), 0.0, 0.1)
+    f_soil = np.clip(rng.normal(F_SOIL, SIGMA_F_SOIL, n), 0.0, 0.15)
+    f_strat = 1.0 - f_oh - f_cl - f_soil
+    alpha_d_oh = rng.normal(ALPHA_D_OH, SIGMA_ALPHA_D_OH, n)
+    alpha_13c_cl = rng.normal(ALPHA_13C_CL, SIGMA_ALPHA_13C_CL, n)
+    alpha_d_cl = rng.normal(ALPHA_D_CL, SIGMA_ALPHA_D_CL, n)
+
+    return ratio_to_alpha_13c(
+        R_samples, alpha_d_oh, f_oh, f_cl, f_soil, f_strat, alpha_13c_cl, alpha_d_cl)
+
+
+def summarize_multisite_ratio_constraint(site_codes, ratio_samples_by_site,
+                                         ratio_sigmas_by_site,
+                                         include_sink_uncertainty=True,
+                                         rng=None):
+    """Summarize a multi-site KIE constraint from combined R samples."""
+    ratio_summary = combine_ratio_samples_by_site(
+        site_codes, ratio_samples_by_site, ratio_sigmas_by_site)
+    alpha_samples = alpha_samples_from_ratio_samples(
+        ratio_summary["R_weighted_samples"],
+        include_sink_uncertainty=include_sink_uncertainty,
+        rng=rng,
+    )
+    alpha_filter_summary = summarize_alpha_filters(alpha_samples)
+    alpha_wide = alpha_filter_summary["wide"]
+
+    return {
+        **{k: v for k, v in ratio_summary.items() if k != "R_weighted_samples"},
+        "R_weighted_samples": ratio_summary["R_weighted_samples"],
+        "alpha_13c_oh_median": float(alpha_wide["alpha_13c_oh_median"]),
+        "alpha_13c_oh_ci95": [
+            float(alpha_wide["alpha_13c_oh_ci95"][0]),
+            float(alpha_wide["alpha_13c_oh_ci95"][1]),
+        ],
+        "alpha_filter_used": "wide_0.98_1.05",
+        "alpha_filter_sensitivity": alpha_filter_summary,
+        "combination_method": "site corrected-ratio samples combined before alpha inversion",
     }
 
 
@@ -475,8 +566,7 @@ def main():
           f"{'A_src13':>8} {'A_srcD':>7}")
     print("-" * 85)
 
-    valid_R_corr = []
-    valid_alpha  = []
+    valid_R_samples = []
     valid_sigmas = []
     valid_codes  = []
 
@@ -566,8 +656,7 @@ def main():
 
         # Collect for multi-site weighted mean
         if np.isfinite(R_med) and np.isfinite(R_sigma) and R_sigma > 0:
-            valid_R_corr.append(R_med)
-            valid_alpha.append(alpha_mc_valid)
+            valid_R_samples.append(R_mc_valid)
             valid_sigmas.append(R_sigma)
             valid_codes.append(code)
 
@@ -576,26 +665,24 @@ def main():
     print("MULTI-SITE PHASOR-CORRECTED RESULT")
     print("=" * 70)
 
-    if len(valid_R_corr) >= 2:
-        R_arr = np.array(valid_R_corr)
-        sig_arr = np.array(valid_sigmas)
-        w = 1.0 / sig_arr**2
-        R_wm  = np.sum(w * R_arr) / np.sum(w)
-        R_wm_sig = np.sqrt(1.0 / np.sum(w))
+    if len(valid_R_samples) >= 2:
+        ratio_samples_by_site = dict(zip(valid_codes, valid_R_samples))
+        ratio_sigmas_by_site = dict(zip(valid_codes, valid_sigmas))
+        multi_summary = summarize_multisite_ratio_constraint(
+            valid_codes, ratio_samples_by_site, ratio_sigmas_by_site)
 
-        # Pool all alpha MC samples for combined constraint. Report the legacy
-        # narrow filter and a wider conservative filter so tail clipping is visible.
-        alpha_filter_summary = summarize_alpha_filters(np.concatenate(valid_alpha))
-        alpha_wide = alpha_filter_summary["wide"]
+        alpha_filter_summary = multi_summary["alpha_filter_sensitivity"]
         alpha_narrow = alpha_filter_summary["narrow"]
         alpha_impact = alpha_filter_summary["impact_wide_minus_narrow"]
 
-        a_wm_med = alpha_wide["alpha_13c_oh_median"]
-        a_wm_lo, a_wm_hi = alpha_wide["alpha_13c_oh_ci95"]
+        R_wm = multi_summary["R_weighted_mean"]
+        R_wm_sig = multi_summary["R_weighted_sigma"]
+        a_wm_med = multi_summary["alpha_13c_oh_median"]
+        a_wm_lo, a_wm_hi = multi_summary["alpha_13c_oh_ci95"]
 
         print(f"  Sites used: {valid_codes}")
-        print(f"  Weighted mean R_corrected = {R_wm:.4f} ± {R_wm_sig:.4f}")
-        print(f"  Pooled α_13C_OH (wide filter 0.98-1.05) = "
+        print(f"  Weighted median R_corrected = {R_wm:.4f} ± {R_wm_sig:.4f}")
+        print(f"  Combined-R α_13C_OH (wide filter 0.98-1.05) = "
               f"{a_wm_med:.4f}  [{a_wm_lo:.4f}, {a_wm_hi:.4f}] (95% CI)")
         print(f"  Legacy narrow filter 0.99-1.02 = "
               f"{alpha_narrow['alpha_13c_oh_median']:.4f}  "
@@ -610,37 +697,52 @@ def main():
         results["multi_site_result"] = {
             "sites_used": valid_codes,
             "R_weighted_mean": round(float(R_wm), 6),
+            "R_weighted_ci95": [round(float(multi_summary["R_weighted_ci95"][0]), 6),
+                                round(float(multi_summary["R_weighted_ci95"][1]), 6)],
             "R_weighted_sigma": round(float(R_wm_sig), 6),
+            "R_site_weights": {
+                code: round(float(weight), 6)
+                for code, weight in zip(multi_summary["sites"], multi_summary["weights"])
+            },
             "alpha_13c_oh_median": round(a_wm_med, 6),
             "alpha_13c_oh_ci95": [round(a_wm_lo, 6), round(a_wm_hi, 6)],
-            "n_pooled_samples": int(alpha_wide["n_samples"]),
-            "alpha_filter_used": "wide_0.98_1.05",
+            "n_combined_samples": int(multi_summary["n_samples"]),
+            "alpha_filter_used": multi_summary["alpha_filter_used"],
             "alpha_filter_sensitivity": alpha_filter_summary,
+            "combination_method": multi_summary["combination_method"],
         }
 
         # ── SH-only subset ──
         sh_codes = [c for c in valid_codes if c in ("CGO", "SPO")]
         if len(sh_codes) >= 1:
-            sh_filter_summary = summarize_alpha_filters(
-                np.concatenate([valid_alpha[valid_codes.index(c)] for c in sh_codes])
-            )
-            sh_wide = sh_filter_summary["wide"]
-            if sh_wide["n_samples"] > 100:
+            sh_summary = summarize_multisite_ratio_constraint(
+                sh_codes, ratio_samples_by_site, ratio_sigmas_by_site)
+            if sh_summary["n_samples"] > 100:
                 results["multi_site_result"]["sh_only"] = {
                     "sites": sh_codes,
-                    "alpha_13c_oh_median": round(sh_wide["alpha_13c_oh_median"], 6),
-                    "alpha_13c_oh_ci95": [round(sh_wide["alpha_13c_oh_ci95"][0], 6),
-                                           round(sh_wide["alpha_13c_oh_ci95"][1], 6)],
-                    "alpha_filter_used": "wide_0.98_1.05",
-                    "alpha_filter_sensitivity": sh_filter_summary,
+                    "R_weighted_mean": round(float(sh_summary["R_weighted_mean"]), 6),
+                    "R_weighted_ci95": [round(float(sh_summary["R_weighted_ci95"][0]), 6),
+                                        round(float(sh_summary["R_weighted_ci95"][1]), 6)],
+                    "R_weighted_sigma": round(float(sh_summary["R_weighted_sigma"]), 6),
+                    "R_site_weights": {
+                        code: round(float(weight), 6)
+                        for code, weight in zip(sh_summary["sites"], sh_summary["weights"])
+                    },
+                    "alpha_13c_oh_median": round(sh_summary["alpha_13c_oh_median"], 6),
+                    "alpha_13c_oh_ci95": [round(sh_summary["alpha_13c_oh_ci95"][0], 6),
+                                           round(sh_summary["alpha_13c_oh_ci95"][1], 6)],
+                    "n_combined_samples": int(sh_summary["n_samples"]),
+                    "alpha_filter_used": sh_summary["alpha_filter_used"],
+                    "alpha_filter_sensitivity": sh_summary["alpha_filter_sensitivity"],
+                    "combination_method": sh_summary["combination_method"],
                 }
                 print(f"\n  SH-only ({sh_codes}, wide filter): α = "
-                      f"{sh_wide['alpha_13c_oh_median']:.4f} "
-                      f"[{sh_wide['alpha_13c_oh_ci95'][0]:.4f}, "
-                      f"{sh_wide['alpha_13c_oh_ci95'][1]:.4f}]")
+                      f"{sh_summary['alpha_13c_oh_median']:.4f} "
+                      f"[{sh_summary['alpha_13c_oh_ci95'][0]:.4f}, "
+                      f"{sh_summary['alpha_13c_oh_ci95'][1]:.4f}]")
 
     # ── Save ──
-    with open(OUT_JSON, "w") as f:
+    with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, default=lambda x: float(x) if isinstance(x, (np.floating, np.integer)) else x)
     print(f"\n✓ Saved: {OUT_JSON}")
 
@@ -747,7 +849,7 @@ def plot_phasor_diagrams(results):
                 ax.plot([], [], "b-",  lw=2.5, label="Z_sink (corrected)")
                 ax.legend(fontsize=7, loc="best")
 
-    fig.suptitle("Fig 8: Phasor decomposition — vector subtraction of wetland source",
+    fig.suptitle("Wetland-source phasor subtraction",
                  fontsize=12, fontweight="bold")
     fig.tight_layout(rect=[0, 0, 1, 0.94])
     out = FIG_DIR / "fig8_phasor_decomposition.png"
@@ -811,7 +913,7 @@ def plot_corrected_ratio(results, fits):
 
     ax.set_xlabel("Latitude (°)", fontsize=11)
     ax.set_ylabel("Amplitude ratio R = A(δ¹³C) / A(δD)", fontsize=11)
-    ax.set_title("Fig 9: Phasor-corrected amplitude ratio vs latitude", fontsize=12)
+    ax.set_title("Phasor-corrected amplitude ratio vs latitude", fontsize=12)
     ax.legend(fontsize=8, loc="upper right")
     ax.set_ylim(bottom=-0.01)
 
@@ -874,7 +976,7 @@ def plot_alpha_constraint(results):
     ax.set_yticks(range(len(codes_labels)))
     ax.set_yticklabels(codes_labels, fontsize=9)
     ax.set_xlabel("α¹³C_OH", fontsize=11)
-    ax.set_title("Fig 10: OH ¹³C KIE constraint from phasor-corrected seasonal amplitudes",
+    ax.set_title("OH ¹³C KIE constraint from phasor-corrected seasonal amplitudes",
                  fontsize=11)
     ax.legend(fontsize=8, loc="upper right")
     ax.set_xlim(0.995, 1.015)
@@ -1026,7 +1128,7 @@ def plot_phasor_diagrams(results):
     )
 
     fig.suptitle(
-        "Fig 8: Phasor clocks - wetland source subtraction in amplitude/phase space",
+        "Wetland source subtraction in amplitude-phase space",
         fontsize=13,
         fontweight="bold",
     )
@@ -1034,7 +1136,7 @@ def plot_phasor_diagrams(results):
     out = FIG_DIR / "fig8_phasor_decomposition.png"
     fig.savefig(out, dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print(f"鉁?Figure saved: {out}")
+    print(f"Figure saved: {out}")
 
 
 if __name__ == "__main__":

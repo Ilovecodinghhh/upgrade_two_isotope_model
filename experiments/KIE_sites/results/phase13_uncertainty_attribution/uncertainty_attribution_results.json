@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "method": "One-at-a-time grouped alpha uncertainty attribution and NH corrected-ratio residual summary",
+    "note": "Perturbation scales are diagnostic defaults for prioritization, not a replacement for Phase 6 MC."
+  },
+  "attribution": {
+    "observation": {
+      "variance": 1.6593270998236064e-05,
+      "std": 0.004073483889527006,
+      "fraction_of_oat_variance": 0.3906878602750481
+    },
+    "wetland_phasor": {
+      "variance": 8.946523267992405e-06,
+      "std": 0.0029910739322177252,
+      "fraction_of_oat_variance": 0.21064551002900203
+    },
+    "wetland_isotopes": {
+      "variance": 6.050879494557876e-06,
+      "std": 0.0024598535514452637,
+      "fraction_of_oat_variance": 0.14246770047703583
+    },
+    "bb_correction": {
+      "variance": 2.263723095297718e-06,
+      "std": 0.0015045674113504247,
+      "fraction_of_oat_variance": 0.05329926404812474
+    },
+    "sink_fractions": {
+      "variance": 3.8371215910342245e-06,
+      "std": 0.0019588572155811216,
+      "fraction_of_oat_variance": 0.09034486474521582
+    },
+    "alpha_D_OH": {
+      "variance": 3.372183601097986e-06,
+      "std": 0.001836350620414845,
+      "fraction_of_oat_variance": 0.07939791953663815
+    },
+    "non_oh_kie": {
+      "variance": 1.4082370249718182e-06,
+      "std": 0.0011866916301094476,
+      "fraction_of_oat_variance": 0.03315688088893539
+    },
+    "ranking": [
+      "observation",
+      "wetland_phasor",
+      "wetland_isotopes",
+      "sink_fractions",
+      "alpha_D_OH",
+      "bb_correction",
+      "non_oh_kie"
+    ],
+    "total_oat_variance": 4.247193907318809e-05
+  },
+  "nh_residual_phase6": {
+    "n_nh_sites": 6,
+    "n_sh_sites": 2,
+    "mean_nh_R": 0.056403666666666664,
+    "mean_sh_R": 0.031779,
+    "mean_excess_above_cantrell": 0.03803631972789091,
+    "oh_ratio_high": 0.01836734693877575
+  },
+  "nh_residual_phase8": {
+    "n_nh_sites": 6,
+    "n_sh_sites": 2,
+    "mean_nh_R": 0.05255421716944226,
+    "mean_sh_R": 0.03015147763272901,
+    "mean_excess_above_cantrell": 0.03418687023066651,
+    "oh_ratio_high": 0.01836734693877575
+  },
+  "alpha_from_cantrell_ratio": 1.0054
+}

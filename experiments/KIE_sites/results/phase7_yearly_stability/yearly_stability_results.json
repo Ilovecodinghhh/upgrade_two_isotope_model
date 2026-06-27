@@ -2,6 +2,7 @@
   "metadata": {
     "method": "Individual-year annual harmonic fits",
     "min_months_per_year": 8,
+    "min_usable_years_for_stability": 2,
     "note": "Diagnostic only: many site-years have sparse monthly coverage."
   },
   "sites": {

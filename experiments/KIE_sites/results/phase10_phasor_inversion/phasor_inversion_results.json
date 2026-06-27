@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "method": "Direct complex-phasor inversion from existing corrected sink phasors",
+    "alpha_d_oh": 1.294
+  },
+  "phase6_wetland_only": {
+    "ALT": {
+      "A_sink_13c": 0.488757621947331,
+      "A_sink_dD": 9.709829272319292,
+      "R_sink": 0.05033637649435069,
+      "alpha_13c_oh": 1.0147988946893391,
+      "phase_diff_rad": 0.2970891486561067,
+      "phase_diff_months": 0.5673984785709876,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.085902,
+      "R_phase6_corrected": 0.050336,
+      "source_band": "NH_high"
+    },
+    "ZEP": {
+      "A_sink_13c": 0.5072262081348587,
+      "A_sink_dD": 9.065731211468801,
+      "R_sink": 0.05594983970991564,
+      "alpha_13c_oh": 1.016449252874715,
+      "phase_diff_rad": -0.033543403839213504,
+      "phase_diff_months": 0.06406318234966187,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.056143,
+      "R_phase6_corrected": 0.05595,
+      "source_band": "NH_high"
+    },
+    "BRW": {
+      "A_sink_13c": 0.5057377479586814,
+      "A_sink_dD": 8.97821394569024,
+      "R_sink": 0.056329438239935,
+      "alpha_13c_oh": 1.0165608548425409,
+      "phase_diff_rad": 0.36430073366945237,
+      "phase_diff_months": 0.6957631504259689,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.139266,
+      "R_phase6_corrected": 0.056329,
+      "source_band": "NH_high"
+    },
+    "CBA": {
+      "A_sink_13c": 0.7633636914180894,
+      "A_sink_dD": 15.726721296641527,
+      "R_sink": 0.04853927764213048,
+      "alpha_13c_oh": 1.0142705476267864,
+      "phase_diff_rad": 0.05979081955728427,
+      "phase_diff_months": 0.11419205380868834,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.035525,
+      "R_phase6_corrected": 0.048539,
+      "source_band": "NH_mid"
+    },
+    "MHD": {
+      "A_sink_13c": 0.8153046654733239,
+      "A_sink_dD": 13.104347839447833,
+      "R_sink": 0.062216347998564556,
+      "alpha_13c_oh": 1.018291606311578,
+      "phase_diff_rad": 0.07251244030504278,
+      "phase_diff_months": 0.1384885597224425,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.0902,
+      "R_phase6_corrected": 0.062216,
+      "source_band": "NH_mid"
+    },
+    "KUM": {
+      "A_sink_13c": 0.302699230558983,
+      "A_sink_dD": 4.653173110166011,
+      "R_sink": 0.06505221778610847,
+      "alpha_13c_oh": 1.019125352029116,
+      "phase_diff_rad": 0.07604929011140005,
+      "phase_diff_months": 0.14524344527830696,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.060669,
+      "R_phase6_corrected": 0.065052,
+      "source_band": "Tropics"
+    },
+    "CGO": {
+      "A_sink_13c": 0.09249494727796755,
+      "A_sink_dD": 2.839370175365729,
+      "R_sink": 0.03257586773308049,
+      "alpha_13c_oh": 1.0095773051135257,
+      "phase_diff_rad": -0.07110350172100333,
+      "phase_diff_months": 0.13579768524048919,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.028218,
+      "R_phase6_corrected": 0.032576,
+      "source_band": "SH_extra"
+    },
+    "SPO": {
+      "A_sink_13c": 0.06934960601033772,
+      "A_sink_dD": 2.238399568421763,
+      "R_sink": 0.03098178135337755,
+      "alpha_13c_oh": 1.009108643717893,
+      "phase_diff_rad": 0.3667427468626916,
+      "phase_diff_months": 0.7004270520755647,
+      "residual_13c_abs": 0.0,
+      "residual_dD_abs": 0.0,
+      "R_observed": 0.023724,
+      "R_phase6_corrected": 0.030982,
+      "source_band": "SH_extra"
+    }
+  },
+  "phase8_wetland_plus_bb": {
+    "ALT": {
+      "A_sink_13c": 0.4467766711284535,
+      "A_sink_dD": 10.095348146093606,
+      "R_sink": 0.04425569724421378,
+      "alpha_13c_oh": 1.0130111749897988,
+      "phase_diff_rad": 0.3356482690908136,
+      "phase_diff_months": 0.6410409739924994,
+      "R_observed": 0.085902,
+      "R_wetland_plus_bb": 0.04425569724421378,
+      "source_band": "NH_high"
+    },
+    "ZEP": {
+      "A_sink_13c": 0.46382487100783754,
+      "A_sink_dD": 9.434853253803336,
+      "R_sink": 0.04916079334046478,
+      "alpha_13c_oh": 1.0144532732420966,
+      "phase_diff_rad": 0.0050240234326821565,
+      "phase_diff_months": 0.009595177962250527,
+      "R_observed": 0.056143,
+      "R_wetland_plus_bb": 0.04916079334046478,
+      "source_band": "NH_high"
+    },
+    "BRW": {
+      "A_sink_13c": 0.46556748624534355,
+      "A_sink_dD": 9.362982741528967,
+      "R_sink": 0.04972427046995889,
+      "alpha_13c_oh": 1.0146189355181678,
+      "phase_diff_rad": 0.4109332712906859,
+      "phase_diff_months": 0.784824736882026,
+      "R_observed": 0.139266,
+      "R_wetland_plus_bb": 0.04972427046995889,
+      "source_band": "NH_high"
+    },
+    "CBA": {
+      "A_sink_13c": 0.693059659880836,
+      "A_sink_dD": 16.319176780691546,
+      "R_sink": 0.0424690331623129,
+      "alpha_13c_oh": 1.01248589574972,
+      "phase_diff_rad": 0.008416307878711393,
+      "phase_diff_months": 0.016073964017762184,
+      "R_observed": 0.035525,
+      "R_wetland_plus_bb": 0.0424690331623129,
+      "source_band": "NH_mid"
+    },
+    "MHD": {
+      "A_sink_13c": 0.7457066215494248,
+      "A_sink_dD": 13.687504728584006,
+      "R_sink": 0.054480830241625006,
+      "alpha_13c_oh": 1.0160173640910377,
+      "phase_diff_rad": 0.016634576566734616,
+      "phase_diff_months": 0.031769701042037087,
+      "R_observed": 0.0902,
+      "R_wetland_plus_bb": 0.054480830241625006,
+      "source_band": "NH_mid"
+    },
+    "KUM": {
+      "A_sink_13c": 0.36988705345409806,
+      "A_sink_dD": 4.916443594140697,
+      "R_sink": 0.07523467855807821,
+      "alpha_13c_oh": 1.022118995496075,
+      "phase_diff_rad": 0.9534056012378187,
+      "phase_diff_months": 1.8208705705019916,
+      "R_observed": 0.060669,
+      "R_wetland_plus_bb": 0.07523467855807821,
+      "source_band": "Tropics"
+    },
+    "CGO": {
+      "A_sink_13c": 0.08871959757308599,
+      "A_sink_dD": 2.8620752666169804,
+      "R_sink": 0.03099834536425522,
+      "alpha_13c_oh": 1.009113513537091,
+      "phase_diff_rad": -0.04506346719579435,
+      "phase_diff_months": 0.0860648826848417,
+      "R_observed": 0.028218,
+      "R_wetland_plus_bb": 0.03099834536425522,
+      "source_band": "SH_extra"
+    },
+    "SPO": {
+      "A_sink_13c": 0.06631170923705865,
+      "A_sink_dD": 2.2628422442960723,
+      "R_sink": 0.029304609901202802,
+      "alpha_13c_oh": 1.0086155553109537,
+      "phase_diff_rad": 0.4147712805864998,
+      "phase_diff_months": 0.7921547946947632,
+      "R_observed": 0.023724,
+      "R_wetland_plus_bb": 0.029304609901202802,
+      "source_band": "SH_extra"
+    }
+  }
+}

@@ -80,3 +80,5 @@ def test_saueressig_cantrell_r_band_returns_ordered_positive_values():
     assert 0 < low < high
     assert np.isclose(details["R_saueressig"], low)
     assert np.isclose(details["R_cantrell"], high)
+    assert np.isclose(low, 0.02777140809745613)
+    assert np.isclose(high, 0.032285919025439105)

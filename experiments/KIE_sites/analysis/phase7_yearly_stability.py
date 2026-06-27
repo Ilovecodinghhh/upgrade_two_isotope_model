@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-phase7_yearly_stability.py - Individual-year seasonal fits for KIE_sites.
+Individual-year seasonal fits for KIE_sites.
 
 This robustness check asks whether annual amplitude ratios are stable across
 the short 2005-2010 co-located isotope window. Unstable year-to-year ratios
@@ -38,6 +38,7 @@ SITE_LATS = {
     "ASC": -7.97, "SMO": -14.25, "CGO": -40.68, "SPO": -89.98,
 }
 MIN_MONTHS = 8
+MIN_USABLE_YEARS_FOR_STABILITY = 2
 
 
 def fit_harmonic(t, y):
@@ -141,7 +142,7 @@ def summarize_site(code, yearly_records, phase2):
 
 
 def classify_stability(n_years, scatter_to_phase2_sigma, within_ci):
-    if n_years < 2:
+    if n_years < MIN_USABLE_YEARS_FOR_STABILITY:
         return "insufficient_years"
     if np.isfinite(scatter_to_phase2_sigma) and scatter_to_phase2_sigma > 1.5:
         return "yearly_scatter_exceeds_phase2_uncertainty"
@@ -158,6 +159,7 @@ def run_yearly_stability(min_months=MIN_MONTHS):
         "metadata": {
             "method": "Individual-year annual harmonic fits",
             "min_months_per_year": min_months,
+            "min_usable_years_for_stability": MIN_USABLE_YEARS_FOR_STABILITY,
             "note": "Diagnostic only: many site-years have sparse monthly coverage.",
         },
         "sites": {},
@@ -202,9 +204,10 @@ def run_yearly_stability(min_months=MIN_MONTHS):
 
 
 def plot_yearly_stability(results):
-    """Create Fig 12: yearly R stability by site."""
+    """Create yearly R stability by site."""
     fig, axes = plt.subplots(4, 3, figsize=(13, 11), sharex=True)
     axes = axes.flatten()
+    sc = None
 
     for ax, code in zip(axes, SITE_ORDER):
         site = results["sites"].get(code)
@@ -245,21 +248,27 @@ def plot_yearly_stability(results):
     for ax in axes[::3]:
         ax.set_ylabel("Yearly R = A(d13C)/A(dD)", fontsize=8)
 
-    fig.subplots_adjust(left=0.07, right=0.90, top=0.91, bottom=0.10,
+    fig.subplots_adjust(left=0.07, right=0.90, top=0.91, bottom=0.14,
                         hspace=0.42, wspace=0.22)
     cax = fig.add_axes([0.925, 0.18, 0.018, 0.62])
     cbar = fig.colorbar(sc, cax=cax)
-    cbar.set_label("Paired months in year", fontsize=9)
+    cbar.set_label("Paired months in plotted year (>=8)", fontsize=9)
 
     fig.suptitle(
-        "Fig 12: Individual-year seasonal amplitude ratios (2005-2010)",
+        "Individual-year seasonal amplitude ratios (2005-2010)",
         fontsize=13,
         fontweight="bold",
     )
     fig.text(
-        0.5, 0.03,
-        "Dashed line = full-period Phase 2 ratio; grey band = Phase 2 95% CI. "
-        "Red titles flag yearly scatter larger than Phase 2 uncertainty.",
+        0.5, 0.055,
+        "Only site-years with >=8 paired months are plotted; >=2 plotted years are required for stability classification.",
+        ha="center",
+        fontsize=9,
+    )
+    fig.text(
+        0.5, 0.030,
+        "Dashed line = full-period annual-harmonic ratio; grey band = full-period 95% CI. "
+        "Red titles flag yearly scatter larger than full-period uncertainty.",
         ha="center",
         fontsize=9,
     )
@@ -277,7 +286,7 @@ def main():
     print(f"Saved: {OUT_FIG}")
     print("Sites with >=2 usable years:", results["summary"]["sites_with_at_least_two_usable_years"])
     print("Flagged unstable sites:", results["summary"]["sites_flagged_unstable"])
-    print("Median yearly scatter / Phase 2 sigma:",
+    print("Median yearly scatter / full-period sigma:",
           f"{results['summary']['median_scatter_to_phase2_sigma']:.2f}")
 
 

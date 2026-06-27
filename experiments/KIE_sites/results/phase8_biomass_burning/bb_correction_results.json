@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "method": "Standalone Phase 8 BB source phasor correction applied after Phase 6 wetland correction",
-    "phase6_input": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\experiments\\KIE_sites\\results\\phase6_phasor\\phasor_results.json",
-    "bb_seasonality_input": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\experiments\\KIE_sites\\data\\biomass_burning_seasonality.json",
+    "method": "Standalone biomass-burning source phasor correction applied after wetland correction",
+    "phase6_input": "C:\\Users\\byf\\Documents\\kie sites\\experiments\\KIE_sites\\results\\phase6_phasor\\phasor_results.json",
+    "bb_seasonality_input": "C:\\Users\\byf\\Documents\\kie sites\\experiments\\KIE_sites\\data\\biomass_burning_seasonality.json",
     "existing_phase_files_modified": false,
     "q_total_Tg_month": 48.333333333333336
   },
@@ -12,12 +12,12 @@
       "d13C": {
         "mean": -26.6005384,
         "sigma": 2.767399431687706,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_NHext_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_d13C_NHext_MC.csv"
       },
       "dD": {
         "mean": -262.81567633333333,
         "sigma": 9.857870317293346,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_NHext_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_dD_NHext_MC.csv"
       }
     },
     "NH_mid": {
@@ -25,12 +25,12 @@
       "d13C": {
         "mean": -26.6005384,
         "sigma": 2.767399431687706,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_NHext_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_d13C_NHext_MC.csv"
       },
       "dD": {
         "mean": -262.81567633333333,
         "sigma": 9.857870317293346,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_NHext_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_dD_NHext_MC.csv"
       }
     },
     "Tropics": {
@@ -38,12 +38,12 @@
       "d13C": {
         "mean": -24.925181000000002,
         "sigma": 2.5202076077251387,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_Trop_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_d13C_Trop_MC.csv"
       },
       "dD": {
         "mean": -211.04554133333332,
         "sigma": 7.494311332089931,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_Trop_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_dD_Trop_MC.csv"
       }
     },
     "SH_extra": {
@@ -51,12 +51,12 @@
       "d13C": {
         "mean": -26.584540899999997,
         "sigma": 2.7645231364855416,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_d13C_SHext_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_d13C_SHext_MC.csv"
       },
       "dD": {
         "mean": -214.6344911666667,
         "sigma": 7.26726934640896,
-        "file": "C:\\Users\\byf\\Documents\\KIE_Sites\\upgrade_two_isotope_model\\rel\\data\\BB_dD_SHext_MC.csv"
+        "file": "C:\\Users\\byf\\Documents\\kie sites\\rel\\data\\BB_dD_SHext_MC.csv"
       }
     }
   },
