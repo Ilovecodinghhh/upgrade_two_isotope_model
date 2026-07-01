@@ -1,0 +1,26 @@
+site_code,site_name,country,latitude,longitude,elevation_m,n_observations,year_start,year_end,data_source,file
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,2999,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_alt_surface-flask_7_sil_event.txt
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,556,2013,2022,NOAA_INSTAAR_2023-09-21,ch4c13_amy_surface-flask_7_sil_event.txt
+ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,3647,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_asc_surface-flask_7_sil_event.txt
+AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,1163,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_azr_surface-flask_7_sil_event.txt
+BAL,Baltic Sea,Poland,55.35,17.22,3.0,535,2008,2011,NOAA_INSTAAR_2023-09-21,ch4c13_bal_surface-flask_7_sil_event.txt
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,390,2009,2022,NOAA_INSTAAR_2023-09-21,ch4c13_bhd_surface-flask_7_sil_event.txt
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,4304,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_brw_surface-flask_7_sil_event.txt
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,2354,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_cba_surface-flask_7_sil_event.txt
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,1929,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_cgo_surface-flask_7_sil_event.txt
+EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,203,2015,2019,NOAA_INSTAAR_2023-09-21,ch4c13_eic_surface-flask_7_sil_event.txt
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,552,2016,2022,NOAA_INSTAAR_2023-09-21,ch4c13_gmi_surface-flask_7_sil_event.txt
+KUM,"Cape Kumukahi, Hawaii",United States,19.5608,-154.8883,8.0,2657,1999,2022,NOAA_INSTAAR_2023-09-21,ch4c13_kum_surface-flask_7_sil_event.txt
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,416,2008,2013,NOAA_INSTAAR_2023-09-21,ch4c13_llb_surface-flask_7_sil_event.txt
+MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,999,2009,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mex_surface-flask_7_sil_event.txt
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,1758,1999,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mhd_surface-flask_7_sil_event.txt
+MID,"Sand Island, Midway",United States,28.2186,-177.3678,4.6,637,2015,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mid_surface-flask_7_sil_event.txt
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,4674,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_mlo_surface-flask_7_sil_event.txt
+NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,2276,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_nwr_surface-flask_7_sil_event.txt
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,4067,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_smo_surface-flask_7_sil_event.txt
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,3669,1998,2022,NOAA_INSTAAR_2023-09-21,ch4c13_spo_surface-flask_7_sil_event.txt
+SUM,Summit,Greenland,72.5962,-38.422,3209.54,1213,2010,2022,NOAA_INSTAAR_2023-09-21,ch4c13_sum_surface-flask_7_sil_event.txt
+TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,1600,2000,2022,NOAA_INSTAAR_2023-09-21,ch4c13_tap_surface-flask_7_sil_event.txt
+WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,1753,2001,2022,NOAA_INSTAAR_2023-09-21,ch4c13_wlg_surface-flask_7_sil_event.txt
+WPC,Western Pacific Cruise,N/A,-1e+34,-1e+34,0.0,458,2005,2013,NOAA_INSTAAR_2023-09-21,ch4c13_wpc_shipboard-flask_7_sil_event.txt
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,1442,2001,2022,NOAA_INSTAAR_2023-09-21,ch4c13_zep_surface-flask_7_sil_event.txt

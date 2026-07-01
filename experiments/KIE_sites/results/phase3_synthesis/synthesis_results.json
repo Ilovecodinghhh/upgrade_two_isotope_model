@@ -1,0 +1,316 @@
+{
+  "classification_criteria": {
+    "phase_threshold_months": 2.0,
+    "min_d13C_amplitude_permil": 0.04,
+    "mbl_required": true
+  },
+  "site_classifications": {
+    "ALT": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.08590167945925846,
+      "ratio_ci95": [
+        0.05840523387427966,
+        0.14419316862042517
+      ],
+      "ratio_sigma": 0.02188467723115957,
+      "phase_diff_months": 1.3377219442523367,
+      "phase_diff_ci95": [
+        0.6697866129830004,
+        2.1813944918231547
+      ],
+      "amp_d13c": 0.2187571484928062,
+      "amp_dD": 2.546599203529642,
+      "latitude": 82.45
+    },
+    "ZEP": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.05614345073404795,
+      "ratio_ci95": [
+        0.013773104517547765,
+        0.1340756461600255
+      ],
+      "ratio_sigma": 0.03068942388838718,
+      "phase_diff_months": -0.4412954119084317,
+      "phase_diff_ci95": [
+        -3.3362465840870783,
+        2.322619437975048
+      ],
+      "amp_d13c": 0.19914872533301425,
+      "amp_dD": 3.547140810357091,
+      "latitude": 78.91
+    },
+    "BRW": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.13926625628052103,
+      "ratio_ci95": [
+        0.08284937229895147,
+        0.2967374086093197
+      ],
+      "ratio_sigma": 0.05456327456897149,
+      "phase_diff_months": 0.7868726465254815,
+      "phase_diff_ci95": [
+        -0.27929542616157477,
+        2.0103311272859465
+      ],
+      "amp_d13c": 0.26460354617162096,
+      "amp_dD": 1.8999831921857349,
+      "latitude": 71.32
+    },
+    "CBA": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.035524878952459565,
+      "ratio_ci95": [
+        0.019257895722510264,
+        0.08793056128641646
+      ],
+      "ratio_sigma": 0.01751853713364954,
+      "phase_diff_months": 1.8112600769240128,
+      "phase_diff_ci95": [
+        0.8008693387861463,
+        3.5327375429111876
+      ],
+      "amp_d13c": 0.1484077745235411,
+      "amp_dD": 4.177572982645338,
+      "latitude": 55.21
+    },
+    "MHD": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.09020029046835443,
+      "ratio_ci95": [
+        0.03934886912478367,
+        0.272280540185307
+      ],
+      "ratio_sigma": 0.05942134465829677,
+      "phase_diff_months": 0.5184256526747208,
+      "phase_diff_ci95": [
+        -1.4165699297346968,
+        2.2827603714017153
+      ],
+      "amp_d13c": 0.15306510148629732,
+      "amp_dD": 1.6969468800103051,
+      "latitude": 53.33
+    },
+    "AZR": {
+      "classification": "contaminated",
+      "is_mbl": false,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "non-MBL site"
+      ],
+      "ratio": 0.1081600782515261,
+      "ratio_ci95": [
+        0.05890331674830146,
+        0.296873169580208
+      ],
+      "ratio_sigma": 0.060706595110180235,
+      "phase_diff_months": 0.6145965897576557,
+      "phase_diff_ci95": [
+        -0.8255786300129762,
+        1.7780366973252135
+      ],
+      "amp_d13c": 0.15751876347744181,
+      "amp_dD": 1.4563484607613926,
+      "latitude": 38.77
+    },
+    "MLO": {
+      "classification": "contaminated",
+      "is_mbl": false,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "non-MBL site"
+      ],
+      "ratio": 0.06888516370688877,
+      "ratio_ci95": [
+        0.031196539066188193,
+        0.2802766836601315
+      ],
+      "ratio_sigma": 0.06354085321274064,
+      "phase_diff_months": 1.9469251137812953,
+      "phase_diff_ci95": [
+        -0.38997784342574243,
+        3.820472672418459
+      ],
+      "amp_d13c": 0.11101664036296316,
+      "amp_dD": 1.6116190248940512,
+      "latitude": 19.54
+    },
+    "KUM": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.060669463286962516,
+      "ratio_ci95": [
+        0.033224359127626904,
+        0.12604707598522408
+      ],
+      "ratio_sigma": 0.023679264504489074,
+      "phase_diff_months": 0.41058382748520394,
+      "phase_diff_ci95": [
+        -0.6381667516019305,
+        1.5633045987975647
+      ],
+      "amp_d13c": 0.10814609255653743,
+      "amp_dD": 1.7825457272468954,
+      "latitude": 19.56
+    },
+    "ASC": {
+      "classification": "contaminated",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": false,
+      "reasons": [
+        "A(\u03b4\u00b9\u00b3C) = 0.0097\u2030 < 0.04\u2030"
+      ],
+      "ratio": 0.007089998359450959,
+      "ratio_ci95": [
+        0.0025571734934552994,
+        0.05306543148839238
+      ],
+      "ratio_sigma": 0.01288475969258599,
+      "phase_diff_months": 0.03588502886065617,
+      "phase_diff_ci95": [
+        -5.542825819874798,
+        5.6174175229262575
+      ],
+      "amp_d13c": 0.009701963587792668,
+      "amp_dD": 1.368401386843759,
+      "latitude": -7.97
+    },
+    "SMO": {
+      "classification": "contaminated",
+      "is_mbl": true,
+      "phase_ok": false,
+      "snr_ok": false,
+      "reasons": [
+        "|\u0394\u03c6| = 5.3 mo > 2.0 mo",
+        "A(\u03b4\u00b9\u00b3C) = 0.0329\u2030 < 0.04\u2030"
+      ],
+      "ratio": 0.0403076832421245,
+      "ratio_ci95": [
+        0.008540820305112244,
+        0.11348360811233751
+      ],
+      "ratio_sigma": 0.026771119338577874,
+      "phase_diff_months": -5.297471849688757,
+      "phase_diff_ci95": [
+        -5.915684563544944,
+        5.9045773725432715
+      ],
+      "amp_d13c": 0.03287789058942761,
+      "amp_dD": 0.8156730415869646,
+      "latitude": -14.25
+    },
+    "CGO": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.02821799793395803,
+      "ratio_ci95": [
+        0.010537190190783186,
+        0.0532979917298167
+      ],
+      "ratio_sigma": 0.010908367739549367,
+      "phase_diff_months": -0.2842066532276278,
+      "phase_diff_ci95": [
+        -1.9751249686597103,
+        1.8433106410876487
+      ],
+      "amp_d13c": 0.07080860447212008,
+      "amp_dD": 2.509341897247351,
+      "latitude": -40.68
+    },
+    "SPO": {
+      "classification": "clean",
+      "is_mbl": true,
+      "phase_ok": true,
+      "snr_ok": true,
+      "reasons": [
+        "all criteria met"
+      ],
+      "ratio": 0.023724023206118456,
+      "ratio_ci95": [
+        0.007976635971248413,
+        0.06057932757370213
+      ],
+      "ratio_sigma": 0.013419053980217786,
+      "phase_diff_months": 0.7783093904664242,
+      "phase_diff_ci95": [
+        -1.5475125050933023,
+        3.1473841975993384
+      ],
+      "amp_d13c": 0.045791020606098534,
+      "amp_dD": 1.9301540977370555,
+      "latitude": -89.98
+    }
+  },
+  "weighted_mean_clean": {
+    "mean": 0.039711046177124586,
+    "sigma": 0.006627325574555936,
+    "chi2": 12.162475203589224,
+    "n_sites": 8,
+    "chi2_reduced": 1.7374964576556036
+  },
+  "weighted_mean_all": {
+    "mean": 0.03417917234267175,
+    "sigma": 0.0057067690435552414,
+    "chi2": 19.115259762508586,
+    "n_sites": 12,
+    "chi2_reduced": 1.7377508875007805
+  },
+  "oh_predictions": {
+    "saueressig_ratio": 0.012580645161290368,
+    "cantrell_ratio": 0.017419354838709905,
+    "alpha_D_OH": 1.31,
+    "alpha_13C_saueressig": 1.0039,
+    "alpha_13C_cantrell": 1.0054
+  },
+  "interpretation": {
+    "observed_weighted_mean_ratio": 0.039711046177124586,
+    "observed_sigma": 0.006627325574555936,
+    "OH_prediction_saueressig": 0.012580645161290368,
+    "OH_prediction_cantrell": 0.017419354838709905,
+    "sigma_above_saueressig": 4.1,
+    "sigma_above_cantrell": 3.4,
+    "conclusion": "The observed amplitude ratio is significantly ABOVE the pure-OH prediction range, indicating that source seasonality (likely microbial emissions) contributes substantially to the \u03b4\u00b9\u00b3C seasonal cycle. The simple ratio method CANNOT directly constrain the OH KIE without source deconvolution (Phase 4)."
+  }
+}

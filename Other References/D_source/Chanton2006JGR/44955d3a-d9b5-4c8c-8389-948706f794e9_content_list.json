@@ -1,0 +1,1387 @@
+[
+    {
+        "type": "text",
+        "text": "Controls on the hydrogen isotopic composition of biogenic methane from high-latitude terrestrial wetlands",
+        "text_level": 1,
+        "bbox": [
+            93,
+            118,
+            763,
+            161
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Jeffrey P. Chanton,1 Dana Fields,1 and Mark E. Hines2",
+        "bbox": [
+            93,
+            170,
+            501,
+            186
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Received 11 November 2005; revised 30 March 2006; accepted 9 June 2006; published 20 October 2006.",
+        "bbox": [
+            93,
+            193,
+            661,
+            207
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "[1] To investigate the controls on the \u0001D isotopic composition of biogenic $\\mathrm { C H } _ { 4 }$ in terrestrial wetlands, we collected a series of samples for $\\mathrm { \\bar { \\delta D } \\mathrm { - } H _ { 2 } O , \\delta D \\mathrm { - } C \\bar { H } _ { 4 } , \\delta ^ { 1 3 } C \\mathrm { - } C H _ { 4 } , }$ and $\\delta ^ { 1 3 } \\mathrm { C - D I C }$ (dissolved $\\Sigma C O _ { 2 } )$ along a N-S transect across Alaska from $6 0 ^ { \\circ } \\mathrm { N }$ to $7 0 ^ { \\circ } \\mathrm { N }$ latitude from 7 to 15 August 2001. The $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ values varied from \u0001108% to \u0001161% and from \u0001308% to \u0001394%, respectively, from south to north and were significantly correlated, indicating the significant influence of the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ on the \u0001D of terrestrial $\\mathrm { { C H } _ { 4 } }$ collected along a latitudinal spatial gradient. Additionally, the apparent fractionation factors $( \\alpha , \\alpha _ { \\mathrm { { A - B } } } = \\mathrm { { R _ { A } } / \\mathrm { { R _ { B } } , } }$ where $\\mathrm { R } = { } ^ { \\overleftarrow { 1 3 } } \\mathrm { C } / { } ^ { 1 2 } \\mathrm { C }$ or D/H) for $\\mathrm { \\bar { H } } _ { 2 } \\mathrm { O }  \\mathrm { \\bar { C } H } _ { 4 } ( \\alpha _ { \\mathrm { D } } )$ and $\\mathrm { D I C } \\longrightarrow \\mathrm { C H } _ { 4 } \\left( \\alpha _ { \\mathrm { C } } \\right)$ varied from 1.26 to 1.42 and from 1.035 to 1.084, respectively, and were inversely correlated. We conclude that while $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ is a critical factor controlling $\\delta \\mathrm { D - C H } _ { 4 }$ across latitudes, the $\\mathrm { C H } _ { 4 }$ production mechanism is also responsible for variation in the $\\delta \\mathrm { D - C H } _ { 4 } .$ If the isotopic values of the precursors of methane, $_ \\mathrm { H } \\mathrm { } _ { 2 } \\mathrm { O }$ , DIC, and organic matter are relatively constant, $\\mathrm { C H } _ { 4 }$ produced by acetate fermentation will be enriched in $\\delta ^ { 1 3 } \\mathrm { C }$ and depleted in \u0001D relative to $\\mathrm { C H } _ { 4 }$ produced via the $\\mathrm { C O } _ { 2 }$ reduction pathway. Production mechanism variation will be particularly important in controlling variations in $\\mathrm { C H } _ { 4 }$ isotopic composition with depth. The strong dependence of $\\delta \\mathrm { D - C H } _ { 4 }$ on the \u0001D of environmental $_ \\mathrm { H _ { 2 } O }$ indicates that specific fields on plots of $\\delta \\mathrm { D - C H } _ { 4 }$ versus $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ may not always accurately represent the isotopic composition of $\\mathrm { C H } _ { 4 }$ produced by $\\mathrm { C O } _ { 2 }$ reduction in northern wetlands. Because of this variation at high latitude, we assert that $\\delta \\mathrm { D - C H } _ { 4 }$ values cannot be associated with production mechanism in an absolute sense. The production mechanism effect is in addition to the effect of the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$",
+        "bbox": [
+            93,
+            210,
+            748,
+            545
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Citation: Chanton, J. P., D. Fields, and M. E. Hines (2006), Controls on the hydrogen isotopic composition of biogenic methane from high-latitude terrestrial wetlands, J. Geophys. Res., 111, G04004, doi:10.1029/2005JG000134.",
+        "bbox": [
+            93,
+            550,
+            897,
+            580
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. Introduction",
+        "text_level": 2,
+        "bbox": [
+            94,
+            609,
+            228,
+            625
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "[2] Methane is the final end product of the anaerobic decomposition of organic matter. It is formed by two main pathways, acetate fermentation and reduction of $\\mathrm { C O } _ { 2 }$ with hydrogen. Variation in these two main mechanisms of $\\mathrm { C H } _ { 4 }$ production has been hypothesized to be associated with inverse or antipathetic shifts in \u0001D and $\\delta ^ { 1 3 } \\mathrm { C }$ of $\\mathrm { C H } _ { 4 }$ [Whiticar et al., 1986; Schoell, 1988; Burke et $a l .$ , 1988a, 1988b; Whiticar, 1999; Hornibrook et al., 1997; Chanton et al., 2005]. It is often stated that fermentation of acetate will result in $\\mathrm { C H } _ { 4 }$ that is $^ { 1 3 } \\mathrm { C }$ enriched and D depleted relative to $\\mathrm { C H } _ { 4 }$ produced via the $\\mathrm { C O } _ { 2 }$ reduction pathway. Whiticar et al. [1986] defined somewhat distinct isotope compositional fields on a plot of $\\delta \\mathrm { D - C H } _ { 4 }$ versus $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ resulting from the different biogenic pathways and from thermogenic and geothermal origin. However, a portion of the \u0001D variation is due to variation in the precursor for CH4 hydrogen, which is in part $_ \\mathrm { H } \\mathrm { _ 2 O }$ . As discussed by Waldron et al. [1999], part of the reason for the \u0001D distinction between acetate-formed $\\mathrm { C H } _ { 4 }$ versus $\\mathrm { C O } _ { 2 }$ reduction $\\mathrm { C H } _ { 4 }$ is because samples that were representative of the $\\mathrm { C O } _ { 2 }$ reduction pathway were often from the marine environment where the $\\delta \\mathrm { D } \\mathrm { - } \\dot { \\mathrm { H } } _ { 2 } \\mathrm { O }$ is close to $0 \\text{‰}$ . Methane representative of acetate fermentation was more likely sampled from terrestrial environments where the $\\delta \\mathrm { D } \\mathrm { - } \\dot { \\mathrm { H } } _ { 2 } \\mathrm { O }$ was somewhat depleted relative to marine $_ \\mathrm { H _ { 2 } O }$ [Waldron et al., 1999]. For terrestrial environments at high latitudes, the effect will be more acute [Waldron et al., 1999].",
+        "bbox": [
+            91,
+            630,
+            493,
+            842
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            503,
+            608,
+            905,
+            775
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "[3] While the usefulness of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ as an indicator of methanogenic pathway has been recently demonstrated [e.g., Conrad et al., 2002; Sugimoto and Wada, 1993], the variation of $\\delta \\mathrm { D - C H } _ { 4 }$ with shifts in the acetate fermentation and $\\mathrm { C O } _ { 2 }$ reduction pathways has been called into question [Waldron et al., 1999, 1998b; Sugimoto and Wada, 1995]. In several elegant experiments, investigators who have incubated organic matter of differing reactivity with $_ \\mathrm { H } \\mathrm { _ 2 O }$ of differing \u0001D isotopic composition [Sugimoto and $W a d a .$ 1995; Waldron et al., 1998a] have failed to observe shifts in the \u0001D of $\\mathrm { C H } _ { 4 }$ with changing production mechanism. What does appear to control the \u0001D of $\\mathrm { C H } _ { 4 }$ in these incubation studies is the \u0001D of $_ \\mathrm { H } \\mathrm { } _ { 2 } \\mathrm { O }$ . The $\\delta \\mathrm { D - C H } _ { 4 }$ values fall very close to a single line $( \\mathrm { r } = 0 . 9 8 6 )$ when plotted against the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ used in the experiment [Waldron et al., 1999].",
+        "bbox": [
+            503,
+            773,
+            905,
+            930
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "1 of 9",
+        "bbox": [
+            861,
+            953,
+            901,
+            965
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "JOURNAL OF GEOPHYSICAL RESEARCH, VOL. 111, G04004, doi:10.1029/2005JG000134, 2006",
+        "bbox": [
+            189,
+            41,
+            807,
+            58
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_footnote",
+        "text": "1 Department of Oceanography, Florida State University, Tallahassee, Florida, USA.",
+        "bbox": [
+            93,
+            857,
+            491,
+            881
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_footnote",
+        "text": "2 Department of Biological Sciences, University of Massachusetts Lowell, Lowell, Massachusetts, USA.",
+        "bbox": [
+            93,
+            881,
+            491,
+            905
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_footnote",
+        "text": "Copyright 2006 by the American Geophysical Union. 0148-0227/06/2005JG000134",
+        "bbox": [
+            93,
+            916,
+            385,
+            939
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "G04004",
+        "bbox": [
+            467,
+            950,
+            531,
+            965
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            93,
+            74,
+            491,
+            131
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "[4] Waldron et al. [1999] also plotted 51 cogenetic pairs of $\\partial \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ from environmental samples from a variety of environments across latitude. They obtained a significant relationship between $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ and $\\partial \\mathrm { D } { \\cdot } \\mathrm { C H } _ { 4 }$ and concluded that the isotopic composition of formation $_ \\mathrm { H _ { 2 } O }$ was the primary control on the $\\delta \\mathrm { D - C H } _ { 4 }$ . They observed, however, that there was more variation for $\\delta \\mathrm { D - C H } _ { 4 }$ than for $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O } ,$ , which might be caused by other processes. One of the purposes of this paper is to determine if variations in $\\mathrm { C H } _ { 4 }$ production pathways might be one of these processes. Furthermore, the data of Waldron et al. [1999] was weighted toward more tropical and temperate areas. The authors suggested a need for additional data at higher latitudes.",
+        "bbox": [
+            93,
+            131,
+            493,
+            311
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "[5] Chanton et al. [2005] presented results from field studies ranging from tropical to boreal regions and provided strong evidence that $\\mathrm { C H } _ { 4 }$ produced from acetate fermentation is relatively $^ { 1 3 } \\mathrm { C }$ enriched and \u0001D depleted relative to $\\mathrm { C H } _ { 4 }$ produced from reduction of $\\mathrm { C O } _ { 2 } .$ However, they pointed out that the relationship only holds if precursor isotopic values $( \\delta ^ { 1 3 } \\mathrm { C - D I C }$ and $\\delta \\mathrm { D } \\mathrm { - } \\mathrm { \\dot { H } } _ { 2 } \\mathrm { O } )$ are relatively constant across the spatial or temporal gradients across which the measurements are made.",
+        "bbox": [
+            93,
+            311,
+            493,
+            436
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "[6] In this paper we will examine field data to provide evidence that although precursor $_ \\mathrm { H } \\mathrm { _ 2 O }$ isotopic composition is a primary factor controlling the $\\delta \\mathrm { D - C H } _ { 4 } ,$ variations in $\\mathrm { C H } _ { 4 }$ production mechanisms are a second controlling factor. Therefore along a N-S transect across Alaska we measured \u0001D and $\\delta ^ { 1 8 } \\mathrm { O }$ of $\\mathrm { H } _ { 2 } \\mathrm { O } , \\delta ^ { 1 3 } \\mathrm { C }$ and \u0001D of $\\mathrm { C H } _ { 4 }$ and $\\delta ^ { 1 3 } \\mathrm { C }$ of DIC. Our first objective was to determine if fractionation of $\\delta \\mathrm { D - C H } _ { 4 }$ varies with $\\mathrm { C H } _ { 4 }$ production mechanism by examining the variation of apparent fractionation factors for the pairs $\\delta ^ { 1 3 } \\mathrm { C - D I C }$ and $\\delta ^ { 1 3 } \\mathrm { { C H } _ { 4 } }$ and \u0001D-H2O and $\\delta \\mathrm { D - C H } _ { 4 } .$ . To accomplish this we sampled semisynoptically across a horizontal gradient at different scales and synoptically along a depth gradient. Methane production mechanisms have been observed to vary as a function of depth in northern wetlands [Hornibrook et al., 1997; Chasar et al., 2000a, 2000b; Chanton et al., 2005]. Our second objective was to extend the observations of Waldron et al. [1999] by collecting additional data from a transect between 60 and 70 degrees north in Anchorage, Fairbanks and along the pipe line road in Alaska up to Deadhorse.",
+        "bbox": [
+            91,
+            436,
+            493,
+            715
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Methods",
+        "text_level": 2,
+        "bbox": [
+            94,
+            732,
+            199,
+            747
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "[7] Samples were collected from bogs and fens in Alaska along a latitudinal gradient, from boreal to polar regions (60.0 N to 69.5 N) and across a depth gradient at a single site. Sampling occurred from 7 to 15 August 2001 and represents a synoptic data set, not a seasonal study. Replicate samples of pore water were collected from depths ranging from 10 to 50 cm with a ‘‘swamp sucker,’’ which is a quarter inch stainless steel tube with holes drilled at the base combined with a 50 mL syringe. At Turnagain Bog, near Anchorage Alaska $( 6 0 ^ { \\circ } \\mathrm { { N } }$ latitude) in addition to shallow swamp sucker samples, additional samples were collected at depths ranging from 1 to 2 meters using a piezometer and a peristaltic pump. DIC (Dissolved Inorganic Carbon or $\\sum \\mathrm { C O } _ { 2 } ) .$ , samples were filtered through glass fiber filters and 10 mL injected into 25 mL evacuated serum vials fitted with butyl rubber septa. DIC samples were stored frozen and upside down prior to analysis and then acidified with 0.3 mL of degassed $3 0 \\% \\mathrm { ~ H } _ { 3 } \\mathrm { P O } _ { 4 }$ and brought to ambient pressure through an open split tube with nitrogen for testing. Small subsamples $( 2 0 ~ \\mu 1 )$ of the headspace from the DIC samples were run via direct injection on the GC-IRMS (HP-Finnigan Delta S) to determine $\\delta ^ { 1 3 } \\mathrm { C - D I C }$ . For $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { { \\bar { D } } - C H _ { 4 } }$ analysis, pore water was injected into evacuated 500 ml Qorpak brown glass bottles, containing 1.5 g KOH and stored upside down. Storage tests indicate that samples keep for over a year in this manner. Samples of $_ \\mathrm { H _ { 2 } O }$ for isotopic analysis were placed within hypovials and stoppered with a needle fitted through the septae to allow a sample to be collected with no headspace. The needle was removed after the stopper was inserted.",
+        "bbox": [
+            91,
+            752,
+            493,
+            936
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            503,
+            74,
+            903,
+            325
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "[8] The headspaces of the $\\mathrm { C H } _ { 4 }$ samples were pressurized to one atmosphere with an open split tube and equilibrated with the dissolved phase. Then a small portion of each headspace was analyzed via direct injection into the GC-IRMS (Finnigan Delta S) to determine $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and concentration. Methane from the rest of the headspace was removed with a helium stream and combusted over copper oxide at $8 0 0 ^ { \\circ } \\mathrm { C }$ and the resultant $_ \\mathrm { H } \\mathrm { _ 2 O }$ and $\\mathrm { C O } _ { 2 }$ cryogenically trapped. The $_ \\mathrm { H _ { 2 } O }$ from the $\\mathrm { C H } _ { 4 }$ combustion was isolated using an ethanol slush trap and transferred to glass tubes containing zinc shavings from Indiana University, which were then flame sealed. The tubes were heated to $5 0 0 ^ { \\circ } \\mathrm { C }$ for 30 minutes to react the $_ \\mathrm { H } \\mathrm { } _ { 2 } \\mathrm { O }$ with the zinc and the resultant H2 was analyzed for $\\delta \\mathrm { D - C H } _ { 4 }$ using the duel inlet system of the Finnigan MAT IRMS [Coleman et al., 1982]. \u0001D-CH4 was determined relative to Standard Mean Ocean Water (SMOW) using gases that were calibrated against standard waters (V-SMOW, SLAP). Precision for DD measurements on the IRMS is 0.3% while overall precision of replicate field samples is 6 % [Lombardi, 1999]. Samples of surface and pore water were sent to Waterloo University for analysis to determine the isotopic signatures of the pore water, $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ and $\\delta ^ { 1 8 } \\mathrm { O } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O } .$ The $\\ \\overline { { { \\delta } } } ^ { 1 3 } \\mathrm { C }$ values were determined relative to VPDB in %. Lab standards were calibrated against NIST standards. Precision for $\\delta ^ { 1 3 } \\mathrm { C }$ measurements was ±0.2% on the basis of repeated measurements of a laboratory working standard.",
+        "bbox": [
+            501,
+            324,
+            903,
+            702
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "3. Data Analysis and Calculations",
+        "text_level": 2,
+        "bbox": [
+            504,
+            718,
+            785,
+            733
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "[9] Replicate samples were analyzed to discern the mean $\\delta ^ { 1 3 } \\mathrm { \\bar { C } - C H _ { 4 } } , \\delta ^ { 1 3 } \\mathrm { C - D I C } , \\delta \\mathrm { D - C H _ { 4 } } ,$ and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ for each sample location and then an overall mean for each parameter for each site. From these data, the apparent fractionation factors [Chasar et al., 2000a; Hornibrook et al., 1997; Whiticar et al., 1986] for $^ { 1 3 } \\mathrm { C } / ^ { 1 2 } \\mathrm { C }$ and D/H $( \\alpha _ { \\mathrm { { C } } }$ and $\\alpha _ { \\mathrm { H } } )$ , can be determined for each location and site. The apparent fractionation factors for $\\mathrm { C O } _ { 2 }  \\mathrm { C H } _ { 4 } ( \\alpha _ { \\mathbf { C } } )$ and $\\bar { \\mathrm { H } _ { 2 } \\mathrm { O } }  \\mathrm { C H } _ { 4 }$ $\\left( \\alpha _ { \\mathbf { D } } \\right)$ [Chasar et al., 2000a; Hornibrook et al., 1997; Whiticar et al., 1986] are calculated as",
+        "bbox": [
+            503,
+            739,
+            901,
+            880
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "img_path": "images/56dd39f616986c03be794d83ffb4ac1740a98b4343c69d70f8e6d5d5c2eef3a7.jpg",
+        "text": "$$\n\\pmb { \\alpha } _ { \\mathrm { { C } } } = \\frac { \\delta ^ { 1 3 } \\mathrm { { C } } - \\mathrm { { D I C } } + 1 0 0 0 } { \\delta ^ { 1 3 } \\mathrm { { C } } - \\mathrm { { C } } \\mathrm { { H } } _ { 4 } + 1 0 0 0 }\\tag{ð1Þ}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            624,
+            892,
+            790,
+            922
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            17,
+            983,
+            979
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            285,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            848,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2 of 9",
+        "bbox": [
+            477,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "table",
+        "img_path": "images/c9d12195bfe9b53ec5c4b01911740e82d42bab065684d33a015931b8f5d80abf.jpg",
+        "table_caption": [
+            "Table 1. Isotopic Composition of Water Samples Versus Latitudea"
+        ],
+        "table_footnote": [
+            "a Sites at Turnagain Bog were roughly 10 meters apart. The±represents 1/2 of the range of analytical replication of a single sample."
+        ],
+        "table_body": "<table><tr><td>Sample</td><td>Latitude</td><td> $\\delta ^ { 1 8 } \\mathrm { O ‰ }$ </td><td>士</td><td> $\\mathrm { M e a n } \\ \\delta \\mathrm { D } \\ \\%$ </td><td>±</td></tr><tr><td>Turnagain Bog Site 1,20cm</td><td>60.16</td><td>-14.50</td><td></td><td>-115.2</td><td>0.2</td></tr><tr><td>Turnagain Bog Site 2,35cm</td><td>60.16</td><td>-13.55</td><td></td><td>-112.0</td><td>0.1</td></tr><tr><td>Turnagain Bog Site 3,35cm</td><td>60.16</td><td>-16.30</td><td></td><td>-124.7</td><td>0.4</td></tr><tr><td>Turnagain Bog Site 4,20cm</td><td>60.16</td><td>-16.23</td><td></td><td>-122.6</td><td>0.3</td></tr><tr><td>Turnagain Bog Site 5,35cm</td><td>60.16</td><td>-15.47</td><td></td><td>-119.8</td><td>0.2</td></tr><tr><td>Turnagain Bog Site A,35 cm</td><td>60.16</td><td>-14.19</td><td>0.02</td><td>-112.3</td><td>0.2</td></tr><tr><td>Turnagain Bog Site B, surface water</td><td>60.16</td><td>-13.50</td><td></td><td>-108.3</td><td>0.5</td></tr><tr><td>Turnagain Bog Site B,50 cm</td><td>60.16</td><td>-15.76</td><td></td><td>-124.5</td><td>0.2</td></tr><tr><td>Turnagain Bog Site B,100 cm</td><td>60.16</td><td>-16.03</td><td></td><td>-124.9</td><td>0.1</td></tr><tr><td>Turnagain Bog Site B,150 cm</td><td>60.16</td><td>-16.23</td><td></td><td>-126.4</td><td>0.2</td></tr><tr><td>Turnagain Bog Site B,200 cm</td><td>60.16</td><td>-16.27</td><td></td><td>-123.1</td><td>0.0</td></tr><tr><td>Fen 6l,surface water</td><td>61.00</td><td>-15.13</td><td>0.10</td><td>-123.5</td><td>0.0</td></tr><tr><td>Fen 62,surface water</td><td>62.81</td><td>-14.30</td><td>0.05</td><td>-115.0</td><td>0.4</td></tr><tr><td>Fen 62, Sphagnum, 20 cm</td><td>62.81</td><td>-17.65</td><td></td><td>-138.4</td><td>0.3</td></tr><tr><td>Fen 62,Carex,35 cm</td><td>62.81</td><td>-15.37</td><td></td><td>-125.8</td><td>0.1</td></tr><tr><td>Fen 63,surface water</td><td>63.00</td><td>-15.92</td><td></td><td>-129.0</td><td>0.5</td></tr><tr><td>Bonanza Creek Mix,surface water</td><td>64.70</td><td>-18.06</td><td></td><td>-139.9</td><td>0.2</td></tr><tr><td>Bonanza Creek Mix,27 cm</td><td>64.70</td><td>-18.71</td><td>0.06</td><td>-145.0</td><td>0.6</td></tr><tr><td>Beaver Sports Hummock,10cm</td><td>64.86</td><td>-18.38</td><td>0.20</td><td>-141.9</td><td>0.3</td></tr><tr><td>Beaver Sports Hollow,10 cm</td><td>64.86</td><td>-18.41</td><td></td><td>-144.9</td><td>0.2</td></tr><tr><td>Smith Lake surface water</td><td>64.87</td><td>-13.41</td><td></td><td>-128.8</td><td>0.7</td></tr><tr><td>Smith Lake Carex, 40cm</td><td>64.87</td><td>-14.59</td><td></td><td>-136.4</td><td>0.0</td></tr><tr><td>UAF Bog, surface water</td><td>64.87</td><td>-18.53</td><td></td><td>-143.7</td><td>0.2</td></tr><tr><td>UAF bog,25cm</td><td>64.87</td><td>-18.65</td><td>0.03</td><td>-145.0</td><td>0.0</td></tr><tr><td>Discontuous Permafrost, Surface water</td><td>66.09</td><td>-15.46</td><td></td><td>-131.6</td><td>0.2</td></tr><tr><td>Discontuous Permafrost Sphagnum, 30cm</td><td>66.09</td><td>-18.77</td><td></td><td>-154.2</td><td>0.4</td></tr><tr><td>Discontuous Permafrost Carex,30cm</td><td>66.09</td><td>-19.79</td><td></td><td>-158.8</td><td>0.4</td></tr><tr><td>Fen 67,surface</td><td>67.48</td><td>-20.51</td><td></td><td>-160.7</td><td>0.4</td></tr><tr><td>Fen 67,35cm</td><td>67.48</td><td>-20.51</td><td></td><td>-160.7</td><td>0.4</td></tr><tr><td>Galbraith Lake Slough,35cm</td><td>68.48</td><td>-17.77</td><td></td><td>-145.1</td><td>0.7</td></tr><tr><td>Galbraith Lake Hummock,35cm</td><td>68.48</td><td>-17.83</td><td></td><td>-146.6</td><td>0.1</td></tr><tr><td>Immnaviat Creek Carex,35cm</td><td>68.62</td><td>-20.25</td><td></td><td>−154.4</td><td>0.3</td></tr><tr><td>Imnvaiat Creek Sphagnum,30cm</td><td>68.62</td><td>-19.76</td><td></td><td>-149.8</td><td>0.2</td></tr><tr><td>Pipeline 70 Fen Carex,25 cm</td><td>69.33</td><td>-19.11</td><td></td><td>-147.6</td><td>0.0</td></tr><tr><td>Franklin Bluff Fen,45cm</td><td>69.80</td><td>-16.48</td><td></td><td>-134.8</td><td>0.2</td></tr></table>",
+        "bbox": [
+            93,
+            89,
+            903,
+            508
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "img_path": "images/4214e9376357d2d44609eecbbec5e5bb89f6d7d6eb0a66b11d5d94724f8e1990.jpg",
+        "text": "$$\n\\alpha _ { \\mathrm { { D } } } = { \\frac { \\delta { \\mathrm { { D } } } - { \\mathrm { { H } } _ { 2 } } \\mathrm { { O } } + 1 0 0 0 } { \\delta { \\mathrm { { D } } } - \\mathrm { { C } } { \\mathrm { { H } } } _ { 4 } + 1 0 0 0 } }\\tag{ð2Þ}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            218,
+            554,
+            375,
+            583
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "[10] Changes in the apparent -s have been hypothesized to represent changes in relative importance of the production mechanism (see discussion by Whiticar [1999]); larger $\\alpha _ { \\mathrm { { C } } }$ and smaller $\\alpha _ { \\mathrm { D } }$ are typical of $\\mathrm { C O } _ { 2 }$ reduction while smaller $\\alpha _ { \\mathrm { { C } } }$ and larger $\\alpha _ { \\mathrm { D } }$ values are typical of acetate fermentation [Whiticar et al., 1986; Whiticar, 1999; Sugimoto and Wada, 1993; Conrad et $a l .$ , 2002]. We refer to these factors as apparent, because while $\\mathrm { C O } _ { 2 }$ and $_ \\mathrm { H } \\mathrm { _ 2 O }$ are the precursors for $\\mathrm { C H } _ { 4 }$ formed from $\\mathrm { C O } _ { 2 }$ reduction, they are not the immediate precursors for $\\mathrm { C H } _ { 4 }$ formed from acetate fermentation. Nonetheless, variations in apparent fractionation factors are interpreted to represent variations in $\\mathrm { C H } _ { 4 }$ production mechanism [Conrad et al., 2002; Chasar et al., 2000a; Hornibrook et al., 1997, 2000a, 2000b].",
+        "bbox": [
+            93,
+            598,
+            493,
+            795
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "4. Results",
+        "text_level": 2,
+        "bbox": [
+            94,
+            810,
+            187,
+            827
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "[11] The isotopic signatures of the water $( \\delta \\mathrm { D } \\mathrm { - } \\mathrm { H } _ { 2 } \\mathrm { O }$ and $\\delta ^ { 1 \\mathsf { 8 } } \\bar { \\mathrm { O } } \\bar { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O } )$ are reported in Table 1. Replicate analytical results are reported for every \u0001D measurement and at intervals for $\\delta ^ { \\mathrm { f 8 } } \\mathrm { O }$ . The surface and pore water samples fall along a line (Figure 1) with a slope of 6.9 (±0.5) and an intercept $0 \\mathrm { f } - 1 \\bar { 6 } . 6 \\ ( \\pm 7 . 7 )$ . The global meteoric water line has a slope of 8 with an intercept of +9 [Hoefs, 1997]. The $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ decreases with increasing latitude, but shows a slight increase approaching $7 0 ^ { \\circ } \\mathrm { N }$ and the Arctic Ocean (Figure 2). Pore water samples were depleted in \u0001D and $\\dot { \\delta } ^ { 1 8 } \\mathrm { { O } }$ relative to surface water samples by an average of 11.2 ± 9.8% and $1 . 6 \\pm 1 . 5 \\\\text{‰}$ (error represents 1 standard deviation), presumably due to surface enrichment by evaporation.",
+        "bbox": [
+            93,
+            832,
+            493,
+            933
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            503,
+            553,
+            903,
+            640
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "chart",
+        "img_path": "images/233f2521b83a796e75e68afb4d0c4a0b6650ca9c79c0d6a6c03ef84d5de79fcd.jpg",
+        "content": "",
+        "chart_caption": [
+            "Figure 1. A plot of $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ versus $\\delta ^ { 1 8 } \\mathrm { O - H } _ { 2 } \\mathrm { O }$ indicates that both isotopes are affected by the same processes, i.e., evaporation, transpiration, and precipitation. The correlation is significant, $\\mathrm { p } < 0 . 0 0 5$ . Filled squares represent pore water samples while open diamonds are surface water samples."
+        ],
+        "chart_footnote": [],
+        "bbox": [
+            516,
+            667,
+            888,
+            851
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            18,
+            983,
+            978
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            285,
+            41,
+            710,
+            58
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            848,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "3 of 9",
+        "bbox": [
+            477,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "chart",
+        "img_path": "images/c97d32dc654243ba324560624a28a6ea5291bf07bc5a11bd28c99defb6e99cfc.jpg",
+        "content": "",
+        "chart_caption": [
+            "Figure 2. A plot of the average isotopic signatures, $\\delta \\mathrm { D - C H } _ { 4 }$ (diamonds) and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ (squares), of the pore water for each Alaska site/depth versus the latitude of the site. Note the increase in \u0001D of both water and methane approaching 70 degrees north latitude and the coast of the Arctic Ocean. Correlation of both factors with latitude from 60 to 68 degrees is significant, $\\mathrm { p } < 0 . 0 0 5$"
+        ],
+        "chart_footnote": [],
+        "bbox": [
+            106,
+            78,
+            482,
+            287
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "[12] The $\\delta ^ { 1 3 } \\mathrm { C }$ and \u0001D mean values for duplicate sample analysis of the dissolved gases $\\mathrm { C H } _ { 4 }$ and DIC are reported in Table 2. The $\\delta ^ { 1 3 } \\mathrm { C }$ of $\\mathrm { D I C }$ ranged from \u000119 to +3% driven by the importance of CH4 production and possibly acetogenesis. The most enriched $\\bf \\dot { D } I C  { - } \\delta ^ { 1 3 } \\bf C$ values were found at depth in Turnagain Bog and at the discontinuous permafrost sites. Other than depth trends, there was no consistent pattern in DIC data, and there was no trend with latitude. Methane $\\delta ^ { 1 3 } \\mathrm { C }$ ranged from \u000150% to \u000186%. Interestingly",
+        "bbox": [
+            91,
+            421,
+            493,
+            551
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Table 2. $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } ,$ \u0001D-CH4, $\\delta ^ { 1 3 } \\mathrm { C - D I C }$ and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ Data for Each $\\mathrm { S i t e ^ { a } }$ both extremes of the range were obtained from Carex sites (Table 2). The $\\delta \\mathrm { D - C H } _ { 4 }$ values for these two sites were $- 3 6 2 \\pm$ 5% and \u0001346 ± 12%, respectively, so $\\mathrm { C H } _ { 4 }$ oxidation is not immediately obvious as an explanation for the $\\delta ^ { 1 3 } \\mathrm { C }$ variation observed. Had $\\mathrm { C H } _ { 4 }$ oxidation driven the differences in $\\delta ^ { 1 3 } \\mathrm { C }$ between these two sites, the \u0001D values would likely have covaried [Coleman et al., 1981]. The mean $\\delta \\mathrm { D - C H } _ { 4 }$ varied from \u0001394% to \u0001308%. As observed for the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O } ,$ $\\delta \\mathrm { D - C H } _ { 4 }$ decreased with latitude and similarly exhibited a small increase approaching 70-N and the Arctic Ocean (Figure 2).",
+        "bbox": [
+            93,
+            579,
+            540,
+            595
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            503,
+            74,
+            903,
+            228
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "[13] A plot (Figure 3a) of $\\delta \\mathrm { D - C H } _ { 4 }$ versus $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ for the Alaska data yields a significant correlation at the 99% confidence level indicating that \u0001D of $_ \\mathrm { H _ { 2 } O }$ controls a large portion of the variation in $\\delta \\mathrm { D - C H } _ { 4 } .$ The Alaska transect data extend the Waldron et al. [1999] data set as shown in Figure 3b. The overall fit to the entire data set has a slope of $0 . 5 4$ and an intercept of \u0001290. The linear regression fit to the data of Waldron et al. has a slope of 0.74 and an intercept of \u0001284.3. The Alaska data have a steeper slope (1.55) and a more positive intercept (\u0001145.4) relative to the other relationships. Waldron et al. [1999] obtained a slope of 0.68 and an intercept of \u0001284 but used a weighted linear regression using the standard error of the mean $\\bar { \\delta } \\mathrm { D - C H _ { 4 } }$ for each site, whereas we used the actual values.",
+        "bbox": [
+            503,
+            227,
+            903,
+            422
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "[14] One objective of this paper is to extend the observations of Waldron et al. [1999] to include more northern latitude data in the examination of the relationship between $\\delta \\mathrm { D - C H } _ { 4 }$ and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ across the globe. Clearly, a large portion of the variation of the $\\delta \\mathrm { D - C } \\bar { \\mathrm { H } } _ { 4 }$ data is explained by the variation of the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ results (Figure 3a). To the extent that the proportion of the variability in the y values is explained by a straight line fit to the x values, the data indicate that roughly 70% of the variability of $\\delta \\mathrm { D - C H } _ { 4 }$ can",
+        "bbox": [
+            501,
+            422,
+            903,
+            550
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/ee0aa56170c0b6c0ab4b87f9f63d9ee2556574de622b3c12c80f49e9bfff8709.jpg",
+        "table_caption": [],
+        "table_footnote": [
+            "a Asterisk indicates that \u0001D-H2O data was used from a pore water sample from the same site but a different depth for regression analysis and alpha calculations. The ± represents 1/2 of the range for replication of duplicate samples."
+        ],
+        "table_body": "<table><tr><td>Site</td><td>Latitude</td><td>depth,cm</td><td> $\\delta ^ { 1 3 } \\mathrm { C } \\mathrm { C H } 4$ </td><td>±</td><td> $\\delta ^ { 1 3 } \\mathrm { C } \\mathrm { D I C }$ </td><td>±</td><td> $\\mathrm { \\delta { D } \\ C H _ { 4 } }$ </td><td>士</td><td>8D HO</td></tr><tr><td>Turnagain Bog Site 1</td><td>60.16</td><td>20</td><td>-64.0</td><td>0.4</td><td>-7.1</td><td>0.3</td><td>-350.7</td><td>2</td><td>-115.2</td></tr><tr><td>Turnagain Bog Site 3</td><td>60.16</td><td>35</td><td>-71.9</td><td>0.6</td><td>-2.3</td><td>0.2</td><td>-331.4</td><td>2</td><td>-124.7</td></tr><tr><td>Turnagain Bog Site 4</td><td>60.16</td><td>20</td><td>-75.0</td><td>0.1</td><td>-8.9</td><td>0.8</td><td>-328.9</td><td>1</td><td>-122.6</td></tr><tr><td>Turnagain Bog Site 5</td><td>60.16</td><td>35</td><td>-63.9</td><td>0.5</td><td>-7.2</td><td>0.1</td><td>-343.0</td><td>10</td><td>-119.8</td></tr><tr><td>Turnagain Bog Site A</td><td>60.16</td><td>35</td><td>-73.0</td><td>1.0</td><td>-2.9</td><td>0.1</td><td>-338.8</td><td>4</td><td>-112.3</td></tr><tr><td>Turnagain Bog Site B</td><td>60.16</td><td>50</td><td>-70.1</td><td>0.5</td><td>-4.3</td><td>0.4</td><td>-335.6</td><td>5</td><td>-124.5</td></tr><tr><td>Turnagain Bog Site B</td><td>60.16</td><td>100</td><td>-69.3</td><td>0.4</td><td>-2.2</td><td>0.9</td><td>-314.7</td><td>7</td><td>-124.9</td></tr><tr><td>Turnagain Bog Site B</td><td>60.16</td><td>150</td><td>-69.3</td><td>0.7</td><td>1.1</td><td>0.3</td><td>-317.7</td><td>1</td><td>-126.4</td></tr><tr><td>Turnagain Bog Site B</td><td>60.16</td><td>200</td><td>-70.5</td><td>0.7</td><td>2.9</td><td>0.5</td><td>-307.9</td><td>10</td><td>-123.1</td></tr><tr><td>Fen 62 Carex</td><td>62.81</td><td>35</td><td>-82.2</td><td>0.2</td><td>-7.6</td><td>1.2</td><td>-329.9</td><td>3</td><td>-125.8</td></tr><tr><td>Fen 62 Spagnum</td><td>62.81</td><td>20</td><td>-86.0</td><td>0.2</td><td>-13.3</td><td>0.1</td><td>-345.8</td><td>12</td><td>-138.4</td></tr><tr><td>Bonanza Mix</td><td>64.70</td><td>27</td><td>-55.1</td><td>0.1</td><td>-16.4</td><td>0.7</td><td>-389.5</td><td>2</td><td>-145.0</td></tr><tr><td>Beaver Sports Hollow</td><td>64.86</td><td>10</td><td>-56.6</td><td>0.1</td><td>-18.0</td><td>0.1</td><td>-394.1</td><td>7</td><td>-144.9</td></tr><tr><td>Beaver sports Hollow</td><td>64.86</td><td>40</td><td>-56.9</td><td>1.0</td><td>-14.0</td><td>0.3</td><td>-365.0</td><td>15</td><td>*</td></tr><tr><td>Smith Lake carex</td><td>64.87</td><td>40</td><td>-50.5</td><td>0.3</td><td>-19.1</td><td>0.1</td><td>-362.4</td><td>5</td><td>-136.4</td></tr><tr><td>UAF Bog</td><td>64.87</td><td>25</td><td>-52.3</td><td>0.4</td><td>-15.1</td><td>0.2</td><td>-377.1</td><td>10</td><td>-145.0</td></tr><tr><td>Discont. Perm Sphagnum</td><td>66.09</td><td>30</td><td>-62.8</td><td>0.1</td><td>-0.2</td><td>0.5</td><td>-384.1</td><td>5</td><td>-154.2</td></tr><tr><td>Discont. Perm Carex</td><td>66.09</td><td>30</td><td>-65.5</td><td>0.3</td><td>2.1</td><td>0.4</td><td>-392.7</td><td>3</td><td>-158.8</td></tr><tr><td>Fen 67</td><td>67.48</td><td>35</td><td>-66.2</td><td>1.3</td><td>-8.2</td><td>0.1</td><td>-394.0</td><td>3</td><td>-160.7</td></tr><tr><td>Galbraith Lake Hummock</td><td>68.48</td><td>35</td><td>-67.2</td><td>0.2</td><td>-7.3</td><td>0.3</td><td>-371.7</td><td>5</td><td>-146.6</td></tr><tr><td>Galbraith Lake Slough</td><td>68.48</td><td>35</td><td>-62.9</td><td>0.2</td><td>-5.9</td><td>0.1</td><td>-388.2</td><td></td><td>-145.1</td></tr><tr><td>Immnaviat Creek Carex</td><td>68.62</td><td>35</td><td>-62.3</td><td>0.3</td><td>-15.2</td><td>1.3</td><td>-367.0</td><td>13</td><td>-154.4</td></tr><tr><td>Imnvaiat Creek Sphagnum</td><td>68.62</td><td>30</td><td>-65.9</td><td>0.9</td><td>-19.1</td><td>2.7</td><td>-379.0</td><td>2</td><td>-149.8</td></tr><tr><td>Pipeline 70 Fen</td><td>69.33</td><td>25</td><td>-57.8</td><td>0.1</td><td>-12.4</td><td>0.1</td><td>-363.3</td><td>14</td><td>-147.6</td></tr><tr><td>Franklin Bluff fen</td><td>69.80</td><td>25</td><td>-58.1</td><td>0.1</td><td>-9.0</td><td>0.5</td><td>-369.0</td><td>4</td><td>*</td></tr><tr><td>Franklin Bluff fen</td><td>69.80</td><td>45</td><td>-62.8</td><td>0.8</td><td>-5.5</td><td>0.0</td><td>-366.0</td><td>5</td><td>-134.8</td></tr></table>",
+        "bbox": [
+            93,
+            597,
+            901,
+            912
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            285,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            848,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            17,
+            983,
+            979
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "4 of 9",
+        "bbox": [
+            477,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "chart",
+        "img_path": "images/6d67d6d6e9f4ce40e93a0cd12f3ee0baa6327639ddd1cec7623ee48c50c7367f.jpg",
+        "content": "",
+        "chart_caption": [],
+        "chart_footnote": [],
+        "bbox": [
+            104,
+            83,
+            485,
+            252
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "chart",
+        "img_path": "images/fe974b3f0f6e3e411b4f9205ef691d00ed6503a8b9791b34a3d6c968f12a585a.jpg",
+        "content": "",
+        "chart_caption": [
+            "Figure 3. (a) Trend of $\\delta \\mathrm { D - C H } _ { 4 } \\mathrm { ‰ }$ versus $\\delta \\mathrm { D - H } _ { 2 } \\mathrm { O } \\% _ { 0 }$ in samples from the Alaska transect, standard error of slope, $0 . 4 6 ,$ , intercept 29.91, $\\mathrm { p } < 0 . 0 0 5 .$ . (b) Trend of $ { \\delta \\mathrm { D - C H } _ { 4 } }  { \\% } _ { 0 0 }$ versus $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O } \\% _ { 0 } ,$ Alaska data, as in Figure 3a (squares), with data from Waldron et al. [1999] (diamonds) included. Our line fit to the Waldron data is $\\mathbf { y } = 0 . 7 4 ( \\pm 0 . 1 1 ) \\mathbf { x } - 2 8 4 . 3$ $( \\pm 6 . 3 ) ;$ $\\mathrm { r } ^ { 2 } = 0 . 5 0$ , n = 51, $\\mathrm { p } < 0 . 0 0 5$ . The line fit to the entire data set is $\\mathrm { y } = 0 . 5 4$ (±0.05)\u0007 \u0001 290.1 (±5.3), $\\mathrm { r } ^ { 2 } = 0 . 5 3$ $\\mathrm { n } = 7 7$ $\\mathrm { p } < 0 . 0 0 5$"
+        ],
+        "chart_footnote": [],
+        "bbox": [
+            104,
+            276,
+            478,
+            445
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "be explained by $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ . We will also examine the data to discern if a portion of the variation of $\\delta \\mathrm { D - C H } _ { 4 }$ about the line fit to the $\\delta \\mathrm { { D - H } } _ { 2 } \\mathrm { { O } }$ is due to variation in $\\mathrm { C H } _ { 4 }$ production mechanism.",
+        "bbox": [
+            93,
+            609,
+            491,
+            667
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "5. Discussion",
+        "text_level": 2,
+        "bbox": [
+            94,
+            684,
+            212,
+            699
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "[15] Generally, the slope of the line of $\\delta \\mathrm { D - C H } _ { 4 }$ fit to $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ has been interpreted as being indicative of the $\\mathrm { C H } _ { 4 }$ production mechanism, with $\\mathrm { C H } _ { 4 }$ generated purely from $\\mathrm { C O } _ { 2 }$ reduction having a slope of 1 because all of the $\\mathrm { C H } _ { 4 }$ hydrogen is thought to be derived from coexisting $\\mathrm { H } _ { 2 } \\mathrm { O } .$ . Acetate fermentation is thought to have a slope of $0 . 2 5$ as only 1 hydrogen has been considered to be derived from environmental $_ \\mathrm { H _ { 2 } O }$ while the other 3 have been thought to be transferred intact from the acetate methyl group [Whiticar, 1999; Whiticar et al., 1986]. Strict interpretation of the overall results (Figure 3b) in light of this paradigm would suggest a $6 0 { - } 4 0$ mix of acetate fermentation and $\\mathrm { C O } _ { 2 }$ reduction in the generation of global terrestrial $\\mathrm { C H } _ { 4 }$ as included in the data set. However, the picture is probably not so simple as it initially appeared to be [Waldron et $a l .$ , 1999]. Recent evidence has suggested that there may be an exchange of hydrogen between the acetate methyl group and $_ \\mathrm { H } \\mathrm { } _ { 2 } \\mathrm { O }$ in the final stages of methanogenic acetate metabolism [de Graaf et al., 1996]. Presumably this isotopic exchange is accompanied by an isotopic fractionation but the magnitude of this effect has not been quantified, as pointed out by Hornibrook et al. [1998].",
+        "bbox": [
+            93,
+            705,
+            493,
+            929
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            503,
+            74,
+            901,
+            172
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "[16] Hydrogen concentration has also been suggested as a factor that may influence the isotopic composition of H in $\\mathrm { C H } _ { 4 } \\ [ B u r k e _ { \\mathrm { ~ ; ~ } }$ , 1993; Sugimoto and Wada, 1995], and this factor may be particularly responsible for the lack of agreement between incubation studies and surveys of natural wetlands [Chanton et al., 2005]. Burke [1993] proposed that hydrogen concentration could affect the fractionation of H between H2O and $\\mathrm { C H } _ { 4 } ,$ resulting in greater fractionation at higher H2 concentrations but not affecting the $\\delta ^ { 1 3 } \\mathrm { C }$ of $\\mathrm { C H } _ { 4 }$ Recently, Valentine $e t$ al. [2004] observed that microbial growth rate can have a profound effect on fractionation $( \\alpha _ { \\mathrm { D } } )$ between $_ \\mathrm { H _ { 2 } O }$ and $\\mathrm { C H } _ { 4 }$ during $\\mathrm { C O } _ { 2 }$ reduction, thus influencing the $\\delta \\mathrm { D }$ of $\\mathrm { C H } _ { 4 } .$ . Furthermore environmental $_ \\mathrm { H } \\mathrm { } _ { 2 } \\mathrm { O }$ \u0001D variation affects the \u0001D of organic matter and thus should affect the \u0001D of the acetate methyl group. Given these uncertainties, it is best not to interpret the slope value too strictly. It can be suggested on the basis of Figures 3a and 3b that 50 to $70 \\%$ of the variation in $\\delta \\mathrm { D - C H } _ { 4 }$ is directly related to variation in \u0001D of environmental $_ \\mathrm { H } \\mathrm { } _ { 2 } \\mathrm { O }$",
+        "bbox": [
+            503,
+            172,
+            903,
+            438
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "[17] It is interesting that the Alaska data set indicated a slope of 1.5 (Figure ${ 3 } \\mathrm { a } ) ,$ , greater than what would have been expected for $\\mathrm { C O } _ { 2 }$ reduction alone. This finding could be due to variation with production mechanism with latitude in our data set. Lower-latitude $( 6 0 ^ { \\circ } \\mathrm { N } )$ data were dominated by samples from Turnagain Bog where acetate is known to accumulate in interstitial water and not form $\\mathrm { C H } _ { 4 }$ [Hines et al., 2001; Duddelston et al., 2002]. In general studies have been interpreted to indicate that CH4 production via the acetate pathway is less consequential in high-latitude Sphagnum-dominated bogs [Lansdown et al., 1992; Chasar et $a l .$ , 2000a, 2000b; Chanton et al., 2005]. Variation in radiocarbon distributions between DOC, $\\mathrm { C H } _ { 4 } ,$ and DIC further support the idea that respiration modes fundamentally differ in bogs and fens [Chasar et al., 2000b]. Turnagain bog samples varied from \u0001115% to \u0001123% in $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ isotopic composition, and thus represented the right side of the graph in Figure 3a. Nonetheless the Turnagain data fit the line quite well. As most of the sites we sampled were represented by only 1 or 2 data, we investigated reducing the number of surface Turnagain data points to only two randomly chosen surface samples, samples 1 and $^ { 3 , }$ which are fairly representative of the other surface samples. This reduction changed the line fit to the data little, to $\\mathbf { y } = 1 . 2 7 \\mathrm { x } - 1 8 8 . 4 5 , \\overset { \\sim } { \\mathrm { r } } ^ { 2 } = 0 . 5 9$ . Thus the possible overrepresentation of Turnagain Bog as a lower-latitude (60-) sampling site is not responsible for the observed pattern.",
+        "bbox": [
+            503,
+            436,
+            903,
+            813
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "[18] Addition of the Alaska data to the Waldron et al. [1999] data set has the effect of reducing the slope of the line of global water versus global $\\mathrm { C H } _ { 4 } ,$ converging the field data with the laboratory data. The new slope is more similar to the slope of the plot of $\\delta \\mathrm { D - C H } _ { 4 }$ versus $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ obtained from the incubation results of Waldron et al. [1998a], Sugimoto and Wada [1995], and Schoell [1980] as plotted by Waldron et al. [1999], which had a slope of 0.44 and an intercept of \u0001321.",
+        "bbox": [
+            503,
+            811,
+            901,
+            938
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            287,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            849,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            15,
+            982,
+            981
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "5 of 9",
+        "bbox": [
+            478,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "chart",
+        "img_path": "images/c79b1674f22069ad8a6235ed7dccf2815c57424139c00d7839f16ab87bca91a7.jpg",
+        "content": "",
+        "chart_caption": [
+            "Figure 4. Plot of $\\delta \\mathrm { D - C H } _ { 4 }$ versus $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ for Alaska transect samples. While there is a significant inverse correlation between the values, a portion of this variation is due to variation in the precursors, $\\delta ^ { 1 3 } \\mathrm { C - D I C }$ and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ Standard error on slope is 0.52 and on intercept is 34.2; $\\mathrm { p } < 0 . 0 0 5$"
+        ],
+        "chart_footnote": [],
+        "bbox": [
+            101,
+            85,
+            483,
+            266
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "[19] The intercept of the line fit to the $\\delta \\mathrm { D - C H } _ { 4 }$ fit to $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ has been interpreted as being indicative of the fractionation between water H and the resulting methane H. The line fit to marine data, which is thought to be indicative solely of $\\mathrm { C O } _ { 2 }$ reduction, has an intercept $0 \\text{‰}$ , while the intercept of various lines fit to acetate fermentation vary from \u0001300% $10 - 3 7 0 \\text{‰}$ [Whiticar, 1999]. Our Alaska data had a more positive intercept than the overall data set, which might be interpreted as due to a greater influence of $\\mathrm { C O } _ { 2 }$ reduction at higher latitudes because of the inhibition of the acetate fermentation pathway in Sphagnum-dominated bogs. However, the steeper slope of the line clearly influenced the intercept so this interpretation is somewhat suspect.",
+        "bbox": [
+            93,
+            388,
+            493,
+            584
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "[20] We next evaluate the hypothesis that departures from the linear fit observed in Figure 3a are related to variations in the $\\mathrm { C H } _ { 4 }$ production mechanism. We will assume that variation in the signature of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ indicates variation in $\\mathrm { C H } _ { 4 }$ production mechanism, as discussed by Conrad et al. [2002] [see also Sugimoto and Wada, 1993; Waldron et $a l . ,$ 1998a], since samples were collected from depths that were for the most part $\\dot { 2 } 5$ cm below the surface and thus should be relatively free of $\\mathrm { C H } _ { 4 }$ oxidation as was observed for northern wetlands by $P o p p$ et al. [1999]. When $\\delta \\mathrm { D - C H } _ { 4 }$ is plotted versus $\\delta ^ { 1 3 } \\mathrm { \\bar { C } - C H _ { 4 } } ^ { \\bullet } .$ an inverse correlation results (Figure 4), consistent with this assumption. If $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ was controlled by CH oxidation, a positive correlation between $\\delta ^ { 1 3 } \\mathrm { C }$ and \u0001D of CH4 would have been observed [Coleman et al., 1981; Chanton et $a l .$ , 2005]. Additionally, the finding of a negative correlation in Figure 4 is consistent with the hypothesis that some of the variation in \u0001D that we observed across our transect was due to variation in $\\mathrm { C H } _ { 4 }$ production mechanism. In Figure 4, there appear to be two clusters of data, those on the left where $\\mathrm { C O } _ { 2 }$ reduction is more important, and those on the right where acetate fermentation is more dominant. The left cluster data are from latitudes below $6 3 ^ { \\circ } \\mathrm { N }$ and include data from Turnagain bog, where incubation studies have clearly demonstrated that $\\mathrm { C O } _ { 2 }$ reduction is the dominant production mechanism.",
+        "bbox": [
+            91,
+            583,
+            493,
+            933
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The right-side data are from above $6 4 ^ { \\circ } \\mathrm { N }$ . We suspect that this segregation of the data with latitude is serendipitous, and does not imply that there are variations in $\\mathrm { C H } _ { 4 }$ production pathways with latitude on this scale. On larger latitudinal scales, however, for example in Sphagnum-dominated wetlands which are more often found in northern latitudes, one is likely to observe that $\\mathrm { C O } _ { 2 }$ reduction is the dominate methane production mechanism. This finding has been observed in both isotopic and incubation studies [Landsdown et al., 1992; Chasar et al., 2000a, 2000b; Hines et al., 2001; Duddleston et $a l .$ , 2002].",
+        "bbox": [
+            503,
+            74,
+            903,
+            229
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "[21] However, some portion of the variation in $\\delta \\mathrm { D - C H } _ { 4 }$ in Figure 4 is caused by the variation in $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ with latitude (Figure 3a). To remove the effect of precursor variation, we can determine if the apparent fractionation factors $( \\alpha _ { \\mathrm { { C } } }$ and $\\alpha _ { \\mathrm { D } } )$ for $\\delta ^ { 1 3 } \\mathrm { C H } _ { 4 }$ and $\\delta \\mathrm { D - C F _ { 4 } }$ vary inversely with respect to $\\delta ^ { 1 3 } \\bar { \\mathrm { C } } .$ DIC and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ . Plots of $\\delta ^ { 1 3 } \\mathrm { C - C \\check { H } } _ { 4 }$ and $\\delta ^ { 1 3 } \\mathrm { C - D I C }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ and $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ are shown in Figures 5a and 5b, respectively. A wide range of $\\alpha _ { \\mathrm { { C } } }$ values (equation (1)) was observed, from 1.035 to 1.084. The $\\alpha _ { \\mathrm { D } } \\mathbf { s }$ (equation (2)) ranged from 1.26 to 1.42. While the $\\alpha _ { \\mathrm { { C } } } \\mathbf { s }$ plot perpendicular to the lines of constant $\\alpha ,$ the $\\alpha _ { \\mathrm { D } } \\mathbf { s }$ are at more of an angle, possibly because of the variation of $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ with latitude.",
+        "bbox": [
+            503,
+            228,
+            901,
+            396
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "[22] The $\\alpha _ { \\mathrm { D } } \\mathbf { s }$ are plotted versus $\\alpha _ { \\mathrm { { C } } } \\mathrm { { s } }$ in Figure $^ { 6 , }$ and a significant inverse relationship is obtained $( \\mathtt { p } > 0 . 0 2 5 )$ . This means that as $\\alpha _ { \\mathrm { { C } } }$ increases $\\alpha _ { \\mathrm { D } }$ decreases and vise versa. Assuming that the variation in $\\bar { \\delta } ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ is due to variation in $\\mathrm { C H } _ { 4 }$ production mechanism, then this finding is consistent with the hypothesis that $\\delta \\mathrm { D - C H } _ { 4 }$ varies with production mechanism as well, in an opposite manner to $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } .$ Thus it appears that variation in production mechanism is a second factor controlling the $\\delta \\mathrm { { D - C H } _ { 4 } . }$ . As with any correlation, we cannot address the causes of the variation, we can only note that our data are consistent with its occurrence. Again, it may be argued that the data overrepresent Turnagain Bog. Omitting all but two of the surface samples and refitting the linear regression did not change the slope or the correlation coefficient $( \\mathsf { p } > 0 . 0 2 5 )$ .",
+        "bbox": [
+            503,
+            393,
+            901,
+            424
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "chart",
+        "img_path": "images/64f09f3e7d697fb8788ef18a1638c9bb5f932f374e21d9c193bc149f10d00760.jpg",
+        "content": "",
+        "chart_caption": [],
+        "chart_footnote": [],
+        "bbox": [
+            506,
+            454,
+            882,
+            654
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "chart",
+        "img_path": "images/f5c2d4e22d06eb2bf6a3477ab3360d37efa2b87486bb63ca0cf5d88d95543af6.jpg",
+        "content": "",
+        "chart_caption": [
+            "Figure 5. (a) Cross plot of $\\cdot \\delta ^ { 1 3 } \\mathrm { C } \\mathrm { - D I C \\% }$ versus $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }  { \\% } _ { 0 0 }$ in pore waters. Lines depict varying values of $\\alpha _ { \\mathrm { { C } } } .$ . (b) Cross plot of $\\delta \\mathrm { D - H } _ { 2 } \\mathrm { O } \\% _ { 0 }$ versus $80 \\mathrm { - } \\mathrm { C H } _ { 4 } \\mathrm { \\bar { \\% } } _ { 0 0 }$ in pore waters. Lines depict varying values of $\\alpha _ { \\mathrm { D } }$"
+        ],
+        "chart_footnote": [],
+        "bbox": [
+            521,
+            678,
+            892,
+            864
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            285,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            849,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            13,
+            983,
+            983
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "page_number",
+        "text": "6 of 9",
+        "bbox": [
+            477,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "chart",
+        "img_path": "images/101d42d6dac6185b3ce329142956b85292ec989dda72817624392bf86f46e4c4.jpg",
+        "content": "",
+        "chart_caption": [
+            "Figure 6. Plots of the $\\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf \\mathbf { \\alpha } \\mathbf { \\alpha \\alpha } \\mathbf \\mathbf { \\alpha } \\mathbf \\alpha \\mathbf { \\alpha } \\mathbf \\alpha \\mathbf { \\alpha } \\mathbf \\alpha \\mathbf { \\alpha } \\mathbf \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\beta \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\beta \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\ c \\alpha \\alpha \\alpha \\alpha \\ c \\alpha \\alpha \\ a \\ c \\ a \\ c \\ c \\ c \\ a \\ c \\ c \\ a \\ c \\ a \\ c \\ c \\ c \\ c \\ a \\ c \\ a \\ c \\ c \\ c \\ a $ and $\\pmb { \\alpha } _ { \\mathbf { C } }$ of methane produced in peatland sites along a transect in Alaska. Plot shows a significant antipathetic relationship $( \\mathtt { p } < 0 . 0 0 5 )$ between $\\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf { \\alpha \\alpha } \\mathbf \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf \\alpha \\mathbf { \\alpha } \\mathbf { \\alpha } \\mathbf \\alpha \\mathbf { \\alpha } \\mathbf \\alpha \\alpha \\mathbf { } \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\beta \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\beta \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\mathbf \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\alpha \\ c \\alpha \\ c$ and $\\pmb { \\alpha _ { \\mathrm { C } } }$ presumably resulting from shifts in production mechanism. Standard error on slope, $0 . 4 3 ;$ intercept, 0.45."
+        ],
+        "chart_footnote": [],
+        "bbox": [
+            98,
+            82,
+            482,
+            301
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            93,
+            410,
+            491,
+            590
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "[23] Our results indicate that $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ is a primary factor controlling $\\delta \\mathrm { D - C H } _ { 4 }$ across latitudes, but that $\\mathrm { C H } _ { 4 }$ production mechanism also affects \u0001D-CH4. If precursor isotopic values are relatively constant, $\\mathrm { C H } _ { 4 }$ produced by acetate fermentation may be enriched in $^ { 1 3 } \\dot { \\mathrm { C } }$ and depleted in D relative to $\\mathrm { C H } _ { 4 }$ produced via the $\\mathrm { C O } _ { 2 }$ reduction pathway. For depth profiles at one site, variation in production mechanism may be the dominant feature controlling \u0001D and $\\delta ^ { 1 3 } \\mathrm { C }$ variation in $\\mathrm { C H } _ { 4 }$ [Hornibrook et al., 1997].",
+        "bbox": [
+            93,
+            590,
+            491,
+            717
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "[24] If $\\mathrm { C H } _ { 4 }$ precursor isotope values vary, then variation in production mechanisms can be discerned by variation in apparent - values. Given the strong dependence of $\\delta \\mathrm { D - C H } _ { 4 }$ on the \u0001D of environmental water, it seems to us that specific fields on plots of $\\delta \\mathrm { D - C H } _ { 4 }$ versus $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ that represent $\\mathrm { C H } _ { 4 }$ produced by $\\mathrm { C O } _ { 2 }$ reduction [Whiticar et $a l .$ 1986; Whiticar, 1999] may not accurately represent $\\mathrm { C H } _ { 4 }$ from northern terrestrial wetlands. As pointed out by Waldron et al. [1999] the $\\mathrm { C O } _ { 2 }$ reduction field in these plots was primarily determined from marine samples where the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ is near 0%. Methane produced by $\\mathrm { C O } _ { 2 }$ reduction in terrestrial northern wetlands where the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ is ${ \\ll } 0 \\text{‰}$ will clearly not fall in the $\\mathrm { C O } _ { 2 }$ reduction fields as defined by Whiticar et al. [1986, their Figure 12] and Whiticar [1999, his Figure 4]. The \u0001D-CH4 from the $\\mathrm { C O } _ { 2 }$ reduction field in the Whiticar figures ranged from \u0001150% to \u0001250% for $\\delta \\mathrm { D - C H } _ { 4 }$ and $- 6 0 \\text{‰}$ to \u0001110% $\\delta ^ { 1 3 } \\mathrm { C H } _ { 4 }$ (our Figure 7). However, the \u0001D and $\\delta ^ { 1 3 } \\mathrm { C }$ values for $\\mathrm { C H } _ { 4 }$ from Turnagain Bog ranged from \u0001308% $10 \\ : \\ : - 3 5 0 \\text{‰}$ and from \u000164 to $- 7 3 \\text{‰}$ respectively (Figure 7). At Kings Lake Bog in Washington, USA, $\\delta \\mathrm { D - C H } _ { 4 }$ isotopic values ranged from $- 2 7 6 \\text{‰}$ to \u0001331% [Lansdown et $a l .$ , 1992]. In both of these systems, incubation studies using field samples have shown that $\\mathrm { C H } _ { 4 }$ production is dominated by $\\mathrm { C O } _ { 2 }$ reduction and these incubation studies have been interpreted to represent field conditions [Lansdown et al., 1992; Hines et $a l .$ , 2001; Duddleston et al., 2002]. Methane isotopic values from several other systems where $\\mathrm { C O } _ { 2 }$ reduction has been inferred to be the dominant mechanism of production yield similar results. Methane from raised bogs in the Glacial Lake Agassiz peatland in northern Minnesota had $\\mathrm { C H } _ { 4 }$ isotopic values of from \u0001260% to \u0001290% and \u000165 to $- 7 0 \\text{‰}$ [Chasar et al., 2000a]. Bleak Lake Bog in Alberta $\\mathrm { C H } _ { 4 }$ values were from $- 3 0 0 \\% 0 = 3 3 0 \\%$ and $- 7 0$ to \u000178% and are also clearly outside of the range of $\\delta \\mathrm { D - C H } _ { 4 }$ values ascribed to $\\mathrm { C H } _ { 4 }$ from $\\mathrm { C O } _ { 2 }$ reduction (Figure 7a), although the $\\delta ^ { 1 3 } \\mathrm { C }$ data fit the model.",
+        "bbox": [
+            93,
+            715,
+            493,
+            940
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            503,
+            73,
+            901,
+            367
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "[25] We assert that $\\delta \\mathrm { D - C H } _ { 4 }$ values cannot be associated with $\\mathrm { C H } _ { 4 }$ production mechanism in an absolute sense. The production mechanism effect is combined with the effect of the \u0001D of $_ \\mathrm { H _ { 2 } O }$ . Note that Glacial Lake Agassiz Fen surficial samples [+ symbols, Chasar et al., 2000a, depths above 1 m] do fall within the bacterial methyl fermentation field and are located to the lower right of $\\binom { 1 3 } { 4 }$ enriched and \u0001D depleted) Agassiz bog samples as discussed by Chanton et al. [2005]. Acetate fermentation is thought to be greater in the surface soils of fens where the organic matter is more labile [Chanton et al., 2005].",
+        "bbox": [
+            503,
+            366,
+            901,
+            520
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "[26] However, if we shift the \u0001D values of these northern wetland $\\mathrm { C H } _ { 4 }$ samples by the value of the environmental water where they were collected (Figure 7b),",
+        "bbox": [
+            503,
+            518,
+            901,
+            563
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "equation",
+        "img_path": "images/e084264e7ff1651a07983abfbe3f5ee7cc851a4851a95563efe94cfd5e393a21.jpg",
+        "text": "$$\n\\begin{array} { l } { { \\delta \\mathrm { D } \\mathrm { - } \\mathrm { C H } _ { 4 } \\ \\mathrm { m e a s u r e d } \\ \\mathrm { - } \\ \\delta \\mathrm { D } \\mathrm { - } \\mathrm { H } _ { 2 } \\mathrm { O } \\ \\mathrm { m e a s u r e d } } } \\\\ { { \\mathrm { ~ } = \\delta \\mathrm { D } \\mathrm { - } \\mathrm { C H } _ { 4 } \\ \\mathrm { o n } \\ \\mathrm { F i g u r e } \\ 7 \\mathrm { b } } } \\end{array}\\tag{ð3Þ}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            568,
+            573,
+            838,
+            602
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "then the values fall within the $\\mathrm { C O } _ { 2 }$ reduction field. Essentially we have corrected them to values they might have had if they had been produced from ${ \\delta \\mathrm { D } { - } \\mathrm { H } _ { 2 } } \\mathrm { O } \\stackrel { \\cdot } { = } 0 \\%$",
+        "bbox": [
+            503,
+            617,
+            901,
+            660
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "[27] In conclusion, the results of this study and results of field studies compiled by Chanton et al. [2005] have provided strong evidence that $\\mathrm { C H } _ { 4 }$ produced from acetate fermentation is relatively $^ { 1 3 } \\mathrm { C }$ enriched and \u0001D depleted relative to $\\mathrm { C H } _ { 4 }$ produced from reduction of $\\mathrm { C O } _ { 2 } .$ , if precursor isotopic values are relatively constant. Laboratory incubation studies have produced similar results for $\\delta ^ { 1 3 } \\mathrm { { \\dot { C } ; C H _ { 4 } } }$ produced from acetate is $^ { 1 3 } \\mathrm { C }$ enriched relative to $\\mathrm { C H _ { 4 } }$ produced from $\\mathrm { C O } _ { 2 }$ reduction [Sugimoto and Wada, 1993; Waldron et $a l .$ , 1998a]. The laboratory studies have not produced the apparent \u0001D variation with production mechanism observed in field studies. However, the time span represented by the vertical profiles [Hornibrook et al., 1997; Chasar et $a l .$ , 2000a, 2000b] where antipathetic variation of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 }$ and $\\delta \\mathrm { D - C H } _ { 4 }$ have been observed, represent much longer timescales (hundreds of years) than can be represented in laboratory incubations which simulate changes in organic matter quality. One must consider that it may take 500 years to generate a pathway shift through increased recalcitrance of organic matter in a",
+        "bbox": [
+            503,
+            659,
+            903,
+            939
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            287,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            849,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "page_number",
+        "text": "7 of 9",
+        "bbox": [
+            477,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            15,
+            983,
+            982
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/dbfece3fe63569e90b32752443e9434bde96ca5ba47ca53d8afbed2f32d72add.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            261,
+            79,
+            730,
+            287
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/b3f85dc55dfd5e2c37c9f9affd6a8147e1169827d865098519a4a76cb7c0cfd1.jpg",
+        "image_caption": [
+            "Figure 7. (a) Diagram for classification of $\\mathrm { C H } _ { 4 }$ by a combination of $\\delta ^ { 1 3 } \\mathrm { C - C H } _ { 4 } \\mathrm { ‰ }$ and $ { \\delta \\mathrm { D - C H } _ { 4 } }  { \\% _ { 0 } }$ . Data symbols were placed from northern North American Sphagnum-dominated bogs where $\\mathrm { C O } _ { 2 }$ reduction dominates CH4 production. Glacial Lake Agassiz raised bog in northern Minnesota, United States [Chasar et al., 2000a] (open diamonds); Bleak Lake Bog in northern Alberta, Canada [Chanton et $a l .$ 2005] (open squares); Turnagain Bog, Alaska, United States (open triangles); Kings Lake Bog in Washington State, United States [Landsdown et al., 1992] (filled squares). While the samples fall toward the bacterial $\\mathrm { C O } _ { 2 }$ reduction field, they are generally \u0001D depleted. This depletion is due to the difference in $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ between terrestrial water at northern latitudes and marine waters. Methane derived from $\\mathrm { C O } _ { 2 }$ reduction in marine samples was used to define the $\\mathrm { C O } _ { 2 }$ reduction field in this figure. Note that Glacial Lake Agassiz Fen samples (+ symbols, Chasar et $a l .$ [2000a]) do fall within the bacterial methyl fermentation field and are to the lower right ${ } ^ { ( ^ { 1 3 } } \\mathrm { C }$ enriched and \u0001D depleted) relative to Agassiz bog samples [see Chanton et $a l .$ , 2005]. (b) Similar to Figure $\\mathrm { 7 a }$ except that all $\\delta \\mathrm { D - C H } _ { 4 }$ data have been adjusted for the $\\delta \\mathrm { D } { \\cdot } \\mathrm { H } _ { 2 } \\mathrm { O }$ of the water at the location where the $\\mathrm { C H } _ { 4 }$ was formed (equation (3)). Glacial Lake Agassiz raised bog (open diamonds) $+ 8 2 \\text{‰}$ [Chanton et al., 2005]; Bleak Lake Bog in northern Alberta, (open squares) $+ \\phantom { + } 1 3 4 \\text{‰}$ unpublished data; Turnagain Bog, Alaska (open triangles) $+ \\ : 1 2 0 \\mathrm { ‰ }$ Kings Lake Bog in Washington State [Lansdown et $a l .$ , 1992](filled squares) + 64% [Waldron et $a l . .$ 1999]; Glacial Lake Agassiz Fen samples (+ symbols, plus 82%). This adjustment effectively normalizes the formation water to be $0 \\text{‰}$ similar to marine waters. Adapted from Whiticar [1999] and Whiticar et al. [1986] with permission from Elsevier."
+        ],
+        "image_footnote": [],
+        "bbox": [
+            261,
+            324,
+            730,
+            517
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "[28] Burke [1993] noted that $\\mathrm { C H } _ { 4 }$ produced in laboratory incubations and in the rumen with elevated $\\mathrm { H } _ { 2 }$ concentrations exhibit depleted \u0001D values relative to values found in wetlands and sediments. He hypothesized that fractionation natural system (E. Hornibrook, personal communication, 2006). So in that respect, incubation studies do not totally rule out the notion that $\\mathrm { C H } _ { 4 }$ production mechanism could be caused by long slow changes in organic matter reactivity.",
+        "bbox": [
+            93,
+            881,
+            493,
+            939
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            93,
+            825,
+            491,
+            882
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "between the \u0001D-H2O and the $\\delta \\mathrm { D - C H } _ { 4 }$ was related to the partial pressure of $\\mathrm { H } _ { 2 } .$ It is possible that variation of $\\partial \\mathrm { { D - C H _ { 4 } } }$ associated with variations in $\\mathrm { H } _ { 2 }$ concentration may be an additional factor complicating comparisons of field samples with laboratory incubations. Valentine et al. [2004] clearly demonstrated that variations in microbial growth rate can have a huge effect on $\\delta \\mathrm { D - C H } _ { 4 }$ and postulated that this factor might explain the results of Sugimoto and Wada [1995].",
+        "bbox": [
+            503,
+            825,
+            901,
+            939
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            18,
+            983,
+            978
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            287,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            849,
+            42,
+            901,
+            56
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "page_number",
+        "text": "8 of 9",
+        "bbox": [
+            478,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Carrying this idea further, it is interesting to speculate that the variation in \u0001D that has been observed in field studies [e.g., Chanton et al., 2005; Hornibrook et $a l .$ , 1997; this study] and attributed to production mechanism variations may have been due to covariation of $\\mathrm { H } _ { 2 }$ concentration or microbial growth rate with production mechanism, or some other factor that covaries with production mechanism [c.f. Waldron et $a l .$ , 1998b]. Perhaps $\\mathrm { H } _ { 2 }$ concentration is greater in soils and sediments with more labile organic matter where acetate fermentation is of more relative importance [Burke, 1993]. Overall, there is a clear need for additional investigation of H isotope fractionation between organic matter, acetate, $\\mathrm { C H } _ { 4 } , \\mathrm { H } _ { 2 }$ and $_ \\mathrm { H } \\mathrm { _ 2 O }$",
+        "bbox": [
+            93,
+            75,
+            493,
+            257
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "[29] Acknowledgments. We thank Kate Chanton, Juliette Rooney-Varga, and Khrys Duddleston for assistance with field work. Cheryl Kelley read and commented on an earlier version of this paper. This project was supported by the National Science Foundations, Office of Polar Programs, grants 0093677 and 0095034. Reviews by E. Hornibrook, D. Valentine, and S. Waldron helped us improve the manuscript.",
+        "bbox": [
+            93,
+            271,
+            491,
+            339
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "References",
+        "text_level": 2,
+        "bbox": [
+            96,
+            351,
+            183,
+            364
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "list",
+        "sub_type": "ref_text",
+        "list_items": [
+            "Burke, R. A., C. S. Martens, and W. Sackett (1988a), Seasonal variations of D/H and ${ } ^ { \\overline { { 1 3 } } } \\mathrm { C } / { } ^ { 1 2 } \\mathrm { C }$ ratios of microbial methane in surface sediments, Nature, 332, 829 – 831.",
+            "Burke, R. A., T. Barber, and W. Sackett (1988b), Methane flux and stable H and C isotope composition of the sedimentary methane from the Florida Everglades, Global Biogeochem. Cycles, 2, 329 – 340.",
+            "Burke, R. A. (1993), Possible influence of H concentration on microbial methane stable H isotopic composition, Chemosphere, 26, 55 – 67.",
+            "Chanton, J. P., L. C. Chasar, P. Glaser, and D. Siegel (2005), Carbon and hydrogen isotopic effects in microbial methane from terrestrial environments, in Stable Isotopes and Biosphere-Atmosphere Interactions, Physiol. Ecol. Ser., edited by L. B. Flanagan, J. R. Ehleringer, and D. E. Pataki, chap. 6, pp. 85 – 105, Elsevier, New York.",
+            "Chasar, L. S., J. P. Chanton, P. H. Glaser, and D. I. Siegel (2000a), Methane concentration and stable isotope distribution as evidence of rhizospheric processes: Comparison of a fen and bog in the glacial Lake Agassiz peatland complex, Ann. Bot., 86, 655 – 663.",
+            "Chasar, L. S., J. P. Chanton, P. H. Glaser, D. I. Siegel, and J. S. Rivers (2000b), Radiocarbon and stable carbon isotopic evidence for transport and transformation of DOC, DIC and CH4 in a northern Minnesota peatland, Global Biogeochem. Cycles, 14, 1095 – 1103.",
+            "Coleman, D. D., J. B. Risatte, and M. Schoell (1981), Fractionation of carbon and hydrogen isotopes by methane-oxidizing bacteria, Geochim. Cosmochim. Acta, 45, 1033 – 1037.",
+            "Coleman, M. L., T. J. Sheperd, J. J. Durham, J. E. Rouse, and G. R. Moore (1982), Reduction of water with zinc for hydrogen isotope analysis, Anal. Chem., 54, 993 – 995.",
+            "Conrad, R., M. Klose, and P. Claus (2002), Pathway of CH4 formation in anoxic rice field soil and rice roots determined by 13C-stable isotope fractionation, Chemosphere, 47, 797 – 806.",
+            "de Graaf, W., P. Wellsbury, R. J. Parkes, and T. E. Cappenberg (1996), Comparison of acetate turnover in methanogenic and sulphate reducing sediments by radiolabeling and stable isotope labeling and by use of specific inhibitors: Evidence for isotopic exchange, Appl. Environ. Microbiol., 62, 772– 777.",
+            "Duddleston, K. N., M. A. Kinney, R. P. Kiene, and M. E. Hines (2002), Anaerobic microbial biogeochemistry in a northern bog: Acetate as a dominant metabolic end product, Global Biogeochem. Cycles, 16(4), 1063, doi:10.1029/2001GB001402.",
+            "Hines, M. E., K. N. Duddleston, and R. P. Kiene (2001), Carbon flow to acetate and C1 compounds in northern wetlands, Geophys. Res. Lett., 8(22), 4251 – 4254.",
+            "Hornibrook, E. R. C., F. J. Longstaffe, and W. S. Fyfe (1998), Reply to comment by S. Waldron, A. Fallick and A. Hall on ‘‘Spatial distribution of microbial methane production pathways in temperate zone wetland soils: Stable carbon and hydrogen isotope evidence’’, Geochim. Cosmochim. Acta, 62, 373– 375.",
+            "Hornibrook, E. R. C., F. J. Longstaffe, and W. S. Fyfe (1997), Spatial distribution of microbial methane production pathways in temperate zone wetland soils: Stable carbon and hydrogen isotope evidence, Geochim. Cosmochim. Acta, 61(4), 745 – 753.",
+            "Hornibrook, E. R. C., F. J. Longstaffe, and W. S. Fyfe (2000a), Evolution of stable carbon isotope compositions for methane and carbon dioxide in freshwater wetlands and other anaerobic environments, Geochim. Cosmochim. Acta, 64, 1013– 1027.",
+            "Hornibrook, E. R. C., F. J. Longstaffe, and W. S. Fyfe (2000b), Factors influencing stable isotope ratios in CH and CO within subenvironments of freshwater wetlands: Implications for \u0001-signatures of emissions, Isot. Environ. Health Stud., 36, 151 – 176.",
+            "Lansdown, J. M., P. D. Quay, and S. L. King (1992), CH4 production via CO2 reduction in a temperate bog: A source of 13C depleted CH4, Geochim. Cosmochim. Acta, 56, 3493 – 3503.",
+            "Lombardi, J. E. (1999), A technique for carbon isotopic analysis or rhizospheric methane oxidation and atmospheric methane, Ph.D. dissertation, 196 pp., Florida State Univ., Tallahassee.",
+            "Popp, T. J., J. P. Chanton, G. J. Whiting, and N. Grant (1999), The methane stable isotope distribution at a Carex-dominated fen in north central Alberta, Global Biogeochem. Cycles, 13, 1063 – 1077.",
+            "Schoell, M. (1980), The hydrogen and carbon isotopic composition of methane from natural gases of various origins, Geochim. Cosmochim. Acta, 44, 649 – 661.",
+            "Schoell, M. (1988), Multiple origins of methane in the earth, Chem. Geol., 71, 1 – 10.",
+            "Sugimoto, A., and E. Wada (1993), Carbon isotopic composition of bacterial methane in a soil incubation experiment: Contribution of acetate and CO2/H2, Geochim. Comochim. Acta, 57, 4015 – 4027.",
+            "Sugimoto, A., and E. Wada (1995), Hydrogen isotopic composition of bacterial methane: CO2/H2 reduction and acetate fermentation, Geochim. Cosmochim. Acta, 59, 1329–1337.",
+            "Valentine, D. L., A. Chidthaisong, A. Rice, W. S. Reeburgh, and S. C. Tyler (2004), Carbon and hydrogen isotope fractionation by moderately thermophilic methanogens, Geochim. Cosmochim. Acta, 68, 1571 – 1590.",
+            "Waldron, S., I. A. Watson-Craik, A. J. Hall, and A. E. Fallick (1998a), The carbon and hydrogen stable isotope composition of bacteriogenic methane: A laboratory study using a landfill inoculum, Geomicrobiology, 15, 157 – 169.",
+            "Waldron, S., A. Fallick, and A. J. Hall (1998b), Comment on ‘‘Spatial distribution of microbial methane production pathways in temperate zone wetland soils: Stable carbon and hydrogen evidence’’ by E. R. C. Hornibrook, E. R. C. Hornibrook, F. J. Longstaffe, and W. S. Fyfe, Geochim. Cosmochim. Acta, 62, 369 – 372.",
+            "Waldron, S., J. M. Lansdown, E. M. Scott, A. E. Fallick, and A. J. Hall (1999), The global influence of H isotopic composition of water on that of bacteriogenic methane from shallow freshwater environments, Geochim. Cosmochim. Acta, 63, 2237 – 2245.",
+            "Whiticar, M. J. (1999), Carbon and hydrogen isotope systematics of bacterial formation and oxidation of methane, Chem. Geol., 161, 291 – 314.",
+            "Whiticar, M. J., E. Faber, and M. Schoell (1986), Biogenic methane formation in marine and freshwater environments: CO2 reduction vs. acetate fermentation: Isotope evidence, Geochim. Cosmochim. Acta, 50, 693 – 709."
+        ],
+        "bbox": [
+            96,
+            368,
+            490,
+            401
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "J. P. Chanton and D. Fields, Department of Oceanography, Florida State University, Tallahassee, FL 32306-4320, USA. (jchanton@mailer.fsu.edu) M. E. Hines, Department of Biological Sciences, University of Massachusetts Lowell, Lowell, MA 01854, USA. (mark\\_hines@uml.edu)",
+        "bbox": [
+            504,
+            752,
+            903,
+            799
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            96,
+            42,
+            148,
+            56
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "CHANTON ET AL.: HIGH-LATITUDE TERRESTRIAL METHANE",
+        "bbox": [
+            287,
+            42,
+            710,
+            56
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "G04004",
+        "bbox": [
+            848,
+            42,
+            901,
+            55
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "aside_text",
+        "text": "",
+        "bbox": [
+            967,
+            22,
+            983,
+            976
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "page_number",
+        "text": "9 of 9",
+        "bbox": [
+            477,
+            953,
+            519,
+            965
+        ],
+        "page_idx": 8
+    }
+]

@@ -1,0 +1,386 @@
+# header_lines : 183
+#
+# ------------------------------------------------------------->>>>
+# DATA SET NAME
+#
+# dataset_name: ch4c13_eic_surface-flask_7_sil_event
+#
+# ------------------------------------------------------------->>>>
+# DESCRIPTION
+#
+# dataset_description: Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1998-2022.
+#
+# ------------------------------------------------------------->>>>
+# CITATION
+#
+# dataset_citation: Michel, S.E., Clark, J.R., Vaughn, B.H., Crotwell, M., Madronich, M., Moglia, E., Neff, D., Mund, J. (2023), University of Colorado, Institute of Arctic and Alpine Research (INSTAAR). Stable Isotopic Composition of Atmospheric Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global  Air Sampling Network, 1998-2022 Version: 2023-09-21  https://doi.org/10.15138/9p89-1x02
+#
+# ------------------------------------------------------------->>>>
+# FAIR USE POLICY
+#
+# dataset_fair_use: These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, coauthorship for data providers may be appropriate. 
+#
+# ------------------------------------------------------------->>>>
+# WARNING
+#
+# dataset_warning: Every effort is made to produce the most accurate and precise measurements possible.  However, we reserve the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  We are not responsible for results and conclusions based on use of these data without regard to this warning.
+#
+# ------------------------------------------------------------->>>>
+# GLOBAL ATTRIBUTES
+#
+# site_code : EIC
+# site_name : Easter Island
+# site_country : Chile
+# site_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/CHIL0001.GIF
+# site_latitude : -27.1597
+# site_longitude : -109.4284
+# site_elevation : 47.0
+# site_elevation_unit : masl
+# site_position_comment : This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.
+# site_utc2lst : -7.0
+# site_utc2lst_comment : Add 'site_utc2lst' hours to convert a time stamp in UTC (Coordinated Universal Time) to LST (Local Standard Time).
+# dataset_creation_date : 2023-09-21T15:04:06.843113
+# dataset_num : 10
+# dataset_name : ch4c13_eic_surface-flask_7_sil_event
+# dataset_parameter : ch4c13
+# dataset_parameter_name : Carbon-13/Carbon-12 in Methane
+# dataset_parameter_industrial_name : Carbon-13/Carbon-12 in Methane
+# dataset_project : surface-flask
+# dataset_platform : fixed
+# dataset_selection : event
+# dataset_selection_tag : event
+# dataset_comment : For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4c13/flask/README_ch4c13_surface-flask_sil.html
+# dataset_calibration_scale : VPDB
+# dataset_start_date : 2015-12-04T00:25:00Z
+# dataset_stop_date : 2019-09-18T21:00:00Z
+# dataset_usage_description : Please cite the product's citation when using data from this dataset.
+# dataset_provider_license : These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).
+# dataset_reference_total_listed : 0
+# dataset_contribution : These data are provided by INSTAAR-SIL AND NOAA. Principal investigators include Sylvia Englund Michel (INSTAAR-SIL) AND Reid Clark (INSTAAR-SIL) AND Bruce Vaughn (INSTAAR-SIL). Key partners include Alonso Gaete (DMC).
+# lab_total_listed : 2
+# lab_1_number : 7
+# lab_1_abbr : INSTAAR-SIL
+# lab_1_name : INSTAAR Stable Isotope Laboratory
+# lab_1_address1 : University of Colorado
+# lab_1_address2 : 4001 Discovery Dr
+# lab_1_address3 : Boulder, CO 80303
+# lab_1_country : United States
+# lab_1_url : http://instaar.colorado.edu
+# lab_1_parameter : Lab has contributed measurements for: ch4c13, ch4c13
+# lab_1_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_1_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/instaar_medium.png
+# lab_1_ongoing_atmospheric_air_comparison : T
+# lab_2_number : 1
+# lab_2_abbr : NOAA
+# lab_2_name : NOAA Global Monitoring Laboratory
+# lab_2_address1 : 325 Broadway
+# lab_2_address2 : NOAA R/GML-1
+# lab_2_address3 : Boulder, CO 80305-3328
+# lab_2_country : United States
+# lab_2_url : https://gml.noaa.gov/ccgg/
+# lab_2_parameter : Lab has contributed measurements for: ch4c13
+# lab_2_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_2_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/noaa_medium.png
+# provider_total_listed : 3
+# provider_1_name : Sylvia Englund Michel
+# provider_1_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_1_address2 : Campus Box 450
+# provider_1_address3 : University of Colorado, Boulder, CO
+# provider_1_country : United States
+# provider_1_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_1_email : Sylvia.Englund@Colorado.EDU
+# provider_1_tel : (303) 492-5495
+# provider_1_parameter : Provider has contributed measurements for: ch4c13
+# provider_2_name : Reid Clark
+# provider_2_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_2_address2 : Campus Box 450
+# provider_2_address3 : University of Colorado, Boulder, CO
+# provider_2_country : United States
+# provider_2_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_2_email : Justin.Reid.Clark@colorado.edu
+# provider_2_parameter : Provider has contributed measurements for: ch4c13
+# provider_3_name : Bruce Vaughn
+# provider_3_address1 : University of Colorado, Institute of Arctic and Alpine Research, Stable Isotope Laboratory
+# provider_3_address2 : Campus Box 450
+# provider_3_address3 : University of Colorado, Boulder, CO
+# provider_3_country : United States
+# provider_3_affiliation : INSTAAR Stable Isotope Laboratory
+# provider_3_email : bruce.vaughn@colorado.edu
+# provider_3_tel : (303) 492-7985
+# provider_3_parameter : Provider has contributed measurements for: ch4c13
+# partner_total_listed : 1
+# partner_1_name : Alonso Gaete
+# partner_1_abbr : DMC
+# partner_1_country : Chile
+# partner_1_url : http://www.meteochile.gob.cl
+# partner_1_parameter : Partner of measurements for: ch4c13
+# partner_1_affiliation : Direccion Meteorologica de Chile
+# ------------------------------------------------------------->>>>
+# VARIABLE ATTRIBUTES
+#
+# site_code:long_name : site_name_abbreviation.
+# site_code:comment : Site code is an abbreviation for the sampling site name.
+# time_components:_FillValue : -9
+# time_components:long_name : integer_components_of_UTC_date/time
+# time_components:order : year, month, day, hour, minute, second
+# time_components:comment : Calendar time components as integers. Times and dates are UTC. Time-averaged values are reported at the start of the averaging interval.
+# datetime:long_name : air_sample_date_and_time_in_UTC
+# datetime:comment : Air sample date and time in UTC ISO 8601 format. Time-averaged values are reported at the start of the averaging interval.
+# time_decimal:_FillValue : -999.999
+# time_decimal:long_name : sample_decimal_year_in_UTC
+# time_decimal:comment : decimal year in UTC. Time-averaged values are reported at the start of the averaging interval.
+# air_sample_container_id:long_name : Air_Sample_Container_ID
+# air_sample_container_id:comment : ID of air sample container. See provider_comment if available.
+# value:_FillValue : -999.999
+# value:long_name : measured_stable_carbon_isotope_delta_value
+# value:units : per mil
+# value:comment : Isotope ratios are reported as delta values where d13C = [(13C/12Csample/(13C/12Cstandard)-1] x 1000. Delta values are reported in units of per mil.
+# value:scale_comment : VPDB
+# value_unc:_FillValue : -999.999
+# value_unc:long_name : estimated_uncertainty_in_reported_value
+# value_unc:units : per mil
+# value_unc:comment : This is the estimated uncertainty of the reported value. See provider_comment if available.
+# latitude:_FillValue : -999.999
+# latitude:standard_name : latitude
+# latitude:long_name : sample_latitude_in_decimal_degrees
+# latitude:units : degrees_north
+# latitude:comment : Latitude at which air sample was collected.
+# longitude:_FillValue : -999.999
+# longitude:standard_name : longitude
+# longitude:long_name : sample_longitude_in_decimal_degrees
+# longitude:units : degrees_east
+# longitude:comment : Longitude at which air sample was collected using a range of -180 degrees to +180 degrees.
+# altitude:_FillValue : -999.999
+# altitude:standard_name : altitude
+# altitude:long_name : sample_altitude_in_meters_above_sea_level
+# altitude:units : m
+# altitude:comment : Altitude (in meters above sea level). See provider_comment if available.
+# altitude:provider_comment : Altitude for this dataset is the sum of surface elevation (masl) and sample intake height (magl).
+# elevation:_FillValue : -999.999
+# elevation:standard_name : elevation
+# elevation:long_name : surface_elevation_in_meters_above_sea_level
+# elevation:units : m
+# elevation:comment : Surface elevation in meters above sea level. See provider_comment if available.
+# intake_height:_FillValue : -999.999
+# intake_height:long_name : sample_intake_height_in_meters_above_ground_level
+# intake_height:units : m
+# intake_height:comment : Sample intake height in meters above ground level (magl). See provider_comment if available.
+# method:long_name : air_sample_collection_method
+# method:comment : Air sample collection method. See provider_comment if available.
+# method:provider_comment : A single-character code is used to identify the sample collection method. The codes are: P - Sample collected using a portable, battery powered pumping unit. Two flasks are connected in series, flushed with air, and then pressurized to 1.2 - 1.5 times ambient pressure. D - Similar to P but the air passes through a condenser cooled to about 5 deg C to partially dry the sample. G - Similar to D but with a gold-plated condenser. T - Evacuated flask filled by opening an O-ring sealed stopcock. S - Flasks filled at NOAA GML observatories by sampling air from the in situ CO2 measurement air intake system. N - Before 1981, flasks filled using a hand-held aspirator bulb. After 1981, flasks filled using a pump different from those used in method P, D, or G. F - Five liter evacuated flasks filled by opening a ground glass, greased stopcock
+# event_number:long_name : Unique_Air_Sample_Event_Number
+# event_number:comment : Identifies each discrete air sample collected at some time and location with a unique sample event number.  The event number (reported as a string) can be used to relate measurements of different trace gases and isotopes from the same sample.
+# instrument:long_name : instrument_ID_to_detect_atmospheric_parameter
+# instrument:comment : Instrument ID used to detect atmospheric parameter. See provider_comment if available.
+# analysis_datetime:long_name : air_sample_measurement_date_and_time_in_LT
+# analysis_datetime:comment : Air sample measurement date and time in LT. See provider_comment if available.
+# qcflag:long_name : quality_control_flag
+# qcflag:comment : This quality control flag is provided by the contributing PIs. See provider_comment if available.
+# qcflag:provider_comment : This is the NOAA 3-character quality control flag.  Column 1 is the REJECTION flag. An alphanumeric other than a period (.) in the FIRST column indicates a sample with obvious problems during collection or analysis. This measurement should not be interpreted. Column 2 is the SELECTION flag. An alphanumeric other than a period (.) in the SECOND column indicates a sample that is likely valid but does not meet selection criteria determined by the goals of a particular investigation. For example, it might not have been obtained during 'background' conditions.  Column 3 is the INFORMATION flag. An alphanumeric other than a period (.) in the THIRD column provides additional information about the collection or analysis of the sample. A P in the 3rd column of the QC flag indicates the measurement result is preliminary and has not yet been carefully examined by the PI.  The P flag is removed once the quality of the measurement has been determined.
+#
+# VARIABLE ORDER
+#
+site_code year month day hour minute second datetime time_decimal air_sample_container_id value value_unc latitude longitude altitude elevation intake_height method event_number instrument analysis_datetime qcflag
+EIC 2015 12 4 0 25 0 2015-12-04T00:25:00Z 2015.9233352359208 3985-99 -47.203 0.046 -27.1597 -109.4284 69.0 47.0 22.0 G 402490 i1 2016-03-15T02:58:00 -..
+EIC 2015 12 4 0 25 0 2015-12-04T00:25:00Z 2015.9233352359208 3986-99 -47.035 0.046 -27.1597 -109.4284 69.0 47.0 22.0 G 402491 i1 2016-03-15T03:17:00 +..
+EIC 2015 12 12 13 0 0 2015-12-12T13:00:00Z 2015.946689497717 3203-99 -47.124 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 402492 i1 2016-03-15T14:37:00 A.S
+EIC 2015 12 24 23 0 0 2015-12-24T23:00:00Z 2015.9807077625571 307-99 -47.078 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 402488 i1 2016-04-06T21:04:00 ...
+EIC 2015 12 24 23 0 0 2015-12-24T23:00:00Z 2015.9807077625571 308-99 -47.09 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 402489 i1 2016-04-06T21:22:00 ...
+EIC 2016 1 2 3 35 0 2016-01-02T03:35:00Z 2016.0031401791136 5339-99 -46.998 0.031 -27.1597 -109.4284 69.0 47.0 22.0 G 402487 i1 2016-05-09T22:23:00 ...
+EIC 2016 1 2 3 35 0 2016-01-02T03:35:00Z 2016.0031401791136 5340-99 -47.045 0.031 -27.1597 -109.4284 69.0 47.0 22.0 G 402486 i1 2016-05-09T22:42:00 ...
+EIC 2016 1 22 2 0 0 2016-01-22T02:00:00Z 2016.0576047358834 1667-99 -47.158 0.033 -27.1597 -109.4284 69.0 47.0 22.0 G 403375 i1 2016-07-14T16:14:00 ...
+EIC 2016 1 22 2 0 0 2016-01-22T02:00:00Z 2016.0576047358834 1668-99 -47.125 0.033 -27.1597 -109.4284 69.0 47.0 22.0 G 403376 i1 2016-07-14T16:36:00 ...
+EIC 2016 2 5 1 0 0 2016-02-05T01:00:00Z 2016.095742258652 843-99 -47.15 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 403379 i1 2016-04-06T14:56:00 ...
+EIC 2016 2 5 1 0 0 2016-02-05T01:00:00Z 2016.095742258652 844-99 -47.215 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 403380 i1 2016-04-06T15:14:00 ...
+EIC 2016 2 11 1 0 0 2016-02-11T01:00:00Z 2016.112135701275 3471-99 -47.046 0.03 -27.1597 -109.4284 69.0 47.0 22.0 G 406663 i1 2016-08-08T22:55:00 ...
+EIC 2016 2 11 1 0 0 2016-02-11T01:00:00Z 2016.112135701275 3472-99 -47.076 0.03 -27.1597 -109.4284 69.0 47.0 22.0 G 406664 i1 2016-08-08T22:34:00 ...
+EIC 2016 2 21 23 30 0 2016-02-21T23:30:00Z 2016.1420195810565 5387-99 -47.021 0.03 -27.1597 -109.4284 69.0 47.0 22.0 G 406661 i1 2016-08-08T23:16:00 ...
+EIC 2016 2 21 23 30 0 2016-02-21T23:30:00Z 2016.1420195810565 5388-99 -47.071 0.03 -27.1597 -109.4284 69.0 47.0 22.0 G 406662 i1 2016-08-08T23:37:00 ...
+EIC 2016 2 26 1 0 0 2016-02-26T01:00:00Z 2016.1531193078324 2133-99 -47.047 0.032 -27.1597 -109.4284 69.0 47.0 22.0 G 406565 i1 2016-08-24T13:38:00 ...
+EIC 2016 2 26 1 0 0 2016-02-26T01:00:00Z 2016.1531193078324 2134-99 -47.035 0.032 -27.1597 -109.4284 69.0 47.0 22.0 G 406566 i1 2016-08-24T13:59:00 ...
+EIC 2016 3 3 21 10 0 2016-03-03T21:10:00Z 2016.1718085913783 2183-99 -47.038 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 406563 i1 2016-09-07T18:42:00 ...
+EIC 2016 3 3 21 10 0 2016-03-03T21:10:00Z 2016.1718085913783 2184-99 -47.045 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 406564 i1 2016-09-07T19:03:00 ...
+EIC 2016 3 10 16 0 0 2016-03-10T16:00:00Z 2016.1903460837887 5031-99 -47.142 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 406567 i1 2016-09-08T03:11:00 ...
+EIC 2016 3 10 16 0 0 2016-03-10T16:00:00Z 2016.1903460837887 5032-99 -47.105 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 406568 i1 2016-09-08T03:32:00 ...
+EIC 2016 3 31 0 20 0 2016-03-31T00:20:00Z 2016.245939587128 2329-99 -47.107 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 406673 i1 2016-09-07T17:59:00 ...
+EIC 2016 3 31 0 20 0 2016-03-31T00:20:00Z 2016.245939587128 2330-99 -47.054 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 406674 i1 2016-09-07T18:21:00 ...
+EIC 2016 4 15 0 5 0 2016-04-15T00:05:00Z 2016.2868947328477 4297-99 -47.091 0.038 -27.1597 -109.4284 69.0 47.0 22.0 G 408708 i1 2016-09-23T22:23:00 ...
+EIC 2016 4 15 0 5 0 2016-04-15T00:05:00Z 2016.2868947328477 4298-99 -47.111 0.038 -27.1597 -109.4284 69.0 47.0 22.0 G 408709 i1 2016-09-23T22:44:00 ...
+EIC 2016 4 22 0 15 0 2016-04-22T00:15:00Z 2016.3060393897997 1455-99 -47.058 0.03 -27.1597 -109.4284 69.0 47.0 22.0 G 408710 i1 2016-07-28T05:02:00 ...
+EIC 2016 4 22 0 15 0 2016-04-22T00:15:00Z 2016.3060393897997 1456-99 -47.095 0.03 -27.1597 -109.4284 69.0 47.0 22.0 G 408711 i1 2016-07-28T05:24:00 ...
+EIC 2016 4 28 22 58 0 2016-04-28T22:58:00Z 2016.325018973892 3397-99 -47.181 0.046 -27.1597 -109.4284 69.0 47.0 22.0 G 408722 i1 2016-09-19T17:11:00 ...
+EIC 2016 4 28 22 58 0 2016-04-28T22:58:00Z 2016.325018973892 3398-99 -47.141 0.046 -27.1597 -109.4284 69.0 47.0 22.0 G 408723 i1 2016-09-19T17:32:00 ...
+EIC 2016 5 5 20 48 0 2016-05-05T20:48:00Z 2016.343897996357 5253-99 -47.242 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 408721 i1 2016-09-21T20:06:00 ...
+EIC 2016 5 5 20 48 0 2016-05-05T20:48:00Z 2016.343897996357 5254-99 -47.252 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 408720 i1 2016-09-21T20:27:00 ...
+EIC 2016 5 12 22 40 0 2016-05-12T22:40:00Z 2016.3632361870066 577-99 -47.177 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 410760 i1 2016-09-17T07:22:00 ...
+EIC 2016 5 12 22 40 0 2016-05-12T22:40:00Z 2016.3632361870066 578-99 -47.095 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 410761 i1 2016-09-17T07:44:00 ...
+EIC 2016 5 20 22 0 0 2016-05-20T22:00:00Z 2016.3850182149363 3033-99 -47.164 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 410762 i1 2016-09-17T06:39:00 ...
+EIC 2016 5 20 22 0 0 2016-05-20T22:00:00Z 2016.3850182149363 3034-99 -47.12 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 410763 i1 2016-09-17T07:01:00 ...
+EIC 2016 6 10 0 30 0 2016-06-10T00:30:00Z 2016.4399476320582 159-99 -47.29 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 411667 i1 2016-09-22T14:00:00 ...
+EIC 2016 6 10 0 30 0 2016-06-10T00:30:00Z 2016.4399476320582 160-99 -47.213 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 411666 i1 2016-09-22T14:21:00 ...
+EIC 2016 6 16 23 25 0 2016-06-16T23:25:00Z 2016.458949984821 2227-99 -47.137 0.055 -27.1597 -109.4284 69.0 47.0 22.0 G 411664 i1 2016-09-27T06:25:00 ...
+EIC 2016 6 16 23 25 0 2016-06-16T23:25:00Z 2016.458949984821 2228-99 -47.152 0.055 -27.1597 -109.4284 69.0 47.0 22.0 G 411665 i1 2016-09-27T06:47:00 ...
+EIC 2016 6 23 23 0 0 2016-06-23T23:00:00Z 2016.4780282331512 3111-99 -47.179 0.038 -27.1597 -109.4284 69.0 47.0 22.0 G 411660 i1 2016-09-24T00:29:00 ...
+EIC 2016 6 23 23 0 0 2016-06-23T23:00:00Z 2016.4780282331512 3112-99 -47.15 0.038 -27.1597 -109.4284 69.0 47.0 22.0 G 411661 i1 2016-09-24T00:51:00 ...
+EIC 2016 7 7 22 30 0 2016-07-07T22:30:00Z 2016.5162226775956 2141-99 -47.212 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 415363 i1 2016-11-03T12:16:00 ...
+EIC 2016 7 7 22 30 0 2016-07-07T22:30:00Z 2016.5162226775956 2142-99 -47.172 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 415364 i1 2016-11-03T12:37:00 ...
+EIC 2016 7 14 23 0 0 2016-07-14T23:00:00Z 2016.5354052823316 5383-99 -47.138 0.047 -27.1597 -109.4284 69.0 47.0 22.0 G 415361 i1 2016-11-01T17:27:00 ...
+EIC 2016 7 14 23 0 0 2016-07-14T23:00:00Z 2016.5354052823316 5384-99 -47.106 0.047 -27.1597 -109.4284 69.0 47.0 22.0 G 415362 i1 2016-11-01T17:49:00 ...
+EIC 2016 7 21 21 15 0 2016-07-21T21:15:00Z 2016.5543317395263 1203-99 -47.225 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 415375 i1 2016-11-03T20:01:00 ...
+EIC 2016 7 21 21 15 0 2016-07-21T21:15:00Z 2016.5543317395263 1204-99 -47.129 0.045 -27.1597 -109.4284 69.0 47.0 22.0 G 415376 i1 2016-11-03T20:22:00 ...
+EIC 2016 7 28 21 50 0 2016-07-28T21:50:00Z 2016.5735238312081 1109-99 -47.197 0.049 -27.1597 -109.4284 69.0 47.0 22.0 G 415373 i1 2016-11-04T17:09:00 ...
+EIC 2016 7 28 21 50 0 2016-07-28T21:50:00Z 2016.5735238312081 1110-99 -47.122 0.049 -27.1597 -109.4284 69.0 47.0 22.0 G 415374 i1 2016-11-04T17:30:00 ...
+EIC 2016 8 4 21 45 0 2016-08-04T21:45:00Z 2016.5926400273224 5121-99 -47.209 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 419777 i1 2017-03-21T22:45:00 ...
+EIC 2016 8 4 21 45 0 2016-08-04T21:45:00Z 2016.5926400273224 5122-99 -47.243 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 419778 i1 2017-03-21T23:06:00 ...
+EIC 2016 8 11 22 5 0 2016-08-11T22:05:00Z 2016.6118036581663 3233-99 -47.278 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 419779 i1 2017-03-21T20:38:00 ...
+EIC 2016 8 11 22 5 0 2016-08-11T22:05:00Z 2016.6118036581663 3234-99 -47.145 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 419780 i1 2017-03-21T20:59:00 ...
+EIC 2016 8 18 20 50 0 2016-08-18T20:50:00Z 2016.630787037037 1333-99 -47.114 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 419759 i1 2017-03-20T21:42:00 ...
+EIC 2016 8 18 20 50 0 2016-08-18T20:50:00Z 2016.630787037037 1334-99 -47.136 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 419760 i1 2017-03-20T22:03:00 ...
+EIC 2016 8 26 3 0 0 2016-08-26T03:00:00Z 2016.6506147540983 3299-99 -47.119 0.064 -27.1597 -109.4284 69.0 47.0 22.0 G 419757 i1 2017-04-07T21:37:00 +x.
+EIC 2016 8 26 3 0 0 2016-08-26T03:00:00Z 2016.6506147540983 3300-99 -47.35 0.064 -27.1597 -109.4284 69.0 47.0 22.0 G 419758 i1 2017-04-07T21:58:00 -x.
+EIC 2016 9 2 1 0 0 2016-09-02T01:00:00Z 2016.6695127504554 3137-99 -47.236 0.043 -27.1597 -109.4284 69.0 47.0 22.0 G 417965 i1 2016-12-28T16:35:00 ...
+EIC 2016 9 2 1 0 0 2016-09-02T01:00:00Z 2016.6695127504554 3138-99 -47.193 0.043 -27.1597 -109.4284 69.0 47.0 22.0 G 417966 i1 2016-12-28T16:57:00 ...
+EIC 2016 9 9 1 25 0 2016-09-09T01:25:00Z 2016.6886858682453 1845-99 -47.282 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 417963 i1 2016-12-27T02:57:00 A..
+EIC 2016 9 9 1 25 0 2016-09-09T01:25:00Z 2016.6886858682453 1846-99 -47.285 0.042 -27.1597 -109.4284 69.0 47.0 22.0 G 417964 i1 2016-12-27T03:18:00 A..
+EIC 2016 9 20 23 0 0 2016-09-20T23:00:00Z 2016.7211976320582 67-99 -47.146 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417967 i1 2016-12-28T04:49:00 ...
+EIC 2016 9 20 23 0 0 2016-09-20T23:00:00Z 2016.7211976320582 68-99 -47.221 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417968 i1 2016-12-28T05:10:00 ...
+EIC 2016 9 22 22 20 0 2016-09-22T22:20:00Z 2016.726586217365 4819-99 -47.124 0.043 -27.1597 -109.4284 69.0 47.0 22.0 G 417969 i1 2016-12-28T15:53:00 ...
+EIC 2016 9 22 22 20 0 2016-09-22T22:20:00Z 2016.726586217365 4820-99 -47.165 0.043 -27.1597 -109.4284 69.0 47.0 22.0 G 417970 i1 2016-12-28T16:14:00 ...
+EIC 2016 10 7 0 5 0 2016-10-07T00:05:00Z 2016.7650368093502 5711-99 -47.131 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417975 i1 2016-12-28T06:56:00 ...
+EIC 2016 10 7 0 5 0 2016-10-07T00:05:00Z 2016.7650368093502 5712-99 -47.187 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417976 i1 2016-12-28T07:18:00 ...
+EIC 2016 10 16 21 0 0 2016-10-16T21:00:00Z 2016.7920081967213 2737-99 -47.165 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417973 i1 2016-12-28T05:31:00 ...
+EIC 2016 10 16 21 0 0 2016-10-16T21:00:00Z 2016.7920081967213 2738-99 -47.194 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417974 i1 2016-12-28T05:53:00 ...
+EIC 2016 10 27 22 0 0 2016-10-27T22:00:00Z 2016.8221766848817 5341-99 -47.132 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417971 i1 2016-12-28T06:14:00 ...
+EIC 2016 10 27 22 0 0 2016-10-27T22:00:00Z 2016.8221766848817 5342-99 -47.141 0.044 -27.1597 -109.4284 69.0 47.0 22.0 G 417972 i1 2016-12-28T06:35:00 ...
+EIC 2016 11 6 22 29 0 2016-11-06T22:29:00Z 2016.8495541135399 5129-99 -47.135 0.035 -27.1597 -109.4284 69.0 47.0 22.0 G 419763 i1 2017-03-15T18:48:00 ...
+EIC 2016 11 6 22 29 0 2016-11-06T22:29:00Z 2016.8495541135399 5130-99 -47.218 0.035 -27.1597 -109.4284 69.0 47.0 22.0 G 419764 i1 2017-03-15T19:09:00 ...
+EIC 2016 11 10 21 15 0 2016-11-10T21:15:00Z 2016.860342668488 2911-99 -47.141 0.046 -27.1597 -109.4284 69.0 47.0 22.0 G 419761 i1 2017-03-28T04:06:00 ...
+EIC 2016 11 10 21 15 0 2016-11-10T21:15:00Z 2016.860342668488 2912-99 -47.155 0.046 -27.1597 -109.4284 69.0 47.0 22.0 G 419762 i1 2017-03-28T04:27:00 ...
+EIC 2016 11 20 23 0 0 2016-11-20T23:00:00Z 2016.887864298725 1057-99 -47.085 0.051 -27.1597 -109.4284 69.0 47.0 22.0 G 419775 i1 2017-03-08T15:05:00 ...
+EIC 2016 11 20 23 0 0 2016-11-20T23:00:00Z 2016.887864298725 1058-99 -47.218 0.051 -27.1597 -109.4284 69.0 47.0 22.0 G 419776 i1 2017-03-08T15:26:00 ...
+EIC 2016 11 24 23 0 0 2016-11-24T23:00:00Z 2016.8987932604737 5111-99 -47.122 0.051 -27.1597 -109.4284 69.0 47.0 22.0 G 419773 i1 2017-03-09T01:41:00 ...
+EIC 2016 11 24 23 0 0 2016-11-24T23:00:00Z 2016.8987932604737 5112-99 -47.133 0.051 -27.1597 -109.4284 69.0 47.0 22.0 G 419774 i1 2017-03-09T02:02:00 ...
+EIC 2016 12 2 1 10 0 2016-12-02T01:10:00Z 2016.9181656041287 2159-99 -47.135 0.035 -27.1597 -109.4284 69.0 47.0 22.0 G 419765 i1 2017-03-15T19:30:00 ...
+EIC 2016 12 2 1 10 0 2016-12-02T01:10:00Z 2016.9181656041287 2160-99 -47.123 0.035 -27.1597 -109.4284 69.0 47.0 22.0 G 419766 i1 2017-03-15T19:52:00 ...
+EIC 2016 12 8 23 0 0 2016-12-08T23:00:00Z 2016.937044626594 4170-99 -47.38 0.064 -27.1597 -109.4284 69.0 47.0 22.0 G 419754 i1 2018-04-17T18:18:00 .Xr
+EIC 2016 12 17 2 20 0 2016-12-17T02:20:00Z 2016.9592820279295 2183-99 -47.129 0.04 -27.1597 -109.4284 69.0 47.0 22.0 G 419767 i1 2017-03-18T00:20:00 ...
+EIC 2016 12 17 2 20 0 2016-12-17T02:20:00Z 2016.9592820279295 2184-99 -47.14 0.04 -27.1597 -109.4284 69.0 47.0 22.0 G 419768 i1 2017-03-18T00:41:00 ...
+EIC 2016 12 23 0 10 0 2016-12-23T00:10:00Z 2016.9754288099575 2273-99 -47.837 0.063 -27.1597 -109.4284 69.0 47.0 22.0 G 419755 i1 2018-04-17T17:13:00 +.r
+EIC 2016 12 23 0 10 0 2016-12-23T00:10:00Z 2016.9754288099575 2274-99 -48.085 0.063 -27.1597 -109.4284 69.0 47.0 22.0 G 419756 i1 2018-04-17T17:35:00 -.r
+EIC 2017 1 7 1 0 0 2017-01-07T01:00:00Z 2017.0165525114155 2093-99 -47.067 0.039 -27.1597 -109.4284 69.0 47.0 22.0 G 423411 i1 2017-05-26T06:14:00 ...
+EIC 2017 1 7 1 0 0 2017-01-07T01:00:00Z 2017.0165525114155 2094-99 -47.04 0.039 -27.1597 -109.4284 69.0 47.0 22.0 G 423412 i1 2017-05-26T06:36:00 ...
+EIC 2017 1 12 22 30 0 2017-01-12T22:30:00Z 2017.032705479452 5449-99 -47.072 0.039 -27.1597 -109.4284 69.0 47.0 22.0 G 423407 i1 2017-05-26T05:29:00 ...
+EIC 2017 1 12 22 30 0 2017-01-12T22:30:00Z 2017.032705479452 5450-99 -47.075 0.039 -27.1597 -109.4284 69.0 47.0 22.0 G 423408 i1 2017-05-26T05:51:00 ...
+EIC 2017 1 22 1 0 0 2017-01-22T01:00:00Z 2017.0576484018266 2447-99 -47.196 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 423409 i1 2017-05-26T21:14:00 ...
+EIC 2017 1 22 1 0 0 2017-01-22T01:00:00Z 2017.0576484018266 2448-99 -47.113 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 423410 i1 2017-05-26T21:37:00 ...
+EIC 2017 2 10 0 30 0 2017-02-10T00:30:00Z 2017.1096461187215 331-99 -47.087 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 423419 i1 2017-05-23T03:33:00 ...
+EIC 2017 2 10 0 30 0 2017-02-10T00:30:00Z 2017.1096461187215 332-99 -47.09 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 423420 i1 2017-05-23T03:55:00 ...
+EIC 2017 2 16 22 10 0 2017-02-16T22:10:00Z 2017.1285578386605 5659-99 -47.156 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 423415 i1 2017-05-23T04:18:00 ...
+EIC 2017 2 16 22 10 0 2017-02-16T22:10:00Z 2017.1285578386605 5660-99 -47.126 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 423416 i1 2017-05-23T04:40:00 ...
+EIC 2017 2 24 1 15 0 2017-02-24T01:15:00Z 2017.1480878995433 5447-99 -47.072 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 423423 i1 2017-05-23T23:35:00 ...
+EIC 2017 2 24 1 15 0 2017-02-24T01:15:00Z 2017.1480878995433 5448-99 -47.061 0.041 -27.1597 -109.4284 69.0 47.0 22.0 G 423424 i1 2017-05-23T23:57:00 ...
+EIC 2017 3 2 22 15 0 2017-03-02T22:15:00Z 2017.1669235159818 5153-99 -47.083 0.057 -27.1597 -109.4284 69.0 47.0 22.0 G 423421 i1 2017-05-18T17:31:00 ...
+EIC 2017 3 2 22 15 0 2017-03-02T22:15:00Z 2017.1669235159818 5154-99 -47.044 0.057 -27.1597 -109.4284 69.0 47.0 22.0 G 423422 i1 2017-05-18T17:54:00 ...
+EIC 2017 3 11 4 7 0 2017-03-11T04:07:00Z 2017.1895110350076 153-99 -47.147 0.056 -27.1597 -109.4284 69.0 47.0 22.0 G 426107 i1 2017-06-22T13:37:00 ...
+EIC 2017 3 11 4 7 0 2017-03-11T04:07:00Z 2017.1895110350076 155-99 -47.153 0.056 -27.1597 -109.4284 69.0 47.0 22.0 G 426108 i1 2017-06-22T13:59:00 ...
+EIC 2017 3 17 21 0 0 2017-03-17T21:00:00Z 2017.2078767123287 2414-99 -47.139 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426105 i1 2017-07-03T23:51:00 A..
+EIC 2017 3 17 21 0 0 2017-03-17T21:00:00Z 2017.2078767123287 5218-99 -47.108 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426106 i1 2017-07-04T00:31:00 A..
+EIC 2017 3 23 23 26 0 2017-03-23T23:26:00Z 2017.224592846271 3162-99 -47.171 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426051 i1 2017-07-04T11:52:00 ...
+EIC 2017 3 23 23 26 0 2017-03-23T23:26:00Z 2017.224592846271 5334-99 -47.224 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426052 i1 2017-07-04T12:15:00 ...
+EIC 2017 3 30 23 30 0 2017-03-30T23:30:00Z 2017.2437785388129 1033-99 -47.198 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426049 i1 2017-07-04T10:21:00 ...
+EIC 2017 3 30 23 30 0 2017-03-30T23:30:00Z 2017.2437785388129 5408-99 -47.143 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426050 i1 2017-07-04T10:43:00 ...
+EIC 2017 4 7 0 0 0 2017-04-07T00:00:00Z 2017.2630136986302 1389-99 -47.142 0.057 -27.1597 -109.4284 69.0 47.0 22.0 G 426101 i1 2017-06-16T17:25:00 ...
+EIC 2017 4 7 0 0 0 2017-04-07T00:00:00Z 2017.2630136986302 3978-99 -47.165 0.057 -27.1597 -109.4284 69.0 47.0 22.0 G 426102 i1 2017-06-16T17:48:00 ...
+EIC 2017 4 14 0 20 0 2017-04-14T00:20:00Z 2017.2822298325723 2836-99 -47.244 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426103 i1 2017-07-04T08:46:00 ...
+EIC 2017 4 14 0 20 0 2017-04-14T00:20:00Z 2017.2822298325723 3249-99 -47.221 0.034 -27.1597 -109.4284 69.0 47.0 22.0 G 426104 i1 2017-07-04T09:08:00 ...
+EIC 2017 4 21 12 34 56 2017-04-21T12:34:56Z 2017.3028061897514 2409-99 -47.185 0.159 -27.1597 -109.4284 69.0 47.0 22.0 G 445901 i1 2018-07-26T16:43:00 ..R
+EIC 2017 4 27 1 0 0 2017-04-27T01:00:00Z 2017.3179223744291 193-99 -47.196 0.081 -27.1597 -109.4284 69.0 47.0 22.0 G 444456 i1 2018-07-18T20:02:00 .xr
+EIC 2017 4 27 1 0 0 2017-04-27T01:00:00Z 2017.3179223744291 2132-99 -47.199 0.091 -27.1597 -109.4284 69.0 47.0 22.0 G 444457 i1 2018-07-18T19:40:00 .xr
+EIC 2017 5 5 12 34 56 2017-05-05T12:34:56Z 2017.341162354135 3688-99 -47.266 0.127 -27.1597 -109.4284 69.0 47.0 22.0 G 445902 i1 2018-07-27T12:55:00 ..R
+EIC 2017 5 5 12 34 56 2017-05-05T12:34:56Z 2017.341162354135 5242-99 -47.203 0.142 -27.1597 -109.4284 69.0 47.0 22.0 G 445903 i1 2018-07-27T12:33:00 ..R
+EIC 2017 5 19 0 0 0 2017-05-19T00:00:00Z 2017.3780821917808 4601-99 -47.249 0.093 -27.1597 -109.4284 69.0 47.0 22.0 G 444450 i1 2018-07-18T21:50:00 ..r
+EIC 2017 5 19 0 0 0 2017-05-19T00:00:00Z 2017.3780821917808 4792-99 -47.251 0.089 -27.1597 -109.4284 69.0 47.0 22.0 G 444451 i1 2018-07-18T22:11:00 ..r
+EIC 2017 5 27 23 0 0 2017-05-27T23:00:00Z 2017.4026255707763 2803-99 -47.103 0.085 -27.1597 -109.4284 69.0 47.0 22.0 G 444464 i1 2018-07-12T22:40:00 ..r
+EIC 2017 5 27 23 0 0 2017-05-27T23:00:00Z 2017.4026255707763 3456-99 -47.155 0.074 -27.1597 -109.4284 69.0 47.0 22.0 G 444465 i1 2018-07-12T23:01:00 ..r
+EIC 2017 6 1 22 50 0 2017-06-01T22:50:00Z 2017.4163051750381 3862-99 -47.207 0.113 -27.1597 -109.4284 69.0 47.0 22.0 G 444452 i1 2018-07-30T22:53:00 ..r
+EIC 2017 6 1 22 50 0 2017-06-01T22:50:00Z 2017.4163051750381 5096-99 -47.209 0.121 -27.1597 -109.4284 69.0 47.0 22.0 G 444453 i1 2018-07-30T23:15:00 ..r
+EIC 2017 6 8 23 0 0 2017-06-08T23:00:00Z 2017.435502283105 3861-99 -47.06 0.114 -27.1597 -109.4284 69.0 47.0 22.0 G 444454 i1 2018-07-31T04:40:00 ..r
+EIC 2017 6 8 23 0 0 2017-06-08T23:00:00Z 2017.435502283105 5095-99 -47.202 0.11 -27.1597 -109.4284 69.0 47.0 22.0 G 444455 i1 2018-07-31T05:02:00 ..r
+EIC 2017 6 15 1 30 0 2017-06-15T01:30:00Z 2017.4522260273973 1987-99 -47.289 0.061 -27.1597 -109.4284 69.0 47.0 22.0 G 444460 i1 2018-07-12T18:23:00 ..r
+EIC 2017 6 15 1 30 0 2017-06-15T01:30:00Z 2017.4522260273973 1988-99 -47.277 0.067 -27.1597 -109.4284 69.0 47.0 22.0 G 444461 i1 2018-07-12T18:44:00 ..r
+EIC 2017 6 23 14 52 0 2017-06-23T14:52:00Z 2017.4756697108066 1703-99 -47.162 0.096 -27.1597 -109.4284 69.0 47.0 22.0 G 444458 i1 2018-07-31T05:24:00 ..r
+EIC 2017 6 23 14 52 0 2017-06-23T14:52:00Z 2017.4756697108066 1704-99 -47.1 0.108 -27.1597 -109.4284 69.0 47.0 22.0 G 444459 i1 2018-07-31T05:46:00 ..r
+EIC 2017 11 23 1 0 0 2017-11-23T01:00:00Z 2017.8932648401826 2947-99 -47.308 0.138 -27.1597 -109.4284 69.0 47.0 22.0 G 450613 i1 2019-01-08T02:11:00 ..r
+EIC 2017 11 23 1 0 0 2017-11-23T01:00:00Z 2017.8932648401826 2948-99 -47.321 0.143 -27.1597 -109.4284 69.0 47.0 22.0 G 450614 i1 2019-01-08T02:32:00 ..r
+EIC 2017 12 2 13 40 0 2017-12-02T13:40:00Z 2017.9193683409437 2635-99 -47.138 0.132 -27.1597 -109.4284 69.0 47.0 22.0 G 450609 i1 2019-01-08T18:21:00 ..R
+EIC 2017 12 2 13 40 0 2017-12-02T13:40:00Z 2017.9193683409437 2636-99 -47.049 0.125 -27.1597 -109.4284 69.0 47.0 22.0 G 450610 i1 2019-01-08T18:42:00 .XR
+EIC 2017 12 8 4 0 0 2017-12-08T04:00:00Z 2017.934703196347 4645-99 -47.058 0.077 -27.1597 -109.4284 69.0 47.0 22.0 G 450579 i1 2018-11-15T18:52:00 -.r
+EIC 2017 12 8 4 0 0 2017-12-08T04:00:00Z 2017.934703196347 4646-99 -46.954 0.255 -27.1597 -109.4284 69.0 47.0 22.0 G 450580 i1 2018-11-15T19:13:00 +.R
+EIC 2017 12 22 2 5 0 2017-12-22T02:05:00Z 2017.9728405631658 3963-99 -46.334 0.278 -27.1597 -109.4284 69.0 47.0 22.0 G 450593 i1 2019-03-01T00:33:00 D.R
+EIC 2017 12 22 2 5 0 2017-12-22T02:05:00Z 2017.9728405631658 3964-99 -46.336 0.28 -27.1597 -109.4284 69.0 47.0 22.0 G 450594 i1 2019-03-01T00:53:00 D.R
+EIC 2018 1 4 12 34 56 2018-01-04T12:34:56Z 2018.0096555048199 1259-99 -47.357 0.13 -27.1597 -109.4284 69.0 47.0 22.0 G 450565 i1 2018-11-13T07:32:00 ..R
+EIC 2018 1 4 12 34 56 2018-01-04T12:34:56Z 2018.0096555048199 1260-99 -47.273 0.13 -27.1597 -109.4284 69.0 47.0 22.0 G 450566 i1 2018-11-13T07:53:00 ..R
+EIC 2018 1 11 21 0 0 2018-01-11T21:00:00Z 2018.029794520548 2055-99 -47.154 0.133 -27.1597 -109.4284 69.0 47.0 22.0 G 450567 i1 2018-11-14T04:43:00 .Xr
+EIC 2018 1 11 21 0 0 2018-01-11T21:00:00Z 2018.029794520548 2056-99 -47.255 0.119 -27.1597 -109.4284 69.0 47.0 22.0 G 450568 i1 2018-11-14T05:05:00 ..r
+EIC 2018 1 20 14 9 0 2018-01-20T14:09:00Z 2018.0536700913242 1953-99 -46.102 0.284 -27.1597 -109.4284 69.0 47.0 22.0 G 450605 i1 2019-02-28T14:03:00 .XR
+EIC 2018 1 20 14 9 0 2018-01-20T14:09:00Z 2018.0536700913242 1954-99 -46.108 0.273 -27.1597 -109.4284 69.0 47.0 22.0 G 450606 i1 2019-02-28T14:23:00 .XR
+EIC 2018 1 25 2 0 0 2018-01-25T02:00:00Z 2018.0659817351598 677-99 -47.017 0.11 -27.1597 -109.4284 69.0 47.0 22.0 G 450601 i1 2019-02-27T02:49:00 -.r
+EIC 2018 1 25 2 0 0 2018-01-25T02:00:00Z 2018.0659817351598 678-99 -46.337 0.096 -27.1597 -109.4284 69.0 47.0 22.0 G 450602 i1 2019-02-27T03:09:00 +.r
+EIC 2018 2 3 3 30 0 2018-02-03T03:30:00Z 2018.0908105022831 2167-99 -47.464 0.136 -27.1597 -109.4284 69.0 47.0 22.0 G 450603 i1 2019-12-15T20:03:00 ..R
+EIC 2018 2 3 3 30 0 2018-02-03T03:30:00Z 2018.0908105022831 2168-99 -47.477 0.133 -27.1597 -109.4284 69.0 47.0 22.0 G 450604 i1 2019-12-15T20:24:00 ..R
+EIC 2018 2 8 22 58 0 2018-02-08T22:58:00Z 2018.1067313546423 4821-99 -47.162 0.188 -27.1597 -109.4284 69.0 47.0 22.0 G 450607 i1 2019-10-08T07:50:00 !.R
+EIC 2018 2 8 22 58 0 2018-02-08T22:58:00Z 2018.1067313546423 4822-99 -47.163 0.2 -27.1597 -109.4284 69.0 47.0 22.0 G 450608 i1 2019-10-08T08:13:00 !.R
+EIC 2018 7 6 21 15 0 2018-07-06T21:15:00Z 2018.5120148401827 14-99 -47.289 0.1 -27.1597 -109.4284 69.0 47.0 22.0 G 450561 i1 2018-11-08T21:45:00 ..r
+EIC 2018 7 6 21 15 0 2018-07-06T21:15:00Z 2018.5120148401827 2790-99 -47.213 0.106 -27.1597 -109.4284 69.0 47.0 22.0 G 450562 i1 2018-11-08T22:06:00 ..r
+EIC 2018 7 22 22 15 0 2018-07-22T22:15:00Z 2018.5559646118722 3417-99 -47.155 0.18 -27.1597 -109.4284 69.0 47.0 22.0 G 450600 i1 2018-11-29T10:42:00 ..R
+EIC 2018 7 22 22 15 0 2018-07-22T22:15:00Z 2018.5559646118722 413-99 -47.245 0.125 -27.1597 -109.4284 69.0 47.0 22.0 G 450599 i1 2018-11-29T10:20:00 ..R
+EIC 2018 7 29 22 0 0 2018-07-29T22:00:00Z 2018.5751141552512 1330-99 -47.197 0.113 -27.1597 -109.4284 69.0 47.0 22.0 G 450597 i1 2019-01-04T03:45:00 +.r
+EIC 2018 7 29 22 0 0 2018-07-29T22:00:00Z 2018.5751141552512 4158-99 -47.604 0.132 -27.1597 -109.4284 69.0 47.0 22.0 G 450598 i1 2019-01-04T04:07:00 -.R
+EIC 2018 8 5 6 0 0 2018-08-05T06:00:00Z 2018.5924657534247 3945-99 -47.277 0.109 -27.1597 -109.4284 69.0 47.0 22.0 G 450583 i1 2018-11-15T08:24:00 ..r
+EIC 2018 8 5 6 0 0 2018-08-05T06:00:00Z 2018.5924657534247 4571-99 -47.252 0.102 -27.1597 -109.4284 69.0 47.0 22.0 G 450584 i1 2018-11-15T08:45:00 ..r
+EIC 2018 8 20 4 0 0 2018-08-20T04:00:00Z 2018.6333333333334 27-99 -47.327 0.143 -27.1597 -109.4284 69.0 47.0 22.0 G 450581 i1 2018-11-17T05:15:00 ..R
+EIC 2018 8 20 4 0 0 2018-08-20T04:00:00Z 2018.6333333333334 5316-99 -47.236 0.124 -27.1597 -109.4284 69.0 47.0 22.0 G 450582 i1 2018-11-17T05:36:00 ..r
+EIC 2018 8 26 0 0 0 2018-08-26T00:00:00Z 2018.6493150684933 3674-99 -46.724 0.121 -27.1597 -109.4284 69.0 47.0 22.0 G 450615 i1 2019-02-28T13:22:00 +.r
+EIC 2018 8 26 0 0 0 2018-08-26T00:00:00Z 2018.6493150684933 3818-99 -47.084 0.111 -27.1597 -109.4284 69.0 47.0 22.0 G 450616 i1 2019-02-28T13:42:00 -.r
+EIC 2018 8 31 4 0 0 2018-08-31T04:00:00Z 2018.6634703196346 4179-99 -47.062 0.12 -27.1597 -109.4284 69.0 47.0 22.0 G 450611 i1 2019-02-28T16:45:00 .Xr
+EIC 2018 8 31 4 0 0 2018-08-31T04:00:00Z 2018.6634703196346 5086-99 -47.059 0.109 -27.1597 -109.4284 69.0 47.0 22.0 G 450612 i1 2019-02-28T17:05:00 .Xr
+EIC 2018 9 6 21 0 0 2018-09-06T21:00:00Z 2018.6818493150686 450-99 -47.163 0.191 -27.1597 -109.4284 69.0 47.0 22.0 G 450573 i1 2019-01-03T20:37:00 D.R
+EIC 2018 9 6 21 0 0 2018-09-06T21:00:00Z 2018.6818493150686 5028-99 -47.117 0.207 -27.1597 -109.4284 69.0 47.0 22.0 G 450574 i1 2019-01-03T20:59:00 D.R
+EIC 2018 9 13 22 0 0 2018-09-13T22:00:00Z 2018.7011415525114 5281-99 -47.309 0.139 -27.1597 -109.4284 69.0 47.0 22.0 G 450575 i1 2019-01-07T20:50:00 ..r
+EIC 2018 9 13 22 0 0 2018-09-13T22:00:00Z 2018.7011415525114 701-99 -47.355 0.14 -27.1597 -109.4284 69.0 47.0 22.0 G 450576 i1 2019-01-07T20:29:00 ..r
+EIC 2018 10 3 22 0 0 2018-10-03T22:00:00Z 2018.7559360730593 1757-99 -47.141 0.117 -27.1597 -109.4284 69.0 47.0 22.0 G 450571 i1 2019-01-08T16:13:00 +.r
+EIC 2018 10 3 22 0 0 2018-10-03T22:00:00Z 2018.7559360730593 5253-99 -47.318 0.12 -27.1597 -109.4284 69.0 47.0 22.0 G 450572 i1 2019-01-08T16:34:00 -.r
+EIC 2018 11 23 7 30 0 2018-11-23T07:30:00Z 2018.894006849315 1748-99 -47.294 0.152 -27.1597 -109.4284 69.0 47.0 22.0 G 453609 i1 2019-03-06T02:53:00 A.r
+EIC 2018 11 23 7 30 0 2018-11-23T07:30:00Z 2018.894006849315 2681-99 -47.255 0.12 -27.1597 -109.4284 69.0 47.0 22.0 G 453608 i1 2019-03-06T02:33:00 A.r
+EIC 2018 12 1 3 0 0 2018-12-01T03:00:00Z 2018.9154109589042 2577-99 -47.227 0.13 -27.1597 -109.4284 69.0 47.0 22.0 G 453607 i1 2019-09-10T11:47:00 ..R
+EIC 2018 12 1 3 0 0 2018-12-01T03:00:00Z 2018.9154109589042 56-99 -47.268 0.142 -27.1597 -109.4284 69.0 47.0 22.0 G 453606 i1 2019-09-10T11:20:00 ..R
+EIC 2018 12 7 21 0 0 2018-12-07T21:00:00Z 2018.933904109589 2742-99 -47.194 0.212 -27.1597 -109.4284 69.0 47.0 22.0 G 453604 i1 2019-09-12T04:36:00 ..R
+EIC 2018 12 7 21 0 0 2018-12-07T21:00:00Z 2018.933904109589 5515-99 -47.256 0.21 -27.1597 -109.4284 69.0 47.0 22.0 G 453605 i1 2019-09-12T05:00:00 ..R
+EIC 2019 1 12 4 0 0 2019-01-12T04:00:00Z 2019.030593607306 1858-99 -47.547 0.17 -27.1597 -109.4284 69.0 47.0 22.0 G 456182 i1 2019-12-11T17:27:00 D.R
+EIC 2019 1 12 4 0 0 2019-01-12T04:00:00Z 2019.030593607306 4009-99 -47.494 0.171 -27.1597 -109.4284 69.0 47.0 22.0 G 456183 i1 2019-12-11T17:49:00 D.R
+EIC 2019 1 18 21 10 0 2019-01-18T21:10:00Z 2019.0489916286149 2067-99 -46.846 0.092 -27.1597 -109.4284 69.0 47.0 22.0 G 456184 i1 2019-04-26T09:15:00 D.r
+EIC 2019 1 18 21 10 0 2019-01-18T21:10:00Z 2019.0489916286149 3583-99 -46.96 0.093 -27.1597 -109.4284 69.0 47.0 22.0 G 456185 i1 2019-04-26T09:36:00 D.r
+EIC 2019 2 15 21 0 0 2019-02-15T21:00:00Z 2019.1256849315068 2139-99 -47.198 0.172 -27.1597 -109.4284 69.0 47.0 22.0 G 456192 i1 2019-10-04T17:46:00 !.R
+EIC 2019 2 15 21 0 0 2019-02-15T21:00:00Z 2019.1256849315068 3744-99 -47.395 0.132 -27.1597 -109.4284 69.0 47.0 22.0 G 456193 i1 2019-10-04T18:09:00 !.R
+EIC 2019 2 26 22 0 0 2019-02-26T22:00:00Z 2019.1559360730594 1603-99 -47.434 0.223 -27.1597 -109.4284 69.0 47.0 22.0 G 459369 i1 2019-08-26T20:08:00 -.R
+EIC 2019 2 26 22 0 0 2019-02-26T22:00:00Z 2019.1559360730594 2866-99 -47.168 0.153 -27.1597 -109.4284 69.0 47.0 22.0 G 459370 i1 2019-08-26T20:32:00 +.R
+EIC 2019 3 23 2 0 0 2019-03-23T02:00:00Z 2019.2221461187214 4763-99 -47.178 0.182 -27.1597 -109.4284 69.0 47.0 22.0 G 459371 i1 2019-09-12T11:09:00 -.R
+EIC 2019 3 23 2 0 0 2019-03-23T02:00:00Z 2019.2221461187214 590-99 -46.975 0.183 -27.1597 -109.4284 69.0 47.0 22.0 G 459372 i1 2019-09-12T10:46:00 +.R
+EIC 2019 3 30 4 0 0 2019-03-30T04:00:00Z 2019.2415525114154 2592-99 -47.235 0.147 -27.1597 -109.4284 69.0 47.0 22.0 G 458727 i1 2019-08-22T20:02:00 ..R
+EIC 2019 3 30 4 0 0 2019-03-30T04:00:00Z 2019.2415525114154 3645-99 -47.283 0.134 -27.1597 -109.4284 69.0 47.0 22.0 G 458728 i1 2019-08-22T20:25:00 ..R
+EIC 2019 4 9 3 0 0 2019-04-09T03:00:00Z 2019.2688356164383 1604-99 -47.082 0.156 -27.1597 -109.4284 69.0 47.0 22.0 G 458734 i1 2019-08-28T19:55:00 ..R
+EIC 2019 4 9 3 0 0 2019-04-09T03:00:00Z 2019.2688356164383 2591-99 -47.114 0.17 -27.1597 -109.4284 69.0 47.0 22.0 G 458733 i1 2019-08-28T19:31:00 ..R
+EIC 2019 4 14 0 40 0 2019-04-14T00:40:00Z 2019.2822678843227 2735-99 -47.177 0.139 -27.1597 -109.4284 69.0 47.0 22.0 G 459493 i1 2019-08-26T19:22:00 ..R
+EIC 2019 4 14 0 40 0 2019-04-14T00:40:00Z 2019.2822678843227 3560-99 -47.208 0.148 -27.1597 -109.4284 69.0 47.0 22.0 G 459494 i1 2019-08-26T19:45:00 ..R
+EIC 2019 4 20 22 0 0 2019-04-20T22:00:00Z 2019.3011415525114 1467-99 -47.239 0.149 -27.1597 -109.4284 69.0 47.0 22.0 G 459496 i1 2019-08-22T19:39:00 ..R
+EIC 2019 4 20 22 0 0 2019-04-20T22:00:00Z 2019.3011415525114 817-99 -47.218 0.197 -27.1597 -109.4284 69.0 47.0 22.0 G 459495 i1 2019-08-22T19:16:00 ..R
+EIC 2019 7 4 6 30 0 2019-07-04T06:30:00Z 2019.5048515981734 280-99 -47.661 0.125 -27.1597 -109.4284 69.0 47.0 22.0 G 463859 i1 2019-12-11T03:48:00 !.R
+EIC 2019 7 4 6 30 0 2019-07-04T06:30:00Z 2019.5048515981734 4686-99 -47.703 0.125 -27.1597 -109.4284 69.0 47.0 22.0 G 463860 i1 2019-12-11T04:09:00 !.R
+EIC 2019 7 13 22 0 0 2019-07-13T22:00:00Z 2019.5312785388128 1537-99 -47.801 0.292 -27.1597 -109.4284 69.0 47.0 22.0 G 463857 i1 2019-10-22T07:10:00 !.R
+EIC 2019 7 13 22 0 0 2019-07-13T22:00:00Z 2019.5312785388128 4866-99 -47.738 0.286 -27.1597 -109.4284 69.0 47.0 22.0 G 463858 i1 2019-10-22T07:32:00 !.R
+EIC 2019 8 31 23 0 0 2019-08-31T23:00:00Z 2019.6656392694065 486-99 -47.406 0.208 -27.1597 -109.4284 69.0 47.0 22.0 G 468669 i1 2020-04-29T21:49:00 ..R
+EIC 2019 8 31 23 0 0 2019-08-31T23:00:00Z 2019.6656392694065 5601-99 -47.409 0.209 -27.1597 -109.4284 69.0 47.0 22.0 G 468670 i1 2020-04-29T22:09:00 ..R
+EIC 2019 9 13 22 10 0 2019-09-13T22:10:00Z 2019.7011605783866 2231-99 -47.364 0.195 -27.1597 -109.4284 69.0 47.0 22.0 G 468671 i1 2020-04-17T05:17:00 ..R
+EIC 2019 9 13 22 10 0 2019-09-13T22:10:00Z 2019.7011605783866 4191-99 -47.27 0.191 -27.1597 -109.4284 69.0 47.0 22.0 G 468672 i1 2020-04-17T05:37:00 ..R
+EIC 2019 9 18 21 0 0 2019-09-18T21:00:00Z 2019.7147260273973 1113-99 -47.583 0.191 -27.1597 -109.4284 69.0 47.0 22.0 G 468686 i1 2020-04-21T03:43:00 .XR
+EIC 2019 9 18 21 0 0 2019-09-18T21:00:00Z 2019.7147260273973 520-99 -47.453 0.19 -27.1597 -109.4284 69.0 47.0 22.0 G 468685 i1 2020-04-21T03:23:00 ..R

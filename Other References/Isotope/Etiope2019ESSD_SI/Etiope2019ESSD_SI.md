@@ -1,0 +1,271 @@
+Supplement of
+
+# Gridded maps of geological methane emissions and their isotopic signature
+
+Giuseppe Etiope et al.
+
+Correspondence to: Giuseppe Etiope (giuseppe.etiope@ingv.it)
+
+The copyright of individual parts of the supplement might differ from the CC BY 4.0 License.
+
+## Content
+
+Supplementary Tables, Figures and Text   
+S1. Onshore Seeps - OSs   
+S2. Submarine Seepage - SSs   
+S3. Microseepage - MS   
+S4. Geothermal Manifestations - GMs   
+S5. Supplementary references   
+S6. Sources of databases
+
+## S1. Onshore Seeps (OSs)
+
+Table S1. Class of $C H _ { 4 }$ emission attributed to onshore seeps (excluding mud volcanoes)
+<table><tr><td>Emission (tyr)</td><td>1-50</td><td>100</td><td>500</td><td>1000</td><td>2000-3000</td><td>5000-9000</td><td>10000-20000</td><td>50000-60000</td><td>80000</td></tr><tr><td>N.of seeps (tot.2086)</td><td>522</td><td>1069</td><td>27</td><td>419</td><td>14</td><td>23</td><td>9</td><td>2</td><td>1</td></tr></table>
+
+## S1.1 Evaluation of MV emission factors
+
+MV flux data acquired before 2006, in Azerbaijan, Romania and Italy (Table S2) refer to flux measurements based on the accumulation chamber technique using syringe sampling and laboratory analyses. The data acquired after 2006, refer to measurements based on new accumulation chambers connected to portable gas sensors (semiconductors or laser detectors). It was verified that the flux derivations by discrete syringe sampling strongly underestimate the flux. A series of tests performed in seepage sites, using simultaneously syringe and online sensor techniques (Etiope, unpublished data), revealed that syringe sampling may underestimate the flux up to 90%, especially for high fluxes (e.g., on the same seep, values of 100 and 1000 kg day-1 were measured by syringe and online sensors, respectively). The good accuracy and repeatability of the closed chamber technique with online sensors, especially those using TDLAS (Tunable Diode Laser Adsorption Spectroscopy) sensors (with uncertainty < 10%) are described by Etiope et al. (2017) and instrumental manuals (www.westsystems.com). Accordingly, the old flux estimates based on syringe sampling are surely significantly underestimated; therefore, they have not been used for the evaluation of the miniseepage emission factor.
+
+Table S2. Measured methane flux data from mud volcanoes
+<table><tr><td rowspan=2 colspan=1>Measurementmethod</td><td rowspan=2 colspan=1>Country</td><td rowspan=2 colspan=1>Mud volcano</td><td rowspan=2 colspan=1>Investigatedarea(km3）</td><td rowspan=1 colspan=1>Miniseepageoutput</td><td rowspan=1 colspan=1>Macroseepoutput</td><td rowspan=1 colspan=1>Totalemission</td><td rowspan=1 colspan=1>Emissionfactor</td><td rowspan=2 colspan=1>References</td></tr><tr><td rowspan=1 colspan=1>ty</td><td rowspan=1 colspan=1>ty</td><td rowspan=1 colspan=1>y</td><td rowspan=1 colspan=1>tkm²y</td></tr><tr><td rowspan=7 colspan=1>syringesampling andlab analyses</td><td rowspan=1 colspan=1>Azerbaijan</td><td rowspan=1 colspan=1>Dashgil</td><td rowspan=1 colspan=1>0.6</td><td rowspan=1 colspan=1>442</td><td rowspan=1 colspan=1>623</td><td rowspan=1 colspan=1>1065</td><td rowspan=1 colspan=1>1775</td><td rowspan=1 colspan=1>Etiope et al (2004a)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Kechaldag</td><td rowspan=1 colspan=1>0.05</td><td rowspan=1 colspan=1>5.8</td><td rowspan=1 colspan=1>4</td><td rowspan=1 colspan=1>10</td><td rowspan=1 colspan=1>196</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Bakhar</td><td rowspan=1 colspan=1>0.05</td><td rowspan=1 colspan=1>55</td><td rowspan=1 colspan=1>84</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>278</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1>Romania</td><td rowspan=1 colspan=1>Paclele Mici</td><td rowspan=1 colspan=1>0.62</td><td rowspan=1 colspan=1>68.4</td><td rowspan=1 colspan=1>255</td><td rowspan=1 colspan=1>323</td><td rowspan=1 colspan=1>522</td><td rowspan=1 colspan=1>Etiope et al (2004b)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Paclele Mari</td><td rowspan=1 colspan=1>1.62</td><td rowspan=1 colspan=1>77</td><td rowspan=1 colspan=1>300</td><td rowspan=1 colspan=1>377</td><td rowspan=1 colspan=1>233</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Fierbatori</td><td rowspan=1 colspan=1>0.025</td><td rowspan=1 colspan=1>20</td><td rowspan=1 colspan=1>17</td><td rowspan=1 colspan=1>37</td><td rowspan=1 colspan=1>1480</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1>Italy</td><td rowspan=1 colspan=1>Maccalube</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>374</td><td rowspan=1 colspan=1>20</td><td rowspan=1 colspan=1>394</td><td rowspan=1 colspan=1>281</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=20 colspan=1>online sensors</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td></tr><tr><td rowspan=1 colspan=1>Italy</td><td rowspan=1 colspan=1>Frisa</td><td rowspan=1 colspan=1>0.001</td><td rowspan=1 colspan=1>2.8</td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>4800</td><td rowspan=1 colspan=1>Etiope (unpublished)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Ospitaletto</td><td rowspan=1 colspan=1>0.001</td><td rowspan=1 colspan=1>0.6</td><td rowspan=1 colspan=1>0.8</td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>1400</td><td rowspan=1 colspan=1>Etiope etal(2007)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Pineto</td><td rowspan=1 colspan=1>0.0025</td><td rowspan=1 colspan=1>1.7</td><td rowspan=1 colspan=1>1.6</td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>1320</td><td rowspan=1 colspan=1>Etiope (unpublished)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Rivalta</td><td rowspan=1 colspan=1>0.003</td><td rowspan=1 colspan=1>10.8</td><td rowspan=1 colspan=1>12</td><td rowspan=1 colspan=1>12</td><td rowspan=1 colspan=1>4000</td><td rowspan=1 colspan=1>Etiope et al (2007)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Regnano</td><td rowspan=1 colspan=1>0.006</td><td rowspan=1 colspan=1>29</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>34</td><td rowspan=1 colspan=1>5667</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Nirano</td><td rowspan=1 colspan=1>0.01</td><td rowspan=1 colspan=1>26.4</td><td rowspan=1 colspan=1>6</td><td rowspan=1 colspan=1>32</td><td rowspan=1 colspan=1>3240</td><td rowspan=1 colspan=1>Etiope et al (2007)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Serra de Conti</td><td rowspan=1 colspan=1>0.006</td><td rowspan=1 colspan=1>12</td><td rowspan=1 colspan=1>7</td><td rowspan=1 colspan=1>19</td><td rowspan=1 colspan=1>3167</td><td rowspan=1 colspan=1>Etiope (unpublished)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Monor</td><td rowspan=1 colspan=1>0.002</td><td rowspan=1 colspan=1>13.9</td><td rowspan=1 colspan=1>21</td><td rowspan=1 colspan=1>16</td><td rowspan=1 colspan=1>8000</td><td rowspan=1 colspan=1>Spulber et al (2010)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>0.00005</td><td rowspan=1 colspan=1>01</td><td rowspan=1 colspan=1>0.38</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>9600</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1>Porumbeni</td><td rowspan=1 colspan=1>Mici</td><td rowspan=1 colspan=1>0.0004</td><td rowspan=1 colspan=1>0.27</td><td rowspan=1 colspan=1>0.2</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>11750</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Cobatesti</td><td rowspan=1 colspan=1>0.00008</td><td rowspan=1 colspan=1>0.2</td><td rowspan=1 colspan=1>1.4</td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>20000</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Boz</td><td rowspan=1 colspan=1>0.00002</td><td rowspan=1 colspan=1>0.01</td><td rowspan=1 colspan=1>0.19</td><td rowspan=1 colspan=1>0</td><td rowspan=1 colspan=1>10000</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Beciu</td><td rowspan=1 colspan=1>0.005</td><td rowspan=1 colspan=1>75</td><td rowspan=1 colspan=1>182</td><td rowspan=1 colspan=1>190</td><td rowspan=1 colspan=1>37900</td><td rowspan=1 colspan=1>Frunzeti et al(2012)</td></tr><tr><td rowspan=1 colspan=1>Taiwan</td><td rowspan=1 colspan=1>Hsing-yang-nyu-hu0</td><td rowspan=1 colspan=1>.0004</td><td rowspan=1 colspan=1>0.5</td><td rowspan=1 colspan=1>17</td><td rowspan=1 colspan=1>2</td><td rowspan=1 colspan=1>5500</td><td rowspan=1 colspan=1>Hong et al (2013)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Gung-shuei-ping</td><td rowspan=1 colspan=1>0.005</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>1.1</td><td rowspan=1 colspan=1>1</td><td rowspan=1 colspan=1>220</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Wu-shan-ding</td><td rowspan=1 colspan=1>0.006</td><td rowspan=1 colspan=1>30.2</td><td rowspan=1 colspan=1>4.8</td><td rowspan=1 colspan=1>35</td><td rowspan=1 colspan=1>5833</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1>Japan</td><td rowspan=1 colspan=1>Murono</td><td rowspan=1 colspan=1>0.0049</td><td rowspan=1 colspan=1>16</td><td rowspan=1 colspan=1>5</td><td rowspan=1 colspan=1>21</td><td rowspan=1 colspan=1>4286</td><td rowspan=1 colspan=1>Etiope et al (2011)</td></tr><tr><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>Gamo</td><td rowspan=1 colspan=1>0.001</td><td rowspan=1 colspan=1>12</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>3</td><td rowspan=1 colspan=1>3000</td><td rowspan=1 colspan=1>“</td></tr><tr><td rowspan=1 colspan=1>China</td><td rowspan=1 colspan=1>Dushanzi</td><td rowspan=1 colspan=1>0.02</td><td rowspan=1 colspan=1>20.1</td><td rowspan=1 colspan=1></td><td rowspan=1 colspan=1>23</td><td rowspan=1 colspan=1>1130</td><td rowspan=1 colspan=1>Zheng et al(2017)</td></tr></table>
+
+The “online sensor” data of Table S2 have been used to draw a regression line of seepage area vs. miniseepage (Fig. S2). The line equation has been applied to the OS mud volcano dataset, where the area (km2 ) was estimated for each MV (as described above). So, for each MV the miniseepage emission has been estimated. The main uncertainty in this procedure is due to the fact that the measured miniseepage data refer to small size MVs (the large MVs of Azerbaijan and Romania were only measured with the old, underestimating syringe method), and the miniseepage vs area correlation may be different compared to large MVs.
+
+From Table S2 data, a statistical relationship between miniseepage and macro-seepage has also been derived (Fig. S3) and the macro-seepage flux component has been attributed to each MV of the OS dataset. It is known from field surveys that the macro- vs. miniseepage correlation actually depends on the size of the MV: bigger (generally more active) MVs have a relatively higher macro-seepage. Therefore, two regression lines were calculated for MVs smaller and larger than 1 km2 , adopting in this case the old data from Azerbaijan and Romania. The emission of each MV is therefore the sum of miniseepage and macro-seepage flux.
+
+![](images/5584c50843e61f9dfa431961c328bd596d28597b2ac99b5f7a9a2d63d32af9db.jpg)  
+Fig. S2. Correlation between mud volcano area and miniseepage, based on Table S2 data.
+
+![](images/2219b386738fe93d0e3869642658752c08d0ea0575786a07d9b6f8c652a25fc7.jpg)  
+Fig. S3. Correlation between mud volcano miniseepage and macro-seepage, based on Table S2 data. Two regression lines were calculated for MV smaller (blue diamonds) and larger (white squares) than 1 km2 .
+
+Table S3. Extract from the OS dataset showing, as example, the miniseepage flux derived from the area of some mud volcanoes in Azerbaijan, based on the area vs miniseepage relationship shown in Fig. S2, and miniseepage vs macroseep flux relationship shown in Fig. S3.
+<table><tr><td colspan="8"></td></tr><tr><td>COUNTRY</td><td>LAT</td><td>LONG</td><td>REGION</td><td>NAME</td><td>area (km²)</td><td>minissepage (tyr1)</td><td>macro-seep (tyr</td><td>Total emission (tyr1</td></tr><tr><td>Azerbaijan</td><td>41.15000</td><td>48.93333</td><td>Pricaspian</td><td> Khanaga</td><td>1</td><td>2966</td><td>1226</td><td>4192</td></tr><tr><td>Azerbaijan</td><td>41.15000</td><td>48.93333</td><td>Pricaspian</td><td>Khydyrzyndy</td><td>0.6</td><td>1735</td><td>42</td><td>1777</td></tr><tr><td>Azerbaijan</td><td>40.71667</td><td>49.31667</td><td>Pricaspian</td><td>Kohna-Gady</td><td>0.6</td><td>1735</td><td>42</td><td>1777</td></tr><tr><td>Azerbaijan</td><td>40.71667</td><td>49.31667</td><td>Pricaspian</td><td>Kurkachidag</td><td>1</td><td>2966</td><td>1226</td><td>4192</td></tr><tr><td>Azerbajan</td><td>40.98278</td><td>49.15917</td><td>Pricaspian</td><td>Nardaran</td><td>0.6</td><td>1735</td><td>42</td><td>1777</td></tr><tr><td>Azerbaijan</td><td>40.39528</td><td>49.88222</td><td>Apsheron</td><td> Chullutepe</td><td>0.4</td><td>1133</td><td>35</td><td>1168</td></tr><tr><td>Azerbaijan</td><td>40.49389</td><td>48.92139</td><td>Apsheron</td><td> Damlamaja</td><td>0.4</td><td>1133</td><td>35</td><td>1168</td></tr><tr><td>Azerbaijan</td><td>40.39528</td><td>49.88222</td><td>Apsheron</td><td>Girvaalty</td><td>0.4</td><td>1133</td><td>35</td><td>1168</td></tr><tr><td>Azerbaijan</td><td>40.39528</td><td>49.88222</td><td>Apsheron</td><td>Gulbakht</td><td>0.4</td><td>1133</td><td>35</td><td>1168</td></tr><tr><td>Azerbajan</td><td>40.39528</td><td>49.88222</td><td>Apsheron</td><td>Gullutepe</td><td>0.4</td><td>1133</td><td>35</td><td>1168</td></tr><tr><td>Azerbaijan</td><td>40.47000</td><td>49.71700</td><td>Apsheron</td><td>Kechaldag</td><td>1</td><td>2966</td><td>1226</td><td>4192</td></tr></table>
+
+The uncertainty of the modelled emission (the total emission in Table S3) was estimated (42%) from the difference between the average measured emission (average of the sum of miniseepage and macroseepage emission from the online sensor measurements of Table S2) and average modelled emission (average of the values that are the sum of modelled miniseepage and macro-seepage emissions derived from the regression lines of Fig. S2 and S3).
+
+![](images/51cab59c0fd4b573eab9364c6a3c065ac06694671cd369222a4977b8e20bf790.jpg)  
+Fig. S4 Distribution of three classes of value of the stable C isotope composition of methane from onshore seeps.
+
+## S2. Submarine Seepage (SS)
+
+Table S4. SS dataset developed for gridding. It includes 15 areas where methane output to the atmosphere was estimated, and 16 areas where the emission is unknown.
+<table><tr><td colspan="5"></td><td rowspan="2">flux  $( \mathbf t \mathbf y \mathbf r ^ { * } )$ </td><td rowspan="2">area （km2）</td><td rowspan="2"> ${ \mathfrak { d } } ^ { 1 3 } { \mathfrak { C } }$  (%)</td><td rowspan="2">Reference</td></tr><tr><td>ID</td><td>Country</td><td>Seepage area</td><td>LAT</td><td>LON</td></tr><tr><td>1</td><td>California</td><td>Coal Oil Point</td><td>34.3953N</td><td>119.8825W</td><td>30000</td><td>3</td><td>-43</td><td>Hornafius et al 1999</td></tr><tr><td>2</td><td>Denmark</td><td> Kattegat coast</td><td>57.45N</td><td>10.84E</td><td>50</td><td>25000</td><td>-60</td><td>Dando et al 1994</td></tr><tr><td>3</td><td>UK</td><td>UK North Sea shelf</td><td>52.62N</td><td>2.42E</td><td>600000</td><td>600000</td><td>-60</td><td>Judd et al 1997,Tizzard 2008</td></tr><tr><td>4</td><td>Spain Bulgaria-Georgia-Russia-</td><td>Rias Baixas</td><td>42.22N</td><td>8.84W</td><td>11400</td><td>751</td><td>-65</td><td>Garcia-Gil 2003</td></tr><tr><td>5</td><td>Ukraine-Turkey</td><td>Black Sea shelf and coasts</td><td>five different zones</td><td></td><td>920000</td><td>132200</td><td>-50</td><td>Dimitrov and Vassilev 2003</td></tr><tr><td>6</td><td>Greece</td><td>lonian Coast</td><td>37.64N</td><td>21.32E</td><td>100</td><td>0.1</td><td>-36</td><td>Etiope et al 2013</td></tr><tr><td>7</td><td>China</td><td>Yinggehai Basin Hainan Is.</td><td>18N</td><td>109E</td><td>1</td><td>100</td><td>-36</td><td>Huang et al 2009</td></tr><tr><td>8</td><td>Australia</td><td>Timor Sea</td><td>13.8S</td><td>124.5E</td><td>474</td><td>0.7</td><td>-41.5</td><td>Brunskill et al 2011</td></tr><tr><td>9</td><td>Russia-Japan</td><td>NW shelf of Sea of Okhotsk</td><td>55N</td><td>145E</td><td>11000</td><td>730000</td><td>-49</td><td>Yoshida et al 2004</td></tr><tr><td>10</td><td>Chile</td><td>Mocha Island</td><td>38.2S</td><td>73.5W</td><td>815</td><td>3.1</td><td>-44</td><td>Jessen et al 2011</td></tr><tr><td>11</td><td>Romania-Ukraine</td><td>Northwest Black Sea</td><td>43 to 46N</td><td>28.5 to 34E</td><td>120000</td><td>250000</td><td>-55</td><td>Amouroux et al 2002</td></tr><tr><td>12</td><td>Russia</td><td>East Siberian Arctic Shelf</td><td>70 to 78N</td><td>120 to 180E</td><td>2000000</td><td>2000000</td><td>-63</td><td>Berchet et al 2016</td></tr><tr><td>13</td><td>Alaska-Canada</td><td>Beaufort Sea</td><td>70 to 72N</td><td>140 to 155W</td><td>50000</td><td>476000</td><td>-60</td><td>Lorenson et al 2016</td></tr><tr><td>14</td><td>Norway</td><td>Svalbard margin</td><td>74 to 79 N</td><td>7 to 10E</td><td>1500</td><td>201600</td><td>-55</td><td>Mau et al 2017</td></tr><tr><td>15</td><td>China-Brunei</td><td>South China Sea</td><td>3to25N</td><td>104 to 120E</td><td>175700</td><td>？</td><td>-9999</td><td>Tseng et al 2017</td></tr><tr><td>16</td><td>The Netherlands</td><td>North Sea - Dutch Dogger Bank</td><td>55° 20&#x27;N</td><td>4° 05&#x27;E</td><td>-9999</td><td>8</td><td>-60</td><td>Romer et al 2017</td></tr><tr><td>17</td><td>USA</td><td>North US Atlantic margin</td><td>35 to 41 N</td><td>75 to 65W</td><td>-9999</td><td>94000</td><td>-60</td><td>Skarke et al 2014</td></tr><tr><td>18</td><td>Pakistan</td><td> Makran offshore</td><td>24°N</td><td>62°E</td><td>-9999</td><td>50</td><td>-68</td><td>Romer et al 2012</td></tr><tr><td>19</td><td>USA - Mexico</td><td>Gulf of Mexico</td><td>whole coastal zone</td><td></td><td>-9999</td><td>200000</td><td>-50</td><td>Kennicutt 2017</td></tr><tr><td>20</td><td>Italy</td><td>Adriatic Sea, Marche (Fontespina)</td><td>43.33 N</td><td>13.72 E</td><td>-9999</td><td>0.5</td><td>-55</td><td>Etiope et al 2014</td></tr><tr><td>21</td><td>Italy</td><td>Adriatic Sea,Veneto (Chioggia)</td><td>45.2 N 43°57&#x27;to0</td><td>12.3E</td><td>-9999</td><td>0.1</td><td>-65</td><td>Panieri 2006</td></tr><tr><td>22</td><td>France</td><td>Aquitaine shelf (Bay of Biscay)</td><td>44°25&#x27;N</td><td>2°5&#x27; to 2°W</td><td>-9999</td><td>400</td><td>-69</td><td>Ruffine et al 2017</td></tr><tr><td>23</td><td>USA</td><td>Monterey Bay</td><td>37N</td><td>122.25W</td><td>-9999</td><td>700</td><td>-31</td><td>Mullins and Nagel 1982</td></tr><tr><td>24</td><td>USA</td><td>Cape Lookout Bight N.Carolina</td><td>34.65N</td><td>76.54 W</td><td>-9999</td><td>1</td><td>-65</td><td>Martens and Klump 1980</td></tr><tr><td>25</td><td>USA</td><td>Delaware Bay</td><td>39 N</td><td>75W</td><td>-9999</td><td>10</td><td>-65</td><td>Moody and Van Reenan 1967</td></tr><tr><td>26</td><td>Canada</td><td>Laurentian Channel</td><td>48.00 N</td><td>65.00W</td><td>-9999</td><td>1</td><td>-9999</td><td>Fader 1991</td></tr><tr><td>27</td><td>Canada</td><td>Grand Banks Downing Basin</td><td>46.8 N</td><td>56.6W</td><td>-9999</td><td>1</td><td>-9999</td><td>Fader 1991</td></tr><tr><td>28</td><td>Greece</td><td>Patras Gulf</td><td>38.15 N</td><td>21.35E</td><td>-9999</td><td>1</td><td>-65</td><td>Papatheodorou etal 1993</td></tr><tr><td>29</td><td>Russia</td><td>East Kamtchatka shelf</td><td>56N</td><td>162.50E</td><td>-9999</td><td>60</td><td>-9999</td><td>Seliverstov et al 1994</td></tr><tr><td>30</td><td>Denmark</td><td>West Bomholm,S. Baltic Sea</td><td>55.30N 37.9 to</td><td>15E</td><td>-9999</td><td>10</td><td>-65</td><td>Kogler and Larsen 1979</td></tr><tr><td>31</td><td>Azerbaijan-Turkmenistan</td><td>Caspian Sea</td><td>40.2N</td><td>49.4 to 51.7E</td><td>-9999</td><td>40000</td><td>-49</td><td>Yusifovand Rabinowitz 2004</td></tr></table>
+
+Note: $\delta ^ { 1 3 } \mathsf { C }$ values in italic are theoretically attributed (see main text). In the grid text files, the value -9999 for $\delta ^ { 1 3 } \mathsf { C }$ is replaced by the emission-weighted average $\delta { } ^ { 1 3 } \mathsf { C }$ value resulting from the first 15 seepage zones (-59 ‰).
+
+![](images/69fc5548d028f46adb6b51bd8f2e94ab6fdae22f3add32da3b730634de2027e6.jpg)  
+Fig. S5 Microbial (blue) and thermogenic (yellow) $C H _ { 4 }$ attributed to the SS areas. Red refers to the areas where, lacking measured or estimated isotopic data, the global weighted-average SS isotopic value is used. See Fig.5 for the identification of the sites.
+
+## S3. Microseepage (MS)
+
+## S3.1 Global petroleum field area (PFA)
+
+The spatial distribution of petroleum fields is taken from the “Petrodata” dataset of Päivi et al. (2007; see Sources of datasets in the Supplement). This dataset includes 891 polygons that represent onshore oil and gas fields from 114 countries. Päivi et al. (2007) created the polygons by grouping proximate original oil and gas locations digitised by geo-referenced maps (from USGS, 2000) in order to represent the clusters. The construction of the polygons was realised by applying a buffer of 30 km around each point location (i.e. this method assumes that each data point represents an area with a 30 km radius); overlapping polygons were then dissolved (to obtain one polygon) and clipped by using the country borders. The reasons why Päivi et al. (2007) used a 30 km buffer are not clear. We have compared the area of the Petrodata polygons with the actual area of petroleum fields mapped (PFM) in six main petroliferous regions: Siberia, USA, Iran, Venezuela, Turkmenistan and Iraq-Saudi Arabia. Gas and oil fields were digitized from geo-referenced maps published by different sources. We observed that the polygonal area of petroleum fields (resulting from the 30 km buffer) is, on average, 40% higher than the actual petroleum field area reported in the specific maps. We have then re-sized the polygons:
+
+\- using the observed polygon/PFM ratio for each of the 6 regions used as test (variable from 0.9 to 6.8),
+
+\- using the average polygon/PFM ratio (1.67) for all other fields.
+
+This process resulted in a global Petroleum Field Area (PFA; Fig. S6) of $1 3 , 0 3 3 , 7 5 5 \ \mathrm { k m } ^ { 2 }$ (about 9.7 million $\mathsf { k m } ^ { 2 }$ , i.e. \~43%, smaller than the area derivable from the polygons of Päivi et al. 2007).
+
+## S3.2 Global area including macro-seeps outside PFA (OS area, OSA)
+
+The existence of macro-seeps (OSs) in a given region implies a high probability that the region is also characterized by diffuse MS, which is not directly related to the gas flow of specific seeps (i.e., it is not a halo surrounding the macro-seeps, a process called miniseepage; Etiope, 2015). MS would occur, in other words, in areas surrounding OSs and within OS clusters, regardless the presence of petroleum fields (we have in fact verified that 779 OS fall outside the PFA). We call this area of influence “OS area - OSA”. The OSA was built creating a buffer of 5 km (radius) around each OS that falls outside PFA and enveloping OS clusters. The resulting global OSA is $8 5 , 9 0 0 ~ \mathsf { k m } ^ { 2 }$ . The radius of 5 km reflects the average distance between seeps within small-scale clusters, and covers therefore the minimum area where seepage may occur. The average distance between seeps was calculated using the nearest neighbor index (NNI) for 16 OS clusters in different regions. Cluster identification was based on Hot Spot Analysis by using Zonal Nearest Neighbor Hierarchical spatial clustering (ZNNH). The total potential MS area (PMA) is therefore $\mathsf { P F A + O S A } \ =$ $1 3 , 0 3 3 , 0 0 0 + 8 5 , 9 0 0 = 1 3 , 1 1 8 , 9 0 0 ~ \mathrm { k m } ^ { 2 }$
+
+![](images/025f84aede9ebc28a58f9b4d5c9efa01ee71c5093e07a138a5d28a7ed2256079.jpg)  
+Fig. S6 Global distribution of the petroleum field area (PFA), based on “Petrodata” dataset from Päivi et al. (2007)
+
+Table S5. Statistics of microseepage data (values are in mg $m ^ { - 2 } d ^ { - 1 } )$
+<table><tr><td></td><td>N.</td><td>Mean</td><td>Median</td><td>G.Mean</td><td>Min</td><td>Max</td><td>Std.Dev.</td></tr><tr><td>Total</td><td>1509</td><td>111.8</td><td>0.20</td><td>-</td><td>-40.99</td><td>7078.7</td><td>548.8</td></tr><tr><td>Positive flux (&gt;0.01)</td><td>871</td><td>194.8</td><td>2.73</td><td>4.02</td><td>0.01</td><td>7078.7</td><td>711.1</td></tr></table>
+
+G.Mean: geometric mean; Min: minimum value; Max: maximum value, Std.Dev.:, standard deviation
+
+![](images/59e05497071357f2683311d9527496adfc679fe920a3a998df920129ce3de3b5.jpg)
+
+![](images/3ba8958528983b78158b748213e1a6138715efeeb3adfcaacb801257ebd351e8.jpg)  
+Fig. S7 Statistical elaboration of the microseepage data from Table S5.
+
+![](images/9828a533eb3398f2a5ebe9d980d67b2926fcbdb098f9cf6483e4cbf789599d42.jpg)  
+Fig. S8 Global distribution of major fault zones (see Sources of databases below)
+
+![](images/617eec3d3caf5623df7d185ddfb88fe1244f83255f6df06298f1e299bb86964e.jpg)  
+Fig. S9 Global distribution of earthquakes (period 2005-2017, M>4.5) (see Sources of databases below)
+
+Table S6. Results of microseepage gridding $( 0 . 0 5 ^ { \circ } \times 0 . 0 5 ^ { \circ } )$
+<table><tr><td></td><td>N. cells</td><td>Area （km2）</td><td>MS  $( \overrightarrow { m } \mathfrak { g } \mathfrak { m } ^ { - 2 } \mathfrak { d } ^ { - 1 } )$ </td><td>MS  $( t k m ^ { - 2 } \mathsf { y r } ^ { - 1 } )$ </td><td>Tot output (tyr)</td></tr><tr><td>GriddedEMA</td><td>192,166</td><td>8,588,634</td><td></td><td></td><td>24,006,755</td></tr><tr><td>Gridded Level 1</td><td>169,338</td><td>7,652,785</td><td>1.3</td><td>0.4745</td><td>3,631,246</td></tr><tr><td>Gridded Level 2</td><td>20,518</td><td>840,772</td><td>31.14</td><td>11.366</td><td>9,556,200</td></tr><tr><td>Gridded Level 3</td><td>1094</td><td>45,059</td><td>110</td><td>40.15</td><td>1,809,156</td></tr><tr><td>Gridded Level 4</td><td>1216</td><td>50,016</td><td>493.5</td><td>180.13</td><td>9,010,153</td></tr></table>
+
+![](images/c68962902582fa36530c4fe181a68b6126f5e6d1938cb901b4639c4d58363832.jpg)  
+Fig. S10 Block diagram of the MS modelling. PFA: Petroleum Field Area; OSA: Onshore Seep Area; EMA: Effective Microseepage Area; NPP: Normal Probability Plot (see also explanation of the abbreviations in Section 6.1)
+
+![](images/14c021ee4612745e529a16fdd23d90683e904a2ecfab72abfc2b07fbda52be24.jpg)  
+Fig. S11 Gridded map of MS methane $\delta ^ { 1 3 } C$ values. This map refers to the csv file “MS\_13C”
+
+## S3.3 MS modelling sensitivity
+
+The sensitivity of the MS modelling was tested by changing the emission factor (using the geometric mean of MS levels, instead of the median; varying the four microseepage levels by the 95% confidence interval for the median) and activity (varying ± 20% the area of the four levels). The several combinations and results are summarized in Table 7. The resulting emissions range from \~15 to \~32.7 Tg $\mathsf { y r } ^ { - 1 }$ , with an average of 23 Tg $\mathsf { y r } ^ { - 1 }$ , which matches the first estimate (combination n. 1 in Table S7) considered in the csv MS grid file.
+
+Table S7. Variability of the MS modelling results in relation to different combinations of activity and emission factors
+<table><tr><td>Combination</td><td>Activity</td><td>Emission factor</td><td>Total emission (Tg yr1）</td></tr><tr><td>n. 1</td><td>EMA</td><td>median</td><td>24.0</td></tr><tr><td>2</td><td>EMA</td><td>geom.median</td><td>21.9</td></tr><tr><td>3</td><td>EMA 20% smaller</td><td>median</td><td>18.9</td></tr><tr><td>4</td><td>EMA 20% smaller</td><td>geom.mean</td><td>17.5</td></tr><tr><td>5</td><td>EMA 20% higher</td><td>median</td><td>28.4</td></tr><tr><td>6</td><td>EMA 20% higher</td><td>geom.mean</td><td>26.3</td></tr><tr><td>7</td><td>EMA</td><td>lower 95% confid.limit median</td><td>18.8</td></tr><tr><td>8</td><td>EMA</td><td>upper 95% confid.limit median</td><td>27.3</td></tr><tr><td>9</td><td>EMA 20% smaller</td><td>lower 95% confid.limit median</td><td>15.0</td></tr><tr><td>10</td><td>EMA 20% higher</td><td>upper 95% confid.limit median</td><td>32.7</td></tr></table>
+
+## 4. Geothermal manifestations (GMs)
+
+![](images/354e637fb1dd3e33de6e1d7e71f0b6809f12b9f91fedc3d809bf671145bc60e1.jpg)  
+Fig. S12 Global distribution of onshore volcanic and geothermal sites (see Sources of databases below)
+
+![](images/2af2fcb1e723b0589c69f07804f74a476f85b1e34e317f2f8a7fa589a79bea33.jpg)  
+Fig. S13 Map of sedimentary basins (see Sources of databases below)
+
+Table S8. Descriptive statistical data of GM $\delta ^ { 1 3 } C \mathrm { - } C H _ { 4 }$ values (‰)
+<table><tr><td></td><td>N.</td><td>mean</td><td>min</td><td>max</td><td>Std.Dev.</td></tr><tr><td>GM outside sedimentary basins</td><td>68</td><td>-24.3</td><td>-28.9</td><td>-16.6</td><td>3.6</td></tr><tr><td>GMwithin sedimentary basins</td><td>26</td><td>-32.3</td><td>-38</td><td>-29.1</td><td>2.9</td></tr></table>
+
+![](images/38c4c435451bbe3099d24ae3d7a43a7d25b9371fafb3365a8a79a5c9fe3e7721.jpg)
+
+![](images/a8209e123e8ab697825f8ca6a7e9b86c69ccfb78532df31badb974391e4e2111.jpg)  
+Fig. S14 Normal Probability Plot and frequency histogram of the GM $\delta ^ { 1 3 } C \ – C H _ { 4 }$ data
+
+Table S9. Results of GM gridding
+<table><tr><td></td><td>Emission level  $( \mathfrak { t } \mathfrak { y } \mathfrak { r } ^ { - 1 } )$ </td><td>N. sites</td><td>N. cells</td><td>Tot output  $( \mathfrak { t } \ y \mathfrak { r } ^ { - 1 } )$ </td></tr><tr><td>GM outside sedimentary basins</td><td>500</td><td>1513</td><td>526</td><td>1,636,500</td></tr><tr><td>GM within sedimentary basins (outside petroleum basins)</td><td>5000</td><td>832</td><td>409</td><td>3,761,205</td></tr><tr><td>GM within petroleum basins</td><td>10000</td><td>33</td><td>24</td><td>310,500</td></tr><tr><td>Total</td><td></td><td>2378</td><td>959</td><td>5,708,205</td></tr></table>
+
+## S5. Supplementary references
+
+Amouroux, D., Roberts, G., Rapsomanikis, S., and Andreae, M.O.: Biogenic gas (CH4, N2O, DMS) emission to the atmosphere from near-shore and shelf waters of the north-western Black Sea. Estuar. Coast. Shelf Sci., 54, 575–587, 2002.
+
+Berchet, A., Bousquet, P., Pison, I., Locatelli, R., Chevallier, F., Paris, J.-D., Dlugokencky, E. J., Laurila, T., Hatakka, J., Viisanen, Y., Worthy, D. E. J., Nisbet, E., Fisher, R., France, J., Lowry, D., Ivakhov, V., and Hermansen, O.: Atmospheric constraints on the methane emissions from the East Siberian Shelf, Atmos. Chem. Phys., 16, 4147–4157, 2016.
+
+Brunskill, G.J., Burns, K.A., and Zagorskis, I.: Natural flux of greenhouse methane from the Timor Sea to the atmosphere, J. Geophys. Res., 116, G02024, doi:10.1029/2010JG001444, 2011.
+
+Dando, P.R., Jensen, P., O’Hara, S.C.M., Niven, S.J., Schmaljohann, R., Schuster, U., and Taylor, L.J.: The effects of methane seepage at an intertidal/shallow subtidal site on the shore of the Kattegat, Vendsyssel, Denmark, Bull. Geol. Soc. Den., 41:65–79, 1994.
+
+Dimitrov, L., and Vassilev, A.: Black Sea gas seepage and venting structures and their contribution to atmospheric methane. Annual of Univ. of mining and geology ‘‘St.Ivan Rilski’’, 46, part I. Geology and Geophysics, Sofia, 331-336, 2003.
+
+Etiope, G., and Feyzullaiev, A., Baciu, C.L., and Milkov, A.V.: Methane emission from mud volcanoes in eastern Azerbaijan. Geology, 32, 6, 465-468, 2004a.
+
+Etiope, G., Baciu, C., Caracausi, A., Italiano, F., and Cosma, C.: Gas flux to the atmosphere from mud volcanoes in eastern Romania, Terra Nova, 16, 179-184, 2004b.
+
+Etiope, G., Christodoulou, D., Kordella, S., Marinaro, G., and Papatheodorou, G.: Offshore and onshore seepage of thermogenic gas at Katakolo Bay (Western Greece), Chem. Geol., 339, 115-126, 2013.
+
+Etiope, G., Doezema, L., and Pacheco, C.: Emission of methane and heavier alkanes from the La Brea Tar Pits seepage area, Los Angeles, J. Geophys. Res.-Atm., 122, 12,008-12,019, 2017.
+
+Etiope, G., Martinelli, G., Caracausi, A., and Italiano F.: Methane seeps and mud volcanoes in Italy: gas origin, fractionation and emission to the atmosphere, Geoph.Res.Lett., 34, L14303, doi: 10.1029/2007GL030341, 2007.
+
+Etiope, G., Nakada, R., Tanaka, K., and Yoshida, N.: Gas seepage from Tokamachi mud volcanoes, onshore Niigata Basin (Japan): origin, post-genetic alterations and CH4-CO2 fluxes, App. Geochem., 26, 348-359, 2011.
+
+Etiope, G., Panieri, G., Fattorini, D., Regoli, F., Cannoli, P., Italiano, F., Locritani, M., and Carmisciano, C.: A thermogenic hydrocarbon seep in shallow Adriatic Sea (Italy): gas origin, sediment contamination and benthic foraminifera, Mar. Petrol.Geol., 57, 283-293, 2014.
+
+Fader, G.B.: Gas-related sedimentary features from eastern Canadian continental shelf, Cont. Shelf Res., 11, 1123-1153, 1991.
+
+Frunzeti, N., Baciu, C., Etiope, G., and Pfanz, H.: Geogenic emission of methane and carbon dioxide at Beciu mud volcano (Berca-Arbanasi hydrocarbon-bearing structure, Eastern Carpathians, Romania), Carpathian J. Earth Envir. Sci., 7, 159-166, 2012.
+
+Garcia-Gil, S.: A natural laboratory for shallow gas: the Rıas Baixas (NW Spain), Geo-Marine Letters 23, 215-229, 2003.
+
+Hong, W.L., Etiope, G., Yang, T.F., and Chang, P.Y.: Methane flux of miniseepage in mud volcanoes of SW Taiwan: Comparison with the data from Europe, J. Asian Earth Sci., 65, 3-12, 2013.
+
+Hornafius, J.S., Quigley, D., and Luyendyk, B.P.: The world’s most spectacular marine hydrocarbon seeps (Coal Oil Point, Santa Barbara Channel, California): quantification of emissions, J. Geophys. Res. 20(C9), 20,703–20,711, 1999.
+
+Huang, B., Xiao, X., Li, X., and Cai, D.: Spatial distribution and geochemistry of the nearshore gas seepages and their implications to natural gas migration in the Yinggehai Basin, offshore South China Sea, Mar. Petrol. Geol., 26, 928-935, 2009.
+
+Jessen, G.L., Pantoja, S., Gutierrez, M.A., Quiñones, R.A., Gonzalez, R.R., Sellanes, J., Kellermann, M.Y., and Hinrichs, K.-U.: Methane in shallow cold seeps at Mocha Island off central Chile, Cont. Shelf Res. 31, 574–581, 2011.
+
+Judd, A.G., Davies, J., Wilson, J., Holmes, R., Baron, G., and Bryden, I.: Contributions to atmospheric methane by natural seepages on the UK continental shelf, Mar. Geol., 137, 165–189, 1997.
+
+Kennicutt, M.C.: Oil and Gas Seeps in the Gulf of Mexico, In: Ward C. (eds) Habitats and Biota of the Gulf of Mexico: Before the Deepwater Horizon Oil Spill. Springer, New York, NY, 2017.
+
+Kögler, F.C., and Larsen, B.: The West Bornholm Basin in the Baltic Sea: geological structure and Quaternary sediments, Boreas, 8, 1-22, 1979.
+
+Lorenson, T.D., Grienert, J., and Coffin, R.B.: Dissolved methane in the Beaufort Sea and the Arctic Ocean, 1992–2009; sources and atmospheric flux, Limnol. Oceanogr., 61, 300-323, 2016.
+
+Martens, C.S., and Klumo, J.V.: Biogeochemical cycling in an organic rich coastal marine basin. 1. Methane sedimentwater exchange processes, Geochim. Cosmochim. Acta, 44, 471-490, 1980.
+
+Mau, S., Römer, M., Torres, M.E., Bussmann, I., Pape, T., Damm, E., Geprägs, P., Wintersteller, P., Hsu, C.-W., Loher, M., and Bohrmann, G.: Widespread methane seepage along the continental margin off Svalbard - from Bjørnøya to Kongsfjorden, Sci. Reports, 7, 42997, DOI: 10.1038/srep42997, 2017.
+
+Moody, D.W., and Van Reenan E.D.: High-resolution subbottom seismic profiles of the Delaware Estuary and Bay mouth, US Geol. Surv. Prof. Pap. 575-D, D247-D252, 1967.
+
+Mullins, H.T., and Nagel, D.K.: Evidence for shallow hydrocarbons offshore northern Santa Cruz County, California, AAPG Bull., 66, 1130-1140, 1982.
+
+Panieri, G.: Foraminiferal response to an active methane seep environment: a case study from the Adriatic Sea, Mar. Micropaleontol., 61, 116-130, 2006.
+
+Papatheodorou, G., Hasiotis, T., and Ferentinos, G.: Gas-charged sediments in the Aegean and Ionian Seas, Greece, Mar. Geol. 112, 171–184, 1993.
+
+Römer, M., Sahling, H., Pape, T., Bohrmann, G., and Spieß V.: Quantification of gas bubble emissions from submarine hydrocarbon seeps at the Makran continental margin (offshore Pakistan), J. Geophys. Res., 117, C10015, doi:10.1029/2011JC007424, 2012.
+
+Romer M., Wenau S., Mau S., Veloso M., Greinert J., Schl€uter M., Bohrmann G.: Assessing marine gas emission activity and contribution to the atmospheric methane inventory: A multidisciplinary approach from the Dutch Dogger Bank seep area (North Sea), Geochem. Geophys. Geosyst., 18, 2617–2633, doi:10.1002/2017GC006995, 2017.
+
+Ruffine, L., Donval, J.P., Croguennec, C., Bignon, L., Birot, D., Battani, A., Bayon, G., Caprais, J.C., Lantéri, N., Levaché, D., and Dupré, S.: Gas Seepage along the edge of the Aquitaine Shelf (France): origin and local fluxes. Geofluids, 2017, doi:10.1155/2017/4240818, 2017.
+
+Skarke, A., Ruppel, C., Kodis, M., Brothers, D., and Lobecker, E.: Widespread methane leakage from the sea floor on the northern US Atlantic margin. Nature Geosci., DOI: 10.1038/NGEO2232, 2014.
+
+Spulber, L., Etiope, G., Baciu, C., Malos, C., and Vlad, S.N.: Methane emission from natural gas seeps and mud volcanoes in Transylvania (Romania), Geofluids, 10, 463-475, 2010.
+
+Seliverstov, N.I., Torokhov, P.I., Egorov, Y.O., Dubrovsky, V.N., Taran, Y.A., and Kokarev, S.G.: Active seeps and carbonates from the Kamchatsky Gulf (East Kamchatka), Bull. Geol. Soc. Denmark, 41, 50-54, 1994.
+
+Tizzard, L.H.: The contribution to atmospheric methane from sub-seabed sources in the UK continental shelf, Unpublished Ph.D. Thesis, University of Newcastle upon Tyne, UK, 329pp, 2008.
+
+Tzeng, H.C., Chen, C.T.A., Borges, A., DelValls, A., and Chang Y.C.: Methane in the South China Sea and the Western Philippine Sea, Contin. Shelf Res., 135, 23-34, 2017.
+
+USGS World Energy Assessment Team: U.S. Geological Survey World Petroleum Assessment 2000, Description and Results, Digital Data Series - DDS-60. U.S. Dept. of the Interior, U.S.G.S., 2000.
+
+Yoshida, O., Inoue, H.Y., Watanabe, S., Noriki, S., and Wakatsuchi, M.: Methane in the western part of the Sea of Okhotsk in 1998–2000, J. Geophys. Res., 109, C09S12, doi:10.1029/2003JC001910, 2004.
+
+Yusifov, M., and Rabinowitz, P.D.: Classification of mud volcanoes in the South Caspian Basin, offshore Azerbaijan, Mar. Pet. Geol., 21, 965–975, 2004.
+
+Zheng, G., Ma, X., Guo, Z., Hilton, D.R., Xu, W., Liang, S., Fan, Q., and Chen, W.: Gas geochemistry and methane emission from Dushanzi mud volcanoes in the southern Junggar Basin, NW China, J. Asian Earth Sci., 149, 184-190, 2017.
+
+## S6. Sources of databases
+
+## Faults
+
+Global. Finko (2014). Global Faults layer from ArcAtlas (ESRI). http://www.arcgis.com/home/item.html?id=a5496011fa494b99810e4deb5c618ae2#overview
+
+Afghanistan. Dep. of the Interior, Data.gov team https://catalog.data.gov/dataset/geologic-faults-of-afghanistan-fltafg
+
+Australia. Geoscience Australia and Australian Stratigraphy Commission. (2017). Australian Stratigraphic Units Database. http://www.ga.gov.au/products-services/data- applications/reference-databases/stratigraphic-units.html
+
+Bangladesh. Dep. of the Interior, Data.gov team, https://catalog.data.gov/dataset/faults-and-tectonic-contacts-of-bangladesh-flt8bg
+
+Caribbean Region. Dep. of the Interior, Data.gov team https://catalog.data.gov/dataset/faults-of-the-caribbean-region-flt6bg
+
+Central Asia. Mohadjer, S., Strube, T., Ehlers, T.A., Bendick, R., 2015, Central Asia Fault Database. Available at esdynamics.geo.unituebingen.de/faults/[02/15/18]
+
+Europe including Turkey. Dep. of the Interior, Data.gov team https://catalog.data.gov/dataset/faults-of-europe-including-turkey-flt4-2l
+
+Georgia. Gamkrelidze I., Gamkrelidze M., Loladze M., Tsamalashvili T., 2000. New Tectonic Map of Georgia (Explanatory Note). Bull. Georgian Nat. Acad. Sci., vol. 9, no. 1, 201
+
+Greece. Basili R., Kastelic V., Demircioglu M. B., Garcia Moreno D., Nemser E. S., Petricca P., Sboras S. P., Besana-Ostman G. M., Cabral J., Camelbeeck T., Caputo R., Danciu L., Domac H., Fonseca J., García-Mayordomo J., Giardini D., Glavatovic B., Gulen L., Ince Y., Pavlides S., Sesetyan K., Tarabusi G., Tiberti M. M., Utkucu M., Valensise G., Vanneste K., Vilanova S., Wössner J. (2013). The European Database of Seismogenic Faults (EDSF) compiled in the framework of the Project SHARE. http://diss.rm.ingv.it/shareedsf/, doi: 10.6092/INGV.IT-SHARE-EDSF.
+
+Iran. Dep. of the Interior, Data.gov team https://catalog.data.gov/dataset/major-faults-in-iran-flt2cg Ireland: Geological Survey Ireland, Ireland www.gsi.ie, November 2016
+
+Ireland. Geological Survey Ireland, www.gsi.ie, November 2016
+
+Italy. Elementi tettonici presenti nella Carta Geologica d&#39;Italia alla scala 1:100.000. Proprietà del: Servizio Geologico d&#39;Italia – ISPRA. Portale del Servizio geologico d&#39;Italia, e metti il link del portale stesso http://sgi.isprambiente.it/geoportal/
+
+New Zealand. GNS Science, http://data.gns.cri.nz/af/ New Zealand Active fault database South America: Veloza G., Styron R., Taylor M.. (2013). Active Tectonics of the Andes database (ATA)
+
+South America. Veloza, G., Styron, R., Taylor, M., Mora, A., 2012, Active Tectonics of the Andes: An open-source archive for active faults in northwestern South America, GSA Today, 22, 4-10, doi: 10.1130/GSAT-G156A.1.   
+https://github.com/ActiveTectonicsAndes/ATA
+
+Spain. IGME (2015). QAFI v.3: Quaternary Active Faults Database of Iberia. Accessed "February 2018", http://info.igme.es/QAFI
+
+Switzerland. Opendata.swiss, 2005. Mappa tettonica della Svizzera (GK500-Tekto). Ufficio federale di topografia.   
+http://opendata.swiss/themes/geography.
+
+United Kingdom. British Geological Survey, BGS Geology 625k (DiGMapGB-625) data 1: 625 000 ESRI® [Faults]. http://www.bgs.ac.uk/products/digitalmaps/dataInfo.html#\_625
+
+## Earthquakes
+
+USGS Earthquake Lists, Maps and Statistics (https://earthquake.usgs.gov/earthquakes/browse/
+
+## Sedimentary basins
+
+Sedimentary basins world map (CGG data services)   
+http://www.datapages.com/gis-map-publishing-program/gis-open-files/global-framework/robertson-tellus-sedimentary-basins-of-the  
+world-map
+
+## Petroleum fields
+
+“Petrodata” from Päivi et al. (2007) by PRIO (Peace Research Institute Oslo), http://www.prio.org
+
+## Volcanoes/geothermal sites
+
+Global Volcanism Program (2013) http://www.volcano.si.edu/

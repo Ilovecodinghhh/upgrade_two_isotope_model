@@ -1,0 +1,291 @@
+# header_lines : 148
+#
+# ------------------------------------------------------------->>>>
+# DATA SET NAME
+#
+# dataset_name: ch4_sgi_surface-flask_1_ccgg_event
+#
+# ------------------------------------------------------------->>>>
+# DESCRIPTION
+#
+# dataset_description: Atmospheric Methane Dry Air Mole Fractions from the NOAA GML Global Greenhouse Gas Reference Network, Carbon Cycle Cooperative Global Air Sampling Network: 1983 - Present
+#
+# ------------------------------------------------------------->>>>
+# CITATION
+#
+# dataset_citation: Lan, X., G. Petron,  K. Baugh, A.M. Crotwell, M.J. Crotwell, S. DeVogel, M. Madronich, J. Mauss, T. Mefford, E. Moglia, S. Morris, J.W. Mund, A. Searle,  K.W. Thoning, S. Wolter  and J. Miller (2025), Atmospheric Methane Dry Air Mole Fractions from the NOAA GML Global Greenhouse Gas Reference Network, Carbon Cycle Cooperative Global Air Sampling Network: 1983 - Present , Version: 2025-08-15, https://doi.org/10.15138/VNCZ-M766
+#
+# ------------------------------------------------------------->>>>
+# FAIR USE POLICY
+#
+# dataset_fair_use: These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, coauthorship for data providers may be appropriate. 
+#
+# ------------------------------------------------------------->>>>
+# WARNING
+#
+# dataset_warning: Every effort is made to produce the most accurate and precise measurements possible.  However, we reserve the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  We are not responsible for results and conclusions based on use of these data without regard to this warning.
+#
+# ------------------------------------------------------------->>>>
+# GLOBAL ATTRIBUTES
+#
+# site_code : SGI
+# site_name : Bird Island, South Georgia
+# site_country : United Kingdom
+# site_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNKG0001.GIF
+# site_latitude : -54.0
+# site_longitude : -38.05
+# site_elevation : 30.0
+# site_elevation_unit : masl
+# site_position_comment : This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.
+# site_utc2lst : -3.0
+# site_utc2lst_comment : Add 'site_utc2lst' hours to convert a time stamp in UTC (Coordinated Universal Time) to LST (Local Standard Time).
+# dataset_creation_date : 2025-08-15T13:48:06.496334
+# dataset_num : 155
+# dataset_name : ch4_sgi_surface-flask_1_ccgg_event
+# dataset_parameter : ch4
+# dataset_parameter_name : Methane
+# dataset_parameter_industrial_name : Methane
+# dataset_project : surface-flask
+# dataset_platform : fixed
+# dataset_selection : event
+# dataset_selection_tag : event
+# dataset_comment : For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html
+# dataset_calibration_scale : CH4_X2004A
+# dataset_start_date : 1989-02-02T12:34:56Z
+# dataset_stop_date : 1992-08-13T16:20:00Z
+# dataset_usage_description : Please cite the product's citation when using data from this dataset. Relevant literature references for this dataset are listed below for convenience.
+# dataset_provider_license : These data were produced by NOAA and are not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the Creative Commons Zero 1.0 Universal Public Domain Dedication (CC0-1.0).
+# dataset_reference_total_listed : 1
+# dataset_reference_1_name : Dlugokencky, E. J., L. P. Steele, P. M. Lang and K. A. Masarie, (1994), The growth rate and distribution of atmospheric methane, Journal of Geophysical Research, 99, D8, 17, doi:10.1029/94JD01245.
+# dataset_contribution : These data are provided by NOAA. Principal investigators include Xin Lan (NOAA).
+# lab_total_listed : 1
+# lab_1_number : 1
+# lab_1_abbr : NOAA
+# lab_1_name : NOAA Global Monitoring Laboratory
+# lab_1_address1 : 325 Broadway
+# lab_1_address2 : NOAA R/GML-1
+# lab_1_address3 : Boulder, CO 80305-3328
+# lab_1_country : United States
+# lab_1_url : https://gml.noaa.gov/ccgg/
+# lab_1_parameter : Lab has contributed measurements for: ch4
+# lab_1_country_flag : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF
+# lab_1_logo : https://gml.noaa.gov/webdata/ccgg/ObsPack/images/logos/noaa_medium.png
+# lab_1_ongoing_atmospheric_air_comparison : T
+# provider_total_listed : 1
+# provider_1_name : Xin Lan
+# provider_1_address1 : NOAA GML
+# provider_1_address2 : 325 Broadway R/GML-1
+# provider_1_address3 : Boulder, CO 80305-3328
+# provider_1_country : United States
+# provider_1_affiliation : National Oceanic and Atmospheric Administration
+# provider_1_email : Xin.Lan@noaa.gov
+# provider_1_parameter : Provider has contributed measurements for: ch4
+# ------------------------------------------------------------->>>>
+# VARIABLE ATTRIBUTES
+#
+# site_code:long_name : site_name_abbreviation.
+# site_code:comment : Site code is an abbreviation for the sampling site name.
+# time_components:_FillValue : -9
+# time_components:long_name : integer_components_of_UTC_date/time
+# time_components:order : year, month, day, hour, minute, second
+# time_components:comment : Calendar time components as integers. Times and dates are UTC. Time-averaged values are reported at the start of the averaging interval.
+# datetime:long_name : air_sample_date_and_time_in_UTC
+# datetime:comment : Air sample date and time in UTC ISO 8601 format. Time-averaged values are reported at the start of the averaging interval.
+# time_decimal:_FillValue : -999.999
+# time_decimal:long_name : sample_decimal_year_in_UTC
+# time_decimal:comment : decimal year in UTC. Time-averaged values are reported at the start of the averaging interval.
+# air_sample_container_id:long_name : Air_Sample_Container_ID
+# air_sample_container_id:comment : ID of air sample container. See provider_comment if available.
+# value:_FillValue : -999.999
+# value:long_name : measured_mole_fraction_of_trace_gas_in_dry_air
+# value:units : nanomol mol-1
+# value:comment : Mole fraction reported in units of nanomol mol-1 (10-9 mol per mol of dry air); abbreviated as ppb (parts per billion).
+# value:scale_comment : CH4_X2004A
+# value_unc:_FillValue : -999.999
+# value_unc:long_name : estimated_uncertainty_in_reported_value
+# value_unc:units : nanomol mol-1
+# value_unc:comment : This is the estimated uncertainty of the reported value. See provider_comment if available.
+# latitude:_FillValue : -999.999
+# latitude:standard_name : latitude
+# latitude:long_name : sample_latitude_in_decimal_degrees
+# latitude:units : degrees_north
+# latitude:comment : Latitude at which air sample was collected.
+# longitude:_FillValue : -999.999
+# longitude:standard_name : longitude
+# longitude:long_name : sample_longitude_in_decimal_degrees
+# longitude:units : degrees_east
+# longitude:comment : Longitude at which air sample was collected using a range of -180 degrees to +180 degrees.
+# altitude:_FillValue : -999.999
+# altitude:standard_name : altitude
+# altitude:long_name : sample_altitude_in_meters_above_sea_level
+# altitude:units : m
+# altitude:comment : Altitude (in meters above sea level). See provider_comment if available.
+# altitude:provider_comment : Altitude for this dataset is the sum of surface elevation (masl) and sample intake height (magl).
+# elevation:_FillValue : -999.999
+# elevation:standard_name : elevation
+# elevation:long_name : surface_elevation_in_meters_above_sea_level
+# elevation:units : m
+# elevation:comment : Surface elevation in meters above sea level. See provider_comment if available.
+# intake_height:_FillValue : -999.999
+# intake_height:long_name : sample_intake_height_in_meters_above_ground_level
+# intake_height:units : m
+# intake_height:comment : Sample intake height in meters above ground level (magl). See provider_comment if available.
+# method:long_name : air_sample_collection_method
+# method:comment : Air sample collection method. See provider_comment if available.
+# method:provider_comment : A single-character code is used to identify the sample collection method. The codes are: P - Sample collected using a portable, battery powered pumping unit. Two flasks are connected in series, flushed with air, and then pressurized to 1.2 - 1.5 times ambient pressure. D - Similar to P but the air passes through a condenser cooled to about 5 deg C to partially dry the sample. G - Similar to D but with a gold-plated condenser. T - Evacuated flask filled by opening an O-ring sealed stopcock. S - Flasks filled at NOAA GML observatories by sampling air from the in situ CO2 measurement air intake system. N - Before 1981, flasks filled using a hand-held aspirator bulb. After 1981, flasks filled using a pump different from those used in method P, D, or G. F - Five liter evacuated flasks filled by opening a ground glass, greased stopcock
+# event_number:long_name : Unique_Air_Sample_Event_Number
+# event_number:comment : Identifies each discrete air sample collected at some time and location with a unique sample event number.  The event number (reported as a string) can be used to relate measurements of different trace gases and isotopes from the same sample.
+# instrument:long_name : instrument_ID_to_detect_atmospheric_parameter
+# instrument:comment : Instrument ID used to detect atmospheric parameter. See provider_comment if available.
+# analysis_datetime:long_name : air_sample_measurement_date_and_time_in_LT
+# analysis_datetime:comment : Air sample measurement date and time in LT. See provider_comment if available.
+# qcflag:long_name : quality_control_flag
+# qcflag:comment : This quality control flag is provided by the contributing PIs. See provider_comment if available.
+# qcflag:provider_comment : This is the NOAA 3-character quality control flag.  Column 1 is the REJECTION flag. An alphanumeric other than a period (.) in the FIRST column indicates a sample with obvious problems during collection or analysis. This measurement should not be interpreted. Column 2 is the SELECTION flag. An alphanumeric other than a period (.) in the SECOND column indicates a sample that is likely valid but does not meet selection criteria determined by the goals of a particular investigation. For example, it might not have been obtained during 'background' conditions.  Column 3 is the INFORMATION flag. An alphanumeric other than a period (.) in the THIRD column provides additional information about the collection or analysis of the sample. A P in the 3rd column of the QC flag indicates the measurement result is preliminary and has not yet been carefully examined by the PI.  The P flag is removed once the quality of the measurement has been determined.
+#
+# VARIABLE ORDER
+#
+site_code year month day hour minute second datetime time_decimal air_sample_container_id value value_unc latitude longitude altitude elevation intake_height method event_number instrument analysis_datetime qcflag
+SGI 1989 2 2 12 34 56 1989-02-02T12:34:56Z 1989.0891075596144 254-81 1641.24 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115451 C4 1990-09-12T13:22:00 ...
+SGI 1989 2 2 12 34 56 1989-02-02T12:34:56Z 1989.0891075596144 254-81 1643.89 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115451 C4 1990-09-12T13:36:00 ...
+SGI 1989 2 11 18 15 0 1989-02-11T18:15:00Z 1989.1144121004565 256-81 1655.89 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115453 C4 1990-09-12T14:49:00 C..
+SGI 1989 2 11 18 15 0 1989-02-11T18:15:00Z 1989.1144121004565 256-81 1654.79 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115453 C4 1990-09-12T15:04:00 C..
+SGI 1989 2 26 19 0 0 1989-02-26T19:00:00Z 1989.155593607306 258-81 1674.79 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115455 C4 1990-09-13T09:13:00 C..
+SGI 1989 2 26 19 0 0 1989-02-26T19:00:00Z 1989.155593607306 258-81 1668.76 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115455 C4 1990-09-13T09:28:00 C..
+SGI 1989 3 12 17 5 0 1989-03-12T17:05:00Z 1989.1937309741247 260-81 1637.06 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115457 C4 1990-09-12T15:18:00 ...
+SGI 1989 3 12 17 5 0 1989-03-12T17:05:00Z 1989.1937309741247 260-81 1634.67 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115457 C4 1990-09-12T15:32:00 ...
+SGI 1989 3 29 15 15 0 1989-03-29T15:15:00Z 1989.2400970319634 262-81 1675.1 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115459 C4 1990-09-12T15:46:00 C..
+SGI 1989 3 29 15 15 0 1989-03-29T15:15:00Z 1989.2400970319634 262-81 1677.71 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115459 C4 1990-09-12T16:00:00 C..
+SGI 1989 4 9 12 34 56 1989-04-09T12:34:56Z 1989.2699294774227 264-81 1656.74 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115461 C4 1990-09-13T09:42:00 C..
+SGI 1989 4 9 12 34 56 1989-04-09T12:34:56Z 1989.2699294774227 264-81 1652.7 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115461 C4 1990-09-13T09:56:00 C..
+SGI 1989 4 24 19 37 0 1989-04-24T19:37:00Z 1989.3118283866058 268-81 1680.4 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115463 C4 1990-09-12T10:43:00 C..
+SGI 1989 4 24 19 37 0 1989-04-24T19:37:00Z 1989.3118283866058 268-81 1681.11 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115463 C4 1990-09-12T10:57:00 C..
+SGI 1989 5 25 12 58 0 1989-05-25T12:58:00Z 1989.396000761035 270-81 1664.76 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115467 C4 1990-09-13T12:58:00 C..
+SGI 1989 5 25 12 58 0 1989-05-25T12:58:00Z 1989.396000761035 270-81 1664.21 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115467 C4 1990-09-13T13:12:00 C..
+SGI 1989 6 3 16 42 0 1989-06-03T16:42:00Z 1989.421084474886 271-81 1670.84 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115468 C4 1990-09-13T10:56:00 C..
+SGI 1989 6 3 16 42 0 1989-06-03T16:42:00Z 1989.421084474886 271-81 1664.03 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115468 C4 1990-09-13T11:11:00 C..
+SGI 1989 6 3 16 42 0 1989-06-03T16:42:00Z 1989.421084474886 272-81 1676.91 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115469 C4 1990-09-12T10:00:00 C..
+SGI 1989 6 17 18 55 0 1989-06-17T18:55:00Z 1989.4596936834093 293-81 1676.35 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115470 C4 1990-09-13T11:32:00 C..
+SGI 1989 6 17 18 55 0 1989-06-17T18:55:00Z 1989.4596936834093 293-81 1674.88 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115470 C4 1990-09-13T11:47:00 C..
+SGI 1989 7 3 15 41 0 1989-07-03T15:41:00Z 1989.5031601978692 296-81 1720.92 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115472 C4 1990-09-12T10:14:00 C..
+SGI 1989 7 3 15 41 0 1989-07-03T15:41:00Z 1989.5031601978692 296-81 1711.77 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115472 C4 1990-09-12T10:29:00 C..
+SGI 1989 7 15 15 36 0 1989-07-15T15:36:00Z 1989.5360273972603 282-81 1663.98 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115474 C4 1990-09-13T14:25:00 ...
+SGI 1989 7 15 15 36 0 1989-07-15T15:36:00Z 1989.5360273972603 282-81 1665.31 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115474 C4 1990-09-13T14:39:00 ...
+SGI 1989 8 3 18 53 0 1989-08-03T18:53:00Z 1989.588457001522 283-81 1744.07 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115475 C4 1990-09-13T14:56:00 C..
+SGI 1989 8 3 18 53 0 1989-08-03T18:53:00Z 1989.588457001522 283-81 1745.16 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115475 C4 1990-09-13T15:10:00 C..
+SGI 1989 8 3 18 53 0 1989-08-03T18:53:00Z 1989.588457001522 284-81 1689.33 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115476 C4 1990-09-13T14:11:00 C..
+SGI 1989 8 13 19 33 0 1989-08-13T19:33:00Z 1989.615930365297 286-81 1711.88 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115478 C4 1990-09-13T13:56:00 C..
+SGI 1989 8 28 13 34 0 1989-08-28T13:34:00Z 1989.6563432267885 288-81 1681.69 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115480 C4 1990-09-13T13:26:00 C..
+SGI 1989 8 28 13 34 0 1989-08-28T13:34:00Z 1989.6563432267885 288-81 1676.94 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115480 C4 1990-09-13T13:41:00 C..
+SGI 1989 9 9 15 43 0 1989-09-09T15:43:00Z 1989.689465372907 290-81 1672.75 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115482 C4 1990-09-13T12:01:00 ...
+SGI 1989 9 9 15 43 0 1989-09-09T15:43:00Z 1989.689465372907 290-81 1667.63 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115482 C4 1990-09-13T12:15:00 ...
+SGI 1989 9 24 17 49 0 1989-09-24T17:49:00Z 1989.7308009893454 292-81 1692.25 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115484 C4 1990-09-13T12:29:00 C..
+SGI 1989 9 24 17 49 0 1989-09-24T17:49:00Z 1989.7308009893454 292-81 1694.48 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115484 C4 1990-09-13T12:44:00 C..
+SGI 1989 10 8 12 21 0 1989-10-08T12:21:00Z 1989.768533105023 274-81 1668.21 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115486 C4 1990-09-12T12:54:00 C..
+SGI 1989 10 8 12 21 0 1989-10-08T12:21:00Z 1989.768533105023 274-81 1668.99 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115486 C4 1990-09-12T13:08:00 C..
+SGI 1989 10 21 18 5 0 1989-10-21T18:05:00Z 1989.8048040334857 276-81 1698.83 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115488 C4 1990-09-12T12:25:00 C..
+SGI 1989 10 21 18 5 0 1989-10-21T18:05:00Z 1989.8048040334857 276-81 1697.26 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115488 C4 1990-09-12T12:39:00 C..
+SGI 1989 11 6 9 59 0 1989-11-06T09:59:00Z 1989.8477149923897 278-81 1677.53 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115490 C4 1990-09-12T11:56:00 C..
+SGI 1989 11 6 9 59 0 1989-11-06T09:59:00Z 1989.8477149923897 278-81 1681.37 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115490 C4 1990-09-12T12:11:00 C..
+SGI 1989 11 20 19 1 0 1989-11-20T19:01:00Z 1989.8871023592085 280-81 1703.92 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115492 C4 1990-09-12T11:27:00 C..
+SGI 1989 11 20 19 1 0 1989-11-20T19:01:00Z 1989.8871023592085 280-81 1704.83 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115492 C4 1990-09-12T11:41:00 C..
+SGI 1989 12 3 15 57 0 1989-12-03T15:57:00Z 1989.9223687214612 251-81 1681.27 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115493 C4 1990-09-13T10:40:00 C..
+SGI 1989 12 22 23 32 0 1989-12-22T23:32:00Z 1989.9752891933028 249-81 1669.69 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115495 C4 1990-09-13T10:11:00 C..
+SGI 1989 12 22 23 32 0 1989-12-22T23:32:00Z 1989.9752891933028 249-81 1670.36 4.59 -54.0 -38.0 30.0 30.0 0.0 P 115495 C4 1990-09-13T10:26:00 C..
+SGI 1989 12 29 18 50 0 1989-12-29T18:50:00Z 1989.9939307458144 927-81 1686.1 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115497 C7 1991-08-09T15:12:00 C..
+SGI 1989 12 29 18 50 0 1989-12-29T18:50:00Z 1989.9939307458144 927-81 1685.72 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115497 C7 1991-08-09T15:29:00 C..
+SGI 1990 1 13 22 16 0 1990-01-13T22:16:00Z 1990.0354185692543 434-81 1657.83 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115500 C7 1991-08-09T13:57:00 ...
+SGI 1990 1 27 16 19 0 1990-01-27T16:19:00Z 1990.0730955098934 94-81 1653.18 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115502 C7 1991-08-09T12:48:00 C..
+SGI 1990 1 27 16 19 0 1990-01-27T16:19:00Z 1990.0730955098934 94-81 1654.68 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115502 C7 1991-08-09T13:05:00 C..
+SGI 1990 2 25 17 18 0 1990-02-25T17:18:00Z 1990.1526598173516 412-81 1647.4 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115506 C7 1991-08-09T12:15:00 ...
+SGI 1990 2 25 17 18 0 1990-02-25T17:18:00Z 1990.1526598173516 412-81 1648.88 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115506 C7 1991-08-09T12:32:00 ...
+SGI 1990 3 10 17 24 0 1990-03-10T17:24:00Z 1990.188287671233 166-81 1644.93 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115508 C7 1991-08-09T13:21:00 ...
+SGI 1990 3 10 17 24 0 1990-03-10T17:24:00Z 1990.188287671233 166-81 1646.78 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115508 C7 1991-08-09T13:38:00 ...
+SGI 1990 3 24 17 25 0 1990-03-24T17:25:00Z 1990.226645738204 192-81 1657.55 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115510 C7 1991-08-12T09:35:00 C..
+SGI 1990 3 24 17 25 0 1990-03-24T17:25:00Z 1990.226645738204 192-81 1654.45 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115510 C7 1991-08-12T09:51:00 C..
+SGI 1990 3 24 17 25 0 1990-03-24T17:25:00Z 1990.226645738204 192-81 1655.76 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115510 C7 1991-08-12T10:09:00 C..
+SGI 1990 4 9 16 19 0 1990-04-09T16:19:00Z 1990.270355783866 20-81 1664.15 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115512 C7 1991-08-12T14:45:00 C..
+SGI 1990 4 9 16 19 0 1990-04-09T16:19:00Z 1990.270355783866 20-81 1664.88 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115512 C7 1991-08-12T15:03:00 C..
+SGI 1990 5 2 17 36 0 1990-05-02T17:36:00Z 1990.3335159817352 104-81 1654.42 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115514 C7 1991-08-12T14:11:00 ...
+SGI 1990 5 2 17 36 0 1990-05-02T17:36:00Z 1990.3335159817352 104-81 1653.46 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115514 C7 1991-08-12T14:28:00 ...
+SGI 1990 5 9 17 33 0 1990-05-09T17:33:00Z 1990.3526883561644 921-81 1655.34 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115515 C7 1991-08-12T08:43:00 ...
+SGI 1990 5 9 17 33 0 1990-05-09T17:33:00Z 1990.3526883561644 921-81 1652.37 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115515 C7 1991-08-12T08:59:00 ...
+SGI 1990 5 9 17 33 0 1990-05-09T17:33:00Z 1990.3526883561644 921-81 1656.58 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115515 C7 1991-08-12T09:18:00 ...
+SGI 1990 5 24 18 13 0 1990-05-24T18:13:00Z 1990.393860350076 1056-81 1666.64 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115518 C7 1991-08-12T13:38:00 C..
+SGI 1990 5 24 18 13 0 1990-05-24T18:13:00Z 1990.393860350076 1056-81 1666.64 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115518 C7 1991-08-12T13:55:00 C..
+SGI 1990 6 2 15 1 0 1990-06-02T15:01:00Z 1990.418152587519 596-81 1685.55 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115520 C7 1991-08-08T11:56:00 C..
+SGI 1990 6 2 15 1 0 1990-06-02T15:01:00Z 1990.418152587519 596-81 1687.52 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115520 C7 1991-08-08T12:12:00 C..
+SGI 1990 6 18 14 28 0 1990-06-18T14:28:00Z 1990.4619254185693 687-81 1664.7 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115521 C7 1991-08-09T09:49:00 ...
+SGI 1990 6 18 14 28 0 1990-06-18T14:28:00Z 1990.4619254185693 687-81 1664.89 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115521 C7 1991-08-09T10:06:00 ...
+SGI 1990 6 18 14 28 0 1990-06-18T14:28:00Z 1990.4619254185693 688-81 1664.43 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115522 C7 1991-08-08T11:39:00 ...
+SGI 1990 6 30 17 27 0 1990-06-30T17:27:00Z 1990.4951426940638 420-81 1675.3 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115524 C7 1991-08-08T12:29:00 C..
+SGI 1990 6 30 17 27 0 1990-06-30T17:27:00Z 1990.4951426940638 420-81 1675.78 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115524 C7 1991-08-08T12:45:00 C..
+SGI 1990 7 20 13 45 0 1990-07-20T13:45:00Z 1990.5495148401826 976-81 1675.46 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115526 C7 1991-08-08T11:03:00 ...
+SGI 1990 7 20 13 45 0 1990-07-20T13:45:00Z 1990.5495148401826 976-81 1674.47 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115526 C7 1991-08-08T11:21:00 ...
+SGI 1990 7 31 19 1 0 1990-07-31T19:01:00Z 1990.5802530441401 1083-81 1688.92 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115527 C7 1991-08-09T09:16:00 C..
+SGI 1990 7 31 19 1 0 1990-07-31T19:01:00Z 1990.5802530441401 1083-81 1692.94 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115527 C7 1991-08-09T09:33:00 C..
+SGI 1990 11 9 12 30 0 1990-11-09T12:30:00Z 1990.8562214611873 1053-81 1680.81 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115529 C7 1991-08-08T10:27:00 C..
+SGI 1990 11 9 12 30 0 1990-11-09T12:30:00Z 1990.8562214611873 1053-81 1679.72 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115529 C7 1991-08-08T10:44:00 C..
+SGI 1990 11 20 12 45 0 1990-11-20T12:45:00Z 1990.8863869863014 1017-81 1681.34 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115531 C7 1991-08-09T08:43:00 C..
+SGI 1990 11 20 12 45 0 1990-11-20T12:45:00Z 1990.8863869863014 1017-81 1682.83 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115531 C7 1991-08-09T09:00:00 C..
+SGI 1990 11 20 12 45 0 1990-11-20T12:45:00Z 1990.8863869863014 1018-81 1678.15 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115532 C7 1991-08-08T14:08:00 C..
+SGI 1990 12 7 11 45 0 1990-12-07T11:45:00Z 1990.932848173516 1090-81 1670.4 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115534 C7 1991-08-08T14:25:00 ...
+SGI 1990 12 7 11 45 0 1990-12-07T11:45:00Z 1990.932848173516 1090-81 1673.66 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115534 C7 1991-08-08T14:42:00 ...
+SGI 1990 12 15 16 9 0 1990-12-15T16:09:00Z 1990.9552682648402 784-81 1671.41 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115536 C7 1991-08-08T14:58:00 ...
+SGI 1990 12 15 16 9 0 1990-12-15T16:09:00Z 1990.9552682648402 784-81 1670.32 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115536 C7 1991-08-08T15:16:00 ...
+SGI 1990 12 29 17 50 0 1990-12-29T17:50:00Z 1990.9938165905633 80-81 1668.66 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115538 C7 1991-08-09T10:25:00 ...
+SGI 1990 12 29 17 50 0 1990-12-29T17:50:00Z 1990.9938165905633 80-81 1667.92 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115538 C7 1991-08-09T10:41:00 ...
+SGI 1991 1 15 18 34 0 1991-01-15T18:34:00Z 1991.0404756468797 608-81 1676.93 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115540 C7 1991-08-09T11:41:00 C..
+SGI 1991 1 15 18 34 0 1991-01-15T18:34:00Z 1991.0404756468797 608-81 1675.55 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115540 C7 1991-08-09T11:59:00 C..
+SGI 1991 2 11 13 55 0 1991-02-11T13:55:00Z 1991.1139174277016 1095-81 1655.66 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115543 C7 1991-08-09T11:08:00 ...
+SGI 1991 2 11 13 55 0 1991-02-11T13:55:00Z 1991.1139174277016 1095-81 1656.39 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115543 C7 1991-08-09T11:24:00 ...
+SGI 1991 2 25 14 57 0 1991-02-25T14:57:00Z 1991.1523915525115 645-81 1711.06 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115545 C7 1992-07-22T16:25:00 C..
+SGI 1991 3 13 13 0 0 1991-03-13T13:00:00Z 1991.1960045662101 535-81 1680.64 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115547 C7 1992-07-22T15:50:00 C..
+SGI 1991 3 13 13 0 0 1991-03-13T13:00:00Z 1991.1960045662101 536-81 1657.5 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115548 C7 1992-07-22T16:08:00 C..
+SGI 1991 3 26 12 30 0 1991-03-26T12:30:00Z 1991.2315639269407 1133-81 1651.7 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115549 C7 1992-07-22T17:02:00 ...
+SGI 1991 4 8 18 22 0 1991-04-08T18:22:00Z 1991.2678500761035 841-81 1702.8 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115551 C7 1992-07-22T17:22:00 C..
+SGI 1991 4 8 18 22 0 1991-04-08T18:22:00Z 1991.2678500761035 842-81 1706.15 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115552 C7 1992-07-22T17:40:00 C..
+SGI 1991 4 24 15 3 0 1991-04-24T15:03:00Z 1991.3113070776255 41-81 1677.22 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115553 C7 1992-07-22T17:57:00 C..
+SGI 1991 4 24 15 3 0 1991-04-24T15:03:00Z 1991.3113070776255 42-81 1668.31 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115554 C7 1992-07-22T18:15:00 C..
+SGI 1991 5 9 15 27 0 1991-05-09T15:27:00Z 1991.352448630137 753-81 1664.12 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115555 C7 1992-07-23T08:42:00 ...
+SGI 1991 5 9 15 27 0 1991-05-09T15:27:00Z 1991.352448630137 754-81 1664.13 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115556 C7 1992-07-23T09:00:00 ...
+SGI 1991 5 24 17 23 0 1991-05-24T17:23:00Z 1991.3937652207 476-81 1697.55 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115558 C7 1992-07-23T09:51:00 C..
+SGI 1991 6 10 12 58 0 1991-06-10T12:58:00Z 1991.4398363774733 299-81 1667.94 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115559 C7 1992-07-23T09:16:00 ...
+SGI 1991 6 10 12 58 0 1991-06-10T12:58:00Z 1991.4398363774733 300-81 1670.88 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115560 C7 1992-07-23T09:33:00 ...
+SGI 1991 6 24 18 2 0 1991-06-24T18:02:00Z 1991.4787709284626 585-81 1678.2 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115561 C7 1992-07-21T19:08:00 C..
+SGI 1991 6 24 18 2 0 1991-06-24T18:02:00Z 1991.4787709284626 586-81 1676.9 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115562 C7 1992-07-21T19:24:00 C..
+SGI 1991 7 7 16 5 0 1991-07-07T16:05:00Z 1991.5141647640792 1031-81 1690.59 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115563 C7 1992-07-21T19:41:00 C..
+SGI 1991 7 7 16 5 0 1991-07-07T16:05:00Z 1991.5141647640792 1032-81 1684.66 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115564 C7 1992-07-21T19:57:00 C..
+SGI 1991 7 24 16 58 0 1991-07-24T16:58:00Z 1991.5608409436834 1077-81 1719.35 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115565 C7 1992-07-22T14:16:00 C..
+SGI 1991 7 24 16 58 0 1991-07-24T16:58:00Z 1991.5608409436834 1078-81 1704.63 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115566 C7 1992-07-22T14:33:00 C..
+SGI 1991 8 20 17 9 0 1991-08-20T17:09:00Z 1991.6348344748858 881-81 1686.9 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115567 C7 1992-07-22T15:17:00 C..
+SGI 1991 8 20 17 9 0 1991-08-20T17:09:00Z 1991.6348344748858 882-81 1692.49 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115568 C7 1992-07-22T15:34:00 C..
+SGI 1991 9 11 14 15 0 1991-09-11T14:15:00Z 1991.6947773972602 1251-81 1692.89 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115569 C7 1992-07-22T13:43:00 ...
+SGI 1991 9 11 14 15 0 1991-09-11T14:15:00Z 1991.6947773972602 1252-81 1687.34 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115570 C7 1992-07-22T13:59:00 ...
+SGI 1991 11 6 11 5 0 1991-11-06T11:05:00Z 1991.8478405631658 982-81 1701.64 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115574 C7 1992-07-22T14:53:00 C..
+SGI 1991 12 7 13 36 0 1991-12-07T13:36:00Z 1991.9330593607306 695-81 1724.67 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115575 C7 1993-07-22T12:50:00 C..
+SGI 1991 12 7 13 36 0 1991-12-07T13:36:00Z 1991.9330593607306 696-81 1721.65 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115576 C7 1993-07-22T13:06:00 C..
+SGI 1991 12 31 13 0 0 1991-12-31T13:00:00Z 1991.9987442922375 919-81 1683.92 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115577 C7 1993-07-22T08:34:00 ...
+SGI 1991 12 31 13 0 0 1991-12-31T13:00:00Z 1991.9987442922375 920-81 1684.27 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115578 C7 1993-07-22T08:51:00 ...
+SGI 1992 1 27 13 10 0 1992-01-27T13:10:00Z 1992.0725371888282 745-81 1688.51 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115579 C7 1993-07-22T09:08:00 C..
+SGI 1992 2 13 14 20 0 1992-02-13T14:20:00Z 1992.1191180935034 749-81 1703.12 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115581 C7 1993-07-21T16:30:00 C..
+SGI 1992 2 23 14 40 0 1992-02-23T14:40:00Z 1992.1464784456589 493-81 1674.9 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115583 C7 1993-07-21T15:54:00 ...
+SGI 1992 2 23 14 40 0 1992-02-23T14:40:00Z 1992.1464784456589 494-81 1674.94 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115584 C7 1993-07-21T16:12:00 ...
+SGI 1992 3 22 16 55 0 1992-03-22T16:55:00Z 1992.22323732544 647-81 1686.16 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115585 C7 1993-07-22T09:27:00 C..
+SGI 1992 3 22 16 55 0 1992-03-22T16:55:00Z 1992.22323732544 648-81 1677.17 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115586 C7 1993-07-22T09:45:00 ...
+SGI 1992 4 12 18 40 0 1992-04-12T18:40:00Z 1992.2808136004858 201-81 1680.21 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115587 C7 1993-07-21T14:47:00 C..
+SGI 1992 4 12 18 40 0 1992-04-12T18:40:00Z 1992.2808136004858 202-81 1681.38 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115588 C7 1993-07-21T15:04:00 C..
+SGI 1992 4 28 13 5 0 1992-04-28T13:05:00Z 1992.323893822101 1275-81 1683.92 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115589 C7 1993-07-22T10:02:00 C..
+SGI 1992 4 28 13 5 0 1992-04-28T13:05:00Z 1992.323893822101 1276-81 1706.08 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115590 C7 1993-07-22T10:19:00 C..
+SGI 1992 5 20 15 45 0 1992-05-20T15:45:00Z 1992.3843066939892 848-81 1693.09 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115592 C7 1993-07-22T13:25:00 C..
+SGI 1992 6 1 17 35 0 1992-06-01T17:35:00Z 1992.417302292046 837-81 1690.85 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115593 C7 1993-07-22T10:44:00 ...
+SGI 1992 6 1 17 35 0 1992-06-01T17:35:00Z 1992.417302292046 838-81 1696.88 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115594 C7 1993-07-22T11:01:00 C..
+SGI 1992 6 16 18 5 0 1992-06-16T18:05:00Z 1992.4583428202793 1273-81 1708.67 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115595 C7 1993-07-22T11:17:00 C..
+SGI 1992 6 16 18 5 0 1992-06-16T18:05:00Z 1992.4583428202793 1274-81 1696.19 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115596 C7 1993-07-22T11:35:00 ...
+SGI 1992 7 3 14 40 0 1992-07-03T14:40:00Z 1992.5044019429265 1343-81 1693.52 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115597 C7 1993-07-22T12:16:00 ...
+SGI 1992 7 3 14 40 0 1992-07-03T14:40:00Z 1992.5044019429265 1344-81 1697.32 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115598 C7 1993-07-22T12:33:00 ...
+SGI 1992 7 15 16 35 0 1992-07-15T16:35:00Z 1992.5374070279295 1334-81 1694.4 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115600 C7 1993-07-22T11:58:00 ...
+SGI 1992 7 28 16 40 0 1992-07-28T16:40:00Z 1992.5729356405586 395-81 1710.86 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115601 C7 1993-07-22T14:59:00 C..
+SGI 1992 7 28 16 40 0 1992-07-28T16:40:00Z 1992.5729356405586 396-81 1716.58 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115602 C7 1993-07-22T15:16:00 C..
+SGI 1992 8 13 16 20 0 1992-08-13T16:20:00Z 1992.6166135397693 1163-81 1701.59 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115603 C7 1993-07-22T15:33:00 ...
+SGI 1992 8 13 16 20 0 1992-08-13T16:20:00Z 1992.6166135397693 1164-81 1702.94 2.71 -54.0 -38.0 30.0 30.0 0.0 P 115604 C7 1993-07-22T15:50:00 ...

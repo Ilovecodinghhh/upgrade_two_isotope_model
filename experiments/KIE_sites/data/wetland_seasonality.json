@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "source": "Li et al. (2026) ESSD, doi:10.5281/zenodo.18870108",
+    "variable": "wetch4 (kg CH4 / cell / month)",
+    "period": "2005-2010 monthly climatology",
+    "harmonic": "Q(m) = Q_mean + B_Q*sin(2*pi*m/12) + C_Q*cos(2*pi*m/12), m=0..11 (Jan..Dec)",
+    "date_built": "2026-05-20"
+  },
+  "bands": {
+    "NH_high": {
+      "Q_mean_Tg_month": 0.9089,
+      "B_Q_Tg_month": -0.1985,
+      "C_Q_Tg_month": -1.2436,
+      "amplitude_Tg_month": 1.2594,
+      "phase_rad": -1.729,
+      "peak_month_index": 6.3,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 1.3857,
+      "R2": 0.8461,
+      "annual_Tg_yr": 10.9,
+      "monthly_clim_Tg": [
+        0.0832,
+        0.0654,
+        0.0857,
+        0.1891,
+        0.9294,
+        1.9769,
+        2.813,
+        2.4228,
+        1.4714,
+        0.5845,
+        0.1846,
+        0.1002
+      ],
+      "label": "NH high (60\u201390\u00b0N)"
+    },
+    "NH_mid": {
+      "Q_mean_Tg_month": 2.4751,
+      "B_Q_Tg_month": -0.2499,
+      "C_Q_Tg_month": -2.4052,
+      "amplitude_Tg_month": 2.4182,
+      "phase_rad": -1.6743,
+      "peak_month_index": 6.2,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 0.977,
+      "R2": 0.9366,
+      "annual_Tg_yr": 29.7,
+      "monthly_clim_Tg": [
+        0.6441,
+        0.6227,
+        0.9378,
+        1.6397,
+        3.1099,
+        4.404,
+        5.5839,
+        5.2281,
+        3.5712,
+        2.1205,
+        1.1218,
+        0.7175
+      ],
+      "label": "NH mid (30\u201360\u00b0N)"
+    },
+    "Tropics": {
+      "Q_mean_Tg_month": 9.498,
+      "B_Q_Tg_month": 0.2729,
+      "C_Q_Tg_month": -0.5848,
+      "amplitude_Tg_month": 0.6454,
+      "phase_rad": -1.1342,
+      "peak_month_index": 5.17,
+      "peak_month_name": "Jun",
+      "frac_amplitude": 0.0679,
+      "R2": 0.5357,
+      "annual_Tg_yr": 114.0,
+      "monthly_clim_Tg": [
+        9.3453,
+        8.8583,
+        10.1687,
+        9.782,
+        9.8059,
+        9.4439,
+        10.1998,
+        10.3255,
+        9.7115,
+        9.5199,
+        8.4516,
+        8.3639
+      ],
+      "label": "Tropics (30\u00b0S\u201330\u00b0N)"
+    },
+    "SH_extra": {
+      "Q_mean_Tg_month": 0.2446,
+      "B_Q_Tg_month": 0.0044,
+      "C_Q_Tg_month": 0.0776,
+      "amplitude_Tg_month": 0.0778,
+      "phase_rad": 1.5138,
+      "peak_month_index": 0.11,
+      "peak_month_name": "Jan",
+      "frac_amplitude": 0.3179,
+      "R2": 0.9662,
+      "annual_Tg_yr": 2.9,
+      "monthly_clim_Tg": [
+        0.3256,
+        0.3078,
+        0.3132,
+        0.2422,
+        0.1985,
+        0.171,
+        0.1749,
+        0.1807,
+        0.2011,
+        0.248,
+        0.2718,
+        0.3006
+      ],
+      "label": "SH extra (90\u201330\u00b0S)"
+    },
+    "Global": {
+      "Q_mean_Tg_month": 13.1266,
+      "B_Q_Tg_month": -0.171,
+      "C_Q_Tg_month": -4.1561,
+      "amplitude_Tg_month": 4.1596,
+      "phase_rad": -1.6119,
+      "peak_month_index": 6.08,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 0.3169,
+      "R2": 0.9005,
+      "annual_Tg_yr": 157.5,
+      "monthly_clim_Tg": [
+        10.3982,
+        9.8541,
+        11.5055,
+        11.853,
+        14.0437,
+        15.9957,
+        18.7715,
+        18.157,
+        14.9552,
+        12.473,
+        10.0299,
+        9.4822
+      ],
+      "label": "Global (all latitudes)"
+    }
+  },
+  "site_assignment": {
+    "ALT": {
+      "source_band": "NH_high",
+      "label": "NH high (60\u201390\u00b0N)",
+      "B_Q_Tg_month": -0.1985,
+      "C_Q_Tg_month": -1.2436,
+      "Q_mean_Tg_month": 0.9089,
+      "amplitude_Tg_month": 1.2594,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 1.3857
+    },
+    "ZEP": {
+      "source_band": "NH_high",
+      "label": "NH high (60\u201390\u00b0N)",
+      "B_Q_Tg_month": -0.1985,
+      "C_Q_Tg_month": -1.2436,
+      "Q_mean_Tg_month": 0.9089,
+      "amplitude_Tg_month": 1.2594,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 1.3857
+    },
+    "BRW": {
+      "source_band": "NH_high",
+      "label": "NH high (60\u201390\u00b0N)",
+      "B_Q_Tg_month": -0.1985,
+      "C_Q_Tg_month": -1.2436,
+      "Q_mean_Tg_month": 0.9089,
+      "amplitude_Tg_month": 1.2594,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 1.3857
+    },
+    "CBA": {
+      "source_band": "NH_mid",
+      "label": "NH mid (30\u201360\u00b0N)",
+      "B_Q_Tg_month": -0.2499,
+      "C_Q_Tg_month": -2.4052,
+      "Q_mean_Tg_month": 2.4751,
+      "amplitude_Tg_month": 2.4182,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 0.977
+    },
+    "MHD": {
+      "source_band": "NH_mid",
+      "label": "NH mid (30\u201360\u00b0N)",
+      "B_Q_Tg_month": -0.2499,
+      "C_Q_Tg_month": -2.4052,
+      "Q_mean_Tg_month": 2.4751,
+      "amplitude_Tg_month": 2.4182,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 0.977
+    },
+    "AZR": {
+      "source_band": "NH_mid",
+      "label": "NH mid (30\u201360\u00b0N)",
+      "B_Q_Tg_month": -0.2499,
+      "C_Q_Tg_month": -2.4052,
+      "Q_mean_Tg_month": 2.4751,
+      "amplitude_Tg_month": 2.4182,
+      "peak_month_name": "Jul",
+      "frac_amplitude": 0.977
+    },
+    "MLO": {
+      "source_band": "Tropics",
+      "label": "Tropics (30\u00b0S\u201330\u00b0N)",
+      "B_Q_Tg_month": 0.2729,
+      "C_Q_Tg_month": -0.5848,
+      "Q_mean_Tg_month": 9.498,
+      "amplitude_Tg_month": 0.6454,
+      "peak_month_name": "Jun",
+      "frac_amplitude": 0.0679
+    },
+    "KUM": {
+      "source_band": "Tropics",
+      "label": "Tropics (30\u00b0S\u201330\u00b0N)",
+      "B_Q_Tg_month": 0.2729,
+      "C_Q_Tg_month": -0.5848,
+      "Q_mean_Tg_month": 9.498,
+      "amplitude_Tg_month": 0.6454,
+      "peak_month_name": "Jun",
+      "frac_amplitude": 0.0679
+    },
+    "ASC": {
+      "source_band": "Tropics",
+      "label": "Tropics (30\u00b0S\u201330\u00b0N)",
+      "B_Q_Tg_month": 0.2729,
+      "C_Q_Tg_month": -0.5848,
+      "Q_mean_Tg_month": 9.498,
+      "amplitude_Tg_month": 0.6454,
+      "peak_month_name": "Jun",
+      "frac_amplitude": 0.0679
+    },
+    "SMO": {
+      "source_band": "Tropics",
+      "label": "Tropics (30\u00b0S\u201330\u00b0N)",
+      "B_Q_Tg_month": 0.2729,
+      "C_Q_Tg_month": -0.5848,
+      "Q_mean_Tg_month": 9.498,
+      "amplitude_Tg_month": 0.6454,
+      "peak_month_name": "Jun",
+      "frac_amplitude": 0.0679
+    },
+    "CGO": {
+      "source_band": "SH_extra",
+      "label": "SH extra (90\u201330\u00b0S)",
+      "B_Q_Tg_month": 0.0044,
+      "C_Q_Tg_month": 0.0776,
+      "Q_mean_Tg_month": 0.2446,
+      "amplitude_Tg_month": 0.0778,
+      "peak_month_name": "Jan",
+      "frac_amplitude": 0.3179
+    },
+    "SPO": {
+      "source_band": "SH_extra",
+      "label": "SH extra (90\u201330\u00b0S)",
+      "B_Q_Tg_month": 0.0044,
+      "C_Q_Tg_month": 0.0776,
+      "Q_mean_Tg_month": 0.2446,
+      "amplitude_Tg_month": 0.0778,
+      "peak_month_name": "Jan",
+      "frac_amplitude": 0.3179
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "method": "Synthetic monthly OSSE for scalar amplitude-ratio alpha recovery",
+    "alpha_d_oh": 1.294
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "pure_oh_saueressig",
+        "alpha_13c_oh": 1.0039,
+        "sink_dD_amplitude": 5.0,
+        "source_fraction_amplitude": 0.0,
+        "noise_13c": 0.0,
+        "noise_dD": 0.0,
+        "n_years": 6,
+        "source_phase_month": 7.0,
+        "sink_phase_month": 7.0,
+        "seed": 123
+      },
+      "R_true": 0.013265306122449028,
+      "R_observed": 0.013265306122449026,
+      "alpha_true": 1.0039,
+      "alpha_retrieved": 1.0039,
+      "bias": 0.0,
+      "A_obs_13c": 0.06632653061224514,
+      "A_obs_dD": 5.000000000000001,
+      "A_source_13c": 0.0,
+      "A_source_dD": 0.0,
+      "A_sink_13c": 0.06632653061224514,
+      "A_sink_dD": 5.000000000000001
+    },
+    {
+      "scenario": {
+        "name": "pure_oh_cantrell",
+        "alpha_13c_oh": 1.0054,
+        "sink_dD_amplitude": 5.0,
+        "source_fraction_amplitude": 0.0,
+        "noise_13c": 0.0,
+        "noise_dD": 0.0,
+        "n_years": 6,
+        "source_phase_month": 7.0,
+        "sink_phase_month": 7.0,
+        "seed": 123
+      },
+      "R_true": 0.01836734693877575,
+      "R_observed": 0.01836734693877576,
+      "alpha_true": 1.0054,
+      "alpha_retrieved": 1.0054,
+      "bias": 0.0,
+      "A_obs_13c": 0.09183673469387882,
+      "A_obs_dD": 5.000000000000001,
+      "A_source_13c": 0.0,
+      "A_source_dD": 0.0,
+      "A_sink_13c": 0.09183673469387882,
+      "A_sink_dD": 5.000000000000001
+    },
+    {
+      "scenario": {
+        "name": "wetland_contaminated",
+        "alpha_13c_oh": 1.0039,
+        "sink_dD_amplitude": 5.0,
+        "source_fraction_amplitude": 0.01,
+        "noise_13c": 0.0,
+        "noise_dD": 0.0,
+        "n_years": 6,
+        "source_phase_month": 7.0,
+        "sink_phase_month": 7.0,
+        "seed": 123
+      },
+      "R_true": 0.013265306122449028,
+      "R_observed": 0.029229517894114092,
+      "alpha_true": 1.0039,
+      "alpha_retrieved": 1.0085934782608696,
+      "bias": 0.004693478260869632,
+      "A_obs_13c": 0.08067346938775491,
+      "A_obs_dD": 2.7600000000000007,
+      "A_source_13c": 0.14700000000000005,
+      "A_source_dD": 2.2400000000000007,
+      "A_sink_13c": 0.06632653061224514,
+      "A_sink_dD": 5.000000000000001
+    },
+    {
+      "scenario": {
+        "name": "sparse_like_noise",
+        "alpha_13c_oh": 1.0039,
+        "sink_dD_amplitude": 5.0,
+        "source_fraction_amplitude": 0.006,
+        "noise_13c": 0.03,
+        "noise_dD": 0.8,
+        "n_years": 6,
+        "source_phase_month": 7.0,
+        "sink_phase_month": 7.0,
+        "seed": 456
+      },
+      "R_true": 0.013265306122449028,
+      "R_observed": 0.006476560264098526,
+      "alpha_true": 1.0039,
+      "alpha_retrieved": 1.001904108717645,
+      "bias": -0.001995891282355,
+      "A_obs_13c": 0.02312907168846362,
+      "A_obs_dD": 3.5711968614999,
+      "A_source_13c": 0.08820000000000004,
+      "A_source_dD": 1.3440000000000003,
+      "A_sink_13c": 0.06632653061224514,
+      "A_sink_dD": 5.000000000000001
+    }
+  ]
+}

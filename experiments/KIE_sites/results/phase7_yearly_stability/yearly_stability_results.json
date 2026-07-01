@@ -1,0 +1,800 @@
+{
+  "metadata": {
+    "method": "Individual-year annual harmonic fits",
+    "min_months_per_year": 8,
+    "min_usable_years_for_stability": 2,
+    "note": "Diagnostic only: many site-years have sparse monthly coverage."
+  },
+  "sites": {
+    "ALT": {
+      "latitude": 82.45,
+      "yearly_fits": [
+        {
+          "site": "ALT",
+          "year": 2006,
+          "n_months": 12,
+          "ratio": 0.11208339766214342,
+          "phase_diff_months": -0.35007476268184373,
+          "d13C": {
+            "amplitude": 0.2135181813774908,
+            "peak_month": 5.435233750684703,
+            "B": 0.15601233589094698,
+            "C": -0.1457743627274748
+          },
+          "dD": {
+            "amplitude": 1.9049938334409302,
+            "peak_month": 5.085158988002859,
+            "B": 1.6056763449705977,
+            "C": -1.0250877916792458
+          }
+        },
+        {
+          "site": "ALT",
+          "year": 2007,
+          "n_months": 12,
+          "ratio": 0.13396502437938285,
+          "phase_diff_months": 1.1298203923918324,
+          "d13C": {
+            "amplitude": 0.27760915980807904,
+            "peak_month": 5.049938363054894,
+            "B": 0.23670540073705587,
+            "C": -0.1450427484269977
+          },
+          "dD": {
+            "amplitude": 2.0722510304025517,
+            "peak_month": 6.179758755446725,
+            "B": 0.8628762928409699,
+            "C": -1.8840564843596013
+          }
+        },
+        {
+          "site": "ALT",
+          "year": 2008,
+          "n_months": 11,
+          "ratio": 0.08513207295115474,
+          "phase_diff_months": 1.1684874189434722,
+          "d13C": {
+            "amplitude": 0.2959606272156923,
+            "peak_month": 5.254045461869189,
+            "B": 0.23441919108046477,
+            "C": -0.18066636575490885
+          },
+          "dD": {
+            "amplitude": 3.476487966944047,
+            "peak_month": 6.422532880812661,
+            "B": 1.0352112163044778,
+            "C": -3.318780848737102
+          }
+        },
+        {
+          "site": "ALT",
+          "year": 2009,
+          "n_months": 12,
+          "ratio": 0.046545452095367486,
+          "phase_diff_months": 0.7869541853868531,
+          "d13C": {
+            "amplitude": 0.1953946123754762,
+            "peak_month": 5.163299381839931,
+            "B": 0.16025524521149348,
+            "C": -0.11179137233063514
+          },
+          "dD": {
+            "amplitude": 4.197931346227555,
+            "peak_month": 5.950253567226783,
+            "B": 2.192937865872107,
+            "C": -3.5796160553981453
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 4,
+        "full_period_ratio": 0.08590167945925846,
+        "full_period_ratio_ci95": [
+          0.05840523387427966,
+          0.14419316862042517
+        ],
+        "yearly_ratio_mean": 0.09443148677201212,
+        "yearly_ratio_sd": 0.037656526518391194,
+        "rms_difference_from_full_period": 0.03370857613227575,
+        "scatter_to_phase2_sigma": 1.7206800045821808,
+        "fraction_years_within_phase2_ci": 0.75,
+        "interpretation": "yearly_scatter_exceeds_phase2_uncertainty"
+      }
+    },
+    "ASC": {
+      "latitude": -7.97,
+      "yearly_fits": [
+        {
+          "site": "ASC",
+          "year": 2006,
+          "n_months": 11,
+          "ratio": 0.014364456668319871,
+          "phase_diff_months": -4.05676791096376,
+          "d13C": {
+            "amplitude": 0.0369379253762368,
+            "peak_month": 7.841383087341695,
+            "B": -0.015751603525648313,
+            "C": -0.03341103586348712
+          },
+          "dD": {
+            "amplitude": 2.5714808592587874,
+            "peak_month": 3.784615176377934,
+            "B": 2.5551458116299695,
+            "C": 0.28938502180336734
+          }
+        },
+        {
+          "site": "ASC",
+          "year": 2007,
+          "n_months": 9,
+          "ratio": 0.014739447511249344,
+          "phase_diff_months": -0.07246581833134,
+          "d13C": {
+            "amplitude": 0.03619177754093998,
+            "peak_month": 2.126453991137324,
+            "B": 0.020129978008921905,
+            "C": 0.030077046845280675
+          },
+          "dD": {
+            "amplitude": 2.4554365089544863,
+            "peak_month": 2.053988172805984,
+            "B": 1.287331119720195,
+            "C": 2.090920141398648
+          }
+        },
+        {
+          "site": "ASC",
+          "year": 2008,
+          "n_months": 11,
+          "ratio": 0.043214289350716174,
+          "phase_diff_months": -3.7438777726939874,
+          "d13C": {
+            "amplitude": 0.07008183771304713,
+            "peak_month": 5.015382428551965,
+            "B": 0.06040845898896738,
+            "C": -0.03552860903294866
+          },
+          "dD": {
+            "amplitude": 1.621728339537896,
+            "peak_month": 1.2715046558579781,
+            "B": 0.22976835944226992,
+            "C": 1.6053689009880407
+          }
+        },
+        {
+          "site": "ASC",
+          "year": 2009,
+          "n_months": 8,
+          "ratio": 0.05277071337456584,
+          "phase_diff_months": 4.693722120456449,
+          "d13C": {
+            "amplitude": 0.09999442212966328,
+            "peak_month": 2.3065958974990814,
+            "B": 0.06319653347612789,
+            "C": 0.0774924681091391
+          },
+          "dD": {
+            "amplitude": 1.8948847899762917,
+            "peak_month": 7.00031801795553,
+            "B": -0.0003155244884759907,
+            "C": -1.894884763706699
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 4,
+        "full_period_ratio": 0.007089998359450959,
+        "full_period_ratio_ci95": [
+          0.0025571734934552994,
+          0.05306543148839238
+        ],
+        "yearly_ratio_mean": 0.031272226726212805,
+        "yearly_ratio_sd": 0.019697743227742977,
+        "rms_difference_from_full_period": 0.02959359702675212,
+        "scatter_to_phase2_sigma": 1.5287629492288664,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "yearly_scatter_exceeds_phase2_uncertainty"
+      }
+    },
+    "AZR": {
+      "latitude": 38.77,
+      "yearly_fits": [
+        {
+          "site": "AZR",
+          "year": 2006,
+          "n_months": 8,
+          "ratio": 0.0955134747954102,
+          "phase_diff_months": 0.4789644638883056,
+          "d13C": {
+            "amplitude": 0.44869159009097936,
+            "peak_month": 6.030816429993291,
+            "B": 0.2180469791924179,
+            "C": -0.39214749506204005
+          },
+          "dD": {
+            "amplitude": 4.697678427594394,
+            "peak_month": 6.5097808938815955,
+            "B": 1.192594508734894,
+            "C": -4.5437760669756955
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 1,
+        "full_period_ratio": 0.1081600782515261,
+        "full_period_ratio_ci95": [
+          0.05890331674830146,
+          0.296873169580208
+        ],
+        "yearly_ratio_mean": 0.0955134747954102,
+        "yearly_ratio_sd": NaN,
+        "rms_difference_from_full_period": 0.012646603456115901,
+        "scatter_to_phase2_sigma": NaN,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "insufficient_years"
+      }
+    },
+    "BRW": {
+      "latitude": 71.32,
+      "yearly_fits": [
+        {
+          "site": "BRW",
+          "year": 2005,
+          "n_months": 8,
+          "ratio": 0.0832006596789024,
+          "phase_diff_months": 4.561943137888958,
+          "d13C": {
+            "amplitude": 0.5250110929442888,
+            "peak_month": 4.602359960336423,
+            "B": 0.4991143677179482,
+            "C": -0.16285421594809701
+          },
+          "dD": {
+            "amplitude": 6.310179450144654,
+            "peak_month": 9.164303098225382,
+            "B": -5.715660069148499,
+            "C": -2.6738725973705755
+          }
+        },
+        {
+          "site": "BRW",
+          "year": 2006,
+          "n_months": 11,
+          "ratio": 0.1030923951518124,
+          "phase_diff_months": 0.006352314489431559,
+          "d13C": {
+            "amplitude": 0.3415874594026828,
+            "peak_month": 5.182599554990777,
+            "B": 0.27816784236563374,
+            "C": -0.19825398834532287
+          },
+          "dD": {
+            "amplitude": 3.3134108379155025,
+            "peak_month": 5.188951869480208,
+            "B": 2.691827065023263,
+            "C": -1.9320347907903104
+          }
+        },
+        {
+          "site": "BRW",
+          "year": 2008,
+          "n_months": 12,
+          "ratio": 0.09878579576721959,
+          "phase_diff_months": 2.120647308429799,
+          "d13C": {
+            "amplitude": 0.2447606133687609,
+            "peak_month": 6.08469402121208,
+            "B": 0.11286316746656691,
+            "C": -0.21718578057982002
+          },
+          "dD": {
+            "amplitude": 2.477690354851407,
+            "peak_month": 8.205341329641879,
+            "B": -1.461950142170832,
+            "C": -2.0004127764864865
+          }
+        },
+        {
+          "site": "BRW",
+          "year": 2009,
+          "n_months": 8,
+          "ratio": 0.08735692670579669,
+          "phase_diff_months": 1.2166085041583883,
+          "d13C": {
+            "amplitude": 0.3374659958958623,
+            "peak_month": 6.416343846904093,
+            "B": 0.10153238182348634,
+            "C": -0.3218298833657868
+          },
+          "dD": {
+            "amplitude": 3.863070836184411,
+            "peak_month": 7.632952351062482,
+            "B": -1.256964189203491,
+            "C": -3.6528560486882773
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 4,
+        "full_period_ratio": 0.13926625628052103,
+        "full_period_ratio_ci95": [
+          0.08284937229895147,
+          0.2967374086093197
+        ],
+        "yearly_ratio_mean": 0.09310894432593277,
+        "yearly_ratio_sd": 0.009365819843596725,
+        "rms_difference_from_full_period": 0.046864553586695015,
+        "scatter_to_phase2_sigma": 0.17165061880143806,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "yearly_ratios_broadly_consistent"
+      }
+    },
+    "CBA": {
+      "latitude": 55.21,
+      "yearly_fits": [
+        {
+          "site": "CBA",
+          "year": 2009,
+          "n_months": 10,
+          "ratio": 0.02140565699540763,
+          "phase_diff_months": 2.446842464775928,
+          "d13C": {
+            "amplitude": 0.11685856822999297,
+            "peak_month": 5.3551376200697955,
+            "B": 0.08865547353267281,
+            "C": -0.07613233203745615
+          },
+          "dD": {
+            "amplitude": 5.459237633073529,
+            "peak_month": 7.801980084845724,
+            "B": -2.225641437679502,
+            "C": -4.984956943169137
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 1,
+        "full_period_ratio": 0.035524878952459565,
+        "full_period_ratio_ci95": [
+          0.019257895722510264,
+          0.08793056128641646
+        ],
+        "yearly_ratio_mean": 0.02140565699540763,
+        "yearly_ratio_sd": NaN,
+        "rms_difference_from_full_period": 0.014119221957051935,
+        "scatter_to_phase2_sigma": NaN,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "insufficient_years"
+      }
+    },
+    "CGO": {
+      "latitude": -40.68,
+      "yearly_fits": [
+        {
+          "site": "CGO",
+          "year": 2006,
+          "n_months": 10,
+          "ratio": 0.0074175994211395065,
+          "phase_diff_months": 4.300107151617864,
+          "d13C": {
+            "amplitude": 0.02120800113913374,
+            "peak_month": 11.593303219725094,
+            "B": -0.014246098743911667,
+            "C": 0.015710760099250973
+          },
+          "dD": {
+            "amplitude": 2.8591461920541033,
+            "peak_month": 3.8934103713429584,
+            "B": 2.8546945444408616,
+            "C": 0.15948669373042357
+          }
+        },
+        {
+          "site": "CGO",
+          "year": 2008,
+          "n_months": 8,
+          "ratio": 0.04276979139591489,
+          "phase_diff_months": -2.431169521289813,
+          "d13C": {
+            "amplitude": 0.17034670136281918,
+            "peak_month": 3.3897131956450024,
+            "B": 0.16172346423089182,
+            "C": 0.05351186580893023
+          },
+          "dD": {
+            "amplitude": 3.9828742624891467,
+            "peak_month": 0.9585436743551892,
+            "B": -0.0864473969294628,
+            "C": 3.98193599124378
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 2,
+        "full_period_ratio": 0.02821799793395803,
+        "full_period_ratio_ci95": [
+          0.010537190190783186,
+          0.0532979917298167
+        ],
+        "yearly_ratio_mean": 0.0250936954085272,
+        "yearly_ratio_sd": 0.02499777467517232,
+        "rms_difference_from_full_period": 0.017950087343123342,
+        "scatter_to_phase2_sigma": 2.2916145909291648,
+        "fraction_years_within_phase2_ci": 0.5,
+        "interpretation": "yearly_scatter_exceeds_phase2_uncertainty"
+      }
+    },
+    "KUM": {
+      "latitude": 19.56,
+      "yearly_fits": [
+        {
+          "site": "KUM",
+          "year": 2006,
+          "n_months": 11,
+          "ratio": 0.042534530696475406,
+          "phase_diff_months": 1.613167443869562,
+          "d13C": {
+            "amplitude": 0.0944091721151605,
+            "peak_month": 6.687505341555292,
+            "B": 0.015378566264636753,
+            "C": -0.09314822316670446
+          },
+          "dD": {
+            "amplitude": 2.219588897991148,
+            "peak_month": 8.300672785424855,
+            "B": -1.3974401121405096,
+            "C": -1.7244523794718947
+          }
+        },
+        {
+          "site": "KUM",
+          "year": 2008,
+          "n_months": 8,
+          "ratio": 0.03889245023731664,
+          "phase_diff_months": -1.3708008179149254,
+          "d13C": {
+            "amplitude": 0.20140531127732078,
+            "peak_month": 6.144283194202047,
+            "B": 0.08725097292690273,
+            "C": -0.18152511433414212
+          },
+          "dD": {
+            "amplitude": 5.178519482531235,
+            "peak_month": 4.773482376287122,
+            "B": 4.759601045160244,
+            "C": -2.0404072931317114
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 2,
+        "full_period_ratio": 0.060669463286962516,
+        "full_period_ratio_ci95": [
+          0.033224359127626904,
+          0.12604707598522408
+        ],
+        "yearly_ratio_mean": 0.04071349046689603,
+        "yearly_ratio_sd": 0.002575339790298178,
+        "rms_difference_from_full_period": 0.02003888816059861,
+        "scatter_to_phase2_sigma": 0.10875928134549742,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "yearly_ratios_broadly_consistent"
+      }
+    },
+    "MHD": {
+      "latitude": 53.33,
+      "yearly_fits": [
+        {
+          "site": "MHD",
+          "year": 2006,
+          "n_months": 11,
+          "ratio": 0.10435737036384389,
+          "phase_diff_months": 0.5887013574047945,
+          "d13C": {
+            "amplitude": 0.18603056410809363,
+            "peak_month": 5.2837386121918986,
+            "B": 0.1455644590179724,
+            "C": -0.11583764091684777
+          },
+          "dD": {
+            "amplitude": 1.7826298560369491,
+            "peak_month": 5.872439969596692,
+            "B": 0.9923619811523409,
+            "C": -1.4808736954911836
+          }
+        },
+        {
+          "site": "MHD",
+          "year": 2008,
+          "n_months": 9,
+          "ratio": 0.09006787375939075,
+          "phase_diff_months": -0.34474995986287416,
+          "d13C": {
+            "amplitude": 0.20968779886485814,
+            "peak_month": 6.436126761693623,
+            "B": 0.061013418081243866,
+            "C": -0.20061489427964352
+          },
+          "dD": {
+            "amplitude": 2.32810868195937,
+            "peak_month": 6.091376801830749,
+            "B": 1.0662943533928884,
+            "C": -2.0695667147828405
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 2,
+        "full_period_ratio": 0.09020029046835443,
+        "full_period_ratio_ci95": [
+          0.03934886912478367,
+          0.272280540185307
+        ],
+        "yearly_ratio_mean": 0.09721262206161732,
+        "yearly_ratio_sd": 0.01010419994875096,
+        "rms_difference_from_full_period": 0.010011005078214792,
+        "scatter_to_phase2_sigma": 0.17004327328597652,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "yearly_ratios_broadly_consistent"
+      }
+    },
+    "MLO": {
+      "latitude": 19.54,
+      "yearly_fits": [
+        {
+          "site": "MLO",
+          "year": 2006,
+          "n_months": 10,
+          "ratio": 0.05262395819313669,
+          "phase_diff_months": 1.1314301832917275,
+          "d13C": {
+            "amplitude": 0.1576154203947101,
+            "peak_month": 5.617503006377399,
+            "B": 0.10438743391966959,
+            "C": -0.11809269404102785
+          },
+          "dD": {
+            "amplitude": 2.995126664859402,
+            "peak_month": 6.748933189669127,
+            "B": 0.3926011243893077,
+            "C": -2.9692841049114946
+          }
+        },
+        {
+          "site": "MLO",
+          "year": 2008,
+          "n_months": 11,
+          "ratio": 0.1225064862760227,
+          "phase_diff_months": 5.053854719337207,
+          "d13C": {
+            "amplitude": 0.1793203983131856,
+            "peak_month": 6.454903525609839,
+            "B": 0.05048813528133005,
+            "C": -0.1720661310281999
+          },
+          "dD": {
+            "amplitude": 1.4637624811893954,
+            "peak_month": 11.508758244947046,
+            "B": -1.0302790335721341,
+            "C": 1.0397719530355705
+          }
+        },
+        {
+          "site": "MLO",
+          "year": 2009,
+          "n_months": 11,
+          "ratio": 0.0465730919430443,
+          "phase_diff_months": -2.060069656208528,
+          "d13C": {
+            "amplitude": 0.12635709393349076,
+            "peak_month": 9.280430434582877,
+            "B": -0.1174943351333036,
+            "C": -0.04648866957549924
+          },
+          "dD": {
+            "amplitude": 2.7130922311968644,
+            "peak_month": 7.220360778374348,
+            "B": -0.31234419955086734,
+            "C": -2.695052978326717
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 3,
+        "full_period_ratio": 0.06888516370688877,
+        "full_period_ratio_ci95": [
+          0.031196539066188193,
+          0.2802766836601315
+        ],
+        "yearly_ratio_mean": 0.0739011788040679,
+        "yearly_ratio_sd": 0.04220201631944351,
+        "rms_difference_from_full_period": 0.03482097828043003,
+        "scatter_to_phase2_sigma": 0.6641713824356004,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "yearly_ratios_broadly_consistent"
+      }
+    },
+    "SMO": {
+      "latitude": -14.25,
+      "yearly_fits": [
+        {
+          "site": "SMO",
+          "year": 2006,
+          "n_months": 9,
+          "ratio": 0.01998567305681083,
+          "phase_diff_months": 5.055836186239519,
+          "d13C": {
+            "amplitude": 0.06113294889630469,
+            "peak_month": 10.465492609475554,
+            "B": -0.05932611939999253,
+            "C": 0.014752931833911215
+          },
+          "dD": {
+            "amplitude": 3.0588386351827896,
+            "peak_month": 3.521328795715072,
+            "B": 2.963268140508556,
+            "C": 0.7586407078017086
+          }
+        },
+        {
+          "site": "SMO",
+          "year": 2008,
+          "n_months": 12,
+          "ratio": 0.15566402402069263,
+          "phase_diff_months": -4.718593942355036,
+          "d13C": {
+            "amplitude": 0.1239784370556944,
+            "peak_month": 6.218877515755852,
+            "B": 0.04930463937747223,
+            "C": -0.113752825857779
+          },
+          "dD": {
+            "amplitude": 0.7964488765831583,
+            "peak_month": 1.5002835734008158,
+            "B": 0.20625036165515045,
+            "C": 0.7692799239078677
+          }
+        },
+        {
+          "site": "SMO",
+          "year": 2009,
+          "n_months": 8,
+          "ratio": 0.015786155863408393,
+          "phase_diff_months": 0.8445356575539036,
+          "d13C": {
+            "amplitude": 0.041013214269734755,
+            "peak_month": 7.633406434279864,
+            "B": -0.0133540807472083,
+            "C": -0.03877824483047441
+          },
+          "dD": {
+            "amplitude": 2.598049495051646,
+            "peak_month": 8.477942091833768,
+            "B": -1.815758806259888,
+            "C": -1.8581929760462925
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 3,
+        "full_period_ratio": 0.0403076832421245,
+        "full_period_ratio_ci95": [
+          0.008540820305112244,
+          0.11348360811233751
+        ],
+        "yearly_ratio_mean": 0.06381195098030394,
+        "yearly_ratio_sd": 0.0795739371749764,
+        "rms_difference_from_full_period": 0.06909263048202816,
+        "scatter_to_phase2_sigma": 2.9723799056959233,
+        "fraction_years_within_phase2_ci": 0.6666666666666666,
+        "interpretation": "yearly_scatter_exceeds_phase2_uncertainty"
+      }
+    },
+    "SPO": {
+      "latitude": -89.98,
+      "yearly_fits": [
+        {
+          "site": "SPO",
+          "year": 2006,
+          "n_months": 11,
+          "ratio": 0.012778808281161893,
+          "phase_diff_months": 0.09120977268398965,
+          "d13C": {
+            "amplitude": 0.05843391999404273,
+            "peak_month": 2.3220708448294696,
+            "B": 0.0372959797873099,
+            "C": 0.04498369590834838
+          },
+          "dD": {
+            "amplitude": 4.572720609650599,
+            "peak_month": 2.4132806175134585,
+            "B": 3.083303218820728,
+            "C": 3.376835061819437
+          }
+        },
+        {
+          "site": "SPO",
+          "year": 2007,
+          "n_months": 8,
+          "ratio": 0.04184820044297801,
+          "phase_diff_months": 2.1329287147567646,
+          "d13C": {
+            "amplitude": 0.09430160441743599,
+            "peak_month": 1.6767961586494955,
+            "B": 0.0327225851932649,
+            "C": 0.08844221285094636
+          },
+          "dD": {
+            "amplitude": 2.2534207784138895,
+            "peak_month": 3.8097248734062594,
+            "B": 2.2422466327165678,
+            "C": 0.22413219906714224
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 2,
+        "full_period_ratio": 0.023724023206118456,
+        "full_period_ratio_ci95": [
+          0.007976635971248413,
+          0.06057932757370213
+        ],
+        "yearly_ratio_mean": 0.027313504362069953,
+        "yearly_ratio_sd": 0.02055516432259125,
+        "rms_difference_from_full_period": 0.0149713648386944,
+        "scatter_to_phase2_sigma": 1.5317893759793675,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "yearly_scatter_exceeds_phase2_uncertainty"
+      }
+    },
+    "ZEP": {
+      "latitude": 78.91,
+      "yearly_fits": [
+        {
+          "site": "ZEP",
+          "year": 2009,
+          "n_months": 9,
+          "ratio": 0.1035002278012709,
+          "phase_diff_months": -1.0990563733541359,
+          "d13C": {
+            "amplitude": 0.3499158566733806,
+            "peak_month": 7.338042009575291,
+            "B": -0.0616116614648915,
+            "C": -0.3444489946610404
+          },
+          "dD": {
+            "amplitude": 3.38082209195953,
+            "peak_month": 6.238985636221155,
+            "B": 1.3117763876158361,
+            "C": -3.115959037980949
+          }
+        }
+      ],
+      "stability": {
+        "n_years": 1,
+        "full_period_ratio": 0.05614345073404795,
+        "full_period_ratio_ci95": [
+          0.013773104517547765,
+          0.1340756461600255
+        ],
+        "yearly_ratio_mean": 0.1035002278012709,
+        "yearly_ratio_sd": NaN,
+        "rms_difference_from_full_period": 0.047356777067222945,
+        "scatter_to_phase2_sigma": NaN,
+        "fraction_years_within_phase2_ci": 1.0,
+        "interpretation": "insufficient_years"
+      }
+    }
+  },
+  "summary": {
+    "sites_with_at_least_two_usable_years": 9,
+    "sites_flagged_unstable": [
+      "ALT",
+      "ASC",
+      "CGO",
+      "SMO",
+      "SPO"
+    ],
+    "median_scatter_to_phase2_sigma": 1.5287629492288664
+  }
+}

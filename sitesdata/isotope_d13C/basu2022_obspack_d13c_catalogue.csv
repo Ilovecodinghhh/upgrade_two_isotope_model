@@ -1,0 +1,71 @@
+site_code,site_name,country,latitude,longitude,elevation_m,lab,project,n_observations,year_start,year_end,file
+ARH,"Arrival Heights, Antarctica",New Zealand,-77.833,166.66,184.0,NIWA,surface-flask,154,2000.5,2016.0,ch4_ARH_surface_event_NIWA.nc
+ACG,Alaska Coast Guard,United States,57.7366,-152.5042,6.0,NOAA/INSTAAR,aircraft-flask,809,2012.3,2017.8,ch4c13_ACG_aircraft_event_NOAA-INSTAAR.nc
+ACT,Atmospheric Carbon and Transport - America,United States,38.2357,-91.0669,-9999.99,NOAA/INSTAAR,aircraft-flask,1367,2016.5,2019.6,ch4c13_ACT_aircraft_event_NOAA-INSTAAR.nc
+ALK,Alaska,United States,64.45,-148.66,-9999.99,NIPR,aircraft-flask,63,2006.6,2006.6,ch4c13_ALK_aircraft_event_NIPR.nc
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,MPI-BGC,surface-flask,305,2011.1,2017.4,ch4c13_ALT_surface_event_MPI-BGC.nc
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,NOAA/INSTAAR,surface-flask,2711,2000.6,2020.3,ch4c13_ALT_surface_event_NOAA-INSTAAR.nc
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,NOAA/INSTAAR,surface-flask,363,2013.9,2020.2,ch4c13_AMY_surface_event_NOAA-INSTAAR.nc
+ARH,"Arrival Heights, Antarctica",New Zealand,-77.833,166.66,184.0,NIWA,surface-flask,154,2000.5,2016.0,ch4c13_ARH_surface_event_NIWA.nc
+ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,NOAA/INSTAAR,surface-flask,3174,2000.8,2020.3,ch4c13_ASC_surface_event_NOAA-INSTAAR.nc
+AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,NOAA/INSTAAR,surface-flask,939,2000.7,2020.2,ch4c13_AZR_surface_event_NOAA-INSTAAR.nc
+BAL,Baltic Sea,Poland,55.35,17.22,3.0,NOAA/INSTAAR,surface-flask,538,2008.3,2011.5,ch4c13_BAL_surface_event_NOAA-INSTAAR.nc
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,NIWA,surface-flask,251,2000.1,2015.3,ch4c13_BHD_surface_event_NIWA.nc
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,NOAA/INSTAAR,surface-flask,310,2009.2,2019.9,ch4c13_BHD_surface_event_NOAA-INSTAAR.nc
+BIK,Bialystok,Poland,53.2,22.75,183.0,MPI-BGC,surface-flask,65,2012.5,2016.9,ch4c13_BIK_surface_event_MPI-BGC.nc
+BMW,"Tudor Hill, Bermuda",United Kingdom,32.2647,-64.8788,30.0,NOAA/INSTAAR,surface-flask,2,2018.6,2018.6,ch4c13_BMW_surface_event_NOAA-INSTAAR.nc
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,NOAA/INSTAAR,surface-flask,4174,1998.0,2020.4,ch4c13_BRW_surface_event_NOAA-INSTAAR.nc
+BSC,"Black Sea, Constanta",Romania,44.1776,28.6647,0.0,NOAA/INSTAAR,surface-flask,26,2003.8,2004.9,ch4c13_BSC_surface_event_NOAA-INSTAAR.nc
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,NOAA/INSTAAR,surface-flask,1897,2000.7,2020.4,ch4c13_CBA_surface_event_NOAA-INSTAAR.nc
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,NOAA/INSTAAR,surface-flask,1639,1998.0,2020.3,ch4c13_CGO_surface_event_NOAA-INSTAAR.nc
+CHR,Christmas Island,Republic of Kiribati,1.7,-157.1518,0.0,NOAA/INSTAAR,surface-flask,18,1999.0,1999.1,ch4c13_CHR_surface_event_NOAA-INSTAAR.nc
+CIB,Centro de Investigacion de la Baja Atmosfera (CIBA),Spain,41.81,-4.93,845.0,NOAA/INSTAAR,surface-flask,6,2016.3,2016.3,ch4c13_CIB_surface_event_NOAA-INSTAAR.nc
+CON,CONTRAIL (Comprehensive Observation Network for TRace gases by AIrLiner),,15.09,146.09,-9999.99,TU,aircraft-flask,414,2006.9,2010.7,ch4c13_CON_aircraft_event_TU.nc
+CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA/INSTAAR,aircraft-flask,2232,2012.4,2017.8,ch4c13_CRV_aircraft_event_NOAA-INSTAAR.nc
+CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA/INSTAAR,surface-flask,1520,2011.9,2019.6,ch4c13_CRV_surface_event_NOAA-INSTAAR.nc
+CVO,Cape Verde Observatory,Cabo Verde,16.864,-24.8675,10.0,MPI-BGC,surface-flask,574,2011.1,2017.3,ch4c13_CVO_surface_event_MPI-BGC.nc
+DRP,Drake Passage,N/A,-59.0,-64.69,0.0,NOAA/INSTAAR,surface-flask,10,2005.2,2005.2,ch4c13_DRP_surface_event_NOAA-INSTAAR.nc
+EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,NOAA/INSTAAR,surface-flask,207,2015.9,2019.7,ch4c13_EIC_surface_event_NOAA-INSTAAR.nc
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,NOAA/INSTAAR,surface-flask,367,2016.1,2020.2,ch4c13_GMI_surface_event_NOAA-INSTAAR.nc
+HIP,HIPPO (HIAPER Pole-to-Pole Observations),United States,30.719,-151.9889,-9999.99,NOAA/INSTAAR,aircraft-flask,586,2011.4,2011.7,ch4c13_HIP_aircraft_event_NOAA-INSTAAR.nc
+HSU,Humboldt State University,United States,41.0588,-124.75,0.0,NOAA/INSTAAR,surface-flask,4,2016.3,2016.3,ch4c13_HSU_surface_event_NOAA-INSTAAR.nc
+INX,INFLUX (Indianapolis Flux Experiment),United States,39.5805,-86.4207,-9999.99,NOAA/INSTAAR,aircraft-flask,168,2011.3,2014.9,ch4c13_INX_aircraft_event_NOAA-INSTAAR.nc
+INX,INFLUX (Indianapolis Flux Experiment),United States,39.5805,-86.4207,-9999.99,NOAA/INSTAAR,surface-flask,107,2011.2,2015.8,ch4c13_INX_surface_event_NOAA-INSTAAR.nc
+JFJ,Jungfraujoch,Switzerland,46.55,7.987,3570.0,MPI-BGC,surface-flask,144,2012.6,2017.6,ch4c13_JFJ_surface_event_MPI-BGC.nc
+KCO,Kaashidhoo,Republic of Maldives,4.97,73.47,1.0,NOAA/INSTAAR,surface-flask,4,1999.0,1999.0,ch4c13_KCO_surface_event_NOAA-INSTAAR.nc
+KJO,Kjölnes,Norway,70.8531,29.2358,5.0,MPI-BGC,surface-flask,87,2014.8,2016.1,ch4c13_KJO_surface_event_MPI-BGC.nc
+KUM,"Cape Kumukahi, Hawaii",United States,19.7371,-155.0116,0.3,NOAA/INSTAAR,surface-flask,2117,1999.0,2020.4,ch4c13_KUM_surface_event_NOAA-INSTAAR.nc
+LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,NOAA/INSTAAR,surface-flask,1,2012.4,2012.4,ch4c13_LEF_surface_event_NOAA-INSTAAR.nc
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,NOAA/INSTAAR,surface-flask,419,2008.1,2013.2,ch4c13_LLB_surface_event_NOAA-INSTAAR.nc
+LLN,Lulin,Taiwan,23.47,120.87,2862.0,NOAA/INSTAAR,surface-flask,3,2016.3,2016.3,ch4c13_LLN_surface_event_NOAA-INSTAAR.nc
+MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,NOAA/INSTAAR,surface-flask,841,2009.0,2020.1,ch4c13_MEX_surface_event_NOAA-INSTAAR.nc
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,NOAA/INSTAAR,surface-flask,1532,1999.0,2020.4,ch4c13_MHD_surface_event_NOAA-INSTAAR.nc
+MID,"Sand Island, Midway",United States,28.21,-177.38,11.0,NOAA/INSTAAR,surface-flask,365,2016.0,2020.4,ch4c13_MID_surface_event_NOAA-INSTAAR.nc
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,NOAA/INSTAAR,surface-flask,4058,1998.0,2020.4,ch4c13_MLO_surface_event_NOAA-INSTAAR.nc
+MRC,Marcellus Pennsylvania,United States,41.4662,-76.4188,592.0,NOAA/INSTAAR,aircraft-flask,65,2015.4,2015.4,ch4c13_MRC_aircraft_event_NOAA-INSTAAR.nc
+MRC,Marcellus Pennsylvania,United States,41.4662,-76.4188,592.0,NOAA/INSTAAR,surface-flask,615,2015.6,2019.8,ch4c13_MRC_surface_event_NOAA-INSTAAR.nc
+NGM,Western Pacific Ocean,N/A,0.0,150.395,-9999.99,TU,shipboard-flask,466,2007.0,2011.7,ch4c13_NGM_surface_event_TU.nc
+NMB,Gobabeb,Namibia,-23.58,15.03,456.0,MPI-BGC,surface-flask,332,2013.2,2017.3,ch4c13_NMB_surface_event_MPI-BGC.nc
+NSA,"North Slope, Alaska",United States,70.1562,-150.0603,-9999.99,NOAA/INSTAAR,aircraft-flask,112,2016.6,2016.6,ch4c13_NSA_aircraft_event_NOAA-INSTAAR.nc
+NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,NOAA/INSTAAR,surface-flask,2055,1998.0,2020.4,ch4c13_NWR_surface_event_NOAA-INSTAAR.nc
+NYA,"Ny-Alesund, Svalbard",Norway and Sweden,78.917,11.933,40.0,NIPR,surface-flask,947,2000.0,2020.0,ch4c13_NYA_surface_event_NIPR.nc
+OXK,Ochsenkopf,Germany,50.0301,11.8084,1022.0,MPI-BGC,surface-flask,266,2012.7,2017.5,ch4c13_OXK_surface_event_MPI-BGC.nc
+PFA,"Poker Flat, Alaska",United States,64.9,-148.76,210.0,NOAA/INSTAAR,aircraft-flask,1366,2012.0,2019.1,ch4c13_PFA_aircraft_event_NOAA-INSTAAR.nc
+POC,Pacific Ocean,N/A,0.01,150.55,0.0,NIWA,surface-flask,280,2000.7,2011.9,ch4c13_POC_surface_event_NIWA.nc
+POC,Pacific Ocean,N/A,-10.0,-156.85,0.0,NOAA/INSTAAR,surface-flask,1,2003.8,2003.8,ch4c13_POC_surface_event_NOAA-INSTAAR.nc
+PSA,"Palmer Station, Antarctica",United States,-64.92,-64.0,10.0,NOAA/INSTAAR,surface-flask,15,2001.0,2003.6,ch4c13_PSA_surface_event_NOAA-INSTAAR.nc
+SDZ,Shangdianzi,Peoples Republic of China,40.65,117.117,293.0,NOAA/INSTAAR,surface-flask,13,2011.8,2013.1,ch4c13_SDZ_surface_event_NOAA-INSTAAR.nc
+SGP,"Southern Great Plains, Oklahoma",United States,36.607,-97.489,314.0,NOAA/INSTAAR,aircraft-flask,12,2015.5,2015.5,ch4c13_SGP_aircraft_event_NOAA-INSTAAR.nc
+SIS,Shetland Islands,Scotland,60.089,-1.255,30.0,MPI-BGC,surface-flask,518,2010.7,2017.5,ch4c13_SIS_surface_event_MPI-BGC.nc
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,NOAA/INSTAAR,surface-flask,3568,1998.0,2020.4,ch4c13_SMO_surface_event_NOAA-INSTAAR.nc
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,NOAA/INSTAAR,surface-flask,3215,1998.0,2020.1,ch4c13_SPO_surface_event_NOAA-INSTAAR.nc
+SUM,Summit,Greenland,72.5962,-38.422,3209.54,NOAA/INSTAAR,surface-flask,911,2010.3,2020.3,ch4c13_SUM_surface_event_NOAA-INSTAAR.nc
+SUR,Surgut,Russia,61.2,73.2,40.0,TU,aircraft-flask,63,2006.3,2009.4,ch4c13_SUR_aircraft_event_TU.nc
+TAC,Tacolneston,United Kingdom,52.5177,1.1386,56.0,NOAA/INSTAAR,surface-flask,96,2014.4,2016.0,ch4c13_TAC_surface_event_NOAA-INSTAAR.nc
+TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,NOAA/INSTAAR,surface-flask,1406,2000.7,2020.2,ch4c13_TAP_surface_event_NOAA-INSTAAR.nc
+TOM,Atmospheric Tomography Mission (ATom),United States,15.5604,-110.681,-9999.99,NOAA/INSTAAR,aircraft-flask,586,2016.6,2017.1,ch4c13_TOM_aircraft_event_NOAA-INSTAAR.nc
+WGC,"Walnut Grove, California",United States,38.265,-121.4911,0.0,NOAA/INSTAAR,surface-flask,297,2008.0,2009.1,ch4c13_WGC_surface_event_NOAA-INSTAAR.nc
+WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,NOAA/INSTAAR,surface-flask,1948,2001.5,2020.1,ch4c13_WLG_surface_event_NOAA-INSTAAR.nc
+WPC,Western Pacific Cruise,N/A,2.53,149.73,0.0,NOAA/INSTAAR,surface-flask,464,2005.9,2013.4,ch4c13_WPC_surface_event_NOAA-INSTAAR.nc
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NOAA/INSTAAR,surface-flask,1168,2001.8,2020.4,ch4c13_ZEP_surface_event_NOAA-INSTAAR.nc
+ZOT,"Zotino, Siberia",Russia,60.75,89.38,111.0,MPI-BGC,surface-flask,866,2009.8,2017.2,ch4c13_ZOT_surface_event_MPI-BGC.nc

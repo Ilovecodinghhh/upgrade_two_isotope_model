@@ -1,0 +1,36 @@
+site_id,site_name,country,latitude,longitude,elevation_m,lab,lab_full,mbl_site,n_raw_observations,year_start,year_end,dD_mean_permil,dD_min_permil,dD_max_permil
+alt,"Alert, Nunavut",Canada,82.45,-62.51,185.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,237,2005.3,2009.94,-83.06,-89.75,-72.16
+altMPI,Alert,Canada,82.45,-62.51,200.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",Yes,337,2011.05,2024.81,-88.04,-100.55,-78.5
+asc,Ascension Island,United Kingdom,-7.97,-14.4,85.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,192,2005.32,2010.18,-69.75,-79.06,-62.47
+ato,Amazonas,Brazil,-2.14,-58.99,120.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",No,21,2021.69,2023.09,-83.57,-88.69,-77.76
+azr,"Terceira Island, Azores",Portugal,38.77,-27.38,19.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",No,71,2005.11,2009.81,-80.13,-87.99,-72.31
+bal,Baltic Sea,Poland,55.35,17.22,3.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",No,221,2004.82,2010.03,-86.01,-96.35,-74.72
+bikMPI,Bialystok,Poland,53.23,23.03,183.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",No,151,2012.54,2021.3,-91.98,-115.77,-83.94
+brw,Barrow Atmospheric Baseline Observatory,United States,71.32,-156.61,11.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,106,2005.25,2010.19,-84.97,-95.48,-78.42
+brwIMAU,Barrow Atmospheric Baseline Observatory,United States,71.32,-156.61,11.0,IMAU,"IMAU (Utrecht University, Netherlands)",Yes,127,2022.21,2024.31,-92.81,-98.79,-87.68
+bsc,"Black Sea, Constanta",Romania,44.18,28.66,0.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",No,64,2005.2,2008.23,-89.58,-102.09,-75.24
+cba,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,155,2005.34,2010.2,-82.86,-91.86,-71.17
+cgo,"Cape Grim, Tasmania",Australia,-40.68,144.69,94.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,69,2005.27,2009.34,-69.25,-78.31,-64.58
+cgoIMAU,"Cape Grim, Tasmania",Australia,-40.68,144.69,94.0,IMAU,"IMAU (Utrecht University, Netherlands)",Yes,59,2023.08,2024.22,-77.49,-81.84,-73.55
+cvoMPI,Cape Verde Atmospheric Observatory,Cape Verde,16.86,-24.87,10.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",Yes,575,2011.08,2024.89,-82.89,-98.21,-74.77
+gvnMPI,Neumayer Station,Antarctica,-70.67,-8.27,40.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",Yes,245,2018.0,2023.99,-72.78,-85.24,-67.07
+gvnIMAU,Neumayer Station,Antarctica,-70.67,-8.27,40.0,IMAU,"IMAU (Utrecht University, Netherlands)",Yes,163,1988.56,2020.0,-72.02,-81.32,-66.05
+jfjMPI,Jungfraujoch,Switzerland,46.55,7.99,3578.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",No,253,2012.65,2024.91,-85.11,-101.86,-71.09
+kjnMPI,kjolnes,Norway,70.85,29.23,10.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",No,176,2014.76,2021.32,-88.94,-97.1,-82.44
+kum,"Cape Kumukahi, Hawaii",United States,19.56,-154.89,8.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,120,2005.33,2010.05,-77.07,-86.38,-69.35
+lef,"Park Falls, Wisconsin",United States,45.95,-90.27,472.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",No,75,2005.28,2008.37,-86.21,-94.55,-79.78
+mhd,"Mace Head, County Galway",Ireland,53.33,-9.9,5.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,83,2005.2,2009.59,-82.65,-92.92,-70.54
+mlo,"Mauna Loa, Hawaii",United States,19.54,-155.58,3397.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",No,202,2005.26,2009.84,-75.01,-84.97,-64.44
+mloIMAU,"Mauna Loa, Hawaii",United States,19.54,-155.58,3397.0,IMAU,"IMAU (Utrecht University, Netherlands)",No,58,2022.76,2024.27,-84.28,-90.03,-80.62
+namMPI,Gobabeb station,Namibia,-23.56,15.05,410.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",Yes,307,2013.21,2022.42,-72.23,-85.82,-65.85
+nyaNIPR,nyvolesund station,Norway,78.92,11.92,0.0,TU/NIPR,"TU/NIPR (Tohoku University / National Institute of Polar Research, Japan)",Yes,800,2005.66,2023.67,-86.78,-98.4,-76.53
+oxkMPI,Ochsenkopf,Germany,50.03,11.81,1022.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",No,243,2012.72,2019.43,-89.15,-108.24,-79.9
+sisMPI,Shetland Islands,United Kingdom,59.85,-1.27,20.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",Yes,646,2010.95,2024.76,-88.3,-106.22,-69.97
+smo,Tutuila,American Samoa,-14.25,-170.56,42.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,115,2005.26,2009.69,-69.47,-75.39,-65.44
+smoIMAU,Tutuila,American Samoa,-14.25,-170.56,42.0,IMAU,"IMAU (Utrecht University, Netherlands)",Yes,104,2022.1,2024.25,-79.03,-83.52,-74.4
+spo,South Pole,Antarctica,-89.98,-24.8,2810.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,144,2005.11,2009.73,-67.22,-77.52,-59.17
+syoNIPR,Syowa station,Antarctica,-69.01,39.58,29.1,TU/NIPR,"TU/NIPR (Tohoku University / National Institute of Polar Research, Japan)",Yes,162,1995.17,2022.99,-72.82,-80.17,-67.04
+vrsMPI,"Villum Research Station, Station Nord",Greenland,81.58,-16.64,24.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",Yes,142,2020.07,2023.57,-90.32,-98.7,-83.21
+zep,"Ny-Alesund, Svalbard",Norway,78.91,11.89,474.0,INSTAAR,"INSTAAR (Institute of Arctic and Alpine Research, CU-Boulder / NOAA GML, USA)",Yes,35,2008.31,2009.82,-79.99,-86.79,-71.42
+zepIMAU,"Ny-Alesund, Svalbard",Norway,78.91,11.89,474.0,IMAU,"IMAU (Utrecht University, Netherlands)",Yes,600,2012.71,2023.64,-88.06,-97.24,-80.1
+zotMPI,"Zotino Tall Tower Observatory, Siberia",Russia,60.8,89.35,114.0,MPI-BGC,"MPI-BGC (Max Planck Institute for Biogeochemistry, Jena, Germany)",No,633,2010.14,2022.04,-92.34,-120.63,-81.59

@@ -1,0 +1,92 @@
+site_code,site_name,country,latitude,longitude,elevation_m,n_observations,year_start,year_end,data_source,file
+ABP,"Arembepe, Bahia",Brazil,-12.77,-38.17,1.0,225,2006,2010,NOAA_GML_2025-08-15,ch4_abp_surface-flask_1_ccgg_event.txt
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,5088,1985,2024,NOAA_GML_2025-08-15,ch4_alt_surface-flask_1_ccgg_event.txt
+AMS,Amsterdam Island,France,-37.7983,77.5378,55.0,659,1983,1990,NOAA_GML_2025-08-15,ch4_ams_surface-flask_1_ccgg_event.txt
+AMT,"Argyle, Maine",United States,45.0345,-68.6821,52.4,539,2003,2008,NOAA_GML_2025-08-15,ch4_amt_surface-flask_1_ccgg_event.txt
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,1127,2013,2024,NOAA_GML_2025-08-15,ch4_amy_surface-flask_1_ccgg_event.txt
+AOC,Atlantic Ocean Cruise,N/A,-1e+34,-1e+34,0.0,243,2004,2005,NOAA_GML_2025-08-15,ch4_aoc_shipboard-flask_1_ccgg_event.txt
+ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,6703,1983,2024,NOAA_GML_2025-08-15,ch4_asc_surface-flask_1_ccgg_event.txt
+ASK,Assekrem,Algeria,23.2625,5.6322,2710.0,2328,1995,2024,NOAA_GML_2025-08-15,ch4_ask_surface-flask_1_ccgg_event.txt
+AVI,"St. Croix, Virgin Islands",United States,17.75,-64.75,3.0,854,1983,1990,NOAA_GML_2025-08-15,ch4_avi_surface-flask_1_ccgg_event.txt
+AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,2500,1983,2024,NOAA_GML_2025-08-15,ch4_azr_surface-flask_1_ccgg_event.txt
+BAL,Baltic Sea,Poland,55.35,17.22,3.0,3501,1992,2011,NOAA_GML_2025-08-15,ch4_bal_surface-flask_1_ccgg_event.txt
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,760,1999,2024,NOAA_GML_2025-08-15,ch4_bhd_surface-flask_1_ccgg_event.txt
+BKT,Bukit Kototabang,Indonesia,-0.202,100.318,845.0,1908,2004,2024,NOAA_GML_2025-08-15,ch4_bkt_surface-flask_1_ccgg_event.txt
+BME,"St. Davids Head, Bermuda",United Kingdom,32.368,-64.6476,12.0,1550,1989,2010,NOAA_GML_2025-08-15,ch4_bme_surface-flask_1_ccgg_event.txt
+BMW,"Tudor Hill, Bermuda",United Kingdom,32.2647,-64.8788,30.0,2870,1989,2024,NOAA_GML_2025-08-15,ch4_bmw_surface-flask_1_ccgg_event.txt
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,8187,1983,2024,NOAA_GML_2025-08-15,ch4_brw_surface-flask_1_ccgg_event.txt
+BSC,"Black Sea, Constanta",Romania,44.1776,28.6647,0.0,1704,1994,2011,NOAA_GML_2025-08-15,ch4_bsc_surface-flask_1_ccgg_event.txt
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,6965,1983,2024,NOAA_GML_2025-08-15,ch4_cba_surface-flask_1_ccgg_event.txt
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,3778,1984,2024,NOAA_GML_2025-08-15,ch4_cgo_surface-flask_1_ccgg_event.txt
+CHR,Christmas Island,Republic of Kiribati,1.7,-157.1518,0.0,2441,1984,2020,NOAA_GML_2025-08-15,ch4_chr_surface-flask_1_ccgg_event.txt
+CIB,Centro de Investigacion de la Baja Atmosfera (CIBA),Spain,41.81,-4.93,845.0,1353,2009,2024,NOAA_GML_2025-08-15,ch4_cib_surface-flask_1_ccgg_event.txt
+CMO,"Cape Meares, Oregon",United States,45.478,-123.9689,30.0,1086,1983,1998,NOAA_GML_2025-08-15,ch4_cmo_surface-flask_1_ccgg_event.txt
+CPT,Cape Point,South Africa,-34.3523,18.4891,230.0,937,2010,2024,NOAA_GML_2025-08-15,ch4_cpt_surface-flask_1_ccgg_event.txt
+CRZ,Crozet Island,France,-46.4337,51.8478,197.0,2539,1991,2024,NOAA_GML_2025-08-15,ch4_crz_surface-flask_1_ccgg_event.txt
+DRP,Drake Passage,N/A,-59.0,-64.69,0.0,731,2003,2024,NOAA_GML_2025-08-15,ch4_drp_shipboard-flask_1_ccgg_event.txt
+DSI,Dongsha Island,Taiwan,20.6992,116.7297,3.0,1387,2010,2024,NOAA_GML_2025-08-15,ch4_dsi_surface-flask_1_ccgg_event.txt
+EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,1964,1994,2024,NOAA_GML_2025-08-15,ch4_eic_surface-flask_1_ccgg_event.txt
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,5405,1983,2024,NOAA_GML_2025-08-15,ch4_gmi_surface-flask_1_ccgg_event.txt
+GOZ,"Dwejra Point, Gozo",Malta,36.048,14.889,1.0,311,1993,1999,NOAA_GML_2025-08-15,ch4_goz_surface-flask_1_ccgg_event.txt
+HBA,"Halley Station, Antarctica",United Kingdom,-75.55,-25.63,30.0,2726,1983,2024,NOAA_GML_2025-08-15,ch4_hba_surface-flask_1_ccgg_event.txt
+HPB,Hohenpeissenberg,Germany,47.8011,11.0245,985.0,1921,2006,2024,NOAA_GML_2025-08-15,ch4_hpb_surface-flask_1_ccgg_event.txt
+HSU,Humboldt State University,United States,41.0588,-124.75,0.0,173,2008,2017,NOAA_GML_2025-08-15,ch4_hsu_surface-flask_1_ccgg_event.txt
+HUN,Hegyhatsal,Hungary,46.9559,16.6521,248.0,3169,1993,2024,NOAA_GML_2025-08-15,ch4_hun_surface-flask_1_ccgg_event.txt
+ICE,"Storhofdi, Vestmannaeyjar",Iceland,63.3998,-20.2884,118.0,2975,1992,2024,NOAA_GML_2025-08-15,ch4_ice_surface-flask_1_ccgg_event.txt
+ITN,"Grifton, North Carolina",United States,35.365,-77.393,8.0,1188,1992,1999,NOAA_GML_2025-08-15,ch4_itn_surface-flask_1_ccgg_event.txt
+IZO,"Izana, Tenerife, Canary Islands",Spain,28.309,-16.499,2372.9,2986,1991,2024,NOAA_GML_2025-08-15,ch4_izo_surface-flask_1_ccgg_event.txt
+KCO,Kaashidhoo,Republic of Maldives,4.97,73.47,1.0,89,1998,1999,NOAA_GML_2025-08-15,ch4_kco_surface-flask_1_ccgg_event.txt
+KEY,"Key Biscayne, Florida",United States,25.6654,-80.158,1.0,3303,1983,2024,NOAA_GML_2025-08-15,ch4_key_surface-flask_1_ccgg_event.txt
+KPA,"Kitt Peak, Arizona",United States,32.0,-112.0,2083.0,68,1983,1989,NOAA_GML_2025-08-15,ch4_kpa_surface-flask_1_ccgg_event.txt
+KUM,"Cape Kumukahi, Hawaii",United States,19.5608,-154.8883,8.0,9230,1983,2024,NOAA_GML_2025-08-15,ch4_kum_surface-flask_1_ccgg_event.txt
+KZD,Sary Taukum,Kazakhstan,44.0839,76.8712,595.0,1131,1997,2009,NOAA_GML_2025-08-15,ch4_kzd_surface-flask_1_ccgg_event.txt
+KZM,Plateau Assy,Kazakhstan,43.25,77.88,2519.0,1128,1997,2009,NOAA_GML_2025-08-15,ch4_kzm_surface-flask_1_ccgg_event.txt
+LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,2735,1994,2024,NOAA_GML_2025-08-15,ch4_lef_surface-flask_1_ccgg_event.txt
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,470,2008,2013,NOAA_GML_2025-08-15,ch4_llb_surface-flask_1_ccgg_event.txt
+LLN,Lulin,Taiwan,23.47,120.87,2862.0,1892,2006,2024,NOAA_GML_2025-08-15,ch4_lln_surface-flask_1_ccgg_event.txt
+LMP,Lampedusa,Italy,35.5181,12.6322,45.0,1624,2006,2024,NOAA_GML_2025-08-15,ch4_lmp_surface-flask_1_ccgg_event.txt
+MBC,"Mould Bay, Northwest Territories",Canada,76.247,-119.3533,30.0,2014,1983,1997,NOAA_GML_2025-08-15,ch4_mbc_surface-flask_1_ccgg_event.txt
+MCM,"McMurdo Station, Antarctica",United States,-77.83,166.6,11.0,89,1985,1987,NOAA_GML_2025-08-15,ch4_mcm_surface-flask_1_ccgg_event.txt
+MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,1241,2009,2024,NOAA_GML_2025-08-15,ch4_mex_surface-flask_1_ccgg_event.txt
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,3182,1991,2024,NOAA_GML_2025-08-15,ch4_mhd_surface-flask_1_ccgg_event.txt
+MID,"Sand Island, Midway",United States,28.2186,-177.3678,4.6,3955,1985,2024,NOAA_GML_2025-08-15,ch4_mid_surface-flask_1_ccgg_event.txt
+MKN,Mt. Kenya,Kenya,-0.0622,37.2972,3644.0,316,2003,2011,NOAA_GML_2025-08-15,ch4_mkn_surface-flask_1_ccgg_event.txt
+MKO,"Mauna Kea, Hawaii",United States,19.8228,-155.4693,4199.0,264,1984,2024,NOAA_GML_2025-08-15,ch4_mko_surface-flask_1_ccgg_event.txt
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,7162,1983,2024,NOAA_GML_2025-08-15,ch4_mlo_surface-flask_1_ccgg_event.txt
+NAT,Farol De Mae Luiza Lighthouse,Brazil,-5.7952,-35.1853,50.0,788,2010,2020,NOAA_GML_2025-08-15,ch4_nat_surface-flask_1_ccgg_event.txt
+NMB,Gobabeb,Namibia,-23.58,15.03,456.0,1608,1997,2024,NOAA_GML_2025-08-15,ch4_nmb_surface-flask_1_ccgg_event.txt
+NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,4930,1983,2024,NOAA_GML_2025-08-15,ch4_nwr_surface-flask_1_ccgg_event.txt
+NZL,Kaitorete Spit,New Zealand,-43.83,172.63,3.0,182,1983,1985,NOAA_GML_2025-08-15,ch4_nzl_surface-flask_1_ccgg_event.txt
+OPW,"Olympic Peninsula, Washington",United States,48.2997,-124.6276,486.0,317,1984,1990,NOAA_GML_2025-08-15,ch4_opw_surface-flask_1_ccgg_event.txt
+OXK,Ochsenkopf,Germany,50.0301,11.8084,1022.0,1517,2003,2024,NOAA_GML_2025-08-15,ch4_oxk_surface-flask_1_ccgg_event.txt
+PAL,"Pallas-Sammaltunturi, GAW Station",Finland,67.9733,24.1157,565.0,2053,2001,2024,NOAA_GML_2025-08-15,ch4_pal_surface-flask_1_ccgg_event.txt
+PAO,Pacific-Atlantic Ocean,N/A,-1e+34,-1e+34,10.0,182,2006,2006,NOAA_GML_2025-08-15,ch4_pao_shipboard-flask_1_ccgg_event.txt
+POC,Pacific Ocean,N/A,-1e+34,-1e+34,0.0,13723,1986,2024,NOAA_GML_2025-08-15,ch4_poc_shipboard-flask_1_ccgg_event.txt
+PSA,"Palmer Station, Antarctica",United States,-64.7742,-64.0527,10.0,4069,1983,2024,NOAA_GML_2025-08-15,ch4_psa_surface-flask_1_ccgg_event.txt
+PTA,"Point Arena, California",United States,38.9546,-123.7408,17.0,1020,1999,2011,NOAA_GML_2025-08-15,ch4_pta_surface-flask_1_ccgg_event.txt
+RPB,Ragged Point,Barbados,13.165,-59.432,15.0,3634,1987,2024,NOAA_GML_2025-08-15,ch4_rpb_surface-flask_1_ccgg_event.txt
+SCS,South China Sea,N/A,-1e+34,-1e+34,0.0,3288,1991,1998,NOAA_GML_2025-08-15,ch4_scs_shipboard-flask_1_ccgg_event.txt
+SDZ,Shangdianzi,China,40.65,117.117,293.0,594,2009,2015,NOAA_GML_2025-08-15,ch4_sdz_surface-flask_1_ccgg_event.txt
+SEY,Mahe Island,Seychelles,-4.6824,55.5325,2.0,3993,1983,2024,NOAA_GML_2025-08-15,ch4_sey_surface-flask_1_ccgg_event.txt
+SGI,"Bird Island, South Georgia",United Kingdom,-54.0,-38.05,30.0,143,1989,1992,NOAA_GML_2025-08-15,ch4_sgi_surface-flask_1_ccgg_event.txt
+SGP,"Southern Great Plains, Oklahoma",United States,36.607,-97.489,314.0,2577,2002,2024,NOAA_GML_2025-08-15,ch4_sgp_surface-flask_1_ccgg_event.txt
+SHM,"Shemya Island, Alaska",United States,52.7112,174.126,23.0,3628,1985,2024,NOAA_GML_2025-08-15,ch4_shm_surface-flask_1_ccgg_event.txt
+SIO,"La Jolla, California",United States,32.83,-117.27,14.0,42,1984,1986,NOAA_GML_2025-08-15,ch4_sio_surface-flask_1_ccgg_event.txt
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,8407,1983,2024,NOAA_GML_2025-08-15,ch4_smo_surface-flask_1_ccgg_event.txt
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,5701,1983,2024,NOAA_GML_2025-08-15,ch4_spo_surface-flask_1_ccgg_event.txt
+STM,Ocean Station M,Norway,66.0,2.0,0.0,4803,1983,2009,NOAA_GML_2025-08-15,ch4_stm_surface-flask_1_ccgg_event.txt
+SUM,Summit,Greenland,72.5962,-38.422,3209.54,2483,1997,2024,NOAA_GML_2025-08-15,ch4_sum_surface-flask_1_ccgg_event.txt
+SYO,"Syowa Station, Antarctica",Japan,-69.0125,39.59,14.0,1756,1986,2024,NOAA_GML_2025-08-15,ch4_syo_surface-flask_1_ccgg_event.txt
+TAC,Tacolneston,United Kingdom,52.5177,1.1386,56.0,108,2014,2016,NOAA_GML_2025-08-15,ch4_tac_surface-flask_1_ccgg_event.txt
+TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,4501,1990,2024,NOAA_GML_2025-08-15,ch4_tap_surface-flask_1_ccgg_event.txt
+THD,"Trinidad Head, California",United States,41.0541,-124.151,107.0,1527,2002,2017,NOAA_GML_2025-08-15,ch4_thd_surface-flask_1_ccgg_event.txt
+TIK,Hydrometeorological Observatory of Tiksi,Russia,71.5965,128.8887,19.0,673,2011,2018,NOAA_GML_2025-08-15,ch4_tik_surface-flask_1_ccgg_event.txt
+TPI,Taiping Island,Taiwan,10.3786,114.3711,4.0,535,2019,2024,NOAA_GML_2025-08-15,ch4_tpi_surface-flask_1_ccgg_event.txt
+USH,Ushuaia,Argentina,-54.8484,-68.3106,12.0,1762,1994,2024,NOAA_GML_2025-08-15,ch4_ush_surface-flask_1_ccgg_event.txt
+UTA,"Wendover, Utah",United States,39.9018,-113.7181,1327.0,3435,1993,2024,NOAA_GML_2025-08-15,ch4_uta_surface-flask_1_ccgg_event.txt
+UUM,Ulaan Uul,Mongolia,44.4516,111.0956,1007.0,2868,1992,2023,NOAA_GML_2025-08-15,ch4_uum_surface-flask_1_ccgg_event.txt
+WIS,"Weizmann Institute of Science at the Arava Institute, Ketura",Israel,29.9646,35.0605,151.0,2834,1995,2024,NOAA_GML_2025-08-15,ch4_wis_surface-flask_1_ccgg_event.txt
+WKT,"Moody, Texas",United States,31.3149,-97.3269,251.0,841,2001,2010,NOAA_GML_2025-08-15,ch4_wkt_surface-flask_1_ccgg_event.txt
+WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,3609,1990,2024,NOAA_GML_2025-08-15,ch4_wlg_surface-flask_1_ccgg_event.txt
+WPC,Western Pacific Cruise,N/A,-1e+34,-1e+34,0.0,597,2004,2013,NOAA_GML_2025-08-15,ch4_wpc_shipboard-flask_1_ccgg_event.txt
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,3377,1994,2024,NOAA_GML_2025-08-15,ch4_zep_surface-flask_1_ccgg_event.txt

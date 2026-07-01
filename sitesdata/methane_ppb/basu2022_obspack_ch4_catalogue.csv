@@ -1,0 +1,293 @@
+site_code,site_name,country,latitude,longitude,elevation_m,lab,project,n_observations,year_start,year_end,file
+AAO,"Airborne Aerosol Observatory, Bondville, Illinois",United States,40.05,-88.37,230.0,NOAA,aircraft-flask,3890,2006.4,2009.7,ch4_AAO_aircraft_event_NOAA.nc
+ABP,"Arembepe, Bahia",Brazil,-12.77,-38.17,1.0,IPEN,surface-flask,193,2006.8,2010.0,ch4_ABP_surface_event_IPEN.nc
+ABP,"Arembepe, Bahia",Brazil,-12.77,-38.17,1.0,NOAA,surface-flask,225,2006.8,2010.0,ch4_ABP_surface_event_NOAA.nc
+ABT,"Abbotsford, British Columbia",Canada,49.0114,-122.3353,60.0,EC,surface-insitu,24166,2014.2,2017.7,ch4_ABT_surface_hourly_EC.nc
+ACG,Alaska Coast Guard,United States,57.7366,-152.5042,6.0,NOAA,aircraft-flask,1748,2009.3,2017.8,ch4_ACG_aircraft_event_NOAA.nc
+ACT,Atmospheric Carbon and Transport - America,United States,38.1751,-91.0236,-9999.99,NOAA,aircraft-flask,1499,2016.4,2019.6,ch4_ACT_aircraft_event_NOAA.nc
+AGP,"Arctic Gas and Aerosol Sampling Program, AGASP",N/A,71.7,-148.38,-9999.99,NOAA,surface-flask,212,1992.2,1992.3,ch4_AGP_surface_event_NOAA.nc
+ALF,Alta Floresta,Brazil,-8.92,-56.79,-9999.99,IPEN,aircraft-flask,1504,2010.1,2017.0,ch4_ALF_aircraft_event_IPEN.nc
+ALK,Alaska,United States,65.315,-148.635,-9999.99,TU,aircraft-flask,64,2006.6,2006.6,ch4_ALK_aircraft_event_TU.nc
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,MPI-BGC,surface-flask,1012,2004.8,2017.4,ch4_ALT_surface_event_MPI-BGC.nc
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,185.0,NOAA,surface-flask,4625,1985.4,2020.7,ch4_ALT_surface_event_NOAA.nc
+ALT,"Alert, Nunavut",Canada,82.4508,-62.5072,200.0,EC,surface-insitu,112569,2000.0,2017.6,ch4_ALT_surface_hourly_EC.nc
+AMS,Amsterdam Island,France,-37.7983,77.5378,55.0,LSCE,surface-flask,969,2001.2,2017.2,ch4_AMS_surface_event_LSCE.nc
+AMS,Amsterdam Island,France,-37.7983,77.5378,55.0,NOAA,surface-flask,647,1983.0,1990.9,ch4_AMS_surface_event_NOAA.nc
+AMS,Amsterdam Island,France,-37.7983,77.5378,55.0,LSCE,surface-insitu,5333,2012.1,2015.5,ch4_AMS_surface_hourly_LSCE.nc
+AMT,"Argyle, Maine",United States,45.0345,-68.6821,53.0,NOAA,surface-flask,2815,2003.7,2019.9,ch4_AMT_surface_event_NOAA.nc
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,NOAA,surface-flask,624,2013.9,2019.9,ch4_AMY_surface_event_NOAA.nc
+AMY,Anmyeon-do,Republic of Korea,36.5389,126.3295,47.0,KMA,surface-insitu,70407,2000.6,2015.0,ch4_AMY_surface_hourly_KMA.nc
+AOA,Aircraft Observation of Atmospheric trace gases by JMA,Japan,28.0955,149.069,-9999.99,JMA,aircraft-flask,1818,2011.1,2017.4,ch4_AOA_aircraft_event_JMA.nc
+AOC,Atlantic Ocean Cruise,N/A,-5.0,-23.88,0.0,NOAA,surface-flask,240,2004.4,2005.1,ch4_AOC_surface_event_NOAA.nc
+ASC,Ascension Island,United Kingdom,-7.9667,-14.4,85.0,NOAA,surface-flask,6025,1983.4,2020.0,ch4_ASC_surface_event_NOAA.nc
+ASK,Assekrem,Algeria,23.2625,5.6322,2710.0,NOAA,surface-flask,2041,1995.7,2019.8,ch4_ASK_surface_event_NOAA.nc
+AVI,"St. Croix, Virgin Islands",United States,17.75,-64.75,3.0,NOAA,surface-flask,848,1983.4,1990.7,ch4_AVI_surface_event_NOAA.nc
+AZR,"Terceira Island, Azores",Portugal,38.766,-27.375,19.0,NOAA,surface-flask,2014,1983.4,2020.0,ch4_AZR_surface_event_NOAA.nc
+AZV,Azovo,Russia,54.705,73.0292,110.0,NIES,surface-insitu,37762,2009.8,2018.0,ch4_AZV_surface_hourly_NIES.nc
+BAL,Baltic Sea,Poland,55.35,17.22,3.0,NOAA,surface-flask,3491,1992.7,2011.5,ch4_BAL_surface_event_NOAA.nc
+BAO,"Boulder Atmospheric Observatory, Colorado",United States,40.05,-105.004,1584.0,NOAA,aircraft-flask,12,2008.6,2008.6,ch4_BAO_aircraft_event_NOAA.nc
+BAO,"Boulder Atmospheric Observatory, Colorado",United States,40.05,-105.004,1584.0,NOAA,surface-flask,3682,2007.6,2016.5,ch4_BAO_surface_event_NOAA.nc
+BAO,"Boulder Atmospheric Observatory, Colorado",United States,40.05,-105.004,1584.0,NOAA,surface-insitu,4190,2012.3,2012.5,ch4_BAO_surface_hourly_NOAA.nc
+BCK,"Behchoko, Northwest Territories",Canada,62.7981,-115.9194,160.0,EC,surface-insitu,46857,2010.8,2017.4,ch4_BCK_surface_hourly_EC.nc
+BGI,"Bradgate, Iowa",United States,42.82,-94.41,355.1,NOAA,aircraft-flask,364,2004.7,2005.9,ch4_BGI_aircraft_event_NOAA.nc
+BGU,Begur,Spain,41.97,3.23,11.0,LSCE,surface-flask,593,2000.1,2017.4,ch4_BGU_surface_event_LSCE.nc
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,NIWA,surface-flask,1325,2000.0,2018.0,ch4_BHD_surface_event_NIWA.nc
+BHD,Baring Head Station,New Zealand,-41.4083,174.871,85.0,NOAA,surface-flask,595,1999.8,2019.5,ch4_BHD_surface_event_NOAA.nc
+BIK,Bialystok,Poland,53.2,22.75,183.0,MPI-BGC,surface-flask,626,2005.9,2016.9,ch4_BIK_surface_event_MPI-BGC.nc
+BIR,Birkenes Observatory,Norway,58.3886,8.2519,215.0,NILU,surface-insitu,8401,2016.0,2017.0,ch4_BIR_surface_hourly_NILU.nc
+BKT,Bukit Kototabang,Indonesia,-0.202,100.318,845.0,NOAA,surface-flask,1385,2004.0,2020.0,ch4_BKT_surface_event_NOAA.nc
+BKT,Bukit Kototabang,Indonesia,-0.202,100.318,845.0,EMPA,surface-insitu,23400,2009.8,2014.0,ch4_BKT_surface_hourly_EMPA.nc
+BME,"St. Davids Head, Bermuda",United Kingdom,32.368,-64.6476,12.0,NOAA,surface-flask,1543,1989.1,2010.1,ch4_BME_surface_event_NOAA.nc
+BMW,"Tudor Hill, Bermuda",United Kingdom,32.2647,-64.8788,30.0,NOAA,surface-flask,2414,1989.4,2020.0,ch4_BMW_surface_event_NOAA.nc
+BNE,"Beaver Crossing, Nebraska",United States,40.8,-97.18,465.9,NOAA,aircraft-flask,1118,2004.7,2011.4,ch4_BNE_aircraft_event_NOAA.nc
+BRA,Bratt's Lake Saskatchewan,Canada,50.2017,-104.7113,595.0,EC,surface-insitu,50068,2009.8,2017.4,ch4_BRA_surface_hourly_EC.nc
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,NOAA,surface-flask,7238,1983.3,2020.0,ch4_BRW_surface_event_NOAA.nc
+BRW,Barrow Atmospheric Baseline Observatory,United States,71.323,-156.6114,11.0,NOAA,surface-insitu,263674,1986.1,2020.1,ch4_BRW_surface_hourly_NOAA.nc
+BRZ,Berezorechka,Russia,56.15,84.3333,168.0,NIES,surface-insitu,130694,2008.3,2018.0,ch4_BRZ_surface_hourly_NIES.nc
+BSC,"Black Sea, Constanta",Romania,44.1776,28.6647,0.0,NOAA,surface-flask,1703,1994.8,2012.0,ch4_BSC_surface_event_NOAA.nc
+BWD,"Brentwood, Maryland",United States,38.9343,-76.9556,16.8,NOAA,surface-flask,25,2018.7,2019.7,ch4_BWD_surface_event_NOAA.nc
+CAR,"Briggsdale, Colorado",United States,40.6347,-104.3269,1488.0,NOAA,aircraft-flask,10337,1992.9,2020.1,ch4_CAR_aircraft_event_NOAA.nc
+CBA,"Cold Bay, Alaska",United States,55.21,-162.72,21.34,NOAA,surface-flask,6097,1983.4,2020.0,ch4_CBA_surface_event_NOAA.nc
+CBW,Cabauw,Netherlands,51.9703,4.9264,0.0,ECN,surface-insitu,184575,2005.0,2013.4,ch4_CBW_surface_hourly_ECN.nc
+CBY,"Cambridge Bay, Nunavut Territory",Canada,69.1284,-105.0577,35.0,EC,surface-insitu,37779,2013.0,2017.7,ch4_CBY_surface_hourly_EC.nc
+CDL,"Candle Lake, Saskatchewan",Canada,53.9871,-105.1179,600.0,EC,surface-insitu,31526,2002.5,2008.0,ch4_CDL_surface_hourly_EC.nc
+CEA,CONTRAIL (Comprehensive Observation Network for TRace gases by AIrLiner),,63.56,83.97,-9999.99,NIES,aircraft-flask,887,2012.3,2018.9,ch4_CEA_aircraft_event_NIES.nc
+CFA,"Cape Ferguson, Queensland",Australia,-19.28,147.057,2.0,CSIRO,surface-flask,674,2000.0,2016.9,ch4_CFA_surface_event_CSIRO.nc
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,NOAA,surface-flask,3269,1984.3,2019.7,ch4_CGO_surface_event_NOAA.nc
+CGO,"Cape Grim, Tasmania",Australia,-40.683,144.69,94.0,AGAGE,surface-highfreq,187149,2000.0,2018.0,ch4_CGO_surface_highfreq_AGAGE.nc
+CHL,"Churchill, Manitoba",Canada,58.7379,-93.8194,29.0,EC,surface-flask,737,2007.3,2016.0,ch4_CHL_surface_event_EC.nc
+CHL,"Churchill, Manitoba",Canada,58.7379,-93.8194,29.0,EC,surface-insitu,35765,2011.8,2017.3,ch4_CHL_surface_hourly_EC.nc
+CHM,"Chibougamau, Quebec",Canada,49.6925,-74.3432,393.0,EC,surface-insitu,24019,2007.6,2011.3,ch4_CHM_surface_hourly_EC.nc
+CHR,Christmas Island,Republic of Kiribati,1.7,-157.1518,0.0,NOAA,surface-flask,2397,1984.2,2019.8,ch4_CHR_surface_event_NOAA.nc
+CHS,Cherskii,Russia,68.5135,161.5313,30.0,NOAA,surface-insitu,109083,2008.6,2016.1,ch4_CHS_surface_hourly_NOAA.nc
+CIB,Centro de Investigacion de la Baja Atmosfera (CIBA),Spain,41.81,-4.93,845.0,NOAA,surface-flask,995,2009.3,2019.9,ch4_CIB_surface_event_NOAA.nc
+CMA,"Offshore Cape May, New Jersey",United States,38.83,-74.32,0.0,NOAA,aircraft-flask,2824,2005.6,2020.0,ch4_CMA_aircraft_event_NOAA.nc
+CMN,Mt. Cimone Station,Italy,44.1936,10.6999,2165.0,UNIURB,surface-insitu,78681,2008.5,2018.0,ch4_CMN_surface_hourly_UNIURB.nc
+CMO,"Cape Meares, Oregon",United States,45.478,-123.9689,30.0,NOAA,surface-flask,1063,1983.3,1998.2,ch4_CMO_surface_event_NOAA.nc
+COB,COBRA,N/A,45.0,-90.98,-9999.99,NOAA,aircraft-flask,652,1999.4,2003.5,ch4_COB_aircraft_event_NOAA.nc
+COI,Cape Ochi-ishi,Japan,43.1603,145.4974,45.0,NIES,surface-insitu,136493,2000.0,2016.0,ch4_COI_surface_hourly_NIES.nc
+CON,CONTRAIL (Comprehensive Observation Network for TRace gases by AIrLiner),,3.82,146.09,-9999.99,NIES,aircraft-flask,2400,2005.9,2017.9,ch4_CON_aircraft_event_NIES.nc
+COS,Cosmos,Peru,-12.12,-75.33,4600.0,NOAA,surface-flask,2,1984.6,1984.6,ch4_COS_surface_event_NOAA.nc
+CPS,"Chapais,Quebec",Canada,49.8223,-74.9753,391.0,EC,surface-insitu,44244,2012.0,2017.4,ch4_CPS_surface_hourly_EC.nc
+CPT,Cape Point,South Africa,-34.3523,18.4891,230.0,NOAA,surface-flask,688,2010.1,2019.9,ch4_CPT_surface_event_NOAA.nc
+CPT,Cape Point,South Africa,-34.3523,18.4891,230.0,SAWS,surface-insitu,114400,2000.0,2017.0,ch4_CPT_surface_hourly_SAWS.nc
+CRI,Cape Rama,India,15.08,73.83,60.0,CSIRO,surface-flask,230,2000.0,2013.0,ch4_CRI_surface_event_CSIRO.nc
+CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA,aircraft-flask,2543,2011.2,2017.8,ch4_CRV_aircraft_event_NOAA.nc
+CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA,surface-flask,1532,2011.8,2019.9,ch4_CRV_surface_event_NOAA.nc
+CRV,Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE),United States,64.9863,-147.598,611.43,NOAA,surface-insitu,194916,2011.8,2020.1,ch4_CRV_surface_hourly_NOAA.nc
+CRZ,Crozet Island,France,-46.4337,51.8478,197.0,NOAA,surface-flask,2066,1991.2,2019.8,ch4_CRZ_surface_event_NOAA.nc
+CVO,Cape Verde Observatory,Cabo Verde,16.864,-24.8675,10.0,MPI-BGC,surface-flask,1207,2007.2,2017.3,ch4_CVO_surface_event_MPI-BGC.nc
+CYA,"Casey, Antarctica",Australia,-66.283,110.517,47.0,CSIRO,surface-flask,679,2000.0,2017.0,ch4_CYA_surface_event_CSIRO.nc
+DEM,Demyanskoe,Russia,59.7914,70.8711,63.0,NIES,surface-insitu,126901,2005.6,2018.0,ch4_DEM_surface_hourly_NIES.nc
+DEU,Deuselbach,Germany,49.77,7.05,480.0,UBA,surface-insitu,33820,2000.0,2004.6,ch4_DEU_surface_hourly_UBA.nc
+DND,"Dahlen, North Dakota",United States,47.5,-99.24,472.44,NOAA,aircraft-flask,2192,2004.7,2016.9,ch4_DND_aircraft_event_NOAA.nc
+DRP,Drake Passage,N/A,-59.0,-64.69,0.0,NOAA,surface-flask,642,2003.3,2019.9,ch4_DRP_surface_event_NOAA.nc
+DSI,Dongsha Island,Taiwan,20.6992,116.7297,3.0,NOAA,surface-flask,881,2010.2,2020.0,ch4_DSI_surface_event_NOAA.nc
+EGB,"Egbert, Ontario",Canada,44.231,-79.7838,251.0,EC,surface-insitu,86187,2005.2,2017.0,ch4_EGB_surface_hourly_EC.nc
+EIC,Easter Island,Chile,-27.1597,-109.4284,47.0,NOAA,surface-flask,1866,1994.0,2019.9,ch4_EIC_surface_event_NOAA.nc
+ESP,"Estevan Point,  British Columbia",Canada,49.383,-126.5441,7.0,NOAA,aircraft-flask,4635,2002.9,2019.9,ch4_ESP_aircraft_event_NOAA.nc
+ESP,"Estevan Point,  British Columbia",Canada,49.383,-126.5441,7.0,EC,surface-flask,1300,2000.0,2016.0,ch4_ESP_surface_event_EC.nc
+ESP,"Estevan Point,  British Columbia",Canada,49.383,-126.5441,7.0,EC,surface-insitu,62586,2009.2,2017.4,ch4_ESP_surface_hourly_EC.nc
+EST,"Esther, Alberta",Canada,51.6707,-110.206,707.0,EC,surface-insitu,62329,2010.1,2017.4,ch4_EST_surface_hourly_EC.nc
+ETL,"East Trout Lake, Saskatchewan",Canada,54.3541,-104.9868,493.0,NOAA,aircraft-flask,3243,2005.8,2020.1,ch4_ETL_aircraft_event_NOAA.nc
+ETL,"East Trout Lake, Saskatchewan",Canada,54.3541,-104.9868,493.0,EC,surface-insitu,90593,2005.7,2017.4,ch4_ETL_surface_hourly_EC.nc
+FAM,FAAM Aircraft,United Kingdom,52.1791,1.0945,-9999.99,NOAA,aircraft-flask,22,2014.5,2015.4,ch4_FAM_aircraft_event_NOAA.nc
+FKL,"Finokalia, Crete",Greece,35.3378,25.6694,150.0,LSCE,surface-flask,390,2000.5,2017.6,ch4_FKL_surface_event_LSCE.nc
+FKL,"Finokalia, Crete",Greece,35.3378,25.6694,150.0,LSCE,surface-insitu,29578,2014.4,2018.1,ch4_FKL_surface_hourly_LSCE.nc
+FNE,"Fort Nelson, British Columbia",Canada,58.8412,-122.5737,361.0,EC,surface-insitu,14431,2014.5,2017.4,ch4_FNE_surface_hourly_EC.nc
+FSD,Fraserdale,Canada,49.8752,-81.57,210.0,EC,surface-insitu,124100,2000.0,2017.4,ch4_FSD_surface_hourly_EC.nc
+FTL,Fortaleza,Brazil,-3.52,-38.28,3.0,NOAA,aircraft-flask,162,2000.9,2003.2,ch4_FTL_aircraft_event_NOAA.nc
+FWI,"Fairchild, Wisconsin",United States,44.66,-90.96,334.3,NOAA,aircraft-flask,381,2004.7,2005.9,ch4_FWI_aircraft_event_NOAA.nc
+GIF,Gif sur Yvette,France,48.71,2.1475,160.0,LSCE,surface-insitu,51250,2004.7,2013.0,ch4_GIF_surface_hourly_LSCE.nc
+GMI,Mariana Islands,Guam,13.386,144.656,0.0,NOAA,surface-flask,5067,1983.3,2020.0,ch4_GMI_surface_event_NOAA.nc
+GOZ,"Dwejra Point, Gozo",Malta,36.048,14.889,1.0,NOAA,surface-flask,310,1993.8,1999.1,ch4_GOZ_surface_event_NOAA.nc
+GPA,Gunn Point,Australia,-12.2488,131.0453,25.0,CSIRO,surface-flask,89,2010.6,2015.8,ch4_GPA_surface_event_CSIRO.nc
+GSN,"Gosan, Cheju Island",Republic of Korea,33.28,126.15,72.0,NIER,surface-insitu,64961,2002.1,2011.4,ch4_GSN_surface_hourly_NIER.nc
+HAA,"Molokai Island, Hawaii",United States,21.23,-158.95,3.0,NOAA,aircraft-flask,2628,1999.4,2008.3,ch4_HAA_aircraft_event_NOAA.nc
+HAT,Hateruma Island,Japan,24.05,123.8,10.0,NIES,surface-insitu,134193,2000.0,2016.0,ch4_HAT_surface_hourly_NIES.nc
+HBA,"Halley Station, Antarctica",United Kingdom,-75.605,-26.21,30.0,NOAA,surface-flask,2600,1983.0,2019.0,ch4_HBA_surface_event_NOAA.nc
+HFM,"Harvard Forest, Massachusetts",United States,42.5378,-72.1714,340.0,NOAA,aircraft-flask,1734,1999.9,2007.9,ch4_HFM_aircraft_event_NOAA.nc
+HFM,"Harvard Forest, Massachusetts",United States,42.5378,-72.1714,340.0,NOAA,surface-flask,12,2016.2,2016.6,ch4_HFM_surface_event_NOAA.nc
+HIL,"Homer, Illinois",United States,40.07,-87.91,201.5,NOAA,aircraft-flask,3426,2004.7,2020.1,ch4_HIL_aircraft_event_NOAA.nc
+HIP,HIPPO (HIAPER Pole-to-Pole Observations),United States,14.7446,-154.6992,-9999.99,NOAA,aircraft-flask,1416,2009.0,2011.7,ch4_HIP_aircraft_event_NOAA.nc
+HLE,Hanle,India,32.78,78.96,4517.0,LSCE,surface-flask,321,2000.9,2016.3,ch4_HLE_surface_event_LSCE.nc
+HNP,"Hanlan's Point, Ontario",Canada,43.6122,-79.3887,87.0,EC,surface-insitu,17762,2014.5,2017.3,ch4_HNP_surface_hourly_EC.nc
+HOW,"Howland, Maine",United States,42.2,-68.13,-9999.99,NOAA,aircraft-flask,32,1997.0,1997.5,ch4_HOW_aircraft_event_NOAA.nc
+HPB,Hohenpeissenberg,Germany,47.8011,11.0245,936.0,NOAA,surface-flask,1411,2006.3,2019.9,ch4_HPB_surface_event_NOAA.nc
+HPB,Hohenpeissenberg,Germany,47.8011,11.0245,936.0,DWD,surface-insitu,34288,2015.7,2017.0,ch4_HPB_surface_hourly_DWD.nc
+HSU,Humboldt State University,United States,41.0588,-124.75,0.0,NOAA,surface-flask,172,2008.4,2017.4,ch4_HSU_surface_event_NOAA.nc
+HUN,Hegyhatsal,Hungary,46.95,16.65,248.0,NOAA,surface-flask,2664,1993.2,2019.9,ch4_HUN_surface_event_NOAA.nc
+HUN,Hegyhatsal,Hungary,46.95,16.65,248.0,ELTE,surface-insitu,38169,2006.2,2014.8,ch4_HUN_surface_hourly_ELTE.nc
+ICE,"Storhofdi, Vestmannaeyjar",Iceland,63.3998,-20.2884,118.0,NOAA,surface-flask,2438,1992.8,2019.9,ch4_ICE_surface_event_NOAA.nc
+IGR,Igrim,Russia,63.1903,64.4156,9.0,NIES,surface-insitu,107699,2005.3,2013.6,ch4_IGR_surface_hourly_NIES.nc
+INU,"Inuvik,Northwest Territories",Canada,68.3178,-133.5342,113.0,EC,surface-insitu,44455,2012.1,2017.5,ch4_INU_surface_hourly_EC.nc
+INX,INFLUX (Indianapolis Flux Experiment),United States,39.5805,-86.4207,-9999.99,NOAA,aircraft-flask,351,2010.8,2016.4,ch4_INX_aircraft_event_NOAA.nc
+INX,INFLUX (Indianapolis Flux Experiment),United States,39.5805,-86.4207,-9999.99,NOAA,surface-flask,2274,2010.8,2019.8,ch4_INX_surface_event_NOAA.nc
+IPR,Ispra,Italy,45.807,8.63,223.0,IES,surface-insitu,57560,2007.8,2017.0,ch4_IPR_surface_hourly_IES.nc
+ITN,"Grifton, North Carolina",United States,35.365,-77.393,8.0,NOAA,surface-flask,1181,1992.6,1999.4,ch4_ITN_surface_event_NOAA.nc
+IZO,"Izana, Tenerife, Canary Islands",Spain,28.309,-16.499,2372.9,NOAA,surface-flask,2469,1991.9,2019.9,ch4_IZO_surface_event_NOAA.nc
+IZO,"Izana, Tenerife, Canary Islands",Spain,28.309,-16.499,2372.9,AEMET,surface-insitu,128066,2000.0,2017.0,ch4_IZO_surface_hourly_AEMET.nc
+JFJ,Jungfraujoch,Switzerland,46.55,7.987,3570.0,MPI-BGC,surface-flask,615,2008.0,2017.7,ch4_JFJ_surface_event_MPI-BGC.nc
+JFJ,Jungfraujoch,Switzerland,46.55,7.987,3570.0,EMPA,surface-insitu,100363,2005.1,2018.0,ch4_JFJ_surface_hourly_EMPA.nc
+KAS,"Kasprowy Wierch, High Tatra",Poland,49.2325,19.9818,1989.0,AGH,surface-insitu,24909,2009.1,2013.0,ch4_KAS_surface_hourly_AGH.nc
+KCO,Kaashidhoo,Republic of Maldives,4.97,73.47,1.0,NOAA,surface-flask,89,1998.2,1999.5,ch4_KCO_surface_event_NOAA.nc
+KEY,"Key Biscayne, Florida",United States,25.6654,-80.158,1.0,NOAA,surface-flask,2869,1983.8,2019.9,ch4_KEY_surface_event_NOAA.nc
+KJO,Kjölnes,Norway,70.8531,29.2358,5.0,MPI-BGC,surface-flask,94,2014.8,2016.1,ch4_KJO_surface_event_MPI-BGC.nc
+KMP,Kumpula,Finland,60.2039,24.9608,26.0,FMI,surface-insitu,64738,2010.1,2018.0,ch4_KMP_surface_hourly_FMI.nc
+KOR,Akademik Korolev,N/A,-1.6,160.0,-9999.99,NOAA,surface-flask,99,1987.4,1987.6,ch4_KOR_surface_event_NOAA.nc
+KPA,"Kitt Peak, Arizona",United States,32.0,-112.0,2083.0,NOAA,surface-flask,68,1983.3,1989.8,ch4_KPA_surface_event_NOAA.nc
+KRS,Karasevoe,Russia,58.2456,82.4244,76.0,NIES,surface-insitu,135853,2004.7,2018.0,ch4_KRS_surface_hourly_NIES.nc
+KUM,"Cape Kumukahi, Hawaii",United States,19.7371,-155.0116,0.3,NOAA,surface-flask,8279,1983.3,2020.0,ch4_KUM_surface_event_NOAA.nc
+KZD,Sary Taukum,Kazakhstan,44.0839,76.8712,595.0,NOAA,surface-flask,1129,1997.8,2009.6,ch4_KZD_surface_event_NOAA.nc
+KZM,Plateau Assy,Kazakhstan,43.25,77.88,2519.0,NOAA,surface-flask,1125,1997.8,2009.6,ch4_KZM_surface_event_NOAA.nc
+LAC,LA Megacities,United States,34.0,-118.2,100.0,NOAA,surface-flask,753,2014.8,2017.8,ch4_LAC_surface_event_NOAA.nc
+LAU,Lauder,New Zealand,-45.04,169.68,370.0,NIWA,surface-flask,358,2009.3,2018.0,ch4_LAU_surface_event_NIWA.nc
+LAU,Lauder,New Zealand,-45.04,169.68,370.0,NIWA,surface-insitu,887,2007.0,2017.0,ch4_LAU_surface_hourly_NIWA.nc
+LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,NOAA,aircraft-flask,4468,1998.3,2020.1,ch4_LEF_aircraft_event_NOAA.nc
+LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,NOAA,surface-flask,6806,1994.9,2020.1,ch4_LEF_surface_event_NOAA.nc
+LEF,"Park Falls, Wisconsin",United States,45.9451,-90.2732,472.0,NOAA,surface-insitu,192743,2010.7,2020.1,ch4_LEF_surface_hourly_NOAA.nc
+LEW,"Lewisburg, Pennsylvania",United States,40.9447,-76.8789,161.0,NOAA,surface-flask,851,2013.2,2020.1,ch4_LEW_surface_event_NOAA.nc
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,NOAA,surface-flask,463,2008.1,2013.2,ch4_LLB_surface_event_NOAA.nc
+LLB,"Lac La Biche, Alberta",Canada,54.9538,-112.4666,540.0,EC,surface-insitu,75803,2007.3,2017.4,ch4_LLB_surface_hourly_EC.nc
+LLE,Long Lines Expedition,N/A,-39.02,1.0,-9999.99,NOAA,surface-flask,39,1983.8,1984.1,ch4_LLE_surface_event_NOAA.nc
+LLN,Lulin,Taiwan,23.47,120.87,2862.0,NOAA,surface-flask,1382,2006.6,2020.0,ch4_LLN_surface_event_NOAA.nc
+LMP,Lampedusa,Italy,35.52,12.62,45.0,ENEA,surface-flask,745,2000.0,2015.0,ch4_LMP_surface_event_ENEA.nc
+LMP,Lampedusa,Italy,35.52,12.62,45.0,NOAA,surface-flask,1157,2006.8,2019.9,ch4_LMP_surface_event_NOAA.nc
+LMP,Lampedusa,Italy,35.52,12.62,45.0,ENEA,surface-insitu,30800,2014.0,2017.7,ch4_LMP_surface_hourly_ENEA.nc
+LPO,Ile Grande,France,48.8036,-3.5839,10.0,LSCE,surface-flask,272,2004.9,2013.7,ch4_LPO_surface_event_LSCE.nc
+MAA,"Mawson Station, Antarctica",Australia,-67.617,62.867,32.0,CSIRO,surface-flask,765,2000.0,2017.0,ch4_MAA_surface_event_CSIRO.nc
+MBC,"Mould Bay, Northwest Territories",Canada,76.247,-119.3533,30.0,NOAA,surface-flask,1992,1983.3,1997.4,ch4_MBC_surface_event_NOAA.nc
+MBO,Mt. Bachelor Observatory,United States,43.9775,-121.6861,2731.0,NOAA,surface-flask,1714,2011.8,2020.1,ch4_MBO_surface_event_NOAA.nc
+MCI,Mid Continent Intensive,United States,40.25,-87.09,-9999.99,NOAA,aircraft-flask,184,2007.4,2009.0,ch4_MCI_aircraft_event_NOAA.nc
+MCM,"McMurdo Station, Antarctica",United States,-77.83,166.6,11.0,NOAA,surface-flask,89,1985.9,1987.8,ch4_MCM_surface_event_NOAA.nc
+MDM,Madonie Mountains,Italy,37.88,14.03,1650.0,ENEA,surface-flask,400,2005.2,2017.9,ch4_MDM_surface_event_ENEA.nc
+MEX,High Altitude Global Climate Observation Center,Mexico,18.9841,-97.311,4464.0,NOAA,surface-flask,889,2009.0,2019.9,ch4_MEX_surface_event_NOAA.nc
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,LSCE,surface-flask,780,2000.0,2017.7,ch4_MHD_surface_event_LSCE.nc
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,NOAA,surface-flask,2700,1991.4,2020.0,ch4_MHD_surface_event_NOAA.nc
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,AGAGE,surface-highfreq,147292,2000.0,2017.7,ch4_MHD_surface_highfreq_AGAGE.nc
+MHD,"Mace Head, County Galway",Ireland,53.326,-9.899,5.0,LSCE,surface-insitu,68168,2010.0,2018.1,ch4_MHD_surface_hourly_LSCE.nc
+MID,"Sand Island, Midway",United States,28.21,-177.38,11.0,NOAA,surface-flask,3461,1985.3,2020.0,ch4_MID_surface_event_NOAA.nc
+MKN,Mt. Kenya,Kenya,-0.0622,37.2972,3644.0,NOAA,surface-flask,315,2004.0,2011.5,ch4_MKN_surface_event_NOAA.nc
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,NOAA,surface-flask,6133,1983.3,2020.0,ch4_MLO_surface_event_NOAA.nc
+MLO,"Mauna Loa, Hawaii",United States,19.5362,-155.5763,3397.0,NOAA,surface-insitu,271601,1987.3,2020.1,ch4_MLO_surface_hourly_NOAA.nc
+MNM,Minamitorishima,Japan,24.28,153.98,8.0,JMA,surface-insitu,137341,2000.0,2018.0,ch4_MNM_surface_hourly_JMA.nc
+MQA,Macquarie Island,Australia,-54.483,158.967,6.0,CSIRO,surface-flask,771,2000.0,2017.0,ch4_MQA_surface_event_CSIRO.nc
+MRC,Marcellus Pennsylvania,United States,41.4662,-76.4188,592.0,NOAA,aircraft-flask,77,2015.4,2015.4,ch4_MRC_aircraft_event_NOAA.nc
+MRC,Marcellus Pennsylvania,United States,41.4662,-76.4188,592.0,NOAA,surface-flask,707,2015.6,2020.0,ch4_MRC_surface_event_NOAA.nc
+MSH,"Mashpee, Massachusetts",United States,41.6568,-70.4973,32.3,NOAA,surface-flask,348,2016.4,2020.0,ch4_MSH_surface_event_NOAA.nc
+MVY,"Marthas Vineyard, Massachusetts",United States,41.325,-70.5667,0.0,NOAA,surface-flask,210,2007.7,2011.2,ch4_MVY_surface_event_NOAA.nc
+MWO,Mt. Wilson Observatory,United States,34.2246,-118.0586,1728.0,NOAA,surface-flask,3788,2010.3,2020.1,ch4_MWO_surface_event_NOAA.nc
+NAT,Farol De Mae Luiza Lighthouse,Brazil,-5.7952,-35.1853,50.0,NOAA,surface-flask,770,2010.7,2020.0,ch4_NAT_surface_event_NOAA.nc
+NEB,"NE Baltimore, Maryland",United States,39.3154,-76.583,44.0,NOAA,surface-flask,48,2018.3,2019.6,ch4_NEB_surface_event_NOAA.nc
+NGL,Neuglobsow,Germany,53.17,13.03,65.0,UBA,surface-insitu,116056,2000.0,2014.0,ch4_NGL_surface_hourly_UBA.nc
+NGM,Western Pacific Ocean,N/A,0.0,152.0,-9999.99,TU,shipboard-flask,629,2006.2,2012.7,ch4_NGM_surface_event_TU.nc
+NHA,"Offshore Portsmouth, New Hampshire (Isles of Shoals)",United States,42.95,-70.63,0.0,NOAA,aircraft-flask,3789,2003.7,2020.1,ch4_NHA_aircraft_event_NOAA.nc
+NMB,Gobabeb,Namibia,-23.58,15.03,456.0,MPI-BGC,surface-flask,372,2013.2,2017.3,ch4_NMB_surface_event_MPI-BGC.nc
+NMB,Gobabeb,Namibia,-23.58,15.03,456.0,NOAA,surface-flask,1159,1997.0,2019.7,ch4_NMB_surface_event_NOAA.nc
+NOV,Novosibirsk,Russia,55.0,83.0,0.0,NIES,aircraft-flask,2524,2000.1,2016.0,ch4_NOV_aircraft_event_NIES.nc
+NOY,Noyabrsk,Russia,63.4292,75.78,108.0,NIES,surface-insitu,84296,2005.8,2018.0,ch4_NOY_surface_hourly_NIES.nc
+NSA,"North Slope, Alaska",United States,70.1797,-150.5969,-9999.99,NOAA,aircraft-flask,379,2015.3,2016.6,ch4_NSA_aircraft_event_NOAA.nc
+NWB,NW Baltimore,United States,39.3445,-76.6851,135.0,NOAA,surface-flask,54,2018.3,2019.6,ch4_NWB_surface_event_NOAA.nc
+NWF,"Niwot Ridge Forest, Colorado",United States,40.03,-105.55,3050.0,NOAA,surface-flask,893,2006.1,2009.9,ch4_NWF_surface_event_NOAA.nc
+NWR,"Niwot Ridge, Colorado",United States,40.0531,-105.5864,3523.0,NOAA,surface-flask,7369,1983.4,2020.1,ch4_NWR_surface_event_NOAA.nc
+NYA,"Ny-Alesund, Svalbard",Norway and Sweden,78.917,11.933,40.0,NIPR,surface-flask,947,2000.0,2020.0,ch4_NYA_surface_event_NIPR.nc
+NZL,Kaitorete Spit,New Zealand,-43.83,172.63,3.0,NOAA,surface-flask,182,1983.4,1985.3,ch4_NZL_surface_event_NOAA.nc
+OBN,Obninsk,Russia,55.11,36.6,183.0,NOAA,surface-flask,455,2004.0,2009.3,ch4_OBN_surface_event_NOAA.nc
+OIL,"Oglesby, Illinois",United States,41.28,-88.94,192.6,NOAA,aircraft-flask,424,2004.7,2005.9,ch4_OIL_aircraft_event_NOAA.nc
+OPW,"Olympic Peninsula, Washington",United States,48.2997,-124.6276,486.0,NOAA,surface-flask,310,1984.8,1990.4,ch4_OPW_surface_event_NOAA.nc
+ORL,Orleans,France,47.83,2.5,175.0,LSCE,aircraft-flask,2156,2000.0,2017.6,ch4_ORL_aircraft_event_LSCE.nc
+OXK,Ochsenkopf,Germany,50.0301,11.8084,1022.0,MPI-BGC,surface-flask,1858,2003.1,2017.8,ch4_OXK_surface_event_MPI-BGC.nc
+OXK,Ochsenkopf,Germany,50.0301,11.8084,1022.0,NOAA,surface-flask,1158,2003.2,2019.4,ch4_OXK_surface_event_NOAA.nc
+PAL,"Pallas-Sammaltunturi, GAW Station",Finland,67.9733,24.1157,565.0,NOAA,surface-flask,1615,2002.0,2019.9,ch4_PAL_surface_event_NOAA.nc
+PAL,"Pallas-Sammaltunturi, GAW Station",Finland,67.9733,24.1157,565.0,FMI,surface-insitu,110383,2004.1,2018.0,ch4_PAL_surface_hourly_FMI.nc
+PCO,"Pico, Azores",Portugal,38.47,-28.4,2225.0,NOAA,surface-flask,12,2010.6,2011.5,ch4_PCO_surface_event_NOAA.nc
+PDI,Pha Din,Vietnam,21.5731,103.5157,1466.0,EMPA,surface-insitu,15978,2014.1,2016.9,ch4_PDI_surface_hourly_EMPA.nc
+PDM,Pic Du Midi,France,42.9372,0.1411,2877.0,LSCE,surface-flask,540,2001.4,2015.6,ch4_PDM_surface_event_LSCE.nc
+PDM,Pic Du Midi,France,42.9372,0.1411,2877.0,LSCE,surface-insitu,30357,2014.3,2018.0,ch4_PDM_surface_hourly_LSCE.nc
+PFA,"Poker Flat, Alaska",United States,64.9,-148.76,210.0,NOAA,aircraft-flask,4799,1999.5,2020.1,ch4_PFA_aircraft_event_NOAA.nc
+PIP,off the Pacific coast of Sendai,Japan,37.81,141.35,0.0,TU,aircraft-flask,2044,2000.1,2010.6,ch4_PIP_aircraft_event_TU.nc
+POC,Pacific Ocean,N/A,1.22,149.745,0.0,NIWA,surface-flask,350,2000.7,2013.4,ch4_POC_surface_event_NIWA.nc
+POC,Pacific Ocean,N/A,0.0,-147.17,0.0,NOAA,surface-flask,13411,1987.0,2017.5,ch4_POC_surface_event_NOAA.nc
+PRS,Plateau Rosa Station,Italy,45.93,7.7,3480.0,RSE,surface-insitu,67249,2005.0,2017.0,ch4_PRS_surface_hourly_RSE.nc
+PSA,"Palmer Station, Antarctica",United States,-64.92,-64.0,10.0,NOAA,surface-flask,3520,1983.0,2019.8,ch4_PSA_surface_event_NOAA.nc
+PTA,"Point Arena, California",United States,38.9546,-123.7408,17.0,NOAA,surface-flask,995,1999.0,2011.4,ch4_PTA_surface_event_NOAA.nc
+PUY,Puy de Dome,France,45.7719,2.9658,1465.0,LSCE,surface-flask,728,2001.6,2017.6,ch4_PUY_surface_event_LSCE.nc
+PUY,Puy de Dome,France,45.7719,2.9658,1465.0,LSCE,surface-insitu,49999,2011.3,2018.1,ch4_PUY_surface_hourly_LSCE.nc
+RBA,"Roof Butte, Arizona",United States,36.4614,-109.0956,2982.0,IPEN,aircraft-flask,1536,2010.0,2016.4,ch4_RBA_aircraft_event_IPEN.nc
+RPB,Ragged Point,Barbados,13.165,-59.432,15.0,NOAA,surface-flask,3155,1987.9,2020.1,ch4_RPB_surface_event_NOAA.nc
+RPB,Ragged Point,Barbados,13.165,-59.432,15.0,AGAGE,surface-highfreq,158721,2000.0,2017.1,ch4_RPB_surface_highfreq_AGAGE.nc
+RTA,Rarotonga,Cook Islands,-21.25,-159.83,3.0,NOAA,aircraft-flask,3527,2000.3,2020.1,ch4_RTA_aircraft_event_NOAA.nc
+RYO,Ryori,Japan,39.03,141.82,260.0,JMA,surface-insitu,137326,2000.0,2018.0,ch4_RYO_surface_hourly_JMA.nc
+S2K,"Safari 2000, Southern Africian Regional Science",South Africa,-24.26,28.5,-999.0,NOAA,aircraft-flask,183,2000.6,2000.7,ch4_S2K_aircraft_event_NOAA.nc
+SAN,Santarem,Brazil,-2.85,-54.95,78.0,IPEN,aircraft-flask,3434,2004.3,2015.3,ch4_SAN_aircraft_event_IPEN.nc
+SAN,Santarem,Brazil,-2.85,-54.95,78.0,NOAA,aircraft-flask,378,2000.9,2003.6,ch4_SAN_aircraft_event_NOAA.nc
+SCA,"Offshore Charleston, South Carolina",United States,32.77,-79.55,0.0,NOAA,aircraft-flask,3446,2003.6,2020.0,ch4_SCA_aircraft_event_NOAA.nc
+SCS,South China Sea,N/A,12.0,111.0,0.0,NOAA,surface-flask,3268,1991.5,1998.8,ch4_SCS_surface_event_NOAA.nc
+SCT,"Beech Island, South Carolina",United States,33.4057,-81.8334,115.2,NOAA,surface-flask,3265,2008.6,2020.1,ch4_SCT_surface_event_NOAA.nc
+SCT,"Beech Island, South Carolina",United States,33.4057,-81.8334,115.2,NOAA,surface-insitu,104932,2015.6,2020.1,ch4_SCT_surface_hourly_NOAA.nc
+SDZ,Shangdianzi,Peoples Republic of China,40.65,117.117,293.0,NOAA,surface-flask,592,2009.7,2015.7,ch4_SDZ_surface_event_NOAA.nc
+SEY,Mahe Island,Seychelles,-4.6824,55.5325,2.0,NOAA,surface-flask,3505,1983.4,2019.9,ch4_SEY_surface_event_NOAA.nc
+SGI,"Bird Island, South Georgia",United Kingdom,-54.0,-38.05,30.0,NOAA,surface-flask,143,1989.1,1992.6,ch4_SGI_surface_event_NOAA.nc
+SGP,"Southern Great Plains, Oklahoma",United States,36.607,-97.489,314.0,NOAA,aircraft-flask,7589,1998.2,2020.1,ch4_SGP_aircraft_event_NOAA.nc
+SGP,"Southern Great Plains, Oklahoma",United States,36.607,-97.489,314.0,NOAA,surface-flask,2133,2002.3,2020.0,ch4_SGP_surface_event_NOAA.nc
+SHM,"Shemya Island, Alaska",United States,52.7112,174.126,23.0,NOAA,surface-flask,3126,1985.7,2020.0,ch4_SHM_surface_event_NOAA.nc
+SIO,"La Jolla, California",United States,32.83,-117.27,14.0,NOAA,surface-flask,41,1984.1,1986.7,ch4_SIO_surface_event_NOAA.nc
+SIS,Shetland Islands,Scotland,60.089,-1.255,30.0,CSIRO,surface-flask,115,2000.0,2004.0,ch4_SIS_surface_event_CSIRO.nc
+SIS,Shetland Islands,Scotland,60.089,-1.255,30.0,MPI-BGC,surface-flask,1962,2003.8,2017.7,ch4_SIS_surface_event_MPI-BGC.nc
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,NOAA,surface-flask,7467,1983.3,2020.0,ch4_SMO_surface_event_NOAA.nc
+SMO,Tutuila,American Samoa,-14.2474,-170.5644,42.0,AGAGE,surface-highfreq,166435,2000.0,2017.7,ch4_SMO_surface_highfreq_AGAGE.nc
+SOD,Sodankyla,Finland,67.3618,26.6382,179.0,FMI,surface-insitu,46209,2012.0,2018.0,ch4_SOD_surface_hourly_FMI.nc
+SPO,"South Pole, Antarctica",United States,-89.98,-24.8,2810.0,NOAA,surface-flask,4940,1983.1,2019.9,ch4_SPO_surface_event_NOAA.nc
+SSL,"Schauinsland, Baden-Wuerttemberg",Germany,47.92,7.92,1205.0,UBA,surface-insitu,101225,2000.0,2014.0,ch4_SSL_surface_hourly_UBA.nc
+STM,Ocean Station M,Norway,66.0,2.0,0.0,NOAA,surface-flask,4780,1983.3,2009.9,ch4_STM_surface_event_NOAA.nc
+STR,"Sutro Tower, San Francisco, California",United States,37.7553,-122.4517,254.0,NOAA,surface-flask,6567,2007.8,2020.1,ch4_STR_surface_event_NOAA.nc
+SUM,Summit,Greenland,72.5962,-38.422,3209.54,NOAA,surface-flask,1922,1997.5,2019.6,ch4_SUM_surface_event_NOAA.nc
+SUR,Surgut,Russia,61.2,73.2,40.0,NIES,aircraft-flask,1354,2000.1,2015.9,ch4_SUR_aircraft_event_NIES.nc
+SYO,"Syowa Station, Antarctica",Japan,-69.0125,39.59,14.0,NOAA,surface-flask,1471,1986.1,2019.1,ch4_SYO_surface_event_NOAA.nc
+TAB,Tabatinga,Brazil,-5.95,-70.07,-9999.99,IPEN,aircraft-flask,495,2010.0,2012.9,ch4_TAB_aircraft_event_IPEN.nc
+TAC,Tacolneston,United Kingdom,52.5177,1.1386,56.0,NOAA,surface-flask,108,2014.4,2016.0,ch4_TAC_surface_event_NOAA.nc
+TAO,"Toronto Atmospheric Observatory, University of Toronto, Ontario",Canada,43.66,-79.4,100.0,EC,surface-insitu,16843,2013.8,2016.0,ch4_TAO_surface_hourly_EC.nc
+TAP,Tae-ahn Peninsula,Republic of Korea,36.7376,126.1328,16.0,NOAA,surface-flask,3787,1990.9,2020.0,ch4_TAP_surface_event_NOAA.nc
+TDA,over Japan between Sendai and Fukuoka,Japan,36.225,135.925,-99.99,TU,aircraft-flask,2690,2000.0,2010.6,ch4_TDA_aircraft_event_TU.nc
+TEF,Tefe,Brazil,-3.6,-66.5,-9999.0,IPEN,aircraft-flask,400,2013.1,2015.2,ch4_TEF_aircraft_event_IPEN.nc
+TER,Teriberka,Russia,69.2,35.1,40.0,MGO,surface-flask,654,2003.1,2017.0,ch4_TER_surface_event_MGO.nc
+TGC,"Offshore Corpus Christi, Texas",United States,27.73,-96.86,0.0,NOAA,aircraft-flask,2777,2003.7,2020.0,ch4_TGC_aircraft_event_NOAA.nc
+THD,"Trinidad Head, California",United States,41.0541,-124.151,107.0,NOAA,aircraft-flask,2581,2003.7,2020.0,ch4_THD_aircraft_event_NOAA.nc
+THD,"Trinidad Head, California",United States,41.0541,-124.151,107.0,NOAA,surface-flask,1522,2002.3,2017.4,ch4_THD_surface_event_NOAA.nc
+THD,"Trinidad Head, California",United States,41.0541,-124.151,107.0,AGAGE,surface-highfreq,175977,2000.0,2017.7,ch4_THD_surface_highfreq_AGAGE.nc
+TIK,Hydrometeorological Observatory of Tiksi,Russia,71.5965,128.8887,19.0,MGO,surface-flask,241,2011.1,2016.2,ch4_TIK_surface_event_MGO.nc
+TIK,Hydrometeorological Observatory of Tiksi,Russia,71.5965,128.8887,19.0,NOAA,surface-flask,672,2011.6,2018.7,ch4_TIK_surface_event_NOAA.nc
+TIK,Hydrometeorological Observatory of Tiksi,Russia,71.5965,128.8887,19.0,FMI,surface-insitu,56302,2010.7,2018.0,ch4_TIK_surface_hourly_FMI.nc
+TLL,El Tololo,Chile,-30.1725,-70.7992,2220.0,EMPA,surface-insitu,18255,2013.3,2015.8,ch4_TLL_surface_hourly_EMPA.nc
+TMD,"Thurmont, Maryland",United States,39.5768,-77.4881,561.0,NOAA,surface-flask,102,2017.6,2019.7,ch4_TMD_surface_event_NOAA.nc
+TOM,Atmospheric Tomography Mission (ATom),United States,15.4238,-114.4385,-9999.99,NOAA,aircraft-flask,589,2016.6,2017.1,ch4_TOM_aircraft_event_NOAA.nc
+TPD,"Turkey Point, Ontario",Canada,42.6354,-80.5577,231.0,EC,surface-insitu,38996,2012.8,2017.4,ch4_TPD_surface_hourly_EC.nc
+TPI,Taiping Island,Taiwan,10.3786,114.3711,4.0,NOAA,surface-flask,54,2019.4,2019.9,ch4_TPI_surface_event_NOAA.nc
+TRM,Tromelin Island,France,-15.88,54.52,8.0,LSCE,surface-flask,130,2000.0,2007.3,ch4_TRM_surface_event_LSCE.nc
+TRN,Trainou,France,47.9647,2.1125,131.0,LSCE,surface-insitu,91644,2006.7,2012.3,ch4_TRN_surface_hourly_LSCE.nc
+TTA,Tall Tower Angus,United Kingdom,56.5551,-2.9858,400.0,UOB,surface-insitu,44137,2006.0,2012.8,ch4_TTA_surface_hourly_UOB.nc
+ULB,Ulaanbaatar,Mongolia,47.4,106.0,1350.0,NOAA,aircraft-flask,556,2004.2,2009.2,ch4_ULB_aircraft_event_NOAA.nc
+USH,Ushuaia,Argentina,-54.8484,-68.3106,12.0,NOAA,surface-flask,1348,1994.7,2019.7,ch4_USH_surface_event_NOAA.nc
+UTA,"Wendover, Utah",United States,39.9018,-113.7181,1327.0,NOAA,surface-flask,2827,1993.3,2020.0,ch4_UTA_surface_event_NOAA.nc
+UTO,Uto,Finland,59.7839,21.3672,8.0,FMI,surface-insitu,43800,2012.2,2018.0,ch4_UTO_surface_hourly_FMI.nc
+UUM,Ulaan Uul,Mongolia,44.4516,111.0956,1007.0,NOAA,surface-flask,2701,1992.0,2019.9,ch4_UUM_surface_event_NOAA.nc
+VGN,Vaganovo,Russia,54.4972,62.3247,192.0,NIES,surface-insitu,58739,2008.4,2018.0,ch4_VGN_surface_hourly_NIES.nc
+VKV,Voeikov,Russia,59.95,30.7,70.0,MGO,surface-insitu,26250,2008.3,2013.0,ch4_VKV_surface_hourly_MGO.nc
+WBI,"West Branch, Iowa",United States,41.7248,-91.3529,241.7,NOAA,aircraft-flask,3032,2004.7,2020.1,ch4_WBI_aircraft_event_NOAA.nc
+WBI,"West Branch, Iowa",United States,41.7248,-91.3529,241.7,NOAA,surface-flask,3737,2007.5,2020.1,ch4_WBI_surface_event_NOAA.nc
+WGC,"Walnut Grove, California",United States,38.265,-121.4911,0.0,NOAA,aircraft-flask,165,2008.4,2009.2,ch4_WGC_aircraft_event_NOAA.nc
+WGC,"Walnut Grove, California",United States,38.265,-121.4911,0.0,NOAA,surface-flask,3206,2007.7,2020.1,ch4_WGC_surface_event_NOAA.nc
+WGC,"Walnut Grove, California",United States,38.265,-121.4911,0.0,NOAA,surface-insitu,302194,2007.7,2020.1,ch4_WGC_surface_hourly_NOAA.nc
+WIS,"Weizmann Institute of Science at the Arava Institute, Ketura",Israel,29.9646,35.0605,151.0,NOAA,surface-flask,2418,1995.9,2020.0,ch4_WIS_surface_event_NOAA.nc
+WKT,"Moody, Texas",United States,31.3149,-97.3269,251.0,NOAA,surface-flask,4429,2001.1,2020.1,ch4_WKT_surface_event_NOAA.nc
+WLG,Mt. Waliguan,Peoples Republic of China,36.2879,100.8964,3810.0,NOAA,surface-flask,3090,1990.6,2019.9,ch4_WLG_surface_event_NOAA.nc
+WPC,Western Pacific Cruise,N/A,2.41,149.91,0.0,NOAA,surface-flask,593,2004.3,2013.4,ch4_WPC_surface_event_NOAA.nc
+WSA,"Sable Island, Nova Scotia",Canada,43.9322,-60.0093,5.0,EC,surface-flask,1198,2000.0,2016.0,ch4_WSA_surface_event_EC.nc
+WSA,"Sable Island, Nova Scotia",Canada,43.9322,-60.0093,5.0,EC,surface-insitu,79271,2003.4,2017.4,ch4_WSA_surface_hourly_EC.nc
+YAK,Yakutsk,Russia,62.0886,129.3558,264.0,NIES,surface-insitu,31016,2007.7,2013.9,ch4_YAK_surface_hourly_NIES.nc
+YON,Yonagunijima,Japan,24.47,123.02,30.0,JMA,surface-insitu,137608,2000.0,2018.0,ch4_YON_surface_hourly_JMA.nc
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NOAA,surface-flask,2864,1994.1,2020.0,ch4_ZEP_surface_event_NOAA.nc
+ZEP,"Ny-Alesund, Svalbard",Norway and Sweden,78.9067,11.8883,474.0,NILU,surface-insitu,100084,2001.6,2017.0,ch4_ZEP_surface_hourly_NILU.nc
+ZGT,Zingst,Germany,54.43,12.73,1.0,UBA,surface-insitu,23729,2000.0,2003.1,ch4_ZGT_surface_hourly_UBA.nc
+ZOT,"Zotino, Siberia",Russia,60.75,89.38,111.0,MPI-BGC,surface-flask,1498,2006.8,2017.2,ch4_ZOT_surface_event_MPI-BGC.nc
+ZSF,Zugspitze / Schneefernerhaus,Germany,47.42,10.98,2656.0,UBA,surface-insitu,115768,2002.0,2018.0,ch4_ZSF_surface_hourly_UBA.nc
