@@ -46,6 +46,16 @@ ALPHA_D_SOIL = 1.066
 ALPHA_13C_STRAT = 1.013
 ALPHA_D_STRAT = 1.16
 
+# True SH (CGO+SPO) variance attribution from the direct toggle-based
+# decomposition of the Phase-6 Monte Carlo (analysis/sh_variance_purepy.py),
+# rolled up to input families. Percentages of one-at-a-time Var(alpha13C_OH).
+# This replaces the earlier phase13 guessed-sigma prioritization diagnostic.
+SH_TRUE_ATTRIBUTION = [
+    ("Observations", 87.6),
+    ("Sink -> alpha", 7.4),
+    ("Wetland source", 5.0),
+]
+
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -91,6 +101,51 @@ def ganesan_banded_ratio(site_result: dict) -> float:
     z_sink_13c = z_obs_13c - z_src_13c
     z_sink_dD = complex(*site_result["Z_sink_dD"])
     return float(abs(z_sink_13c) / abs(z_sink_dD))
+
+
+def ganesan_banded_shift(site_result: dict) -> float:
+    """Return the deterministic corrected-ratio change from banded wetland d13C."""
+    banded_d13c = banded_wetland_d13c_for_source_band(site_result["source_band"])
+    if banded_d13c == D13C_WETLAND_BASE:
+        return 0.0
+    return ganesan_banded_ratio(site_result) - float(site_result["R_corrected"])
+
+
+def plot_ganesan_banded_shifts(ax, sites, shifts):
+    """Plot banded-source sensitivity as a change from the uniform baseline."""
+    y = np.arange(len(sites), dtype=float)
+    shifts = np.asarray(shifts, dtype=float)
+    offset = 0.08
+
+    for yy, shift in zip(y, shifts):
+        ax.plot([0.0, shift], [yy, yy], color="#9a9a9a", lw=1.3, zorder=1)
+
+    ax.plot(
+        np.zeros_like(y),
+        y - offset,
+        "o",
+        color="#777777",
+        label="Uniform baseline (ΔR = 0)",
+        zorder=3,
+    )
+    ax.plot(
+        shifts,
+        y + offset,
+        "s",
+        color="#1f77b4",
+        label="Banded d13C shift",
+        zorder=4,
+    )
+    ax.axvline(0.0, color="#333333", ls="--", lw=1.0)
+    ax.set_yticks(y)
+    ax.set_yticklabels(sites)
+    ax.invert_yaxis()
+    ax.set_xlabel("Change in corrected ratio, ΔR")
+    ax.set_title("(b) Change from uniform source signature")
+    limit = max(0.005, float(np.nanmax(np.abs(shifts))) * 1.18)
+    ax.set_xlim(-limit, limit)
+    ax.grid(axis="x", alpha=0.25)
+    ax.legend(frameon=False, fontsize=8)
 
 
 def set_common_style():
@@ -383,7 +438,6 @@ def make_fig2_phase_convergence():
 def make_fig3_alpha_sensitivity_uncertainty():
     phase6 = load_json(RESULTS_DIR / "phase6_phasor" / "phasor_results.json")
     phase14 = load_json(RESULTS_DIR / "phase14_sh_wetland_sensitivity" / "sh_wetland_sensitivity_results.json")
-    phase13 = load_json(RESULTS_DIR / "phase13_uncertainty_attribution" / "uncertainty_attribution_results.json")
 
     fig, axes = plt.subplots(1, 3, figsize=(13.2, 4.2), constrained_layout=True)
     lab_lines = [
@@ -429,28 +483,18 @@ def make_fig3_alpha_sensitivity_uncertainty():
     fig.colorbar(image, ax=ax, fraction=0.046, pad=0.04)
 
     ax = axes[2]
-    ranking = phase13["attribution"]["ranking"]
-    pretty = {
-        "observation": "Observations",
-        "wetland_phasor": "Wetland phasor",
-        "wetland_isotopes": "Wetland isotopes",
-        "sink_fractions": "Sink fractions",
-        "alpha_D_OH": "alphaD_OH",
-        "bb_correction": "Biomass burning",
-        "non_oh_kie": "Non-OH KIEs",
-    }
-    fractions = [
-        phase13["attribution"][key]["fraction_of_oat_variance"]
-        for key in ranking
-    ]
-    y = np.arange(len(ranking))
+    labels = [name for name, _ in SH_TRUE_ATTRIBUTION]
+    fractions = [pct for _, pct in SH_TRUE_ATTRIBUTION]
+    y = np.arange(len(labels))
     ax.barh(y, fractions, color="#4c78a8")
+    for yi, pct in zip(y, fractions):
+        ax.text(pct + 1.5, yi, f"{pct:.1f}%", va="center", ha="left", fontsize=8)
     ax.set_yticks(y)
-    ax.set_yticklabels([pretty.get(k, k) for k in ranking])
+    ax.set_yticklabels(labels)
     ax.invert_yaxis()
-    ax.set_xlabel("Fraction of diagnostic variance")
+    ax.set_xlabel("Fraction of Var(alpha13C_OH)  (%)")
     ax.set_title("(c) Uncertainty attribution")
-    ax.set_xlim(0, 0.42)
+    ax.set_xlim(0, 100)
     ax.grid(axis="x", alpha=0.25)
 
     out = OUT_DIR / "fig3_alpha_sensitivity_uncertainty.png"
@@ -481,31 +525,9 @@ def make_figs5_ganesan_delta13c_sensitivity():
     ax.grid(axis="x", alpha=0.25)
     ax.legend(frameon=False)
 
-    ax = axes[1]
     sites = CLEAN_SITES
-    y = np.arange(len(sites))
-    base_r = np.array([phase6["sites"][site]["R_corrected"] for site in sites])
-    banded_r = np.array([ganesan_banded_ratio(phase6["sites"][site]) for site in sites])
-    for yy, x0, x1 in zip(y, base_r, banded_r):
-        ax.plot([x0, x1], [yy, yy], color="#9a9a9a", lw=1.3, zorder=1)
-    ax.scatter(base_r, y, marker="o", s=42, color="#777777", label="Uniform base", zorder=3)
-    ax.scatter(banded_r, y, marker="s", s=46, color="#1f77b4", label="Banded d13C", zorder=4)
-    ax.axvspan(
-        bulk_sink_ratio(ALPHA_13C_SAUERESSIG),
-        bulk_sink_ratio(ALPHA_13C_CANTRELL),
-        color="#b7e1b4",
-        alpha=0.42,
-        label="Bulk-sink lab range",
-        zorder=0,
-    )
-    ax.set_yticks(y)
-    ax.set_yticklabels(sites)
-    ax.invert_yaxis()
-    ax.set_xlabel("Wetland-corrected R")
-    ax.set_title("(b) Resulting corrected-ratio shift")
-    ax.set_xlim(0.02, max(0.09, float(np.nanmax(banded_r)) * 1.08))
-    ax.grid(axis="x", alpha=0.25)
-    ax.legend(frameon=False, fontsize=8)
+    shifts = [ganesan_banded_shift(phase6["sites"][site]) for site in sites]
+    plot_ganesan_banded_shifts(axes[1], sites, shifts)
     out = OUT_DIR / "figS5_ganesan_delta13c_sensitivity.png"
     fig.savefig(out, bbox_inches="tight")
     plt.close(fig)
@@ -561,28 +583,35 @@ def make_figs7_sh_source_region_sensitivity():
 
 
 def make_figs10_uncertainty_attribution():
-    phase13 = load_json(RESULTS_DIR / "phase13_uncertainty_attribution" / "uncertainty_attribution_results.json")
-    ranking = phase13["attribution"]["ranking"]
-    pretty = {
-        "observation": "Observations",
-        "wetland_phasor": "Wetland phasor",
-        "wetland_isotopes": "Wetland isotopes",
-        "sink_fractions": "Sink fractions",
-        "alpha_D_OH": "alphaD_OH",
-        "bb_correction": "Biomass burning",
-        "non_oh_kie": "Non-OH KIEs",
-    }
-    fractions = [phase13["attribution"][key]["fraction_of_oat_variance"] for key in ranking]
+    # True per-group variance attribution from the direct toggle-based
+    # decomposition of the Phase-6 SH Monte Carlo (analysis/sh_variance_purepy.py).
+    # Ordered most-to-least; percentages of one-at-a-time Var(alpha13C_OH).
+    # obs = blue, sink = orange, wetland = green (same as figS11).
+    groups = [
+        ("d13C amplitude", 41.8, "#4c78a8"),
+        ("dD amplitude", 39.7, "#4c78a8"),
+        ("Sink -> alpha (fOH, KIEs)", 7.4, "#e0a530"),
+        ("d13C phase", 5.9, "#4c78a8"),
+        ("Wetland d13C signature", 4.5, "#59a14f"),
+        ("Wetland flux phasor", 0.5, "#59a14f"),
+        ("dD phase", 0.2, "#4c78a8"),
+        ("Wetland dD signature", 0.03, "#59a14f"),
+    ]
+    names = [g[0] for g in groups]
+    fractions = [g[1] for g in groups]
+    colors = [g[2] for g in groups]
 
-    fig, ax = plt.subplots(figsize=(6.2, 3.7), constrained_layout=True)
-    y = np.arange(len(ranking))
-    ax.barh(y, fractions, color="#4c78a8")
+    fig, ax = plt.subplots(figsize=(7.0, 3.9), constrained_layout=True)
+    y = np.arange(len(groups))
+    ax.barh(y, fractions, color=colors)
+    for yi, pct in zip(y, fractions):
+        ax.text(pct + 1.0, yi, f"{pct:.1f}%", va="center", ha="left", fontsize=8)
     ax.set_yticks(y)
-    ax.set_yticklabels([pretty.get(k, k) for k in ranking])
+    ax.set_yticklabels(names)
     ax.invert_yaxis()
-    ax.set_xlabel("Fraction of diagnostic one-at-a-time variance")
-    ax.set_title("Grouped uncertainty attribution")
-    ax.set_xlim(0, 0.42)
+    ax.set_xlabel("Fraction of Var(alpha13C_OH)  (%)")
+    ax.set_title("SH uncertainty attribution (toggle-based decomposition)")
+    ax.set_xlim(0, 52)
     ax.grid(axis="x", alpha=0.25)
     out = OUT_DIR / "figS10_uncertainty_attribution.png"
     fig.savefig(out, bbox_inches="tight")

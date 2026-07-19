@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Harmonic-model sensitivity checks for KIE_sites."""
+"""Seasonal-amplitude estimator sensitivity checks for KIE_sites."""
 
 from pathlib import Path
 import json
@@ -29,13 +29,17 @@ def _fit_design(t, y, design):
 
 
 def fit_annual(t, y):
-    """Fit intercept + annual harmonic."""
+    """Fit intercept + linear trend + annual harmonic."""
     t = np.asarray(t, dtype=float)
+    t_centered = t - np.mean(t)
     x1 = 2 * np.pi * t
-    design = np.column_stack([np.ones_like(t), np.sin(x1), np.cos(x1)])
-    c0, B1, C1 = _fit_design(t, y, design)
+    design = np.column_stack(
+        [np.ones_like(t), t_centered, np.sin(x1), np.cos(x1)]
+    )
+    c0, trend, B1, C1 = _fit_design(t, y, design)
     return {
         "intercept": float(c0),
+        "trend": float(trend),
         "B": float(B1),
         "C": float(C1),
         "amplitude": float(np.hypot(B1, C1)),
@@ -43,16 +47,25 @@ def fit_annual(t, y):
 
 
 def fit_annual_plus_semiannual(t, y):
-    """Fit intercept + annual + semiannual harmonics."""
+    """Fit intercept + linear trend + annual and semiannual harmonics."""
     t = np.asarray(t, dtype=float)
+    t_centered = t - np.mean(t)
     x1 = 2 * np.pi * t
     x2 = 4 * np.pi * t
     design = np.column_stack(
-        [np.ones_like(t), np.sin(x1), np.cos(x1), np.sin(x2), np.cos(x2)]
+        [
+            np.ones_like(t),
+            t_centered,
+            np.sin(x1),
+            np.cos(x1),
+            np.sin(x2),
+            np.cos(x2),
+        ]
     )
-    c0, B1, C1, B2, C2 = _fit_design(t, y, design)
+    c0, trend, B1, C1, B2, C2 = _fit_design(t, y, design)
     return {
         "intercept": float(c0),
+        "trend": float(trend),
         "B1": float(B1),
         "C1": float(C1),
         "B2": float(B2),
@@ -62,19 +75,28 @@ def fit_annual_plus_semiannual(t, y):
     }
 
 
-def fit_monthly_fixed_effect(months, values):
-    """Estimate seasonal amplitude from monthly means."""
+def fit_monthly_fixed_effect(t, months, values):
+    """Estimate a linear trend and calendar-month effects jointly."""
+    t = np.asarray(t, dtype=float)
     months = np.asarray(months, dtype=int)
     values = np.asarray(values, dtype=float)
-    monthly = []
-    for month in range(1, 13):
-        vals = values[months == month]
-        monthly.append(float(np.nanmean(vals)) if len(vals) else np.nan)
-    arr = np.asarray(monthly, dtype=float)
+    month_design = np.column_stack([(months == month).astype(float) for month in range(1, 13)])
+    design = np.column_stack([month_design, t - np.mean(t)])
+    if np.linalg.matrix_rank(design) < design.shape[1]:
+        return {
+            "monthly_means": [np.nan] * 12,
+            "trend": np.nan,
+            "amplitude": np.nan,
+            "estimable": False,
+        }
+    coeffs = _fit_design(t, values, design)
+    arr = np.asarray(coeffs[:12], dtype=float)
     amplitude = 0.5 * (np.nanmax(arr) - np.nanmin(arr))
     return {
         "monthly_means": [float(v) if np.isfinite(v) else np.nan for v in arr],
+        "trend": float(coeffs[-1]),
         "amplitude": float(amplitude),
+        "estimable": True,
     }
 
 
@@ -132,8 +154,8 @@ def analyze_site(code):
     annual_D = fit_annual(t, yD)
     semi_13 = fit_annual_plus_semiannual(t, y13)
     semi_D = fit_annual_plus_semiannual(t, yD)
-    fixed_13 = fit_monthly_fixed_effect(months, y13)
-    fixed_D = fit_monthly_fixed_effect(months, yD)
+    fixed_13 = fit_monthly_fixed_effect(t, months, y13)
+    fixed_D = fit_monthly_fixed_effect(t, months, yD)
     records = list(zip(df["year"], df["decimal_year"], df["d13C_mean"], df["dD_mean"]))
 
     def ratio(a13, aD):
@@ -158,9 +180,11 @@ def analyze_site(code):
             "R": ratio(fixed_13["amplitude"], fixed_D["amplitude"]),
             "A13": fixed_13["amplitude"],
             "AD": fixed_D["amplitude"],
+            "estimable": bool(fixed_13["estimable"] and fixed_D["estimable"]),
         },
         "leave_one_year_out": {
             "ratios": {str(k): float(v) if np.isfinite(v) else np.nan for k, v in loo.items()},
+            "n_valid": int(len(finite_loo)),
             "median": float(np.nanmedian(finite_loo)) if len(finite_loo) else np.nan,
             "range": [
                 float(np.nanmin(finite_loo)) if len(finite_loo) else np.nan,
@@ -176,8 +200,17 @@ def plot_results(results):
     annual = [results["sites"][c]["annual"]["R"] for c in codes]
     semi = [results["sites"][c]["annual_plus_semiannual"]["R"] for c in codes]
     monthly = [results["sites"][c]["monthly_fixed_effect"]["R"] for c in codes]
-    loo_median = [results["sites"][c]["leave_one_year_out"]["median"] for c in codes]
-    loo_range = [results["sites"][c]["leave_one_year_out"]["range"] for c in codes]
+    monthly_missing = [code for code, value in zip(codes, monthly) if not np.isfinite(value)]
+    loo_valid = [results["sites"][c]["leave_one_year_out"]["n_valid"] for c in codes]
+    loo_missing = [code for code, count in zip(codes, loo_valid) if count < 2]
+    loo_median = [
+        results["sites"][c]["leave_one_year_out"]["median"] if count >= 2 else np.nan
+        for c, count in zip(codes, loo_valid)
+    ]
+    loo_range = [
+        results["sites"][c]["leave_one_year_out"]["range"] if count >= 2 else [np.nan, np.nan]
+        for c, count in zip(codes, loo_valid)
+    ]
     loo_low = np.array(
         [
             median - bounds[0] if np.isfinite(median) and np.isfinite(bounds[0]) else np.nan
@@ -200,20 +233,26 @@ def plot_results(results):
         "monthly fixed effect": 0.09,
         "leave-one-year-out": 0.27,
     }
-    ax.scatter(x + offsets["annual"], annual, marker="o", s=42, label="Annual harmonic")
+    ax.scatter(
+        x + offsets["annual"],
+        annual,
+        marker="o",
+        s=42,
+        label="Primary: annual harmonic",
+    )
     ax.scatter(
         x + offsets["annual+semiannual"],
         semi,
         marker="s",
         s=40,
-        label="Annual component of annual+semiannual fit",
+        label="Shape check: annual component from annual + semiannual",
     )
     ax.scatter(
         x + offsets["monthly fixed effect"],
         monthly,
         marker="^",
         s=44,
-        label="Monthly fixed effect",
+        label="Monthly-effects check",
     )
     ax.errorbar(
         x + offsets["leave-one-year-out"],
@@ -222,15 +261,34 @@ def plot_results(results):
         fmt="D",
         ms=4.5,
         capsize=3,
-        label="Leave-one-year-out median and range",
+        label="Year-leverage check: leave-one-year-out",
     )
     ax.set_xticks(x)
     ax.set_xticklabels(codes)
-    ax.set_ylabel("R = A(d13C) / A(dD)")
-    ax.set_title("Harmonic model sensitivity")
+    ax.set_ylabel("R = A(δ¹³C) / A(δD)")
+    ax.set_title("Seasonal-amplitude estimator sensitivity")
     ax.grid(axis="y", alpha=0.25)
     ax.legend(fontsize=7, ncol=2, frameon=False)
-    fig.tight_layout()
+    omission_notes = []
+    if monthly_missing:
+        omission_notes.append(
+            "monthly-effects unavailable without all 12 calendar months: "
+            + ", ".join(monthly_missing)
+        )
+    if loo_missing:
+        omission_notes.append(
+            "leave-one-year-out unavailable with fewer than two valid refits: "
+            + ", ".join(loo_missing)
+        )
+    if omission_notes:
+        fig.text(
+            0.5,
+            0.015,
+            "Omitted diagnostics — " + "; ".join(omission_notes),
+            ha="center",
+            fontsize=7,
+        )
+    fig.tight_layout(rect=[0, 0.045, 1, 1])
     fig.savefig(OUT_FIG, dpi=180)
     plt.close(fig)
 
@@ -245,7 +303,10 @@ def main():
     }
     output = {
         "metadata": {
-            "method": "Compare annual harmonic, annual+semiannual, monthly fixed effects, and leave-one-year-out ratios"
+            "method": (
+                "Primary trend-plus-annual harmonic with seasonal-shape, "
+                "monthly-effects, and leave-one-year-out diagnostics"
+            )
         },
         "sites": sites,
     }

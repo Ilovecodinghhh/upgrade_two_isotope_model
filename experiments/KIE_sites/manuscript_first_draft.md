@@ -118,9 +118,9 @@ source-seasonality structure.
 
 Atmospheric methane dry-air mole fractions were taken from the NOAA Global
 Monitoring Laboratory Global Greenhouse Gas Reference Network surface-flask
-data product, version 2025-08-15 (Lan et al., 2025; DOI
+data product (Lan et al., 2025; DOI
 `10.15138/VNCZ-M766`). Atmospheric `delta13C-CH4` measurements were taken from
-the NOAA/INSTAAR stable carbon isotope data product, version 2023-09-21
+the NOAA/INSTAAR stable carbon isotope data product
 (Michel et al., 2023; DOI `10.15138/9p89-1x02`). Atmospheric `deltaD-CH4`
 measurements were taken from the multi-laboratory compilation analyzed by
 Riddell-Young et al. (2025), available through the NOAA GML archive
@@ -135,24 +135,18 @@ Pole. The limiting overlap for same-site paired isotope analysis is mainly the
 2005-2010 interval. The number of paired monthly means ranges from 14 at Cold
 Bay to 52 at Alert. Eight sites are retained as the primary clean set for KIE
 analysis: Alert, Zeppelin, Barrow, Cold Bay, Mace Head, Cape Kumukahi, Cape
-Grim, and South Pole. The remaining sites are treated as diagnostic or excluded
+Grim, and South Pole. The remaining sites are treated as excluded
 sites because of data coverage, marine-boundary-layer representativeness, or
 phase behavior.
 
-We define "clean" operationally rather than absolutely. A site is included in
-the clean set only if it satisfies all three pre-inversion screening criteria:
+A site is included in the clean set only if it satisfies all three pre-inversion screening criteria:
 it is treated as a marine-boundary-layer/background site, the raw annual
 `delta13C-CH4` and `deltaD-CH4` peak months agree within 2 months, and the
 fitted `delta13C-CH4` annual amplitude is at least `0.04 permil`. The phase
 criterion removes sites where the two isotopes are unlikely to share the same
 dominant seasonal driver, and the amplitude criterion avoids unstable ratios
-from very small carbon isotope cycles. This definition does not imply that a
-site is source-free; it identifies sites for which the phasor correction and
-phase-convergence diagnostics are meaningful.
-
-Table 1 summarizes the observational data products used in the draft. All
-manuscript citations point to original data products or peer-reviewed
-compilations, not to local processed files.
+from very small carbon isotope cycles.
+Table 1 summarizes the observational data products used in the draft.
 
 **Table 1. Atmospheric data products used in the seasonal isotope analysis.**
 
@@ -170,8 +164,7 @@ natural vegetated wetland methane emission data set of Li et al. (2026), which
 provides global monthly emissions for 2000-2025 at 1 degree x 1 degree
 resolution (Li et al., 2026; Zenodo DOI `10.5281/zenodo.18870108`). We used
 the `wetch4` field and computed 2005-2010 climatological annual harmonics for
-four broad source bands: 60-90 N, 30-60 N, 30 S-30 N, and 90-30 S. These bands
-are source-seasonality predictors, not atmospheric transport footprints.
+four broad source bands: 60-90 N, 30-60 N, 30 S-30 N, and 90-30 S.
 
 The 2005-2010 annual totals derived from these bands are approximately
 `10.9 Tg yr-1` for 60-90 N, `29.7 Tg yr-1` for 30-60 N, `114.0 Tg yr-1` for
@@ -258,7 +251,7 @@ R_obs = A(delta13C-CH4) / A(deltaD-CH4).
 
 For a sink-only annual cycle, `R_obs` would approximate the ratio of bulk sink
 fractionation for 13C and D. Values much larger than the bulk-sink laboratory
-reference range indicate that seasonal source phasors contribute to the
+reference range indicate that seasonal source phasors may contribute to the
 observed isotope cycle.
 
 ### 3.3 Wetland source phasor construction
@@ -323,32 +316,35 @@ Nominal phasor-corrected ratios are retained as diagnostics and for
 reproducibility, but they are not used as the central values of the main KIE
 constraint.
 Southern Hemisphere and all-site constraints are reported separately because
-northern sites retain residual source structure after wetland-only correction.
+northern sites retain much less residual source structure after wetland-only correction.
 
 ### 3.6 Sensitivity experiments
 
-We use three sensitivity classes to guard against overinterpretation.
+We use three sensitivity classes to test the results.
 First, block bootstrap and harmonic-model comparisons evaluate whether the
 limited 2005-2010 overlap interval produces stable seasonal ratios. Second,
 Southern Hemisphere source-region tests use mass-conserving response mixtures
 of local Southern Hemisphere, tropical, and delayed high-latitude Northern
-Hemisphere wetland phasors, with the three weights summing to one. The SI also
-reports additive transport stress tests as upper-bound structural diagnostics,
-not as mass-conserving source mixtures. Third, biomass burning source phasors
+Hemisphere wetland phasors, with the three weights summing to one, so that
+imported remote source seasonality can only be added by removing an equal weight
+of local source seasonality. Third, biomass burning source phasors
 are treated in the SI because
 they can affect northern source structure but are not necessary for the main
 Southern Hemisphere result.
 
-For the diagnostic uncertainty-attribution panel, we use a one-at-a-time
-variance decomposition rather than a replacement for the full Monte Carlo.
-Starting from the Southern Hemisphere alpha constraint, each grouped
-uncertainty source is perturbed independently with the scales used in the
-analysis code: observations/harmonic fitting (`sigma_alpha = 0.0040`),
-wetland phasors (`0.0030`), wetland isotope signatures (`0.0025`), biomass
-burning correction (`0.0015`), sink fractions (`0.0020`), `alphaD_OH`
-(`0.0018`), and non-OH KIEs (`0.0012`). The plotted fractions are each
-group's variance divided by the sum of the one-at-a-time variances. They are
-therefore a prioritization diagnostic, not a posterior variance budget.
+For the uncertainty-attribution panel, we decompose the actual Southern
+Hemisphere (Cape Grim + South Pole) Monte Carlo rather than assuming
+perturbation scales. Each uncertainty group is toggled on in turn while all
+other groups are frozen at their central values, and the full phasor
+correction and alpha inversion are re-run (120,000 draws); the variance of the
+resulting `alpha13C_OH` samples is that group's isolated contribution. The
+groups are the observed `delta13C` and `deltaD` harmonic amplitudes and phases,
+the wetland flux phasor, the wetland `delta13C` and `deltaD` source signatures,
+and the sink-to-alpha conversion parameters (`fOH`, `alphaD_OH`, and the non-OH
+KIEs). Because the groups are close to independent, the isolated variances sum
+to the all-groups-on total to within about half a percent (interaction is
+negligible), so the plotted fractions are a genuine variance budget rather than
+a prioritization-only diagnostic.
 
 ## 4. Results
 
@@ -379,7 +375,7 @@ seasonal amplitude ratio `A(delta13C)/A(deltaD)` versus latitude. The green
 band is the bulk-sink laboratory reference range implied by Saueressig et al.
 (2001) and Cantrell et al. (1990), using `alphaD_OH = 1.294` and the non-OH
 sink parameters in Table 2. Blue points are sites kept for the clean-site
-phasor analysis; grey points are diagnostic/excluded sites.
+phasor analysis; grey points are excluded sites.
 (b) Difference between the fitted `delta13C-CH4` and `deltaD-CH4` peak months.
 The grey band marks agreement within one month.
 
@@ -491,41 +487,49 @@ not overturn the main KIE interpretation. The SI separates the combined grid
 into two one-dimensional slices: tropical-only replacement gives a shallow
 U-shaped response, whereas delayed high-latitude Northern Hemisphere
 replacement alone raises the deterministic alpha only from about `1.0052` to
-`1.0061` over the tested `0.00-0.10` response-weight range (Fig. S9). Additive
-delayed Northern Hemisphere tests are still
-useful as structural transport stress tests because interhemispheric transport
-can attenuate and delay annual signals (Geller et al., 1997; Levin and
-Hesshaimer, 1996; Patra et al., 2011; Holzer and Waugh, 2015), but we keep
-those tests in the SI rather than treating them as mass-conserving corrections.
+`1.0061` over the tested `0.00-0.10` response-weight range (Fig. S9). The
+imported Northern Hemisphere phasor is delayed by about `2.8 months` following a
+first-order interhemispheric-mixing response with an exchange time of `~1.3 yr`
+(Geller et al., 1997; Patra et al., 2011; Holzer and Waugh, 2015; see SI), so
+that its timing is physically plausible rather than arbitrary.
 
-The deterministic values in Fig. S9 should not be read as a second central
-estimate of the OH KIE. The zero-imported-response case in that figure is the
-simple mean of nominal CGO and SPO phasor-corrected ratios, which gives an
-alpha value of about `1.0052` and therefore appears closer to Cantrell et al.
-(1990). In contrast, the preferred main-text estimate combines the CGO and SPO
-corrected-ratio Monte Carlo samples, including observation, source-phasor,
-source-signature, and sink-parameter uncertainties, before converting to
-`alpha13C_OH`; this gives `1.0046 [0.9969, 1.0158]` (Fig. 3a). The difference
-therefore reflects the statistical level of the calculation, not a conflict
-between the source-region sensitivity test and the atmospheric KIE constraint.
 
-### 4.5 Uncertainty is dominated by observations and wetland source phasors
 
-A one-at-a-time uncertainty attribution indicates that observation-related
-harmonic uncertainty is the largest contribution to the alpha uncertainty
-budget, accounting for about `39%` of the diagnostic variance. Wetland phasor
-uncertainty contributes about `21%`, wetland isotope-source uncertainty about
-`14%`, sink fractions about `9%`, `alphaD_OH` about `8%`, biomass burning about
-`5%`, and non-OH KIEs about `3%`. These values are diagnostic rather than a
-replacement for the full Monte Carlo propagation, but they identify the most
-important paths for improving the constraint: longer paired isotope records,
-better source-region phasors, and better wetland isotope source signatures.
+### 4.5 Uncertainty is dominated almost entirely by the observed seasonal amplitudes
 
-Biomass burning is therefore treated as a Supplementary Information topic. It
-can change northern corrected ratios, but it is not the dominant uncertainty
-for the main Southern Hemisphere result and should not be the main-text focus
-unless a later figure shows that it changes the headline Southern Hemisphere
-constraint.
+Decomposing the Southern Hemisphere Monte Carlo group by group shows that the
+alpha uncertainty budget is overwhelmingly observational. The observed seasonal
+harmonics account for about `88%` of the total variance, and this is almost
+entirely the fitted `delta13C` and `deltaD` annual amplitudes (about `42%` and
+`40%` respectively); the harmonic phases contribute only about `6%` combined.
+The sink-to-alpha conversion (the OH sink fraction, `alphaD_OH`, and the non-OH
+KIEs) contributes about `7%`. The entire wetland source correction contributes
+only about `5%`, split between the wetland `delta13C` source signature
+(`4.5%`), the wetland flux phasor (`0.5%`), and the wetland `deltaD` source
+signature (essentially `0%`).
+
+The wetland `deltaD` source signature is negligible for the Southern Hemisphere
+constraint despite its large source-atmosphere isotopic gap, because the local
+Southern Hemisphere wetland flux phasor is itself very small: a large isotopic
+gap multiplied by a near-zero seasonal source fraction leaves a vanishing
+correction, so the substantial uncertainty in that signature does not propagate
+to alpha. This is the quantitative reason the phasor correction is only a minor
+refinement at Cape Grim and South Pole.
+
+The single actionable implication is that improving the Southern Hemisphere
+constraint depends first and foremost on reducing the amplitude-fit uncertainty
+of the co-located isotope seasonal cycles — through longer or denser paired
+`delta13C` and `deltaD` records — rather than on refining the wetland source
+model, which is already a sub-dominant term here. Better wetland isotope source
+signatures and biomass burning corrections matter mainly at Northern Hemisphere
+sites, where the source phasors are large; they are not the limiting factor for
+the headline Southern Hemisphere result.
+
+We note that this variance budget supersedes an earlier prioritization
+diagnostic based on assumed per-group perturbation scales, which overstated the
+wetland contribution and understated the observational contribution; the figure
+and numbers here are from the direct toggle-based decomposition described in
+Section 3.6.
 
 ![Figure 3. Atmospheric `alpha13C_OH` constraint, Southern Hemisphere source-region sensitivity, and uncertainty attribution.](figures/manuscript/fig3_alpha_sensitivity_uncertainty.png)
 
@@ -540,11 +544,14 @@ Hemisphere `alpha13C_OH` under mass-conserving source-region mixtures of local
 Southern Hemisphere, tropical, and delayed high-latitude Northern Hemisphere
 wetland phasors. The remaining weight after choosing the tropical and
 Northern Hemisphere weights is assigned to the local Southern Hemisphere
-phasor. (c) One-at-a-time grouped
-uncertainty attribution for the alpha constraint; fractions are diagnostic and
-do not replace the full Monte Carlo interval. Each bar is the variance from
-perturbing one uncertainty group alone, divided by the summed one-at-a-time
-variance across all groups.
+phasor. (c) Uncertainty
+attribution for the Southern Hemisphere alpha constraint, rolled up to input
+families. Each bar is the isolated variance obtained by toggling one group on
+while freezing the others and re-running the full Monte Carlo, as a percentage
+of the summed one-at-a-time variance; the groups are close to independent, so
+these fractions sum to the all-groups-on total. The observed seasonal harmonics
+dominate (about 88%), the sink-to-alpha conversion contributes about 7%, and the
+entire wetland source correction contributes about 5%.
 
 ## 5. Discussion
 
@@ -608,7 +615,7 @@ of either laboratory value.
 Second, wetland source signatures remain uncertain. `deltaD-CH4` is strongly
 controlled by environmental water, pathway, and local hydrology, and
 `delta13C-CH4` has regional structure associated with wetland type and
-vegetation. The SI should therefore include the Ganesan et al. (2018) spatial
+vegetation. The SI therefore include the Ganesan et al. (2018) spatial
 `delta13C` wetland sensitivity and the Douglas et al. (2021) wetland
 `deltaD-CH4` alternatives.
 
@@ -623,8 +630,8 @@ source-receptor functions.
 
 Finally, biomass burning and other non-wetland seasonal sources are only
 treated in the SI. This choice is deliberate: the main result does not require
-biomass burning to explain the Southern Hemisphere constraint, but northern
-residuals likely require additional seasonal source terms beyond wetlands.
+biomass burning to explain the Southern Hemisphere constraint since the seasonality is not significant. And northern
+residuals likely require additional seasonal source terms beyond wetlands and biomass burning.
 
 ## 6. Conclusions
 
@@ -686,8 +693,9 @@ The accompanying SI draft includes:
 4. Ganesan et al. (2018) spatial `delta13C_wetland` sensitivity.
 5. Douglas/OIPC wetland `deltaD-CH4` sensitivity.
 6. Riddell-Young SI Table S3 sink/KIE comparison and rerun/sensitivity logic.
-7. Southern Hemisphere mass-conserving source-region sensitivity and additive
-   transport stress tests.
+7. Southern Hemisphere mass-conserving source-region sensitivity, including the
+   interhemispheric transport delay applied to the imported Northern Hemisphere
+   phasor.
 8. Biomass burning phasor correction and interpretation.
 9. OSSE tests showing how source phasors bias scalar amplitude-ratio KIE
    retrievals.
@@ -793,6 +801,12 @@ vegetated wetland methane emissions for 2000-2025. Earth System Science Data,
 18, 3507-3534. DOI `10.5194/essd-18-3507-2026`. Data DOI
 `10.5281/zenodo.18870108`.
 
+McCarthy, M. C., Boering, K. A., Rice, A. L., Tyler, S. C., Connell, P., and
+Atlas, E. (2003). Carbon and hydrogen isotopic compositions of stratospheric
+methane: 2. Two-dimensional model results and implications for kinetic isotope
+effects. Journal of Geophysical Research: Atmospheres, 108, 4461. DOI
+`10.1029/2002JD003183`.
+
 Michel, S. E., et al. (2023). Stable Isotopic Composition of Atmospheric
 Methane (13C) from the NOAA GML Carbon Cycle Cooperative Global Air Sampling
 Network, 1998-2022. Version 2023-09-21. DOI `10.15138/9p89-1x02`.
@@ -810,6 +824,11 @@ Riddell-Young, B., et al. (2025). Microbial driver of 2006-2023 CH4 growth
 indicated by trends in atmospheric `deltaD-CH4` and `delta13C-CH4`.
 Proceedings of the National Academy of Sciences. DOI
 `10.1073/pnas.2516543122`. NOAA data archive DOI `10.15138/setb-jy31`.
+
+Rice, A. L., Tyler, S. C., McCarthy, M. C., Boering, K. A., and Atlas, E.
+(2003). Carbon and hydrogen isotopic compositions of stratospheric methane: 1.
+High-precision observations from the NASA ER-2 aircraft. Journal of
+Geophysical Research: Atmospheres, 108, 4460. DOI `10.1029/2002JD003042`.
 
 Saueressig, G., Bergamaschi, P., Crowley, J. N., Fischer, H., and Harris, G.
 (1996). D/H kinetic isotope effect in the reaction `CH4 + Cl`. Geophysical
@@ -840,6 +859,12 @@ Umezawa, T., et al. (2018). Interlaboratory comparison of `delta13C` and
 `deltaD` measurements of atmospheric `CH4` for combined use of data sets from
 different laboratories. Atmospheric Measurement Techniques, 11, 1207-1231.
 DOI `10.5194/amt-11-1207-2018`.
+
+van der Werf, G. R., Randerson, J. T., Giglio, L., van Leeuwen, T. T., Chen,
+Y., Rogers, B. M., Mu, M., van Marle, M. J. E., Morton, D. C., Collatz, G. J.,
+Yokelson, R. J., and Kasibhatla, P. S. (2017). Global fire emissions estimates
+during 1997-2016. Earth System Science Data, 9, 697-720. DOI
+`10.5194/essd-9-697-2017`.
 
 Waldron, S., Lansdown, J. M., Scott, E. M., Fallick, A. E., and Hall, A. J.
 (1999). The global influence of the hydrogen isotope composition of water on

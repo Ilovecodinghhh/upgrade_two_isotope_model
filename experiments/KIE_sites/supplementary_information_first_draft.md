@@ -5,15 +5,6 @@
 Supplementary Information for "Seasonal Methane Isotope Phasors Constrain the
 Methane OH 13C Kinetic Isotope Effect"
 
-## SI Scope
-
-This supplementary draft documents data screening, sensitivity experiments, and
-diagnostic analyses that support the main manuscript without overloading the
-main text. The main manuscript retains the Southern Hemisphere
-phasor-corrected KIE constraint as the central result. Northern Hemisphere
-residuals, biomass burning, Ganesan spatial wetland source signatures, and
-transport-lag sensitivities are treated here as robustness and diagnostic
-material.
 
 ## S1. Atmospheric Data Pairing And Site Screening
 
@@ -35,18 +26,18 @@ Dasgupta et al. (2025).
 | BRW | `71.32` | `41` | `5.0` | Clean site |
 | CBA | `55.21` | `14` | `1.4` | Clean site |
 | MHD | `53.33` | `31` | `4.4` | Clean site |
-| AZR | `38.77` | `28` | `4.7` | Excluded/diagnostic |
-| MLO | `19.54` | `46` | `4.6` | Excluded/diagnostic |
+| AZR | `38.77` | `28` | `4.7` | Excluded |
+| MLO | `19.54` | `46` | `4.6` | Excluded |
 | KUM | `19.56` | `36` | `4.7` | Clean site |
-| ASC | `-7.97` | `46` | `4.9` | Excluded/diagnostic |
-| SMO | `-14.25` | `36` | `4.4` | Excluded/diagnostic |
+| ASC | `-7.97` | `46` | `4.9` | Excluded |
+| SMO | `-14.25` | `36` | `4.4` | Excluded |
 | CGO | `-40.68` | `29` | `4.1` | Clean site, SH constraint |
 | SPO | `-89.98` | `33` | `4.6` | Clean site, SH constraint |
 
 The clean set used for the primary phasor analysis is ALT, ZEP, BRW, CBA, MHD,
 KUM, CGO, and SPO. The Southern Hemisphere KIE constraint is based on CGO and
 SPO because the wetland source correction is smallest there and because their
-corrected seasonal phases are consistent with an austral-summer sink maximum.
+corrected seasonal phases are consistent with an summer sink maximum.
 
 ![Figure S1. Paired monthly data coverage by site.](figures/fig1_data_coverage.png)
 
@@ -67,34 +58,34 @@ means:
 y(t) = c0 + c1 (t - tref) + B sin(2 pi t) + C cos(2 pi t).
 ```
 
-The harmonic coefficients are stored as `Z = B + iC`. The base manuscript uses
-the annual harmonic because it is the minimal model that preserves seasonal
-amplitude and phase and is stable for the short 2005-2010 paired isotope
-interval. Figure S3 compares four ways of estimating the same seasonal
-amplitude ratio: the base annual harmonic, the annual component of an
-annual-plus-semiannual fit, a monthly fixed-effect half peak-to-trough
-amplitude, and leave-one-year-out annual fits. These tests show that some sites
-are stable under model choice, whereas sparse or low-amplitude sites can have
-larger year-to-year scatter than the nominal full-period bootstrap interval.
+The harmonic coefficients are stored as `Z = B + iC`. The manuscript uses the
+annual harmonic because it is the minimal model that preserves seasonal
+amplitude and phase over the short 2005-2010 paired-isotope interval. Figure S3
+ shows the primary annual-harmonic
+estimate together with three diagnostics that test seasonal-shape choice,
+calendar-month coverage, and leverage by individual years.
 
-The four estimates in Figure S3 use the same paired monthly isotope data but
-process the seasonal cycle differently. The annual harmonic first removes a
-linear trend and then fits one annual sine-cosine pair; this is the main
-analysis because it gives both amplitude and phase with few parameters. The
-annual-plus-semiannual fit adds a second harmonic to absorb twice-per-year
-structure, and Figure S3 plots only the annual component from that fit. The
-monthly fixed-effect estimate first averages the detrended observations by
-calendar month and then uses half of the peak-to-trough range as the amplitude,
-so it is less model-based but more sensitive to sparse monthly coverage.
-Finally, the leave-one-year-out estimate repeats the annual-harmonic fit after
-removing one calendar year at a time; its vertical range shows how much the
-ratio changes when any single year is omitted.
+All four calculations use the same paired monthly isotope data and explicitly
+account for a linear trend. The primary model jointly fits the trend and one
+annual sine-cosine pair. The seasonal-shape diagnostic adds a semiannual pair
+and reports only the annual component. The monthly-effects diagnostic jointly
+fits the linear trend and 12 calendar-month effects, then defines amplitude as
+half the range of the fitted month effects. This diagnostic is reported only
+when all 12 calendar months are observed; it is therefore unavailable for ZEP
+and CBA. Finally, the year-leverage diagnostic omits one calendar year at a
+time and refits the same trend-plus-annual model. A median and minimum-to-maximum
+range are shown only when at least two valid omission fits are available; ZEP
+does not meet this requirement.
 
-The main implication is conservative: the Southern Hemisphere constraint is
-useful but should not be overinterpreted as excluding either laboratory
-`alpha13C_OH` value. Northern Hemisphere multi-site estimates should be
-reported as diagnostic because they remain sensitive to residual source
-structure and model choice.
+The corrected primary annual-harmonic ratios reproduce the ratios used by the
+main analysis to numerical precision. Annual-only and annual-plus-semiannual
+estimates are close at all sites, indicating that adding a twice-per-year term
+does not materially alter the annual component. The monthly-effects and
+leave-one-year-out diagnostics identify greater sensitivity at some sparse or
+low-amplitude sites, particularly MHD, whereas the Southern Hemisphere sites
+CGO and SPO remain comparatively stable across the estimable diagnostics.
+
+
 
 ![Figure S2. Folded seasonal cycles used for annual harmonic fitting.](figures/fig2_seasonal_cycles.png)
 
@@ -104,16 +95,19 @@ calendar month and shown with annual harmonic fits. The figure is a diagnostic
 view of the paired observations used to estimate seasonal amplitudes and
 phases.
 
-![Figure S3. Harmonic-model sensitivity.](figures/fig21_harmonic_model_comparison.png)
+![Figure S3. Seasonal-amplitude estimator sensitivity.](figures/fig21_harmonic_model_comparison.png)
 
-**Figure S3. Harmonic-model sensitivity.** Annual-only, annual-plus-semiannual,
-monthly fixed-effect, and leave-one-year-out estimates are compared for the
-clean-site set. Points show the ratio `R = A(delta13C)/A(deltaD)`. For the
-leave-one-year-out diagnostic, diamonds show the median ratio and vertical bars
-span the minimum-to-maximum range obtained by excluding one calendar year at a
-time. This diagnostic supports the choice of a minimal annual phasor model for
-the main analysis while identifying sites where sparse coverage or low
-amplitude increases sensitivity to model choice.
+**Figure S3. Seasonal-amplitude estimator sensitivity.** The primary
+trend-plus-annual harmonic estimate is shown with three diagnostics for the
+clean-site set: the annual component from a trend-plus-annual-plus-semiannual
+fit, a joint trend-plus-monthly-effects estimate, and leave-one-year-out refits
+of the primary model. Points show `R = A(delta13C)/A(deltaD)`. Diamonds and
+vertical bars give the median and minimum-to-maximum range across valid
+leave-one-year-out refits. Monthly-effects results are omitted for ZEP and CBA
+because not all 12 calendar months are observed; the leave-one-year-out result
+is omitted for ZEP because fewer than two valid refits remain. The diagnostics
+are robustness checks and are not combined with the primary estimate used for
+the KIE constraint.
 
 ![Figure S4. Individual-year stability of amplitude ratios.](figures/fig12_yearly_stability.png)
 
@@ -208,8 +202,8 @@ value at KUM decreases its corrected ratio by about `0.015`. CGO and SPO are
 unchanged in this compact test because the ambiguous/local Southern Hemisphere
 case retains the base `-62 permil` value. Thus the Ganesan-style spatial
 `delta13C_wetland` sensitivity mainly amplifies the conclusion that northern
-sites retain unresolved source structure; it does not alter the preferred
-Southern Hemisphere KIE constraint.
+sites retain unresolved source structure; it does not alter the possibility of
+using the method as a Southern Hemisphere KIE constraint.
 
 ![Figure S8. Banded wetland `delta13C-CH4` source-signature sensitivity.](figures/manuscript/figS5_ganesan_delta13c_sensitivity.png)
 
@@ -218,39 +212,58 @@ The base analysis uses a uniform `delta13C_wetland = -62 permil`. (a) The
 sensitivity replaces that value with approximate high-latitude/boreal and
 tropical wetland signatures based on the spatially resolved wetland
 source-signature framework of Ganesan et al. (2018), while retaining the global
-value where the source influence is ambiguous. (b) Resulting site-level
-corrected ratios for the uniform and banded source-signature cases. Line
-segments show the direction and magnitude of the correction change.
+value where the source influence is ambiguous. (b) Change in each deterministic
+site-level corrected ratio relative to the uniform-signature case,
+`Delta R = R_banded - R_uniform`. Grey circles mark the uniform-case zero
+baseline and blue squares mark the banded-signature result; the small vertical
+offset is only for visibility. CGO and SPO retain the base Southern Hemisphere
+signature, so both markers are present but their physical change is exactly
+zero. Because this panel shows a change rather than an absolute corrected
+ratio, the bulk-sink laboratory reference interval used in the absolute-ratio
+figures is not applicable and is not plotted.
 
 ## S6. Sink Fraction And KIE Parameter Alignment
 
 Riddell-Young et al. (2025) SI Table S3 provides a compact modern sink/KIE
-parameter set. The analysis uses closely related values. The main
-manuscript reports the values actually used in the analysis, while this SI
-section compares them against Riddell-Young et al. Table S3.
+parameter set. The analysis uses closely related values but does not copy that
+table verbatim because it retains literature-specific sensitivity choices.
+The sink fractions are a
+normalized bookkeeping partition (`0.84 + 0.035 + 0.065 + 0.06 = 1`) within
+published global ranges: tropospheric chlorine is a few percent of total
+methane oxidation (Hossaini et al., 2016), while soil uptake remains both small
+and substantially uncertain at the global scale (Dutaur and Verchot, 2007).
+The non-OH isotope effects likewise retain values tied to the underlying
+process studies. In particular, `alphaD_Cl = 1.508` is the direct 296 K
+measurement of Saueressig et al. (1996), and the soil values lie within the
+ecosystem-dependent measurements of King et al. (1989) and Snover and Quay
+(2000). The stratospheric entries are effective apparent fractionation factors
+used for the bulk sink, not elementary reaction KIEs; their approximate values
+are motivated by stratospheric methane isotope observations and coupled
+chemistry-transport interpretation (Rice et al., 2003; McCarthy et al., 2003).
+The main manuscript reports the values actually used, while this section makes
+their relationship to Riddell-Young et al. Table S3 explicit.
 
 **Table S3. Base analysis sink/KIE values compared with Riddell-Young et al.
 (2025) SI Table S3.**
 
 | Sink term | Base analysis | Riddell-Young SI Table S3 | Interpretation |
 |---|---:|---:|---|
-| OH fraction | `0.84` | `0.835` | Aligned within rounding |
-| Cl fraction | `0.035` | `0.035` | Aligned |
-| Stratospheric fraction | `0.065` | `0.06` | Close; base analysis uses closure |
-| Soil fraction | `0.06` | `0.07` | Close; include as sensitivity if rerun |
-| OH `alpha13C` | `1.0039` and `1.0054` | `1.0054` | Main uncertainty of interest |
+| OH fraction | `0.84` | `0.835` | Rounded partition; dominant sink in both sets |
+| Cl fraction | `0.035` | `0.035` | Same value; consistent with a minor global sink (Hossaini et al., 2016) |
+| Stratospheric fraction | `0.065` | `0.06` | Adjusted with soil and OH so the four fractions close exactly to one |
+| Soil fraction | `0.06` | `0.07` | Within the broad global soil-sink uncertainty (Dutaur and Verchot, 2007) |
+| OH `alpha13C` | `1.0039` and `1.0054` | `1.0054` | Alternative laboratory hypotheses being tested, not an alignment parameter |
 | OH `alphaD` | `1.294` | `1.294` | Aligned |
 | Cl `alpha13C` | `1.066` | `1.066` | Aligned |
-| Cl `alphaD` | `1.508` | `1.520` | Close |
-| Soil `alpha13C` | `1.022` | `1.020` | Close |
-| Soil `alphaD` | `1.066` | `1.083` | Difference is minor in bulk because soil fraction is small |
-| Stratospheric `alpha13C` | `1.013` | `1.003` | Difference is minor in bulk but should be stated |
-| Stratospheric `alphaD` | `1.16` | `1.179` | Close |
+| Cl `alphaD` | `1.508` | `1.520` | Direct 296 K laboratory value from Saueressig et al. (1996) |
+| Soil `alpha13C` | `1.022` | `1.020` | Process-study choice consistent with measured soil oxidation fractionation |
+| Soil `alphaD` | `1.066` | `1.083` | Forest-soil endpoint from Snover and Quay (2000); low bulk leverage because the soil fraction is small |
+| Stratospheric `alpha13C` | `1.013` | `1.003` | Effective apparent fractionation approximation informed by Rice et al. (2003) and McCarthy et al. (2003) |
+| Stratospheric `alphaD` | `1.16` | `1.179` | Effective apparent fractionation approximation from the same stratospheric constraint |
 | Net sink `alpha13C` | `1.0078-1.0090` | `1.0082` | Base-analysis range brackets Riddell-Young |
 | Net sink `alphaD` | `1.2791` | `1.281` | Aligned |
 
-If the manuscript changes base sink/KIE values to match Riddell-Young Table S3
-exactly, the relevant analyses must be rerun before submission.
+
 
 ## S7. Southern Hemisphere Source-Region Sensitivity
 
@@ -259,20 +272,22 @@ extratropical wetland phasors. This is conservative because the local wetland
 phasor is small and avoids imposing unconstrained delayed Northern Hemisphere
 source influence.
 
-The sensitivity values in this section are deterministic source-region
-comparisons based on nominal phasor subtraction. The main-text atmospheric
-constraint instead combines the CGO and SPO corrected-ratio Monte Carlo samples
-before converting to `alpha13C_OH`, giving `1.0046 [0.9969, 1.0158]`. The
-nominal phasor values are therefore interpreted as diagnostic/reproducibility
-quantities rather than as the reported central KIE estimate.
-This distinction explains why the zero-imported-response point in Figure S9
-is about `1.0052`, close to the Cantrell et al. (1990) value: it is the simple
-deterministic mean of the nominal CGO and SPO phasor-corrected ratios. It is
-not the preferred Southern Hemisphere Monte Carlo constraint shown in the main
-text.
+The `nominal CGO and SPO phasor-corrected ratios` in this section are two
+deterministic point estimates: all fitted harmonics, wetland phasors, isotope
+signatures, sink fractions, and non-OH KIEs are held at their nominal values,
+and the two site-level alpha estimates are then averaged. This calculation
+gives about `1.0052` at zero imported response and is useful for reproducing
+the sensitivity grid. The `Monte Carlo constraint shown in the main text` is a
+different estimator. It samples the full input uncertainties, combines the
+CGO and SPO corrected-ratio draws using inverse-variance site weights, and only
+then applies the nonlinear ratio-to-`alpha13C_OH` conversion. Its median and
+95% interval are `1.0046 [0.9969, 1.0158]`. Consequently, the deterministic
+value need not equal the Monte Carlo median; the former is a controlled
+source-region diagnostic, whereas the latter is the reported atmospheric
+constraint.
 
-We therefore run two distinct Southern Hemisphere source-region diagnostics.
-The first is a mass-conserving source-region response mixture. It mixes local
+We use one Southern Hemisphere source-region diagnostic: a mass-conserving
+source-region response mixture. It mixes local
 Southern Hemisphere, tropical, and delayed high-latitude Northern Hemisphere
 wetland phasors with weights that sum to one:
 
@@ -280,6 +295,19 @@ wetland phasors with weights that sum to one:
 Z_source = w_SH Z_SH + w_Tropics Z_Tropics + w_NH Z_NH_high,delayed
 w_SH + w_Tropics + w_NH = 1.
 ```
+
+These are normalized effective annual-harmonic response weights, not literal
+emission mass fractions or site footprints. The `2.8`-month Northern Hemisphere
+phase delay is fixed before the grid is evaluated. It follows a first-order
+interhemispheric transport filter, `H(omega) = 1 / (1 + i omega tau)`, for which
+the annual-harmonic lag is
+`12 atan(omega tau) / (2 pi)` months. Published interhemispheric exchange and
+transit-time constraints place `tau` near `1.3-1.5` years (Geller et al., 1997;
+Patra et al., 2011; Holzer and Waugh, 2015), corresponding to a lag of about
+`2.77-2.80` months and strong attenuation of the imported annual harmonic. We
+therefore use `2.8` months as a literature-constrained idealization rather than
+a fitted site-specific travel time; the limited Northern Hemisphere weights
+also acknowledge that real transport has a broad transit-time distribution.
 
 The delayed high-latitude Northern Hemisphere weight is limited to `0.04`,
 `0.06`, `0.08`, and `0.10`. The tropical weight spans `0.00-0.50`, and the
@@ -305,24 +333,6 @@ reduces the local Southern Hemisphere weight; this can rotate the corrected
 `delta13C` and `deltaD` sink phasors differently and produce local minima or
 maxima in `A(delta13C)_sink / A(deltaD)_sink`.
 
-The second diagnostic is the older additive transport stress test. These
-scenarios are not mass-conserving source mixtures; their scaling factors are
-effective transported annual-harmonic response coefficients. They are retained
-only as upper-bound structural tests:
-
-| Scenario group | Mean inferred `alpha13C_OH` | Interpretation |
-|---|---:|---|
-| SH-only baseline | about `1.0052` in deterministic sensitivity | Matches the main source assignment, but is not the MC central estimate |
-| Tropics low to high | about `1.0029-1.0060` | Tropical influence is modest |
-| NH low to high delayed | about `1.0071-1.0140` | Delayed NH influence can be large but is an additive stress test |
-| Full low to high | about `1.0055-1.0158` | Combined additive envelope; not a mass-conserving correction |
-
-The main text uses the mass-conserving grid for the primary sensitivity
-statement. The additive delayed Northern Hemisphere scenarios are retained as
-non-plotted stress-test diagnostics to show how large the inferred shift could
-be if a delayed Northern Hemisphere annual harmonic were imposed without
-enforcing source-region weights that sum to one.
-
 ![Figure S9. Southern Hemisphere source-region sensitivity.](figures/manuscript/figS7_sh_source_region_sensitivity.png)
 
 **Figure S9. Southern Hemisphere source-region sensitivity.** CGO/SPO
@@ -341,11 +351,26 @@ marks the preferred main-text Southern Hemisphere Monte Carlo central estimate.
 
 Biomass burning has an isotopically enriched `delta13C-CH4` signature and a
 seasonal cycle that can alter northern isotope phasors. It is therefore
-important for diagnosing residual Northern Hemisphere structure. However, the
-main Southern Hemisphere KIE constraint does not require biomass burning to
-explain the result, and the uncertainty attribution assigns biomass burning a
-smaller diagnostic contribution than observations, wetland phasors, wetland
-isotope signatures, sink fractions, and `alphaD_OH`.
+important for diagnosing residual Northern Hemisphere structure. Unlike the
+comparatively repeatable wetland annual cycle used in the main correction,
+open-fire emissions are episodic, spatially localized, and strongly dependent
+on the particular drought, biome, ignition, and fire year. GFED4s, for example,
+finds global fire carbon emissions ranging from `1.8` to `3.0 Pg C yr-1` over
+1997-2016 (van der Werf et al., 2017), illustrating the large interannual
+variability behind any climatological seasonal phasor. In addition, the global
+methane budget places biomass burning together with biofuel at only about
+`30 [26-40] Tg CH4 yr-1` for 2008-2017, with biofuel contributing roughly
+`30-50%` of that combined category (Saunois et al., 2020). Open fires are thus
+a relatively small global methane source, and their event-dependent regional
+timing does not support one stable global phase correction.
+
+For those reasons, biomass burning is not included as a required component of
+the main Southern Hemisphere inversion: adding a fixed annual fire phasor
+would imply more temporal regularity than the source possesses, while the CGO
+and SPO result does not require it. We instead retain biomass burning as a
+supplementary northern-residual sensitivity. A future extension should couple
+event-resolved regional fire emissions and isotope signatures to transport,
+rather than assume a universal seasonal cycle.
 
 The following diagnostics show:
 
@@ -398,38 +423,51 @@ source-contaminated case recovers a spuriously high apparent `alpha13C_OH`,
 motivating the vector phasor correction used in the manuscript. This figure is
 a method diagnostic, not an additional atmospheric KIE constraint.
 
-![Figure S14. Phasor inversion diagnostics.](figures/fig19_phasor_inversion_diagnostics.png)
-
-**Figure S14. Phasor inversion diagnostics.** Direct phasor-inversion
-diagnostics show how site-level corrected isotope phasors translate into
-apparent alpha values and where sparse or source-contaminated sites become
-unstable.
-
 ## S10. Uncertainty Attribution
 
-One-at-a-time diagnostic uncertainty attribution ranks uncertainty sources as:
+We attribute the Southern Hemisphere `alpha13C_OH` uncertainty by decomposing
+the actual Phase-6 Monte Carlo: each uncertainty group is toggled on while the
+others are frozen at their central values, the full phasor correction and alpha
+inversion are re-run (120,000 draws), and the variance of the resulting alpha
+samples is that group's isolated contribution. Because the groups are close to
+independent, the isolated variances sum to the all-groups-on total to within
+about half a percent, so the fractions below are a genuine variance budget.
 
-| Source group | Fraction of diagnostic variance |
+| Source group | Fraction of Var(`alpha13C_OH`) |
 |---|---:|
-| Observation/harmonic uncertainty | `0.39` |
-| Wetland phasor uncertainty | `0.21` |
-| Wetland isotope source signatures | `0.14` |
-| Sink fractions | `0.09` |
-| `alphaD_OH` | `0.08` |
-| Biomass burning correction | `0.05` |
-| Non-OH KIEs | `0.03` |
+| `delta13C` amplitude | `0.418` |
+| `deltaD` amplitude | `0.397` |
+| Sink -> alpha (`fOH`, `alphaD_OH`, non-OH KIEs) | `0.074` |
+| `delta13C` phase | `0.059` |
+| Wetland `delta13C` signature | `0.045` |
+| Wetland flux phasor | `0.005` |
+| `deltaD` phase | `0.002` |
+| Wetland `deltaD` signature | `0.000` |
 
-These fractions are diagnostic and should not replace the full Monte Carlo
-intervals reported in the main text. They identify the most valuable future
-improvements: longer paired isotope records, better wetland phasors, and
-better wetland isotope source signatures.
+Rolled up to input families, the observed seasonal harmonics account for about
+`88%` of the variance (almost entirely the fitted `delta13C` and `deltaD`
+amplitudes), the sink-to-alpha conversion about `7%`, and the entire wetland
+source correction only about `5%`. The wetland `deltaD` source signature is
+negligible despite its large source-atmosphere isotopic gap, because the local
+Southern Hemisphere wetland flux phasor is very small, so that signature's
+uncertainty does not propagate to alpha. The single most valuable future
+improvement is therefore reducing the amplitude-fit uncertainty of the
+co-located isotope seasonal cycles through longer or denser paired records;
+wetland-model refinements matter mainly at Northern Hemisphere sites.
 
-![Figure S15. Grouped uncertainty attribution.](figures/manuscript/figS10_uncertainty_attribution.png)
+This variance budget supersedes an earlier prioritization diagnostic that
+assumed per-group perturbation scales; that diagnostic overstated the wetland
+contribution and understated the observational contribution.
 
-**Figure S15. Grouped uncertainty attribution.** One-at-a-time grouped
-uncertainty perturbations rank the dominant contributors to alpha uncertainty.
-Observation and harmonic-fit uncertainty is largest, followed by wetland
-phasor and wetland isotope-source uncertainty.
+![Figure S14. Uncertainty attribution.](figures/manuscript/figS10_uncertainty_attribution.png)
+
+**Figure S14. Uncertainty attribution.** Isolated variance contribution of each
+input group to the Southern Hemisphere `alpha13C_OH` constraint, from the
+toggle-based decomposition of the Phase-6 Monte Carlo, as a percentage of
+Var(`alpha13C_OH`). Bars are colored by input family (observation, sink,
+wetland). The observed `delta13C` and `deltaD` seasonal amplitudes dominate;
+the wetland source correction is a minor term for the Southern Hemisphere
+sites.
 
 ## S11. Supplementary Figure List
 
@@ -437,7 +475,7 @@ phasor and wetland isotope-source uncertainty.
 
 **Figure S2.** Folded seasonal cycles used for annual harmonic fitting.
 
-**Figure S3.** Harmonic-model sensitivity.
+**Figure S3.** Seasonal-amplitude estimator sensitivity.
 
 **Figure S4.** Individual-year stability of amplitude ratios.
 
@@ -459,6 +497,4 @@ phasor and wetland isotope-source uncertainty.
 
 **Figure S13.** OSSE recovery of `alpha13C_OH`.
 
-**Figure S14.** Phasor inversion diagnostics.
-
-**Figure S15.** Grouped uncertainty attribution.
+**Figure S14.** Grouped uncertainty attribution.

@@ -1,6 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Phase 13: uncertainty attribution and NH residual diagnostics."""
+"""Phase 13: uncertainty attribution and NH residual diagnostics.
+
+DEPRECATED (superseded 2026-07-04) — do not use the attribution output for the
+manuscript. The `attribution` block here is a prioritization-only diagnostic
+built from HARDCODED, ASSUMED per-group sigma scales (see
+build_default_perturbations: observation 0.0040, wetland_phasor 0.0030, etc.),
+NOT from the actual Monte Carlo. It overstated the wetland contribution and
+understated the observational contribution.
+
+The real variance budget comes from analysis/sh_variance_purepy.py, which
+decomposes the actual Phase-6 SH (CGO+SPO) Monte Carlo by toggling each
+uncertainty group on/off. That true decomposition (observations ~88%, sink ~7%,
+wetland ~5%) is what feeds the manuscript figures:
+  - fig3 panel (c)                        (make_manuscript_figures.py)
+  - figS10_uncertainty_attribution.png    (make_manuscript_figures.py)
+  - figS11_sh_true_uncertainty_attribution.png (make_sh_uncertainty_figure.py)
+Neither figure loads this script's JSON any longer.
+
+The `nh_residual_summary` helper below is unaffected and may still be useful as
+a standalone NH corrected-ratio diagnostic.
+"""
 
 from pathlib import Path
 import json
