@@ -49,6 +49,8 @@ A separate but intertwined problem is the 25-year-old disagreement in the OH-¹�
 
 This 1.5‰ difference in effective fractionation propagates to a ~13–20 Tg yr⁻¹ reallocation between fossil and microbial categories (Schwietzke et al., 2016; Basu et al., 2022). The choice of KIE value can determine whether the post-2007 CH₄ rise is attributed primarily to microbial or fossil sources. Basu et al. (2022) identified this as "the largest uncertainty… from our knowledge of atmospheric chemistry."
 
+Notably, Melissas & Truhlar (1993) calculated k₁₂/k₁₃ = 1.005 at 273–353 K using ab initio variational transition state theory (IVTST/SCT at the MP-SAC2//MP2/adj-cc-pVTZ level), in excellent agreement with Cantrell (1.0054) and above Saueressig (1.0039). This theoretical calculation — predating Saueressig by 8 years — provides independent first-principles evidence that the Cantrell value may be more accurate, challenging the common default of Saueressig in the modeling community.
+
 Can adding δD reduce this sensitivity? Or does the KIE propagate through the dual-isotope framework with equal force?
 
 ### 1.4 Scope and Organization
